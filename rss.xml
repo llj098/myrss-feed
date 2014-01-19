@@ -13,42 +13,5 @@ myread
 <description>
 myread
 </description>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://arstechnica.com/tech-policy/2014/01/net-neutrality-is-half-dead-court-strikes-down-fccs-anti-blocking-rules/
-</link>
-<description>
-&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
-    
-&lt;figure class=&quot;intro-image image center full-width&quot; score=&quot;12.5&quot;&gt;
-      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/net-neutrality-censored.jpg&quot; width=&quot;640&quot;&gt;
-  
-    &lt;figcaption class=&quot;caption&quot; score=&quot;7.5&quot;&gt;
-	
-			
-	  &lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;The Federal Communication Commission's net neutrality rules were partially struck down today by the US Court of Appeals for the District of Columbia Circuit, which said the Commission did not properly justify its anti-discrimination and anti-blocking rules.&lt;/p&gt;
-&lt;p&gt;Those rules in the Open Internet Order, &lt;a href=&quot;http://arstechnica.com/tech-policy/2010/12/its-here-fcc-adopts-net-neutrality-lite/&quot;&gt;adopted in 2010&lt;/a&gt;, forbid ISPs from blocking services or charging content providers for access to the network. &lt;a href=&quot;http://arstechnica.com/tech-policy/2013/09/verizons-bid-to-kill-network-neutrality-law-goes-to-court-monday/&quot;&gt;Verizon challenged the entire order&lt;/a&gt; and got a big victory in today's ruling. While it could still be appealed to the Supreme Court, the order today would allow pay-for-prioritization deals that could let Verizon or other ISPs charge companies like Netflix for a faster path to consumers.&lt;/p&gt;
-&lt;p&gt;The court left part of the Open Internet Order intact, however, saying that the FCC still has &quot;general authority&quot; to regulate how broadband providers treat traffic.&lt;/p&gt;
-&lt;p&gt;The FCC got itself into trouble with some &lt;a href=&quot;http://arstechnica.com/tech-policy/2013/09/fccs-wishy-washy-rulemaking-might-doom-net-neutrality-in-court/&quot;&gt;wishy-washy rulemaking&lt;/a&gt;. The commission did not declare that ISPs are &quot;common carriers,&quot; yet it imposed restrictions that sound strikingly similar to regulations that can only apply to common carriers.&lt;/p&gt;
-&lt;p&gt;The 81-page ruling (&lt;a href=&quot;http://www.cadc.uscourts.gov/internet/opinions.nsf/3AF8B4D938CDEEA685257C6000532062/%24file/11-1355-1474943.pdf&quot;&gt;PDF&lt;/a&gt;) today states the following:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[T]he Commission has established that section 706 of the Telecommunications Act of 1996 vests it with affirmative authority to enact measures encouraging the deployment of broadband infrastructure. The Commission, we further hold, has reasonably interpreted section 706 to empower it to promulgate rules governing broadband providers’ treatment of Internet traffic, and its justification for the specific rules at issue here—that they will preserve and facilitate the “virtuous circle&quot; of innovation that has driven the explosive growth of the Internet—is reasonable and supported by substantial evidence. That said, even though the Commission has general authority to regulate in this arena, it may not impose requirements that contravene express statutory mandates. Given that the Commission has chosen to classify broadband providers in a manner that exempts them from treatment as common carriers, the Communications Act expressly prohibits the Commission from nonetheless regulating them as such. Because the Commission has failed to establish that the anti-discrimination and anti-blocking rules do not impose per se common carrier obligations, we vacate those portions of the Open Internet Order.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;FCC Chairman Tom Wheeler said the commission might appeal the ruling. “The DC Circuit has correctly held that ‘Section 706 . . . vests [the Commission] with affirmative authority to enact measures encouraging the deployment of broadband infrastructure’ and therefore may ‘promulgate rules governing broadband providers’ treatment of Internet traffic,&quot; Wheeler said in a written statement. &quot;I am committed to maintaining our networks as engines for economic growth, test beds for innovative services and products, and channels for all forms of speech protected by the First Amendment. We will consider all available options, including those for appeal, to ensure that these networks on which the Internet depends continue to provide a free and open platform for innovation and expression, and operate in the interest of all Americans.”&lt;/p&gt;
-&lt;p&gt;Consumer advocacy group Free Press lamented the ruling. “We’re disappointed that the court came to this conclusion,&quot; Free Press CEO Craig Aaron said in a written statement. &quot;Its ruling means that Internet users will be pitted against the biggest phone and cable companies—and in the absence of any oversight, these companies can now block and discriminate against their customers’ communications at will.&quot;&lt;/p&gt;
-&lt;p&gt;Aaron further blamed former FCC Chairman Julius Genachowski, who &quot;made a grave mistake when [his Commission] failed to ground its open Internet rules on solid legal footing. Internet users will pay dearly for the previous chairman’s lack of political will.&quot;&lt;/p&gt;
-&lt;p&gt;Consumer advocacy group Public Knowledge offered similar thoughts, while urging the FCC to come up with new rules that meet legal muster. &quot;[T]he Court did uphold broad Commission authority to regulate broadband,&quot; Public Knowledge Senior VP Harold Feld said. &quot;To exercise that authority, the FCC must craft open Internet protection that are not full fledged common carrier rules. Alternatively, if the FCC needs broader authority it can classify broadband as a title 2 common carrier service. Both of these are viable options. In fact, Public Knowledge has long held that both broadband is a telecommunications service, and that the modest protections offered by the Open Internet rules fall well short of full common carrier regulations.&quot;&lt;/p&gt;
-&lt;p&gt;Public Knowledge itself could appeal the ruling, Feld said.&lt;/p&gt;
-&lt;p&gt;We will provide further analysis of this ruling in a followup article today.&lt;/p&gt;
-    		&lt;/div&gt;
-    
-</description>
-<title>
-Net neutrality is half-dead: Court strikes down FCC’s anti-blocking rules
-</title>
-</item>
 </channel>
 </rss>
