@@ -18,382 +18,6 @@ myread
 unknown
 </author>
 <link>
-https://sen.se/store/mother/?utm_expid=78993385-1.X-oIkUsIR8aRPG13DPrvIg.0
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
-            &lt;p class=&quot;inner&quot;&gt;
-                
-                
-                &lt;ul&gt;
-                    &lt;li class=&quot;pushnotification&quot;&gt;Push notifications on your smartphone&lt;/li&gt;
-                    &lt;li class=&quot;sms&quot;&gt;Text messages / SMS*&lt;/li&gt;
-                    &lt;li class=&quot;email&quot;&gt;Email&lt;/li&gt;
-                    &lt;li class=&quot;phonecall&quot;&gt;Phone calls* **&lt;/li&gt;
-                    &lt;li class=&quot;alert&quot;&gt;Sounds and lights on your Mother&lt;/li&gt;
-                    &lt;li class=&quot;notification&quot;&gt;The Senseriver of everything happening&lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;small&gt;(*) extra charges apply&lt;/small&gt;
-                &lt;small&gt;(**) english voice messages only&lt;/small&gt;
-
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-</description>
-<title>
-Mother
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://speaking.io
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;wrapper&quot;&gt;
-    
-    &lt;p&gt;
-      Be it at a conference, or during a company meeting, or in your car trying
-      to persuade the cop not to ticket you for going three times the speed
-      limit while streaming an episode of &lt;em&gt;The Maury Povich Show&lt;/em&gt; on your
-      iPad, talking in front of other people can be an intimidating experience.
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-Public speaking is tough
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://cosmic.mearie.org/2014/01/periodic-table-of-rust-types/
-</link>
-<description>
-&lt;div&gt;&lt;body&gt;
-	
-	&lt;table id=&quot;periodic&quot; class=&quot;hide-lifetime hide-bounds hide-abi&quot;&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;th class=&quot;row&quot;&gt;&lt;/th&gt;
-			&lt;th class=&quot;col immref&quot;&gt;&lt;a&gt;Immutable Reference&lt;/a&gt;&lt;/th&gt;
-			&lt;th class=&quot;col mutref&quot;&gt;&lt;a&gt;Mutable Reference&lt;/a&gt;&lt;/th&gt;
-			&lt;th class=&quot;col owned&quot;&gt;&lt;a&gt;Owned&lt;/a&gt;&lt;/th&gt;
-			&lt;th class=&quot;gap&quot;&gt;&lt;/th&gt;
-			&lt;th class=&quot;bare&quot;&gt;&lt;/th&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;raw&quot;&gt;
-			&lt;th class=&quot;raw row&quot;&gt;&lt;a&gt;Raw&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;raw immref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;*&lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Immutable raw pointer
-			&lt;/td&gt;
-			&lt;td class=&quot;raw mutref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;*&lt;b&gt;mut&lt;/b&gt; &lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Mutable raw pointer
-			&lt;/td&gt;
-			&lt;td class=&quot;raw owned impossible&quot;&gt;
-				Raw pointers do not have ownership.
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;
-			&lt;/td&gt;&lt;th class=&quot;col bare&quot; rowspan=&quot;2&quot;&gt;&lt;a&gt;Bare&lt;/a&gt;&lt;/th&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;gap&quot;&gt;
-			&lt;th class=&quot;gap&quot;&gt;&lt;/th&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;simple&quot;&gt;
-			&lt;th class=&quot;simple row&quot;&gt;&lt;a&gt;Simple&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;simple immref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Immutable borrowed pointer
-			&lt;/td&gt;
-			&lt;td class=&quot;simple mutref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; &lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Mutable borrowed pointer
-			&lt;/td&gt;
-			&lt;td class=&quot;simple owned&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;~&lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Owned pointer
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;simple bare&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;var&gt;T&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Primitive type, struct, enum and so on
-			&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;vec&quot;&gt;
-			&lt;th class=&quot;vec row&quot;&gt;&lt;a&gt;Vector&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;vec immref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;[&lt;var&gt;T&lt;/var&gt;]&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Immutable borrowed vector slice
-			&lt;/td&gt;
-			&lt;td class=&quot;vec mutref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; [&lt;var&gt;T&lt;/var&gt;]&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Mutable borrowed vector slice
-			&lt;/td&gt;
-			&lt;td class=&quot;vec owned&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;~[&lt;var&gt;T&lt;/var&gt;]&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Owned vector
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;vec bare proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;[&lt;var&gt;T&lt;/var&gt;]&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Unsized vector type
-			&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;str&quot;&gt;
-			&lt;th class=&quot;str row&quot;&gt;&lt;a&gt;String&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;str immref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;str&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Immutable borrowed string slice
-			&lt;/td&gt;
-			&lt;td class=&quot;str mutref proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; str&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Mutable borrowed string slice
-			&lt;/td&gt;
-			&lt;td class=&quot;str owned&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;~str&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Owned string
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;str bare proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;str&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Unsized string type
-			&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;trait&quot;&gt;
-			&lt;th class=&quot;trait row&quot;&gt;&lt;a&gt;Trait&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;trait immref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;var&gt;Trait&lt;/var&gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Immutable borrowed trait object
-			&lt;/td&gt;
-			&lt;td class=&quot;trait mutref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; &lt;var&gt;Trait&lt;/var&gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Mutable borrowed trait object
-			&lt;/td&gt;
-			&lt;td class=&quot;trait owned&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;~&lt;var&gt;Trait&lt;/var&gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Owned trait object
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;trait bare proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;var&gt;Trait&lt;/var&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Unsized trait type
-			&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;gap&quot;&gt;
-			&lt;th class=&quot;gap&quot;&gt;&lt;/th&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;fn&quot;&gt;
-			&lt;th class=&quot;fn row&quot;&gt;&lt;a&gt;Call-many&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;fn immref proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;em&gt;(no shorthand)&lt;/em&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;Fn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Closure with immutable environment
-			&lt;/td&gt;
-			&lt;td class=&quot;fn mutref&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;|&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;&lt;/i&gt;|&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;i class=&quot;return&quot;&gt; -&amp;gt; &lt;var&gt;U&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; Fn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Closure with mutable environment
-			&lt;/td&gt;
-			&lt;td class=&quot;fn owned proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;em&gt;(no shorthand)&lt;/em&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;~Fn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Closure with owned environment
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;fn bare&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;i class=&quot;abi&quot;&gt;&lt;b&gt;extern&lt;/b&gt; &quot;&lt;var&gt;ABI&lt;/var&gt;&quot; &lt;/i&gt;&lt;b&gt;fn&lt;/b&gt;(&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;&lt;/i&gt;)&lt;i class=&quot;return&quot;&gt; -&amp;gt; &lt;var&gt;U&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				Bare function type
-			&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr class=&quot;oncefn&quot;&gt;
-			&lt;th class=&quot;oncefn row&quot;&gt;&lt;a&gt;Call-once&lt;/a&gt;&lt;/th&gt;
-			&lt;td class=&quot;oncefn immref proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;em&gt;(no shorthand)&lt;/em&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;OnceFn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Procedure with immutable environment
-			&lt;/td&gt;
-			&lt;td class=&quot;oncefn mutref proposed&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;em&gt;(no shorthand)&lt;/em&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;&amp;amp;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt; &lt;/i&gt;&lt;b&gt;mut&lt;/b&gt; OnceFn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Procedure with mutable environment
-			&lt;/td&gt;
-			&lt;td class=&quot;oncefn owned&quot;&gt;
-				&lt;strong&gt;&lt;code&gt;&lt;b&gt;proc&lt;/b&gt;(&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;&lt;/i&gt;)&lt;i class=&quot;return&quot;&gt; -&amp;gt; &lt;var&gt;U&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
-				&lt;code&gt;~OnceFn&amp;lt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;, &lt;/i&gt;&amp;gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;br&gt;
-				Procedure with owned environment
-			&lt;/td&gt;
-			&lt;td class=&quot;gap&quot;&gt;&lt;/td&gt;
-			&lt;td class=&quot;oncefn bare impossible&quot;&gt;
-				Bare functions always can be called multiple times.
-			&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-	&lt;/table&gt;
-	&lt;nav&gt;
-		&lt;table id=&quot;bgkey&quot; class=&quot;key&quot;&gt;
-			&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;td&gt;Supported as of 0.9&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;proposed&quot;&gt;&lt;th&gt;&lt;/th&gt;&lt;td&gt;Proposed (&lt;a href=&quot;https://github.com/mozilla/rust/issues/6308&quot;&gt;DST&lt;/a&gt; and &lt;a href=&quot;https://github.com/mozilla/rust/issues/10124&quot;&gt;Variadic generics&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;impossible&quot;&gt;&lt;th&gt;&lt;/th&gt;&lt;td&gt;Impossible&lt;/td&gt;&lt;/tr&gt;
-		&lt;/table&gt;
-		&lt;table id=&quot;optkey&quot; class=&quot;key&quot;&gt;
-			&lt;tr class=&quot;lifetime&quot;&gt;&lt;th&gt;&lt;code&gt;&lt;i class=&quot;lifetime&quot;&gt;'&lt;var&gt;r&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/th&gt;&lt;td&gt;Lifetime&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;bounds&quot;&gt;&lt;th&gt;&lt;code&gt;&lt;i class=&quot;bounds&quot;&gt;:&lt;var&gt;K&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/th&gt;&lt;td&gt;Trait bounds&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;arguments&quot;&gt;&lt;th&gt;&lt;code&gt;&lt;i class=&quot;arguments&quot;&gt;&lt;var&gt;T&amp;#x2026;&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/th&gt;&lt;td&gt;Function arguments&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;return&quot;&gt;&lt;th&gt;&lt;code&gt;&lt;i class=&quot;return&quot;&gt;-&amp;gt; &lt;var&gt;U&lt;/var&gt;&lt;/i&gt;&lt;/code&gt;&lt;/th&gt;&lt;td&gt;Function return&lt;/td&gt;&lt;/tr&gt;
-			&lt;tr class=&quot;abi&quot;&gt;&lt;th&gt;&lt;code&gt;&lt;i class=&quot;abi&quot;&gt;&lt;b&gt;extern&lt;/b&gt; &quot;&lt;var&gt;ABI&lt;/var&gt;&quot;&lt;/i&gt;&lt;/code&gt;&lt;/th&gt;&lt;td&gt;ABI definition&lt;/td&gt;&lt;/tr&gt;
-		&lt;/table&gt;
-	&lt;/nav&gt;
-
-	&lt;h2&gt;What is this?&lt;/h2&gt;
-	&lt;p&gt;This &quot;periodic table&quot; is a cheatsheet for various Rust types. &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt; programming language has a versatile type system that avoids a certain class of memory error in the safe context, and consequently has somewhat many types at the first glance. This table organizes them into an orthogonal tabular form, making them easier to understand and reason. I also hope that this makes very obvious why Rust needs such seemingly many types.&lt;/p&gt;
-	&lt;p&gt;The periodic table was made by &lt;a href=&quot;http://mearie.org/&quot;&gt;Kang Seonghoon&lt;/a&gt; as a thought experiment, and then... it have got redditted unexpectedly :p Henceforth I've made the URL permanent and added some descriptions.&lt;/p&gt;
-	&lt;p&gt;Discussion: &lt;a href=&quot;http://www.reddit.com/r/rust/comments/1v7hqb/the_periodic_table_of_rust_types/&quot;&gt;/r/rust&lt;/a&gt;, &lt;a href=&quot;http://www.reddit.com/r/programming/comments/1v8jr0/the_periodic_table_of_rust_types/&quot;&gt;/r/programming&lt;/a&gt;, &lt;a href=&quot;https://news.ycombinator.com/item?id=7060951&quot;&gt;Hacker News&lt;/a&gt;&lt;/p&gt;
-
-	&lt;h3&gt;Guide&lt;/h3&gt;
-	&lt;p&gt;Columns indicate the ownership. There are two big groups from left to right: &lt;strong&gt;indirect&lt;/strong&gt; (i.e. referenced or owned) and &lt;strong&gt;direct&lt;/strong&gt;. Indirect types can be coerced horizontally: &lt;code&gt;~&lt;var&gt;T&lt;/var&gt;&lt;/code&gt; can be coerced to &lt;code&gt;&amp;amp;&lt;b&gt;mut&lt;/b&gt; &lt;var&gt;T&lt;/var&gt;&lt;/code&gt; or &lt;code&gt;&amp;amp;&lt;var&gt;T&lt;/var&gt;&lt;/code&gt; and &lt;code&gt;&amp;amp;&lt;b&gt;mut&lt;/b&gt; &lt;var&gt;T&lt;/var&gt;&lt;/code&gt; can be coerced to &lt;code&gt;&amp;amp;&lt;var&gt;T&lt;/var&gt;&lt;/code&gt;.&lt;/p&gt;
-	&lt;p&gt;Rows indicate the different kind of types. There are three big groups from top to bottom: &lt;strong&gt;unsafe dereference&lt;/strong&gt;, &lt;strong&gt;safe dereference&lt;/strong&gt; and &lt;strong&gt;callable&lt;/strong&gt;.&lt;/p&gt;
-	&lt;p&gt;Colored backgrounds (sorry the accessibility!) indicate the current availability. Black background means the type is plain absurd and prohibited. Gray background means the type makes some sense but it is not yet in the language. Fortunately we have two proposals that cover all the missing types now:&lt;/p&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href=&quot;https://github.com/mozilla/rust/issues/6308&quot;&gt;Dynamically sized types&lt;/a&gt; proposal (a.k.a. DST) brings unsized types to the language. Normally most types including references and owned pointers have their size known and thus are &quot;sized&quot;, but &lt;code&gt;[&lt;var&gt;T&lt;/var&gt;]&lt;/code&gt;, &lt;code&gt;str&lt;/code&gt; and &lt;code&gt;&lt;var&gt;Trait&lt;/var&gt;&lt;/code&gt; do not have their size known in the compile time. The proposal allows them in the limited context, and that is primarily useful for fully supporting custom smart pointers. This also has a side effect that allows for &lt;code&gt;&amp;amp;&lt;b&gt;mut&lt;/b&gt; str&lt;/code&gt;, though it won't see much use since safe strings cannot be modified via indexing.&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;https://github.com/mozilla/rust/issues/10124&quot;&gt;Variadic generics&lt;/a&gt; proposal brings a variadic number of generic parameters, similar to that of C++11. Consequently it can turn closures and procedures into simple traits. The exact interface is not yet settled (one of the possible interface discussed is indicated below in the small print) so it can look differently in the future.&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;p&gt;There are some optional syntactic parts possible in types. Many of them are turned off by default since they are normally verbose, but you can turn them on if you want.&lt;/p&gt;
-
-	
-	&lt;address&gt;a part of &lt;a href=&quot;http://cosmic.mearie.org/&quot;&gt;cosmic.mearie.org&lt;/a&gt;.&lt;/address&gt;
-
-	
-&lt;/body&gt;
-&lt;/div&gt;
-</description>
-<title>
-The Periodic Table of Rust Types
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.inc.com/jeremy-quittner/supreme-court-deals-blow-to-troll.html
-</link>
-<description>
-&lt;div id=&quot;articlecontent&quot; score=&quot;31.25&quot;&gt;&lt;a name=&quot;articlecontent&quot;&gt;&lt;/a&gt;
-    
-
-
-    
-        
-            
-        
-                                    &lt;p id=&quot;deck&quot;&gt;The Supreme Court tells an alleged patent troll to beat it, suggesting an era of frivolous patent litigation may soon end.&lt;/p&gt;  
-        
-                    
-        
-                    &lt;div id=&quot;panographic-image&quot;&gt;
-                &lt;img src=&quot;http://www.inc.com/uploaded_files/image/supreme-court-building-pan_12255.jpg&quot; alt=&quot;&quot;&gt;
-            &lt;/div&gt;
-                            &lt;figcaption class=&quot;imagecaption&quot; id=&quot;pancaption&quot;&gt;&lt;/figcaption&gt;
-                         
-     
-  
-
-        
-
-                
-                
-                    
-    
-
-
-
-
- 
-
-	
-
-	
-	
-
-
-
-
-
-
-&lt;bodycopy id=&quot;bodycopy&quot;&gt;
-	&lt;p&gt;Chalk one up for the enemies of patent trolls: The Supreme Court on Monday &lt;a href=&quot;http://www.supremecourt.gov/orders/courtorders/011314zor_f204.pdf&quot; target=&quot;_blank&quot;&gt;threw out&lt;/a&gt; a request for trial from alleged &lt;a href=&quot;http://arstechnica.com/tech-policy/2013/01/how-newegg-crushed-the-shopping-cart-patent-and-saved-online-retail/&quot;&gt;patent troll Soverain Software&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The case, called &lt;em&gt;Soverain Software LLC. v. Newegg Inc.&lt;/em&gt;, is one of three that are expected to go before the Supreme Court this year. While the Court will likely hear the remaining cases, which deal with finer points of patent law, its dismissal of Soverain speaks to the potential frivolousness of its claims.&lt;/p&gt;
-&lt;p&gt;Soverain acquired the rights to numerous pieces of code tied to the online shopping cart, &lt;a href=&quot;http://www.bloomberg.com/news/2014-01-13/internet-patent-owner-loses-high-court-bid-to-revive-suit.html&quot; target=&quot;_blank&quot;&gt;developed in the 1990s&lt;/a&gt;. In recent years, Soverain has gone on a litigious tear, suing more than two dozen companies including Amazon, Nordstrom, Macy's and Newegg, an online retailer, which all use shopping carts for internet sales.&lt;/p&gt;
-&lt;p&gt;Soverain had some success suing on the state level, where a Texas jury awarded the Chicago-based company $2.5 million in damages against Newegg. However, Soverain lost on appeal last year in U.S. District Court for the Eastern District of Texas, which ruled the shopping cart patents owned by Soverain were too general.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.inc.com/magazine/201202/kris-frieswick/patent-troll-toll-on-businesses.html&quot;&gt;Patent trolls&lt;/a&gt; typically acquire rights to fallow or soon-to-expire patents with no intention of using the patent. Often patent trolls set up shell companies whose only assets are the patents, which means they have no real revenues or assets. Their sole purpose is to harass small businesses, which usually settle rather than pay for extended and costly litigation.&lt;/p&gt;
-&lt;p&gt;Patent law was originally written to protect the patent holder, making it easier for the patent holder to prevail in court. For the patent infringer to win, rather, the defendant must prove exceptional circumstances--namely that the patentee acted in bad faith and made baseless claims. This is hard to do. While the patent holder can be awarded &quot;treble damages,&quot; or three times the damage claimed, the most the infringer can ever collect is attorney fees. &lt;/p&gt;
-&lt;p&gt;The remaining cases before the Supreme Court will deal with these finer points.&lt;/p&gt;
-&lt;p&gt;Congress is examining legislation that would fight patent trolls and their frivolous lawsuits by making them liable for court costs, should they lose their cases.&lt;/p&gt;
-&lt;p&gt;Small businesses mounted 3,400 legal defenses in 2011 for patent cases, a 32 percent increase over the prior year, according to a &lt;a href=&quot;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2091210&quot;&gt;research paper&lt;/a&gt; from 2012 by Boston University law professors James Bessen and Michael J. Meurer.  That cost to small companies was about $11 billion in 2011, also a 32 percent increase over the prior year.&lt;/p&gt;
-&lt;p&gt;The total median awards to trolls is now nearly twice as high as those to legitimate patent holders, whose median reward fell about 30 percent to $4 billion, according to a 2013 &lt;a href=&quot;http://www.pwc.com/en_US/us/forensic-services/publications/assets/2013-patent-litigation-study.pdf&quot; target=&quot;_blank&quot;&gt;report&lt;/a&gt; by PriceWaterhouseCoopers.&lt;/p&gt;
-&lt;/bodycopy&gt;
-
-
-
-    &lt;div id=&quot;bottom-of-article&quot; score=&quot;-2.5&quot;&gt;
-                
-        &lt;br clear=&quot;all&quot;&gt;
-    &lt;/div&gt;
-
-    
-	
-
-		
-
-
-
-
-	
-    &lt;div id=&quot;article-credit&quot; score=&quot;5.0&quot;&gt;
-
-	&lt;div class=&quot;columnist-photo&quot;&gt;&lt;a href=&quot;http://www.inc.com/author/jeremy-quittner&quot; rel=&quot;author&quot;&gt;&lt;img src=&quot;http://www.inc.com/uploaded_files/image/100x100/JeremyQuittner-bkt_19367.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-	
-	
-	&lt;/div&gt;
-
-	
-
-
-	
-
-
-		
-
-&lt;/div&gt;
-
-
-</description>
-<title>
-US Supreme Court declines to hear appeal by patent troll
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://arstechnica.com/tech-policy/2014/01/net-neutrality-is-half-dead-court-strikes-down-fccs-anti-blocking-rules/
 </link>
 <description>
@@ -424,6 +48,168 @@ http://arstechnica.com/tech-policy/2014/01/net-neutrality-is-half-dead-court-str
 </description>
 <title>
 Net neutrality is half-dead: Court strikes down FCC’s anti-blocking rules
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://funded.io
+</link>
+<description>
+&lt;div&gt;
+        &lt;div class=&quot;row brand-primary-bg header&quot;&gt;
+            
+            
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            
+        &lt;/div&gt;        
+        
+    &lt;/div&gt;
+
+</description>
+<title>
+Show HN: Funded.io rapid prototype
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://www.amd.com&quot; target=&quot;_blank&quot;&gt;Advanced Micro Devices&lt;/a&gt;&amp;#xA0;is launching its code-named Kaveri processors today, which represent one of the biggest technical advances that the company has made in some time. Kaveri chips are meant for games and other high-performance applications.&lt;/p&gt;
+&lt;div id=&quot;attachment_882781&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/kaveri/&quot; rel=&quot;attachment wp-att-882781&quot;&gt;&lt;img class=&quot;size-full wp-image-882781&quot; alt=&quot;Kaveri has 2.4 billion transistors.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/kaveri.jpg?w=400&amp;amp;h=369&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Kaveri has 2.4 billion transistors.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;The new chips show that AMD is moving in a very different direction from Intel, which at last week&amp;#x2019;s 2014 International CES put a lot of emphasis on &amp;#x201C;&lt;a href=&quot;http://venturebeat.com/2014/01/13/intels-mooly-eden-bets-that-perceptual-computing-will-save-the-pc-interview/&quot;&gt;perceptual computing&lt;/a&gt;,&amp;#x201D; or using gestures and other new kinds of interfaces to control computers. Instead of interfaces, AMD is focusing on powerful graphics capabilities. AMD says Kaveri has 2.4 billion transistors (the basic building blocks of computer electronics), and 47 percent of them are aimed at better, high-end graphics.&lt;/p&gt;
+&lt;p&gt;Although the code name is Kaveri, the new chips will officially be called the A-Series Accelerated Processing Units (APUs). Like most AMD processors, they combine both graphics and central processing unit functions on the same chip. AMD&amp;#x2019;s chips will include up to four CPUs and eight graphics processing units (GPUs) on a single piece of silicon. &lt;/p&gt;
+&lt;p&gt;Nine out 10 PCs are now shipping with CPUs and GPUs on the same chip, according to Jon Peddie Research.&lt;/p&gt;
+&lt;p&gt;The Kaveri line is the first series of chips to use a new approach to computing dubbed the Heterogeneous System Architecture (HSA), which makes it easier to get around bottlenecks inside a PC and speed the whole system up.&lt;/p&gt;
+&lt;p&gt;Kaveri chips also include Graphics Core Next (GCN), an architecture designed for next-generation games. &lt;/p&gt;
+&lt;p&gt;AMD claims that its GPUs are much more powerful than Intel&amp;#x2019;s. For example, AMD said that its A10-7850K chip is 24 percent faster than the system performance of the higher-priced Intel Core i5-4670K chip. It says its graphics performance is 87 percent better than Intel&amp;#x2019;s, and its compute performance is 63 percent better than Intel&amp;#x2019;s.&lt;/p&gt;
+&lt;p&gt;AMD says the new chips will also use Mantle, an applications programming interface that makes it easier for developers to write high-performance games for AMD chips &amp;#x2014; it&amp;#x2019;s kind of like AMD&amp;#x2019;s own version of Microsoft&amp;#x2019;s DirectX technology. The chips will also have AMD TrueAudio technology, a 32-channel surround audio technology. The A-series chips will support screen resolutions up to 4K, or UltraHD, which puts four times as many pixels on a screen as 1080p high-definition TV.&lt;/p&gt;
+&lt;div id=&quot;attachment_882783&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-benchmarks/&quot; rel=&quot;attachment wp-att-882783&quot;&gt;&lt;img class=&quot;size-full wp-image-882783&quot; alt=&quot;AMD Kaveri benchmarks&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-benchmarks.jpg?w=400&amp;amp;h=201&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD Kaveri benchmarks&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&amp;#x201C;AMD maintains our technology leadership with the 2014 AMD A-Series APUs, a revolutionary next generation APU that marks a new era of computing,&amp;#x201D; said Bernd Lienhard, corporate vice president and general manager of the client business unit at AMD. &amp;#x201C;With world-class graphics and compute technology on a single chip, the AMD A-Series APU is an effective and efficient solution for our customers and enable industry-leading computing experiences.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;HSA is pretty arcane technical material for consumers, but if it takes off, AMD says it will lead to faster and more power-efficient personal computers, tablets, smartphones and cloud servers. It goes hand-in-hand with hUMA, a new way for processors to access the memory inside an Accelerated Processing Unit, or a single chip that combines both a microprocessor and graphics.&lt;/p&gt;
+&lt;p&gt;The problem is that it isn&amp;#x2019;t easy for programmers to harness the power of the GPU, or graphics processing unit, inside an APU. The HSA has been designed to fix this problem, making graphics an equal partner with the CPU (central processing unit) and other processors, such as a digital signal processor, inside a computing system.&lt;/p&gt;
+&lt;p&gt;All of these functions used to be part of separate chips. But now they can be packaged inside the same system-on-chip, or SoC, on the same piece of silicon. The three different kinds of processors access data in different ways, but AMD wants to change and simplify that.&lt;/p&gt;
+&lt;div id=&quot;attachment_882782&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-apu-apps/&quot; rel=&quot;attachment wp-att-882782&quot;&gt;&lt;img class=&quot;size-full wp-image-882782&quot; alt=&quot;AMD APUs target a lot of applications.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-apu-apps.jpg?w=400&amp;amp;h=207&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD APUs target a lot of applications.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;GPUs can be used for non-graphics computing tasks, but it often takes too long to route requests for data through a CPU. Most developers don&amp;#x2019;t want to deal with the difficulty of optimizing their code for this kind of work. But a new technique, dubbed &amp;#x201C;heterogenous queuing,&amp;#x201D; allows applications to directly communicate with the GPU, treating it as an equal partner along side a CPU when it comes to accessing data quickly. That means an application won&amp;#x2019;t have to wait for the CPU when what it really needs to is to access the GPU.&lt;/p&gt;
+&lt;p&gt;With HSA and heterogenous queuing, the GPU doesn&amp;#x2019;t have to wait for the CPU to feed it data. It can spawn its own tasks on its own.&lt;/p&gt;
+&lt;p&gt;Nathan Brookwood, an analyst at Insight 64, calls this change the &amp;#x201C;same kind of conceptual breakthrough that the introduction of the virtual memory wrought in the 1970s,&amp;#x201D; when engineers figured out a better way to manage memory in a computer.&lt;/p&gt;
+&lt;p&gt;AMD also said that Mantle will make it easy for developers to access new features in graphics chips. It allows developers to write games &amp;#x201C;closer to the metal,&amp;#x201D; getting rid of some of the overhead associated with running a PC and letting them get more access to the hardware&amp;#x2019;s real firepower.&lt;/p&gt;
+&lt;p&gt;In a demo called Star Swarm, Oxide Games created a Mantle-based science fiction scene with a gigantic space battle involving thousands of spaceships.&lt;/p&gt;
+&lt;p&gt;Patrick Moorhead, analyst at Moor Insights &amp;amp; Strategy, said, &amp;#x201C;Kaveri is the most interesting chip AMD has launched in years, and I really like what I have seen so far with third-party benchmarks on next generation workloads. It really is the culmination of the seven years since AMD acquired ATI.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;He added, &amp;#x201C;Kaveri&amp;#x2019;s market success will be directly proportional to the speed at which [it] can enable more and more software to become HSA-aware, where it can much more easily tap into the gigaflops of the GPU&amp;#x2019;s performance. AMD now needs either a Google or Microsoft to commit to optimizing their operating system for HSA to seal the deal, as it will make software that much easier to write.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;The new A-Series chips will range in price from $119 to $173, while the power consumption will range from 45 watts to 95 watts. CPU frequency ranges from 3.1 gigahertz to 4.0 gigahertz. The A-Series APUs are available today.&lt;/p&gt;
+&lt;div id=&quot;attachment_882762&quot; class=&quot;wp-caption alignnone&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-hsa-2/&quot; rel=&quot;attachment wp-att-882762&quot;&gt;&lt;img class=&quot;size-full wp-image-882762&quot; alt=&quot;AMD HSA speeds graphics and CPU processing.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-hsa.jpg?w=558&amp;amp;h=405&quot; width=&quot;558&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD HSA speeds graphics and CPU processing.&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;zemanta-pixie&quot;&gt;&lt;a href=&quot;http://reblog.zemanta.com/zemified/5c4a55fb-db3e-459b-b598-4215958aff09/&quot; class=&quot;zemanta-pixie-a&quot; title=&quot;Reblog this post [with Zemanta]&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;zemanta-pixie-img&quot; alt=&quot;Reblog this post [with Zemanta]&quot; src=&quot;http://img.zemanta.com/reblog_e.png?x-id=5c4a55fb-db3e-459b-b598-4215958aff09&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;					&lt;/div&gt;
+</description>
+<title>
+AMD launches Kaveri processors aimed at starting a computing revolution
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://blog.teamtreehouse.com/psd-to-html-is-dead
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+		&lt;img width=&quot;2000&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2013/10/design-mockups.png&quot; class=&quot;attachment- wp-post-image&quot; alt=&quot;&quot;&gt; 
+		&lt;a id=&quot;dd_start&quot;&gt;&lt;/a&gt;&lt;p&gt;PSD to HTML tutorials are all over the web. In fact, many people have asked me why there&amp;#x2019;s not a PSD to HTML tutorial on&amp;#xA0;&lt;a href=&quot;https://teamtreehouse.com/&quot;&gt;Treehouse&lt;/a&gt;. In addition to the tutorials, there are lots of companies that will accept a PSD and convert it to a webpage for roughly $100 USD.&lt;/p&gt;
+&lt;div id=&quot;attachment_22856&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22856&quot; alt=&quot;Google returns more than 48 million results for a &amp;quot;psd to html&amp;quot; search. It's popular, but not the best way to make websites.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/psd2html.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Google returns more than 48 million results for a &amp;#x201C;psd to html&amp;#x201D; search. It&amp;#x2019;s popular, but not the best way to make websites.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;If it&amp;#x2019;s so popular, then how can I say that it&amp;#x2019;s dead? Well&amp;#x2026; I wish every web design quandary could fit into a poetic 140 character tweet, but this is a fuzzy issue that demands a more articulate explanation. Let&amp;#x2019;s dig in.&lt;/p&gt;
+&lt;h2&gt;What is PSD to HTML?&lt;/h2&gt;
+&lt;p&gt;In general, &amp;#x201C;PSD to HTML&amp;#x201D; is a workflow. First, a web page is designed in a Photoshop Document (PSD) and then converted to code (using HTML, CSS, and JavaScript). You could swap Photoshop with any other image editor (like Pixelmator, GIMP, and so on), but the principle is the same. Here&amp;#x2019;s a slightly more detailed step-by-step breakdown:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Design a high fidelity pixel-perfect mockup in Photoshop of&amp;#xA0;&lt;em&gt;exactly&lt;/em&gt; what you want your site to look like.&lt;em&gt;&lt;br&gt;
+&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Use the slice tool to divide your website&amp;#x2019;s imagery and then export it for the web.&lt;/li&gt;
+&lt;li&gt;Write HTML and CSS that utilizes the imagery you exported from Photoshop.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;At first glance, this might seem like a good idea. It can be difficult to start coding if you don&amp;#x2019;t know what the final result is going to look like, so experimenting in Photoshop first and then &amp;#x201C;exporting&amp;#x201D; it to HTML sounds like a granular and sensible process.&lt;/p&gt;
+&lt;div id=&quot;attachment_22857&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22857&quot; alt=&quot;Screenshot of the save for web dialog window in Photoshop.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/saveforweb.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;In Photoshop, the slices feature in the save for web dialog used to be an essential tool for designers saving assets from a PSD. It made it easy to &amp;#x201C;slice&amp;#x201D; a design into images and then layout in a web page using HTML and CSS.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Taking this idea further, many web companies have used PSD to HTML as a template for team workflows. In other words, a designer creates the Photoshop mockup and then hands it over to a developer that writes all of the code. In modern times, the job role of a web designer tends to encompass aesthetics as well as HTML and CSS coding.&lt;/p&gt;
+&lt;h2&gt;Was PSD to HTML ever a good idea?&lt;/h2&gt;
+&lt;p&gt;Yes, PSD to HTML workflows used to be one of the best ways to make websites. There&amp;#x2019;s two big reasons why PSD to HTML&amp;#xA0;&lt;em&gt;used&lt;/em&gt; to make sense.&lt;/p&gt;
+&lt;p&gt;The first reason is for image assets. Before browsers supported all the wonderful features of modern CSS (drop shadows, rounded corners, gradients, and more) it was very difficult to create cross-browser effects without the use of images. Designers would create shadows and rounded corners as images, then clever coding tricks were used to place the imagery on the page. These assets would need to be realized no matter what, so creating them at the same time as the high fidelity mockup actually saved time.&lt;/p&gt;
+&lt;div id=&quot;attachment_22858&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22858&quot; alt=&quot;Screenshot of a sliding doors tab asset.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/sliding-doors.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Prior to the development and widespread adoption of CSS, many websites were a collection of image assets that looked something like this. One of the most innovative techniques of the time was the &lt;a href=&quot;http://alistapart.com/article/slidingdoors&quot;&gt;sliding doors&lt;/a&gt; technique to create tabs back in 2003.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Secondly (and perhaps more importantly) the web used to only be available on desktop browsers and wasn&amp;#x2019;t &lt;em&gt;really&lt;/em&gt; present on phones and tablets in the way it is today. Designing for one fixed resolution of 1024&amp;#xD7;768 used to be totally viable.&lt;/p&gt;
+&lt;p&gt;For these two reasons, it&amp;#x2019;s understandable why a designer would look to Photoshop as their primary web design tool. Image assets were needed for a single screen resolution.&lt;/p&gt;
+&lt;h2&gt;What&amp;#x2019;s wrong with PSD to HTML now?&lt;/h2&gt;
+&lt;p&gt;When pitted against other areas of art and technology, the web is a relatively young medium and things change fast. I&amp;#x2019;ve made dozens of websites using some variation of the PSD to HTML mindset and I&amp;#x2019;m sure many people reading this have done the same, but it&amp;#x2019;s time to move on. Here are the primary reasons why I believe thinking in terms of PSD to HTML is dead.&lt;/p&gt;
+&lt;h3&gt;Responsive Web Design&lt;/h3&gt;
+&lt;p&gt;First, there are now a myriad of methods for browsing the web. Phones, tablets, desktops, notebooks, televisions, and more. There is no single screen resolution that a designer can target. Taking that idea a few steps further, there&amp;#x2019;s really no number of screen resolutions that you can safely &amp;#x201C;target&amp;#x201D; anymore.&lt;/p&gt;
+&lt;div id=&quot;attachment_22550&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://screensiz.es/&quot;&gt;&lt;img class=&quot;size-full wp-image-22550&quot; alt=&quot;Screensiz.es provides tables of information about popular hardware devices.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2013/11/screensizes.png&quot; width=&quot;1244&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Screensiz.es provides tables of information about popular hardware devices.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;I&amp;#x2019;m not going to delve into the finer details of &lt;a href=&quot;http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design&quot;&gt;responsive web design&lt;/a&gt;&amp;#xA0;or &lt;a href=&quot;http://blog.teamtreehouse.com/scalable-web-design&quot;&gt;scalable design&lt;/a&gt;, but the point is that Photoshop is&amp;#xA0;&lt;em&gt;pixel&lt;/em&gt; based. Web pages are fluid and change.&lt;/p&gt;
+&lt;h3&gt;CSS Design&lt;/h3&gt;
+&lt;p&gt;Second, new features in CSS have now become commonly available. There are still a few lingering issues here and there, but support has&amp;#xA0;&lt;em&gt;vastly&lt;/em&gt;&amp;#xA0;improved in the last several years. Common effects like shadows, gradients, and rounded corners can be accomplished in CSS and usually don&amp;#x2019;t even need an image-based fallback anymore.&lt;/p&gt;
+&lt;h3&gt;Maturity&lt;/h3&gt;
+&lt;p&gt;Third, the web industry has grown up a lot. Collectively we&amp;#x2019;ve had more time to refine our present understanding of what works and what doesn&amp;#x2019;t. Most companies will expect a designer to take ownership of aesthetics as well as HTML and CSS code.&lt;/p&gt;
+&lt;p&gt;This also means there are much&amp;#xA0;better tools to support modern workflows. &lt;a href=&quot;http://teamtreehouse.com/library/framework-basics&quot;&gt;CSS frameworks&lt;/a&gt; like Bootstrap and Foundation make it more viable to design in the browser. Apps like Balsamiq and Omnigraffle help to wireframe sites rapidly. Pencil and paper mockups have stood the test of time because they allow for extremely rapid iteration.&lt;/p&gt;
+&lt;h2&gt;Does this mean Photoshop is dead?&lt;/h2&gt;
+&lt;p&gt;No! Not even close. Photoshop is still very important to web design. The problem comes in when a powerful&amp;#xA0;tool like Photoshop is used as a catch all solution without thinking of the higher level task (designing websites). Photoshop is awesome for editing and exporting photographs for web usage. There&amp;#x2019;s also plenty of situations where it still might make sense to generate full detail mockups (in Photoshop, Illustrator, or otherwise) as part of a more complete process. Here are a couple of examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High fidelity mockups can be a critical communication tool when working with web design clients.&amp;#xA0;It might&amp;#xA0;&lt;em&gt;seem&lt;/em&gt;&amp;#xA0;faster to skip a high detail mockup, but&amp;#xA0;it could hurt later on, because many clients aren&amp;#x2019;t going to understand how a wireframe will translate to a web browser. A high fidelity mockup&amp;#xA0;can serve as a discussion tool before writing lots of code (only to discover it&amp;#x2019;s not what the client wanted).&lt;/li&gt;
+&lt;li&gt;High fidelity mockups can be very important when working in medium to large sized teams. We often will create high res mockups at Treehouse when planning new courses or designing new features of our site, because it&amp;#x2019;s a powerful way to sync everyone&amp;#x2019;s mental model of what a feature will look like or how a project might look once it&amp;#x2019;s finished.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These two examples have a key difference from the PSD to HTML way of thinking. High detail mockups are still sometimes generated, but not so that they can be &amp;#x201C;tossed over the fence&amp;#x201D; to a team of developers or sliced up into code. Rather, Photoshop mockups can be used as a visual aid to discuss ideas. In a PSD to HTML workflow, the Photoshop document represents the final site and it&amp;#x2019;s expected to look exactly the same in the browser. This is a subtle but important difference.&lt;/p&gt;
+&lt;h2&gt;Different Strokes&lt;/h2&gt;
+&lt;p&gt;Everyone&amp;#x2019;s workflow is different and nobody knows how to make the perfect website. You should always do whatever is most effective for you and your colleagues. Pushing pixels around in Photoshop is a ton of fun, but I can admit to many occasions when I&amp;#x2019;ve pushed the pixels too far. The key is to know yourself and what makes you perform at your best. If you have any questions or opinions, I&amp;#x2019;d love to hear about them in the comments!&lt;/p&gt;
+&lt;a id=&quot;dd_end&quot;&gt;&lt;/a&gt;			&lt;/div&gt;
+
+	&lt;/div&gt;
+</description>
+<title>
+PSD to HTML is Dead
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://projecteuler.net/
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;logo&quot; class=&quot;noprint&quot;&gt;
+   &lt;img src=&quot;http://projecteuler.net/images/pe_banner_light.png&quot; alt=&quot;Project Euler .net&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;content&quot;&gt;
+
+&lt;img src=&quot;http://projecteuler.net/images/euler_portrait.png&quot; alt=&quot;Leonhard Euler (1707-1783)&quot;&gt;
+&lt;h3&gt;What is Project Euler?&lt;/h3&gt;
+&lt;p&gt;Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.&lt;/p&gt;&lt;p&gt;
+The motivation for starting Project Euler, and its continuation, is to provide a platform for the inquiring mind to delve into unfamiliar areas and learn new concepts in a fun and recreational context.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;Who are the problems aimed at?&lt;/h3&gt;
+&lt;p&gt;The intended audience include students for whom the basic curriculum is not feeding their hunger to learn, adults whose background was not primarily mathematics but had an interest in things mathematical, and professionals who want to keep their problem solving and mathematics on the edge.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;Can anyone solve the problems?&lt;/h3&gt;
+&lt;p&gt;The problems range in difficulty and for many the experience is inductive chain learning. That is, by solving one problem it will expose you to a new concept that allows you to undertake a previously inaccessible problem. So the determined participant will slowly but surely work his/her way through every problem.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3&gt;What next?&lt;/h3&gt;
+&lt;p&gt;In order to track your progress it is necessary to setup an account and have Cookies enabled. If you already have an account then &lt;a href=&quot;http://projecteuler.net/login&quot;&gt;Login&lt;/a&gt;, otherwise please &lt;a href=&quot;http://projecteuler.net/register&quot;&gt;Register&lt;/a&gt; - it's completely free!&lt;/p&gt;
+&lt;p&gt;However, as the problems are challenging then you may wish to view the &lt;a href=&quot;http://projecteuler.net/problems&quot;&gt;Problems&lt;/a&gt; before registering.&lt;/p&gt;&lt;p&gt;&quot;Project Euler exists to encourage, challenge, and develop the skills and enjoyment of anyone with an interest in the fascinating world of mathematics.&quot;&lt;/p&gt;&lt;/div&gt;
+
+
+
+
+
+
+&lt;/div&gt;
+</description>
+<title>
+Project Euler
 </title>
 </item>
 </channel>
