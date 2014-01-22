@@ -18,165 +18,6 @@ myread
 unknown
 </author>
 <link>
-http://arstechnica.com/tech-policy/2014/01/net-neutrality-is-half-dead-court-strikes-down-fccs-anti-blocking-rules/
-</link>
-<description>
-&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
-    
-&lt;figure class=&quot;intro-image image center full-width&quot; score=&quot;12.5&quot;&gt;
-      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/net-neutrality-censored.jpg&quot; width=&quot;640&quot;&gt;
-  
-    &lt;figcaption class=&quot;caption&quot; score=&quot;7.5&quot;&gt;
-	
-			
-	  &lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;The Federal Communication Commission's net neutrality rules were partially struck down today by the US Court of Appeals for the District of Columbia Circuit, which said the Commission did not properly justify its anti-discrimination and anti-blocking rules.&lt;/p&gt;
-&lt;p&gt;Those rules in the Open Internet Order, &lt;a href=&quot;http://arstechnica.com/tech-policy/2010/12/its-here-fcc-adopts-net-neutrality-lite/&quot;&gt;adopted in 2010&lt;/a&gt;, forbid ISPs from blocking services or charging content providers for access to the network. &lt;a href=&quot;http://arstechnica.com/tech-policy/2013/09/verizons-bid-to-kill-network-neutrality-law-goes-to-court-monday/&quot;&gt;Verizon challenged the entire order&lt;/a&gt; and got a big victory in today's ruling. While it could still be appealed to the Supreme Court, the order today would allow pay-for-prioritization deals that could let Verizon or other ISPs charge companies like Netflix for a faster path to consumers.&lt;/p&gt;
-&lt;p&gt;The court left part of the Open Internet Order intact, however, saying that the FCC still has &quot;general authority&quot; to regulate how broadband providers treat traffic.&lt;/p&gt;
-&lt;p&gt;The FCC got itself into trouble with some &lt;a href=&quot;http://arstechnica.com/tech-policy/2013/09/fccs-wishy-washy-rulemaking-might-doom-net-neutrality-in-court/&quot;&gt;wishy-washy rulemaking&lt;/a&gt;. The commission did not declare that ISPs are &quot;common carriers,&quot; yet it imposed restrictions that sound strikingly similar to regulations that can only apply to common carriers.&lt;/p&gt;
-&lt;p&gt;The 81-page ruling (&lt;a href=&quot;http://www.cadc.uscourts.gov/internet/opinions.nsf/3AF8B4D938CDEEA685257C6000532062/%24file/11-1355-1474943.pdf&quot;&gt;PDF&lt;/a&gt;) today states the following:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[T]he Commission has established that section 706 of the Telecommunications Act of 1996 vests it with affirmative authority to enact measures encouraging the deployment of broadband infrastructure. The Commission, we further hold, has reasonably interpreted section 706 to empower it to promulgate rules governing broadband providers’ treatment of Internet traffic, and its justification for the specific rules at issue here—that they will preserve and facilitate the “virtuous circle&quot; of innovation that has driven the explosive growth of the Internet—is reasonable and supported by substantial evidence. That said, even though the Commission has general authority to regulate in this arena, it may not impose requirements that contravene express statutory mandates. Given that the Commission has chosen to classify broadband providers in a manner that exempts them from treatment as common carriers, the Communications Act expressly prohibits the Commission from nonetheless regulating them as such. Because the Commission has failed to establish that the anti-discrimination and anti-blocking rules do not impose per se common carrier obligations, we vacate those portions of the Open Internet Order.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;FCC Chairman Tom Wheeler said the commission might appeal the ruling. “The DC Circuit has correctly held that ‘Section 706 . . . vests [the Commission] with affirmative authority to enact measures encouraging the deployment of broadband infrastructure’ and therefore may ‘promulgate rules governing broadband providers’ treatment of Internet traffic,&quot; Wheeler said in a written statement. &quot;I am committed to maintaining our networks as engines for economic growth, test beds for innovative services and products, and channels for all forms of speech protected by the First Amendment. We will consider all available options, including those for appeal, to ensure that these networks on which the Internet depends continue to provide a free and open platform for innovation and expression, and operate in the interest of all Americans.”&lt;/p&gt;
-&lt;p&gt;Consumer advocacy group Free Press lamented the ruling. “We’re disappointed that the court came to this conclusion,&quot; Free Press CEO Craig Aaron said in a written statement. &quot;Its ruling means that Internet users will be pitted against the biggest phone and cable companies—and in the absence of any oversight, these companies can now block and discriminate against their customers’ communications at will.&quot;&lt;/p&gt;
-&lt;p&gt;Aaron further blamed former FCC Chairman Julius Genachowski, who &quot;made a grave mistake when [his Commission] failed to ground its open Internet rules on solid legal footing. Internet users will pay dearly for the previous chairman’s lack of political will.&quot;&lt;/p&gt;
-&lt;p&gt;Consumer advocacy group Public Knowledge offered similar thoughts, while urging the FCC to come up with new rules that meet legal muster. &quot;[T]he Court did uphold broad Commission authority to regulate broadband,&quot; Public Knowledge Senior VP Harold Feld said. &quot;To exercise that authority, the FCC must craft open Internet protection that are not full fledged common carrier rules. Alternatively, if the FCC needs broader authority it can classify broadband as a title 2 common carrier service. Both of these are viable options. In fact, Public Knowledge has long held that both broadband is a telecommunications service, and that the modest protections offered by the Open Internet rules fall well short of full common carrier regulations.&quot;&lt;/p&gt;
-&lt;p&gt;Public Knowledge itself could appeal the ruling, Feld said.&lt;/p&gt;
-&lt;p&gt;We will provide further analysis of this ruling in a followup article today.&lt;/p&gt;
-    		&lt;/div&gt;
-    
-</description>
-<title>
-Net neutrality is half-dead: Court strikes down FCC’s anti-blocking rules
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://funded.io
-</link>
-<description>
-&lt;div&gt;
-        &lt;div class=&quot;row brand-primary-bg header&quot;&gt;
-            
-            
-        &lt;/div&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            
-        &lt;/div&gt;        
-        
-    &lt;/div&gt;
-
-</description>
-<title>
-Show HN: Funded.io rapid prototype
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://www.amd.com&quot; target=&quot;_blank&quot;&gt;Advanced Micro Devices&lt;/a&gt;&amp;#xA0;is launching its code-named Kaveri processors today, which represent one of the biggest technical advances that the company has made in some time. Kaveri chips are meant for games and other high-performance applications.&lt;/p&gt;
-&lt;div id=&quot;attachment_882781&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/kaveri/&quot; rel=&quot;attachment wp-att-882781&quot;&gt;&lt;img class=&quot;size-full wp-image-882781&quot; alt=&quot;Kaveri has 2.4 billion transistors.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/kaveri.jpg?w=400&amp;amp;h=369&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Kaveri has 2.4 billion transistors.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;The new chips show that AMD is moving in a very different direction from Intel, which at last week&amp;#x2019;s 2014 International CES put a lot of emphasis on &amp;#x201C;&lt;a href=&quot;http://venturebeat.com/2014/01/13/intels-mooly-eden-bets-that-perceptual-computing-will-save-the-pc-interview/&quot;&gt;perceptual computing&lt;/a&gt;,&amp;#x201D; or using gestures and other new kinds of interfaces to control computers. Instead of interfaces, AMD is focusing on powerful graphics capabilities. AMD says Kaveri has 2.4 billion transistors (the basic building blocks of computer electronics), and 47 percent of them are aimed at better, high-end graphics.&lt;/p&gt;
-&lt;p&gt;Although the code name is Kaveri, the new chips will officially be called the A-Series Accelerated Processing Units (APUs). Like most AMD processors, they combine both graphics and central processing unit functions on the same chip. AMD&amp;#x2019;s chips will include up to four CPUs and eight graphics processing units (GPUs) on a single piece of silicon. &lt;/p&gt;
-&lt;p&gt;Nine out 10 PCs are now shipping with CPUs and GPUs on the same chip, according to Jon Peddie Research.&lt;/p&gt;
-&lt;p&gt;The Kaveri line is the first series of chips to use a new approach to computing dubbed the Heterogeneous System Architecture (HSA), which makes it easier to get around bottlenecks inside a PC and speed the whole system up.&lt;/p&gt;
-&lt;p&gt;Kaveri chips also include Graphics Core Next (GCN), an architecture designed for next-generation games. &lt;/p&gt;
-&lt;p&gt;AMD claims that its GPUs are much more powerful than Intel&amp;#x2019;s. For example, AMD said that its A10-7850K chip is 24 percent faster than the system performance of the higher-priced Intel Core i5-4670K chip. It says its graphics performance is 87 percent better than Intel&amp;#x2019;s, and its compute performance is 63 percent better than Intel&amp;#x2019;s.&lt;/p&gt;
-&lt;p&gt;AMD says the new chips will also use Mantle, an applications programming interface that makes it easier for developers to write high-performance games for AMD chips &amp;#x2014; it&amp;#x2019;s kind of like AMD&amp;#x2019;s own version of Microsoft&amp;#x2019;s DirectX technology. The chips will also have AMD TrueAudio technology, a 32-channel surround audio technology. The A-series chips will support screen resolutions up to 4K, or UltraHD, which puts four times as many pixels on a screen as 1080p high-definition TV.&lt;/p&gt;
-&lt;div id=&quot;attachment_882783&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-benchmarks/&quot; rel=&quot;attachment wp-att-882783&quot;&gt;&lt;img class=&quot;size-full wp-image-882783&quot; alt=&quot;AMD Kaveri benchmarks&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-benchmarks.jpg?w=400&amp;amp;h=201&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD Kaveri benchmarks&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;&amp;#x201C;AMD maintains our technology leadership with the 2014 AMD A-Series APUs, a revolutionary next generation APU that marks a new era of computing,&amp;#x201D; said Bernd Lienhard, corporate vice president and general manager of the client business unit at AMD. &amp;#x201C;With world-class graphics and compute technology on a single chip, the AMD A-Series APU is an effective and efficient solution for our customers and enable industry-leading computing experiences.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;HSA is pretty arcane technical material for consumers, but if it takes off, AMD says it will lead to faster and more power-efficient personal computers, tablets, smartphones and cloud servers. It goes hand-in-hand with hUMA, a new way for processors to access the memory inside an Accelerated Processing Unit, or a single chip that combines both a microprocessor and graphics.&lt;/p&gt;
-&lt;p&gt;The problem is that it isn&amp;#x2019;t easy for programmers to harness the power of the GPU, or graphics processing unit, inside an APU. The HSA has been designed to fix this problem, making graphics an equal partner with the CPU (central processing unit) and other processors, such as a digital signal processor, inside a computing system.&lt;/p&gt;
-&lt;p&gt;All of these functions used to be part of separate chips. But now they can be packaged inside the same system-on-chip, or SoC, on the same piece of silicon. The three different kinds of processors access data in different ways, but AMD wants to change and simplify that.&lt;/p&gt;
-&lt;div id=&quot;attachment_882782&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-apu-apps/&quot; rel=&quot;attachment wp-att-882782&quot;&gt;&lt;img class=&quot;size-full wp-image-882782&quot; alt=&quot;AMD APUs target a lot of applications.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-apu-apps.jpg?w=400&amp;amp;h=207&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD APUs target a lot of applications.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;GPUs can be used for non-graphics computing tasks, but it often takes too long to route requests for data through a CPU. Most developers don&amp;#x2019;t want to deal with the difficulty of optimizing their code for this kind of work. But a new technique, dubbed &amp;#x201C;heterogenous queuing,&amp;#x201D; allows applications to directly communicate with the GPU, treating it as an equal partner along side a CPU when it comes to accessing data quickly. That means an application won&amp;#x2019;t have to wait for the CPU when what it really needs to is to access the GPU.&lt;/p&gt;
-&lt;p&gt;With HSA and heterogenous queuing, the GPU doesn&amp;#x2019;t have to wait for the CPU to feed it data. It can spawn its own tasks on its own.&lt;/p&gt;
-&lt;p&gt;Nathan Brookwood, an analyst at Insight 64, calls this change the &amp;#x201C;same kind of conceptual breakthrough that the introduction of the virtual memory wrought in the 1970s,&amp;#x201D; when engineers figured out a better way to manage memory in a computer.&lt;/p&gt;
-&lt;p&gt;AMD also said that Mantle will make it easy for developers to access new features in graphics chips. It allows developers to write games &amp;#x201C;closer to the metal,&amp;#x201D; getting rid of some of the overhead associated with running a PC and letting them get more access to the hardware&amp;#x2019;s real firepower.&lt;/p&gt;
-&lt;p&gt;In a demo called Star Swarm, Oxide Games created a Mantle-based science fiction scene with a gigantic space battle involving thousands of spaceships.&lt;/p&gt;
-&lt;p&gt;Patrick Moorhead, analyst at Moor Insights &amp;amp; Strategy, said, &amp;#x201C;Kaveri is the most interesting chip AMD has launched in years, and I really like what I have seen so far with third-party benchmarks on next generation workloads. It really is the culmination of the seven years since AMD acquired ATI.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;He added, &amp;#x201C;Kaveri&amp;#x2019;s market success will be directly proportional to the speed at which [it] can enable more and more software to become HSA-aware, where it can much more easily tap into the gigaflops of the GPU&amp;#x2019;s performance. AMD now needs either a Google or Microsoft to commit to optimizing their operating system for HSA to seal the deal, as it will make software that much easier to write.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;The new A-Series chips will range in price from $119 to $173, while the power consumption will range from 45 watts to 95 watts. CPU frequency ranges from 3.1 gigahertz to 4.0 gigahertz. The A-Series APUs are available today.&lt;/p&gt;
-&lt;div id=&quot;attachment_882762&quot; class=&quot;wp-caption alignnone&quot;&gt;&lt;a href=&quot;http://venturebeat.com/2014/01/14/amd-launches-kaveri-processors-aimed-at-starting-a-computing-revolution/amd-hsa-2/&quot; rel=&quot;attachment wp-att-882762&quot;&gt;&lt;img class=&quot;size-full wp-image-882762&quot; alt=&quot;AMD HSA speeds graphics and CPU processing.&quot; src=&quot;http://venturebeat.files.wordpress.com/2014/01/amd-hsa.jpg?w=558&amp;amp;h=405&quot; width=&quot;558&quot;&gt;&lt;/a&gt;&lt;p class=&quot;vb_image_source&quot;&gt;AMD&lt;/p&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;AMD HSA speeds graphics and CPU processing.&lt;/p&gt;&lt;/div&gt;
-
-&lt;div class=&quot;zemanta-pixie&quot;&gt;&lt;a href=&quot;http://reblog.zemanta.com/zemified/5c4a55fb-db3e-459b-b598-4215958aff09/&quot; class=&quot;zemanta-pixie-a&quot; title=&quot;Reblog this post [with Zemanta]&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;zemanta-pixie-img&quot; alt=&quot;Reblog this post [with Zemanta]&quot; src=&quot;http://img.zemanta.com/reblog_e.png?x-id=5c4a55fb-db3e-459b-b598-4215958aff09&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;					&lt;/div&gt;
-</description>
-<title>
-AMD launches Kaveri processors aimed at starting a computing revolution
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://blog.teamtreehouse.com/psd-to-html-is-dead
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;img width=&quot;2000&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2013/10/design-mockups.png&quot; class=&quot;attachment- wp-post-image&quot; alt=&quot;&quot;&gt; 
-		&lt;a id=&quot;dd_start&quot;&gt;&lt;/a&gt;&lt;p&gt;PSD to HTML tutorials are all over the web. In fact, many people have asked me why there&amp;#x2019;s not a PSD to HTML tutorial on&amp;#xA0;&lt;a href=&quot;https://teamtreehouse.com/&quot;&gt;Treehouse&lt;/a&gt;. In addition to the tutorials, there are lots of companies that will accept a PSD and convert it to a webpage for roughly $100 USD.&lt;/p&gt;
-&lt;div id=&quot;attachment_22856&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22856&quot; alt=&quot;Google returns more than 48 million results for a &amp;quot;psd to html&amp;quot; search. It's popular, but not the best way to make websites.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/psd2html.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Google returns more than 48 million results for a &amp;#x201C;psd to html&amp;#x201D; search. It&amp;#x2019;s popular, but not the best way to make websites.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;If it&amp;#x2019;s so popular, then how can I say that it&amp;#x2019;s dead? Well&amp;#x2026; I wish every web design quandary could fit into a poetic 140 character tweet, but this is a fuzzy issue that demands a more articulate explanation. Let&amp;#x2019;s dig in.&lt;/p&gt;
-&lt;h2&gt;What is PSD to HTML?&lt;/h2&gt;
-&lt;p&gt;In general, &amp;#x201C;PSD to HTML&amp;#x201D; is a workflow. First, a web page is designed in a Photoshop Document (PSD) and then converted to code (using HTML, CSS, and JavaScript). You could swap Photoshop with any other image editor (like Pixelmator, GIMP, and so on), but the principle is the same. Here&amp;#x2019;s a slightly more detailed step-by-step breakdown:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Design a high fidelity pixel-perfect mockup in Photoshop of&amp;#xA0;&lt;em&gt;exactly&lt;/em&gt; what you want your site to look like.&lt;em&gt;&lt;br&gt;
-&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Use the slice tool to divide your website&amp;#x2019;s imagery and then export it for the web.&lt;/li&gt;
-&lt;li&gt;Write HTML and CSS that utilizes the imagery you exported from Photoshop.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;At first glance, this might seem like a good idea. It can be difficult to start coding if you don&amp;#x2019;t know what the final result is going to look like, so experimenting in Photoshop first and then &amp;#x201C;exporting&amp;#x201D; it to HTML sounds like a granular and sensible process.&lt;/p&gt;
-&lt;div id=&quot;attachment_22857&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22857&quot; alt=&quot;Screenshot of the save for web dialog window in Photoshop.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/saveforweb.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;In Photoshop, the slices feature in the save for web dialog used to be an essential tool for designers saving assets from a PSD. It made it easy to &amp;#x201C;slice&amp;#x201D; a design into images and then layout in a web page using HTML and CSS.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Taking this idea further, many web companies have used PSD to HTML as a template for team workflows. In other words, a designer creates the Photoshop mockup and then hands it over to a developer that writes all of the code. In modern times, the job role of a web designer tends to encompass aesthetics as well as HTML and CSS coding.&lt;/p&gt;
-&lt;h2&gt;Was PSD to HTML ever a good idea?&lt;/h2&gt;
-&lt;p&gt;Yes, PSD to HTML workflows used to be one of the best ways to make websites. There&amp;#x2019;s two big reasons why PSD to HTML&amp;#xA0;&lt;em&gt;used&lt;/em&gt; to make sense.&lt;/p&gt;
-&lt;p&gt;The first reason is for image assets. Before browsers supported all the wonderful features of modern CSS (drop shadows, rounded corners, gradients, and more) it was very difficult to create cross-browser effects without the use of images. Designers would create shadows and rounded corners as images, then clever coding tricks were used to place the imagery on the page. These assets would need to be realized no matter what, so creating them at the same time as the high fidelity mockup actually saved time.&lt;/p&gt;
-&lt;div id=&quot;attachment_22858&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-22858&quot; alt=&quot;Screenshot of a sliding doors tab asset.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2014/01/sliding-doors.png&quot; width=&quot;1244&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Prior to the development and widespread adoption of CSS, many websites were a collection of image assets that looked something like this. One of the most innovative techniques of the time was the &lt;a href=&quot;http://alistapart.com/article/slidingdoors&quot;&gt;sliding doors&lt;/a&gt; technique to create tabs back in 2003.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Secondly (and perhaps more importantly) the web used to only be available on desktop browsers and wasn&amp;#x2019;t &lt;em&gt;really&lt;/em&gt; present on phones and tablets in the way it is today. Designing for one fixed resolution of 1024&amp;#xD7;768 used to be totally viable.&lt;/p&gt;
-&lt;p&gt;For these two reasons, it&amp;#x2019;s understandable why a designer would look to Photoshop as their primary web design tool. Image assets were needed for a single screen resolution.&lt;/p&gt;
-&lt;h2&gt;What&amp;#x2019;s wrong with PSD to HTML now?&lt;/h2&gt;
-&lt;p&gt;When pitted against other areas of art and technology, the web is a relatively young medium and things change fast. I&amp;#x2019;ve made dozens of websites using some variation of the PSD to HTML mindset and I&amp;#x2019;m sure many people reading this have done the same, but it&amp;#x2019;s time to move on. Here are the primary reasons why I believe thinking in terms of PSD to HTML is dead.&lt;/p&gt;
-&lt;h3&gt;Responsive Web Design&lt;/h3&gt;
-&lt;p&gt;First, there are now a myriad of methods for browsing the web. Phones, tablets, desktops, notebooks, televisions, and more. There is no single screen resolution that a designer can target. Taking that idea a few steps further, there&amp;#x2019;s really no number of screen resolutions that you can safely &amp;#x201C;target&amp;#x201D; anymore.&lt;/p&gt;
-&lt;div id=&quot;attachment_22550&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://screensiz.es/&quot;&gt;&lt;img class=&quot;size-full wp-image-22550&quot; alt=&quot;Screensiz.es provides tables of information about popular hardware devices.&quot; src=&quot;http://blog.teamtreehouse.com/wp-content/uploads/2013/11/screensizes.png&quot; width=&quot;1244&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Screensiz.es provides tables of information about popular hardware devices.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;I&amp;#x2019;m not going to delve into the finer details of &lt;a href=&quot;http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design&quot;&gt;responsive web design&lt;/a&gt;&amp;#xA0;or &lt;a href=&quot;http://blog.teamtreehouse.com/scalable-web-design&quot;&gt;scalable design&lt;/a&gt;, but the point is that Photoshop is&amp;#xA0;&lt;em&gt;pixel&lt;/em&gt; based. Web pages are fluid and change.&lt;/p&gt;
-&lt;h3&gt;CSS Design&lt;/h3&gt;
-&lt;p&gt;Second, new features in CSS have now become commonly available. There are still a few lingering issues here and there, but support has&amp;#xA0;&lt;em&gt;vastly&lt;/em&gt;&amp;#xA0;improved in the last several years. Common effects like shadows, gradients, and rounded corners can be accomplished in CSS and usually don&amp;#x2019;t even need an image-based fallback anymore.&lt;/p&gt;
-&lt;h3&gt;Maturity&lt;/h3&gt;
-&lt;p&gt;Third, the web industry has grown up a lot. Collectively we&amp;#x2019;ve had more time to refine our present understanding of what works and what doesn&amp;#x2019;t. Most companies will expect a designer to take ownership of aesthetics as well as HTML and CSS code.&lt;/p&gt;
-&lt;p&gt;This also means there are much&amp;#xA0;better tools to support modern workflows. &lt;a href=&quot;http://teamtreehouse.com/library/framework-basics&quot;&gt;CSS frameworks&lt;/a&gt; like Bootstrap and Foundation make it more viable to design in the browser. Apps like Balsamiq and Omnigraffle help to wireframe sites rapidly. Pencil and paper mockups have stood the test of time because they allow for extremely rapid iteration.&lt;/p&gt;
-&lt;h2&gt;Does this mean Photoshop is dead?&lt;/h2&gt;
-&lt;p&gt;No! Not even close. Photoshop is still very important to web design. The problem comes in when a powerful&amp;#xA0;tool like Photoshop is used as a catch all solution without thinking of the higher level task (designing websites). Photoshop is awesome for editing and exporting photographs for web usage. There&amp;#x2019;s also plenty of situations where it still might make sense to generate full detail mockups (in Photoshop, Illustrator, or otherwise) as part of a more complete process. Here are a couple of examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;High fidelity mockups can be a critical communication tool when working with web design clients.&amp;#xA0;It might&amp;#xA0;&lt;em&gt;seem&lt;/em&gt;&amp;#xA0;faster to skip a high detail mockup, but&amp;#xA0;it could hurt later on, because many clients aren&amp;#x2019;t going to understand how a wireframe will translate to a web browser. A high fidelity mockup&amp;#xA0;can serve as a discussion tool before writing lots of code (only to discover it&amp;#x2019;s not what the client wanted).&lt;/li&gt;
-&lt;li&gt;High fidelity mockups can be very important when working in medium to large sized teams. We often will create high res mockups at Treehouse when planning new courses or designing new features of our site, because it&amp;#x2019;s a powerful way to sync everyone&amp;#x2019;s mental model of what a feature will look like or how a project might look once it&amp;#x2019;s finished.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These two examples have a key difference from the PSD to HTML way of thinking. High detail mockups are still sometimes generated, but not so that they can be &amp;#x201C;tossed over the fence&amp;#x201D; to a team of developers or sliced up into code. Rather, Photoshop mockups can be used as a visual aid to discuss ideas. In a PSD to HTML workflow, the Photoshop document represents the final site and it&amp;#x2019;s expected to look exactly the same in the browser. This is a subtle but important difference.&lt;/p&gt;
-&lt;h2&gt;Different Strokes&lt;/h2&gt;
-&lt;p&gt;Everyone&amp;#x2019;s workflow is different and nobody knows how to make the perfect website. You should always do whatever is most effective for you and your colleagues. Pushing pixels around in Photoshop is a ton of fun, but I can admit to many occasions when I&amp;#x2019;ve pushed the pixels too far. The key is to know yourself and what makes you perform at your best. If you have any questions or opinions, I&amp;#x2019;d love to hear about them in the comments!&lt;/p&gt;
-&lt;a id=&quot;dd_end&quot;&gt;&lt;/a&gt;			&lt;/div&gt;
-
-	&lt;/div&gt;
-</description>
-<title>
-PSD to HTML is Dead
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://projecteuler.net/
 </link>
 <description>
@@ -210,6 +51,335 @@ The motivation for starting Project Euler, and its continuation, is to provide a
 </description>
 <title>
 Project Euler
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.nytimes.com/2014/01/15/us/nsa-effort-pries-open-computers-not-connected-to-internet.html?partner=rss&emc=rss&smid=tw-nytimesworld
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
+
+    
+
+    
+    
+
+                
+    &lt;p class=&quot;story-body-text story-content&quot;&gt;WASHINGTON &amp;#x2014; The National Security Agency has implanted software in nearly 100,000 computers around the world that allows the United States to conduct surveillance on those machines and can also create a digital highway for launching cyberattacks.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;While most of the software is inserted by gaining access to computer networks, the N.S.A. has increasingly made use of a secret technology that enables it to enter and alter data in computers even if they are not connected to the Internet, according to N.S.A. documents, computer experts and American officials.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The technology, which the agency has used since at least 2008, relies on a covert channel of radio waves that can be transmitted from tiny circuit boards and USB cards inserted surreptitiously into the computers. In some cases, they are sent to a briefcase-size relay station that intelligence agencies can set up miles away from the target.&lt;/p&gt;    &lt;aside class=&quot;marginalia related-coverage-marginalia&quot;&gt;
+        
+            &lt;header&gt;
+        
+    &lt;/header&gt;
+
+        &lt;ul&gt;
+                                                &lt;li&gt;
+&lt;article class=&quot;story theme-summary&quot;&gt;
+    &lt;a class=&quot;story-link&quot; href=&quot;http://www.nytimes.com/2014/01/15/us/politics/judge-warns-proposed-safeguards-could-hamper-surveillance-court.html&quot;&gt;
+
+                    &lt;div class=&quot;thumb&quot;&gt;
+                &lt;img src=&quot;http://static01.nyt.com/images/2014/01/15/world/OBAMA/OBAMA-thumbStandard.jpg&quot; alt=&quot;President Obama spoke to reporters before a cabinet meeting at the White House on Tuesday morning. Mr. Obama&amp;#x2019;s speech on spying guidelines is scheduled for Friday.&quot;&gt;
+                
+            &lt;/div&gt;
+        
+        &lt;h2 class=&quot;story-heading&quot;&gt;
+                        &lt;span class=&quot;story-heading-text&quot;&gt;Obama to Place Some Restraints on Surveillance&lt;/span&gt;&lt;time class=&quot;dateline&quot; datetime=&quot;2014-01-14&quot;&gt;JAN. 14, 2014&lt;/time&gt;
+        &lt;/h2&gt;
+
+    &lt;/a&gt;
+&lt;/article&gt;
+&lt;/li&gt;
+                                    &lt;/ul&gt;
+
+    &lt;/aside&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;The radio frequency technology has helped solve one of the biggest problems facing American intelligence agencies for years: getting into computers that adversaries, and some American partners, have tried to make impervious to spying or cyberattack. In most cases, the radio frequency hardware must be physically inserted by a spy, a manufacturer or an unwitting user.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A. calls its efforts more an act of &amp;#x201C;active defense&amp;#x201D; against foreign cyberattacks than a tool to go on the offensive. But when Chinese attackers place similar software on the computer systems of American companies or government agencies, American officials have protested, often at the presidential level.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Among the most frequent targets of the N.S.A. and its Pentagon partner, &lt;a title=&quot;About the group&quot; href=&quot;http://www.stratcom.mil/factsheets/Cyber_Command/&quot;&gt;United States Cyber Command&lt;/a&gt;, have been units of the Chinese Army, which the United States has accused of launching regular digital probes and attacks on American industrial and military targets, usually to steal secrets or intellectual property. But the program, code-named Quantum, has also been successful in inserting software into Russian military networks and systems used by the Mexican police and drug cartels, trade institutions inside the European Union, and sometime partners against terrorism like Saudi Arabia, India and Pakistan, according to officials and an N.S.A. map that indicates sites of what the agency calls &amp;#x201C;computer network exploitation.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;What&amp;#x2019;s new here is the scale and the sophistication of the intelligence agency&amp;#x2019;s ability to get into computers and networks to which no one has ever had access before,&amp;#x201D; said James Andrew Lewis, the cybersecurity expert at the Center for Strategic and International Studies in Washington. &amp;#x201C;Some of these capabilities have been around for a while, but the combination of learning how to penetrate systems to insert software and learning how to do that using radio frequencies has given the U.S. a window it&amp;#x2019;s never had before.&amp;#x201D;&lt;/p&gt; &lt;figure id=&quot;how-the-nsa-uses-radio-frequencies-to-penetrate-computers&quot; class=&quot;interactive  has-adjacency limit-medium layout-large&quot;&gt;
+    &lt;figcaption class=&quot;interactive-caption&quot;&gt;
+            
+                &lt;p class=&quot;interactive-leadin&quot;&gt;
+            The N.S.A. and the Pentagon&amp;#x2019;s Cyber Command have implanted nearly 100,000 &amp;#x201C;computer network exploits&amp;#x201D; around the world, but the hardest problem is getting inside machines isolated from outside communications.        &lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;div class=&quot;interactive-graphic&quot;&gt;
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;/div&gt;
+	
+&lt;/figure&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;No Domestic Use Seen&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;There is no evidence that the N.S.A. has implanted its software or used its radio frequency technology inside the United States. While refusing to comment on the scope of the Quantum program, the N.S.A. said its actions were not comparable to China&amp;#x2019;s.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;N.S.A.'s activities are focused and specifically deployed against &amp;#x2014; and only against &amp;#x2014; valid foreign intelligence targets in response to intelligence requirements,&amp;#x201D; Vanee Vines, an agency spokeswoman, said in a statement. &amp;#x201C;We do not use foreign intelligence capabilities to steal the trade secrets of foreign companies on behalf of &amp;#x2014; or give intelligence we collect to &amp;#x2014; U.S. companies to enhance their international competitiveness or increase their bottom line.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Over the past two months, parts of the program have been disclosed in documents from the trove leaked by Edward J. Snowden, the former N.S.A. contractor. A Dutch newspaper &lt;a href=&quot;http://www.nrc.nl/nieuws/2013/11/23/nsa-infected-50000-computer-networks-with-malicious-software/&quot;&gt;published the map&lt;/a&gt; of areas where the United States has inserted spy software, sometimes in cooperation with local authorities, often covertly. Der Spiegel, a German newsmagazine, &lt;a href=&quot;http://www.spiegel.de/international/world/catalog-reveals-nsa-has-back-doors-for-numerous-devices-a-940994.html&quot;&gt;published the N.S.A.'s catalog&lt;/a&gt; of hardware products that can secretly transmit and receive digital signals from computers, a program called ANT. The New York Times withheld some of those details, at the request of American intelligence officials, when it &lt;a href=&quot;http://www.nytimes.com/2012/06/01/world/middleeast/obama-ordered-wave-of-cyberattacks-against-iran.html?pagewanted=all&amp;amp;_r=0&quot;&gt;reported&lt;/a&gt;, in the summer of 2012, on American cyberattacks on Iran.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;President Obama is scheduled to announce on Friday what recommendations he is accepting from an advisory panel on changing N.S.A. practices. The panel agreed with Silicon Valley executives that some of the techniques developed by the agency to find flaws in computer systems undermine global confidence in a range of American-made information products like laptop computers and cloud services.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Embracing Silicon Valley&amp;#x2019;s critique of the N.S.A., the panel has recommended banning, except in extreme cases, the N.S.A. practice of exploiting flaws in common software to aid in American surveillance and cyberattacks. It also called for an end to government efforts to weaken publicly available encryption systems, and said the government should never develop secret ways into computer systems to exploit them, which sometimes include software implants.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Richard A. Clarke, an official in the Clinton and Bush administrations who served as one of the five members of the advisory panel, explained the group&amp;#x2019;s reasoning in an email last week, saying that &amp;#x201C;it is more important that we defend ourselves than that we attack others.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;Holes in encryption software would be more of a risk to us than a benefit,&amp;#x201D; he said, adding: &amp;#x201C;If we can find the vulnerability, so can others. It&amp;#x2019;s more important that we protect our power grid than that we get into China&amp;#x2019;s.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;From the earliest days of the Internet, the N.S.A. had little trouble monitoring traffic because a vast majority of messages and searches were moved through servers on American soil. As the Internet expanded, so did the N.S.A.'s efforts to understand its geography. A program named Treasure Map tried to identify nearly every node and corner of the web, so that any computer or mobile device that touched it could be located.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;A 2008 map, part of the Snowden trove, notes 20 programs to gain access to big fiber-optic cables &amp;#x2014; it calls them &amp;#x201C;covert, clandestine or cooperative large accesses&amp;#x201D; &amp;#x2014; not only in the United States but also in places like Hong Kong, Indonesia and the Middle East. The same map indicates that the United States had already conducted &amp;#x201C;more than 50,000 worldwide implants,&amp;#x201D; and a more recent budget document said that by the end of last year that figure would rise to about 85,000. A senior official, who spoke on the condition of anonymity, said the actual figure was most likely closer to 100,000.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That map suggests how the United States was able to speed ahead with implanting malicious software on the computers around the world that it most wanted to monitor &amp;#x2014; or disable before they could be used to launch a cyberattack.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;A Focus on Defense&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In interviews, officials and experts said that a vast majority of such implants are intended only for surveillance and serve as an early warning system for cyberattacks directed at the United States.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;How do you ensure that Cyber Command people&amp;#x201D; are able to look at &amp;#x201C;those that are attacking us?&amp;#x201D; a senior official, who compared it to submarine warfare, asked in an interview several months ago.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;That is what the submarines do all the time,&amp;#x201D; said the official, speaking on the condition of anonymity to describe policy. &amp;#x201C;They track the adversary submarines.&amp;#x201D; In cyberspace, he said, the United States tries &amp;#x201C;to silently track the adversaries while they&amp;#x2019;re trying to silently track you.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;If tracking subs was a Cold War cat-and-mouse game with the Soviets, tracking malware is a pursuit played most aggressively with the Chinese.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The United States has targeted &lt;a title=&quot;Times article&quot; href=&quot;http://www.nytimes.com/2013/02/19/technology/chinas-army-is-seen-as-tied-to-hacking-against-us.html&quot;&gt;Unit 61398, the Shanghai-based Chinese Army unit&lt;/a&gt; believed to be responsible for many of the biggest cyberattacks on the United States, in an effort to see attacks being prepared. With Australia&amp;#x2019;s help, one N.S.A. document suggests, the United States has also focused on another specific Chinese Army unit.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Documents obtained by Mr. Snowden indicate that the United States has set up two data centers in China &amp;#x2014; perhaps through front companies &amp;#x2014; from which it can insert malware into computers. When the Chinese place surveillance software on American computer systems &amp;#x2014; and they have, on systems like those at the Pentagon and at The Times &amp;#x2014; the United States usually regards it as a potentially hostile act, a possible prelude to an attack. Mr. Obama laid out America&amp;#x2019;s complaints about those practices to President Xi Jinping of China in a long session at a summit meeting in California last June.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;At that session, Mr. Obama tried to differentiate between conducting surveillance for national security &amp;#x2014; which the United States argues is legitimate &amp;#x2014; and conducting it to steal intellectual property.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;The argument is not working,&amp;#x201D; said Peter W. Singer of the Brookings Institution, a co-author of a new book called &amp;#x201C;Cybersecurity and Cyberwar.&amp;#x201D; &amp;#x201C;To the Chinese, gaining economic advantage is part of national security. And the Snowden revelations have taken a lot of the pressure off&amp;#x201D; the Chinese. Still, the United States has banned the sale of computer servers from a major Chinese manufacturer, Huawei, for fear that they could contain technology to penetrate American networks.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;An Old Technology&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A.'s efforts to reach computers unconnected to a network have relied on a century-old technology updated for modern times: radio transmissions.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In a catalog produced by the agency that was part of the Snowden documents released in Europe, there are page after page of devices using technology that would have brought a smile to Q, James Bond&amp;#x2019;s technology supplier.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One, called Cottonmouth I, looks like a normal USB plug but has a tiny transceiver buried in it. According to the catalog, it transmits information swept from the computer &amp;#x201C;through a covert channel&amp;#x201D; that allows &amp;#x201C;data infiltration and exfiltration.&amp;#x201D; Another variant of the technology involves tiny circuit boards that can be inserted in a laptop computer &amp;#x2014; either in the field or when they are shipped from manufacturers &amp;#x2014; so that the computer is broadcasting to the N.S.A. even while the computer&amp;#x2019;s user enjoys the false confidence that being walled off from the Internet constitutes real protection.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The relay station it communicates with, called Nightstand, fits in an oversize briefcase, and the system can attack a computer &amp;#x201C;from as far away as eight miles under ideal environmental conditions.&amp;#x201D; It can also insert packets of data in milliseconds, meaning that a false message or piece of programming can outrace a real one to a target computer. Similar stations create a link between the target computers and the N.S.A., even if the machines are isolated from the Internet.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Computers are not the only targets. Dropoutjeep attacks iPhones. Other hardware and software are designed to infect large network servers, including those made by the Chinese.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Most of those code names and products are now at least five years old, and they have been updated, some experts say, to make the United States less dependent on physically getting hardware into adversaries&amp;#x2019; computer systems.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A. refused to talk about the documents that contained these descriptions, even after they were published in Europe.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;Continuous and selective publication of specific techniques and tools used by N.S.A. to pursue legitimate foreign intelligence targets is detrimental to the security of the United States and our allies,&amp;#x201D; Ms. Vines, the N.S.A. spokeswoman, said.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the Iranians and others discovered some of those techniques years ago. The hardware in the N.S.A.'s catalog was crucial in the cyberattacks on Iran&amp;#x2019;s nuclear facilities, code-named Olympic Games, that began around 2008 and proceeded through the summer of 2010, when a technical error revealed the attack software, later called Stuxnet. That was the first major test of the technology.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One feature of the Stuxnet attack was that the technology the United States slipped into Iran&amp;#x2019;s nuclear enrichment plant at Natanz was able to map how it operated, then &amp;#x201C;phone home&amp;#x201D; the details. Later, that equipment was used to insert malware that blew up nearly 1,000 centrifuges, and temporarily set back Iran&amp;#x2019;s program.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the Stuxnet strike does not appear to be the last time the technology was used in Iran. In 2012, a unit of the Islamic Revolutionary Guards Corps moved a rock near the country&amp;#x2019;s underground Fordo nuclear enrichment plant. The rock exploded and spewed broken circuit boards that the Iranian news media described as &amp;#x201C;the remains of a device capable of intercepting data from computers at the plant.&amp;#x201D; The origins of that device have never been determined.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;On Sunday, according to the semiofficial Fars news agency, Iran&amp;#x2019;s Oil Ministry issued another warning about possible cyberattacks, describing a series of defenses it was erecting &amp;#x2014; and making no mention of what are suspected of being its own attacks on Saudi Arabia&amp;#x2019;s largest oil producer.&lt;/p&gt;
+                &lt;footer class=&quot;story-footer story-content&quot;&gt;
+        
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+N.S.A. Devises Radio Pathway Into Computers
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://lists.w3.org/Archives/Public/public-restrictedmedia/2014Jan/0060.html
+</link>
+<description>
+&lt;div&gt;&lt;pre id=&quot;body&quot;&gt;
+&lt;a name=&quot;start60&quot; accesskey=&quot;j&quot; id=&quot;start60&quot;&gt;&lt;/a&gt;On Mon, Jan 13, 2014 at 4:43 PM, Duncan Bayne &amp;lt;&lt;a href=&quot;mailto:dhgbayne@fastmail.fm?Subject=Re%3A%20Watermarking%20%5BRe%3A%20Campaign%20for%20position%20of%20chair%20and%20mandate%20to%20%20close%20this%20community%20group%5D&amp;amp;In-Reply-To=%3CCAEnTvdAf9_axoi-VhJpiznb1d3Lf86dochwG2yJpstwO_2h43w%40mail.gmail.com%3E&amp;amp;References=%3CCAEnTvdAf9_axoi-VhJpiznb1d3Lf86dochwG2yJpstwO_2h43w%40mail.gmail.com%3E&quot;&gt;dhgbayne@fastmail.fm&lt;/a&gt;&amp;gt; wrote:
+
+&amp;gt; On Mon, Jan 13, 2014, at 04:38 PM, Mark Watson wrote:
+&amp;gt; &amp;gt; Who is that question to ? I certainly have no idea of the answer to that
+&amp;gt; &amp;gt; except that watermaking alone doesn't mean the requirements of any of our
+&amp;gt; &amp;gt; existing content licenses.
+&amp;gt;
+&amp;gt; ... which was sort of my point.  Discussion of watermarking etc. is
+&amp;gt; missing the *underlying* cause of the friction, which is that (as I
+&amp;gt; understand it) those licenses positively *require* non-user-modifiable
+&amp;gt; client components.
+&amp;gt;
+&amp;gt; Actually, that's an assumption on my part.
+&amp;gt;
+&amp;gt; Is it possible for you to post the relevant sections of the content
+&amp;gt; licenses to the list?
+
+
+There are many such contracts and they are confidential, so unfortunately
+I can't post them.
+
+
+&amp;gt;  It doesn't make sense to discuss potential
+&amp;gt; solutions to requirements if those requirements aren't clear.
+&amp;gt;
+
+As far as I understand, the way things work today is that it is the DRM
+vendors who take on the task of creating solutions that meet the
+requirements of the studios and of getting buy-in from the studios that
+their solutions do indeed meet the requirements. You can look, for example,
+at the PlayReady robustness rules for an example of the result:
+&lt;a href=&quot;http://www.microsoft.com/playready/licensing/compliance/&quot;&gt;http://www.microsoft.com/playready/licensing/compliance/&lt;/a&gt;
+
+Realistically, I don't think you will get studio requirements posted
+publicly, but that's not a question for me.
+
+So, the DRM vendors have solved the problem of creating solutions that meet
+studio requirements and what we are trying to do with EME is provide a
+clean API to integrate these solutions with the HTML Media Element. What
+we're not trying to do is standardize a solution to the studio
+requirements. That would be rather ambitious, I feel.
+
+...Mark
+
+
+
+
+&amp;gt;
+&amp;gt; --
+&amp;gt; Duncan Bayne
+&amp;gt; ph: +61 420817082 | web: &lt;a href=&quot;http://duncan-bayne.github.com/&quot;&gt;http://duncan-bayne.github.com/&lt;/a&gt; | skype:
+&amp;gt; duncan_bayne
+&amp;gt;
+&amp;gt; I usually check my mail every 24 - 48 hours.  If there's something
+&amp;gt; urgent going on, please send me an SMS or call me.
+&amp;gt;
+&amp;gt;
+&lt;/pre&gt;
+&lt;span id=&quot;received&quot;&gt;&lt;dfn&gt;Received on&lt;/dfn&gt; Tuesday, 14 January 2014 00:56:27 UTC&lt;/span&gt;
+&lt;/div&gt;
+</description>
+<title>
+Requirements for DRM in HTML are confidential
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;articleOptions&quot;&gt;&lt;a href=&quot;http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists&quot; class=&quot;articleOptions&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/icon-print.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists&quot; class=&quot;articleOptions&quot;&gt;Print&lt;/a&gt;&amp;#xA0;&amp;#xA0;
+                            &lt;a href=&quot;&quot; class=&quot;articleOptions&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/icon-email.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;&quot; class=&quot;articleOptions&quot;&gt;Email&lt;/a&gt;&amp;#xA0;&amp;#xA0;
+							&lt;span id=&quot;fontSizeChanger&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/normal.gif&quot; class=&quot;normal&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/large.gif&quot; class=&quot;large&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/largest.gif&quot; class=&quot;largest&quot;&gt; Font Resize&lt;/span&gt;&lt;/div&gt;&lt;div id=&quot;articleBody&quot; class=&quot;articleBody&quot;&gt;&lt;p class=&quot;bodytext&quot;&gt;The federal government violated a former Stanford University doctoral student's legal rights nine years ago when it put her on its secretive &quot;no-fly&quot; lists targeting suspected terrorists, a San Francisco federal judge ruled Tuesday.&lt;/p&gt;&lt;p&gt;In a decision for the most part sealed, U.S. District Judge William Alsup disclosed that Rahinah Ibrahim was mistakenly placed on the controversial list and said that the government must now clear up the mistake. The decision comes in a case that has for the first time revealed how the U.S. Department of Homeland Security assembles the no-fly lists, used to tighten security in the aftermath of the Sept. 11, 2001 terrorist attacks.&lt;/p&gt;&lt;p&gt;The Obama administration has vigorously contested the case, the first of its kind to reach trial, warning that it might reveal top-secret information about the anti-terrorism program. As a result, Alsup sealed his ruling until April to give the government an opportunity to persuade a federal appeals court to keep the order from being released publicly.&lt;/p&gt;&lt;p&gt;But Alsup issued a separate three-page ruling outlining the results for Ibrahim, who has waged a high-profile legal battle since she learned she had been placed on the no-fly list as she tried to board a 2005 flight to Hawaii from San Francisco International Airport.&lt;/p&gt;&lt;p&gt;Ibrahim, Alsup wrote, is &quot;entitled by due process to a ... remedy that requires the government to cleanse and/or correct its lists and records of the mistaken information.&quot;&lt;/p&gt;&lt;p&gt;Elizabeth Pipkin, Ibrahim's lawyer, said she hopes the ruling will permit the Malaysian national to again be able to travel to the United States.&lt;/p&gt;&lt;p&gt;&quot;She's entitled to have her name cleared from the system,&quot; Pipkin said. &quot;She shouldn't be ensnared in their system anymore.&quot;&lt;/p&gt;&lt;p&gt;The 48-year-old Ibrahim has been fighting the U.S. government from abroad, denied the right since 2005 to return to this country. Her case went to trial in December before Alsup, who heard the allegations of government wrongdoing without a jury, in part because of the government's assertion of national security privilege.&lt;/p&gt;&lt;p&gt;Ibrahim, an architecture scholar, wearing a traditional Muslim hijab, was arrested at SFO in January 2005 as she headed to a conference in Hawaii with her teen daughter. She had been branded a terrorist suspect in government databases, she learned. Ibrahim denies any connection to terrorist organizations and settled a separate legal case against San Francisco police and others linked to her airport arrest for $225,000.&lt;/p&gt;&lt;p&gt;Before the incident, Ibrahim had been a regular traveler to the United States since the early 1980s, calling it her &quot;second home.&quot; She met her husband here, marrying in Seattle in 1986, and her first child is a U.S. citizen.&lt;/p&gt;&lt;p&gt;After returning to Malaysia, she founded the architecture department at a major Malaysian university but returned to the states in 2000 to secure her doctorate from Stanford. As a result of later being put on the no-fly list, Ibrahim had to complete her Stanford doctorate remotely.&lt;/p&gt;&lt;p&gt;But she pressed her legal case for years, even as the government tried to sidetrack the legal claims. The 9th U.S. Circuit Court of Appeals twice allowed her case to proceed over the government's objections, leading to the recent trial.&lt;/p&gt;&lt;p&gt;Justice Department officials could not be reached for comment on Alsup's order.&lt;/p&gt;&lt;p&gt;The government places thousands of people on the lists each year, and similar lawsuits against the program and its methods have been unfolding in other courts around the country, including a major challenge in Oregon brought by the American Civil Liberties Union.&lt;/p&gt;&lt;p class=&quot;taglinejb&quot;&gt;Howard Mintz covers legal affairs. Contact him at 408-286-0236 or follow him at &lt;a href=&quot;http://Twitter.com/hmintz&quot;&gt;Twitter.com/hmintz&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+No-fly list takes legal hit
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+https://blog.mozilla.org/luke/2014/01/14/asm-js-aot-compilation-and-startup-performance/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+						&lt;p&gt;With the &lt;a href=&quot;https://blog.mozilla.org/blog/2013/12/12/first-3d-commercial-web-game-powered-by-asm-js-unveiled/&quot;&gt;recent announcement&lt;/a&gt; of a commercial game shipping using &lt;a href=&quot;http://emscripten.org&quot;&gt;Emscripten&lt;/a&gt; and &lt;a href=&quot;http://asmjs.org/&quot;&gt;asm.js&lt;/a&gt;, I thought it&amp;#x2019;d be a good time to explain how asm.js is executed in Firefox and some of the load-time optimizations we&amp;#x2019;ve made since the &lt;a href=&quot;https://blog.mozilla.org/luke/2013/03/21/asm-js-in-firefox-nightly/&quot;&gt;initial landing&lt;/a&gt; of OdinMonkey in March.  (OdinMonkey is an optimization module inside Mozilla&amp;#x2019;s JavaScript engine.)  There have also been significant &lt;a href=&quot;https://hacks.mozilla.org/2013/12/gap-between-asm-js-and-native-performance-gets-even-narrower-with-float32-optimizations/&quot;&gt;throughput optimizations&lt;/a&gt; as well, but I&amp;#x2019;ll stick to load time in this post.&lt;/p&gt;
+&lt;p&gt;Measuring the &lt;a href=&quot;http://www.unrealengine.com/html5&quot;&gt;Epic Citadel demo&lt;/a&gt; (based on the same Unreal Engine 3 inside &lt;a href=&quot;http://www.monstermadness.com&quot;&gt;Monster Madness&lt;/a&gt;), I see a 2x improvement:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/citadel-warm-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Times were measured with a simple stopwatch up to the first animation frame on a 16&amp;#xD7;2.4Ghz core Linux machine.  (An IndexedDB bug in either the demo or Chrome causes level data not to be cached so time in &amp;#x201C;Downloading data&amp;#x201D; is explicitly subtracted from Chrome&amp;#x2019;s time.)&lt;/p&gt;
+&lt;p&gt;Cold load time improvements on the Citadel demo are harder to see since network latency plays a much larger part and adds considerable variance.  Measuring the &lt;a href=&quot;http://flohofwoe.net/demos.html&quot;&gt;Nebula3 demos&lt;/a&gt; instead, which have a smaller initial download size and are compiled with both Emscripten and PNaCl, we can also see significantly better load times:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/nebula-cold-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Times were again measured with a simple stopwatch up to first animation frame.&lt;/p&gt;
+&lt;p&gt;In this blog post I&amp;#x2019;ll explain the compilation strategy we use for asm.js, why we decided to try this strategy, how it&amp;#x2019;s been working, and 3 optimizations that have had a significant impact on load time.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The post is a bit long, so here&amp;#x2019;s the TL;DR:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ahead-of-time (AOT) compilation is used for asm.js to provide predictable performance.&lt;/li&gt;
+&lt;li&gt;With a few cores, parallel compilation hides most of the cost of using the top-tier compiler for all code.&lt;/li&gt;
+&lt;li&gt;Async compilation allows the webapp to stay responsive during AOT compilation.&lt;/li&gt;
+&lt;li&gt;Caching compiled machine code greatly improves warm start time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;JIT Compilation&lt;/h2&gt;
+&lt;p&gt;Before getting into how we compile asm.js, let&amp;#x2019;s look at a diagram of the path taken by normal JavaScript in SpiderMonkey (Mozilla&amp;#x2019;s JavaScript engine).  In this diagram, boxes are data structures and arrows represent algorithms which consume and/or generate these data structures:&lt;br&gt;
+&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/jit-diagram.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/jit-diagram.png&quot; alt=&quot;jit-diagram&quot; width=&quot;719&quot; class=&quot;aligncenter size-full wp-image-596&quot;&gt;&lt;/a&gt;&lt;br&gt;
+In short, units of code (like functions, &lt;code&gt;eval&lt;/code&gt; scripts, and global scripts) start as a bunch of characters in memory and gradually get compiled into forms that are able to execute more efficiently.  While each unit of code starts the same way, different units of code will move along the arrows of this diagram at different times as they are run and judged hot enough.  This compilation strategy is generally called &lt;a href=&quot;http://en.wikipedia.org/wiki/Just-in-time_compilation&quot;&gt;Just-In-Time (JIT) compilation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Going into a little more detail on the labels in the digram:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AST: &lt;a href=&quot;http://en.wikipedia.org/wiki/Abstract_syntax_tree&quot;&gt;Abstract Syntax Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Baseline: a JIT compiler that balances compilation speed and the performance of generated code (see &lt;a href=&quot;https://blog.mozilla.org/javascript/2013/04/05/the-baseline-compiler-has-landed&quot;&gt;Kannan&amp;#x2019;s post&lt;/a&gt; for details)&lt;/li&gt;
+&lt;li&gt;Ion: short for IonMonkey, a JIT compiler that produces highly-optimized code at the expense of compilation speed (see &lt;a href=&quot;https://blog.mozilla.org/javascript/2012/09/12/ionmonkey-in-firefox-18/&quot;&gt;David&amp;#x2019;s post&lt;/a&gt; for details)&lt;/li&gt;
+&lt;li&gt;MIR: an &lt;a href=&quot;http://en.wikipedia.org/wiki/Static_single_assignment_form&quot;&gt;SSA&lt;/a&gt;-based representation of code used throughout Ion&lt;/li&gt;
+&lt;li&gt;Profile: collect metadata describing the runtime behavior of the code&lt;/li&gt;
+&lt;li&gt;Ion-build: generate MIR from bytecode and profiling metadata&lt;/li&gt;
+&lt;li&gt;Ion-compile: optimize and generate machine code from MIR&lt;/li&gt;
+&lt;li&gt;Bail: stop executing Ion-compiled code in order to Ion-compile a new version or spend more time collecting profiling metadata in Baseline-compiled code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given this whole process, it&amp;#x2019;s reasonable to ask: &lt;em&gt;why do we need all these tiers of execution&lt;/em&gt;?  To wit, V8 has two tiers, and Apple&amp;#x2019;s JSC has three and is experimenting with a &lt;a href=&quot;http://trac.webkit.org/wiki/FTLJIT&quot;&gt;fourth&lt;/a&gt;.  Thus, this strategy is common (although people are always looking for &lt;a href=&quot;https://wiki.openjdk.java.net/display/Graal/Publications+and+Presentations&quot;&gt;something&lt;/a&gt; &lt;a href=&quot;http://pointersgonewild.wordpress.com/higgs/&quot;&gt;simpler&lt;/a&gt;).  There are two main reasons we&amp;#x2019;ve found in SpiderMonkey for this tiered structure.&lt;/p&gt;
+
+&lt;p&gt;One reason is that SpiderMonkey has to run many different types of code and most code doesn&amp;#x2019;t run long enough to amortize the cost of compilation.  In fact, most code &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=678037&quot;&gt;doesn&amp;#x2019;t even run once&lt;/a&gt; which is why SpiderMonkey and other JS engines wait for a function to be run before even fully parsing it.  Of code that is run, most doesn&amp;#x2019;t get warm enough to Baseline-compile and, similarly, most warm code doesn&amp;#x2019;t get hot enough to Ion-compile.  Thus, each tier of execution services a distinct type of workload.&lt;/p&gt;
+&lt;p&gt;The other reason is that the Ion-build step actually &lt;em&gt;depends&lt;/em&gt; on code having warmed up in Baseline so that the profiling metadata is likely representative of future execution.  Ion compilation uses this metadata to specialize the types of values, objects, operations, etc which it could not do based on static analysis of the code alone.&lt;/p&gt;
+&lt;p&gt;What&amp;#x2019;s great about this design is that it has allowed continual progress by modern JavaScript engines on all kinds of JavaScript code.  This progress continues today in all the major JS engines without signs of letting up.&lt;/p&gt;
+&lt;h2&gt;JIT Problems&lt;/h2&gt;
+&lt;p&gt;As it became clear that Emscripten was a big deal (remember the &lt;a href=&quot;http://badassjs.com/post/12035631618/broadway-an-h-264-decoder-in-javascript-running-at&quot;&gt;H.264 decoder&lt;/a&gt;?), we started to try it out on bigger codes and talk with potential users.  As we did this, one thing that became clear: if the web was going to be a serious porting target for large, computationally-intensive apps, we needed performance to be predictable.  Now, even with native code, performance is never &lt;em&gt;truly&lt;/em&gt; predictable due to things like dynamic scheduling and cache hierarchies.  However, with Emscripten output, we were seeing some pretty violent fluctuations in startup and throughput on differnet codes and on different browsers.&lt;/p&gt;
+&lt;p&gt;Analyzing these fluctuations, we saw several causes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JIT compilation time;&lt;/li&gt;
+&lt;li&gt;as code warms up, it runs in lower-tier execution modes where it executes more slowly;&lt;/li&gt;
+&lt;li&gt;compiler heuristics (such as: which scripts should be compiled with the top-tier JIT, when and where to inline, whether to compile a loop side-entry and what machine types to use to represent numbers) can make suboptimal choices that permanently reduce throughput; and&lt;/li&gt;
+&lt;li&gt;some optimizations were just missing from the underlying backend compiler because they were rather difficult to implement in the general case (e.g., a better &lt;a href=&quot;http://en.wikipedia.org/wiki/Calling_convention&quot;&gt;calling convention&lt;/a&gt; for direct and indirect function calls).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these problems can potentially be mitigated by adding new JIT compilation techniques and heuristics.  Indeed, we&amp;#x2019;ve seen a lot of improvement along these lines in the V8 and SpiderMonkey JIT compilers in the last year and I expect to see more in the future.  For example, in both JIT compilers, a few heuristic tweaks provided large throughput improvements on the &lt;code&gt;asmjs-apps&lt;/code&gt; benchmarks on &lt;a href=&quot;http://arewefastyet.com&quot;&gt;arewefastyet.com&lt;/a&gt; and background JIT compilation has helped to significantly reduce JIT compilation pauses.&lt;/p&gt;
+&lt;p&gt;However, the question is: to what &lt;em&gt;extent&lt;/em&gt; can these problems be mitigated?  Unfortunately, that&amp;#x2019;s hard to know &lt;em&gt;a priori&lt;/em&gt;: you only really know when you&amp;#x2019;re done.  Furthermore, as with any heuristic tuning problem, it&amp;#x2019;s easy to measure on workloads A, B and C only to find afterwards that the fixes don&amp;#x2019;t generalize to workloads D-Z.&lt;/p&gt;
+&lt;p&gt;In broader terms: with the proliferation of walled gardens and the consequent frustration of developers, the Web has a great opportunity to provide an open, portable alternative.  But to really be an alternative for many types of applications, the web needs predictable, near-native performance.  The time is ripe, so we don&amp;#x2019;t want to miss the opportunity by blocking on a &lt;a href=&quot;http://c2.com/cgi/wiki?SufficientlySmartCompiler&quot;&gt;Sufficiently Smart Compiler&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;AOT Compilation&lt;/h2&gt;
+&lt;p&gt;To attempt to solve the above problems, we started the OdinMonkey experiment.  The basic idea behind the experiment was: Emscripten-generated code has enough type information preserved from the original statically-typed source language that we can avoid all the dynamic-language compilation infrastructure and use a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/AOT_compiler&quot;&gt;Ahead-of-Time (AOT) compiler&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For example, given the following C code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int function f(int i) {
+  return i + 1;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Emscripten would output the following JS code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function f(i) {
+  i = i|0;
+  return (i + 1)|0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The statement &amp;#x201C;&lt;code&gt;i = i|0&lt;/code&gt;&amp;#x201D; effectively performs the JS spec &lt;a href=&quot;https://people.mozilla.org/~jorendorff/es6-draft.html#sec-toint32&quot;&gt;&lt;code&gt;ToInt32&lt;/code&gt;&lt;/a&gt; on the input, ensuring that &lt;code&gt;+&lt;/code&gt; always operates on an integer.  If we can prove that all callers pass &lt;code&gt;int&lt;/code&gt;s, then this coercion is a no-op.  The expression &amp;#x201C;&lt;code&gt;(i + 1)|0&lt;/code&gt;&amp;#x201D; exactly simulates &lt;a href=&quot;http://en.wikipedia.org/wiki/2s_complement&quot;&gt;2s complement&lt;/a&gt; addition meaning that this JavaScript expression compiles to a single machine instruction &amp;#x2014; no type tests, no overflow checks.&lt;/p&gt;
+&lt;p&gt;If you squint your eyes at the above code, you can view &amp;#x201C;&lt;code&gt;i = i|0&lt;/code&gt;&amp;#x201D; as a parameter type declaration, &amp;#x201C;&lt;code&gt;return (...)|0&lt;/code&gt;&amp;#x201D; as a return type declaration and binary &lt;code&gt;+&lt;/code&gt; as taking two &lt;code&gt;int&lt;/code&gt; types and returning a &lt;a href=&quot;http://asmjs.org/spec/latest/#intish&quot;&gt;special type&lt;/a&gt; which requires coercion via &lt;code&gt;ToInt32&lt;/code&gt; or &lt;code&gt;ToUint32&lt;/code&gt; before use.  This basic idea of viewing runtime coercions as types can be extended to &lt;em&gt;all&lt;/em&gt; statements and expressions in Emscripten-generated code and the resulting type system is &lt;a href=&quot;http://asmjs.org/spec/latest/&quot;&gt;asm.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Given the asm.js type system, OdinMonkey is easily able to generate MIR from the AST.  As an example, check out the &lt;a href=&quot;http://hg.mozilla.org/mozilla-central/file/9d593727eb94/js/src/jit/AsmJS.cpp#l4176&quot;&gt;CheckNot&lt;/a&gt; function in OdinMonkey (which checks the &lt;code&gt;!&lt;/code&gt; operator): as input it receives a &lt;code&gt;ParseNode&lt;/code&gt; (an AST node) and, as output, it returns an &lt;code&gt;MNot&lt;/code&gt; MIR node and the expression&amp;#x2019;s result type (which &lt;a href=&quot;http://asmjs.org/spec/latest/#unary-operators&quot;&gt;according to the spec&lt;/a&gt; is &lt;code&gt;int&lt;/code&gt;).  If any of the types fail to match, a type error message (like you&amp;#x2019;d expect from a C compiler) is output to the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Tools/Web_Console&quot;&gt;Web Console&lt;/a&gt; and OdinMonkey transparently falls back to normal JS compilation.&lt;/p&gt;
+&lt;p&gt;In terms of the previous JIT compilation diagram, OdinMonkey adds a single new arrow between AST and MIR:&lt;br&gt;
+&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/aot-diagram.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/aot-diagram.png&quot; alt=&quot;aot-diagram&quot; width=&quot;450&quot; class=&quot;aligncenter size-full wp-image-595&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Furthermore, after asm.js type checking succeeds (as well as the &lt;a href=&quot;http://asmjs.org/spec/latest/#linking-0&quot;&gt;link-time check&lt;/a&gt;), it is not possible for the generated code to take the Bail edge: there are no dynamically-checked assumptions that can fail.&lt;/p&gt;
+&lt;p&gt;In addition to simplifying the compilation process, the asm.js type system also provides three broader benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;asm.js acts as a testable interface between Emscripten and the browser.  (This found bugs in Emscripten.)&lt;/li&gt;
+&lt;li&gt;asm.js specifies a target for non-Emscripten code generators so that they don&amp;#x2019;t have to re-discover the same sweet spot as Emscripten.  (Speaking of, check out the experimental &lt;a href=&quot;http://www.rfk.id.au/blog/entry/pypy-js-poc-jit&quot;&gt;asm.js PyPy backend&lt;/a&gt; and &lt;a href=&quot;https://github.com/jlongster/LLJS&quot;&gt;LLJS-asm.js fork&lt;/a&gt;.)&lt;/li&gt;
+&lt;li&gt;asm.js establishes a clear optimization target for all browsers so that this style of code can become portably fast.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;AOT Potential Problems&lt;/h2&gt;
+&lt;p&gt;Despite all these advantages, AOT has a significant potential downside: it compiles everything using the most expensive compiler without knowing if the code being compiled is hot or cold.  This would obviously be a problem if an app contained a lot of cold or dead asm.js code.  Similarly, AOT would be a net loss for an app with a lot of code that runs in short bursts so that low tiers of execution and compilation stalls aren&amp;#x2019;t noticeable.  Thus, the load-time performance of AOT relative to JIT depends on the kind of code being executed.&lt;/p&gt;
+&lt;p&gt;Another potential pitfall for AOT is pathologically-large functions since these can take a really long time to compile in the top-tier compiler.  With JIT compilation, the usual heuristics ensure that the top-tier compiler is never used.  With &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=875174&quot;&gt;some work&lt;/a&gt;, OdinMonkey could be extended with heuristics do the same.  In the meantime, Alon added an &amp;#x201C;&lt;a href=&quot;http://mozakai.blogspot.com/2013/08/outlining-workaround-for-jits-and-big.html&quot;&gt;outlining&lt;/a&gt;&amp;#x201D; option to Emscripten that automatically breaks up large functions and has been quite effective.  By making functions smaller, outlining also improves performance of asm.js on non-OdinMonkey since it encourages the JIT to use the top-tier compiler.&lt;/p&gt;
+&lt;p&gt;One theoretical response to these load-time concerns is that the &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; directive required at the beginning of any &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module&lt;/a&gt; has no semantics and can simply be removed if AOT compilation is not beneficial.  As such, &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; gives the developer more control over the compilation scheme used for their application.  In theory (it&amp;#x2019;s difficult in practice at the moment due to lack of automated tooling), developers can exercise even finer-grain control by choosing which functions are inside the asm.js module (and thus receive AOT compilation) and which are outside (and thus receive JIT compilation).  One can even imagine an Emscripten &lt;a href=&quot;http://en.wikipedia.org/wiki/Profile-guided_optimization&quot;&gt;PGO&lt;/a&gt; pass that does this automatically for cold code.&lt;/p&gt;
+&lt;p&gt;In the end, though, it&amp;#x2019;s hard to predict what will happen in practice so we had to just try.  (OdinMonkey was started as a experiment, after all.)&lt;/p&gt;
+&lt;p&gt;The results so far have been good.  In addition to those reported at the beginning of the post, cold load times are also measured by the &lt;code&gt;asmjs-&lt;wbr&gt;apps-*-&lt;wbr&gt;loadtime&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; synthetic workloads on &lt;a href=&quot;http://arewefastyet.com/#machine=12&amp;amp;view=breakdown&amp;amp;suite=asmjs-apps&quot;&gt;awfy&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/awfy-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In this graph, Firefox (JIT) refers to Firefox&amp;#x2019;s performance with OdinMonkey disabled (by passing &lt;code&gt;--no-asmjs&lt;/code&gt; to the JS shell or setting &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;asmjs&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt; in &lt;code&gt;about:config&lt;/code&gt; in the browser).&lt;/p&gt;
+&lt;p&gt;Another data point is the &lt;a href=&quot;http://kripken.github.io/misc-js-benchmarks/banana/benchmark.html&quot;&gt;BananaBread benchmark&lt;/a&gt; which conveniently measures its own load time:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/bananabench-cold-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;This graph reports the sum of the &amp;#x201C;preload&amp;#x201D; and &amp;#x201C;startup&amp;#x201D; times when the benchmark is run in headless mode with a cold cache.&lt;/p&gt;
+&lt;p&gt;Now let&amp;#x2019;s look at the major optimizations that AOT compilation allows.&lt;/p&gt;
+&lt;h2&gt;Parallel Compilation&lt;/h2&gt;
+&lt;p&gt;With the intermediate JIT compilation steps avoided, the majority of AOT compilation time is in the Ion-compile step.  For example, measuring the Citadel demo we can see the following breakdown of time:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Parse AST: 1.5s&lt;/li&gt;
+&lt;li&gt;Odin-build AST into MIR: 1.5s&lt;/li&gt;
+&lt;li&gt;Ion-compile MIR: 8s&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Fortunately, the Ion-compile step is also the most parallelizable: each function in the &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module&lt;/a&gt; results in an independent Ion compilation and there are tens of thousands of functions in large apps.  Even better, SpiderMonkey had already supported &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=774253&quot;&gt;background Ion-compilation&lt;/a&gt; for a year before OdinMonkey, so we were able to add parallel compilation to OdinMonkey &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=850070&quot;&gt;without much trouble&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After basic parallel compilation worked, we made an additional refinement to extract further parallelism.  Originally, the entire asm.js module would be parsed into one big AST before being handed over to OdinMonkey.  OdinMonkey would then simply recurse over the AST, firing off parallel Ion compilations as it went.  This was suboptimal for two reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;While parsing the AST, only one core was working.&lt;/li&gt;
+&lt;li&gt;Since the AST is an order of magnitude bigger than the source and asm.js source can be 35MB (don&amp;#x2019;t worry, that compresses down to 5MB over the wire with HTTP gzip content encoding), we were seeing out-of-memory errors on mobile devices and even 32-bit desktop processes with many tabs open.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The solution to both of these problems was to allow Odin-building and Ion-compiling to overlap parsing as illustrated in the following psuedo code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while (not at end of asm.js module) {
+  ast = ParseFunction();
+  mir = CheckAndEmit(ast);
+  StartBackgroundIonCompilation(mir);
+  ReleaseMemory(ast)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since the time to Ion-compile a function is on average longer than the time to parse, the process looks something like this:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/parallel.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/parallel.png&quot; alt=&quot;parallel&quot; width=&quot;784&quot; class=&quot;aligncenter size-full wp-image-891&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To measure the effect, first disable caching (set &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;parallel_&lt;wbr&gt;parsing&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;) and then compare compile times with and without &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;ion.&lt;wbr&gt;parallel_&lt;wbr&gt;compilation&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; enabled.  To get a more precise measure of compile time, look at the &amp;#x201C;total compilation time ___ms&amp;#x201D; part of the &amp;#x201C;Successfully compiled asm.js code&amp;#x201D; Web Console message.&lt;/p&gt;
+&lt;p&gt;On my machine, parallel compilation reduces compile time from 11s to 5s on the Citadel demo, but this improvement is obviously contigent on the number of cores.  Measuring with 2 cores, the compile time is 9s, with 3 cores, 6s, and with 4 cores, 5s.  Adding further cores doesn&amp;#x2019;t appear to help.  The remaining gap between this and the theoretical minimum of 3s suggested above is largely due to a &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=959263&quot;&gt;fixable&lt;/a&gt; implementation detail.&lt;/p&gt;
+&lt;h2&gt;Asynchronous Compilation&lt;/h2&gt;
+&lt;p&gt;As described above, AOT compilation occurs when &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; is first encountered while parsing.  This can be while parsing an inline &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tag or the string passed to &lt;code&gt;eval&lt;/code&gt; or the &lt;code&gt;Function&lt;/code&gt; constructor.  All of these happen on the browser&amp;#x2019;s main thread and thus a large asm.js compilation will hold up event handling and the page will appear frozen (as well as the whole Firefox browser on desktop since it&amp;#x2019;s not multiprocess (&lt;a href=&quot;http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/&quot;&gt;yet&lt;/a&gt;!)).&lt;/p&gt;
+&lt;p&gt;Since HTML allows events to be delivered to pages that still have pending &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; elements to evaluate, &lt;em&gt;any&lt;/em&gt; script may technically be parsed off the main thread.  Unfortunately, the script must still execute synchronously with respect to parsing the rest of the document and constructing the DOM so script parsing traditionally happens on the main thread right before execution.&lt;/p&gt;
+&lt;p&gt;Fortunately, HTML5 added a new &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;async&lt;/code&gt;&lt;/a&gt; property to script elements that defaults to &lt;code&gt;true&lt;/code&gt; for script-created external script elements and can be set explicitly for external scripts (&lt;code&gt;&amp;lt;script async src=&quot;...&quot;&amp;gt;&lt;/code&gt;).  When &lt;code&gt;async&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;, the browser is allowed to evaluate the script whenever it wants.  This makes &lt;code&gt;async&lt;/code&gt; scripts a perfect candidate for parsing off the main thread and Brian Hackett recently &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=906371&quot;&gt;made it happen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;OdinMonkey, by nature of running at parse-time, got to ride along for free(-ish).  Even better, most Emscripten&amp;#x2019;d apps are already async since Emscripten&amp;#x2019;s default harness uses an async script to load the main asm.js module.  See &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts&quot;&gt;this short MDN article&lt;/a&gt; for more details, gotchas and workarounds concerning async scripts.&lt;/p&gt;
+&lt;h2&gt;Caching&lt;/h2&gt;
+&lt;p&gt;When someone starts contributing to SpiderMonkey, there are a few ideas they will almost inevitably have.  One is: &amp;#x201C;Why don&amp;#x2019;t we cache JIT code?&amp;#x201D;. The response to this question is usually some combination of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JIT compilation is pretty fast and usually a small percentage of total run time, so it probably wouldn&amp;#x2019;t help most sites.&lt;/li&gt;
+&lt;li&gt;The implementation would be really complicated because JIT code is highly dependent on the current browser state in memory and JIT code forms a complex graph data structure.&lt;/li&gt;
+&lt;li&gt;It&amp;#x2019;s hard to know when and what to cache; compilation is happening all the time in tiny units.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;None of these problems are insurmountable, but together they make JIT-code caching a fairly daunting task. (To wit, the other inevitable question is &amp;#x201C;Why don&amp;#x2019;t we use LLVM as a compiler backend?&amp;#x201D;, so it&amp;#x2019;s great to see Apple actually &lt;a href=&quot;http://trac.webkit.org/wiki/FTLJIT&quot;&gt;trying this&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;In contrast, for asm.js code the cost/benefit analysis is much simpler:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compilation time is significant&lt;/li&gt;
+&lt;li&gt;the asm.js module has limited and explicit dependencies (viz., the arguments to the &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module function&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;the representation of the generated asm.js module is relatively simple and easily &lt;a href=&quot;http://hg.mozilla.org/mozilla-central/file/27228e525e08/js/src/jit/AsmJSModule.cpp#l662&quot;&gt;serialized and deserialized&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;making caching a clear win.  So that&amp;#x2019;s what we did.
+&lt;/p&gt;
+&lt;p&gt;There is one unfortunate limitation in the current implementation, though: caching only kicks in for &lt;code&gt;async&lt;/code&gt; scripts and WebWorker code (due to some hopefully temporary main-thread limitations arising from browser storage integration).  Thus, large applications have &lt;em&gt;two&lt;/em&gt; big reasons to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts&quot;&gt;async scripts&lt;/a&gt;.  Other than that, the cache should behave predictably according to the following rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The cache is only used for medium-to-large modules (the current cutoff is modules longer than 10,000 characters).&lt;/li&gt;
+&lt;li&gt;The cache entry is keyed on: the origin of the script, the source characters of the asm.js module, the type of CPU and its features, the Firefox build-id (which changes on every major or minor release).&lt;/li&gt;
+&lt;li&gt;The asm.js cache participates in browser-wide quota management such that, when total temporary storage grows past a certain threshold, storage is evicted on an LRU basis.&lt;/li&gt;
+&lt;li&gt;There is a fixed cap (currently 16) on the number of cached asm.js modules per origin; eviction is LRU.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To get confirmation of caching, open the Web Console: the asm.js success messages now include a &amp;#x201C;loaded from cache&amp;#x201D; / &amp;#x201C;stored in cache&amp;#x201D; / &amp;#x201C;not stored in cache&amp;#x201D; clause.&lt;/p&gt;
+&lt;p&gt;To see caching in action, try out the demos mentioned in the introduction with and without &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;parallel_&lt;wbr&gt;parsing&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; enabled in &lt;code&gt;about:config&lt;/code&gt; (&lt;code&gt;true&lt;/code&gt; enables caching).  Using this to measure cached vs. uncached warm load time of the Epic Citadel demo shows a 2x improvement:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/citadel-warm-cached-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;As before, times were measured with a simple stopwatch up to the first animation frame on a 16&amp;#xD7;2.4Ghz core Linux machine.&lt;/p&gt;
+&lt;p&gt;Note: to clear out the asm.js cache for a given origin, click the &lt;a href=&quot;https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure&quot;&gt;Site Identity Button&lt;/a&gt; &amp;#x2192; More Information &amp;#x2192; Permissions &amp;#x2192; (scroll down) &amp;#x2192; Clear Storage.  (I hear better quota management UI is coming.)&lt;/p&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;OdinMonkey started as an experiment in achieving predictable, high performance through AOT compilation.  With the rapid pace of innovation in JS JIT compilation techniques, it&amp;#x2019;s definitely too early to draw any final conclusions.  However, almost a year after the initial release, OdinMonkey is still showing marked leads in predictability, throughput and load time.&lt;/p&gt;
+&lt;p&gt;In recent news, it&amp;#x2019;s interesting to see that Google &lt;a href=&quot;http://www.androidpolice.com/2013/11/06/meet-art-part-1-the-new-super-fast-android-runtime-google-has-been-working-on-in-secret-for-over-2-years-debuts-in-kitkat/&quot;&gt;just shipped ART&lt;/a&gt;, an AOT compiler for Java on Android (the current Java VM on Android, Dalvik, is a JIT compiler).  OdinMonkey and ART aren&amp;#x2019;t really comparable for several reasons, but some of the arguments made in the article about startup time definitely sound familiar &amp;#x263A;.&lt;/p&gt;
+&lt;p&gt;On a final note, I&amp;#x2019;d like to emphasize that the majority of Mozilla&amp;#x2019;s JavaScript performance engineers are still focused on improving &lt;em&gt;general&lt;/em&gt; JavaScript performance &lt;sup&gt;&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=generationalgc&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=580070&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=774253&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;https://blog.mozilla.org/javascript/2013/04/05/the-baseline-compiler-has-landed&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=906371&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=888109&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=860923&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=903457&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=782913&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.  Moreover, I think the future we&amp;#x2019;re moving toward has web apps composed of both compiled modules and high-level handwritten code.  &lt;a href=&quot;https://playcanvas.com/&quot;&gt;PlayCanvas&lt;/a&gt; provides us an early &lt;a href=&quot;http://apps.playcanvas.com/playcanvas/physics/charactercontroller&quot;&gt;example&lt;/a&gt; of this, embedding &lt;a href=&quot;https://github.com/kripken/ammo.js/&quot;&gt;ammo.js&lt;/a&gt; (an Emscripten port of the Bullet physics engine) into an existing hand-written game engine.  I hope to see this trend continue with more reusable compiled components in more application domains and with tighter integration between compiled and handwritten JS (e.g. &lt;a href=&quot;http://lljs.org&quot;&gt;LLJS&lt;/a&gt;, &lt;a href=&quot;https://github.com/kripken/emscripten/wiki/embind&quot;&gt;embind&lt;/a&gt;).&lt;/p&gt;
+											&lt;/div&gt;
+
+					&lt;/div&gt;
+</description>
+<title>
+Asm.js AOT compilation and startup performance
 </title>
 </item>
 </channel>
