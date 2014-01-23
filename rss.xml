@@ -18,214 +18,6 @@ myread
 unknown
 </author>
 <link>
-http://projecteuler.net/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;logo&quot; class=&quot;noprint&quot;&gt;
-   &lt;img src=&quot;http://projecteuler.net/images/pe_banner_light.png&quot; alt=&quot;Project Euler .net&quot;&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;content&quot;&gt;
-
-&lt;img src=&quot;http://projecteuler.net/images/euler_portrait.png&quot; alt=&quot;Leonhard Euler (1707-1783)&quot;&gt;
-&lt;h3&gt;What is Project Euler?&lt;/h3&gt;
-&lt;p&gt;Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.&lt;/p&gt;&lt;p&gt;
-The motivation for starting Project Euler, and its continuation, is to provide a platform for the inquiring mind to delve into unfamiliar areas and learn new concepts in a fun and recreational context.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3&gt;Who are the problems aimed at?&lt;/h3&gt;
-&lt;p&gt;The intended audience include students for whom the basic curriculum is not feeding their hunger to learn, adults whose background was not primarily mathematics but had an interest in things mathematical, and professionals who want to keep their problem solving and mathematics on the edge.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3&gt;Can anyone solve the problems?&lt;/h3&gt;
-&lt;p&gt;The problems range in difficulty and for many the experience is inductive chain learning. That is, by solving one problem it will expose you to a new concept that allows you to undertake a previously inaccessible problem. So the determined participant will slowly but surely work his/her way through every problem.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3&gt;What next?&lt;/h3&gt;
-&lt;p&gt;In order to track your progress it is necessary to setup an account and have Cookies enabled. If you already have an account then &lt;a href=&quot;http://projecteuler.net/login&quot;&gt;Login&lt;/a&gt;, otherwise please &lt;a href=&quot;http://projecteuler.net/register&quot;&gt;Register&lt;/a&gt; - it's completely free!&lt;/p&gt;
-&lt;p&gt;However, as the problems are challenging then you may wish to view the &lt;a href=&quot;http://projecteuler.net/problems&quot;&gt;Problems&lt;/a&gt; before registering.&lt;/p&gt;&lt;p&gt;&quot;Project Euler exists to encourage, challenge, and develop the skills and enjoyment of anyone with an interest in the fascinating world of mathematics.&quot;&lt;/p&gt;&lt;/div&gt;
-
-
-
-
-
-
-&lt;/div&gt;
-</description>
-<title>
-Project Euler
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.nytimes.com/2014/01/15/us/nsa-effort-pries-open-computers-not-connected-to-internet.html?partner=rss&emc=rss&smid=tw-nytimesworld
-</link>
-<description>
-&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
-
-    
-
-    
-    
-
-                
-    &lt;p class=&quot;story-body-text story-content&quot;&gt;WASHINGTON &amp;#x2014; The National Security Agency has implanted software in nearly 100,000 computers around the world that allows the United States to conduct surveillance on those machines and can also create a digital highway for launching cyberattacks.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;While most of the software is inserted by gaining access to computer networks, the N.S.A. has increasingly made use of a secret technology that enables it to enter and alter data in computers even if they are not connected to the Internet, according to N.S.A. documents, computer experts and American officials.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The technology, which the agency has used since at least 2008, relies on a covert channel of radio waves that can be transmitted from tiny circuit boards and USB cards inserted surreptitiously into the computers. In some cases, they are sent to a briefcase-size relay station that intelligence agencies can set up miles away from the target.&lt;/p&gt;    &lt;aside class=&quot;marginalia related-coverage-marginalia&quot;&gt;
-        
-            &lt;header&gt;
-        
-    &lt;/header&gt;
-
-        &lt;ul&gt;
-                                                &lt;li&gt;
-&lt;article class=&quot;story theme-summary&quot;&gt;
-    &lt;a class=&quot;story-link&quot; href=&quot;http://www.nytimes.com/2014/01/15/us/politics/judge-warns-proposed-safeguards-could-hamper-surveillance-court.html&quot;&gt;
-
-                    &lt;div class=&quot;thumb&quot;&gt;
-                &lt;img src=&quot;http://static01.nyt.com/images/2014/01/15/world/OBAMA/OBAMA-thumbStandard.jpg&quot; alt=&quot;President Obama spoke to reporters before a cabinet meeting at the White House on Tuesday morning. Mr. Obama&amp;#x2019;s speech on spying guidelines is scheduled for Friday.&quot;&gt;
-                
-            &lt;/div&gt;
-        
-        &lt;h2 class=&quot;story-heading&quot;&gt;
-                        &lt;span class=&quot;story-heading-text&quot;&gt;Obama to Place Some Restraints on Surveillance&lt;/span&gt;&lt;time class=&quot;dateline&quot; datetime=&quot;2014-01-14&quot;&gt;JAN. 14, 2014&lt;/time&gt;
-        &lt;/h2&gt;
-
-    &lt;/a&gt;
-&lt;/article&gt;
-&lt;/li&gt;
-                                    &lt;/ul&gt;
-
-    &lt;/aside&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;The radio frequency technology has helped solve one of the biggest problems facing American intelligence agencies for years: getting into computers that adversaries, and some American partners, have tried to make impervious to spying or cyberattack. In most cases, the radio frequency hardware must be physically inserted by a spy, a manufacturer or an unwitting user.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A. calls its efforts more an act of &amp;#x201C;active defense&amp;#x201D; against foreign cyberattacks than a tool to go on the offensive. But when Chinese attackers place similar software on the computer systems of American companies or government agencies, American officials have protested, often at the presidential level.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Among the most frequent targets of the N.S.A. and its Pentagon partner, &lt;a title=&quot;About the group&quot; href=&quot;http://www.stratcom.mil/factsheets/Cyber_Command/&quot;&gt;United States Cyber Command&lt;/a&gt;, have been units of the Chinese Army, which the United States has accused of launching regular digital probes and attacks on American industrial and military targets, usually to steal secrets or intellectual property. But the program, code-named Quantum, has also been successful in inserting software into Russian military networks and systems used by the Mexican police and drug cartels, trade institutions inside the European Union, and sometime partners against terrorism like Saudi Arabia, India and Pakistan, according to officials and an N.S.A. map that indicates sites of what the agency calls &amp;#x201C;computer network exploitation.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;What&amp;#x2019;s new here is the scale and the sophistication of the intelligence agency&amp;#x2019;s ability to get into computers and networks to which no one has ever had access before,&amp;#x201D; said James Andrew Lewis, the cybersecurity expert at the Center for Strategic and International Studies in Washington. &amp;#x201C;Some of these capabilities have been around for a while, but the combination of learning how to penetrate systems to insert software and learning how to do that using radio frequencies has given the U.S. a window it&amp;#x2019;s never had before.&amp;#x201D;&lt;/p&gt; &lt;figure id=&quot;how-the-nsa-uses-radio-frequencies-to-penetrate-computers&quot; class=&quot;interactive  has-adjacency limit-medium layout-large&quot;&gt;
-    &lt;figcaption class=&quot;interactive-caption&quot;&gt;
-            
-                &lt;p class=&quot;interactive-leadin&quot;&gt;
-            The N.S.A. and the Pentagon&amp;#x2019;s Cyber Command have implanted nearly 100,000 &amp;#x201C;computer network exploits&amp;#x201D; around the world, but the hardest problem is getting inside machines isolated from outside communications.        &lt;/p&gt;
-        &lt;/figcaption&gt;
-    &lt;div class=&quot;interactive-graphic&quot;&gt;
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    &lt;/div&gt;
-	
-&lt;/figure&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;No Domestic Use Seen&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;There is no evidence that the N.S.A. has implanted its software or used its radio frequency technology inside the United States. While refusing to comment on the scope of the Quantum program, the N.S.A. said its actions were not comparable to China&amp;#x2019;s.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;N.S.A.'s activities are focused and specifically deployed against &amp;#x2014; and only against &amp;#x2014; valid foreign intelligence targets in response to intelligence requirements,&amp;#x201D; Vanee Vines, an agency spokeswoman, said in a statement. &amp;#x201C;We do not use foreign intelligence capabilities to steal the trade secrets of foreign companies on behalf of &amp;#x2014; or give intelligence we collect to &amp;#x2014; U.S. companies to enhance their international competitiveness or increase their bottom line.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Over the past two months, parts of the program have been disclosed in documents from the trove leaked by Edward J. Snowden, the former N.S.A. contractor. A Dutch newspaper &lt;a href=&quot;http://www.nrc.nl/nieuws/2013/11/23/nsa-infected-50000-computer-networks-with-malicious-software/&quot;&gt;published the map&lt;/a&gt; of areas where the United States has inserted spy software, sometimes in cooperation with local authorities, often covertly. Der Spiegel, a German newsmagazine, &lt;a href=&quot;http://www.spiegel.de/international/world/catalog-reveals-nsa-has-back-doors-for-numerous-devices-a-940994.html&quot;&gt;published the N.S.A.'s catalog&lt;/a&gt; of hardware products that can secretly transmit and receive digital signals from computers, a program called ANT. The New York Times withheld some of those details, at the request of American intelligence officials, when it &lt;a href=&quot;http://www.nytimes.com/2012/06/01/world/middleeast/obama-ordered-wave-of-cyberattacks-against-iran.html?pagewanted=all&amp;amp;_r=0&quot;&gt;reported&lt;/a&gt;, in the summer of 2012, on American cyberattacks on Iran.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;President Obama is scheduled to announce on Friday what recommendations he is accepting from an advisory panel on changing N.S.A. practices. The panel agreed with Silicon Valley executives that some of the techniques developed by the agency to find flaws in computer systems undermine global confidence in a range of American-made information products like laptop computers and cloud services.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Embracing Silicon Valley&amp;#x2019;s critique of the N.S.A., the panel has recommended banning, except in extreme cases, the N.S.A. practice of exploiting flaws in common software to aid in American surveillance and cyberattacks. It also called for an end to government efforts to weaken publicly available encryption systems, and said the government should never develop secret ways into computer systems to exploit them, which sometimes include software implants.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Richard A. Clarke, an official in the Clinton and Bush administrations who served as one of the five members of the advisory panel, explained the group&amp;#x2019;s reasoning in an email last week, saying that &amp;#x201C;it is more important that we defend ourselves than that we attack others.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;Holes in encryption software would be more of a risk to us than a benefit,&amp;#x201D; he said, adding: &amp;#x201C;If we can find the vulnerability, so can others. It&amp;#x2019;s more important that we protect our power grid than that we get into China&amp;#x2019;s.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;From the earliest days of the Internet, the N.S.A. had little trouble monitoring traffic because a vast majority of messages and searches were moved through servers on American soil. As the Internet expanded, so did the N.S.A.'s efforts to understand its geography. A program named Treasure Map tried to identify nearly every node and corner of the web, so that any computer or mobile device that touched it could be located.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;A 2008 map, part of the Snowden trove, notes 20 programs to gain access to big fiber-optic cables &amp;#x2014; it calls them &amp;#x201C;covert, clandestine or cooperative large accesses&amp;#x201D; &amp;#x2014; not only in the United States but also in places like Hong Kong, Indonesia and the Middle East. The same map indicates that the United States had already conducted &amp;#x201C;more than 50,000 worldwide implants,&amp;#x201D; and a more recent budget document said that by the end of last year that figure would rise to about 85,000. A senior official, who spoke on the condition of anonymity, said the actual figure was most likely closer to 100,000.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That map suggests how the United States was able to speed ahead with implanting malicious software on the computers around the world that it most wanted to monitor &amp;#x2014; or disable before they could be used to launch a cyberattack.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;A Focus on Defense&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In interviews, officials and experts said that a vast majority of such implants are intended only for surveillance and serve as an early warning system for cyberattacks directed at the United States.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;How do you ensure that Cyber Command people&amp;#x201D; are able to look at &amp;#x201C;those that are attacking us?&amp;#x201D; a senior official, who compared it to submarine warfare, asked in an interview several months ago.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;That is what the submarines do all the time,&amp;#x201D; said the official, speaking on the condition of anonymity to describe policy. &amp;#x201C;They track the adversary submarines.&amp;#x201D; In cyberspace, he said, the United States tries &amp;#x201C;to silently track the adversaries while they&amp;#x2019;re trying to silently track you.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;If tracking subs was a Cold War cat-and-mouse game with the Soviets, tracking malware is a pursuit played most aggressively with the Chinese.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The United States has targeted &lt;a title=&quot;Times article&quot; href=&quot;http://www.nytimes.com/2013/02/19/technology/chinas-army-is-seen-as-tied-to-hacking-against-us.html&quot;&gt;Unit 61398, the Shanghai-based Chinese Army unit&lt;/a&gt; believed to be responsible for many of the biggest cyberattacks on the United States, in an effort to see attacks being prepared. With Australia&amp;#x2019;s help, one N.S.A. document suggests, the United States has also focused on another specific Chinese Army unit.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Documents obtained by Mr. Snowden indicate that the United States has set up two data centers in China &amp;#x2014; perhaps through front companies &amp;#x2014; from which it can insert malware into computers. When the Chinese place surveillance software on American computer systems &amp;#x2014; and they have, on systems like those at the Pentagon and at The Times &amp;#x2014; the United States usually regards it as a potentially hostile act, a possible prelude to an attack. Mr. Obama laid out America&amp;#x2019;s complaints about those practices to President Xi Jinping of China in a long session at a summit meeting in California last June.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;At that session, Mr. Obama tried to differentiate between conducting surveillance for national security &amp;#x2014; which the United States argues is legitimate &amp;#x2014; and conducting it to steal intellectual property.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;The argument is not working,&amp;#x201D; said Peter W. Singer of the Brookings Institution, a co-author of a new book called &amp;#x201C;Cybersecurity and Cyberwar.&amp;#x201D; &amp;#x201C;To the Chinese, gaining economic advantage is part of national security. And the Snowden revelations have taken a lot of the pressure off&amp;#x201D; the Chinese. Still, the United States has banned the sale of computer servers from a major Chinese manufacturer, Huawei, for fear that they could contain technology to penetrate American networks.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&lt;strong&gt;An Old Technology&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A.'s efforts to reach computers unconnected to a network have relied on a century-old technology updated for modern times: radio transmissions.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In a catalog produced by the agency that was part of the Snowden documents released in Europe, there are page after page of devices using technology that would have brought a smile to Q, James Bond&amp;#x2019;s technology supplier.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One, called Cottonmouth I, looks like a normal USB plug but has a tiny transceiver buried in it. According to the catalog, it transmits information swept from the computer &amp;#x201C;through a covert channel&amp;#x201D; that allows &amp;#x201C;data infiltration and exfiltration.&amp;#x201D; Another variant of the technology involves tiny circuit boards that can be inserted in a laptop computer &amp;#x2014; either in the field or when they are shipped from manufacturers &amp;#x2014; so that the computer is broadcasting to the N.S.A. even while the computer&amp;#x2019;s user enjoys the false confidence that being walled off from the Internet constitutes real protection.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The relay station it communicates with, called Nightstand, fits in an oversize briefcase, and the system can attack a computer &amp;#x201C;from as far away as eight miles under ideal environmental conditions.&amp;#x201D; It can also insert packets of data in milliseconds, meaning that a false message or piece of programming can outrace a real one to a target computer. Similar stations create a link between the target computers and the N.S.A., even if the machines are isolated from the Internet.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Computers are not the only targets. Dropoutjeep attacks iPhones. Other hardware and software are designed to infect large network servers, including those made by the Chinese.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Most of those code names and products are now at least five years old, and they have been updated, some experts say, to make the United States less dependent on physically getting hardware into adversaries&amp;#x2019; computer systems.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The N.S.A. refused to talk about the documents that contained these descriptions, even after they were published in Europe.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;Continuous and selective publication of specific techniques and tools used by N.S.A. to pursue legitimate foreign intelligence targets is detrimental to the security of the United States and our allies,&amp;#x201D; Ms. Vines, the N.S.A. spokeswoman, said.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the Iranians and others discovered some of those techniques years ago. The hardware in the N.S.A.'s catalog was crucial in the cyberattacks on Iran&amp;#x2019;s nuclear facilities, code-named Olympic Games, that began around 2008 and proceeded through the summer of 2010, when a technical error revealed the attack software, later called Stuxnet. That was the first major test of the technology.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One feature of the Stuxnet attack was that the technology the United States slipped into Iran&amp;#x2019;s nuclear enrichment plant at Natanz was able to map how it operated, then &amp;#x201C;phone home&amp;#x201D; the details. Later, that equipment was used to insert malware that blew up nearly 1,000 centrifuges, and temporarily set back Iran&amp;#x2019;s program.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the Stuxnet strike does not appear to be the last time the technology was used in Iran. In 2012, a unit of the Islamic Revolutionary Guards Corps moved a rock near the country&amp;#x2019;s underground Fordo nuclear enrichment plant. The rock exploded and spewed broken circuit boards that the Iranian news media described as &amp;#x201C;the remains of a device capable of intercepting data from computers at the plant.&amp;#x201D; The origins of that device have never been determined.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;On Sunday, according to the semiofficial Fars news agency, Iran&amp;#x2019;s Oil Ministry issued another warning about possible cyberattacks, describing a series of defenses it was erecting &amp;#x2014; and making no mention of what are suspected of being its own attacks on Saudi Arabia&amp;#x2019;s largest oil producer.&lt;/p&gt;
-                &lt;footer class=&quot;story-footer story-content&quot;&gt;
-        
-    &lt;/footer&gt;
-&lt;/article&gt;
-&lt;/div&gt;
-</description>
-<title>
-N.S.A. Devises Radio Pathway Into Computers
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://lists.w3.org/Archives/Public/public-restrictedmedia/2014Jan/0060.html
-</link>
-<description>
-&lt;div&gt;&lt;pre id=&quot;body&quot;&gt;
-&lt;a name=&quot;start60&quot; accesskey=&quot;j&quot; id=&quot;start60&quot;&gt;&lt;/a&gt;On Mon, Jan 13, 2014 at 4:43 PM, Duncan Bayne &amp;lt;&lt;a href=&quot;mailto:dhgbayne@fastmail.fm?Subject=Re%3A%20Watermarking%20%5BRe%3A%20Campaign%20for%20position%20of%20chair%20and%20mandate%20to%20%20close%20this%20community%20group%5D&amp;amp;In-Reply-To=%3CCAEnTvdAf9_axoi-VhJpiznb1d3Lf86dochwG2yJpstwO_2h43w%40mail.gmail.com%3E&amp;amp;References=%3CCAEnTvdAf9_axoi-VhJpiznb1d3Lf86dochwG2yJpstwO_2h43w%40mail.gmail.com%3E&quot;&gt;dhgbayne@fastmail.fm&lt;/a&gt;&amp;gt; wrote:
-
-&amp;gt; On Mon, Jan 13, 2014, at 04:38 PM, Mark Watson wrote:
-&amp;gt; &amp;gt; Who is that question to ? I certainly have no idea of the answer to that
-&amp;gt; &amp;gt; except that watermaking alone doesn't mean the requirements of any of our
-&amp;gt; &amp;gt; existing content licenses.
-&amp;gt;
-&amp;gt; ... which was sort of my point.  Discussion of watermarking etc. is
-&amp;gt; missing the *underlying* cause of the friction, which is that (as I
-&amp;gt; understand it) those licenses positively *require* non-user-modifiable
-&amp;gt; client components.
-&amp;gt;
-&amp;gt; Actually, that's an assumption on my part.
-&amp;gt;
-&amp;gt; Is it possible for you to post the relevant sections of the content
-&amp;gt; licenses to the list?
-
-
-There are many such contracts and they are confidential, so unfortunately
-I can't post them.
-
-
-&amp;gt;  It doesn't make sense to discuss potential
-&amp;gt; solutions to requirements if those requirements aren't clear.
-&amp;gt;
-
-As far as I understand, the way things work today is that it is the DRM
-vendors who take on the task of creating solutions that meet the
-requirements of the studios and of getting buy-in from the studios that
-their solutions do indeed meet the requirements. You can look, for example,
-at the PlayReady robustness rules for an example of the result:
-&lt;a href=&quot;http://www.microsoft.com/playready/licensing/compliance/&quot;&gt;http://www.microsoft.com/playready/licensing/compliance/&lt;/a&gt;
-
-Realistically, I don't think you will get studio requirements posted
-publicly, but that's not a question for me.
-
-So, the DRM vendors have solved the problem of creating solutions that meet
-studio requirements and what we are trying to do with EME is provide a
-clean API to integrate these solutions with the HTML Media Element. What
-we're not trying to do is standardize a solution to the studio
-requirements. That would be rather ambitious, I feel.
-
-...Mark
-
-
-
-
-&amp;gt;
-&amp;gt; --
-&amp;gt; Duncan Bayne
-&amp;gt; ph: +61 420817082 | web: &lt;a href=&quot;http://duncan-bayne.github.com/&quot;&gt;http://duncan-bayne.github.com/&lt;/a&gt; | skype:
-&amp;gt; duncan_bayne
-&amp;gt;
-&amp;gt; I usually check my mail every 24 - 48 hours.  If there's something
-&amp;gt; urgent going on, please send me an SMS or call me.
-&amp;gt;
-&amp;gt;
-&lt;/pre&gt;
-&lt;span id=&quot;received&quot;&gt;&lt;dfn&gt;Received on&lt;/dfn&gt; Tuesday, 14 January 2014 00:56:27 UTC&lt;/span&gt;
-&lt;/div&gt;
-</description>
-<title>
-Requirements for DRM in HTML are confidential
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;articleOptions&quot;&gt;&lt;a href=&quot;http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists&quot; class=&quot;articleOptions&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/icon-print.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.mercurynews.com/crime-courts/ci_24911422/u-s-government-loses-challenge-no-fly-lists&quot; class=&quot;articleOptions&quot;&gt;Print&lt;/a&gt;&amp;#xA0;&amp;#xA0;
-                            &lt;a href=&quot;&quot; class=&quot;articleOptions&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/icon-email.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;&quot; class=&quot;articleOptions&quot;&gt;Email&lt;/a&gt;&amp;#xA0;&amp;#xA0;
-							&lt;span id=&quot;fontSizeChanger&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/normal.gif&quot; class=&quot;normal&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/large.gif&quot; class=&quot;large&quot;&gt;&lt;img src=&quot;http://extras.mnginteractive.com/live/std/largest.gif&quot; class=&quot;largest&quot;&gt; Font Resize&lt;/span&gt;&lt;/div&gt;&lt;div id=&quot;articleBody&quot; class=&quot;articleBody&quot;&gt;&lt;p class=&quot;bodytext&quot;&gt;The federal government violated a former Stanford University doctoral student's legal rights nine years ago when it put her on its secretive &quot;no-fly&quot; lists targeting suspected terrorists, a San Francisco federal judge ruled Tuesday.&lt;/p&gt;&lt;p&gt;In a decision for the most part sealed, U.S. District Judge William Alsup disclosed that Rahinah Ibrahim was mistakenly placed on the controversial list and said that the government must now clear up the mistake. The decision comes in a case that has for the first time revealed how the U.S. Department of Homeland Security assembles the no-fly lists, used to tighten security in the aftermath of the Sept. 11, 2001 terrorist attacks.&lt;/p&gt;&lt;p&gt;The Obama administration has vigorously contested the case, the first of its kind to reach trial, warning that it might reveal top-secret information about the anti-terrorism program. As a result, Alsup sealed his ruling until April to give the government an opportunity to persuade a federal appeals court to keep the order from being released publicly.&lt;/p&gt;&lt;p&gt;But Alsup issued a separate three-page ruling outlining the results for Ibrahim, who has waged a high-profile legal battle since she learned she had been placed on the no-fly list as she tried to board a 2005 flight to Hawaii from San Francisco International Airport.&lt;/p&gt;&lt;p&gt;Ibrahim, Alsup wrote, is &quot;entitled by due process to a ... remedy that requires the government to cleanse and/or correct its lists and records of the mistaken information.&quot;&lt;/p&gt;&lt;p&gt;Elizabeth Pipkin, Ibrahim's lawyer, said she hopes the ruling will permit the Malaysian national to again be able to travel to the United States.&lt;/p&gt;&lt;p&gt;&quot;She's entitled to have her name cleared from the system,&quot; Pipkin said. &quot;She shouldn't be ensnared in their system anymore.&quot;&lt;/p&gt;&lt;p&gt;The 48-year-old Ibrahim has been fighting the U.S. government from abroad, denied the right since 2005 to return to this country. Her case went to trial in December before Alsup, who heard the allegations of government wrongdoing without a jury, in part because of the government's assertion of national security privilege.&lt;/p&gt;&lt;p&gt;Ibrahim, an architecture scholar, wearing a traditional Muslim hijab, was arrested at SFO in January 2005 as she headed to a conference in Hawaii with her teen daughter. She had been branded a terrorist suspect in government databases, she learned. Ibrahim denies any connection to terrorist organizations and settled a separate legal case against San Francisco police and others linked to her airport arrest for $225,000.&lt;/p&gt;&lt;p&gt;Before the incident, Ibrahim had been a regular traveler to the United States since the early 1980s, calling it her &quot;second home.&quot; She met her husband here, marrying in Seattle in 1986, and her first child is a U.S. citizen.&lt;/p&gt;&lt;p&gt;After returning to Malaysia, she founded the architecture department at a major Malaysian university but returned to the states in 2000 to secure her doctorate from Stanford. As a result of later being put on the no-fly list, Ibrahim had to complete her Stanford doctorate remotely.&lt;/p&gt;&lt;p&gt;But she pressed her legal case for years, even as the government tried to sidetrack the legal claims. The 9th U.S. Circuit Court of Appeals twice allowed her case to proceed over the government's objections, leading to the recent trial.&lt;/p&gt;&lt;p&gt;Justice Department officials could not be reached for comment on Alsup's order.&lt;/p&gt;&lt;p&gt;The government places thousands of people on the lists each year, and similar lawsuits against the program and its methods have been unfolding in other courts around the country, including a major challenge in Oregon brought by the American Civil Liberties Union.&lt;/p&gt;&lt;p class=&quot;taglinejb&quot;&gt;Howard Mintz covers legal affairs. Contact him at 408-286-0236 or follow him at &lt;a href=&quot;http://Twitter.com/hmintz&quot;&gt;Twitter.com/hmintz&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-No-fly list takes legal hit
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 https://blog.mozilla.org/luke/2014/01/14/asm-js-aot-compilation-and-startup-performance/
 </link>
 <description>
@@ -380,6 +172,299 @@ Furthermore, after asm.js type checking succeeds (as well as the &lt;a href=&quo
 </description>
 <title>
 Asm.js AOT compilation and startup performance
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://chrome.blogspot.com/2014/01/everyone-can-now-track-down-noisy-tabs.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-body&quot;&gt;
+&lt;div class=&quot;post-content&quot;&gt;
+
+November&amp;#x2019;s &lt;a href=&quot;http://chrome.blogspot.com/2013/11/track-down-those-noisy-tabs.html&quot;&gt;Chrome beta&lt;/a&gt; introduced improvements to help make your browsing quieter, safer and sleeker. In the latest &lt;a href=&quot;http://google.com/chrome&quot;&gt;Chrome release&lt;/a&gt; we&amp;#x2019;re making these available to everyone:&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;You can now track down noisy tabs: &lt;/b&gt;You can now visually scan your tabs for a speaker icon to quickly find the ones singing in the background. You&amp;#x2019;ll also be able to see which tabs are currently using your webcam or are being &lt;a href=&quot;http://googleblog.blogspot.com/2013/07/from-tvs-to-tablets-everything-you-love.html&quot;&gt;cast to your TV&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;div&gt;
+&lt;a href=&quot;http://3.bp.blogspot.com/-cNPtAHx0f4A/UtRZu4lCvsI/AAAAAAAAAMc/cwiLUeuRzmE/s1600/noisy-tabs-sounds.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-cNPtAHx0f4A/UtRZu4lCvsI/AAAAAAAAAMc/cwiLUeuRzmE/s200/noisy-tabs-sounds.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;&lt;i&gt;Playing audio
+&lt;/i&gt;&lt;/div&gt;
+
+&lt;/td&gt;&lt;td&gt;&lt;div&gt;
+&lt;i&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-7iLHDJl4Ho0/UtRZxbiXtXI/AAAAAAAAAMk/vaHmnFPgOd4/s1600/noisy-tabs-webcam.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-7iLHDJl4Ho0/UtRZxbiXtXI/AAAAAAAAAMk/vaHmnFPgOd4/s200/noisy-tabs-webcam.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;Using your webcam
+&lt;/i&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;td&gt;&lt;div&gt;
+&lt;i&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-yDQ5YuD3zpw/UtRZ1Zv64kI/AAAAAAAAAMs/v132s4QrzM0/s1600/noisy-tabs---cast.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-yDQ5YuD3zpw/UtRZ1Zv64kI/AAAAAAAAAMs/v132s4QrzM0/s200/noisy-tabs---cast.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;Casting to your TV&lt;/i&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Safe Browsing's malware warning has gotten stronger:&lt;/b&gt; If you see this message in the download tray at the bottom of your screen, you can click &amp;#x201C;Dismiss&amp;#x201D; knowing that Chrome is &lt;a href=&quot;http://chrome.blogspot.com/2013/10/dont-mess-with-my-browser.html&quot;&gt;working to keep you safe&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;img src=&quot;https://lh5.googleusercontent.com/tQiIsL_6VNEJNH1PhrlKKKPCBa05O6q3GanYwh-DDAfbSVCEX_GdgrMgKMKUPcCFnPfbjWP9aKdVegwLDK44Ke0E9UBp7ik6s8RKtzkkU3YOTq2H9OJVqItb&quot; width=&quot;320&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Try out &lt;a href=&quot;http://chrome.blogspot.com/2013/10/a-beta-preview-supervised-users.html&quot;&gt;supervised users&lt;/a&gt; for your family members: &lt;/b&gt;You can now use a beta preview of &lt;a href=&quot;https://support.google.com/chrome/?p=ui_supervised_users&quot;&gt;supervised users&lt;/a&gt; to help family members who may need some guidance browsing the web. Once you create a supervised user, you can visit &lt;a href=&quot;http://chrome.com/manage&quot;&gt;chrome.com/manage&lt;/a&gt; to review their browsing activity and determine site restrictions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+&lt;a href=&quot;http://2.bp.blogspot.com/-oY0DMdr8V_8/UtTx3nHsGsI/AAAAAAAAAM8/2CGZCMVyzuQ/s1600/supervisedusers_manage.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-oY0DMdr8V_8/UtTx3nHsGsI/AAAAAAAAAM8/2CGZCMVyzuQ/s400/supervisedusers_manage.png&quot; width=&quot;400&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Chrome on Windows 8 &amp;#x201C;Metro&amp;#x201D; mode gets a new look: &lt;/b&gt;Manage multiple Chrome windows and quickly get to your favorite Chrome Apps with an integrated &lt;a href=&quot;https://support.google.com/chrome_webstore/answer/3060053?hl=en&quot;&gt;app launcher&lt;/a&gt;. &amp;#xA0;On the desktop, we&amp;#x2019;ve updated the default styling of UI elements like form controls and scrollbars to match the sleek design of the new Chrome Metro interface.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;span id=&quot;docs-internal-guid-54f2904c-91bc-9f00-321b-e33999dc591e&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/Wo4xPd_Z6SJMKn-CnYqnoJbXXJrhB2Oy8_Uv3fINJ0kH4KSaerAIHqr5kRhroPiNj-H3gpo3KLINsRJ2iAXtn11s9VFfTXGIsD09AzY9Qg3GYv8ifZKt-RECbA&quot; width=&quot;400&quot;&gt;&lt;/span&gt;
+Yuri Wiitala, Software Engineer and Tenacious Tab Tracker&lt;br&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+</description>
+<title>
+Everyone can now track down noisy tabs
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.cc.gatech.edu/news/georgia-tech-researchers-reveal-phrases-pay-kickstarter
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
+
+    &lt;span class=&quot;newsDate&quot;&gt;January 14, 2014&lt;/span&gt;    
+
+    
+    
+    &lt;p&gt;Researchers at Georgia Tech studying the burgeoning phenomenon of crowdfunding have learned that the language used in online fundraising hold surprisingly predictive power about the success of such campaigns.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;As part of their study of more than 45,000 projects on Kickstarter, Assistant Professor Eric Gilbert and doctoral candidate Tanushree Mitra reveal dozens of phrases that pay and a few dozen more that may signal the likely failure of a crowd-sourced effort.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Our research revealed that the phrases used in successful Kickstarter campaigns exhibited general persuasion principles,&amp;#x201D; said Gilbert, who runs the Comp. Social Lab at Georgia Tech. &amp;#x201C;For example, those campaigns that follow the concept of reciprocity &amp;#x2013; that is, offer a gift in return for a pledge &amp;#x2013; and the perceptions of social participation and authority, generated the greatest amount of funding.&amp;#x201D;&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;While offering donors a gift may improve a campaign&amp;#x2019;s success, the study found the language project creators used to express the reward made the difference. For example, the phrases &amp;#x201C;also receive two,&amp;#x201D; &amp;#x201C;has pledged&amp;#x201D; and &amp;#x201C;project will be&amp;#x201D; strongly foretell that a project will reach funding status, while phrases such as &amp;#x201C;dressed up,&amp;#x201D; &amp;#x201C;not been able&amp;#x201D; and &amp;#x201C;trusting&amp;#x201D; are attached to unfunded projects.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;The researchers examined the success of Pebble, which is the most successful Kickstarter campaign to date with more than $10 million in pledges, and compared it to Ninja Baseball, a well-publicized PC game that only earned a third of its $10,000 goal.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;The discrepancy in funding success between projects like Pebble and Ninja Baseball prompted us to consider why some projects meet funding goals and others do not,&amp;#x201D; Mitra said. &amp;#x201C;We found that the driving factors in crowdfunding ranged from social participation to encouragement to gifts &amp;#x2013; all of which are distinguished by the language used in the project description.&amp;#x201D;&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;For their research, Gilbert and Mitra assembled a list of all Kickstarter projects launched as of June 2, 2012, and had reached their last date of fund collection. Of the more than 45,000 projects, 51.53 percent were successfully funded while 48.47 percent were not.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;After controlling for variables such as funding goals, video, social media connections, categories and pledge levels, the researchers focused on more than 20,000 phrases before compiling a dictionary of more than 100 phrases with predictive powers of success or failure.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;The research suggested that the language used by creators to pitch their project plays a major role in driving the project&amp;#x2019;s success, accounting for 58.56 percent of the variance around success. The language generally fit into the following categories:&amp;#xA0;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reciprocity&lt;/strong&gt; or the tendency to return a favor after receiving one as evidenced by phrases such as &amp;#x201C;also receive two,&amp;#x201D; &amp;#x201C;pledged will&amp;#x201D; and &amp;#x201C;good karma and&lt;strong&gt;.&amp;#x201D;&lt;/strong&gt;&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scarcity &lt;/strong&gt;or attachment to something rare as shown with &amp;#x201C;option is&amp;#x201D; and &amp;#x201C;given the chance.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Social Proof&lt;/strong&gt;, which suggests that people depend on others for social cues on how to act as shown by the phrase &amp;#x201C;has pledged.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Social Identity&lt;/strong&gt; or the feeling of belonging to a specific social group. Phrases such as &amp;#x201C;to build this&amp;#x201D; and &amp;#x201C;accessible to the&amp;#x201D; fit this category.&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Liking&lt;/strong&gt;, which reflects the fact that people comply with people or products that appeal to them.&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Authority&lt;/strong&gt;, where people resort to expert opinions for making efficient and quick decisions as shown by phrases such as &amp;#x201C;we can afford&amp;#x201D; and &amp;#x201C;project will be.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The team&amp;#x2019;s findings are summarized in the paper &amp;#x201C;The Language that Gets People to Give: Phrases that Predict Success on Kickstarter.&amp;#x201D; The &lt;a href=&quot;http://comp.social.gatech.edu/papers/cscw14.crowdfunding.mitra.pdf&quot; rel=&quot;nofollow&quot;&gt;paper&lt;/a&gt; will be formally presented at the &lt;a href=&quot;http://confer.csail.mit.edu/cscw2014/paper#cscw339&quot; rel=&quot;nofollow&quot;&gt;17th ACM Conference on Computer Supported Cooperative Work and Social Computing (CSCW 2014)&lt;/a&gt; to be held in Baltimore, Md., from Feb. 15 to 19.&lt;/p&gt;
+    
+  &lt;/div&gt;
+
+  
+&lt;/div&gt;
+</description>
+<title>
+Georgia Tech Researchers Reveal Phrases that Pay on Kickstarter
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://drj11.wordpress.com/2013/09/01/on-compiling-34-year-old-c-code/
+</link>
+<description>
+&lt;div&gt;&lt;h2 id=&quot;post-1031&quot;&gt;On compiling 34 year old C&amp;#xA0;code&lt;/h2&gt;
+			&lt;div class=&quot;entry&quot;&gt;
+				&lt;p&gt;The 34 year old C code is the C code for &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/ed.c&quot;&gt;ed&lt;/a&gt; and &lt;a href=&quot;https://github.com/v7unix/v7unix/tree/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed&quot;&gt;sed&lt;/a&gt; from Unix Version 7. I&amp;#x2019;ve been getting it to compile on a modern POSIXish system.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/v7unix/v7unix/commits/e588aaebfc4fb2af0382de519ff5000d3b2fa7cb&quot;&gt;Some changes had to be made&lt;/a&gt;. But not very many.&lt;/p&gt;
+&lt;h2&gt;The union hack&lt;/h2&gt;
+&lt;p&gt;sed uses &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;a union to save space in a struct&lt;/a&gt;. Specifically, the &lt;var&gt;reptr&lt;/var&gt; union has two sub structs that differ only in that one of them has a &lt;tt&gt;char *re1&lt;/tt&gt; field where the other has a &lt;tt&gt;union reptr *lb1&lt;/tt&gt;. In the old days it was possible to access members of structs inside unions without having to name the intermediate struct. For example &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed/sed0.c#L151&quot;&gt;the code in the sed implementation uses &lt;tt&gt;rep-&amp;gt;ad1&lt;/tt&gt;&lt;/a&gt; instead of &lt;tt&gt;rep-&amp;gt;reptr1.ad1&lt;/tt&gt;. That&amp;#x2019;s no longer possible (I&amp;#x2019;m pretty sure this shortcut was already out of fashion by the time K&amp;amp;R was published in 1978, but I don&amp;#x2019;t have a copy to hand).&lt;/p&gt;
+&lt;p&gt;I first &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/cc1c904848a2781f51dcde153b60519af8ba458a/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;changed the union to a struct that had a union inside it only for the two members that differed&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;
+struct	reptr {
+		char	*ad1;
+		char	*ad2;
+	union {
+		char	*re1;
+		struct reptr	*lb1;
+        } u;
+		char	*rhs;
+		FILE	*fcode;
+		char	command;
+		char	gfl;
+		char	pfl;
+		char	inar;
+		char	negfl;
+} ptrspace[PTRSIZE], *rep;
+&lt;/pre&gt;
+&lt;p&gt;The meant changing a few &amp;#x201C;union reptr&amp;#x201D; to &amp;#x201C;struct reptr&amp;#x201D;, but most of the member accesses would be unchanged. &lt;tt&gt;-&amp;gt;re1&lt;/tt&gt; had to be changed to &lt;tt&gt;-&amp;gt;u.re1&lt;/tt&gt;, but that&amp;#x2019;s a simple search and replace.&lt;/p&gt;
+&lt;p&gt;It wasn&amp;#x2019;t until I was explaining this ghastly use of union to &lt;a href=&quot;https://twitter.com/paul_furley&quot;&gt;Paul&lt;/a&gt; a day later that I realised the union is a completely unnecessary space-saving micro-optimisation. We can just have a plain struct where only one of the two fields &lt;var&gt;re1&lt;/var&gt; and &lt;var&gt;lb1&lt;/var&gt; were ever used. &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/e588aaebfc4fb2af0382de519ff5000d3b2fa7cb/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;That&amp;#x2019;s much nicer, and so is the code&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;The rise of headers&lt;/h2&gt;
+&lt;p&gt;In K&amp;amp;R C if the function you were calling returned &lt;tt&gt;int&lt;/tt&gt; then you didn&amp;#x2019;t need to declare it before calling it. Many functions that in modern times return &lt;tt&gt;void&lt;/tt&gt;, used to return &lt;tt&gt;int&lt;/tt&gt; (which is to say, they didn&amp;#x2019;t declare what they returned, so it defaulted to &lt;tt&gt;int&lt;/tt&gt;, and if the function used plain &lt;tt&gt;return;&lt;/tt&gt; then that was okay as long as the caller didn&amp;#x2019;t use the return value). &lt;var&gt;exit()&lt;/var&gt; is such a function. sed calls it without declaring it first, and that generates a warning:&lt;/p&gt;
+&lt;pre&gt;
+sed0.c:48:3: warning: incompatible implicit declaration of built-in function &amp;#x2018;exit&amp;#x2019; [enabled by default]
+&lt;/pre&gt;
+&lt;p&gt;I could declare &lt;var&gt;exit()&lt;/var&gt; explicitly, but it seemed simpler to just add &lt;tt&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/tt&gt;. And it is.&lt;/p&gt;
+&lt;p&gt;ed declares some of the library functions it uses explicitly. &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/8c4545b59cd2ae641f1f151f76837567ac563653/v7/usr/src/cmd/ed.c#L97&quot;&gt;Like &lt;var&gt;malloc()&lt;/var&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;char	*malloc();&lt;/pre&gt;
+&lt;p&gt;That&amp;#x2019;s a problem because the declaration of &lt;var&gt;malloc()&lt;/var&gt; has changed. Now it&amp;#x2019;s &lt;tt&gt;void *malloc(size_t)&lt;/tt&gt;. This is a fatal violation of the C standard that the compiler is not obliged to warn me about, but thankfully it does.&lt;/p&gt;
+&lt;p&gt;The modern fix is again to add header files. Amusingly, version 7 Unix didn&amp;#x2019;t even have a header file that declared &lt;var&gt;malloc()&lt;/var&gt;.&lt;/p&gt;
+&lt;p&gt;When it comes to &lt;var&gt;mktemp()&lt;/var&gt; (which is also declared explicitly rather than via a header file), &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/8c4545b59cd2ae641f1f151f76837567ac563653/v7/usr/src/cmd/ed.c#L146&quot;&gt;ed has a problem&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;
+tfname = mktemp(&quot;/tmp/eXXXXX&quot;);
+&lt;/pre&gt;
+&lt;p&gt;2 problems in fact. One is that modern &lt;var&gt;mktemp()&lt;/var&gt; expects its argument to have 6 &amp;#x201C;X&amp;#x201D;s, not 5. But the more serious problem is that the storage pointed to by the argument will be modified, and the string literal that is passed is not guaranteed to be placed in a modifiable data region. I&amp;#x2019;m surprised this worked in Version 7 Unix. These days not only is it not guaranteed to work, it doesn&amp;#x2019;t actually work. SEGFAULT because &lt;var&gt;mktemp()&lt;/var&gt; tries to write into a read-only page.&lt;/p&gt;
+&lt;p&gt;And the 3rd problem is of course that &lt;var&gt;mktemp()&lt;/var&gt; is a problematic interface so the better &lt;var&gt;mkstemp()&lt;/var&gt; interface made it into the POSIX standard and &lt;var&gt;mktemp()&lt;/var&gt; did not.&lt;/p&gt;
+&lt;p&gt;Which brings me to&amp;#x2026;&lt;/p&gt;
+&lt;h2&gt;Unfashionable interfaces&lt;/h2&gt;
+&lt;p&gt;ed uses &lt;var&gt;gtty()&lt;/var&gt; and &lt;var&gt;stty()&lt;/var&gt; to get and set the terminal flags (to switch off ECHO while the encryption key is read from the terminal). Not only is &lt;var&gt;gtty()&lt;/var&gt; unfashionable in modern Unixes (I replaced it with &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/master/v7/usr/src/cmd/ed.c#L1668&quot;&gt;tcgettattr()&lt;/a&gt;), it was unfashionable in Version 7 Unix. It&amp;#x2019;s not documented in the man pages; instead, &lt;var&gt;tty(4)&lt;/var&gt; documents the use of the &lt;tt&gt;TIOCGETP&lt;/tt&gt; command to &lt;var&gt;ioctl()&lt;/var&gt;.&lt;/p&gt;
+&lt;p&gt;ed is already using a legacy interface in 1979.&lt;/p&gt;
+
+
+
+
+&lt;div id=&quot;jp-post-flair&quot; class=&quot;sharedaddy sd-like-enabled&quot;&gt;&lt;div class=&quot;sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded&quot; id=&quot;like-post-wrapper-258145-1031-52d62825f1e98&quot;&gt;&lt;h3 class=&quot;sd-title&quot;&gt;Like this:&lt;/h3&gt;&lt;p class=&quot;likes-widget-placeholder post-likes-widget-placeholder&quot;&gt;&lt;span class=&quot;button&quot;&gt;&lt;span&gt;Like&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;loading&quot;&gt;Loading...&lt;/span&gt;&lt;/p&gt;&lt;a class=&quot;sd-link-color&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+				
+				
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+</description>
+<title>
+On compiling 34 year old C code
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.eurogamer.net/articles/digitalfoundry-2014-secret-developers-wii-u-the-inside-story
+</link>
+<description>
+&lt;div&gt;&lt;article class=&quot;hd&quot;&gt;
+	
+													
+							
+						&lt;p class=&quot;byline&quot;&gt;			
+							&lt;strong&gt;By&lt;/strong&gt;
+							&lt;a href=&quot;http://www.eurogamer.net/author/1162&quot;&gt;The Secret Developers&lt;/a&gt;
+		
+							&lt;strong&gt;Published&lt;/strong&gt;
+							&lt;span&gt;
+																	Saturday, 11 January 2014															&lt;/span&gt;
+						&lt;/p&gt;
+	
+																
+		
+		
+			&lt;section class=&quot;&quot;&gt;
+  &lt;p&gt;
+    &lt;em&gt;The Secret Developers is Digital Foundry's occasional series where game-makers come forward to talk with us - and you - about topics they are passionate about, or in the case of this article, to give you the inside story behind a particular hot topic. As the future of the Wii U looks uncertain in the face of the successful launches for both Xbox One and PlayStation 4, this &quot;warts and all&quot; tale from a respected third-party creator gives you some idea of how Nintendo handled the transition to the high-definition gaming era, and the challenges developers faced in bringing their games to the Wii U platform.&lt;/em&gt;
+  &lt;/p&gt;
+  &lt;p&gt;I was there when Nintendo first pitched the Wii U to developers, I worked on the hardware extensively and helped to produce one of the better third-party titles. Now, as the fate of the hardware looks uncertain after a second Christmas of disappointing sales, I wanted to tell the story of what it was actually like to work with the console, and with Nintendo, and perhaps give some context to the mixed fortunes of the machine and its third-party titles.&lt;/p&gt;
+  &lt;p&gt;But first, let's go back to the beginning. The genesis of a new games console generally follows a standard pattern. Initially there is a prolonged period of research and development internally within a manufacturer where the goals and hardware designs are sketched out. These then go through a process of refinement with the hardware parts manufacturers, based on their technology and, obviously, cost.&lt;/p&gt;
+  &lt;p&gt;Once the basic hardware design has been thrashed out, the internal software (SDK) teams get involved in writing the initial code/drivers and tests that are required to run the hardware. Once the teams are happy with the hardware, cost and timelines, the companies start to go out and talk to developers about the new hardware.&lt;/p&gt;
+  &lt;p&gt;To begin with this will be first-party developers and feedback will be gathered that may, or may not, affect the design of the hardware. At this stage the hardware design can be changed, but the window of opportunity is getting smaller. The hardware parts manufacturers have to ramp up their production lines to produce the silicon, which takes time.&lt;/p&gt;
+  &lt;p&gt;After initial feedback, the studio 'tours' begin, talking to select third-party publishers, the Ubisoft, Take-Two and EAs of the world, that the platform holders need to entice to make games for their consoles. Without games, and the income that they provide, the console soon starts to lose money, becoming a noose around the manufacturer's neck.&lt;/p&gt;
+  &lt;p&gt;Major changes at this point are rare, unless they are things that can be altered through software changes (clock speeds, system OS time-slices, etc.) or can be 'easily' added to the hardware design, for example swapping out one set of memory modules for another of higher capacity.&lt;/p&gt;
+  &lt;p&gt;That's where I come in.&lt;/p&gt;
+  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;After initial feedback, the studio 'tours' begin, talking to the Ubisoft, Take-Two and EAs of the world... Without games, and the income that they provide, the console soon starts to lose money, becoming a noose around the manufacturer's neck.&quot; &lt;/p&gt; &lt;/div&gt;
+  &lt;div class=&quot;image-gallery &quot;&gt;
+    &lt;div class=&quot;illustration    &quot;&gt;
+      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/wii_u.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; height=&quot;339.2578125&quot; alt=&quot;wiiu&quot;&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
+  &lt;h2&gt;The reveal and post-reveal catch-up&lt;/h2&gt;
+  &lt;p&gt;When I was told that Nintendo had come into the office for a meeting I could already guess as to what they were going to be talking about. Rumours had been circulating for weeks of new hardware, but nothing concrete had been said. After signing the various NDAs we all gathered in a room to hear the presentation.&lt;/p&gt;
+  &lt;p&gt;It started off in the usual way with a look back on how successful the Wii had been and what their intentions were for the new hardware. They wanted a console that was the same size as the Wii and wouldn't make much noise, so &quot;mum wouldn't mind having it in the living room&quot;. It was during this statement that quiet alarm bells started to ring in my brain, but I ignored them and continued watching the presentation. The pitch then moved on to the usual &quot;we need your help to ensure that the Wii U is a success and you can help us (Nintendo) along the way&quot;. These words ended up having more significance than either we, or the presenters, could have envisaged.&lt;/p&gt;
+  &lt;p&gt;Then the new controller was shown as a dummy prototype, complete with a glossy video showing how it could be used in games as a series of mock-ups, which looked exciting. By this point we were all considering how we could use the controller in our games. But then they revealed the internal details of the console and I realised the reason for my earlier alarm bells. If Nintendo wanted the hardware to have a small footprint and be quiet, they needed minimal fan noise, meaning that cooling was limited, which in turn meant that the CPU would have to produce a minimal amount of heat, which meant that the clock speed would have to be kept low. While I can't confirm specific details, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Espresso_(microprocessor)&quot;&gt;collective thoughts of the internet&lt;/a&gt; are presented for reference on Wikipedia.&lt;/p&gt;
+  &lt;p&gt;So a basic comparison/calculation makes the Wii U look, on paper at least, significantly &lt;em&gt;slower&lt;/em&gt; than an Xbox 360 in terms of raw CPU. This point was raised in the meeting, but the Nintendo representatives dismissed it saying that the &quot;low power consumption was more important to the overall design goals&quot; and that &quot;other CPU features would improve the performance over the raw numbers&quot;.&lt;/p&gt;
+  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Almost immediately after the reveal the emails starting flying asking what people thought of the new console design and specification. The almost universal answer was, 'I like the new controller, but the CPU looks a bit underpowered.'&quot; &lt;/p&gt; &lt;/div&gt;
+  &lt;div class=&quot;image-gallery &quot;&gt;
+    &lt;div class=&quot;illustration    &quot;&gt;
+      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/Nintendo_Wii_U_processor_heatspreader.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; alt=&quot;processor&quot;&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+  &lt;p&gt;Almost immediately after the reveal the emails starting flying asking what people thought of the new console design and specification. The almost universal answer was, &quot;I like the new controller, but the CPU looks a bit underpowered&quot;.&lt;/p&gt;
+  &lt;p&gt;Over the coming weeks people started doing other calculations trying to guess the performance of the machine - don't forget that this is a long time before development kits were available to do actual tests. Some people even built custom PC rigs with &lt;em&gt;under-clocked&lt;/em&gt; CPUs to try and gauge performance of their code on these machine. Again, the almost universal answer was that it wasn't going to be powerful enough to run next-gen engines and it might even struggle to do current-gen (PS3 and X360) titles. But in spite of these tests the management made the decision, for various business reasons, to release a game on the Wii U. So now we had to get stuck in and try to make a game.&lt;/p&gt;
+&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
+  &lt;h2&gt;And so, to work&lt;/h2&gt;
+  &lt;p&gt;Soon after the decision was made the development kits started arriving. As is usual for early hardware they were bigger than the final design with a mixture of connectors and ports used specifically for development. So we plugged them in and flashed them to the latest system code, then tried to get a simple &quot;hello world&quot; type game running, which proved harder than you might think.&lt;/p&gt;
+  &lt;p&gt;Having worked on other hardware consoles, I suppose that we were rather spoilt by having mature toolchains that integrated nicely with our development environment. Wii U on the other hand seemed to be trying at every turn to make it difficult to compile and run any code. Nintendo had provided an integration of their development tools into Visual Studio - the de facto standard for development - but it didn't work, not even close. So time was spent trying to get this fixed up, while reporting the issue to the platform holder. Eventually we received a solution from Nintendo via another third-party company who had also been working on this issue for a while.&lt;/p&gt;
+  &lt;p&gt;So now we could make the code visible in Visual Studio and get it compiling, which was good, but the compilation times were really slow, even for minor changes. Then it had to do the link step, at which point you could happily get up, make a cup of tea, have a chat and get back to your desk before the link was complete. Link times were measured in multiple (four or more) minutes on Wii U compared to around one minute on other platforms.&lt;/p&gt;
+  &lt;p&gt;This doesn't sound bad, but when you are debugging and making lots of changes, these additional times add up. If you made 10 changes to a file in a morning, you could be spending over 50 minutes waiting for the linker to complete, which is a lot of wasted time. &lt;/p&gt;
+  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;As a team, we lost days of time to the compile/link/debug overheads and this negatively impacted the amount of features that we could put into our game before the release date.&quot; &lt;/p&gt; &lt;/div&gt;
+  &lt;div class=&quot;image-gallery &quot;&gt;
+    &lt;div class=&quot;illustration    &quot;&gt;
+      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/wii_devkit.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; height=&quot;224.922760041195&quot; alt=&quot;devkit&quot;&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+  &lt;p&gt;Finally, when you had the code, you would deploy it to the console and start up the debugger, which was part of the toolchain that Nintendo had licensed from Green Hills Software. As a seasoned developer I've used a lot of debuggers, but this one surprised even me. Its interface was clunky, it was very slow to use and if you made the mistake of actually clicking on any code, then it would pause and retrieve all of the values for the variables that you had clicked, which might take a minute or more to come back.&lt;/p&gt;
+  &lt;p&gt;All of these things made the actual development of code harder than it should have been and ate into the development time of the game. As a team, we lost days of time to the compile/link/debug overheads and this negatively impacted the amount of features that we could put into our game before the release date.&lt;/p&gt;
+  &lt;p&gt;Another curious thing to note at this point was that over the course of six months we received multiple different development kits in a variety of colours, none of which revealed why they were different from the previous one. We knew that there were some hardware bugs that were being fixed, but the release notes rarely stated what had changed - we just had to take the new ones and get them working with our code again, consuming valuable development time. There have been some interesting rumours circulating of PC-style development boxes, and even the Radeon HD 4850 (running underclocked) utilised as a proxy for the Wii U's GPU. We worked on Wii U from the early days and never saw equipment like this - our kits always took the form of custom hardware that I presume was based on near-to-final silicon.&lt;/p&gt;
+&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;Working with Wii U&lt;/h2&gt;&lt;p&gt;Now that the game was up and running on the console we could start developing features that would use the new controllers and make our game stand out on the platform. But soon after starting this we ran into some issues that the (minimal) documentation didn't cover, so we asked questions of our local Nintendo support team. They didn't know the answers so they said they would check with the developers in Japan and we waited for a reply. And we waited. And we waited.&lt;/p&gt;&lt;p&gt;After about a week of chasing we heard back from the support team that they had received an answer from Japan, which they emailed to us. The reply was in the form of a few sentences of very broken English that didn't really answer the question that we had asked in the first place. So we went back to them asking for clarification, which took another week or so to come back. After the second delay we asked why it was taking to long for replies to come back from Japan, were they very busy? The local support team said no, it's just that any questions had to be sent off for translation into Japanese, then sent to the developers, who replied and then the replies were translated back to English and sent back to us. With timezone differences and the delay in translating, this usually took a week !&lt;/p&gt;&lt;p&gt;Getting the game to run at its target frame-rate is a part of the development process that is less interesting in this context as it follows the standard pattern. Get the game running, optimise the code (CPU and GPU) and if it still won't perform, cut back on features until it does fit.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Getting the game to run at its target frame-rates... follows the standard pattern. Get the game running, optimise the code and if it still won't perform, cut back on features until it does fit.&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
+					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/ABBp3s0ilmY&quot;&gt;&lt;/iframe&gt;
+					
+				&lt;/p&gt;
+&lt;p&gt;As far as the CPU optimisations went, yes we did have to cut back on some features due to the CPU not being powerful enough. As we originally feared, trying to support a detailed game running in HD put a lot of strain on the CPUs and we couldn't do as much as we would have liked. Cutting back on some of the features was an easy thing to do, but impacted the game as a whole. Code optimised for the PowerPC processors found in the Xbox 360 and PlayStation 3 wasn't always a good fit for the Wii U CPU, so while the chip has some interesting features that let the CPU punch above its weight, we couldn't fully take advantage of them. However, some code could see substantial improvements that did mitigate the lower clocks - anything up to a 4x boost owing to the removal of Load-Hit-Stores, and higher IPC (instructions per cycle) via the inclusion of out-of-order execution. &lt;/p&gt;&lt;p&gt;On the GPU side, the story was reversed. The GPU proved very capable and we ended up adding additional &quot;polish&quot; features as the GPU had capacity to do it. There was even some discussion on trying to utilise the GPU via compute shaders (GPGPU) to offload work from the CPU - exactly the approach I expect to see gain traction on the next-gen consoles - but with very limited development time and no examples or guidance from Nintendo, we didn't feel that we could risk attempting this work. If we had a larger development team or a longer timeframe, maybe we would have attempted it, but in hindsight we would have been limited as to what we could have done before we maxed out the GPU again. The GPU is better than on PS3 or Xbox 360, but leagues away from the graphics hardware in the PS4 or Xbox One.&lt;/p&gt;&lt;p&gt;I've also seen some concerns about the utilisation of DDR3 RAM on Wii U, and a bandwidth deficit compared to the PS3 and Xbox 360. This wasn't really a problem for us. The GPU could fetch data rapidly with minimal stalls (via the EDRAM) and we could efficiently pre-fetch, allowing the GPU to run at top speed.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;Nintendo vs. online gaming&lt;/h2&gt;&lt;p&gt;Now that the game was coming together and the hardware issues were being resolved our attention turned to the networking side of our game and its interface to the newly announced Nintendo Network. We spotted early on that there seemed to be gaps in the documentation, and the code, around the networking area, so we asked for clarification. After the usual translation delay we received word that they were still working on the code, but don't worry it would be arriving soon.&lt;/p&gt;&lt;p&gt;Alarm bells started ringing quietly in my head again, but I put them to one side for the time being. This is Nintendo's new network infrastructure that they are basing their console around, they should make sure that it is complete and fully tested before sharing it, so I could forgive them some delay. We had the basics so we could at least do some testing and connect multiple kits together, but a lot of the Mii and friends content was missing and there was no way to test how the existing code would behave in a &quot;retail environment&quot; as there was no retail &quot;flash&quot; for the development kits. We had to code it all in the dark and just hope that it worked.&lt;/p&gt;&lt;p&gt;Around this time we got the chance to talk to some more senior people in Nintendo, via a phone conference, as they were gathering feedback on our development experiences and their toolchain. This phone conference gave an interesting insight into Nintendo and how it appears to operate.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;At some point in this conversation we were informed that it was no good referencing Live and PSN as nobody in [Nintendo's] development teams used those systems (!) so could we provide more detailed explanations for them?&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
+					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/doMx1UEKEzU&quot;&gt;&lt;/iframe&gt;
+					
+				&lt;/p&gt;
+&lt;p&gt;The discussion started off well enough and covered off our experiences with the hardware and (slow) toolchain and then we steered them towards discussing when the online features might be available. We were told that the features, and the OS updates to support them, would be available before the hardware launch, but only just. There were apparently issues with setting up a large networking infrastructure to rival Sony and Microsoft that they hadn't envisaged.&lt;/p&gt;&lt;p&gt;This was surprising to hear, as we would have thought that they had plenty of time to work on these features as it had been announced months before, so we probed a little deeper and asked how certain scenarios might work with the Mii friends and networking, all the time referencing how Xbox Live and PSN achieve the same thing. At some point in this conversation we were informed that it was no good referencing Live and PSN as nobody in their development teams used those systems (!) so could we provide more detailed explanations for them? My only thought after this call was that they were struggling - badly - with the networking side as it was far more complicated than they anticipated. They were trying to play catch-up with the rival systems, but without the years of experience to back it up.&lt;/p&gt;&lt;p&gt;As promised, (just) before the worldwide launch we received the final networking features that we required for our game along with an OS update for the development kits that would allow us to test. So we patched up our code and tried to start testing our game.&lt;/p&gt;&lt;p&gt;First up we had to flash the kits to the retail mode that had the Mii and network features. This was a very complicated manual process that left the consoles in a halfway state. In the retail mode we could test our features and ensure that they worked as expected, which would be a requirement for getting through Nintendo certification, but in this mode the debugging capabilities were limited. So we could see when things went wrong, but we couldn't fully debug to find out why. As developers, we had to make a choice and hope that any issues that you found were due to the (untested) OS code and wouldn't happen in the final retail environment. What should have been simple tasks were long-winded and error prone. Simple things like sending a friends request to another user were not supported in the OS, so you had to boot a separate program on the console manually, via a debug menu, so that you could send one. But if any error occurred there was no way to debug why it had failed, it just failed.&lt;/p&gt;&lt;p&gt;We started to ask questions about how they could possibly launch the console, which was a matter of weeks away, with a partially developed OS. How were they going to get the OS onto all of the consoles that had been manufactured up to that point? Was it just that we got it late, but they had pushed it into the production line earlier?&lt;/p&gt;&lt;p&gt;Launch day came around and the answer became clear: Nintendo was late - very late - with its network systems. In fact, the only way to access their systems fully was to download a &lt;em&gt;big&lt;/em&gt; patch on day one that added all these missing components. Without that patch a lot of the release titles would have been only semi-functional.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;We started to ask questions about how they could possibly launch the console, which was a matter of weeks away, with a partially developed OS... Launch day came around and the answer became clear: Nintendo was late - very late - with its network systems.&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
+					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/1rUR9A0Dl00&quot;&gt;&lt;/iframe&gt;
+					
+				&lt;/p&gt;
+&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;What happened next?&lt;/h2&gt;&lt;p&gt;Well, we eventually released our game and it was generally well-received, so the management sat back to see what kind of sales figures we would get for all our efforts. Without going into detail it would be fair to say that the numbers we were seeing were less than impressive. In fact we would be lucky to make back all the money that we had invested in making the game in the first place, and although the management publicly supported the Wii U platform, it is unlikely that we would ever release another Wii U title.&lt;/p&gt;&lt;p&gt;But what about the rest of the world? How had other development studios faired? The story of what happened next is pretty well documented in the gaming press, but I'd like to highlight some interesting points that have been on my mind recently. Firstly, third-party support. Do you remember all the hype surrounding the Wii U launch? All those third parties showing videos of existing games that they were going to bring to the Wii U? Whatever happened to a lot of those games?&lt;/p&gt;&lt;p&gt;After the initial flurry of game titles a lot of the studios quietly backed away from their initial statements and announced, with minimal press, that they were in fact not going to make a Wii U version. The reasons behind a particular title not appearing on the Wii U are all pure speculation, but I personally think that a combination of:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Previous development experience using the toolchain and hardware put off development teams from making another title on Wii U.&lt;/li&gt;&lt;li&gt;The technical and feature support from Nintendo were lacking for third-party studios. There was a feeling internally that if you weren't a first-party development studio, you were largely ignored by Nintendo, as we were superficial to their profits. Internally developed titles would save Nintendo and we were just there to add depth to the games catalogue.&lt;/li&gt;&lt;li&gt;The sales figures for the Wii U console were not looking that good soon after launch. There was a lot of confusion in the general population around the launch as most people thought that the Wii U was some kind of add-on to the Wii, they didn't know that it was a new console. This lack of awareness probably contributed to the console not getting off to the start that Nintendo would have hoped and put off studio from developing on the hardware.&lt;/li&gt;&lt;li&gt;Nintendo also fell victim to bad timing. A few months after the console launched the next-gen hype train stepped up a gear as Sony announced the PlayStation 4, with Microsoft joining the fray a few months later. Don't forget that many of the larger studios would have known about the hardware months before it was announced, well before the Wii U hardware actually launched.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;So, these larger studios had a choice. Would they develop a port of an existing game to a console with limited capabilities and limited market penetration? Or put their teams to work on developing new features and concepts for the &quot;real&quot; next-gen consoles that were going to be launched that year? When you look at it this way, the choice isn't that hard.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Larger studios had a choice. Would they port of an existing game to a console with limited capabilities and limited market penetration? Or put their teams to work on developing new features and concepts for the 'real' next-gen consoles?&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
+					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/yvg9mwBrZy4&quot;&gt;&lt;/iframe&gt;
+					
+				&lt;/p&gt;
+&lt;p&gt;From a first-party perspective, it seems that Nintendo itself hasn't had the easiest time. Now this is pure speculation, but from interactions with some of the development teams it seems as though Nintendo's own teams were having real troubles adapting to the new console - the main reason being the move to HD and the ability of the hardware to support it. Don't forget that until the Wii U came out, none of the first-party titles were in HD and the move from SD to HD is not as easy as you would expect. PS3 and Xbox 360 developers went through this pain early in the previous console cycle and it cost them a lot of time and money trying to adapt, with some studios failing in a big way.&lt;/p&gt;&lt;p&gt;Nintendo's internal teams were now facing this challenge on a new console with limited development time and a lot of pressure to deliver compelling titles. With these pressures upon them it was inevitable that some of the higher-profile titles would slip, but it's surprising how sparse the first-party line-up has been over the last year.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
+  &lt;h2&gt;The future for Wii U&lt;/h2&gt;
+  &lt;p&gt;Can the Wii U compete in this brave new world of next-gen (current-gen?) consoles? In terms of raw performance it sits uncomfortably between the previous generation and the current one. Parts of the hardware run better than the previous generation, but other parts drag it down. If you tried to compare the Wii U against the PS4/XO, it comes off very badly indeed - it just cannot compete with the new consoles.&lt;/p&gt;
+  &lt;p&gt;At a very basic level, look at the power draw taken by the next-gen consoles compared to the Wii U. The PlayStation 4 draws over 100W more from the mains than Nintendo's console, and it does so using the latest, most power-efficient x86 cores from AMD in concert with a much larger GPU that's a generation ahead and runs on a much smaller fabrication process - 28nm vs. what I'm reliably informed is the 55nm process from Japanese company Renasas. &lt;/p&gt;
+  &lt;p&gt;There are some fleeting parallels between Wii U and the next-gen consoles - the combination of a low-power CPU with a much more powerful graphics chip - but the notion of next-gen titles being easily portable to the Wii U just doesn't work. The gulf in power is just too high, while the GPGPU that we'll see on Xbox One and PlayStation 4 isn't compatible with the older shader model four hardware found in the Wii U.&lt;/p&gt;
+  &lt;p&gt;Doubtless, the first-party developers at Nintendo will make the hardware sing - they always do - but the situation looks grim for those of us in third-party development, with the opportunity to progress on the hardware held back by both the quality of the tools and the lack of financial reward for tailoring our code to the strengths of the hardware. So where does that leave the Wii U?&lt;/p&gt;
+  &lt;p&gt;Personally I'm not sure on what will happen, but if the current trends continue, the Wii U will probably continue to sell in small quantities until a &quot;must have&quot; title is released, probably from a first-party studio, at which point the sales will sky rocket for a while - but even so, matching the momentum of PlayStation 4 and Xbox One seems highly unlikely. Other variables such as the recent news regarding China lifting the ban on games consoles may influence Nintendo's future direction. This huge untapped market may provide a lifeline in terms of sales, but with the low wages of the general population these sales might well come from the original Wii, rather than the more expensive Wii U.&lt;/p&gt;
+  &lt;p&gt;You can never discount Nintendo, but based on my experience - and the sales of the platform - the company's facing its most testing challenge in modern times.&lt;/p&gt;
+&lt;/section&gt;
+		
+
+	
+																																												
+	
+						
+						
+	
+					&lt;/article&gt;
+	
+											
+				
+									&lt;/div&gt;
+</description>
+<title>
+The Secret Developers: Wii U - the inside story
 </title>
 </item>
 </channel>
