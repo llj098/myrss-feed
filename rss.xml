@@ -18,344 +18,6 @@ myread
 unknown
 </author>
 <link>
-https://blog.mozilla.org/luke/2014/01/14/asm-js-aot-compilation-and-startup-performance/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-						&lt;p&gt;With the &lt;a href=&quot;https://blog.mozilla.org/blog/2013/12/12/first-3d-commercial-web-game-powered-by-asm-js-unveiled/&quot;&gt;recent announcement&lt;/a&gt; of a commercial game shipping using &lt;a href=&quot;http://emscripten.org&quot;&gt;Emscripten&lt;/a&gt; and &lt;a href=&quot;http://asmjs.org/&quot;&gt;asm.js&lt;/a&gt;, I thought it&amp;#x2019;d be a good time to explain how asm.js is executed in Firefox and some of the load-time optimizations we&amp;#x2019;ve made since the &lt;a href=&quot;https://blog.mozilla.org/luke/2013/03/21/asm-js-in-firefox-nightly/&quot;&gt;initial landing&lt;/a&gt; of OdinMonkey in March.  (OdinMonkey is an optimization module inside Mozilla&amp;#x2019;s JavaScript engine.)  There have also been significant &lt;a href=&quot;https://hacks.mozilla.org/2013/12/gap-between-asm-js-and-native-performance-gets-even-narrower-with-float32-optimizations/&quot;&gt;throughput optimizations&lt;/a&gt; as well, but I&amp;#x2019;ll stick to load time in this post.&lt;/p&gt;
-&lt;p&gt;Measuring the &lt;a href=&quot;http://www.unrealengine.com/html5&quot;&gt;Epic Citadel demo&lt;/a&gt; (based on the same Unreal Engine 3 inside &lt;a href=&quot;http://www.monstermadness.com&quot;&gt;Monster Madness&lt;/a&gt;), I see a 2x improvement:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/citadel-warm-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Times were measured with a simple stopwatch up to the first animation frame on a 16&amp;#xD7;2.4Ghz core Linux machine.  (An IndexedDB bug in either the demo or Chrome causes level data not to be cached so time in &amp;#x201C;Downloading data&amp;#x201D; is explicitly subtracted from Chrome&amp;#x2019;s time.)&lt;/p&gt;
-&lt;p&gt;Cold load time improvements on the Citadel demo are harder to see since network latency plays a much larger part and adds considerable variance.  Measuring the &lt;a href=&quot;http://flohofwoe.net/demos.html&quot;&gt;Nebula3 demos&lt;/a&gt; instead, which have a smaller initial download size and are compiled with both Emscripten and PNaCl, we can also see significantly better load times:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/nebula-cold-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Times were again measured with a simple stopwatch up to first animation frame.&lt;/p&gt;
-&lt;p&gt;In this blog post I&amp;#x2019;ll explain the compilation strategy we use for asm.js, why we decided to try this strategy, how it&amp;#x2019;s been working, and 3 optimizations that have had a significant impact on load time.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The post is a bit long, so here&amp;#x2019;s the TL;DR:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ahead-of-time (AOT) compilation is used for asm.js to provide predictable performance.&lt;/li&gt;
-&lt;li&gt;With a few cores, parallel compilation hides most of the cost of using the top-tier compiler for all code.&lt;/li&gt;
-&lt;li&gt;Async compilation allows the webapp to stay responsive during AOT compilation.&lt;/li&gt;
-&lt;li&gt;Caching compiled machine code greatly improves warm start time.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;JIT Compilation&lt;/h2&gt;
-&lt;p&gt;Before getting into how we compile asm.js, let&amp;#x2019;s look at a diagram of the path taken by normal JavaScript in SpiderMonkey (Mozilla&amp;#x2019;s JavaScript engine).  In this diagram, boxes are data structures and arrows represent algorithms which consume and/or generate these data structures:&lt;br&gt;
-&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/jit-diagram.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/jit-diagram.png&quot; alt=&quot;jit-diagram&quot; width=&quot;719&quot; class=&quot;aligncenter size-full wp-image-596&quot;&gt;&lt;/a&gt;&lt;br&gt;
-In short, units of code (like functions, &lt;code&gt;eval&lt;/code&gt; scripts, and global scripts) start as a bunch of characters in memory and gradually get compiled into forms that are able to execute more efficiently.  While each unit of code starts the same way, different units of code will move along the arrows of this diagram at different times as they are run and judged hot enough.  This compilation strategy is generally called &lt;a href=&quot;http://en.wikipedia.org/wiki/Just-in-time_compilation&quot;&gt;Just-In-Time (JIT) compilation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Going into a little more detail on the labels in the digram:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AST: &lt;a href=&quot;http://en.wikipedia.org/wiki/Abstract_syntax_tree&quot;&gt;Abstract Syntax Tree&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Baseline: a JIT compiler that balances compilation speed and the performance of generated code (see &lt;a href=&quot;https://blog.mozilla.org/javascript/2013/04/05/the-baseline-compiler-has-landed&quot;&gt;Kannan&amp;#x2019;s post&lt;/a&gt; for details)&lt;/li&gt;
-&lt;li&gt;Ion: short for IonMonkey, a JIT compiler that produces highly-optimized code at the expense of compilation speed (see &lt;a href=&quot;https://blog.mozilla.org/javascript/2012/09/12/ionmonkey-in-firefox-18/&quot;&gt;David&amp;#x2019;s post&lt;/a&gt; for details)&lt;/li&gt;
-&lt;li&gt;MIR: an &lt;a href=&quot;http://en.wikipedia.org/wiki/Static_single_assignment_form&quot;&gt;SSA&lt;/a&gt;-based representation of code used throughout Ion&lt;/li&gt;
-&lt;li&gt;Profile: collect metadata describing the runtime behavior of the code&lt;/li&gt;
-&lt;li&gt;Ion-build: generate MIR from bytecode and profiling metadata&lt;/li&gt;
-&lt;li&gt;Ion-compile: optimize and generate machine code from MIR&lt;/li&gt;
-&lt;li&gt;Bail: stop executing Ion-compiled code in order to Ion-compile a new version or spend more time collecting profiling metadata in Baseline-compiled code&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Given this whole process, it&amp;#x2019;s reasonable to ask: &lt;em&gt;why do we need all these tiers of execution&lt;/em&gt;?  To wit, V8 has two tiers, and Apple&amp;#x2019;s JSC has three and is experimenting with a &lt;a href=&quot;http://trac.webkit.org/wiki/FTLJIT&quot;&gt;fourth&lt;/a&gt;.  Thus, this strategy is common (although people are always looking for &lt;a href=&quot;https://wiki.openjdk.java.net/display/Graal/Publications+and+Presentations&quot;&gt;something&lt;/a&gt; &lt;a href=&quot;http://pointersgonewild.wordpress.com/higgs/&quot;&gt;simpler&lt;/a&gt;).  There are two main reasons we&amp;#x2019;ve found in SpiderMonkey for this tiered structure.&lt;/p&gt;
-
-&lt;p&gt;One reason is that SpiderMonkey has to run many different types of code and most code doesn&amp;#x2019;t run long enough to amortize the cost of compilation.  In fact, most code &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=678037&quot;&gt;doesn&amp;#x2019;t even run once&lt;/a&gt; which is why SpiderMonkey and other JS engines wait for a function to be run before even fully parsing it.  Of code that is run, most doesn&amp;#x2019;t get warm enough to Baseline-compile and, similarly, most warm code doesn&amp;#x2019;t get hot enough to Ion-compile.  Thus, each tier of execution services a distinct type of workload.&lt;/p&gt;
-&lt;p&gt;The other reason is that the Ion-build step actually &lt;em&gt;depends&lt;/em&gt; on code having warmed up in Baseline so that the profiling metadata is likely representative of future execution.  Ion compilation uses this metadata to specialize the types of values, objects, operations, etc which it could not do based on static analysis of the code alone.&lt;/p&gt;
-&lt;p&gt;What&amp;#x2019;s great about this design is that it has allowed continual progress by modern JavaScript engines on all kinds of JavaScript code.  This progress continues today in all the major JS engines without signs of letting up.&lt;/p&gt;
-&lt;h2&gt;JIT Problems&lt;/h2&gt;
-&lt;p&gt;As it became clear that Emscripten was a big deal (remember the &lt;a href=&quot;http://badassjs.com/post/12035631618/broadway-an-h-264-decoder-in-javascript-running-at&quot;&gt;H.264 decoder&lt;/a&gt;?), we started to try it out on bigger codes and talk with potential users.  As we did this, one thing that became clear: if the web was going to be a serious porting target for large, computationally-intensive apps, we needed performance to be predictable.  Now, even with native code, performance is never &lt;em&gt;truly&lt;/em&gt; predictable due to things like dynamic scheduling and cache hierarchies.  However, with Emscripten output, we were seeing some pretty violent fluctuations in startup and throughput on differnet codes and on different browsers.&lt;/p&gt;
-&lt;p&gt;Analyzing these fluctuations, we saw several causes:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;JIT compilation time;&lt;/li&gt;
-&lt;li&gt;as code warms up, it runs in lower-tier execution modes where it executes more slowly;&lt;/li&gt;
-&lt;li&gt;compiler heuristics (such as: which scripts should be compiled with the top-tier JIT, when and where to inline, whether to compile a loop side-entry and what machine types to use to represent numbers) can make suboptimal choices that permanently reduce throughput; and&lt;/li&gt;
-&lt;li&gt;some optimizations were just missing from the underlying backend compiler because they were rather difficult to implement in the general case (e.g., a better &lt;a href=&quot;http://en.wikipedia.org/wiki/Calling_convention&quot;&gt;calling convention&lt;/a&gt; for direct and indirect function calls).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Each of these problems can potentially be mitigated by adding new JIT compilation techniques and heuristics.  Indeed, we&amp;#x2019;ve seen a lot of improvement along these lines in the V8 and SpiderMonkey JIT compilers in the last year and I expect to see more in the future.  For example, in both JIT compilers, a few heuristic tweaks provided large throughput improvements on the &lt;code&gt;asmjs-apps&lt;/code&gt; benchmarks on &lt;a href=&quot;http://arewefastyet.com&quot;&gt;arewefastyet.com&lt;/a&gt; and background JIT compilation has helped to significantly reduce JIT compilation pauses.&lt;/p&gt;
-&lt;p&gt;However, the question is: to what &lt;em&gt;extent&lt;/em&gt; can these problems be mitigated?  Unfortunately, that&amp;#x2019;s hard to know &lt;em&gt;a priori&lt;/em&gt;: you only really know when you&amp;#x2019;re done.  Furthermore, as with any heuristic tuning problem, it&amp;#x2019;s easy to measure on workloads A, B and C only to find afterwards that the fixes don&amp;#x2019;t generalize to workloads D-Z.&lt;/p&gt;
-&lt;p&gt;In broader terms: with the proliferation of walled gardens and the consequent frustration of developers, the Web has a great opportunity to provide an open, portable alternative.  But to really be an alternative for many types of applications, the web needs predictable, near-native performance.  The time is ripe, so we don&amp;#x2019;t want to miss the opportunity by blocking on a &lt;a href=&quot;http://c2.com/cgi/wiki?SufficientlySmartCompiler&quot;&gt;Sufficiently Smart Compiler&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;AOT Compilation&lt;/h2&gt;
-&lt;p&gt;To attempt to solve the above problems, we started the OdinMonkey experiment.  The basic idea behind the experiment was: Emscripten-generated code has enough type information preserved from the original statically-typed source language that we can avoid all the dynamic-language compilation infrastructure and use a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/AOT_compiler&quot;&gt;Ahead-of-Time (AOT) compiler&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For example, given the following C code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int function f(int i) {
-  return i + 1;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Emscripten would output the following JS code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function f(i) {
-  i = i|0;
-  return (i + 1)|0;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The statement &amp;#x201C;&lt;code&gt;i = i|0&lt;/code&gt;&amp;#x201D; effectively performs the JS spec &lt;a href=&quot;https://people.mozilla.org/~jorendorff/es6-draft.html#sec-toint32&quot;&gt;&lt;code&gt;ToInt32&lt;/code&gt;&lt;/a&gt; on the input, ensuring that &lt;code&gt;+&lt;/code&gt; always operates on an integer.  If we can prove that all callers pass &lt;code&gt;int&lt;/code&gt;s, then this coercion is a no-op.  The expression &amp;#x201C;&lt;code&gt;(i + 1)|0&lt;/code&gt;&amp;#x201D; exactly simulates &lt;a href=&quot;http://en.wikipedia.org/wiki/2s_complement&quot;&gt;2s complement&lt;/a&gt; addition meaning that this JavaScript expression compiles to a single machine instruction &amp;#x2014; no type tests, no overflow checks.&lt;/p&gt;
-&lt;p&gt;If you squint your eyes at the above code, you can view &amp;#x201C;&lt;code&gt;i = i|0&lt;/code&gt;&amp;#x201D; as a parameter type declaration, &amp;#x201C;&lt;code&gt;return (...)|0&lt;/code&gt;&amp;#x201D; as a return type declaration and binary &lt;code&gt;+&lt;/code&gt; as taking two &lt;code&gt;int&lt;/code&gt; types and returning a &lt;a href=&quot;http://asmjs.org/spec/latest/#intish&quot;&gt;special type&lt;/a&gt; which requires coercion via &lt;code&gt;ToInt32&lt;/code&gt; or &lt;code&gt;ToUint32&lt;/code&gt; before use.  This basic idea of viewing runtime coercions as types can be extended to &lt;em&gt;all&lt;/em&gt; statements and expressions in Emscripten-generated code and the resulting type system is &lt;a href=&quot;http://asmjs.org/spec/latest/&quot;&gt;asm.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Given the asm.js type system, OdinMonkey is easily able to generate MIR from the AST.  As an example, check out the &lt;a href=&quot;http://hg.mozilla.org/mozilla-central/file/9d593727eb94/js/src/jit/AsmJS.cpp#l4176&quot;&gt;CheckNot&lt;/a&gt; function in OdinMonkey (which checks the &lt;code&gt;!&lt;/code&gt; operator): as input it receives a &lt;code&gt;ParseNode&lt;/code&gt; (an AST node) and, as output, it returns an &lt;code&gt;MNot&lt;/code&gt; MIR node and the expression&amp;#x2019;s result type (which &lt;a href=&quot;http://asmjs.org/spec/latest/#unary-operators&quot;&gt;according to the spec&lt;/a&gt; is &lt;code&gt;int&lt;/code&gt;).  If any of the types fail to match, a type error message (like you&amp;#x2019;d expect from a C compiler) is output to the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Tools/Web_Console&quot;&gt;Web Console&lt;/a&gt; and OdinMonkey transparently falls back to normal JS compilation.&lt;/p&gt;
-&lt;p&gt;In terms of the previous JIT compilation diagram, OdinMonkey adds a single new arrow between AST and MIR:&lt;br&gt;
-&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/aot-diagram.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/aot-diagram.png&quot; alt=&quot;aot-diagram&quot; width=&quot;450&quot; class=&quot;aligncenter size-full wp-image-595&quot;&gt;&lt;/a&gt;&lt;br&gt;
-Furthermore, after asm.js type checking succeeds (as well as the &lt;a href=&quot;http://asmjs.org/spec/latest/#linking-0&quot;&gt;link-time check&lt;/a&gt;), it is not possible for the generated code to take the Bail edge: there are no dynamically-checked assumptions that can fail.&lt;/p&gt;
-&lt;p&gt;In addition to simplifying the compilation process, the asm.js type system also provides three broader benefits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;asm.js acts as a testable interface between Emscripten and the browser.  (This found bugs in Emscripten.)&lt;/li&gt;
-&lt;li&gt;asm.js specifies a target for non-Emscripten code generators so that they don&amp;#x2019;t have to re-discover the same sweet spot as Emscripten.  (Speaking of, check out the experimental &lt;a href=&quot;http://www.rfk.id.au/blog/entry/pypy-js-poc-jit&quot;&gt;asm.js PyPy backend&lt;/a&gt; and &lt;a href=&quot;https://github.com/jlongster/LLJS&quot;&gt;LLJS-asm.js fork&lt;/a&gt;.)&lt;/li&gt;
-&lt;li&gt;asm.js establishes a clear optimization target for all browsers so that this style of code can become portably fast.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;AOT Potential Problems&lt;/h2&gt;
-&lt;p&gt;Despite all these advantages, AOT has a significant potential downside: it compiles everything using the most expensive compiler without knowing if the code being compiled is hot or cold.  This would obviously be a problem if an app contained a lot of cold or dead asm.js code.  Similarly, AOT would be a net loss for an app with a lot of code that runs in short bursts so that low tiers of execution and compilation stalls aren&amp;#x2019;t noticeable.  Thus, the load-time performance of AOT relative to JIT depends on the kind of code being executed.&lt;/p&gt;
-&lt;p&gt;Another potential pitfall for AOT is pathologically-large functions since these can take a really long time to compile in the top-tier compiler.  With JIT compilation, the usual heuristics ensure that the top-tier compiler is never used.  With &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=875174&quot;&gt;some work&lt;/a&gt;, OdinMonkey could be extended with heuristics do the same.  In the meantime, Alon added an &amp;#x201C;&lt;a href=&quot;http://mozakai.blogspot.com/2013/08/outlining-workaround-for-jits-and-big.html&quot;&gt;outlining&lt;/a&gt;&amp;#x201D; option to Emscripten that automatically breaks up large functions and has been quite effective.  By making functions smaller, outlining also improves performance of asm.js on non-OdinMonkey since it encourages the JIT to use the top-tier compiler.&lt;/p&gt;
-&lt;p&gt;One theoretical response to these load-time concerns is that the &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; directive required at the beginning of any &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module&lt;/a&gt; has no semantics and can simply be removed if AOT compilation is not beneficial.  As such, &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; gives the developer more control over the compilation scheme used for their application.  In theory (it&amp;#x2019;s difficult in practice at the moment due to lack of automated tooling), developers can exercise even finer-grain control by choosing which functions are inside the asm.js module (and thus receive AOT compilation) and which are outside (and thus receive JIT compilation).  One can even imagine an Emscripten &lt;a href=&quot;http://en.wikipedia.org/wiki/Profile-guided_optimization&quot;&gt;PGO&lt;/a&gt; pass that does this automatically for cold code.&lt;/p&gt;
-&lt;p&gt;In the end, though, it&amp;#x2019;s hard to predict what will happen in practice so we had to just try.  (OdinMonkey was started as a experiment, after all.)&lt;/p&gt;
-&lt;p&gt;The results so far have been good.  In addition to those reported at the beginning of the post, cold load times are also measured by the &lt;code&gt;asmjs-&lt;wbr&gt;apps-*-&lt;wbr&gt;loadtime&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; synthetic workloads on &lt;a href=&quot;http://arewefastyet.com/#machine=12&amp;amp;view=breakdown&amp;amp;suite=asmjs-apps&quot;&gt;awfy&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/awfy-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
-&lt;p&gt;In this graph, Firefox (JIT) refers to Firefox&amp;#x2019;s performance with OdinMonkey disabled (by passing &lt;code&gt;--no-asmjs&lt;/code&gt; to the JS shell or setting &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;asmjs&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt; in &lt;code&gt;about:config&lt;/code&gt; in the browser).&lt;/p&gt;
-&lt;p&gt;Another data point is the &lt;a href=&quot;http://kripken.github.io/misc-js-benchmarks/banana/benchmark.html&quot;&gt;BananaBread benchmark&lt;/a&gt; which conveniently measures its own load time:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/bananabench-cold-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
-&lt;p&gt;This graph reports the sum of the &amp;#x201C;preload&amp;#x201D; and &amp;#x201C;startup&amp;#x201D; times when the benchmark is run in headless mode with a cold cache.&lt;/p&gt;
-&lt;p&gt;Now let&amp;#x2019;s look at the major optimizations that AOT compilation allows.&lt;/p&gt;
-&lt;h2&gt;Parallel Compilation&lt;/h2&gt;
-&lt;p&gt;With the intermediate JIT compilation steps avoided, the majority of AOT compilation time is in the Ion-compile step.  For example, measuring the Citadel demo we can see the following breakdown of time:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Parse AST: 1.5s&lt;/li&gt;
-&lt;li&gt;Odin-build AST into MIR: 1.5s&lt;/li&gt;
-&lt;li&gt;Ion-compile MIR: 8s&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Fortunately, the Ion-compile step is also the most parallelizable: each function in the &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module&lt;/a&gt; results in an independent Ion compilation and there are tens of thousands of functions in large apps.  Even better, SpiderMonkey had already supported &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=774253&quot;&gt;background Ion-compilation&lt;/a&gt; for a year before OdinMonkey, so we were able to add parallel compilation to OdinMonkey &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=850070&quot;&gt;without much trouble&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;After basic parallel compilation worked, we made an additional refinement to extract further parallelism.  Originally, the entire asm.js module would be parsed into one big AST before being handed over to OdinMonkey.  OdinMonkey would then simply recurse over the AST, firing off parallel Ion compilations as it went.  This was suboptimal for two reasons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;While parsing the AST, only one core was working.&lt;/li&gt;
-&lt;li&gt;Since the AST is an order of magnitude bigger than the source and asm.js source can be 35MB (don&amp;#x2019;t worry, that compresses down to 5MB over the wire with HTTP gzip content encoding), we were seeing out-of-memory errors on mobile devices and even 32-bit desktop processes with many tabs open.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The solution to both of these problems was to allow Odin-building and Ion-compiling to overlap parsing as illustrated in the following psuedo code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;while (not at end of asm.js module) {
-  ast = ParseFunction();
-  mir = CheckAndEmit(ast);
-  StartBackgroundIonCompilation(mir);
-  ReleaseMemory(ast)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Since the time to Ion-compile a function is on average longer than the time to parse, the process looks something like this:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.mozilla.org/luke/files/2013/12/parallel.png&quot;&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2013/12/parallel.png&quot; alt=&quot;parallel&quot; width=&quot;784&quot; class=&quot;aligncenter size-full wp-image-891&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;To measure the effect, first disable caching (set &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;parallel_&lt;wbr&gt;parsing&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;) and then compare compile times with and without &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;ion.&lt;wbr&gt;parallel_&lt;wbr&gt;compilation&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; enabled.  To get a more precise measure of compile time, look at the &amp;#x201C;total compilation time ___ms&amp;#x201D; part of the &amp;#x201C;Successfully compiled asm.js code&amp;#x201D; Web Console message.&lt;/p&gt;
-&lt;p&gt;On my machine, parallel compilation reduces compile time from 11s to 5s on the Citadel demo, but this improvement is obviously contigent on the number of cores.  Measuring with 2 cores, the compile time is 9s, with 3 cores, 6s, and with 4 cores, 5s.  Adding further cores doesn&amp;#x2019;t appear to help.  The remaining gap between this and the theoretical minimum of 3s suggested above is largely due to a &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=959263&quot;&gt;fixable&lt;/a&gt; implementation detail.&lt;/p&gt;
-&lt;h2&gt;Asynchronous Compilation&lt;/h2&gt;
-&lt;p&gt;As described above, AOT compilation occurs when &lt;code&gt;&quot;use asm&quot;&lt;/code&gt; is first encountered while parsing.  This can be while parsing an inline &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tag or the string passed to &lt;code&gt;eval&lt;/code&gt; or the &lt;code&gt;Function&lt;/code&gt; constructor.  All of these happen on the browser&amp;#x2019;s main thread and thus a large asm.js compilation will hold up event handling and the page will appear frozen (as well as the whole Firefox browser on desktop since it&amp;#x2019;s not multiprocess (&lt;a href=&quot;http://billmccloskey.wordpress.com/2013/12/05/multiprocess-firefox/&quot;&gt;yet&lt;/a&gt;!)).&lt;/p&gt;
-&lt;p&gt;Since HTML allows events to be delivered to pages that still have pending &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; elements to evaluate, &lt;em&gt;any&lt;/em&gt; script may technically be parsed off the main thread.  Unfortunately, the script must still execute synchronously with respect to parsing the rest of the document and constructing the DOM so script parsing traditionally happens on the main thread right before execution.&lt;/p&gt;
-&lt;p&gt;Fortunately, HTML5 added a new &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;async&lt;/code&gt;&lt;/a&gt; property to script elements that defaults to &lt;code&gt;true&lt;/code&gt; for script-created external script elements and can be set explicitly for external scripts (&lt;code&gt;&amp;lt;script async src=&quot;...&quot;&amp;gt;&lt;/code&gt;).  When &lt;code&gt;async&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;, the browser is allowed to evaluate the script whenever it wants.  This makes &lt;code&gt;async&lt;/code&gt; scripts a perfect candidate for parsing off the main thread and Brian Hackett recently &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=906371&quot;&gt;made it happen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;OdinMonkey, by nature of running at parse-time, got to ride along for free(-ish).  Even better, most Emscripten&amp;#x2019;d apps are already async since Emscripten&amp;#x2019;s default harness uses an async script to load the main asm.js module.  See &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts&quot;&gt;this short MDN article&lt;/a&gt; for more details, gotchas and workarounds concerning async scripts.&lt;/p&gt;
-&lt;h2&gt;Caching&lt;/h2&gt;
-&lt;p&gt;When someone starts contributing to SpiderMonkey, there are a few ideas they will almost inevitably have.  One is: &amp;#x201C;Why don&amp;#x2019;t we cache JIT code?&amp;#x201D;. The response to this question is usually some combination of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JIT compilation is pretty fast and usually a small percentage of total run time, so it probably wouldn&amp;#x2019;t help most sites.&lt;/li&gt;
-&lt;li&gt;The implementation would be really complicated because JIT code is highly dependent on the current browser state in memory and JIT code forms a complex graph data structure.&lt;/li&gt;
-&lt;li&gt;It&amp;#x2019;s hard to know when and what to cache; compilation is happening all the time in tiny units.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;None of these problems are insurmountable, but together they make JIT-code caching a fairly daunting task. (To wit, the other inevitable question is &amp;#x201C;Why don&amp;#x2019;t we use LLVM as a compiler backend?&amp;#x201D;, so it&amp;#x2019;s great to see Apple actually &lt;a href=&quot;http://trac.webkit.org/wiki/FTLJIT&quot;&gt;trying this&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;In contrast, for asm.js code the cost/benefit analysis is much simpler:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;compilation time is significant&lt;/li&gt;
-&lt;li&gt;the asm.js module has limited and explicit dependencies (viz., the arguments to the &lt;a href=&quot;http://asmjs.org/spec/latest/#modules&quot;&gt;asm.js module function&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;the representation of the generated asm.js module is relatively simple and easily &lt;a href=&quot;http://hg.mozilla.org/mozilla-central/file/27228e525e08/js/src/jit/AsmJSModule.cpp#l662&quot;&gt;serialized and deserialized&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;making caching a clear win.  So that&amp;#x2019;s what we did.
-&lt;/p&gt;
-&lt;p&gt;There is one unfortunate limitation in the current implementation, though: caching only kicks in for &lt;code&gt;async&lt;/code&gt; scripts and WebWorker code (due to some hopefully temporary main-thread limitations arising from browser storage integration).  Thus, large applications have &lt;em&gt;two&lt;/em&gt; big reasons to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts&quot;&gt;async scripts&lt;/a&gt;.  Other than that, the cache should behave predictably according to the following rules:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The cache is only used for medium-to-large modules (the current cutoff is modules longer than 10,000 characters).&lt;/li&gt;
-&lt;li&gt;The cache entry is keyed on: the origin of the script, the source characters of the asm.js module, the type of CPU and its features, the Firefox build-id (which changes on every major or minor release).&lt;/li&gt;
-&lt;li&gt;The asm.js cache participates in browser-wide quota management such that, when total temporary storage grows past a certain threshold, storage is evicted on an LRU basis.&lt;/li&gt;
-&lt;li&gt;There is a fixed cap (currently 16) on the number of cached asm.js modules per origin; eviction is LRU.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To get confirmation of caching, open the Web Console: the asm.js success messages now include a &amp;#x201C;loaded from cache&amp;#x201D; / &amp;#x201C;stored in cache&amp;#x201D; / &amp;#x201C;not stored in cache&amp;#x201D; clause.&lt;/p&gt;
-&lt;p&gt;To see caching in action, try out the demos mentioned in the introduction with and without &lt;code&gt;javascript.&lt;wbr&gt;options.&lt;wbr&gt;parallel_&lt;wbr&gt;parsing&lt;/wbr&gt;&lt;/wbr&gt;&lt;/wbr&gt;&lt;/code&gt; enabled in &lt;code&gt;about:config&lt;/code&gt; (&lt;code&gt;true&lt;/code&gt; enables caching).  Using this to measure cached vs. uncached warm load time of the Epic Citadel demo shows a 2x improvement:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.mozilla.org/luke/files/2014/01/citadel-warm-cached-load.png&quot; class=&quot;aligncenter&quot;&gt;&lt;/p&gt;
-&lt;p&gt;As before, times were measured with a simple stopwatch up to the first animation frame on a 16&amp;#xD7;2.4Ghz core Linux machine.&lt;/p&gt;
-&lt;p&gt;Note: to clear out the asm.js cache for a given origin, click the &lt;a href=&quot;https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure&quot;&gt;Site Identity Button&lt;/a&gt; &amp;#x2192; More Information &amp;#x2192; Permissions &amp;#x2192; (scroll down) &amp;#x2192; Clear Storage.  (I hear better quota management UI is coming.)&lt;/p&gt;
-&lt;h2&gt;Conclusions&lt;/h2&gt;
-&lt;p&gt;OdinMonkey started as an experiment in achieving predictable, high performance through AOT compilation.  With the rapid pace of innovation in JS JIT compilation techniques, it&amp;#x2019;s definitely too early to draw any final conclusions.  However, almost a year after the initial release, OdinMonkey is still showing marked leads in predictability, throughput and load time.&lt;/p&gt;
-&lt;p&gt;In recent news, it&amp;#x2019;s interesting to see that Google &lt;a href=&quot;http://www.androidpolice.com/2013/11/06/meet-art-part-1-the-new-super-fast-android-runtime-google-has-been-working-on-in-secret-for-over-2-years-debuts-in-kitkat/&quot;&gt;just shipped ART&lt;/a&gt;, an AOT compiler for Java on Android (the current Java VM on Android, Dalvik, is a JIT compiler).  OdinMonkey and ART aren&amp;#x2019;t really comparable for several reasons, but some of the arguments made in the article about startup time definitely sound familiar &amp;#x263A;.&lt;/p&gt;
-&lt;p&gt;On a final note, I&amp;#x2019;d like to emphasize that the majority of Mozilla&amp;#x2019;s JavaScript performance engineers are still focused on improving &lt;em&gt;general&lt;/em&gt; JavaScript performance &lt;sup&gt;&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=generationalgc&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=580070&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=774253&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;https://blog.mozilla.org/javascript/2013/04/05/the-baseline-compiler-has-landed&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=906371&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=888109&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=860923&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=903457&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=782913&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;.  Moreover, I think the future we&amp;#x2019;re moving toward has web apps composed of both compiled modules and high-level handwritten code.  &lt;a href=&quot;https://playcanvas.com/&quot;&gt;PlayCanvas&lt;/a&gt; provides us an early &lt;a href=&quot;http://apps.playcanvas.com/playcanvas/physics/charactercontroller&quot;&gt;example&lt;/a&gt; of this, embedding &lt;a href=&quot;https://github.com/kripken/ammo.js/&quot;&gt;ammo.js&lt;/a&gt; (an Emscripten port of the Bullet physics engine) into an existing hand-written game engine.  I hope to see this trend continue with more reusable compiled components in more application domains and with tighter integration between compiled and handwritten JS (e.g. &lt;a href=&quot;http://lljs.org&quot;&gt;LLJS&lt;/a&gt;, &lt;a href=&quot;https://github.com/kripken/emscripten/wiki/embind&quot;&gt;embind&lt;/a&gt;).&lt;/p&gt;
-											&lt;/div&gt;
-
-					&lt;/div&gt;
-</description>
-<title>
-Asm.js AOT compilation and startup performance
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://chrome.blogspot.com/2014/01/everyone-can-now-track-down-noisy-tabs.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body&quot;&gt;
-&lt;div class=&quot;post-content&quot;&gt;
-
-November&amp;#x2019;s &lt;a href=&quot;http://chrome.blogspot.com/2013/11/track-down-those-noisy-tabs.html&quot;&gt;Chrome beta&lt;/a&gt; introduced improvements to help make your browsing quieter, safer and sleeker. In the latest &lt;a href=&quot;http://google.com/chrome&quot;&gt;Chrome release&lt;/a&gt; we&amp;#x2019;re making these available to everyone:&lt;br&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;You can now track down noisy tabs: &lt;/b&gt;You can now visually scan your tabs for a speaker icon to quickly find the ones singing in the background. You&amp;#x2019;ll also be able to see which tabs are currently using your webcam or are being &lt;a href=&quot;http://googleblog.blogspot.com/2013/07/from-tvs-to-tablets-everything-you-love.html&quot;&gt;cast to your TV&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;div&gt;
-&lt;a href=&quot;http://3.bp.blogspot.com/-cNPtAHx0f4A/UtRZu4lCvsI/AAAAAAAAAMc/cwiLUeuRzmE/s1600/noisy-tabs-sounds.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-cNPtAHx0f4A/UtRZu4lCvsI/AAAAAAAAAMc/cwiLUeuRzmE/s200/noisy-tabs-sounds.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;&lt;i&gt;Playing audio
-&lt;/i&gt;&lt;/div&gt;
-
-&lt;/td&gt;&lt;td&gt;&lt;div&gt;
-&lt;i&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-7iLHDJl4Ho0/UtRZxbiXtXI/AAAAAAAAAMk/vaHmnFPgOd4/s1600/noisy-tabs-webcam.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://3.bp.blogspot.com/-7iLHDJl4Ho0/UtRZxbiXtXI/AAAAAAAAAMk/vaHmnFPgOd4/s200/noisy-tabs-webcam.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;Using your webcam
-&lt;/i&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;td&gt;&lt;div&gt;
-&lt;i&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-yDQ5YuD3zpw/UtRZ1Zv64kI/AAAAAAAAAMs/v132s4QrzM0/s1600/noisy-tabs---cast.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-yDQ5YuD3zpw/UtRZ1Zv64kI/AAAAAAAAAMs/v132s4QrzM0/s200/noisy-tabs---cast.png&quot; width=&quot;200&quot;&gt;&lt;/a&gt;Casting to your TV&lt;/i&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;Safe Browsing's malware warning has gotten stronger:&lt;/b&gt; If you see this message in the download tray at the bottom of your screen, you can click &amp;#x201C;Dismiss&amp;#x201D; knowing that Chrome is &lt;a href=&quot;http://chrome.blogspot.com/2013/10/dont-mess-with-my-browser.html&quot;&gt;working to keep you safe&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;img src=&quot;https://lh5.googleusercontent.com/tQiIsL_6VNEJNH1PhrlKKKPCBa05O6q3GanYwh-DDAfbSVCEX_GdgrMgKMKUPcCFnPfbjWP9aKdVegwLDK44Ke0E9UBp7ik6s8RKtzkkU3YOTq2H9OJVqItb&quot; width=&quot;320&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;Try out &lt;a href=&quot;http://chrome.blogspot.com/2013/10/a-beta-preview-supervised-users.html&quot;&gt;supervised users&lt;/a&gt; for your family members: &lt;/b&gt;You can now use a beta preview of &lt;a href=&quot;https://support.google.com/chrome/?p=ui_supervised_users&quot;&gt;supervised users&lt;/a&gt; to help family members who may need some guidance browsing the web. Once you create a supervised user, you can visit &lt;a href=&quot;http://chrome.com/manage&quot;&gt;chrome.com/manage&lt;/a&gt; to review their browsing activity and determine site restrictions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div&gt;
-&lt;a href=&quot;http://2.bp.blogspot.com/-oY0DMdr8V_8/UtTx3nHsGsI/AAAAAAAAAM8/2CGZCMVyzuQ/s1600/supervisedusers_manage.png&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://2.bp.blogspot.com/-oY0DMdr8V_8/UtTx3nHsGsI/AAAAAAAAAM8/2CGZCMVyzuQ/s400/supervisedusers_manage.png&quot; width=&quot;400&quot;&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;Chrome on Windows 8 &amp;#x201C;Metro&amp;#x201D; mode gets a new look: &lt;/b&gt;Manage multiple Chrome windows and quickly get to your favorite Chrome Apps with an integrated &lt;a href=&quot;https://support.google.com/chrome_webstore/answer/3060053?hl=en&quot;&gt;app launcher&lt;/a&gt;. &amp;#xA0;On the desktop, we&amp;#x2019;ve updated the default styling of UI elements like form controls and scrollbars to match the sleek design of the new Chrome Metro interface.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;span id=&quot;docs-internal-guid-54f2904c-91bc-9f00-321b-e33999dc591e&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/Wo4xPd_Z6SJMKn-CnYqnoJbXXJrhB2Oy8_Uv3fINJ0kH4KSaerAIHqr5kRhroPiNj-H3gpo3KLINsRJ2iAXtn11s9VFfTXGIsD09AzY9Qg3GYv8ifZKt-RECbA&quot; width=&quot;400&quot;&gt;&lt;/span&gt;
-Yuri Wiitala, Software Engineer and Tenacious Tab Tracker&lt;br&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;/div&gt;
-</description>
-<title>
-Everyone can now track down noisy tabs
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.cc.gatech.edu/news/georgia-tech-researchers-reveal-phrases-pay-kickstarter
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
-
-    &lt;span class=&quot;newsDate&quot;&gt;January 14, 2014&lt;/span&gt;    
-
-    
-    
-    &lt;p&gt;Researchers at Georgia Tech studying the burgeoning phenomenon of crowdfunding have learned that the language used in online fundraising hold surprisingly predictive power about the success of such campaigns.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;As part of their study of more than 45,000 projects on Kickstarter, Assistant Professor Eric Gilbert and doctoral candidate Tanushree Mitra reveal dozens of phrases that pay and a few dozen more that may signal the likely failure of a crowd-sourced effort.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Our research revealed that the phrases used in successful Kickstarter campaigns exhibited general persuasion principles,&amp;#x201D; said Gilbert, who runs the Comp. Social Lab at Georgia Tech. &amp;#x201C;For example, those campaigns that follow the concept of reciprocity &amp;#x2013; that is, offer a gift in return for a pledge &amp;#x2013; and the perceptions of social participation and authority, generated the greatest amount of funding.&amp;#x201D;&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;While offering donors a gift may improve a campaign&amp;#x2019;s success, the study found the language project creators used to express the reward made the difference. For example, the phrases &amp;#x201C;also receive two,&amp;#x201D; &amp;#x201C;has pledged&amp;#x201D; and &amp;#x201C;project will be&amp;#x201D; strongly foretell that a project will reach funding status, while phrases such as &amp;#x201C;dressed up,&amp;#x201D; &amp;#x201C;not been able&amp;#x201D; and &amp;#x201C;trusting&amp;#x201D; are attached to unfunded projects.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;The researchers examined the success of Pebble, which is the most successful Kickstarter campaign to date with more than $10 million in pledges, and compared it to Ninja Baseball, a well-publicized PC game that only earned a third of its $10,000 goal.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;The discrepancy in funding success between projects like Pebble and Ninja Baseball prompted us to consider why some projects meet funding goals and others do not,&amp;#x201D; Mitra said. &amp;#x201C;We found that the driving factors in crowdfunding ranged from social participation to encouragement to gifts &amp;#x2013; all of which are distinguished by the language used in the project description.&amp;#x201D;&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;For their research, Gilbert and Mitra assembled a list of all Kickstarter projects launched as of June 2, 2012, and had reached their last date of fund collection. Of the more than 45,000 projects, 51.53 percent were successfully funded while 48.47 percent were not.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;After controlling for variables such as funding goals, video, social media connections, categories and pledge levels, the researchers focused on more than 20,000 phrases before compiling a dictionary of more than 100 phrases with predictive powers of success or failure.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;The research suggested that the language used by creators to pitch their project plays a major role in driving the project&amp;#x2019;s success, accounting for 58.56 percent of the variance around success. The language generally fit into the following categories:&amp;#xA0;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Reciprocity&lt;/strong&gt; or the tendency to return a favor after receiving one as evidenced by phrases such as &amp;#x201C;also receive two,&amp;#x201D; &amp;#x201C;pledged will&amp;#x201D; and &amp;#x201C;good karma and&lt;strong&gt;.&amp;#x201D;&lt;/strong&gt;&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Scarcity &lt;/strong&gt;or attachment to something rare as shown with &amp;#x201C;option is&amp;#x201D; and &amp;#x201C;given the chance.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Social Proof&lt;/strong&gt;, which suggests that people depend on others for social cues on how to act as shown by the phrase &amp;#x201C;has pledged.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Social Identity&lt;/strong&gt; or the feeling of belonging to a specific social group. Phrases such as &amp;#x201C;to build this&amp;#x201D; and &amp;#x201C;accessible to the&amp;#x201D; fit this category.&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Liking&lt;/strong&gt;, which reflects the fact that people comply with people or products that appeal to them.&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Authority&lt;/strong&gt;, where people resort to expert opinions for making efficient and quick decisions as shown by phrases such as &amp;#x201C;we can afford&amp;#x201D; and &amp;#x201C;project will be.&amp;#x201D;&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The team&amp;#x2019;s findings are summarized in the paper &amp;#x201C;The Language that Gets People to Give: Phrases that Predict Success on Kickstarter.&amp;#x201D; The &lt;a href=&quot;http://comp.social.gatech.edu/papers/cscw14.crowdfunding.mitra.pdf&quot; rel=&quot;nofollow&quot;&gt;paper&lt;/a&gt; will be formally presented at the &lt;a href=&quot;http://confer.csail.mit.edu/cscw2014/paper#cscw339&quot; rel=&quot;nofollow&quot;&gt;17th ACM Conference on Computer Supported Cooperative Work and Social Computing (CSCW 2014)&lt;/a&gt; to be held in Baltimore, Md., from Feb. 15 to 19.&lt;/p&gt;
-    
-  &lt;/div&gt;
-
-  
-&lt;/div&gt;
-</description>
-<title>
-Georgia Tech Researchers Reveal Phrases that Pay on Kickstarter
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://drj11.wordpress.com/2013/09/01/on-compiling-34-year-old-c-code/
-</link>
-<description>
-&lt;div&gt;&lt;h2 id=&quot;post-1031&quot;&gt;On compiling 34 year old C&amp;#xA0;code&lt;/h2&gt;
-			&lt;div class=&quot;entry&quot;&gt;
-				&lt;p&gt;The 34 year old C code is the C code for &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/ed.c&quot;&gt;ed&lt;/a&gt; and &lt;a href=&quot;https://github.com/v7unix/v7unix/tree/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed&quot;&gt;sed&lt;/a&gt; from Unix Version 7. I&amp;#x2019;ve been getting it to compile on a modern POSIXish system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/v7unix/v7unix/commits/e588aaebfc4fb2af0382de519ff5000d3b2fa7cb&quot;&gt;Some changes had to be made&lt;/a&gt;. But not very many.&lt;/p&gt;
-&lt;h2&gt;The union hack&lt;/h2&gt;
-&lt;p&gt;sed uses &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;a union to save space in a struct&lt;/a&gt;. Specifically, the &lt;var&gt;reptr&lt;/var&gt; union has two sub structs that differ only in that one of them has a &lt;tt&gt;char *re1&lt;/tt&gt; field where the other has a &lt;tt&gt;union reptr *lb1&lt;/tt&gt;. In the old days it was possible to access members of structs inside unions without having to name the intermediate struct. For example &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/f7c0e507ac6c4b96a1750f6ea4f57785a6dabb01/v7/usr/src/cmd/sed/sed0.c#L151&quot;&gt;the code in the sed implementation uses &lt;tt&gt;rep-&amp;gt;ad1&lt;/tt&gt;&lt;/a&gt; instead of &lt;tt&gt;rep-&amp;gt;reptr1.ad1&lt;/tt&gt;. That&amp;#x2019;s no longer possible (I&amp;#x2019;m pretty sure this shortcut was already out of fashion by the time K&amp;amp;R was published in 1978, but I don&amp;#x2019;t have a copy to hand).&lt;/p&gt;
-&lt;p&gt;I first &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/cc1c904848a2781f51dcde153b60519af8ba458a/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;changed the union to a struct that had a union inside it only for the two members that differed&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;
-struct	reptr {
-		char	*ad1;
-		char	*ad2;
-	union {
-		char	*re1;
-		struct reptr	*lb1;
-        } u;
-		char	*rhs;
-		FILE	*fcode;
-		char	command;
-		char	gfl;
-		char	pfl;
-		char	inar;
-		char	negfl;
-} ptrspace[PTRSIZE], *rep;
-&lt;/pre&gt;
-&lt;p&gt;The meant changing a few &amp;#x201C;union reptr&amp;#x201D; to &amp;#x201C;struct reptr&amp;#x201D;, but most of the member accesses would be unchanged. &lt;tt&gt;-&amp;gt;re1&lt;/tt&gt; had to be changed to &lt;tt&gt;-&amp;gt;u.re1&lt;/tt&gt;, but that&amp;#x2019;s a simple search and replace.&lt;/p&gt;
-&lt;p&gt;It wasn&amp;#x2019;t until I was explaining this ghastly use of union to &lt;a href=&quot;https://twitter.com/paul_furley&quot;&gt;Paul&lt;/a&gt; a day later that I realised the union is a completely unnecessary space-saving micro-optimisation. We can just have a plain struct where only one of the two fields &lt;var&gt;re1&lt;/var&gt; and &lt;var&gt;lb1&lt;/var&gt; were ever used. &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/e588aaebfc4fb2af0382de519ff5000d3b2fa7cb/v7/usr/src/cmd/sed/sed.h#L104&quot;&gt;That&amp;#x2019;s much nicer, and so is the code&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;The rise of headers&lt;/h2&gt;
-&lt;p&gt;In K&amp;amp;R C if the function you were calling returned &lt;tt&gt;int&lt;/tt&gt; then you didn&amp;#x2019;t need to declare it before calling it. Many functions that in modern times return &lt;tt&gt;void&lt;/tt&gt;, used to return &lt;tt&gt;int&lt;/tt&gt; (which is to say, they didn&amp;#x2019;t declare what they returned, so it defaulted to &lt;tt&gt;int&lt;/tt&gt;, and if the function used plain &lt;tt&gt;return;&lt;/tt&gt; then that was okay as long as the caller didn&amp;#x2019;t use the return value). &lt;var&gt;exit()&lt;/var&gt; is such a function. sed calls it without declaring it first, and that generates a warning:&lt;/p&gt;
-&lt;pre&gt;
-sed0.c:48:3: warning: incompatible implicit declaration of built-in function &amp;#x2018;exit&amp;#x2019; [enabled by default]
-&lt;/pre&gt;
-&lt;p&gt;I could declare &lt;var&gt;exit()&lt;/var&gt; explicitly, but it seemed simpler to just add &lt;tt&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/tt&gt;. And it is.&lt;/p&gt;
-&lt;p&gt;ed declares some of the library functions it uses explicitly. &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/8c4545b59cd2ae641f1f151f76837567ac563653/v7/usr/src/cmd/ed.c#L97&quot;&gt;Like &lt;var&gt;malloc()&lt;/var&gt;&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;char	*malloc();&lt;/pre&gt;
-&lt;p&gt;That&amp;#x2019;s a problem because the declaration of &lt;var&gt;malloc()&lt;/var&gt; has changed. Now it&amp;#x2019;s &lt;tt&gt;void *malloc(size_t)&lt;/tt&gt;. This is a fatal violation of the C standard that the compiler is not obliged to warn me about, but thankfully it does.&lt;/p&gt;
-&lt;p&gt;The modern fix is again to add header files. Amusingly, version 7 Unix didn&amp;#x2019;t even have a header file that declared &lt;var&gt;malloc()&lt;/var&gt;.&lt;/p&gt;
-&lt;p&gt;When it comes to &lt;var&gt;mktemp()&lt;/var&gt; (which is also declared explicitly rather than via a header file), &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/8c4545b59cd2ae641f1f151f76837567ac563653/v7/usr/src/cmd/ed.c#L146&quot;&gt;ed has a problem&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;
-tfname = mktemp(&quot;/tmp/eXXXXX&quot;);
-&lt;/pre&gt;
-&lt;p&gt;2 problems in fact. One is that modern &lt;var&gt;mktemp()&lt;/var&gt; expects its argument to have 6 &amp;#x201C;X&amp;#x201D;s, not 5. But the more serious problem is that the storage pointed to by the argument will be modified, and the string literal that is passed is not guaranteed to be placed in a modifiable data region. I&amp;#x2019;m surprised this worked in Version 7 Unix. These days not only is it not guaranteed to work, it doesn&amp;#x2019;t actually work. SEGFAULT because &lt;var&gt;mktemp()&lt;/var&gt; tries to write into a read-only page.&lt;/p&gt;
-&lt;p&gt;And the 3rd problem is of course that &lt;var&gt;mktemp()&lt;/var&gt; is a problematic interface so the better &lt;var&gt;mkstemp()&lt;/var&gt; interface made it into the POSIX standard and &lt;var&gt;mktemp()&lt;/var&gt; did not.&lt;/p&gt;
-&lt;p&gt;Which brings me to&amp;#x2026;&lt;/p&gt;
-&lt;h2&gt;Unfashionable interfaces&lt;/h2&gt;
-&lt;p&gt;ed uses &lt;var&gt;gtty()&lt;/var&gt; and &lt;var&gt;stty()&lt;/var&gt; to get and set the terminal flags (to switch off ECHO while the encryption key is read from the terminal). Not only is &lt;var&gt;gtty()&lt;/var&gt; unfashionable in modern Unixes (I replaced it with &lt;a href=&quot;https://github.com/v7unix/v7unix/blob/master/v7/usr/src/cmd/ed.c#L1668&quot;&gt;tcgettattr()&lt;/a&gt;), it was unfashionable in Version 7 Unix. It&amp;#x2019;s not documented in the man pages; instead, &lt;var&gt;tty(4)&lt;/var&gt; documents the use of the &lt;tt&gt;TIOCGETP&lt;/tt&gt; command to &lt;var&gt;ioctl()&lt;/var&gt;.&lt;/p&gt;
-&lt;p&gt;ed is already using a legacy interface in 1979.&lt;/p&gt;
-
-
-
-
-&lt;div id=&quot;jp-post-flair&quot; class=&quot;sharedaddy sd-like-enabled&quot;&gt;&lt;div class=&quot;sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded&quot; id=&quot;like-post-wrapper-258145-1031-52d62825f1e98&quot;&gt;&lt;h3 class=&quot;sd-title&quot;&gt;Like this:&lt;/h3&gt;&lt;p class=&quot;likes-widget-placeholder post-likes-widget-placeholder&quot;&gt;&lt;span class=&quot;button&quot;&gt;&lt;span&gt;Like&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;loading&quot;&gt;Loading...&lt;/span&gt;&lt;/p&gt;&lt;a class=&quot;sd-link-color&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-				
-				
-
-			&lt;/div&gt;
-		&lt;/div&gt;
-</description>
-<title>
-On compiling 34 year old C code
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://www.eurogamer.net/articles/digitalfoundry-2014-secret-developers-wii-u-the-inside-story
 </link>
 <description>
@@ -465,6 +127,1119 @@ http://www.eurogamer.net/articles/digitalfoundry-2014-secret-developers-wii-u-th
 </description>
 <title>
 The Secret Developers: Wii U - the inside story
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+https://www.youtube.com/watch?v=OPcV9uIY5i4
+</link>
+<description>
+&lt;figure class=&quot;video blockFigure&quot;&gt;&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;http://www.youtube.com/embed/OPcV9uIY5i4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;figcaption&gt;http://tasvideos.org/4156S.html&lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+<title>
+Using bugs in Super Mario World to inject new code and play pong.
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+https://github.com/veltman/clmystery
+</link>
+<description>
+&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
+
+&lt;pre&gt;&lt;code&gt;.OOOOOOOOOOOOOOO @@                                   @@ OOOOOOOOOOOOOOOO.
+OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
+OOOOOOOOOO'''''' @@                                    @@ ```````OOOOOOOOO
+OOOOO'' aaa@@@@@@@@@@@@@@@@@@@@&quot;&quot;&quot;                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;@@aaaa `OOOO
+OOOOO,&quot;&quot;&quot;&quot;@@@@@@@@@@@@@@&quot;&quot;&quot;&quot;                                     a@&quot;&quot; OOOA
+OOOOOOOOOoooooo,                                            |OOoooooOOOOOS
+OOOOOOOOOOOOOOOOo,                                          |OOOOOOOOOOOOC
+OOOOOOOOOOOOOOOOOO                                         ,|OOOOOOOOOOOOI
+OOOOOOOOOOOOOOOOOO @          THE                          |OOOOOOOOOOOOOI
+OOOOOOOOOOOOOOOOO'@           COMMAND                      OOOOOOOOOOOOOOb
+OOOOOOOOOOOOOOO'a'            LINE                         |OOOOOOOOOOOOOy
+OOOOOOOOOOOOOO''              MURDERS                      aa`OOOOOOOOOOOP
+OOOOOOOOOOOOOOb,..                                          `@aa``OOOOOOOh
+OOOOOOOOOOOOOOOOOOo                                           `@@@aa OOOOo
+OOOOOOOOOOOOOOOOOOO|                                             @@@ OOOOe
+OOOOOOOOOOOOOOOOOOO@                               aaaaaaa       @@',OOOOn
+OOOOOOOOOOOOOOOOOOO@                        aaa@@@@@@@@&quot;&quot;        @@ OOOOOi
+OOOOOOOOOO~~ aaaaaa&quot;a                 aaa@@@@@@@@@@&quot;&quot;            @@ OOOOOx
+OOOOOO aaaa@&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;&quot;            @@@@@@@@@@@@&quot;&quot;               @@@|`OOOO'
+OOOOOOOo`@@a                  aa@@  @@@@@@@&quot;&quot;         a@        @@@@ OOOO9
+OOOOOOO'  `@@a               @@a@@   @@&quot;&quot;           a@@   a     |@@@ OOOO3
+`OOOO'       `@    aa@@       aaa&quot;&quot;&quot;          @a        a@     a@@@',OOOO'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There's been a murder in Terminal City, and TCPD needs your help.&lt;/p&gt;
+
+&lt;p&gt;To figure out whodunit, you need access to a command line.&lt;/p&gt;
+
+&lt;p&gt;Once you're ready, clone this repo, or &lt;a href=&quot;https://github.com/veltman/clmystery/archive/master.zip&quot;&gt;download it as a zip file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Open a Terminal, go to the location of the files, and start by reading the file 'instructions'.&lt;/p&gt;
+
+&lt;p&gt;One way you can do this is with the command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat instructions
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To get started on how to use the command line, open cheatsheet.md or cheatsheet.pdf (from the command line, you can type 'nano cheatsheet.md').&lt;/p&gt;
+
+&lt;p&gt;Don't use a text editor to view any files except these instructions, the cheatsheet, and hints.&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+</description>
+<title>
+A command line murder mystery
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://blogs.perl.org/users/ovid/2014/01/ditching-a-language.html
+</link>
+<description>
+&lt;div&gt;
+                        
+                        
+                        
+                        &lt;div class=&quot;entry-body&quot;&gt;
+                            &lt;p&gt;I can't go into the full background and a couple of details have been changed to protect the innocent, but I was chatting with a company that I'll call Acme. They faced a situation that I've seen before and usually ends badly. The code base they have looks like this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Roughly a &lt;em&gt;million&lt;/em&gt; lines of legacy spaghetti code&lt;/li&gt;
+&lt;li&gt;Very little use of existing libraries (&quot;not invented here&quot; syndrome)&lt;/li&gt;
+&lt;li&gt;Siloed developers&lt;/li&gt;
+&lt;li&gt;Hard to maintain and extend&lt;/li&gt;
+&lt;li&gt;Prospective developers see the code and &quot;nope&quot; the heck out of there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have spoken to quite a few companies in this mess and Acme had a solution for dealing with it: they were going to rewrite the code base in another language.&lt;/p&gt;
+
+&lt;p&gt;Oh really?&lt;/p&gt;
+
+                            &lt;p&gt;A &lt;em&gt;million&lt;/em&gt; lines of code, in heavy use, is going to be rewritten? Let's do some rough math.&lt;/p&gt;
+
+&lt;p&gt;We know that lines of code is a rubbish metric for productivity, but in this case, it's really all I have to work with. I pulled out an old project of mine and saw that I did six months of development on it. How do I calculate the lines of code I've written? Well, I can't, not really, but for the sake of argument, let's make a quick guess. Given a starting and ending commit, &lt;a href=&quot;http://stackoverflow.com/questions/2528111/how-can-i-calculate-the-number-of-lines-changed-between-two-commits-in-git&quot;&gt;here's how I can calculate how many lines of code I've changed over the course of the project (using git)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;prettyprint&quot;&gt;git log --numstat --pretty=&quot;%H&quot; --author=ovid $first_commit..$last_commit \
+  | perl -anE 'if (3 == @F){ $a+=$F[0];$b+=$F[1] } END { say &quot;+$a -$b&quot; }'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that printed my total insertions and deletions: +76294, -32686. That makes for just over 100,000 lines of code changed in six months, but even then, it's a rubbish, rubbish metric. No matter how I play with the numbers, I get between 300 to 1,000 lines of code a day. I'm productive, but that number seems very high. On the other hand, the project lead commented that I was productive enough that it was hard to do code reviews, so maybe that's not too far off.&lt;/p&gt;
+
+&lt;p&gt;Let's forget about the &lt;a href=&quot;http://codebetter.com/patricksmacchia/2012/01/23/mythical-man-month-10-lines-per-developer-day/&quot;&gt;10 lines of code a day&lt;/a&gt; that we sometimes hear and pick 500 lines of code a day. That's being generous. Very generous. Further, let's assume that we can maintain this pace and that the old code base will be written in a language with similar verbosity. That's roughly 5.5 person years of effort to rewrite to rewrite the code base, but that assumes you're working seven days a week, 365 days a year. In reality US workers typically work roughly 2,000 hours per year, or about 250 days out of the year. That means it would take eight person years of effort to replicate the above code base (over ten years for the average hourly hours here in France).&lt;/p&gt;
+
+&lt;p&gt;And that's assuming you could consistently crank out 500 lines of code a day. So we'll forget about the lessons of the Mythical Man Month and assume 8 developers could crank this out in a year. Assuming that each developer annually costs the company around &amp;#x20AC;100,000 (that's salary, insurance, taxes, training, supporting equipment, etc.), and assuming at least two other employees will be there to coordinate the project, that's a &amp;#x20AC;1,000,000 they're going to spend.&lt;/p&gt;
+
+&lt;p&gt;No, that's not true. That's a one million euro they're going to flush down the toilet and reach for the euro roll again. Acme's developers have meetings. They have &quot;off days&quot;. They have to spend time understanding the original code base: they can't just transcribe it. Work will still have to continue on the old code base. Features added to the old would have to be added to the new. Features taken for granted in one code base won't be available in the other. Modules working in one code base won't be available in the other (or worse, may be available but you'll miss all the interface differences). And then there's the work coordination necessary between eight devs. Further, because of the lack of structure in Acme's old code base, simply transcribing it would turn one steaming pile of ones and zeros into another steaming pile of ones and zeros. I suspect new team would be &lt;em&gt;lucky&lt;/em&gt; to get 500 lines of code a day for the entire team. Very lucky. This project, even if wildly successful, is going to cost many millions of euros.&lt;/p&gt;
+
+&lt;p&gt;And now Acme has to have the new development team &lt;em&gt;and&lt;/em&gt; the old development team sticking around, greatly increasing their costs (or retrain the existing devs). At the BBC, as soon as they announced they were switching from Perl several Perl devs announced they were quitting and taking their hard-earned business knowledge with them. Why stick with a company when you know you don't have a future? (Actually, your future is likely guaranteed, but grudgingly.) And I might add that Perl is still heavily used at the BBC, several years later because &quot;see above&quot;. (And guess why &lt;a href=&quot;http://www.computerworld.com/s/article/9225079/Brain_drain_Where_Cobol_systems_go_from_here_&quot;&gt;COBOL is still so heavily used&lt;/a&gt;? See above.)&lt;/p&gt;
+
+&lt;p&gt;Note that the above isn't an analysis. It's a &quot;pie in the sky&quot; best case pipe dream that simply won't happen. You can pull this off for smaller code bases, but even then it's painful, expensive, and time-consuming. The industry is riddled with projects (and companies) that have failed because of rewrites (anyone remember Netscape?). &lt;/p&gt;
+
+&lt;p&gt;I have been at multiple companies that have decided to change programming languages, but they're generally not foolish enough to blindly rewrite their systems[1]. I worked with &lt;em&gt;two&lt;/em&gt; companies that switched to Ruby on Rails and subsequently ditched it (both for Perl), only to find that they don't have the time to replace it. So now they have legacy Rails apps that they have to maintain because they don't have the time or money to simply rewrite them. And these were &lt;em&gt;small&lt;/em&gt; compared to a million line code base.&lt;/p&gt;
+
+&lt;p&gt;So Acme has decided to spend millions of euros to switch from their current high risk/low reward position to a new higher risk/low reward position. I fail to see the cunningness here. Unfortunately, I understand what happened. At another company, the CEO panicked in a financial crisis and fired the dev team that had been working for one and a half years to develop a complicated project in part because an outsourcing company in India promised they could replicate it in two months &amp;#x2014; for a lot less money. Non-technical people often have no understanding of how hard our work is.&lt;/p&gt;
+
+&lt;p&gt;Acme's solution to their current woes clearly fits the definition of &quot;large project&quot; and we know from &lt;em&gt;decades&lt;/em&gt; of painful experience that large projects fail. They're so disastrous that &lt;a href=&quot;http://www.mckinsey.com/insights/business_technology/delivering_large-scale_it_projects_on_time_on_budget_and_on_value&quot;&gt;almost one fifth of large software projects threaten the very existence of the company&lt;/a&gt;. Would you &lt;em&gt;dare&lt;/em&gt; go to the Board of Directors and say &quot;I have a multi-million euro software project that if it succeeds, will make it easier to hire developers, but it will probably fail and has almost a 1 in 5 chance of bankrupting us?&quot; No, you wouldn't, but Acme did.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;1. Except for an insurance company who decided to switch their accounting software from COBOL to C++. They gave their COBOL devs a two week training course in C++ and told 'em to rewrite the system. I don't need to tell you how that turned out.&lt;/small&gt;&lt;/p&gt;
+
+                        &lt;/div&gt;
+                        
+                        
+                    &lt;/div&gt;
+</description>
+<title>
+A company having trouble hiring decides to rewrite their million line application in a new language
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://apple.stackexchange.com/questions/5435/got-any-tips-or-tricks-for-terminal-in-mac-os-x
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+            &lt;p&gt;Make files invisible:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;SetFile file -a V&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;SetFile can change a lot of other file attributes and metadata, as well.&lt;/p&gt;
+
+&lt;p&gt;SetFile is not a OS X native command it comes bundled with DevTools/Xcode.&lt;/p&gt;
+
+&lt;p&gt;If you don't have Xcode and don't want to download about 6 GB, you can use&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo chflags hidden|show &amp;lt;file/folder&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;chflags is a BSD command and it also has a Man Page just enter this in Terminal&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;man chflags
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;for those who don't like to enter commands self and just would like to know what there stands in the man. Here you have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CHFLAGS(1)        BSD General Commands Manual           CHFLAGS(1)
+
+NAME
+     chflags -- change file flags
+
+SYNOPSIS
+     chflags [-fhv] [-R [-H | -L | -P]] flags file ...
+
+DESCRIPTION
+     The chflags utility modifies the file flags of the listed files as speci-
+     fied by the flags operand.
+
+     The options are as follows:
+
+     -f      Do not display a diagnostic message if chflags could not modify
+         the flags for file, nor modify the exit status to reflect such
+         failures.
+
+     -H      If the -R option is specified, symbolic links on the command line
+         are followed.  (Symbolic links encountered in the tree traversal
+         are not followed.)
+
+     -h      If the file is a symbolic link, change the file flags of the link
+         itself rather than the file to which it points.
+
+     -L      If the -R option is specified, all symbolic links are followed.
+
+     -P      If the -R option is specified, no symbolic links are followed.
+         This is the default.
+
+     -R      Change the file flags for the file hierarchies rooted in the
+         files instead of just the files themselves.
+
+     -v      Cause chflags to be verbose, showing filenames as the flags are
+         modified.  If the -v option is specified more than once, the old
+         and new flags of the file will also be printed, in octal nota-
+         tion.
+
+     The flags are specified as an octal number or a comma separated list of
+     keywords.  The following keywords are currently defined:
+
+       arch, archived
+           set the archived flag (super-user only)
+
+       opaque  set the opaque flag (owner or super-user only).  [Directory
+           is opaque when viewed through a union mount]
+
+       nodump  set the nodump flag (owner or super-user only)
+
+       sappnd, sappend
+           set the system append-only flag (super-user only)
+
+       schg, schange, simmutable
+           set the system immutable flag (super-user only)
+
+       uappnd, uappend
+           set the user append-only flag (owner or super-user only)
+
+       uchg, uchange, uimmutable
+           set the user immutable flag (owner or super-user only)
+
+       hidden  set the hidden flag [Hide item from GUI]
+
+     As discussed in chflags(2), the sappnd and schg flags may only be unset
+     when the system is in single-user mode.
+
+     Putting the letters ``no'' before or removing the letters ``no'' from a
+     keyword causes the flag to be cleared.  For example:
+
+       nouchg  clear the user immutable flag (owner or super-user only)
+       dump    clear the nodump flag (owner or super-user only)
+
+     Unless the -H or -L options are given, chflags on a symbolic link always
+     succeeds and has no effect.  The -H, -L and -P options are ignored unless
+     the -R option is specified.  In addition, these options override each
+     other and the command's actions are determined by the last one specified.
+
+     You can use &quot;ls -lO&quot; to see the flags of existing files.
+
+EXIT STATUS
+     The chflags utility exits 0 on success, and &amp;gt;0 if an error occurs.
+
+SEE ALSO
+     ls(1), chflags(2), stat(2), fts(3), symlink(7)
+
+HISTORY
+     The chflags command first appeared in 4.4BSD.
+
+BUGS
+     Only a limited number of utilities are chflags aware.  Some of these
+     tools include ls(1), cp(1), find(1), install(1), dump(8), and restore(8).
+     In particular a tool which is not currently chflags aware is the pax(1)
+     utility.
+
+BSD              March 3, 2006                 BSD
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
+
+&lt;p&gt;Colored Prompt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Highlighted grep:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
+Requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create a directory somewhere to hold all your images.
+Dump this into ~/.wakeup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
+/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
+unset date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
+
+&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;find . -d[TAB]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
+
+&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will expand to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
+
+&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
+
+&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then your text.&lt;/p&gt;
+
+&lt;p&gt;To list your available audio device&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
+   39 AirPlay
+   47 Built-in Output
+  209 Soundflower (2ch)
+   74 Soundflower (64ch)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
+
+
+
+&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
+
+&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
+
+&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
+
+&lt;p&gt;There are other formats you can use.&lt;/p&gt;
+
+&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+
+        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
+
+&lt;p&gt;My favorite is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
+
+&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
+
+    &lt;/div&gt;
+    
+    &lt;/div&gt;
+</description>
+<title>
+Tips for Terminal in Mac OS X
 </title>
 </item>
 </channel>
