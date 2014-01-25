@@ -18,256 +18,6 @@ myread
 unknown
 </author>
 <link>
-http://www.eurogamer.net/articles/digitalfoundry-2014-secret-developers-wii-u-the-inside-story
-</link>
-<description>
-&lt;div&gt;&lt;article class=&quot;hd&quot;&gt;
-	
-													
-							
-						&lt;p class=&quot;byline&quot;&gt;			
-							&lt;strong&gt;By&lt;/strong&gt;
-							&lt;a href=&quot;http://www.eurogamer.net/author/1162&quot;&gt;The Secret Developers&lt;/a&gt;
-		
-							&lt;strong&gt;Published&lt;/strong&gt;
-							&lt;span&gt;
-																	Saturday, 11 January 2014															&lt;/span&gt;
-						&lt;/p&gt;
-	
-																
-		
-		
-			&lt;section class=&quot;&quot;&gt;
-  &lt;p&gt;
-    &lt;em&gt;The Secret Developers is Digital Foundry's occasional series where game-makers come forward to talk with us - and you - about topics they are passionate about, or in the case of this article, to give you the inside story behind a particular hot topic. As the future of the Wii U looks uncertain in the face of the successful launches for both Xbox One and PlayStation 4, this &quot;warts and all&quot; tale from a respected third-party creator gives you some idea of how Nintendo handled the transition to the high-definition gaming era, and the challenges developers faced in bringing their games to the Wii U platform.&lt;/em&gt;
-  &lt;/p&gt;
-  &lt;p&gt;I was there when Nintendo first pitched the Wii U to developers, I worked on the hardware extensively and helped to produce one of the better third-party titles. Now, as the fate of the hardware looks uncertain after a second Christmas of disappointing sales, I wanted to tell the story of what it was actually like to work with the console, and with Nintendo, and perhaps give some context to the mixed fortunes of the machine and its third-party titles.&lt;/p&gt;
-  &lt;p&gt;But first, let's go back to the beginning. The genesis of a new games console generally follows a standard pattern. Initially there is a prolonged period of research and development internally within a manufacturer where the goals and hardware designs are sketched out. These then go through a process of refinement with the hardware parts manufacturers, based on their technology and, obviously, cost.&lt;/p&gt;
-  &lt;p&gt;Once the basic hardware design has been thrashed out, the internal software (SDK) teams get involved in writing the initial code/drivers and tests that are required to run the hardware. Once the teams are happy with the hardware, cost and timelines, the companies start to go out and talk to developers about the new hardware.&lt;/p&gt;
-  &lt;p&gt;To begin with this will be first-party developers and feedback will be gathered that may, or may not, affect the design of the hardware. At this stage the hardware design can be changed, but the window of opportunity is getting smaller. The hardware parts manufacturers have to ramp up their production lines to produce the silicon, which takes time.&lt;/p&gt;
-  &lt;p&gt;After initial feedback, the studio 'tours' begin, talking to select third-party publishers, the Ubisoft, Take-Two and EAs of the world, that the platform holders need to entice to make games for their consoles. Without games, and the income that they provide, the console soon starts to lose money, becoming a noose around the manufacturer's neck.&lt;/p&gt;
-  &lt;p&gt;Major changes at this point are rare, unless they are things that can be altered through software changes (clock speeds, system OS time-slices, etc.) or can be 'easily' added to the hardware design, for example swapping out one set of memory modules for another of higher capacity.&lt;/p&gt;
-  &lt;p&gt;That's where I come in.&lt;/p&gt;
-  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;After initial feedback, the studio 'tours' begin, talking to the Ubisoft, Take-Two and EAs of the world... Without games, and the income that they provide, the console soon starts to lose money, becoming a noose around the manufacturer's neck.&quot; &lt;/p&gt; &lt;/div&gt;
-  &lt;div class=&quot;image-gallery &quot;&gt;
-    &lt;div class=&quot;illustration    &quot;&gt;
-      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/wii_u.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; height=&quot;339.2578125&quot; alt=&quot;wiiu&quot;&gt;
-    &lt;/div&gt;
-    
-  &lt;/div&gt;
-&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
-  &lt;h2&gt;The reveal and post-reveal catch-up&lt;/h2&gt;
-  &lt;p&gt;When I was told that Nintendo had come into the office for a meeting I could already guess as to what they were going to be talking about. Rumours had been circulating for weeks of new hardware, but nothing concrete had been said. After signing the various NDAs we all gathered in a room to hear the presentation.&lt;/p&gt;
-  &lt;p&gt;It started off in the usual way with a look back on how successful the Wii had been and what their intentions were for the new hardware. They wanted a console that was the same size as the Wii and wouldn't make much noise, so &quot;mum wouldn't mind having it in the living room&quot;. It was during this statement that quiet alarm bells started to ring in my brain, but I ignored them and continued watching the presentation. The pitch then moved on to the usual &quot;we need your help to ensure that the Wii U is a success and you can help us (Nintendo) along the way&quot;. These words ended up having more significance than either we, or the presenters, could have envisaged.&lt;/p&gt;
-  &lt;p&gt;Then the new controller was shown as a dummy prototype, complete with a glossy video showing how it could be used in games as a series of mock-ups, which looked exciting. By this point we were all considering how we could use the controller in our games. But then they revealed the internal details of the console and I realised the reason for my earlier alarm bells. If Nintendo wanted the hardware to have a small footprint and be quiet, they needed minimal fan noise, meaning that cooling was limited, which in turn meant that the CPU would have to produce a minimal amount of heat, which meant that the clock speed would have to be kept low. While I can't confirm specific details, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Espresso_(microprocessor)&quot;&gt;collective thoughts of the internet&lt;/a&gt; are presented for reference on Wikipedia.&lt;/p&gt;
-  &lt;p&gt;So a basic comparison/calculation makes the Wii U look, on paper at least, significantly &lt;em&gt;slower&lt;/em&gt; than an Xbox 360 in terms of raw CPU. This point was raised in the meeting, but the Nintendo representatives dismissed it saying that the &quot;low power consumption was more important to the overall design goals&quot; and that &quot;other CPU features would improve the performance over the raw numbers&quot;.&lt;/p&gt;
-  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Almost immediately after the reveal the emails starting flying asking what people thought of the new console design and specification. The almost universal answer was, 'I like the new controller, but the CPU looks a bit underpowered.'&quot; &lt;/p&gt; &lt;/div&gt;
-  &lt;div class=&quot;image-gallery &quot;&gt;
-    &lt;div class=&quot;illustration    &quot;&gt;
-      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/Nintendo_Wii_U_processor_heatspreader.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; alt=&quot;processor&quot;&gt;
-    &lt;/div&gt;
-    
-  &lt;/div&gt;
-  &lt;p&gt;Almost immediately after the reveal the emails starting flying asking what people thought of the new console design and specification. The almost universal answer was, &quot;I like the new controller, but the CPU looks a bit underpowered&quot;.&lt;/p&gt;
-  &lt;p&gt;Over the coming weeks people started doing other calculations trying to guess the performance of the machine - don't forget that this is a long time before development kits were available to do actual tests. Some people even built custom PC rigs with &lt;em&gt;under-clocked&lt;/em&gt; CPUs to try and gauge performance of their code on these machine. Again, the almost universal answer was that it wasn't going to be powerful enough to run next-gen engines and it might even struggle to do current-gen (PS3 and X360) titles. But in spite of these tests the management made the decision, for various business reasons, to release a game on the Wii U. So now we had to get stuck in and try to make a game.&lt;/p&gt;
-&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
-  &lt;h2&gt;And so, to work&lt;/h2&gt;
-  &lt;p&gt;Soon after the decision was made the development kits started arriving. As is usual for early hardware they were bigger than the final design with a mixture of connectors and ports used specifically for development. So we plugged them in and flashed them to the latest system code, then tried to get a simple &quot;hello world&quot; type game running, which proved harder than you might think.&lt;/p&gt;
-  &lt;p&gt;Having worked on other hardware consoles, I suppose that we were rather spoilt by having mature toolchains that integrated nicely with our development environment. Wii U on the other hand seemed to be trying at every turn to make it difficult to compile and run any code. Nintendo had provided an integration of their development tools into Visual Studio - the de facto standard for development - but it didn't work, not even close. So time was spent trying to get this fixed up, while reporting the issue to the platform holder. Eventually we received a solution from Nintendo via another third-party company who had also been working on this issue for a while.&lt;/p&gt;
-  &lt;p&gt;So now we could make the code visible in Visual Studio and get it compiling, which was good, but the compilation times were really slow, even for minor changes. Then it had to do the link step, at which point you could happily get up, make a cup of tea, have a chat and get back to your desk before the link was complete. Link times were measured in multiple (four or more) minutes on Wii U compared to around one minute on other platforms.&lt;/p&gt;
-  &lt;p&gt;This doesn't sound bad, but when you are debugging and making lots of changes, these additional times add up. If you made 10 changes to a file in a morning, you could be spending over 50 minutes waiting for the linker to complete, which is a lot of wasted time. &lt;/p&gt;
-  &lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;As a team, we lost days of time to the compile/link/debug overheads and this negatively impacted the amount of features that we could put into our game before the release date.&quot; &lt;/p&gt; &lt;/div&gt;
-  &lt;div class=&quot;image-gallery &quot;&gt;
-    &lt;div class=&quot;illustration    &quot;&gt;
-      &lt;img src=&quot;http://images.eurogamer.net/2013/articles//a/1/6/4/5/9/4/4/wii_devkit.jpg.jpg/EG11/resize/600x-1/quality/80/format/jpg&quot; width=&quot;600&quot; height=&quot;224.922760041195&quot; alt=&quot;devkit&quot;&gt;
-    &lt;/div&gt;
-    
-  &lt;/div&gt;
-  &lt;p&gt;Finally, when you had the code, you would deploy it to the console and start up the debugger, which was part of the toolchain that Nintendo had licensed from Green Hills Software. As a seasoned developer I've used a lot of debuggers, but this one surprised even me. Its interface was clunky, it was very slow to use and if you made the mistake of actually clicking on any code, then it would pause and retrieve all of the values for the variables that you had clicked, which might take a minute or more to come back.&lt;/p&gt;
-  &lt;p&gt;All of these things made the actual development of code harder than it should have been and ate into the development time of the game. As a team, we lost days of time to the compile/link/debug overheads and this negatively impacted the amount of features that we could put into our game before the release date.&lt;/p&gt;
-  &lt;p&gt;Another curious thing to note at this point was that over the course of six months we received multiple different development kits in a variety of colours, none of which revealed why they were different from the previous one. We knew that there were some hardware bugs that were being fixed, but the release notes rarely stated what had changed - we just had to take the new ones and get them working with our code again, consuming valuable development time. There have been some interesting rumours circulating of PC-style development boxes, and even the Radeon HD 4850 (running underclocked) utilised as a proxy for the Wii U's GPU. We worked on Wii U from the early days and never saw equipment like this - our kits always took the form of custom hardware that I presume was based on near-to-final silicon.&lt;/p&gt;
-&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;Working with Wii U&lt;/h2&gt;&lt;p&gt;Now that the game was up and running on the console we could start developing features that would use the new controllers and make our game stand out on the platform. But soon after starting this we ran into some issues that the (minimal) documentation didn't cover, so we asked questions of our local Nintendo support team. They didn't know the answers so they said they would check with the developers in Japan and we waited for a reply. And we waited. And we waited.&lt;/p&gt;&lt;p&gt;After about a week of chasing we heard back from the support team that they had received an answer from Japan, which they emailed to us. The reply was in the form of a few sentences of very broken English that didn't really answer the question that we had asked in the first place. So we went back to them asking for clarification, which took another week or so to come back. After the second delay we asked why it was taking to long for replies to come back from Japan, were they very busy? The local support team said no, it's just that any questions had to be sent off for translation into Japanese, then sent to the developers, who replied and then the replies were translated back to English and sent back to us. With timezone differences and the delay in translating, this usually took a week !&lt;/p&gt;&lt;p&gt;Getting the game to run at its target frame-rate is a part of the development process that is less interesting in this context as it follows the standard pattern. Get the game running, optimise the code (CPU and GPU) and if it still won't perform, cut back on features until it does fit.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Getting the game to run at its target frame-rates... follows the standard pattern. Get the game running, optimise the code and if it still won't perform, cut back on features until it does fit.&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
-					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/ABBp3s0ilmY&quot;&gt;&lt;/iframe&gt;
-					
-				&lt;/p&gt;
-&lt;p&gt;As far as the CPU optimisations went, yes we did have to cut back on some features due to the CPU not being powerful enough. As we originally feared, trying to support a detailed game running in HD put a lot of strain on the CPUs and we couldn't do as much as we would have liked. Cutting back on some of the features was an easy thing to do, but impacted the game as a whole. Code optimised for the PowerPC processors found in the Xbox 360 and PlayStation 3 wasn't always a good fit for the Wii U CPU, so while the chip has some interesting features that let the CPU punch above its weight, we couldn't fully take advantage of them. However, some code could see substantial improvements that did mitigate the lower clocks - anything up to a 4x boost owing to the removal of Load-Hit-Stores, and higher IPC (instructions per cycle) via the inclusion of out-of-order execution. &lt;/p&gt;&lt;p&gt;On the GPU side, the story was reversed. The GPU proved very capable and we ended up adding additional &quot;polish&quot; features as the GPU had capacity to do it. There was even some discussion on trying to utilise the GPU via compute shaders (GPGPU) to offload work from the CPU - exactly the approach I expect to see gain traction on the next-gen consoles - but with very limited development time and no examples or guidance from Nintendo, we didn't feel that we could risk attempting this work. If we had a larger development team or a longer timeframe, maybe we would have attempted it, but in hindsight we would have been limited as to what we could have done before we maxed out the GPU again. The GPU is better than on PS3 or Xbox 360, but leagues away from the graphics hardware in the PS4 or Xbox One.&lt;/p&gt;&lt;p&gt;I've also seen some concerns about the utilisation of DDR3 RAM on Wii U, and a bandwidth deficit compared to the PS3 and Xbox 360. This wasn't really a problem for us. The GPU could fetch data rapidly with minimal stalls (via the EDRAM) and we could efficiently pre-fetch, allowing the GPU to run at top speed.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;Nintendo vs. online gaming&lt;/h2&gt;&lt;p&gt;Now that the game was coming together and the hardware issues were being resolved our attention turned to the networking side of our game and its interface to the newly announced Nintendo Network. We spotted early on that there seemed to be gaps in the documentation, and the code, around the networking area, so we asked for clarification. After the usual translation delay we received word that they were still working on the code, but don't worry it would be arriving soon.&lt;/p&gt;&lt;p&gt;Alarm bells started ringing quietly in my head again, but I put them to one side for the time being. This is Nintendo's new network infrastructure that they are basing their console around, they should make sure that it is complete and fully tested before sharing it, so I could forgive them some delay. We had the basics so we could at least do some testing and connect multiple kits together, but a lot of the Mii and friends content was missing and there was no way to test how the existing code would behave in a &quot;retail environment&quot; as there was no retail &quot;flash&quot; for the development kits. We had to code it all in the dark and just hope that it worked.&lt;/p&gt;&lt;p&gt;Around this time we got the chance to talk to some more senior people in Nintendo, via a phone conference, as they were gathering feedback on our development experiences and their toolchain. This phone conference gave an interesting insight into Nintendo and how it appears to operate.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;At some point in this conversation we were informed that it was no good referencing Live and PSN as nobody in [Nintendo's] development teams used those systems (!) so could we provide more detailed explanations for them?&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
-					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/doMx1UEKEzU&quot;&gt;&lt;/iframe&gt;
-					
-				&lt;/p&gt;
-&lt;p&gt;The discussion started off well enough and covered off our experiences with the hardware and (slow) toolchain and then we steered them towards discussing when the online features might be available. We were told that the features, and the OS updates to support them, would be available before the hardware launch, but only just. There were apparently issues with setting up a large networking infrastructure to rival Sony and Microsoft that they hadn't envisaged.&lt;/p&gt;&lt;p&gt;This was surprising to hear, as we would have thought that they had plenty of time to work on these features as it had been announced months before, so we probed a little deeper and asked how certain scenarios might work with the Mii friends and networking, all the time referencing how Xbox Live and PSN achieve the same thing. At some point in this conversation we were informed that it was no good referencing Live and PSN as nobody in their development teams used those systems (!) so could we provide more detailed explanations for them? My only thought after this call was that they were struggling - badly - with the networking side as it was far more complicated than they anticipated. They were trying to play catch-up with the rival systems, but without the years of experience to back it up.&lt;/p&gt;&lt;p&gt;As promised, (just) before the worldwide launch we received the final networking features that we required for our game along with an OS update for the development kits that would allow us to test. So we patched up our code and tried to start testing our game.&lt;/p&gt;&lt;p&gt;First up we had to flash the kits to the retail mode that had the Mii and network features. This was a very complicated manual process that left the consoles in a halfway state. In the retail mode we could test our features and ensure that they worked as expected, which would be a requirement for getting through Nintendo certification, but in this mode the debugging capabilities were limited. So we could see when things went wrong, but we couldn't fully debug to find out why. As developers, we had to make a choice and hope that any issues that you found were due to the (untested) OS code and wouldn't happen in the final retail environment. What should have been simple tasks were long-winded and error prone. Simple things like sending a friends request to another user were not supported in the OS, so you had to boot a separate program on the console manually, via a debug menu, so that you could send one. But if any error occurred there was no way to debug why it had failed, it just failed.&lt;/p&gt;&lt;p&gt;We started to ask questions about how they could possibly launch the console, which was a matter of weeks away, with a partially developed OS. How were they going to get the OS onto all of the consoles that had been manufactured up to that point? Was it just that we got it late, but they had pushed it into the production line earlier?&lt;/p&gt;&lt;p&gt;Launch day came around and the answer became clear: Nintendo was late - very late - with its network systems. In fact, the only way to access their systems fully was to download a &lt;em&gt;big&lt;/em&gt; patch on day one that added all these missing components. Without that patch a lot of the release titles would have been only semi-functional.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;We started to ask questions about how they could possibly launch the console, which was a matter of weeks away, with a partially developed OS... Launch day came around and the answer became clear: Nintendo was late - very late - with its network systems.&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
-					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/1rUR9A0Dl00&quot;&gt;&lt;/iframe&gt;
-					
-				&lt;/p&gt;
-&lt;/section&gt;&lt;section class=&quot;&quot;&gt;&lt;h2&gt;What happened next?&lt;/h2&gt;&lt;p&gt;Well, we eventually released our game and it was generally well-received, so the management sat back to see what kind of sales figures we would get for all our efforts. Without going into detail it would be fair to say that the numbers we were seeing were less than impressive. In fact we would be lucky to make back all the money that we had invested in making the game in the first place, and although the management publicly supported the Wii U platform, it is unlikely that we would ever release another Wii U title.&lt;/p&gt;&lt;p&gt;But what about the rest of the world? How had other development studios faired? The story of what happened next is pretty well documented in the gaming press, but I'd like to highlight some interesting points that have been on my mind recently. Firstly, third-party support. Do you remember all the hype surrounding the Wii U launch? All those third parties showing videos of existing games that they were going to bring to the Wii U? Whatever happened to a lot of those games?&lt;/p&gt;&lt;p&gt;After the initial flurry of game titles a lot of the studios quietly backed away from their initial statements and announced, with minimal press, that they were in fact not going to make a Wii U version. The reasons behind a particular title not appearing on the Wii U are all pure speculation, but I personally think that a combination of:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Previous development experience using the toolchain and hardware put off development teams from making another title on Wii U.&lt;/li&gt;&lt;li&gt;The technical and feature support from Nintendo were lacking for third-party studios. There was a feeling internally that if you weren't a first-party development studio, you were largely ignored by Nintendo, as we were superficial to their profits. Internally developed titles would save Nintendo and we were just there to add depth to the games catalogue.&lt;/li&gt;&lt;li&gt;The sales figures for the Wii U console were not looking that good soon after launch. There was a lot of confusion in the general population around the launch as most people thought that the Wii U was some kind of add-on to the Wii, they didn't know that it was a new console. This lack of awareness probably contributed to the console not getting off to the start that Nintendo would have hoped and put off studio from developing on the hardware.&lt;/li&gt;&lt;li&gt;Nintendo also fell victim to bad timing. A few months after the console launched the next-gen hype train stepped up a gear as Sony announced the PlayStation 4, with Microsoft joining the fray a few months later. Don't forget that many of the larger studios would have known about the hardware months before it was announced, well before the Wii U hardware actually launched.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;So, these larger studios had a choice. Would they develop a port of an existing game to a console with limited capabilities and limited market penetration? Or put their teams to work on developing new features and concepts for the &quot;real&quot; next-gen consoles that were going to be launched that year? When you look at it this way, the choice isn't that hard.&lt;/p&gt;&lt;div class=&quot;pullquote  left &quot;&gt;&lt;p&gt;&quot;Larger studios had a choice. Would they port of an existing game to a console with limited capabilities and limited market penetration? Or put their teams to work on developing new features and concepts for the 'real' next-gen consoles?&quot; &lt;/p&gt; &lt;/div&gt;				&lt;p class=&quot;video&quot;&gt;
-					&lt;iframe width=&quot;600&quot; height=&quot;338&quot; src=&quot;http://www.youtube.com/embed/yvg9mwBrZy4&quot;&gt;&lt;/iframe&gt;
-					
-				&lt;/p&gt;
-&lt;p&gt;From a first-party perspective, it seems that Nintendo itself hasn't had the easiest time. Now this is pure speculation, but from interactions with some of the development teams it seems as though Nintendo's own teams were having real troubles adapting to the new console - the main reason being the move to HD and the ability of the hardware to support it. Don't forget that until the Wii U came out, none of the first-party titles were in HD and the move from SD to HD is not as easy as you would expect. PS3 and Xbox 360 developers went through this pain early in the previous console cycle and it cost them a lot of time and money trying to adapt, with some studios failing in a big way.&lt;/p&gt;&lt;p&gt;Nintendo's internal teams were now facing this challenge on a new console with limited development time and a lot of pressure to deliver compelling titles. With these pressures upon them it was inevitable that some of the higher-profile titles would slip, but it's surprising how sparse the first-party line-up has been over the last year.&lt;/p&gt;&lt;/section&gt;&lt;section class=&quot;&quot;&gt;
-  &lt;h2&gt;The future for Wii U&lt;/h2&gt;
-  &lt;p&gt;Can the Wii U compete in this brave new world of next-gen (current-gen?) consoles? In terms of raw performance it sits uncomfortably between the previous generation and the current one. Parts of the hardware run better than the previous generation, but other parts drag it down. If you tried to compare the Wii U against the PS4/XO, it comes off very badly indeed - it just cannot compete with the new consoles.&lt;/p&gt;
-  &lt;p&gt;At a very basic level, look at the power draw taken by the next-gen consoles compared to the Wii U. The PlayStation 4 draws over 100W more from the mains than Nintendo's console, and it does so using the latest, most power-efficient x86 cores from AMD in concert with a much larger GPU that's a generation ahead and runs on a much smaller fabrication process - 28nm vs. what I'm reliably informed is the 55nm process from Japanese company Renasas. &lt;/p&gt;
-  &lt;p&gt;There are some fleeting parallels between Wii U and the next-gen consoles - the combination of a low-power CPU with a much more powerful graphics chip - but the notion of next-gen titles being easily portable to the Wii U just doesn't work. The gulf in power is just too high, while the GPGPU that we'll see on Xbox One and PlayStation 4 isn't compatible with the older shader model four hardware found in the Wii U.&lt;/p&gt;
-  &lt;p&gt;Doubtless, the first-party developers at Nintendo will make the hardware sing - they always do - but the situation looks grim for those of us in third-party development, with the opportunity to progress on the hardware held back by both the quality of the tools and the lack of financial reward for tailoring our code to the strengths of the hardware. So where does that leave the Wii U?&lt;/p&gt;
-  &lt;p&gt;Personally I'm not sure on what will happen, but if the current trends continue, the Wii U will probably continue to sell in small quantities until a &quot;must have&quot; title is released, probably from a first-party studio, at which point the sales will sky rocket for a while - but even so, matching the momentum of PlayStation 4 and Xbox One seems highly unlikely. Other variables such as the recent news regarding China lifting the ban on games consoles may influence Nintendo's future direction. This huge untapped market may provide a lifeline in terms of sales, but with the low wages of the general population these sales might well come from the original Wii, rather than the more expensive Wii U.&lt;/p&gt;
-  &lt;p&gt;You can never discount Nintendo, but based on my experience - and the sales of the platform - the company's facing its most testing challenge in modern times.&lt;/p&gt;
-&lt;/section&gt;
-		
-
-	
-																																												
-	
-						
-						
-	
-					&lt;/article&gt;
-	
-											
-				
-									&lt;/div&gt;
-</description>
-<title>
-The Secret Developers: Wii U - the inside story
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-https://www.youtube.com/watch?v=OPcV9uIY5i4
-</link>
-<description>
-&lt;figure class=&quot;video blockFigure&quot;&gt;&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;http://www.youtube.com/embed/OPcV9uIY5i4&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;figcaption&gt;http://tasvideos.org/4156S.html&lt;/figcaption&gt;&lt;/figure&gt;
-</description>
-<title>
-Using bugs in Super Mario World to inject new code and play pong.
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-https://github.com/veltman/clmystery
-</link>
-<description>
-&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
-
-&lt;pre&gt;&lt;code&gt;.OOOOOOOOOOOOOOO @@                                   @@ OOOOOOOOOOOOOOOO.
-OOOOOOOOOOOOOOOO @@                                    @@ OOOOOOOOOOOOOOOO
-OOOOOOOOOO'''''' @@                                    @@ ```````OOOOOOOOO
-OOOOO'' aaa@@@@@@@@@@@@@@@@@@@@&quot;&quot;&quot;                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;@@aaaa `OOOO
-OOOOO,&quot;&quot;&quot;&quot;@@@@@@@@@@@@@@&quot;&quot;&quot;&quot;                                     a@&quot;&quot; OOOA
-OOOOOOOOOoooooo,                                            |OOoooooOOOOOS
-OOOOOOOOOOOOOOOOo,                                          |OOOOOOOOOOOOC
-OOOOOOOOOOOOOOOOOO                                         ,|OOOOOOOOOOOOI
-OOOOOOOOOOOOOOOOOO @          THE                          |OOOOOOOOOOOOOI
-OOOOOOOOOOOOOOOOO'@           COMMAND                      OOOOOOOOOOOOOOb
-OOOOOOOOOOOOOOO'a'            LINE                         |OOOOOOOOOOOOOy
-OOOOOOOOOOOOOO''              MURDERS                      aa`OOOOOOOOOOOP
-OOOOOOOOOOOOOOb,..                                          `@aa``OOOOOOOh
-OOOOOOOOOOOOOOOOOOo                                           `@@@aa OOOOo
-OOOOOOOOOOOOOOOOOOO|                                             @@@ OOOOe
-OOOOOOOOOOOOOOOOOOO@                               aaaaaaa       @@',OOOOn
-OOOOOOOOOOOOOOOOOOO@                        aaa@@@@@@@@&quot;&quot;        @@ OOOOOi
-OOOOOOOOOO~~ aaaaaa&quot;a                 aaa@@@@@@@@@@&quot;&quot;            @@ OOOOOx
-OOOOOO aaaa@&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;&quot;            @@@@@@@@@@@@&quot;&quot;               @@@|`OOOO'
-OOOOOOOo`@@a                  aa@@  @@@@@@@&quot;&quot;         a@        @@@@ OOOO9
-OOOOOOO'  `@@a               @@a@@   @@&quot;&quot;           a@@   a     |@@@ OOOO3
-`OOOO'       `@    aa@@       aaa&quot;&quot;&quot;          @a        a@     a@@@',OOOO'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There's been a murder in Terminal City, and TCPD needs your help.&lt;/p&gt;
-
-&lt;p&gt;To figure out whodunit, you need access to a command line.&lt;/p&gt;
-
-&lt;p&gt;Once you're ready, clone this repo, or &lt;a href=&quot;https://github.com/veltman/clmystery/archive/master.zip&quot;&gt;download it as a zip file&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Open a Terminal, go to the location of the files, and start by reading the file 'instructions'.&lt;/p&gt;
-
-&lt;p&gt;One way you can do this is with the command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cat instructions
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To get started on how to use the command line, open cheatsheet.md or cheatsheet.pdf (from the command line, you can type 'nano cheatsheet.md').&lt;/p&gt;
-
-&lt;p&gt;Don't use a text editor to view any files except these instructions, the cheatsheet, and hints.&lt;/p&gt;&lt;/article&gt;
-  &lt;/div&gt;
-</description>
-<title>
-A command line murder mystery
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://blogs.perl.org/users/ovid/2014/01/ditching-a-language.html
-</link>
-<description>
-&lt;div&gt;
-                        
-                        
-                        
-                        &lt;div class=&quot;entry-body&quot;&gt;
-                            &lt;p&gt;I can't go into the full background and a couple of details have been changed to protect the innocent, but I was chatting with a company that I'll call Acme. They faced a situation that I've seen before and usually ends badly. The code base they have looks like this:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Roughly a &lt;em&gt;million&lt;/em&gt; lines of legacy spaghetti code&lt;/li&gt;
-&lt;li&gt;Very little use of existing libraries (&quot;not invented here&quot; syndrome)&lt;/li&gt;
-&lt;li&gt;Siloed developers&lt;/li&gt;
-&lt;li&gt;Hard to maintain and extend&lt;/li&gt;
-&lt;li&gt;Prospective developers see the code and &quot;nope&quot; the heck out of there&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I have spoken to quite a few companies in this mess and Acme had a solution for dealing with it: they were going to rewrite the code base in another language.&lt;/p&gt;
-
-&lt;p&gt;Oh really?&lt;/p&gt;
-
-                            &lt;p&gt;A &lt;em&gt;million&lt;/em&gt; lines of code, in heavy use, is going to be rewritten? Let's do some rough math.&lt;/p&gt;
-
-&lt;p&gt;We know that lines of code is a rubbish metric for productivity, but in this case, it's really all I have to work with. I pulled out an old project of mine and saw that I did six months of development on it. How do I calculate the lines of code I've written? Well, I can't, not really, but for the sake of argument, let's make a quick guess. Given a starting and ending commit, &lt;a href=&quot;http://stackoverflow.com/questions/2528111/how-can-i-calculate-the-number-of-lines-changed-between-two-commits-in-git&quot;&gt;here's how I can calculate how many lines of code I've changed over the course of the project (using git)&lt;/a&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;prettyprint&quot;&gt;git log --numstat --pretty=&quot;%H&quot; --author=ovid $first_commit..$last_commit \
-  | perl -anE 'if (3 == @F){ $a+=$F[0];$b+=$F[1] } END { say &quot;+$a -$b&quot; }'
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And that printed my total insertions and deletions: +76294, -32686. That makes for just over 100,000 lines of code changed in six months, but even then, it's a rubbish, rubbish metric. No matter how I play with the numbers, I get between 300 to 1,000 lines of code a day. I'm productive, but that number seems very high. On the other hand, the project lead commented that I was productive enough that it was hard to do code reviews, so maybe that's not too far off.&lt;/p&gt;
-
-&lt;p&gt;Let's forget about the &lt;a href=&quot;http://codebetter.com/patricksmacchia/2012/01/23/mythical-man-month-10-lines-per-developer-day/&quot;&gt;10 lines of code a day&lt;/a&gt; that we sometimes hear and pick 500 lines of code a day. That's being generous. Very generous. Further, let's assume that we can maintain this pace and that the old code base will be written in a language with similar verbosity. That's roughly 5.5 person years of effort to rewrite to rewrite the code base, but that assumes you're working seven days a week, 365 days a year. In reality US workers typically work roughly 2,000 hours per year, or about 250 days out of the year. That means it would take eight person years of effort to replicate the above code base (over ten years for the average hourly hours here in France).&lt;/p&gt;
-
-&lt;p&gt;And that's assuming you could consistently crank out 500 lines of code a day. So we'll forget about the lessons of the Mythical Man Month and assume 8 developers could crank this out in a year. Assuming that each developer annually costs the company around &amp;#x20AC;100,000 (that's salary, insurance, taxes, training, supporting equipment, etc.), and assuming at least two other employees will be there to coordinate the project, that's a &amp;#x20AC;1,000,000 they're going to spend.&lt;/p&gt;
-
-&lt;p&gt;No, that's not true. That's a one million euro they're going to flush down the toilet and reach for the euro roll again. Acme's developers have meetings. They have &quot;off days&quot;. They have to spend time understanding the original code base: they can't just transcribe it. Work will still have to continue on the old code base. Features added to the old would have to be added to the new. Features taken for granted in one code base won't be available in the other. Modules working in one code base won't be available in the other (or worse, may be available but you'll miss all the interface differences). And then there's the work coordination necessary between eight devs. Further, because of the lack of structure in Acme's old code base, simply transcribing it would turn one steaming pile of ones and zeros into another steaming pile of ones and zeros. I suspect new team would be &lt;em&gt;lucky&lt;/em&gt; to get 500 lines of code a day for the entire team. Very lucky. This project, even if wildly successful, is going to cost many millions of euros.&lt;/p&gt;
-
-&lt;p&gt;And now Acme has to have the new development team &lt;em&gt;and&lt;/em&gt; the old development team sticking around, greatly increasing their costs (or retrain the existing devs). At the BBC, as soon as they announced they were switching from Perl several Perl devs announced they were quitting and taking their hard-earned business knowledge with them. Why stick with a company when you know you don't have a future? (Actually, your future is likely guaranteed, but grudgingly.) And I might add that Perl is still heavily used at the BBC, several years later because &quot;see above&quot;. (And guess why &lt;a href=&quot;http://www.computerworld.com/s/article/9225079/Brain_drain_Where_Cobol_systems_go_from_here_&quot;&gt;COBOL is still so heavily used&lt;/a&gt;? See above.)&lt;/p&gt;
-
-&lt;p&gt;Note that the above isn't an analysis. It's a &quot;pie in the sky&quot; best case pipe dream that simply won't happen. You can pull this off for smaller code bases, but even then it's painful, expensive, and time-consuming. The industry is riddled with projects (and companies) that have failed because of rewrites (anyone remember Netscape?). &lt;/p&gt;
-
-&lt;p&gt;I have been at multiple companies that have decided to change programming languages, but they're generally not foolish enough to blindly rewrite their systems[1]. I worked with &lt;em&gt;two&lt;/em&gt; companies that switched to Ruby on Rails and subsequently ditched it (both for Perl), only to find that they don't have the time to replace it. So now they have legacy Rails apps that they have to maintain because they don't have the time or money to simply rewrite them. And these were &lt;em&gt;small&lt;/em&gt; compared to a million line code base.&lt;/p&gt;
-
-&lt;p&gt;So Acme has decided to spend millions of euros to switch from their current high risk/low reward position to a new higher risk/low reward position. I fail to see the cunningness here. Unfortunately, I understand what happened. At another company, the CEO panicked in a financial crisis and fired the dev team that had been working for one and a half years to develop a complicated project in part because an outsourcing company in India promised they could replicate it in two months &amp;#x2014; for a lot less money. Non-technical people often have no understanding of how hard our work is.&lt;/p&gt;
-
-&lt;p&gt;Acme's solution to their current woes clearly fits the definition of &quot;large project&quot; and we know from &lt;em&gt;decades&lt;/em&gt; of painful experience that large projects fail. They're so disastrous that &lt;a href=&quot;http://www.mckinsey.com/insights/business_technology/delivering_large-scale_it_projects_on_time_on_budget_and_on_value&quot;&gt;almost one fifth of large software projects threaten the very existence of the company&lt;/a&gt;. Would you &lt;em&gt;dare&lt;/em&gt; go to the Board of Directors and say &quot;I have a multi-million euro software project that if it succeeds, will make it easier to hire developers, but it will probably fail and has almost a 1 in 5 chance of bankrupting us?&quot; No, you wouldn't, but Acme did.&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;1. Except for an insurance company who decided to switch their accounting software from COBOL to C++. They gave their COBOL devs a two week training course in C++ and told 'em to rewrite the system. I don't need to tell you how that turned out.&lt;/small&gt;&lt;/p&gt;
-
-                        &lt;/div&gt;
-                        
-                        
-                    &lt;/div&gt;
-</description>
-<title>
-A company having trouble hiring decides to rewrite their million line application in a new language
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://apple.stackexchange.com/questions/5435/got-any-tips-or-tricks-for-terminal-in-mac-os-x
 </link>
 <description>
@@ -1240,6 +990,337 @@ unset date
 </description>
 <title>
 Tips for Terminal in Mac OS X
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+https://www.blackphone.ch/
+</link>
+<description>
+
+</description>
+<title>
+The Blackphone
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.hanselman.com/blog/LivingAHighDPIDesktopLifestyleCanBePainful.aspx
+</link>
+<description>
+
+</description>
+<title>
+Living a High-DPI desktop lifestyle can be painful on Windows
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.toptal.com/python/why-are-there-so-many-pythons
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;blog__post_text js-blog_body&quot;&gt;
+&lt;p&gt;Python is amazing.&lt;/p&gt;
+
+&lt;p&gt;Surprisingly, that&amp;#x2019;s a fairly ambiguous statement. What do I mean by &amp;#x2018;Python&amp;#x2019;? Do I mean Python the abstract &lt;em&gt;interface&lt;/em&gt;? Do I mean CPython, the common Python &lt;em&gt;implementation&lt;/em&gt; (and not to be confused with the similarly named Cython)? Or do I mean something else entirely? Maybe I&amp;#x2019;m obliquely referring to Jython, or IronPython, or PyPy. Or maybe I&amp;#x2019;ve really gone off the deep end and I&amp;#x2019;m talking about RPython or RubyPython (which are very, very different things).&lt;/p&gt;
+
+&lt;p&gt;While the technologies mentioned above are commonly-named and commonly-referenced, some of them serve completely different purposes (or, at least, operate in completely different ways).&lt;/p&gt;
+
+&lt;p&gt;Throughout my time working with Python, I&amp;#x2019;ve run across tons of these .*ython tools. But not until recently did I take the time to understand what they are, how they work, and why they&amp;#x2019;re necessary (in their own ways).&lt;/p&gt;
+
+&lt;p&gt;In this post, I&amp;#x2019;ll start from scratch and move through the various Python implementations, concluding with a thorough introduction to PyPy, which I believe is the future of the language.&lt;/p&gt;
+
+&lt;p&gt;It all starts with an understanding of what &amp;#x2018;Python&amp;#x2019; actually is.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you have a good understanding for machine code, virtual machines, and the like, feel free to &lt;a href=&quot;http://www.toptal.com/python/why-are-there-so-many-pythons#PyPy&quot;&gt;skip ahead&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;is-python-interpreted-or-compiled&quot;&gt;&amp;#x201C;Is Python interpreted or compiled?&amp;#x201D;&lt;/h2&gt;
+
+&lt;p&gt;This is a common point of confusion for Python beginners.&lt;/p&gt;
+
+&lt;p&gt;The first thing to realize is that &amp;#x2018;Python&amp;#x2019; is an &lt;em&gt;interface&lt;/em&gt;. There&amp;#x2019;s a &lt;a href=&quot;http://docs.python.org/2/reference/index.html&quot;&gt;specification&lt;/a&gt; of what Python &lt;em&gt;should&lt;/em&gt; do and how it &lt;em&gt;should&lt;/em&gt; behave (as with any interface). And there are multiple &lt;em&gt;implementations&lt;/em&gt; (as with any interface).&lt;/p&gt;
+
+&lt;p&gt;The second thing to realize is that &amp;#x2018;interpreted&amp;#x2019; and &amp;#x2018;compiled&amp;#x2019; are properties of an &lt;em&gt;implementation&lt;/em&gt;, not an &lt;em&gt;interface&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So the question itself isn&amp;#x2019;t really well-formed.&lt;/p&gt;
+
+&lt;p class=&quot;pop_out_box is-full_width is-big&quot;&gt;
+Is Python interpreted or compiled? The question isn't really well-formed.
+&lt;/p&gt;
+
+&lt;p&gt;That said, for the most common implementation (CPython: written in C, often referred to as simply &amp;#x2018;Python&amp;#x2019;, and surely what you&amp;#x2019;re using if you have no idea what I&amp;#x2019;m talking about), the answer is: &lt;strong&gt;interpreted&lt;/strong&gt;, with &lt;em&gt;some&lt;/em&gt; compilation. CPython &lt;em&gt;compiles&lt;/em&gt;* Python source code to bytecode, and then &lt;em&gt;interprets&lt;/em&gt; this bytecode, executing it as it goes.&lt;/p&gt;
+
+&lt;p&gt;* &lt;em&gt;Note: this isn&amp;#x2019;t &amp;#x2018;compilation&amp;#x2019; in the traditional sense of the word. Typically, we&amp;#x2019;d say that &amp;#x2018;compilation&amp;#x2019; is taking a high-level language and converting it to machine code. But it is a &amp;#x2018;compilation&amp;#x2019; of sorts.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#x2019;s look at that answer more closely, as it will help us understand some of the concepts that come up later in the post.&lt;/p&gt;
+
+&lt;h2 id=&quot;bytecode-vs-machine-code&quot;&gt;Bytecode vs. Machine Code&lt;/h2&gt;
+
+&lt;p&gt;It&amp;#x2019;s very important to understand the difference between bytecode and machine (or native) code, perhaps best illustrated by example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;C compiles to machine code, which is then run directly on your processor. Each instruction instructs your CPU to move stuff around.&lt;/li&gt;
+  &lt;li&gt;Java compiles to bytecode, which is then run on the Java Virtual Machine (JVM), an abstraction of a computer that executes programs. Each instruction is then handled by the JVM, which interacts with your computer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In very brief terms: &lt;strong&gt;machine code is much faster, but bytecode is more portable and secure&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Machine code looks different depending on your machine, but bytecode looks the same on all machines. One might say that machine code is &lt;em&gt;optimized&lt;/em&gt; to your setup.&lt;/p&gt;
+
+&lt;p&gt;Returning to CPython, the toolchain process is as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;CPython compiles your Python source code into bytecode.&lt;/li&gt;
+  &lt;li&gt;That bytecode is then executed on the CPython Virtual Machine.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;pop_out_box&quot;&gt;
+Beginners often assume Python is compiled because of .pyc files. There's some truth to that: the .pyc file is the compiled bytecode, which is then interpreted. So if you've run your Python code before and have the .pyc file handy, it will run faster the second time, as it doesn't have to re-compile the bytecode.
+&lt;/p&gt;
+
+&lt;h2 id=&quot;alternative-vms-jython-ironpython-and-more&quot;&gt;Alternative VMs: Jython, IronPython, and More&lt;/h2&gt;
+
+&lt;p&gt;As I mentioned earlier, Python has &lt;em&gt;several&lt;/em&gt; implementations. Again, as mentioned earlier, the most common is CPython. This a Python implementation written in C and considered the &amp;#x2018;default&amp;#x2019; implementation.&lt;/p&gt;
+
+&lt;p&gt;But what about the alternatives? One of the more prominent is &lt;a href=&quot;http://www.jython.org/archive/21/docs/whatis.html&quot;&gt;Jython&lt;/a&gt;, a Python implementation written Java that utilizes the JVM. While CPython produces bytecode to run on the CPython VM, Jython produces &lt;strong&gt;Java bytecode&lt;/strong&gt; to run on the JVM (this is the same stuff that&amp;#x2019;s produced when you compile a Java program).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/127/toptal-blog-C.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;#x201C;Why would you ever use an alternative implementation?&amp;#x201D;, you might ask. Well, for one, these &lt;strong&gt;different implementations play nicely with different technology stacks&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;CPython makes it very easy to write C-extensions for your Python code because in the end it is executed by a C interpreter. Jython, on the other hand, makes it very easy to work with other Java programs: you can import &lt;em&gt;any&lt;/em&gt; Java classes with no additional effort, summoning up and utilizing your Java classes from within your Jython programs. &lt;em&gt;(Aside: if you haven&amp;#x2019;t thought about it closely, this is actually nuts. We&amp;#x2019;re at the point where you can mix and mash different languages and compile them all down to the same substance. (As mentioned by &lt;a href=&quot;http://www.reddit.com/user/Rostin&quot;&gt;Rostin&lt;/a&gt;, programs that mix Fortran and C code have been around for a while. So, of course, this isn&amp;#x2019;t necessarily new. But it&amp;#x2019;s still cool.))&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;As an example, this is valid Jython code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Java HotSpot(TM) 64-Bit Server VM (Apple Inc.)] on java1.6.0_51
+&amp;gt;&amp;gt;&amp;gt; from java.util import HashSet
+&amp;gt;&amp;gt;&amp;gt; s = HashSet(5)
+&amp;gt;&amp;gt;&amp;gt; s.add(&quot;Foo&quot;)
+&amp;gt;&amp;gt;&amp;gt; s.add(&quot;Bar&quot;)
+&amp;gt;&amp;gt;&amp;gt; s
+[Foo, Bar]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ironpython.net&quot;&gt;IronPython&lt;/a&gt; is another popular Python implementation, written entirely in C# and targeting the .NET stack. In particular, it runs on what you might call the .NET Virtual Machine, Microsoft&amp;#x2019;s &lt;a href=&quot;http://en.wikipedia.org/wiki/Common_Language_Runtime&quot;&gt;Common Language Runtime (CLR)&lt;/a&gt;, comparable to the JVM.&lt;/p&gt;
+
+&lt;p&gt;You might say that &lt;em&gt;Jython : Java :: IronPython : C#&lt;/em&gt;. They run on the same respective VMs, you can import C# classes from your IronPython code and Java classes from your Jython code, etc.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#x2019;s totally possible to survive without ever touching a non-CPython Python implementation. But there are advantages to be had from switching, most of which are dependent on your technology stack. Using a lot of JVM-based languages? Jython might be for you. All about the .NET stack? Maybe you should try IronPython (and maybe you already have).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/128/toptal-blog-A.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;By the way: while this wouldn&amp;#x2019;t be a &lt;em&gt;reason&lt;/em&gt; to use a different implementation, note that these implementations do actually differ in behavior beyond how they treat your Python source code. However, these differences are typically minor, and dissolve or emerge over time as these implementations are under active development. For example, IronPython &lt;a href=&quot;http://ironpython.codeplex.com/wikipage?title=IPy1.0.xCPyDifferences&amp;amp;referringTitle=Home&quot;&gt;uses Unicode strings by default&lt;/a&gt;; CPython, however, &lt;a href=&quot;http://docs.python.org/2/howto/unicode.html#encodings&quot;&gt;defaults to ASCII&lt;/a&gt; for versions 2.x (failing with a UnicodeEncodeError for non-ASCII characters), but does support  &lt;a href=&quot;http://docs.python.org/3/howto/unicode.html#python-s-unicode-support&quot;&gt;Unicode strings by default for 3.x&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;PyPy&quot;&gt;Just-in-Time Compilation: PyPy, and the Future&lt;/h2&gt;
+
+&lt;p&gt;So we have a Python implementation written in C, one in Java, and one in C#. The next logical step: a Python implementation written in&amp;#x2026; Python.  (The educated reader will note that this is slightly misleading.)&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#x2019;s where things might get confusing. First, lets discuss just-in-time (JIT) compilation.&lt;/p&gt;
+
+&lt;h3 id=&quot;jit-the-why-and-how&quot;&gt;JIT: The Why and How&lt;/h3&gt;
+
+&lt;p&gt;Recall that native machine code is much faster than bytecode. &lt;em&gt;Well, what if we could compile some of our bytecode and then run it as native code?&lt;/em&gt; We&amp;#x2019;d have to pay some price to compile the bytecode (i.e., time), but if the end result was faster, that&amp;#x2019;d be great! This is the motivation of JIT compilation, a hybrid technique that mixes the benefits of interpreters and compilers. In basic terms, JIT wants to utilize compilation to speed up an interpreted system.&lt;/p&gt;
+
+&lt;p&gt;For example, a common approach taken by JITs:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Identify bytecode that is executed frequently.&lt;/li&gt;
+  &lt;li&gt;Compile it down to native machine code.&lt;/li&gt;
+  &lt;li&gt;Cache the result.&lt;/li&gt;
+  &lt;li&gt;Whenever the same bytecode is set to be run, instead grab the pre-compiled machine code and reap the benefits (i.e., speed boosts).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is what PyPy is all about: bringing JIT to Python (see the &lt;em&gt;Appendix&lt;/em&gt; for previous efforts). There are, of course, other goals: PyPy aims to be cross-platform, memory-light, and stackless-supportive. But JIT is really its selling point. As an average over a bunch of time tests, it&amp;#x2019;s said to improve performance by a factor of &lt;a href=&quot;http://speed.pypy.org&quot;&gt;6.27&lt;/a&gt;. For a breakdown, see this chart from the &lt;a href=&quot;http://speed.pypy.org&quot;&gt;PyPy Speed Center&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/85/toptal-blog-PyPy.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pypy-is-hard-to-understand&quot;&gt;PyPy is Hard to Understand&lt;/h3&gt;
+
+&lt;p&gt;PyPy has huge potential, and at this point it&amp;#x2019;s &lt;a href=&quot;http://doc.pypy.org/en/latest/faq.html#is-pypy-a-drop-in-replacement-for-cpython&quot;&gt;highly compatible&lt;/a&gt; with CPython (so &lt;a href=&quot;http://pypy.org/compat.html&quot;&gt;it can run Flask, Django&lt;/a&gt;, etc.).&lt;/p&gt;
+
+&lt;p&gt;But there&amp;#x2019;s a lot of confusion around PyPy (see, for example, this nonsensical proposal to create a &lt;a href=&quot;http://stackoverflow.com/questions/2591879/pypy-how-can-it-possibly-beat-cpython&quot;&gt;PyPyPy&amp;#x2026;&lt;/a&gt;). In my opinion, that&amp;#x2019;s primarily because PyPy is actually two things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Python interpreter written in &lt;a href=&quot;http://doc.pypy.org/en/latest/coding-guide.html#id1&quot;&gt;RPython&lt;/a&gt; (not Python (I lied before)). RPython is a subset of Python with static typing. In Python, it&amp;#x2019;s &lt;a href=&quot;http://doc.pypy.org/en/latest/faq.html#can-rpython-compile-normal-python-programs-to-c&quot;&gt;&amp;#x201C;mostly impossible&amp;#x201D;&lt;/a&gt; to reason rigorously about types (Why is it so hard? Well consider the fact that:&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt; x = random.choice([1, &quot;foo&quot;])
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;would be valid Python code (credit to &lt;a href=&quot;http://www.reddit.com/user/Ademan&quot;&gt;Ademan&lt;/a&gt;). What is the type of &lt;code&gt;x&lt;/code&gt;? How can we reason about types of variables when the types aren&amp;#x2019;t even strictly enforced?). With RPython, you sacrifice some flexibility, but instead make it much, much easier to reason about memory management and whatnot, which allows for optimizations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A compiler that compiles RPython code for various targets and adds in JIT. &lt;a href=&quot;http://doc.pypy.org/en/latest/translation.html#overview&quot;&gt;The default platform is C&lt;/a&gt;, i.e., an RPython-to-C compiler, but you could also target the JVM and others.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Solely for clarity, I&amp;#x2019;ll refer to these as PyPy (1) and PyPy (2).&lt;/p&gt;
+
+&lt;p&gt;Why would you need these two things, and why under the same roof? Think of it this way: PyPy (1) is an interpreter written in RPython. So it takes in the user&amp;#x2019;s Python code and compiles it down to bytecode. But the interpreter itself (written in RPython) must be interpreted by another Python implementation in order to run, right?&lt;/p&gt;
+
+&lt;p&gt;Well, we could just &lt;a href=&quot;http://www.stavros.io/posts/what-is-pypy/&quot;&gt;use CPython&lt;/a&gt; to run the interpreter. But that wouldn&amp;#x2019;t be very fast.&lt;/p&gt;
+
+&lt;p&gt;Instead, the idea is that we use PyPy (2) (referred to as the &lt;a href=&quot;http://doc.pypy.org/en/latest/translation.html&quot;&gt;RPython Toolchain&lt;/a&gt;) to compile PyPy&amp;#x2019;s interpreter down to code for another platform (e.g., C, JVM, or CLI) to run on our machine, adding in JIT as well. It&amp;#x2019;s magical: PyPy dynamically adds JIT to an interpreter, generating its own compiler! (&lt;em&gt;Again, this is nuts: we&amp;#x2019;re compiling an interpreter, adding in another separate, standalone compiler.&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;In the end, the result is a standalone executable that interprets Python source code and exploits JIT optimizations. Which is just what we wanted! It&amp;#x2019;s a mouthful, but maybe this diagram will help:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/129/toptal-blog-B.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;To reiterate, the real beauty of PyPy is that we could write ourselves a bunch of different Python interpreters in RPython without worrying about JIT (barring &lt;a href=&quot;http://doc.pypy.org/en/latest/jit/pyjitpl5.html#jit-hints&quot;&gt;a few hints&lt;/a&gt;). &lt;em&gt;PyPy would then implement JIT for us&lt;/em&gt; using the RPython Toolchain/PyPy (2).&lt;/p&gt;
+
+&lt;p&gt;In fact, if we get even more abstract, you could theoretically write an interpreter for &lt;em&gt;any&lt;/em&gt; language, feed it to PyPy, and get a JIT for that language. This is because PyPy focuses on optimizing the actual interpreter, rather than the details of the language it&amp;#x2019;s interpreting.&lt;/p&gt;
+
+&lt;p class=&quot;pop_out_box is-full_width is-big&quot;&gt;
+You could theoretically write an interpreter for any language, feed it to PyPy, and get a JIT for that language.
+&lt;/p&gt;
+
+&lt;p&gt;As a brief digression, I&amp;#x2019;d like to mention that the JIT itself is absolutely fascinating. It uses a technique called tracing, which executes &lt;a href=&quot;http://morepypy.blogspot.com/2009/03/applying-tracing-jit-to-interpreter.html&quot;&gt;as follows&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run the interpreter and interpret everything (adding in no JIT).&lt;/li&gt;
+  &lt;li&gt;Do some light profiling of the interpreted code.&lt;/li&gt;
+  &lt;li&gt;Identify operations you&amp;#x2019;ve performed before.&lt;/li&gt;
+  &lt;li&gt;Compile these bits of code down to machine code.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;For more, &lt;a href=&quot;https://bitbucket.org/pypy/extradoc/src/tip/talk/icooolps2009/bolz-tracing-jit-final.pdf&quot;&gt;this paper&lt;/a&gt; is highly accessible and very interesting.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To wrap up: we use PyPy&amp;#x2019;s RPython-to-C (or other target platform) compiler to compile PyPy&amp;#x2019;s RPython-implemented interpreter.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
+
+&lt;p&gt;Why is this so great? Why is this crazy idea worth pursuing? I think &lt;a href=&quot;http://pypy.org/people.html#alex-gaynor&quot;&gt;Alex Gaynor&lt;/a&gt; put it well on his &lt;a href=&quot;http://alexgaynor.net/2010/may/15/pypy-future-python/&quot;&gt;blog&lt;/a&gt;: &amp;#x201C;[PyPy is the future] because [it] offers better speed, more flexibility, and is a better platform for Python&amp;#x2019;s growth.&amp;#x201D;&lt;/p&gt;
+
+&lt;p&gt;In short:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s fast because it compiles source code to native code&lt;/strong&gt; (using JIT).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s flexible because it adds the JIT to your interpreter&lt;/strong&gt; with very little additional work.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s flexible (again) because you can write your interpreters in RPython&lt;/strong&gt;, which is easier to extend than, say, C (in fact, it&amp;#x2019;s so easy that there&amp;#x2019;s a &lt;a href=&quot;http://morepypy.blogspot.com/2011/04/tutorial-writing-interpreter-with-pypy.html&quot;&gt;tutorial for writing your own interpreters&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;appendix-other-names-you-may-have-heard&quot;&gt;Appendix: Other Names You May Have Heard&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.python.org/dev/peps/pep-3000/&quot;&gt;Python 3000 (Py3k)&lt;/a&gt;: an alternative naming for Python 3.0, a major, &lt;a href=&quot;http://www.python.org/dev/peps/pep-3000/#compatibility-and-transition&quot;&gt;backwards-incompatible&lt;/a&gt; Python release that hit the stage in &lt;a href=&quot;http://python.org/download/releases/3.0/&quot;&gt;2008&lt;/a&gt;. The Py3k team predicted that it would take about &lt;a href=&quot;http://programmers.stackexchange.com/questions/63859/why-do-people-hesitate-to-use-python-3#answer-63935&quot;&gt;five years&lt;/a&gt; for this new version to be fully adopted. And while &lt;em&gt;most&lt;/em&gt; (warning: anecdotal claim) Python developers continue to use Python 2.x, people are increasingly conscious of Py3k.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cython.org&quot;&gt;Cython&lt;/a&gt;: a superset of Python that includes bindings to call C functions.
+    &lt;ul&gt;
+      &lt;li&gt;Goal: allow you to write C extensions for your Python code.&lt;/li&gt;
+      &lt;li&gt;Also lets you add &lt;a href=&quot;http://docs.cython.org/src/quickstart/cythonize.html&quot;&gt;static typing&lt;/a&gt; to your existing Python code, allowing it to be compiled and reach C-like performance.&lt;/li&gt;
+      &lt;li&gt;This is similar to PyPy, but not the same. In this case, you&amp;#x2019;re enforcing typing in the user&amp;#x2019;s code before passing it to a compiler. With PyPy, you write plain old Python, and the compiler handles any optimizations.&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://numba.pydata.org&quot;&gt;Numba&lt;/a&gt;: a &amp;#x201C;just-in-time specializing compiler&amp;#x201D; that adds JIT to &lt;em&gt;annotated&lt;/em&gt; Python code. In the most basic terms, you give it some hints, and it speeds up portions of your code. Numba comes as part of the &lt;a href=&quot;http://docs.continuum.io/anaconda/index.html&quot;&gt;Anaconda&lt;/a&gt; distribution, a set of packages for data analysis and management.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://ipython.org/index.html&quot;&gt;IPython&lt;/a&gt;: very different from anything else discussed. A computing environment for Python. Interactive with support for GUI toolkits and browser experience, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://psyco.sourceforge.net&quot;&gt;Psyco&lt;/a&gt;: a &lt;a href=&quot;http://rayli.net/blog/2010/04/what-is-the-purpose-of-pypy/&quot;&gt;Python extension module&lt;/a&gt;, and one of the early Python JIT efforts. However, it&amp;#x2019;s since been marked as &lt;a href=&quot;http://psyco.sourceforge.net&quot;&gt;&amp;#x201C;unmaintained and dead&amp;#x201D;&lt;/a&gt;. In fact, the lead developer of Psyco, &lt;a href=&quot;http://pypy.org/people.html#armin-rigo&quot;&gt;Armin Rigo, now works on PyPy&lt;/a&gt;. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;language-bindings&quot;&gt;Language Bindings&lt;/h3&gt;
+
+
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://rubypython.rubyforge.org&quot;&gt;RubyPython&lt;/a&gt;: a bridge between the Ruby and Python VMs. Allows you to embed Python code into your Ruby code. You define where the Python starts and stops, and RubyPython marshals the data between the VMs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://pythonhosted.org/pyobjc/#release-information&quot;&gt;PyObjc&lt;/a&gt;: language-bindings between Python and Objective-C, acting as a bridge between them. Practically, that means you can utilize Objective-C libraries (including everything you need to create OS X applications) from your Python code, and Python modules from your Objective-C code. In this case, it&amp;#x2019;s convenient that CPython is written in C, which is a subset of Objective-C.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.riverbankcomputing.com/software/pyqt/intro&quot;&gt;PyQt&lt;/a&gt;: while PyObjc gives you binding for the OS X GUI components, PyQt does the same for the Qt application framework, letting you create rich graphic interfaces, access SQL databases, etc. Another tool aimed at bringing Python&amp;#x2019;s simplicity to other frameworks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;javascript-frameworks&quot;&gt;JavaScript Frameworks&lt;/h3&gt;
+
+
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://pyjs.org&quot;&gt;pyjs (Pyjamas)&lt;/a&gt;: a framework for creating web and desktop applications in Python. Includes a Python-to-JavaScript compiler, a widget set, and some more tools.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.brython.info&quot;&gt;Brython&lt;/a&gt;: a Python VM written in JavaScript to allow for Py3k code to be executed in the browser.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+<title>
+Why Are There So Many Pythons?
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://bitinfocharts.com
+</link>
+<description>
+&lt;div&gt;
+  &lt;div id=&quot;main_body&quot;&gt;
+&lt;table class=&quot;table table-striped body&quot;&gt;
+ &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/&quot;&gt;Bitcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/&quot;&gt;Litecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/&quot;&gt;Peercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/&quot;&gt;Namecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/&quot;&gt;Quarkcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/&quot;&gt;Feathercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/&quot;&gt;Novacoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/&quot;&gt;Dogecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/&quot;&gt;Terracoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/&quot;&gt;Freicoin&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;12,258,018 BTC&lt;/td&gt;&lt;td&gt;24,875,851 LTC&lt;/td&gt;&lt;td&gt;21,047,212 PPC&lt;/td&gt;&lt;td&gt;7,768,742 NMC&lt;/td&gt;&lt;td&gt;247,260,521 QRK&lt;/td&gt;&lt;td&gt;29,868,550 FTC&lt;/td&gt;&lt;td&gt;670,782 NVC&lt;/td&gt;&lt;td&gt;28,317,387,293 DOGE&lt;/td&gt;&lt;td&gt;4,940,850 TRC&lt;/td&gt;&lt;td&gt;35,809,520 FRC&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Price&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;833.50 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bitstamp/btc-usd-1m.html&quot;&gt;bitstamp: &lt;span&gt;835&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btcchina/btc-cny-1m.html&quot;&gt;btcchina: &lt;span&gt;5,100.43&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/btc-usd-1m.html&quot;&gt;btc-e: &lt;span&gt;833.5&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/mtgox/btc-usd-1m.html&quot;&gt;mtgox: &lt;span&gt;947.39&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bitfinex/btc-usd-1m.html&quot;&gt;bitfinex: &lt;span&gt;835&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;24.59 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-usd-1m.html&quot;&gt;btc-e: &lt;span&gt;24.59&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.0293&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ltc-cny-1m.html&quot;&gt;bter: &lt;span&gt;151.8&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ltc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0292&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-rur-1m.html&quot;&gt;btc-e: &lt;span&gt;865.3&lt;/span&gt; &lt;small&gt;RUR&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;5.95 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ppc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00713&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ppc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00708&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/ppc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00711&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ppc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.00717&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ppc-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.243&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;6.29 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/nmc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00753&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/nmc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00743&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/kraken/nmc-eur-1m.html&quot;&gt;kraken: &lt;span&gt;4.58&lt;/span&gt; &lt;small&gt;EUR&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/nmc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00745&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/nmc-cny-1m.html&quot;&gt;bter: &lt;span&gt;36.7&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.06671 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/qrk-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0000799&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/qrk-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.44&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/qrk-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.0000843&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/qrk-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00278&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/qrk-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.0000807&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.3424 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ftc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00041&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ftc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000398&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ftc-cny-1m.html&quot;&gt;bter: &lt;span&gt;2.1&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ftc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.0004&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/ftc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.000405&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;14.99 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/nvc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.018&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/nvc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0175&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/nvc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.0181&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/nvc-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.0213&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.00035905 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/doge-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00000043&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/doge-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.00218&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/doge-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0000146&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/doge-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.00000043&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/doge-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.00000044&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.4927 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/trc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00059&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/trc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000564&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/trc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.000577&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/trc-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.000578&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.06181 USD&lt;/span&gt; &lt;/span&gt;
+ &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/frc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000074&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.348&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.000077&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/frc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00008&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-ltc-1m.html&quot;&gt;bter: &lt;span&gt;0.00184&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Market Capitalization&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-btc.html&quot;&gt;$10,217,008,613 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ltc.html&quot;&gt;$611,644,944 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ppc.html&quot;&gt;$125,305,627 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-nmc.html&quot;&gt;$48,846,356 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-qrk.html&quot;&gt;$16,494,292 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ftc.html&quot;&gt;$10,225,498 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-nvc.html&quot;&gt;$10,053,845 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-doge.html&quot;&gt;$10,167,358 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-trc.html&quot;&gt;$2,434,110 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-frc.html&quot;&gt;$2,213,268 USD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Transactions last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-btc.html&quot;&gt;57,367&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ltc.html&quot;&gt;9,350&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ppc.html&quot;&gt;723&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nmc.html&quot;&gt;1,168&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-qrk.html&quot;&gt;3,744&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ftc.html&quot;&gt;2,778&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nvc.html&quot;&gt;346&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-doge.html&quot;&gt;101,722&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-trc.html&quot;&gt;820&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-frc.html&quot;&gt;1,841&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Transactions avg. per hour&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-btc.html&quot;&gt;2,390&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ltc.html&quot;&gt;390&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ppc.html&quot;&gt;30&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nmc.html&quot;&gt;49&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-qrk.html&quot;&gt;156&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ftc.html&quot;&gt;116&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nvc.html&quot;&gt;14&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-doge.html&quot;&gt;4,238&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-trc.html&quot;&gt;34&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-frc.html&quot;&gt;77&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Sent last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-btc.html&quot;&gt;632,648 BTC &lt;br&gt;($527,309,608 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ltc.html&quot;&gt;6,226,159 LTC &lt;br&gt;($153,088,178 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ppc.html&quot;&gt;602,965 PPC &lt;br&gt;($3,589,783 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-nmc.html&quot;&gt;46,772 NMC &lt;br&gt;($294,080 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-qrk.html&quot;&gt;184,203,425 QRK &lt;br&gt;($12,287,870 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ftc.html&quot;&gt;1,133,502 FTC &lt;br&gt;($388,054 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-nvc.html&quot;&gt;12,419 NVC &lt;br&gt;($186,134 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-doge.html&quot;&gt;37,127,801,322 DOGE &lt;br&gt;($13,330,737 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-trc.html&quot;&gt;40,074 TRC &lt;br&gt;($19,742 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-frc.html&quot;&gt;366,284 FRC &lt;br&gt;($22,639 USD)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Sent avg. per hour&lt;/td&gt;&lt;td&gt;26,360 BTC &lt;br&gt;($21,971,234 USD)&lt;/td&gt;&lt;td&gt;259,423 LTC &lt;br&gt;($6,378,674 USD)&lt;/td&gt;&lt;td&gt;25,124 PPC &lt;br&gt;($149,574 USD)&lt;/td&gt;&lt;td&gt;1,949 NMC &lt;br&gt;($12,253 USD)&lt;/td&gt;&lt;td&gt;7,675,143 QRK &lt;br&gt;($511,995 USD)&lt;/td&gt;&lt;td&gt;47,229 FTC &lt;br&gt;($16,169 USD)&lt;/td&gt;&lt;td&gt;517.44 NVC &lt;br&gt;($7,756 USD)&lt;/td&gt;&lt;td&gt;1,546,991,722 DOGE &lt;br&gt;($555,447 USD)&lt;/td&gt;&lt;td&gt;1,670 TRC &lt;br&gt;($822.60 USD)&lt;/td&gt;&lt;td&gt;15,262 FRC &lt;br&gt;($943.28 USD)&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Avg. transaction value&lt;/td&gt;&lt;td&gt;11.03 BTC &lt;br&gt;($9,192 USD)&lt;/td&gt;&lt;td&gt;665.90 LTC &lt;br&gt;($16,373 USD)&lt;/td&gt;&lt;td&gt;833.98 PPC &lt;br&gt;($4,965 USD)&lt;/td&gt;&lt;td&gt;40.04 NMC &lt;br&gt;($251.78 USD)&lt;/td&gt;&lt;td&gt;49,200 QRK &lt;br&gt;($3,282 USD)&lt;/td&gt;&lt;td&gt;408.03 FTC &lt;br&gt;($139.69 USD)&lt;/td&gt;&lt;td&gt;35.89 NVC &lt;br&gt;($537.96 USD)&lt;/td&gt;&lt;td&gt;364,993 DOGE &lt;br&gt;($131.05 USD)&lt;/td&gt;&lt;td&gt;48.87 TRC &lt;br&gt;($24.08 USD)&lt;/td&gt;&lt;td&gt;198.96 FRC &lt;br&gt;($12.30 USD)&lt;/td&gt;&lt;/tr&gt; 
+ &lt;tr&gt;&lt;td&gt;Confirmation Time&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-btc.html&quot;&gt;14.28 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ltc.html&quot;&gt;0.8759 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ppc.html&quot;&gt;9.91 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-nmc.html&quot;&gt;10.05 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-qrk.html&quot;&gt;0.4056 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ftc.html&quot;&gt;1.52 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-nvc.html&quot;&gt;14.29 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-doge.html&quot;&gt;0.9593 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-trc.html&quot;&gt;4.27 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-frc.html&quot;&gt;21.15 minutes&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Blocks Count &lt;/td&gt;&lt;td&gt;280,563&lt;/td&gt;&lt;td&gt;497,529&lt;/td&gt;&lt;td&gt;91,288&lt;/td&gt;&lt;td&gt;157,081&lt;/td&gt;&lt;td&gt;549,401&lt;/td&gt;&lt;td&gt;149,563&lt;/td&gt;&lt;td&gt;68,337&lt;/td&gt;&lt;td&gt;56,930&lt;/td&gt;&lt;td&gt;247,040&lt;/td&gt;&lt;td&gt;49,438&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Blocks last 24h&lt;/td&gt;&lt;td&gt;153&lt;/td&gt;&lt;td&gt;546&lt;/td&gt;&lt;td&gt;193&lt;/td&gt;&lt;td&gt;183&lt;/td&gt;&lt;td&gt;2,985&lt;/td&gt;&lt;td&gt;597&lt;/td&gt;&lt;td&gt;205&lt;/td&gt;&lt;td&gt;1,481&lt;/td&gt;&lt;td&gt;454&lt;/td&gt;&lt;td&gt;206&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Blocks avg. per hour&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;124&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Reward Per Block&lt;/td&gt;&lt;td&gt;25  BTC &lt;br&gt;($20,837 USD)&lt;/td&gt;&lt;td&gt;50  LTC &lt;br&gt;($1,229 USD)&lt;/td&gt;&lt;td&gt;114  PPC &lt;br&gt;($678.70 USD)&lt;/td&gt;&lt;td&gt;50  NMC &lt;br&gt;($314.38 USD)&lt;/td&gt;&lt;td&gt;4  QRK &lt;br&gt;($0.2668 USD)&lt;/td&gt;&lt;td&gt;200  FTC &lt;br&gt;($68.47 USD)&lt;/td&gt;&lt;td&gt;9.04  NVC &lt;br&gt;($135.49 USD)&lt;/td&gt;&lt;td&gt;267,844  DOGE &lt;br&gt;($96.17 USD)&lt;/td&gt;&lt;td&gt;20  TRC &lt;br&gt;($9.85 USD)&lt;/td&gt;&lt;td&gt;701.54  FRC &lt;br&gt;($43.36 USD)&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Orphaned Blocks last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-btc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ltc.html&quot;&gt;1 (0.18%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ppc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-nmc.html&quot;&gt;1 (0.55%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-qrk.html&quot;&gt;2 (0.07%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ftc.html&quot;&gt;1 (0.17%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-nvc.html&quot;&gt;2 (0.98%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-doge.html&quot;&gt;34 (2.3%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-trc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-frc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; 
+ &lt;tr&gt;&lt;td&gt;Difficulty&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-btc.html&quot;&gt;1,789,546,951&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ltc.html&quot;&gt;3,891&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ppc.html&quot;&gt;59,175,162&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-nmc.html&quot;&gt;1,171,003,847&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-qrk.html&quot;&gt;2,767&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ftc.html&quot;&gt;220.94&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-nvc.html&quot;&gt;440.58&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-doge.html&quot;&gt;423.46&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-trc.html&quot;&gt;956,016&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-frc.html&quot;&gt;1,268,750&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Network Hashrate&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-btc.html&quot;&gt;10.946 Phash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ltc.html&quot;&gt;111.735 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ppc.html&quot;&gt;53.616 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-nmc.html&quot;&gt;9.63 Phash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-qrk.html&quot;&gt;1.589 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ftc.html&quot;&gt;6.356 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-nvc.html&quot;&gt;962.557 Mhash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-doge.html&quot;&gt;28.07 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-trc.html&quot;&gt;11.524 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-frc.html&quot;&gt;15.656 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Top 100 Richest Addresses&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-bitcoin-addresses.html&quot;&gt;0 BTC &lt;br&gt;($0 USD) &lt;br&gt;0% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-litecoin-addresses.html&quot;&gt;11,384,486 LTC &lt;br&gt;($279,920,600 USD) &lt;br&gt;45.77% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-ppcoin-addresses.html&quot;&gt;12,798,441 PPC &lt;br&gt;($76,196,160 USD) &lt;br&gt;60.81% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-namecoin-addresses.html&quot;&gt;4,283,655 NMC &lt;br&gt;($26,933,692 USD) &lt;br&gt;55.14% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-quarkcoin-addresses.html&quot;&gt;153,921,862 QRK &lt;br&gt;($10,267,843 USD) &lt;br&gt;62.25% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-feathercoin-addresses.html&quot;&gt;16,503,255 FTC &lt;br&gt;($5,649,889 USD) &lt;br&gt;55.25% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-novacoin-addresses.html&quot;&gt;492,990 NVC &lt;br&gt;($7,389,058 USD) &lt;br&gt;73.49% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-dogecoin-addresses.html&quot;&gt;10,938,931,624 DOGE &lt;br&gt;($3,927,623 USD) &lt;br&gt;38.63% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-terracoin-addresses.html&quot;&gt;3,009,185 TRC &lt;br&gt;($1,482,475 USD) &lt;br&gt;60.90% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-freicoin-addresses.html&quot;&gt;25,211,000 FRC &lt;br&gt;($1,558,209 USD) &lt;br&gt;70.40% Total&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; 
+ &lt;tr&gt;&lt;td&gt;Addresses richer than&lt;br&gt;1/100/1,000/10,000 USD&lt;/td&gt;&lt;td&gt;0 / 0 / 0 / 0&lt;/td&gt;&lt;td&gt;213,914 / 99,965 / 31,089 / 4,600&lt;/td&gt;&lt;td&gt;12,389 / 6,278 / 2,858 / 966&lt;/td&gt;&lt;td&gt;42,084 / 17,516 / 2,623 / 474&lt;/td&gt;&lt;td&gt;36,372 / 6,394 / 1,151 / 198&lt;/td&gt;&lt;td&gt;36,310 / 6,096 / 970 / 124&lt;/td&gt;&lt;td&gt;6,351 / 1,912 / 772 / 145&lt;/td&gt;&lt;td&gt;96,079 / 12,263 / 870 / 49&lt;/td&gt;&lt;td&gt;12,898 / 1,568 / 302 / 25&lt;/td&gt;&lt;td&gt;7,836 / 592 / 233 / 103&lt;/td&gt;&lt;/tr&gt;  
+ &lt;tr&gt;&lt;td&gt;100 Largest Transactions&lt;/td&gt;&lt;td&gt;last 24h: 222,470 BTC ($185,427,838 USD)&lt;br&gt;35.16% Total&lt;/td&gt;&lt;td&gt;last 24h: 2,190,997 LTC ($53,872,007 USD)&lt;br&gt;35.19% Total&lt;/td&gt;&lt;td&gt;last 24h: 536,279 PPC ($3,192,761 USD)&lt;br&gt;88.94% Total&lt;/td&gt;&lt;td&gt;last 24h: 42,731 NMC ($268,673 USD)&lt;br&gt;91.36% Total&lt;/td&gt;&lt;td&gt;last 24h: 36,888,740 QRK ($2,460,780 USD)&lt;br&gt;20.03% Total&lt;/td&gt;&lt;td&gt;last 24h: 762,311 FTC ($260,977 USD)&lt;br&gt;67.25% Total&lt;/td&gt;&lt;td&gt;last 24h: 7,982 NVC ($119,641 USD)&lt;br&gt;64.28% Total&lt;/td&gt;&lt;td&gt;last 24h: 1,099,593,839 DOGE ($394,809 USD)&lt;br&gt;2.96% Total&lt;/td&gt;&lt;td&gt;last 24h: 28,254 TRC ($13,919 USD)&lt;br&gt;70.50% Total&lt;/td&gt;&lt;td&gt;last 24h: 141,815 FRC ($8,765 USD)&lt;br&gt;38.72% Total&lt;/td&gt;&lt;/tr&gt;  
+  &lt;tr&gt;&lt;td&gt;First Block &lt;/td&gt;&lt;td&gt;2009-01-03&lt;/td&gt;&lt;td&gt;2011-10-07&lt;/td&gt;&lt;td&gt;2012-08-16&lt;/td&gt;&lt;td&gt;2011-04-17&lt;/td&gt;&lt;td&gt;2013-07-21&lt;/td&gt;&lt;td&gt;2011-10-07&lt;/td&gt;&lt;td&gt;2013-02-05&lt;/td&gt;&lt;td&gt;2013-12-06&lt;/td&gt;&lt;td&gt;2012-10-26&lt;/td&gt;&lt;td&gt;2012-12-21&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Nodes all/active &lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/nodes/&quot;&gt;86114&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/bitcoin/nodes-active/&quot;&gt;9203&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/nodes/&quot;&gt;58032&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/litecoin/nodes-active/&quot;&gt;5604&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/nodes/&quot;&gt;2609&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/ppcoin/nodes-active/&quot;&gt;308&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/nodes/&quot;&gt;1940&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/namecoin/nodes-active/&quot;&gt;411&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/nodes/&quot;&gt;3875&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/quarkcoin/nodes-active/&quot;&gt;152&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/nodes/&quot;&gt;7303&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/feathercoin/nodes-active/&quot;&gt;496&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/nodes/&quot;&gt;1308&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/novacoin/nodes-active/&quot;&gt;108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/nodes/&quot;&gt;35883&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/dogecoin/nodes-active/&quot;&gt;4223&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/nodes/&quot;&gt;808&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/terracoin/nodes-active/&quot;&gt;149&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/nodes/&quot;&gt;428&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/freicoin/nodes-active/&quot;&gt;68&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;  
+  &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/&quot;&gt;Bitcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/&quot;&gt;Litecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/&quot;&gt;Peercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/&quot;&gt;Namecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/&quot;&gt;Quarkcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/&quot;&gt;Feathercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/&quot;&gt;Novacoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/&quot;&gt;Dogecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/&quot;&gt;Terracoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/&quot;&gt;Freicoin&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;small&gt;2014-01-15 06:19:50 UTC&lt;/small&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;/div&gt;
+</description>
+<title>
+Dogecoin now accounts for more transactions than any other cryptocurrency
 </title>
 </item>
 </channel>
