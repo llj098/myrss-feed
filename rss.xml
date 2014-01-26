@@ -18,1259 +18,6 @@ myread
 unknown
 </author>
 <link>
-http://apple.stackexchange.com/questions/5435/got-any-tips-or-tricks-for-terminal-in-mac-os-x
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-            &lt;p&gt;Make files invisible:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;SetFile file -a V&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;SetFile can change a lot of other file attributes and metadata, as well.&lt;/p&gt;
-
-&lt;p&gt;SetFile is not a OS X native command it comes bundled with DevTools/Xcode.&lt;/p&gt;
-
-&lt;p&gt;If you don't have Xcode and don't want to download about 6 GB, you can use&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo chflags hidden|show &amp;lt;file/folder&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;chflags is a BSD command and it also has a Man Page just enter this in Terminal&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;man chflags
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;for those who don't like to enter commands self and just would like to know what there stands in the man. Here you have:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;CHFLAGS(1)        BSD General Commands Manual           CHFLAGS(1)
-
-NAME
-     chflags -- change file flags
-
-SYNOPSIS
-     chflags [-fhv] [-R [-H | -L | -P]] flags file ...
-
-DESCRIPTION
-     The chflags utility modifies the file flags of the listed files as speci-
-     fied by the flags operand.
-
-     The options are as follows:
-
-     -f      Do not display a diagnostic message if chflags could not modify
-         the flags for file, nor modify the exit status to reflect such
-         failures.
-
-     -H      If the -R option is specified, symbolic links on the command line
-         are followed.  (Symbolic links encountered in the tree traversal
-         are not followed.)
-
-     -h      If the file is a symbolic link, change the file flags of the link
-         itself rather than the file to which it points.
-
-     -L      If the -R option is specified, all symbolic links are followed.
-
-     -P      If the -R option is specified, no symbolic links are followed.
-         This is the default.
-
-     -R      Change the file flags for the file hierarchies rooted in the
-         files instead of just the files themselves.
-
-     -v      Cause chflags to be verbose, showing filenames as the flags are
-         modified.  If the -v option is specified more than once, the old
-         and new flags of the file will also be printed, in octal nota-
-         tion.
-
-     The flags are specified as an octal number or a comma separated list of
-     keywords.  The following keywords are currently defined:
-
-       arch, archived
-           set the archived flag (super-user only)
-
-       opaque  set the opaque flag (owner or super-user only).  [Directory
-           is opaque when viewed through a union mount]
-
-       nodump  set the nodump flag (owner or super-user only)
-
-       sappnd, sappend
-           set the system append-only flag (super-user only)
-
-       schg, schange, simmutable
-           set the system immutable flag (super-user only)
-
-       uappnd, uappend
-           set the user append-only flag (owner or super-user only)
-
-       uchg, uchange, uimmutable
-           set the user immutable flag (owner or super-user only)
-
-       hidden  set the hidden flag [Hide item from GUI]
-
-     As discussed in chflags(2), the sappnd and schg flags may only be unset
-     when the system is in single-user mode.
-
-     Putting the letters ``no'' before or removing the letters ``no'' from a
-     keyword causes the flag to be cleared.  For example:
-
-       nouchg  clear the user immutable flag (owner or super-user only)
-       dump    clear the nodump flag (owner or super-user only)
-
-     Unless the -H or -L options are given, chflags on a symbolic link always
-     succeeds and has no effect.  The -H, -L and -P options are ignored unless
-     the -R option is specified.  In addition, these options override each
-     other and the command's actions are determined by the last one specified.
-
-     You can use &quot;ls -lO&quot; to see the flags of existing files.
-
-EXIT STATUS
-     The chflags utility exits 0 on success, and &amp;gt;0 if an error occurs.
-
-SEE ALSO
-     ls(1), chflags(2), stat(2), fts(3), symlink(7)
-
-HISTORY
-     The chflags command first appeared in 4.4BSD.
-
-BUGS
-     Only a limited number of utilities are chflags aware.  Some of these
-     tools include ls(1), cp(1), find(1), install(1), dump(8), and restore(8).
-     In particular a tool which is not currently chflags aware is the pax(1)
-     utility.
-
-BSD              March 3, 2006                 BSD
-&lt;/code&gt;&lt;/pre&gt;
-
-    &lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;None of these are exactly OSX specific, but here's some stuff from my .bash_profile that I find useful:&lt;/p&gt;
-
-&lt;p&gt;Colored Prompt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;PS1=&quot;\[\e[0;31m\][\[\e[1;31m\]\u\[\e[0;34m\]@\h \[\e[32m\]\w\[\e[0;31m]\]\$\[\e[0m\] &quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/c2c7cdff8e49dd764d326620df762665.png&quot; alt=&quot;example&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;SSH tab completion of hosts that exist in ~/.ssh/config:  (found on &lt;a href=&quot;http://www.macosxhints.com/article.php?story=20100113142633883&quot; rel=&quot;nofollow&quot;&gt;MacOSXHints&lt;/a&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;complete -o default -o nospace -W &quot;$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' &amp;lt; $HOME/.ssh/config)&quot; scp sftp ssh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Highlighted grep:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias grep=&quot;grep --color=auto&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://grab.by/grabs/dd26dd993c74f8dd076e2f911a8e4ec6.png&quot; alt=&quot;highlighted grep&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Automagically dump your public ssh key to a host for future passwordless auth: (can probably easily tweaked to add said host to ~/.ssh/config)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh-setup() { cat ~/.ssh/id_rsa.pub | ssh $1 'cat - &amp;gt;&amp;gt; ~/.ssh/authorized_keys'; }
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;p&gt;More OSX specific stuff that I've setup forces the machine to take a picture with the built-in iSight every time the machine's lid is open and dumps that image in a directory.&lt;br&gt;
-Requirements:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.bernhard-baehr.de/&quot; rel=&quot;nofollow&quot;&gt;SleepWatcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.intergalactic.de/pages/iSight.html&quot; rel=&quot;nofollow&quot;&gt;iSightCapture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Create a directory somewhere to hold all your images.
-Dump this into ~/.wakeup:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;date=$(date +%y%m%d_%H_%M_%S).jpg;
-/PATH/TO/isightcapture -w 640 -h 480 -n 3 -d -t jpg /PATH/TO/PICTURE/DUMP/$date &amp;gt; /dev/null
-unset date
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I've been capping a frame every time my MacBook wakes up for the past 3 1/2 years now, it's interesting to see everything compiled into a long video at a high framerate.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;Ok, definitely not mac specific, but TAB completion in &lt;code&gt;zsh&lt;/code&gt;  is so good I  think it deserves a specific mention.&lt;/p&gt;
-
-&lt;p&gt;You get completion of options, e.g. &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;find . -d[TAB]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will give you &lt;code&gt;-daystart&lt;/code&gt;  &lt;code&gt;-delete&lt;/code&gt; &lt;code&gt;-depth&lt;/code&gt; as possible completions.&lt;/p&gt;
-
-&lt;p&gt;Also path completion is improved over Bash completion, for example, I have a Volume called Wubly, and inside that &lt;code&gt;video/tv/comedy&lt;/code&gt;, so typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /v/w/v/t/co[TAB] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;will expand to.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd /Volumes/Wubly/Video/TV/Comedy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(note that it's also case insensitive.)&lt;/p&gt;
-
-&lt;p&gt;If there are multiple paths that match this pattern, they will be shown.&lt;/p&gt;
-
-&lt;p&gt;Completion is also interactive, so you can move around the available choices with the cursor controls.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;&lt;p&gt;&lt;strong&gt;Send Audio to a Apple Tv/Airplay device via the  /usr/bin/say command&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a &quot;AirPlay&quot; &quot;hello world&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-r160&lt;/strong&gt; is  Speech rate to be used, in words per minute&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;-a&lt;/strong&gt;  followed by device &lt;em&gt;name&lt;/em&gt; or &lt;em&gt;number&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then your text.&lt;/p&gt;
-
-&lt;p&gt;To list your available audio device&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -a?
-   39 AirPlay
-   47 Built-in Output
-  209 Soundflower (2ch)
-   74 Soundflower (64ch)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using the numbers will work just as well in place of the device name.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/bin/say -r160 -a 39 &quot;Hover over a Method&quot;;say -r160 -a &quot;Built-in Output&quot; &quot;I am back&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also use the -f option to use a text file as your speech text.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say -f ~/Music/foo.txt -r160 -a 39 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you will notice say can expand tilde file paths&lt;/p&gt;
-
-
-
-&lt;p&gt;With say you can do a lot more like save speech text directly to audio file.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; /usr/bin/say  -o ~/Music/hi.aac Hello, World.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;-o&lt;/strong&gt; oupt file path.  i.e  ~/Music/hi &lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.aac&lt;/strong&gt;  file format&lt;/p&gt;
-
-&lt;p&gt;This saves a &lt;strong&gt;.acc&lt;/strong&gt; file named hi.aac to the Music Directory.&lt;/p&gt;
-
-&lt;p&gt;Directory paths MUST exist before the command is run. The file does not need to exist first in the directory and if it does it will most likely be overwritten.&lt;/p&gt;
-
-&lt;p&gt;There are other formats you can use.&lt;/p&gt;
-
-&lt;p&gt;The man page &lt;a href=&quot;https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/say.1.html&quot; rel=&quot;nofollow&quot;&gt;say&lt;/a&gt; will show you the full list of the options.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-
-        &lt;p&gt;One tip or trick per answer.&lt;/p&gt;
-
-&lt;p&gt;My favorite is &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Opens the folder you're currently browsing in Finder. You can also pass URLs, images, documents or else to &lt;code&gt;open&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you specify a program name with -a you can pass the URL, image, document or folder to that program instead, e.g. &lt;code&gt;open -a Preview image.png&lt;/code&gt;, overriding the default program set for the filetype.&lt;/p&gt;
-
-&lt;p&gt;Please don't post duplicates. Search in the question like this: &lt;code&gt;inquestion:this ls -l&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Mac OS X specific&lt;/strong&gt; answers only.&lt;/p&gt;
-
-    &lt;/div&gt;
-    
-    &lt;/div&gt;
-</description>
-<title>
-Tips for Terminal in Mac OS X
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-https://www.blackphone.ch/
-</link>
-<description>
-
-</description>
-<title>
-The Blackphone
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.hanselman.com/blog/LivingAHighDPIDesktopLifestyleCanBePainful.aspx
-</link>
-<description>
-
-</description>
-<title>
-Living a High-DPI desktop lifestyle can be painful on Windows
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.toptal.com/python/why-are-there-so-many-pythons
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;blog__post_text js-blog_body&quot;&gt;
-&lt;p&gt;Python is amazing.&lt;/p&gt;
-
-&lt;p&gt;Surprisingly, that&amp;#x2019;s a fairly ambiguous statement. What do I mean by &amp;#x2018;Python&amp;#x2019;? Do I mean Python the abstract &lt;em&gt;interface&lt;/em&gt;? Do I mean CPython, the common Python &lt;em&gt;implementation&lt;/em&gt; (and not to be confused with the similarly named Cython)? Or do I mean something else entirely? Maybe I&amp;#x2019;m obliquely referring to Jython, or IronPython, or PyPy. Or maybe I&amp;#x2019;ve really gone off the deep end and I&amp;#x2019;m talking about RPython or RubyPython (which are very, very different things).&lt;/p&gt;
-
-&lt;p&gt;While the technologies mentioned above are commonly-named and commonly-referenced, some of them serve completely different purposes (or, at least, operate in completely different ways).&lt;/p&gt;
-
-&lt;p&gt;Throughout my time working with Python, I&amp;#x2019;ve run across tons of these .*ython tools. But not until recently did I take the time to understand what they are, how they work, and why they&amp;#x2019;re necessary (in their own ways).&lt;/p&gt;
-
-&lt;p&gt;In this post, I&amp;#x2019;ll start from scratch and move through the various Python implementations, concluding with a thorough introduction to PyPy, which I believe is the future of the language.&lt;/p&gt;
-
-&lt;p&gt;It all starts with an understanding of what &amp;#x2018;Python&amp;#x2019; actually is.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;If you have a good understanding for machine code, virtual machines, and the like, feel free to &lt;a href=&quot;http://www.toptal.com/python/why-are-there-so-many-pythons#PyPy&quot;&gt;skip ahead&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;is-python-interpreted-or-compiled&quot;&gt;&amp;#x201C;Is Python interpreted or compiled?&amp;#x201D;&lt;/h2&gt;
-
-&lt;p&gt;This is a common point of confusion for Python beginners.&lt;/p&gt;
-
-&lt;p&gt;The first thing to realize is that &amp;#x2018;Python&amp;#x2019; is an &lt;em&gt;interface&lt;/em&gt;. There&amp;#x2019;s a &lt;a href=&quot;http://docs.python.org/2/reference/index.html&quot;&gt;specification&lt;/a&gt; of what Python &lt;em&gt;should&lt;/em&gt; do and how it &lt;em&gt;should&lt;/em&gt; behave (as with any interface). And there are multiple &lt;em&gt;implementations&lt;/em&gt; (as with any interface).&lt;/p&gt;
-
-&lt;p&gt;The second thing to realize is that &amp;#x2018;interpreted&amp;#x2019; and &amp;#x2018;compiled&amp;#x2019; are properties of an &lt;em&gt;implementation&lt;/em&gt;, not an &lt;em&gt;interface&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;So the question itself isn&amp;#x2019;t really well-formed.&lt;/p&gt;
-
-&lt;p class=&quot;pop_out_box is-full_width is-big&quot;&gt;
-Is Python interpreted or compiled? The question isn't really well-formed.
-&lt;/p&gt;
-
-&lt;p&gt;That said, for the most common implementation (CPython: written in C, often referred to as simply &amp;#x2018;Python&amp;#x2019;, and surely what you&amp;#x2019;re using if you have no idea what I&amp;#x2019;m talking about), the answer is: &lt;strong&gt;interpreted&lt;/strong&gt;, with &lt;em&gt;some&lt;/em&gt; compilation. CPython &lt;em&gt;compiles&lt;/em&gt;* Python source code to bytecode, and then &lt;em&gt;interprets&lt;/em&gt; this bytecode, executing it as it goes.&lt;/p&gt;
-
-&lt;p&gt;* &lt;em&gt;Note: this isn&amp;#x2019;t &amp;#x2018;compilation&amp;#x2019; in the traditional sense of the word. Typically, we&amp;#x2019;d say that &amp;#x2018;compilation&amp;#x2019; is taking a high-level language and converting it to machine code. But it is a &amp;#x2018;compilation&amp;#x2019; of sorts.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#x2019;s look at that answer more closely, as it will help us understand some of the concepts that come up later in the post.&lt;/p&gt;
-
-&lt;h2 id=&quot;bytecode-vs-machine-code&quot;&gt;Bytecode vs. Machine Code&lt;/h2&gt;
-
-&lt;p&gt;It&amp;#x2019;s very important to understand the difference between bytecode and machine (or native) code, perhaps best illustrated by example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;C compiles to machine code, which is then run directly on your processor. Each instruction instructs your CPU to move stuff around.&lt;/li&gt;
-  &lt;li&gt;Java compiles to bytecode, which is then run on the Java Virtual Machine (JVM), an abstraction of a computer that executes programs. Each instruction is then handled by the JVM, which interacts with your computer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In very brief terms: &lt;strong&gt;machine code is much faster, but bytecode is more portable and secure&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Machine code looks different depending on your machine, but bytecode looks the same on all machines. One might say that machine code is &lt;em&gt;optimized&lt;/em&gt; to your setup.&lt;/p&gt;
-
-&lt;p&gt;Returning to CPython, the toolchain process is as follows:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;CPython compiles your Python source code into bytecode.&lt;/li&gt;
-  &lt;li&gt;That bytecode is then executed on the CPython Virtual Machine.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p class=&quot;pop_out_box&quot;&gt;
-Beginners often assume Python is compiled because of .pyc files. There's some truth to that: the .pyc file is the compiled bytecode, which is then interpreted. So if you've run your Python code before and have the .pyc file handy, it will run faster the second time, as it doesn't have to re-compile the bytecode.
-&lt;/p&gt;
-
-&lt;h2 id=&quot;alternative-vms-jython-ironpython-and-more&quot;&gt;Alternative VMs: Jython, IronPython, and More&lt;/h2&gt;
-
-&lt;p&gt;As I mentioned earlier, Python has &lt;em&gt;several&lt;/em&gt; implementations. Again, as mentioned earlier, the most common is CPython. This a Python implementation written in C and considered the &amp;#x2018;default&amp;#x2019; implementation.&lt;/p&gt;
-
-&lt;p&gt;But what about the alternatives? One of the more prominent is &lt;a href=&quot;http://www.jython.org/archive/21/docs/whatis.html&quot;&gt;Jython&lt;/a&gt;, a Python implementation written Java that utilizes the JVM. While CPython produces bytecode to run on the CPython VM, Jython produces &lt;strong&gt;Java bytecode&lt;/strong&gt; to run on the JVM (this is the same stuff that&amp;#x2019;s produced when you compile a Java program).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/127/toptal-blog-C.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;#x201C;Why would you ever use an alternative implementation?&amp;#x201D;, you might ask. Well, for one, these &lt;strong&gt;different implementations play nicely with different technology stacks&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;CPython makes it very easy to write C-extensions for your Python code because in the end it is executed by a C interpreter. Jython, on the other hand, makes it very easy to work with other Java programs: you can import &lt;em&gt;any&lt;/em&gt; Java classes with no additional effort, summoning up and utilizing your Java classes from within your Jython programs. &lt;em&gt;(Aside: if you haven&amp;#x2019;t thought about it closely, this is actually nuts. We&amp;#x2019;re at the point where you can mix and mash different languages and compile them all down to the same substance. (As mentioned by &lt;a href=&quot;http://www.reddit.com/user/Rostin&quot;&gt;Rostin&lt;/a&gt;, programs that mix Fortran and C code have been around for a while. So, of course, this isn&amp;#x2019;t necessarily new. But it&amp;#x2019;s still cool.))&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;As an example, this is valid Jython code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[Java HotSpot(TM) 64-Bit Server VM (Apple Inc.)] on java1.6.0_51
-&amp;gt;&amp;gt;&amp;gt; from java.util import HashSet
-&amp;gt;&amp;gt;&amp;gt; s = HashSet(5)
-&amp;gt;&amp;gt;&amp;gt; s.add(&quot;Foo&quot;)
-&amp;gt;&amp;gt;&amp;gt; s.add(&quot;Bar&quot;)
-&amp;gt;&amp;gt;&amp;gt; s
-[Foo, Bar]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ironpython.net&quot;&gt;IronPython&lt;/a&gt; is another popular Python implementation, written entirely in C# and targeting the .NET stack. In particular, it runs on what you might call the .NET Virtual Machine, Microsoft&amp;#x2019;s &lt;a href=&quot;http://en.wikipedia.org/wiki/Common_Language_Runtime&quot;&gt;Common Language Runtime (CLR)&lt;/a&gt;, comparable to the JVM.&lt;/p&gt;
-
-&lt;p&gt;You might say that &lt;em&gt;Jython : Java :: IronPython : C#&lt;/em&gt;. They run on the same respective VMs, you can import C# classes from your IronPython code and Java classes from your Jython code, etc.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#x2019;s totally possible to survive without ever touching a non-CPython Python implementation. But there are advantages to be had from switching, most of which are dependent on your technology stack. Using a lot of JVM-based languages? Jython might be for you. All about the .NET stack? Maybe you should try IronPython (and maybe you already have).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/128/toptal-blog-A.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;By the way: while this wouldn&amp;#x2019;t be a &lt;em&gt;reason&lt;/em&gt; to use a different implementation, note that these implementations do actually differ in behavior beyond how they treat your Python source code. However, these differences are typically minor, and dissolve or emerge over time as these implementations are under active development. For example, IronPython &lt;a href=&quot;http://ironpython.codeplex.com/wikipage?title=IPy1.0.xCPyDifferences&amp;amp;referringTitle=Home&quot;&gt;uses Unicode strings by default&lt;/a&gt;; CPython, however, &lt;a href=&quot;http://docs.python.org/2/howto/unicode.html#encodings&quot;&gt;defaults to ASCII&lt;/a&gt; for versions 2.x (failing with a UnicodeEncodeError for non-ASCII characters), but does support  &lt;a href=&quot;http://docs.python.org/3/howto/unicode.html#python-s-unicode-support&quot;&gt;Unicode strings by default for 3.x&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;PyPy&quot;&gt;Just-in-Time Compilation: PyPy, and the Future&lt;/h2&gt;
-
-&lt;p&gt;So we have a Python implementation written in C, one in Java, and one in C#. The next logical step: a Python implementation written in&amp;#x2026; Python.  (The educated reader will note that this is slightly misleading.)&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#x2019;s where things might get confusing. First, lets discuss just-in-time (JIT) compilation.&lt;/p&gt;
-
-&lt;h3 id=&quot;jit-the-why-and-how&quot;&gt;JIT: The Why and How&lt;/h3&gt;
-
-&lt;p&gt;Recall that native machine code is much faster than bytecode. &lt;em&gt;Well, what if we could compile some of our bytecode and then run it as native code?&lt;/em&gt; We&amp;#x2019;d have to pay some price to compile the bytecode (i.e., time), but if the end result was faster, that&amp;#x2019;d be great! This is the motivation of JIT compilation, a hybrid technique that mixes the benefits of interpreters and compilers. In basic terms, JIT wants to utilize compilation to speed up an interpreted system.&lt;/p&gt;
-
-&lt;p&gt;For example, a common approach taken by JITs:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Identify bytecode that is executed frequently.&lt;/li&gt;
-  &lt;li&gt;Compile it down to native machine code.&lt;/li&gt;
-  &lt;li&gt;Cache the result.&lt;/li&gt;
-  &lt;li&gt;Whenever the same bytecode is set to be run, instead grab the pre-compiled machine code and reap the benefits (i.e., speed boosts).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This is what PyPy is all about: bringing JIT to Python (see the &lt;em&gt;Appendix&lt;/em&gt; for previous efforts). There are, of course, other goals: PyPy aims to be cross-platform, memory-light, and stackless-supportive. But JIT is really its selling point. As an average over a bunch of time tests, it&amp;#x2019;s said to improve performance by a factor of &lt;a href=&quot;http://speed.pypy.org&quot;&gt;6.27&lt;/a&gt;. For a breakdown, see this chart from the &lt;a href=&quot;http://speed.pypy.org&quot;&gt;PyPy Speed Center&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/85/toptal-blog-PyPy.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;pypy-is-hard-to-understand&quot;&gt;PyPy is Hard to Understand&lt;/h3&gt;
-
-&lt;p&gt;PyPy has huge potential, and at this point it&amp;#x2019;s &lt;a href=&quot;http://doc.pypy.org/en/latest/faq.html#is-pypy-a-drop-in-replacement-for-cpython&quot;&gt;highly compatible&lt;/a&gt; with CPython (so &lt;a href=&quot;http://pypy.org/compat.html&quot;&gt;it can run Flask, Django&lt;/a&gt;, etc.).&lt;/p&gt;
-
-&lt;p&gt;But there&amp;#x2019;s a lot of confusion around PyPy (see, for example, this nonsensical proposal to create a &lt;a href=&quot;http://stackoverflow.com/questions/2591879/pypy-how-can-it-possibly-beat-cpython&quot;&gt;PyPyPy&amp;#x2026;&lt;/a&gt;). In my opinion, that&amp;#x2019;s primarily because PyPy is actually two things:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;A Python interpreter written in &lt;a href=&quot;http://doc.pypy.org/en/latest/coding-guide.html#id1&quot;&gt;RPython&lt;/a&gt; (not Python (I lied before)). RPython is a subset of Python with static typing. In Python, it&amp;#x2019;s &lt;a href=&quot;http://doc.pypy.org/en/latest/faq.html#can-rpython-compile-normal-python-programs-to-c&quot;&gt;&amp;#x201C;mostly impossible&amp;#x201D;&lt;/a&gt; to reason rigorously about types (Why is it so hard? Well consider the fact that:&lt;/p&gt;
-
-    &lt;pre&gt;&lt;code&gt; x = random.choice([1, &quot;foo&quot;])
-&lt;/code&gt;&lt;/pre&gt;
-
-    &lt;p&gt;would be valid Python code (credit to &lt;a href=&quot;http://www.reddit.com/user/Ademan&quot;&gt;Ademan&lt;/a&gt;). What is the type of &lt;code&gt;x&lt;/code&gt;? How can we reason about types of variables when the types aren&amp;#x2019;t even strictly enforced?). With RPython, you sacrifice some flexibility, but instead make it much, much easier to reason about memory management and whatnot, which allows for optimizations.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A compiler that compiles RPython code for various targets and adds in JIT. &lt;a href=&quot;http://doc.pypy.org/en/latest/translation.html#overview&quot;&gt;The default platform is C&lt;/a&gt;, i.e., an RPython-to-C compiler, but you could also target the JVM and others.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Solely for clarity, I&amp;#x2019;ll refer to these as PyPy (1) and PyPy (2).&lt;/p&gt;
-
-&lt;p&gt;Why would you need these two things, and why under the same roof? Think of it this way: PyPy (1) is an interpreter written in RPython. So it takes in the user&amp;#x2019;s Python code and compiles it down to bytecode. But the interpreter itself (written in RPython) must be interpreted by another Python implementation in order to run, right?&lt;/p&gt;
-
-&lt;p&gt;Well, we could just &lt;a href=&quot;http://www.stavros.io/posts/what-is-pypy/&quot;&gt;use CPython&lt;/a&gt; to run the interpreter. But that wouldn&amp;#x2019;t be very fast.&lt;/p&gt;
-
-&lt;p&gt;Instead, the idea is that we use PyPy (2) (referred to as the &lt;a href=&quot;http://doc.pypy.org/en/latest/translation.html&quot;&gt;RPython Toolchain&lt;/a&gt;) to compile PyPy&amp;#x2019;s interpreter down to code for another platform (e.g., C, JVM, or CLI) to run on our machine, adding in JIT as well. It&amp;#x2019;s magical: PyPy dynamically adds JIT to an interpreter, generating its own compiler! (&lt;em&gt;Again, this is nuts: we&amp;#x2019;re compiling an interpreter, adding in another separate, standalone compiler.&lt;/em&gt;)&lt;/p&gt;
-
-&lt;p&gt;In the end, the result is a standalone executable that interprets Python source code and exploits JIT optimizations. Which is just what we wanted! It&amp;#x2019;s a mouthful, but maybe this diagram will help:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.toptal.com/uploads/blog/image/129/toptal-blog-B.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;To reiterate, the real beauty of PyPy is that we could write ourselves a bunch of different Python interpreters in RPython without worrying about JIT (barring &lt;a href=&quot;http://doc.pypy.org/en/latest/jit/pyjitpl5.html#jit-hints&quot;&gt;a few hints&lt;/a&gt;). &lt;em&gt;PyPy would then implement JIT for us&lt;/em&gt; using the RPython Toolchain/PyPy (2).&lt;/p&gt;
-
-&lt;p&gt;In fact, if we get even more abstract, you could theoretically write an interpreter for &lt;em&gt;any&lt;/em&gt; language, feed it to PyPy, and get a JIT for that language. This is because PyPy focuses on optimizing the actual interpreter, rather than the details of the language it&amp;#x2019;s interpreting.&lt;/p&gt;
-
-&lt;p class=&quot;pop_out_box is-full_width is-big&quot;&gt;
-You could theoretically write an interpreter for any language, feed it to PyPy, and get a JIT for that language.
-&lt;/p&gt;
-
-&lt;p&gt;As a brief digression, I&amp;#x2019;d like to mention that the JIT itself is absolutely fascinating. It uses a technique called tracing, which executes &lt;a href=&quot;http://morepypy.blogspot.com/2009/03/applying-tracing-jit-to-interpreter.html&quot;&gt;as follows&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Run the interpreter and interpret everything (adding in no JIT).&lt;/li&gt;
-  &lt;li&gt;Do some light profiling of the interpreted code.&lt;/li&gt;
-  &lt;li&gt;Identify operations you&amp;#x2019;ve performed before.&lt;/li&gt;
-  &lt;li&gt;Compile these bits of code down to machine code.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;em&gt;For more, &lt;a href=&quot;https://bitbucket.org/pypy/extradoc/src/tip/talk/icooolps2009/bolz-tracing-jit-final.pdf&quot;&gt;this paper&lt;/a&gt; is highly accessible and very interesting.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;To wrap up: we use PyPy&amp;#x2019;s RPython-to-C (or other target platform) compiler to compile PyPy&amp;#x2019;s RPython-implemented interpreter.&lt;/p&gt;
-
-&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
-
-&lt;p&gt;Why is this so great? Why is this crazy idea worth pursuing? I think &lt;a href=&quot;http://pypy.org/people.html#alex-gaynor&quot;&gt;Alex Gaynor&lt;/a&gt; put it well on his &lt;a href=&quot;http://alexgaynor.net/2010/may/15/pypy-future-python/&quot;&gt;blog&lt;/a&gt;: &amp;#x201C;[PyPy is the future] because [it] offers better speed, more flexibility, and is a better platform for Python&amp;#x2019;s growth.&amp;#x201D;&lt;/p&gt;
-
-&lt;p&gt;In short:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s fast because it compiles source code to native code&lt;/strong&gt; (using JIT).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s flexible because it adds the JIT to your interpreter&lt;/strong&gt; with very little additional work.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;It&amp;#x2019;s flexible (again) because you can write your interpreters in RPython&lt;/strong&gt;, which is easier to extend than, say, C (in fact, it&amp;#x2019;s so easy that there&amp;#x2019;s a &lt;a href=&quot;http://morepypy.blogspot.com/2011/04/tutorial-writing-interpreter-with-pypy.html&quot;&gt;tutorial for writing your own interpreters&lt;/a&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;appendix-other-names-you-may-have-heard&quot;&gt;Appendix: Other Names You May Have Heard&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.python.org/dev/peps/pep-3000/&quot;&gt;Python 3000 (Py3k)&lt;/a&gt;: an alternative naming for Python 3.0, a major, &lt;a href=&quot;http://www.python.org/dev/peps/pep-3000/#compatibility-and-transition&quot;&gt;backwards-incompatible&lt;/a&gt; Python release that hit the stage in &lt;a href=&quot;http://python.org/download/releases/3.0/&quot;&gt;2008&lt;/a&gt;. The Py3k team predicted that it would take about &lt;a href=&quot;http://programmers.stackexchange.com/questions/63859/why-do-people-hesitate-to-use-python-3#answer-63935&quot;&gt;five years&lt;/a&gt; for this new version to be fully adopted. And while &lt;em&gt;most&lt;/em&gt; (warning: anecdotal claim) Python developers continue to use Python 2.x, people are increasingly conscious of Py3k.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cython.org&quot;&gt;Cython&lt;/a&gt;: a superset of Python that includes bindings to call C functions.
-    &lt;ul&gt;
-      &lt;li&gt;Goal: allow you to write C extensions for your Python code.&lt;/li&gt;
-      &lt;li&gt;Also lets you add &lt;a href=&quot;http://docs.cython.org/src/quickstart/cythonize.html&quot;&gt;static typing&lt;/a&gt; to your existing Python code, allowing it to be compiled and reach C-like performance.&lt;/li&gt;
-      &lt;li&gt;This is similar to PyPy, but not the same. In this case, you&amp;#x2019;re enforcing typing in the user&amp;#x2019;s code before passing it to a compiler. With PyPy, you write plain old Python, and the compiler handles any optimizations.&lt;br&gt;
-&lt;br&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://numba.pydata.org&quot;&gt;Numba&lt;/a&gt;: a &amp;#x201C;just-in-time specializing compiler&amp;#x201D; that adds JIT to &lt;em&gt;annotated&lt;/em&gt; Python code. In the most basic terms, you give it some hints, and it speeds up portions of your code. Numba comes as part of the &lt;a href=&quot;http://docs.continuum.io/anaconda/index.html&quot;&gt;Anaconda&lt;/a&gt; distribution, a set of packages for data analysis and management.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://ipython.org/index.html&quot;&gt;IPython&lt;/a&gt;: very different from anything else discussed. A computing environment for Python. Interactive with support for GUI toolkits and browser experience, etc.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://psyco.sourceforge.net&quot;&gt;Psyco&lt;/a&gt;: a &lt;a href=&quot;http://rayli.net/blog/2010/04/what-is-the-purpose-of-pypy/&quot;&gt;Python extension module&lt;/a&gt;, and one of the early Python JIT efforts. However, it&amp;#x2019;s since been marked as &lt;a href=&quot;http://psyco.sourceforge.net&quot;&gt;&amp;#x201C;unmaintained and dead&amp;#x201D;&lt;/a&gt;. In fact, the lead developer of Psyco, &lt;a href=&quot;http://pypy.org/people.html#armin-rigo&quot;&gt;Armin Rigo, now works on PyPy&lt;/a&gt;. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;language-bindings&quot;&gt;Language Bindings&lt;/h3&gt;
-
-
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://rubypython.rubyforge.org&quot;&gt;RubyPython&lt;/a&gt;: a bridge between the Ruby and Python VMs. Allows you to embed Python code into your Ruby code. You define where the Python starts and stops, and RubyPython marshals the data between the VMs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://pythonhosted.org/pyobjc/#release-information&quot;&gt;PyObjc&lt;/a&gt;: language-bindings between Python and Objective-C, acting as a bridge between them. Practically, that means you can utilize Objective-C libraries (including everything you need to create OS X applications) from your Python code, and Python modules from your Objective-C code. In this case, it&amp;#x2019;s convenient that CPython is written in C, which is a subset of Objective-C.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.riverbankcomputing.com/software/pyqt/intro&quot;&gt;PyQt&lt;/a&gt;: while PyObjc gives you binding for the OS X GUI components, PyQt does the same for the Qt application framework, letting you create rich graphic interfaces, access SQL databases, etc. Another tool aimed at bringing Python&amp;#x2019;s simplicity to other frameworks.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;javascript-frameworks&quot;&gt;JavaScript Frameworks&lt;/h3&gt;
-
-
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://pyjs.org&quot;&gt;pyjs (Pyjamas)&lt;/a&gt;: a framework for creating web and desktop applications in Python. Includes a Python-to-JavaScript compiler, a widget set, and some more tools.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.brython.info&quot;&gt;Brython&lt;/a&gt;: a Python VM written in JavaScript to allow for Py3k code to be executed in the browser.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-Why Are There So Many Pythons?
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://bitinfocharts.com
 </link>
 <description>
@@ -1321,6 +68,142 @@ http://bitinfocharts.com
 </description>
 <title>
 Dogecoin now accounts for more transactions than any other cryptocurrency
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://wikileaks.org/tpp-enviro/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;
+
+    
+
+    &lt;div class=&quot;img&quot;&gt;&lt;a href=&quot;http://wikileaks.org/tpp2/static/gfx/wl-tpp-cartoon.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://wikileaks.org/tpp2/static/gfx/c1.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;p class=&quot;j&quot;&gt;Today, 15 January 2014, WikiLeaks released the secret draft text for the entire TPP (Trans-Pacific Partnership) Environment Chapter and the corresponding Chairs' Report. The TPP transnational legal regime would cover 12 countries initially and encompass 40 per cent of global GDP and one-third of world trade. The Environment Chapter has long been sought by journalists and environmental groups. The released text dates from the Chief Negotiators' summit in Salt Lake City, Utah, on 19-24 November 2013. &lt;/p&gt;
+    &lt;p class=&quot;j&quot;&gt;The Environment Chapter covers what the Parties propose to be their positions on: environmental issues, including climate change, biodiversity and fishing stocks; and trade and investment in 'environmental' goods and services. It also outlines how to resolve enviromental disputes arising out of the treaty's subsequent implementation. The draft Consolidated Text was prepared by the Chairs of the Environment Working Group, at the request of TPP Ministers at the Brunei round of the negotiations. &lt;/p&gt;
+    &lt;p class=&quot;j&quot;&gt;&lt;a href=&quot;http://wikileaks.org/tpp-enviro/pressrelease.html&quot;&gt;Read the full press release here&lt;/a&gt;.&lt;/p&gt;
+    &lt;br&gt;
+		
+
+    
+	&lt;/div&gt;
+  &lt;/div&gt;
+</description>
+<title>
+WikiLeaks releases Trans-Pacific Partnership (TPP) Environment draft
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://stratechery.com/
+</link>
+<description>
+
+</description>
+<title>
+Google's new business model
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://programmers.stackexchange.com/q/224146/25936
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
+            &lt;p&gt;I had ideas on this subject, and I &lt;a href=&quot;http://books.google.com/books/about/Building_Better_Applications.html?id=8A43E1UFs_YC&quot;&gt;&lt;em&gt;put them into a book 20 years ago&lt;/em&gt;&lt;/a&gt;.
+It's long out of print, but you can &lt;a href=&quot;http://rads.stackoverflow.com/amzn/click/0442017405&quot;&gt;&lt;em&gt;still get used copies on Amazon&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One simple answer to your question is as old as Aristotle: &lt;a href=&quot;http://en.wikipedia.org/wiki/Horror_vacui_%28physics%29&quot;&gt;&lt;em&gt;Nature abhors a vacuum&lt;/em&gt;&lt;/a&gt;.
+As much as machines have gotten faster and bigger, software has gotten slower and bigger.&lt;/p&gt;
+
+&lt;p&gt;To be more constructive, what I proposed was that information theory, and its direct relevance to software, be part of computer science education.
+It is only taught now, if at all, in a very tangential way.&lt;/p&gt;
+
+&lt;p&gt;For example, the big-O behavior of algorithms can be very neatly and intuitively understood if you think of a program as a Shannon-type information channel, with input symbols, output symbols, noise, redundancy, and bandwidth.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, the productivity of a programmer can be understood in similar terms using Kolmogorov information theory.
+The input is a symbolic conceptual structure in your head, and the output is the program text that comes out through your fingertips.
+The programming process is the channel between the two.
+When noise enters the process, it creates inconsistent programs (bugs).
+If the output program text has sufficient redundancy, it can permit the bugs to be caught and corrected (error detection and correction).
+However, if it is &lt;em&gt;too&lt;/em&gt; redundant it is too large, and its very size, combined with the error rate, &lt;em&gt;causes&lt;/em&gt; the introduction of bugs.
+As a result of this reasoning, I spent a good part of the book showing how to treat programming as a process of &lt;em&gt;language design&lt;/em&gt;, with the goal of being able to define the domain-specific-languages appropriate for a need.
+We do pay lip service to domain-specific-languages in CS education but, again, it is tangential.&lt;/p&gt;
+
+&lt;p&gt;Building languages is easy.
+Every time you define a function, class, or variable, you are adding vocabulary to the language you started with, creating a new language with which to work.
+What is not generally appreciated is that the goal should be to make the new language a closer match to the conceptual structure of the problem.
+If this is done, then it has the effect of &lt;em&gt;shortening&lt;/em&gt; the code and making it less buggy simply because, ideally, there is a 1-1 mapping between concepts and code.
+If the mapping is 1-1, you might make a mistake and code a concept incorrectly as a different concept,
+but the program will never crash, which is what happens when it encodes &lt;em&gt;no consistent requirement&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are not getting this.
+For all our brave talk about software system design, the ratio of code to requirements is getting bigger, much bigger.&lt;/p&gt;
+
+&lt;p&gt;It's true, we have very useful libraries.
+However, I think we should be very circumspect about abstraction.
+We should not assume if B builds on A and that is good,
+that if C builds on B it is even better.
+I call it the &quot;princess and the pea&quot; phenomenon.
+Piling layers on top of something troublesome does not necessarily fix it.&lt;/p&gt;
+
+&lt;p&gt;To terminate a long post, I've developed a style of programming (which sometimes gets me in trouble) where&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Invention is not a bad thing. It is a good thing, as it is in other branches of engineering. Sure it may be creating a learning curve for others, but if the overall result is better productivity, it is worthwhile.&lt;/li&gt;
+&lt;li&gt;Haiku-style minimalist code. That &lt;em&gt;especially&lt;/em&gt; goes for data structure design. In my experience, the biggest problem in software these days is bloated data structure.&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;/div&gt;
+</description>
+<title>
+How has an increase in the complexity of systems affected successive generations of programmers?
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.avc.com/a_vc/2014/01/vc-pitches-in-a-year-or-two.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+			&lt;div class=&quot;entry-body&quot; id=&quot;disqus_post_message&quot;&gt;
+				&lt;p&gt;Entrepreneur: I plan to launch a better streaming music service. It leverages the data on what you and your friends currently listen to, combines that with the schedule of new music launches and acts that are touring in your city in the coming months and creates playlists of music that you should be listening to in order to find new acts to listen to and go see live.&lt;/p&gt;
+&lt;p&gt;VC: Well since Spotify, Beats, and Apple have paid all the telcos so that their services are free on the mobile networks, we are concerned that new music services like yours will have a hard time getting new users to use them because the data plan is so expensive. We like you and the idea very much, but we are going to have to pass.&lt;/p&gt;
+
+&lt;p&gt;Entrepreneur: I plan to launch a service that curates the funniest videos from all across the internet and packages them up in a 30 minute daily video show that people will watch on their phones as they are commuting to work on the subway. It's called SubHumor.&lt;/p&gt;
+&lt;p&gt;VC: Well since YouTube, Hulu, and Netflix have paid all the telcos so that their services are free via a sponsored data plan, I am worried that it will hard to get users to watch any videos on their phones that aren't being served by YouTube, Hulu, or Netflix. We like you and your idea very much, but we are going to have to pass.&lt;/p&gt;
+
+&lt;p&gt;Entrepreneur: I plan to launch a photo sharing service where the faster your friends like the photos, the faster they disappear. It's gamified social snapchat.&lt;/p&gt;
+&lt;p&gt;VC: Well since Facebook, Instagram, Twitter, and Snapchat have paid the telcos so the photos that are served up in their apps don't use up any of the data plan, I worry that users won't want to use any other photo sharing services since they will have to pay high data costs to use them. We love your idea and would have funded it right here in the meeting back in the good old days of the open internet, but we can't do that anymore. We are passing.&lt;/p&gt;
+
+&lt;p&gt;This is Internet 3.0. With &lt;a href=&quot;http://www.buzzfeed.com/jwherrman/welcome-to-the-net-neutrality-nightmare-scenario&quot; target=&quot;_self&quot;&gt;yesterday's court ruling&lt;/a&gt; saying that the FCC can not implement the net neutrality rules they adopted a while back, this nightmare is a likely reality. Telcos will pick their preferred partners, subsidize the data costs for those apps, and make it much harder for new entrants to compete with the incumbents.&lt;/p&gt;
+			&lt;/div&gt;
+				
+
+     
+&lt;br&gt;
+
+
+
+&lt;/div&gt;
+	&lt;/div&gt;
+</description>
+<title>
+VC Pitches in a Year or Two
 </title>
 </item>
 </channel>
