@@ -18,164 +18,6 @@ myread
 unknown
 </author>
 <link>
-http://bitinfocharts.com
-</link>
-<description>
-&lt;div&gt;
-  &lt;div id=&quot;main_body&quot;&gt;
-&lt;table class=&quot;table table-striped body&quot;&gt;
- &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/&quot;&gt;Bitcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/&quot;&gt;Litecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/&quot;&gt;Peercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/&quot;&gt;Namecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/&quot;&gt;Quarkcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/&quot;&gt;Feathercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/&quot;&gt;Novacoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/&quot;&gt;Dogecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/&quot;&gt;Terracoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/&quot;&gt;Freicoin&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;12,258,018 BTC&lt;/td&gt;&lt;td&gt;24,875,851 LTC&lt;/td&gt;&lt;td&gt;21,047,212 PPC&lt;/td&gt;&lt;td&gt;7,768,742 NMC&lt;/td&gt;&lt;td&gt;247,260,521 QRK&lt;/td&gt;&lt;td&gt;29,868,550 FTC&lt;/td&gt;&lt;td&gt;670,782 NVC&lt;/td&gt;&lt;td&gt;28,317,387,293 DOGE&lt;/td&gt;&lt;td&gt;4,940,850 TRC&lt;/td&gt;&lt;td&gt;35,809,520 FRC&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Price&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;833.50 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bitstamp/btc-usd-1m.html&quot;&gt;bitstamp: &lt;span&gt;835&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btcchina/btc-cny-1m.html&quot;&gt;btcchina: &lt;span&gt;5,100.43&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/btc-usd-1m.html&quot;&gt;btc-e: &lt;span&gt;833.5&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/mtgox/btc-usd-1m.html&quot;&gt;mtgox: &lt;span&gt;947.39&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bitfinex/btc-usd-1m.html&quot;&gt;bitfinex: &lt;span&gt;835&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;24.59 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-usd-1m.html&quot;&gt;btc-e: &lt;span&gt;24.59&lt;/span&gt; &lt;small&gt;USD&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.0293&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ltc-cny-1m.html&quot;&gt;bter: &lt;span&gt;151.8&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ltc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0292&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ltc-rur-1m.html&quot;&gt;btc-e: &lt;span&gt;865.3&lt;/span&gt; &lt;small&gt;RUR&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;5.95 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ppc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00713&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ppc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00708&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/ppc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00711&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ppc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.00717&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ppc-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.243&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;6.29 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/nmc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00753&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/nmc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00743&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/kraken/nmc-eur-1m.html&quot;&gt;kraken: &lt;span&gt;4.58&lt;/span&gt; &lt;small&gt;EUR&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/nmc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00745&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/nmc-cny-1m.html&quot;&gt;bter: &lt;span&gt;36.7&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.06671 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/qrk-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0000799&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/qrk-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.44&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/qrk-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.0000843&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/qrk-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00278&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/qrk-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.0000807&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.3424 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/ftc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00041&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/ftc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000398&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ftc-cny-1m.html&quot;&gt;bter: &lt;span&gt;2.1&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/ftc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.0004&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/ftc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.000405&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;14.99 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/nvc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.018&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/nvc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0175&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/nvc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.0181&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/nvc-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.0213&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.00035905 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/doge-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.00000043&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/doge-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.00218&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/doge-ltc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.0000146&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/doge-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.00000043&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/doge-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.00000044&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.4927 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/btc-e/trc-btc-1m.html&quot;&gt;btc-e: &lt;span&gt;0.00059&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/trc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000564&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/trc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.000577&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/coins-e/trc-btc-1m.html&quot;&gt;coins-e: &lt;span&gt;0.000578&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;td&gt;$&lt;span&gt;&lt;span&gt;0.06181 USD&lt;/span&gt; &lt;/span&gt;
- &lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/cryptsy/frc-btc-1m.html&quot;&gt;cryptsy: &lt;span&gt;0.000074&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-cny-1m.html&quot;&gt;bter: &lt;span&gt;0.348&lt;/span&gt; &lt;small&gt;CNY&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-btc-1m.html&quot;&gt;bter: &lt;span&gt;0.000077&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/vircurex/frc-btc-1m.html&quot;&gt;vircurex: &lt;span&gt;0.00008&lt;/span&gt; &lt;small&gt;BTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;muted&quot;&gt;&lt;a href=&quot;http://bitinfocharts.com/../markets/bter/frc-ltc-1m.html&quot;&gt;bter: &lt;span&gt;0.00184&lt;/span&gt; &lt;small&gt;LTC&lt;/small&gt;&lt;/a&gt; &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Market Capitalization&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-btc.html&quot;&gt;$10,217,008,613 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ltc.html&quot;&gt;$611,644,944 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ppc.html&quot;&gt;$125,305,627 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-nmc.html&quot;&gt;$48,846,356 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-qrk.html&quot;&gt;$16,494,292 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-ftc.html&quot;&gt;$10,225,498 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-nvc.html&quot;&gt;$10,053,845 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-doge.html&quot;&gt;$10,167,358 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-trc.html&quot;&gt;$2,434,110 USD&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/marketcap-frc.html&quot;&gt;$2,213,268 USD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Transactions last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-btc.html&quot;&gt;57,367&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ltc.html&quot;&gt;9,350&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ppc.html&quot;&gt;723&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nmc.html&quot;&gt;1,168&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-qrk.html&quot;&gt;3,744&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ftc.html&quot;&gt;2,778&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nvc.html&quot;&gt;346&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-doge.html&quot;&gt;101,722&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-trc.html&quot;&gt;820&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-frc.html&quot;&gt;1,841&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Transactions avg. per hour&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-btc.html&quot;&gt;2,390&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ltc.html&quot;&gt;390&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ppc.html&quot;&gt;30&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nmc.html&quot;&gt;49&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-qrk.html&quot;&gt;156&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-ftc.html&quot;&gt;116&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-nvc.html&quot;&gt;14&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-doge.html&quot;&gt;4,238&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-trc.html&quot;&gt;34&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/transactions-frc.html&quot;&gt;77&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Sent last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-btc.html&quot;&gt;632,648 BTC &lt;br&gt;($527,309,608 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ltc.html&quot;&gt;6,226,159 LTC &lt;br&gt;($153,088,178 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ppc.html&quot;&gt;602,965 PPC &lt;br&gt;($3,589,783 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-nmc.html&quot;&gt;46,772 NMC &lt;br&gt;($294,080 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-qrk.html&quot;&gt;184,203,425 QRK &lt;br&gt;($12,287,870 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-ftc.html&quot;&gt;1,133,502 FTC &lt;br&gt;($388,054 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-nvc.html&quot;&gt;12,419 NVC &lt;br&gt;($186,134 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-doge.html&quot;&gt;37,127,801,322 DOGE &lt;br&gt;($13,330,737 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-trc.html&quot;&gt;40,074 TRC &lt;br&gt;($19,742 USD)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/sentinusd-frc.html&quot;&gt;366,284 FRC &lt;br&gt;($22,639 USD)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Sent avg. per hour&lt;/td&gt;&lt;td&gt;26,360 BTC &lt;br&gt;($21,971,234 USD)&lt;/td&gt;&lt;td&gt;259,423 LTC &lt;br&gt;($6,378,674 USD)&lt;/td&gt;&lt;td&gt;25,124 PPC &lt;br&gt;($149,574 USD)&lt;/td&gt;&lt;td&gt;1,949 NMC &lt;br&gt;($12,253 USD)&lt;/td&gt;&lt;td&gt;7,675,143 QRK &lt;br&gt;($511,995 USD)&lt;/td&gt;&lt;td&gt;47,229 FTC &lt;br&gt;($16,169 USD)&lt;/td&gt;&lt;td&gt;517.44 NVC &lt;br&gt;($7,756 USD)&lt;/td&gt;&lt;td&gt;1,546,991,722 DOGE &lt;br&gt;($555,447 USD)&lt;/td&gt;&lt;td&gt;1,670 TRC &lt;br&gt;($822.60 USD)&lt;/td&gt;&lt;td&gt;15,262 FRC &lt;br&gt;($943.28 USD)&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Avg. transaction value&lt;/td&gt;&lt;td&gt;11.03 BTC &lt;br&gt;($9,192 USD)&lt;/td&gt;&lt;td&gt;665.90 LTC &lt;br&gt;($16,373 USD)&lt;/td&gt;&lt;td&gt;833.98 PPC &lt;br&gt;($4,965 USD)&lt;/td&gt;&lt;td&gt;40.04 NMC &lt;br&gt;($251.78 USD)&lt;/td&gt;&lt;td&gt;49,200 QRK &lt;br&gt;($3,282 USD)&lt;/td&gt;&lt;td&gt;408.03 FTC &lt;br&gt;($139.69 USD)&lt;/td&gt;&lt;td&gt;35.89 NVC &lt;br&gt;($537.96 USD)&lt;/td&gt;&lt;td&gt;364,993 DOGE &lt;br&gt;($131.05 USD)&lt;/td&gt;&lt;td&gt;48.87 TRC &lt;br&gt;($24.08 USD)&lt;/td&gt;&lt;td&gt;198.96 FRC &lt;br&gt;($12.30 USD)&lt;/td&gt;&lt;/tr&gt; 
- &lt;tr&gt;&lt;td&gt;Confirmation Time&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-btc.html&quot;&gt;14.28 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ltc.html&quot;&gt;0.8759 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ppc.html&quot;&gt;9.91 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-nmc.html&quot;&gt;10.05 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-qrk.html&quot;&gt;0.4056 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-ftc.html&quot;&gt;1.52 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-nvc.html&quot;&gt;14.29 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-doge.html&quot;&gt;0.9593 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-trc.html&quot;&gt;4.27 minutes&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/confirmationtime-frc.html&quot;&gt;21.15 minutes&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Blocks Count &lt;/td&gt;&lt;td&gt;280,563&lt;/td&gt;&lt;td&gt;497,529&lt;/td&gt;&lt;td&gt;91,288&lt;/td&gt;&lt;td&gt;157,081&lt;/td&gt;&lt;td&gt;549,401&lt;/td&gt;&lt;td&gt;149,563&lt;/td&gt;&lt;td&gt;68,337&lt;/td&gt;&lt;td&gt;56,930&lt;/td&gt;&lt;td&gt;247,040&lt;/td&gt;&lt;td&gt;49,438&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Blocks last 24h&lt;/td&gt;&lt;td&gt;153&lt;/td&gt;&lt;td&gt;546&lt;/td&gt;&lt;td&gt;193&lt;/td&gt;&lt;td&gt;183&lt;/td&gt;&lt;td&gt;2,985&lt;/td&gt;&lt;td&gt;597&lt;/td&gt;&lt;td&gt;205&lt;/td&gt;&lt;td&gt;1,481&lt;/td&gt;&lt;td&gt;454&lt;/td&gt;&lt;td&gt;206&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Blocks avg. per hour&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;124&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;19&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Reward Per Block&lt;/td&gt;&lt;td&gt;25  BTC &lt;br&gt;($20,837 USD)&lt;/td&gt;&lt;td&gt;50  LTC &lt;br&gt;($1,229 USD)&lt;/td&gt;&lt;td&gt;114  PPC &lt;br&gt;($678.70 USD)&lt;/td&gt;&lt;td&gt;50  NMC &lt;br&gt;($314.38 USD)&lt;/td&gt;&lt;td&gt;4  QRK &lt;br&gt;($0.2668 USD)&lt;/td&gt;&lt;td&gt;200  FTC &lt;br&gt;($68.47 USD)&lt;/td&gt;&lt;td&gt;9.04  NVC &lt;br&gt;($135.49 USD)&lt;/td&gt;&lt;td&gt;267,844  DOGE &lt;br&gt;($96.17 USD)&lt;/td&gt;&lt;td&gt;20  TRC &lt;br&gt;($9.85 USD)&lt;/td&gt;&lt;td&gt;701.54  FRC &lt;br&gt;($43.36 USD)&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Orphaned Blocks last 24h&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-btc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ltc.html&quot;&gt;1 (0.18%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ppc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-nmc.html&quot;&gt;1 (0.55%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-qrk.html&quot;&gt;2 (0.07%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-ftc.html&quot;&gt;1 (0.17%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-nvc.html&quot;&gt;2 (0.98%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-doge.html&quot;&gt;34 (2.3%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-trc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/orphaned-frc.html&quot;&gt;0 (0%)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; 
- &lt;tr&gt;&lt;td&gt;Difficulty&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-btc.html&quot;&gt;1,789,546,951&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ltc.html&quot;&gt;3,891&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ppc.html&quot;&gt;59,175,162&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-nmc.html&quot;&gt;1,171,003,847&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-qrk.html&quot;&gt;2,767&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-ftc.html&quot;&gt;220.94&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-nvc.html&quot;&gt;440.58&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-doge.html&quot;&gt;423.46&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-trc.html&quot;&gt;956,016&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/difficulty-frc.html&quot;&gt;1,268,750&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Network Hashrate&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-btc.html&quot;&gt;10.946 Phash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ltc.html&quot;&gt;111.735 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ppc.html&quot;&gt;53.616 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-nmc.html&quot;&gt;9.63 Phash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-qrk.html&quot;&gt;1.589 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-ftc.html&quot;&gt;6.356 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-nvc.html&quot;&gt;962.557 Mhash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-doge.html&quot;&gt;28.07 Ghash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-trc.html&quot;&gt;11.524 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/comparison/hashrate-frc.html&quot;&gt;15.656 Thash/s&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td&gt;Top 100 Richest Addresses&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-bitcoin-addresses.html&quot;&gt;0 BTC &lt;br&gt;($0 USD) &lt;br&gt;0% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-litecoin-addresses.html&quot;&gt;11,384,486 LTC &lt;br&gt;($279,920,600 USD) &lt;br&gt;45.77% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-ppcoin-addresses.html&quot;&gt;12,798,441 PPC &lt;br&gt;($76,196,160 USD) &lt;br&gt;60.81% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-namecoin-addresses.html&quot;&gt;4,283,655 NMC &lt;br&gt;($26,933,692 USD) &lt;br&gt;55.14% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-quarkcoin-addresses.html&quot;&gt;153,921,862 QRK &lt;br&gt;($10,267,843 USD) &lt;br&gt;62.25% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-feathercoin-addresses.html&quot;&gt;16,503,255 FTC &lt;br&gt;($5,649,889 USD) &lt;br&gt;55.25% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-novacoin-addresses.html&quot;&gt;492,990 NVC &lt;br&gt;($7,389,058 USD) &lt;br&gt;73.49% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-dogecoin-addresses.html&quot;&gt;10,938,931,624 DOGE &lt;br&gt;($3,927,623 USD) &lt;br&gt;38.63% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-terracoin-addresses.html&quot;&gt;3,009,185 TRC &lt;br&gt;($1,482,475 USD) &lt;br&gt;60.90% Total&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/top-100-richest-freicoin-addresses.html&quot;&gt;25,211,000 FRC &lt;br&gt;($1,558,209 USD) &lt;br&gt;70.40% Total&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; 
- &lt;tr&gt;&lt;td&gt;Addresses richer than&lt;br&gt;1/100/1,000/10,000 USD&lt;/td&gt;&lt;td&gt;0 / 0 / 0 / 0&lt;/td&gt;&lt;td&gt;213,914 / 99,965 / 31,089 / 4,600&lt;/td&gt;&lt;td&gt;12,389 / 6,278 / 2,858 / 966&lt;/td&gt;&lt;td&gt;42,084 / 17,516 / 2,623 / 474&lt;/td&gt;&lt;td&gt;36,372 / 6,394 / 1,151 / 198&lt;/td&gt;&lt;td&gt;36,310 / 6,096 / 970 / 124&lt;/td&gt;&lt;td&gt;6,351 / 1,912 / 772 / 145&lt;/td&gt;&lt;td&gt;96,079 / 12,263 / 870 / 49&lt;/td&gt;&lt;td&gt;12,898 / 1,568 / 302 / 25&lt;/td&gt;&lt;td&gt;7,836 / 592 / 233 / 103&lt;/td&gt;&lt;/tr&gt;  
- &lt;tr&gt;&lt;td&gt;100 Largest Transactions&lt;/td&gt;&lt;td&gt;last 24h: 222,470 BTC ($185,427,838 USD)&lt;br&gt;35.16% Total&lt;/td&gt;&lt;td&gt;last 24h: 2,190,997 LTC ($53,872,007 USD)&lt;br&gt;35.19% Total&lt;/td&gt;&lt;td&gt;last 24h: 536,279 PPC ($3,192,761 USD)&lt;br&gt;88.94% Total&lt;/td&gt;&lt;td&gt;last 24h: 42,731 NMC ($268,673 USD)&lt;br&gt;91.36% Total&lt;/td&gt;&lt;td&gt;last 24h: 36,888,740 QRK ($2,460,780 USD)&lt;br&gt;20.03% Total&lt;/td&gt;&lt;td&gt;last 24h: 762,311 FTC ($260,977 USD)&lt;br&gt;67.25% Total&lt;/td&gt;&lt;td&gt;last 24h: 7,982 NVC ($119,641 USD)&lt;br&gt;64.28% Total&lt;/td&gt;&lt;td&gt;last 24h: 1,099,593,839 DOGE ($394,809 USD)&lt;br&gt;2.96% Total&lt;/td&gt;&lt;td&gt;last 24h: 28,254 TRC ($13,919 USD)&lt;br&gt;70.50% Total&lt;/td&gt;&lt;td&gt;last 24h: 141,815 FRC ($8,765 USD)&lt;br&gt;38.72% Total&lt;/td&gt;&lt;/tr&gt;  
-  &lt;tr&gt;&lt;td&gt;First Block &lt;/td&gt;&lt;td&gt;2009-01-03&lt;/td&gt;&lt;td&gt;2011-10-07&lt;/td&gt;&lt;td&gt;2012-08-16&lt;/td&gt;&lt;td&gt;2011-04-17&lt;/td&gt;&lt;td&gt;2013-07-21&lt;/td&gt;&lt;td&gt;2011-10-07&lt;/td&gt;&lt;td&gt;2013-02-05&lt;/td&gt;&lt;td&gt;2013-12-06&lt;/td&gt;&lt;td&gt;2012-10-26&lt;/td&gt;&lt;td&gt;2012-12-21&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Nodes all/active &lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/nodes/&quot;&gt;86114&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/bitcoin/nodes-active/&quot;&gt;9203&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/nodes/&quot;&gt;58032&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/litecoin/nodes-active/&quot;&gt;5604&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/nodes/&quot;&gt;2609&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/ppcoin/nodes-active/&quot;&gt;308&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/nodes/&quot;&gt;1940&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/namecoin/nodes-active/&quot;&gt;411&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/nodes/&quot;&gt;3875&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/quarkcoin/nodes-active/&quot;&gt;152&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/nodes/&quot;&gt;7303&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/feathercoin/nodes-active/&quot;&gt;496&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/nodes/&quot;&gt;1308&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/novacoin/nodes-active/&quot;&gt;108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/nodes/&quot;&gt;35883&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/dogecoin/nodes-active/&quot;&gt;4223&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/nodes/&quot;&gt;808&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/terracoin/nodes-active/&quot;&gt;149&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/nodes/&quot;&gt;428&lt;/a&gt; / &lt;a href=&quot;http://bitinfocharts.com/freicoin/nodes-active/&quot;&gt;68&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;  
-  &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/bitcoin/&quot;&gt;Bitcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/litecoin/&quot;&gt;Litecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/ppcoin/&quot;&gt;Peercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/namecoin/&quot;&gt;Namecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/quarkcoin/&quot;&gt;Quarkcoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/feathercoin/&quot;&gt;Feathercoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/novacoin/&quot;&gt;Novacoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/dogecoin/&quot;&gt;Dogecoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/terracoin/&quot;&gt;Terracoin&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://bitinfocharts.com/freicoin/&quot;&gt;Freicoin&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;small&gt;2014-01-15 06:19:50 UTC&lt;/small&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-
-
-
-&lt;/div&gt;
-</description>
-<title>
-Dogecoin now accounts for more transactions than any other cryptocurrency
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://wikileaks.org/tpp-enviro/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;
-
-    
-
-    &lt;div class=&quot;img&quot;&gt;&lt;a href=&quot;http://wikileaks.org/tpp2/static/gfx/wl-tpp-cartoon.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://wikileaks.org/tpp2/static/gfx/c1.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-    &lt;p class=&quot;j&quot;&gt;Today, 15 January 2014, WikiLeaks released the secret draft text for the entire TPP (Trans-Pacific Partnership) Environment Chapter and the corresponding Chairs' Report. The TPP transnational legal regime would cover 12 countries initially and encompass 40 per cent of global GDP and one-third of world trade. The Environment Chapter has long been sought by journalists and environmental groups. The released text dates from the Chief Negotiators' summit in Salt Lake City, Utah, on 19-24 November 2013. &lt;/p&gt;
-    &lt;p class=&quot;j&quot;&gt;The Environment Chapter covers what the Parties propose to be their positions on: environmental issues, including climate change, biodiversity and fishing stocks; and trade and investment in 'environmental' goods and services. It also outlines how to resolve enviromental disputes arising out of the treaty's subsequent implementation. The draft Consolidated Text was prepared by the Chairs of the Environment Working Group, at the request of TPP Ministers at the Brunei round of the negotiations. &lt;/p&gt;
-    &lt;p class=&quot;j&quot;&gt;&lt;a href=&quot;http://wikileaks.org/tpp-enviro/pressrelease.html&quot;&gt;Read the full press release here&lt;/a&gt;.&lt;/p&gt;
-    &lt;br&gt;
-		
-
-    
-	&lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-WikiLeaks releases Trans-Pacific Partnership (TPP) Environment draft
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://stratechery.com/
-</link>
-<description>
-
-</description>
-<title>
-Google's new business model
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://programmers.stackexchange.com/q/224146/25936
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-text&quot;&gt;
-            &lt;p&gt;I had ideas on this subject, and I &lt;a href=&quot;http://books.google.com/books/about/Building_Better_Applications.html?id=8A43E1UFs_YC&quot;&gt;&lt;em&gt;put them into a book 20 years ago&lt;/em&gt;&lt;/a&gt;.
-It's long out of print, but you can &lt;a href=&quot;http://rads.stackoverflow.com/amzn/click/0442017405&quot;&gt;&lt;em&gt;still get used copies on Amazon&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;One simple answer to your question is as old as Aristotle: &lt;a href=&quot;http://en.wikipedia.org/wiki/Horror_vacui_%28physics%29&quot;&gt;&lt;em&gt;Nature abhors a vacuum&lt;/em&gt;&lt;/a&gt;.
-As much as machines have gotten faster and bigger, software has gotten slower and bigger.&lt;/p&gt;
-
-&lt;p&gt;To be more constructive, what I proposed was that information theory, and its direct relevance to software, be part of computer science education.
-It is only taught now, if at all, in a very tangential way.&lt;/p&gt;
-
-&lt;p&gt;For example, the big-O behavior of algorithms can be very neatly and intuitively understood if you think of a program as a Shannon-type information channel, with input symbols, output symbols, noise, redundancy, and bandwidth.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, the productivity of a programmer can be understood in similar terms using Kolmogorov information theory.
-The input is a symbolic conceptual structure in your head, and the output is the program text that comes out through your fingertips.
-The programming process is the channel between the two.
-When noise enters the process, it creates inconsistent programs (bugs).
-If the output program text has sufficient redundancy, it can permit the bugs to be caught and corrected (error detection and correction).
-However, if it is &lt;em&gt;too&lt;/em&gt; redundant it is too large, and its very size, combined with the error rate, &lt;em&gt;causes&lt;/em&gt; the introduction of bugs.
-As a result of this reasoning, I spent a good part of the book showing how to treat programming as a process of &lt;em&gt;language design&lt;/em&gt;, with the goal of being able to define the domain-specific-languages appropriate for a need.
-We do pay lip service to domain-specific-languages in CS education but, again, it is tangential.&lt;/p&gt;
-
-&lt;p&gt;Building languages is easy.
-Every time you define a function, class, or variable, you are adding vocabulary to the language you started with, creating a new language with which to work.
-What is not generally appreciated is that the goal should be to make the new language a closer match to the conceptual structure of the problem.
-If this is done, then it has the effect of &lt;em&gt;shortening&lt;/em&gt; the code and making it less buggy simply because, ideally, there is a 1-1 mapping between concepts and code.
-If the mapping is 1-1, you might make a mistake and code a concept incorrectly as a different concept,
-but the program will never crash, which is what happens when it encodes &lt;em&gt;no consistent requirement&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;We are not getting this.
-For all our brave talk about software system design, the ratio of code to requirements is getting bigger, much bigger.&lt;/p&gt;
-
-&lt;p&gt;It's true, we have very useful libraries.
-However, I think we should be very circumspect about abstraction.
-We should not assume if B builds on A and that is good,
-that if C builds on B it is even better.
-I call it the &quot;princess and the pea&quot; phenomenon.
-Piling layers on top of something troublesome does not necessarily fix it.&lt;/p&gt;
-
-&lt;p&gt;To terminate a long post, I've developed a style of programming (which sometimes gets me in trouble) where&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Invention is not a bad thing. It is a good thing, as it is in other branches of engineering. Sure it may be creating a learning curve for others, but if the overall result is better productivity, it is worthwhile.&lt;/li&gt;
-&lt;li&gt;Haiku-style minimalist code. That &lt;em&gt;especially&lt;/em&gt; goes for data structure design. In my experience, the biggest problem in software these days is bloated data structure.&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-    &lt;/div&gt;
-</description>
-<title>
-How has an increase in the complexity of systems affected successive generations of programmers?
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
 http://www.avc.com/a_vc/2014/01/vc-pitches-in-a-year-or-two.html
 </link>
 <description>
@@ -204,6 +46,375 @@ http://www.avc.com/a_vc/2014/01/vc-pitches-in-a-year-or-two.html
 </description>
 <title>
 VC Pitches in a Year or Two
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://blog.nodejs.org/2014/01/15/the-next-phase-of-node-js/index.html
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;column1&quot; class=&quot;interior&quot;&gt;
+      
+      
+        
+
+          &lt;p&gt;Node's growth has continued and accelerated immensely over the last
+few years.  More people are developing and sharing more code with Node
+and npm than I would have ever imagined.  Countless companies are
+using Node, and npm along with it.
+
+&lt;/p&gt;
+&lt;p&gt;Over the last year, &lt;a href=&quot;https://twitter.com/tjfontaine&quot;&gt;TJ Fontaine&lt;/a&gt; has become absolutely essential to the
+Node.js project.  He's been building releases, managing the test bots,
+&lt;a href=&quot;http://www.joyent.com/blog/walmart-node-js-memory-leak&quot;&gt;fixing nasty
+bugs&lt;/a&gt; and
+making decisions for the project with constant focus on the needs of
+our users.  He was responsible for an update to MDB to &lt;a href=&quot;http://www.slideshare.net/bcantrill/node-summit2013&quot;&gt;support
+running ::findjsobjects on Linux core
+dumps&lt;/a&gt;, and is
+working on a shim layer that will provide a stable C interface for
+Node binary addons.  In partnership with Joyent and The Node Firm,
+he's helped to create a path forward for scalable issue triaging.
+He's become the primary point of contact keeping us all driving the
+project forward together.
+
+&lt;/p&gt;
+&lt;p&gt;Anyone who's been close to the core project knows that he's been
+effectively leading the project for a while now, so we're making it
+official.  Effective immediately, TJ Fontaine is the Node.js project
+lead.  I will remain a Node core committer, and expect to continue to
+contribute to the project in that role.  My primary focus, however,
+will be npm.
+
+&lt;/p&gt;
+&lt;p&gt;At this point, npm needs work, and I am eager to deliver what the Node
+community needs from its package manager.  I am starting a company,
+npm, Inc., to deliver new products and services related to npm.  I'll
+be sharing many more details soon about exactly how this is going to
+work, and what we'll be offering.  For now, suffice it to say that
+everything currently free will remain free, and everything currently
+flaky will get less flaky.  Pursuing new revenue is how we can keep
+providing the npm registry service in a long-term sustainable way, and
+it has to be done very carefully so that we don't damage what we've
+all built together.
+
+&lt;/p&gt;
+&lt;p&gt;npm is what I'm most passionate about, and I am now in a position to
+give it my full attention.  I've done more than I could have hoped to
+accomplish in running Node core, and it's well past time to hand the
+control of the project off to its next gatekeeper.
+
+&lt;/p&gt;
+&lt;p&gt;TJ is exactly the leader who can help us take Node.js to 1.0 and
+beyond.  He brings professionalism, rigor, and a continued focus on
+inclusive community values and culture.  In the coming days, TJ will
+spell out his plans in greater detail.  I look forward to the places
+that Node will go with his guidance.
+
+&lt;/p&gt;
+&lt;p&gt;Please join me in welcoming him to this new role :)
+&lt;/p&gt;
+
+
+          &lt;p class=&quot;respond&quot;&gt;Please post feedback and comments on
+            &lt;a href=&quot;https://groups.google.com/group/nodejs&quot;&gt;the Node.JS
+              user mailing list&lt;/a&gt;.&lt;br&gt;
+            Please post bugs and feature requests on
+            &lt;a href=&quot;https://github.com/joyent/node/issues&quot;&gt;the Node.JS
+              github repository&lt;/a&gt;.&lt;/p&gt;
+
+          &lt;p class=&quot;prev&quot;&gt;&lt;a href=&quot;http://blog.nodejs.org/2013/12/31/node-v0-11-10-unstable/&quot;&gt;&amp;#x2190; Node v0.11.10 (Unstable)&lt;/a&gt;&lt;/p&gt;
+              
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description>
+<title>
+The Next Phase of Node.js
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.edge.org/response-detail/25401
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;field-content&quot;&gt; 
+&lt;p&gt;The notion of standard deviation has confused hordes of scientists; it is time to retire it from common use and replace it with the more effective one of mean deviation. Standard deviation, STD, should be left to mathematicians, physicists and mathematical statisticians deriving limit theorems. There is no scientific reason to use it in statistical investigations in the age of the computer, as it does more harm than good&amp;#x2014;particularly with the growing class of people in social science mechanistically applying statistical tools to scientific problems.&lt;/p&gt;
+&lt;p&gt;Say someone just asked you to measure the &quot;average daily variations&quot; for the temperature of your town (or for the stock price of a company, or the blood pressure of your uncle) over the past five days. The five changes are: (-23, 7, -3, 20, -1). How do you do it?&lt;/p&gt;
+&lt;p&gt;Do you take every observation: square it, average the total, then take the square root? Or do you remove the sign and calculate the average? For there are serious differences between the two methods. The first produces an average of 15.7, the second 10.8. The first is technically called the root mean square deviation. The second is the mean absolute deviation, MAD. It corresponds to &quot;real life&quot; much better than the first&amp;#x2014;and to reality. In fact, whenever people make decisions after being supplied with the standard deviation number, they act as if it were the expected mean deviation.&lt;/p&gt;
+&lt;p&gt;It is all due to a historical accident: in 1893, the great Karl Pearson introduced the term &quot;standard deviation&quot; for what had been known as &quot;root mean square error&quot;. The confusion started then: people thought it meant mean deviation. The idea stuck: every time a newspaper has attempted to clarify the concept of market &quot;volatility&quot;, it defined it verbally as mean deviation yet produced the numerical measure of the (higher) standard deviation.&lt;/p&gt;
+&lt;p&gt;But it is not just journalists who fall for the mistake: I recall seeing official documents from the department of commerce and the Federal Reserve partaking of the conflation, even regulators in statements on market volatility. What is worse, Goldstein and I found that a high number of data scientists (many with PhDs) also get confused in real life.&lt;/p&gt;
+&lt;p&gt;It all comes from bad terminology for something non-intuitive. By a psychological bias Danny Kahneman calls &lt;em&gt;attribute substitution,&lt;/em&gt; some people mistake MAD for STD because the former is easier to come to mind.&lt;/p&gt;
+&lt;p&gt;1) MAD is more accurate in sample measurements, and less volatile than STD since it is a natural weight whereas standard deviation uses the observation itself as its own weight, imparting large weights to large observations, thus overweighing tail events.&lt;/p&gt;
+&lt;p&gt;2) We often use STD in equations but really end up reconverting it within the process into MAD (say in finance, for option pricing). In the Gaussian world, STD is about ~1.25 time MAD, that is, the square root of (Pi/2). But we adjust with stochastic volatility where STD is often as high as 1.6 times MAD.&lt;/p&gt;
+&lt;p&gt;3) Many statistical phenomena and processes have &quot;infinite variance&quot; (sa the popular Pareto 80/20 rule) but have finite, and very well behaved, mean deviations. Whenever the mean exists, MAD exists. The reverse (infinite MAD and finite STD) is never true.&lt;/p&gt;
+&lt;p&gt;4) Many economists have dismissed &quot;infinite variance&quot; models thinking these meant &quot;infinite mean deviation&quot;. Sad, but true. When the great Benoit Mandelbrot proposed his infinite variance models fifty years ago, economists freaked out because of the conflation.&lt;/p&gt;
+&lt;p&gt;It is sad that such a minor point can lead to so much confusion: our scientific tools are way too far ahead of our casual intuitions, which starts to be a problem with science. So I close with a statement by Sir Ronald A. Fisher: 'The statistician cannot evade the responsibility for understanding the process he applies or recommends.'&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;And the probability-related problems with social and biological science do not stop there: it has bigger problems with researchers using statistical notions out of a can without understanding them and babbling &quot;n of 1&quot; or &quot;n large&quot;, or &quot;this is anecdotal&quot; (for a large Black Swan style deviation), mistaking anecdotes for information and information for anecdote. It was shown that the majority use regression in their papers in &quot;prestigious&quot; journals without quite knowing what it means, and what claims can&amp;#x2014;and cannot&amp;#x2014;be made from it. Because of little check from reality and lack of skin-in-the-game, coupled with a fake layer of sophistication, social scientists can make elementary mistakes with probability yet continue to thrive professionally.&lt;/p&gt;
+ &lt;/div&gt;  &lt;/div&gt;
+</description>
+<title>
+Nassim Taleb: We should retire the notion of standard deviation
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;ibm-col-1-1&quot;&gt;
+
+&lt;h2 id=&quot;N10089&quot;&gt;Before you start&lt;/h2&gt;&lt;p&gt;For this article you need to download and install Google Chrome version 19 or higher (the examples shown here are based on version 19). You'll also want something you can use to edit HTML, CSS, and JavaScript. It will help if you have some experience using Chrome and some Chrome extensions first. Take some time to browse the Chrome Web Store (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;). Look at the extensions that are available, and take some for a spin. This will provide some context for this article.&lt;/p&gt;&lt;h2 id=&quot;N100C1&quot;&gt;Why build a browser extension?&lt;/h2&gt;&lt;p&gt;You might want to build a browser extension for several reasons. A common use of browser extensions is to create an interaction between a browser and another application or service. Evernote, 1Password, and Adobe Shadow all do something like this, as do many other extensions. Or you might want to add some new functionality to the browser that it lacks, by adding developer tools or screen capture utilities. Some developers have written extensions with very focused purposes&amp;#x2014;sports score trackers, enhancements for specific websites, weather reporting, and more. People do a lot of different things with extensions. What will you do?&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100CA&quot;&gt;What extension are you building?&lt;/h2&gt;&lt;p&gt;To demonstrate the process for building an extension in Chrome, you'll write an extension called Gawkblocker. Gawkblocker will allow you to block certain domains that you're trying not to visit for one reason or another. Gawkblocker has several components:&lt;/p&gt;&lt;ul class=&quot;ibm-bullet-list&quot;&gt;&lt;li&gt;A pop-up (shows you what you're blocking)&lt;/li&gt;&lt;li&gt;A visible browser icon (point of entry for the extension)&lt;/li&gt;&lt;li&gt;An options page (configure domains you want to block and where you want to go instead)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Broadly speaking, Gawkblocker will attach a listener to each tab or window, and when the tab URL changes, the extension compares the URL to the list of blocked domains. If the URL matches a blocked domain, the request is redirected to an extension page instead (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig1&quot;&gt;Figure 1&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig1&quot;&gt;Figure 1. The Gawkblocker extension&lt;/h5&gt;&lt;img alt=&quot;Screen capture showing the sites being blocked by Gawkblocker&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig01.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;Gawkblocker reaches into the browser in specific ways to do some specific things that you'll do in other extensions. You want answers to these questions:&lt;/p&gt;&lt;ul class=&quot;ibm-bullet-list&quot;&gt;&lt;li&gt;How hard is it to get a presence somewhere in the browser UI?&lt;/li&gt;&lt;li&gt;What is involved in persisting data between browser sessions?&lt;/li&gt;&lt;li&gt;How do the different parts of the extension talk to each other?&lt;/li&gt;&lt;li&gt;How deep can you go into the user's data?&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The process of building Gawkblocker should answer these questions.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100F4&quot;&gt;What is your reference document?&lt;/h2&gt;&lt;p&gt;Your reference document is the Chrome Extension docs (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;). For the most part the documentation for writing Chrome extensions is pretty thorough. A simple one-page tutorial on how to build a &quot;Hello World&quot; extension will give you a super-simple overview of how extensions are put together, but it won't be much use for a deeper dive on the subject.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100FF&quot;&gt;Anatomy of a Chrome extension&lt;/h2&gt;&lt;p&gt;A typical Chrome extension consists of a manifest file and some combination of a background page, UI pages, and content scripts. &lt;/p&gt;&lt;p&gt;Everything begins with a manifest file called manifest.json. This file contains the information Chrome needs to know about how to load your extension&amp;#x2014;things like title, description, required permissions, and icon references.&lt;/p&gt;&lt;p&gt;A background page is a single page that is launched and run within its own context, no matter how many tabs or windows are open. An extension can have only one background page. They are useful for extensions where you want to have a process running that persists across all pages within Chrome.&lt;/p&gt;&lt;p&gt;UI Pages refer to any page that the extension presents to the user. A UI Page might be a pop-up, an options page, a page that's part of the extension, or a page that overrides a default Chrome page (like the &lt;em&gt;new tab&lt;/em&gt; page).&lt;/p&gt;&lt;p&gt;Content scripts are JavaScript files that you inject into web pages to interact with them. Content scripts execute in their own isolated context, but they can access the DOM of the page. Content scripts can also communicate with other pages in your extension using a special message passing API.&lt;/p&gt;&lt;p&gt;For Gawkblocker, you will use a manifest file, a JavaScript file that contains some core functionality (something you will make portable), a background page, an options page, a pop-up, a redirect landing page, and an icon or two.  You can download a working Gawkblocker extension from the Chrome Web Store if you want to see the extension in action as the various parts are described.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10115&quot;&gt;Gawkblocker's manifest&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list1&quot;&gt;Listing 1&lt;/a&gt; is a copy of the manifest.json file for Gawkblocker.&lt;/p&gt;&lt;h5 id=&quot;list1&quot;&gt;Listing 1. The manifest.json file for Gawkblocker.&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;{
+  &quot;name&quot;: &quot;GawkBlocker&quot;,
+  &quot;version&quot;: &quot;1.7&quot;,
+  &quot;description&quot;: &quot;Tired of taking the Nerd Bait? Use GawkBlocker!&quot;,
+  &quot;background_page&quot; : &quot;background.html&quot;,
+  &quot;options_page&quot;: &quot;options.html&quot;,
+  &quot;icons&quot;: {
+    &quot;16&quot; : &quot;images/GB-19.png&quot;,
+    &quot;48&quot; : &quot;images/GB-48.png&quot;,
+    &quot;128&quot; : &quot;images/GB-128.png&quot;
+  },
+  &quot;browser_action&quot;: {
+    &quot;default_icon&quot;: &quot;images/GB-19.png&quot;,
+    &quot;default_title&quot;: &quot;GawkBlocker&quot;,
+    &quot;default_popup&quot;: &quot;popup.html&quot;
+  },
+  &quot;permissions&quot;: [&quot;tabs&quot;]
+}&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Look at some of these entries in detail.&lt;/p&gt;&lt;dl&gt;&lt;dt&gt;&lt;strong&gt;version&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;Whenever you upload a new version of your extension to the Chrome Web Store, you will need to increment your version number or the upload will fail.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;icons&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;The icons property contains a list of available icons, according to sizes. Chrome looks for specific sizes of icons to use them in different contexts. &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list1&quot;&gt;Listing 1&lt;/a&gt; specifies paths to icon files that are relative to the extension.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;browser_action&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;When you specify a browser_action, you tell Chrome that you want an icon to the right of the URL bar (Chrome calls the URL the Omnibar), and that clicking on the icon will do something. In this case, clicking on the browser action button opens a pop-up.&lt;br&gt;
+
+Only specify a browser_action when your extension applies to any web page. If you want an alternative that only applies to specific pages or types of pages, then you specify a page_action. You can not specify both a page_action and a browser_action&amp;#x2014;it's one or the other.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;permissions&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;In this case, the only permission you need to request is 'tabs'&amp;#x2014;this permission will give you some information about individual tabs (all you really want is the URL). More permissions are available, but you should only request the permissions you need. Both Chrome and Android handle permissions in very similar ways&amp;#x2014;when the user installs your extension, Chrome will explicitly show you the permissions the extension is requesting, in much the same way that you are prompted with a list of permissions when installing an Android application.&lt;/dd&gt;&lt;/dl&gt;&lt;p&gt;Now that you've walked through the manifest, let's get into the files that give functionality to Gawkblocker.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10147&quot;&gt;The Gawkblocker core class&lt;/h2&gt;&lt;p&gt;Most of what Gawkblocker does will be controlled by a single core JavaScript file. In the file, you define a Storage Manager object (SM) to handle persisting data between sessions (right now this is just a wrapper for &lt;code&gt;localStorage&lt;/code&gt;), and a Gawkblocker object (GB) that handles some of the common functionality (managing the blocked sites list and options). See &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list2&quot;&gt;Listing 2&lt;/a&gt;.&lt;/p&gt;&lt;h5 id=&quot;list2&quot;&gt;Listing 2. Defining a Storage Manager object and Gawkblocker object&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;var SM = (function () {
+
+    var my = {};
+
+    my.get = function (key) {
+        return localStorage.getItem(key);
+    }
+
+    ...
+
+    return my;
+
+}());
+
+var GB = (function (SM) {
+    var my = {};
+
+    my.blockTheseSites = {
+        &quot;gawker.com&quot;        : &quot;Gawker Media&quot;,
+        &quot;io9.com&quot;           : &quot;SciFi Blog&quot;,
+        &quot;gizmodo.com&quot;       : &quot;Gadget Blog&quot;,
+        ...
+    }
+
+    if (!SM.get(&quot;blocklist&quot;)) {
+        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockTheseSites));
+    }
+
+    my.getBlockedSites = function () {
+        return JSON.parse(SM.get(&quot;blocklist&quot;));
+    }
+
+    my.setWatchThisInstead = function (value) {
+        ...
+    }
+
+    my.getWatchThisInstead = function () {
+        return SM.get(&quot;instead&quot;);        
+    }
+
+    my.addBlockedSite = function (site) {
+        my.blockedSites = JSON.parse(SM.get(&quot;blocklist&quot;));
+        my.blockedSites[site] = &quot;Custom Add&quot;;
+        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockedSites));
+    }
+
+    my.removeBlockedSite = function (site) {
+        my.blockedSites = JSON.parse(SM.get(&quot;blocklist&quot;));
+        delete my.blockedSites[site];
+        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockedSites));
+    }
+
+    return my;
+}(SM));&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I used the Module Patten here to create a couple objects that should be reasonably portable. Now see what it's like to use them in the background page.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1015E&quot;&gt;The background page&lt;/h2&gt;&lt;p&gt;Gawkblocker will use a background page to listen to URLs and compare them against the blocked sites list. Remember, you can only have one instance of the background page, and it is shared across all open tabs and windows (excluding incognito windows, unless you request that permission or the user explicitly allows it). Because the background page itself has no visible component, there's no display-related HTML in the page itself.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list3&quot;&gt;Listing 3&lt;/a&gt; shows the code that listens to tabs for updates.&lt;/p&gt;&lt;h5 id=&quot;list3&quot;&gt;Listing 3. Listening to tabs for updates&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
+    for (site in GB.getBlockedSites()) {
+        if (tab.url.match(site)) {
+            chrome.tabs.update(tabId, {&quot;url&quot; : GB.getWatchThisInstead()}, 
+function () {});
+        }
+    }
+});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are more performant ways to walk the list of blocked sites, but that's not what you should look at. Instead, look at how you attached to Chrome using &lt;code&gt;chrome.tabs.onUpdated.addListener&lt;/code&gt; and passing in a callback.&lt;/p&gt;&lt;p&gt;Every chrome.* API call varies, but generally they follow this pattern of calling a method and passing in a callback. Most of the API calls are asynchronous. This can cause timing issues if you don't expect this behavior, so read what the reference document has to say on this subject.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10178&quot;&gt;The pop-up&lt;/h2&gt;&lt;p&gt;Gawkblocker doesn't really need a pop-up, but by including one provides an easily accessible place for the user to see what sites are currently being blocked. &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list4&quot;&gt;Listing 4&lt;/a&gt; shows the most interesting part of this page.&lt;/p&gt;&lt;h5 id=&quot;list4&quot;&gt;Listing 4. Pop-up page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(document).ready(function(){
+    $.each(chrome.extension.getBackgroundPage().GB.getBlockedSites(), 
+function (index, value) {
+        $(&quot;#blockedlist&quot;).append(&quot;&amp;lt;div class='siterow' title='&quot;+value+&quot;'&amp;gt;
+&amp;lt;div class='sitename'&amp;gt;&quot;+index+&quot;&amp;lt;/div&amp;gt;&amp;lt;span class='sitedesc'&amp;gt; : 
+&quot;+value+&quot;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&quot;);
+    });
+});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The call to &lt;code&gt;chrome.extension.getBackgroundPage().GB.getBlockedSites()&lt;/code&gt; is how you get information from the background page into the pop-up. This is one way to handle communication between pages within an extension, though it's not necessary to do this in the pop-up. You might include the gawkblocker.js file and call the GB object directly. But if you have a lot of asynchronous activity, it's useful to have the different components ask questions from the same place.&lt;/p&gt;&lt;p&gt;The pop-up asks the background page for a list of blocked sites. It then iterates through that list, and appends the blocked site details to a display div in the pop-up (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig2&quot;&gt;Figure 2&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig2&quot;&gt;Figure 2. Pop-up&lt;/h5&gt;&lt;img alt=&quot;Screen capture of Gawkblocker's pop-up showing blocked sites&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig02.jpg&quot; width=&quot;580&quot;&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1019E&quot;&gt;The options page&lt;/h2&gt;&lt;p&gt;You need a place to control the behavior of the extension. If you specify an Options page using the manifest (as you did), the User can easily access the page either from the extensions management page, or right click on the browser action button. Options pages are themselves optional (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig3&quot;&gt;Figure 3&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig3&quot;&gt;Figure 3. Options page&lt;/h5&gt;&lt;img alt=&quot;Screen capture showing the configurable options for Gawkblocker&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig03.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;Gawkblocker uses the Options page to allow the user to specify behavior when visiting a blocked site, to add new sites to the block list, or to remove sites from the block list entirely (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list5&quot;&gt;Listing 5&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list5&quot;&gt;Listing 5. Options page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(&quot;#blockthistoo&quot;).click(function () {
+    GB.addBlockedSite($(&quot;#dontgothere&quot;).val());
+    ...
+});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can go through the background page, just like you did in the pop-up (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list6&quot;&gt;Listing 6&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list6&quot;&gt;Listing 6. Background page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(&quot;#blockthistoo&quot;).click(function () {
+    chrome.extension.getBackgroundPage().GB.addBlockedSite($(&quot;#dontgothere&quot;).val());
+    ...
+});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Depending on your extension, you might prefer one method over the other.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N101CE&quot;&gt;The redirect landing&lt;/h2&gt;&lt;p&gt;Finally, when a request is redirected, it needs to go to a local page. This page is the most straight-forward of all. As written, it's simply a page that embeds a YouTube video (&quot;Hey You! Don't Watch That! Watch This!&quot;). It doesn't interact with the rest of the extension in any meaningful way, it's just the end point of the process (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig4&quot;&gt;Figure 4&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig4&quot;&gt;Figure 4. Redirect landing&lt;/h5&gt;&lt;img alt=&quot;Screen capture of a browser page titled 'Wouldn't you rather watch madness??' with a running video&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig04.jpg&quot; width=&quot;580&quot;&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N101E2&quot;&gt;Pulling it all together&lt;/h2&gt;&lt;p&gt;Now you have this great extension, but how do you test it out?  To start, load the extension files without packaging them. This is called loading an &lt;em&gt;unpacked extension&lt;/em&gt; and you control it from the Extension Management page (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;) (you can also right-click on any installed extension and select &lt;strong&gt;Manage Extensions&lt;/strong&gt;).&lt;/p&gt;&lt;p&gt;To load unpacked extensions, select the &lt;strong&gt;Developer Mode&lt;/strong&gt; box to enable the &lt;strong&gt;Load unpacked extension&lt;/strong&gt; button. To load your extension, click the &lt;strong&gt;Load unpacked extension&lt;/strong&gt; button and navigate to the folder containing the extension. If your manifest file has an error, your extension might be disabled or simply not load. Chrome will tell you if this is the case.&lt;/p&gt;&lt;p&gt;Once you're certain your extension is ready for prime time, you have a couple different options for distributing your extension. You might send out the raw files, but your users won't be able to install the extension unless they also go to the extensions management page and enable developer mode. Your other options are to distribute a packed extension, or put your extension in the Chrome Web Store.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10200&quot;&gt;Distributing a packed extension&lt;/h2&gt;&lt;p&gt;On the extension management page, next to the Load unpacked extension button, is a &lt;strong&gt;Pack extension&lt;/strong&gt; button (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig5&quot;&gt;Figure 5&lt;/a&gt;). Click this button to start the process of packaging your extension for distribution. Chrome will ask you for the directory of the unpacked extension, and optionally for a private key file. I'll come to that private key file in a moment.&lt;/p&gt;&lt;h5 id=&quot;fig5&quot;&gt;Figure 5. The extensions management page&lt;/h5&gt;&lt;img alt=&quot;Screen capture of Chromes extensions management page&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig05.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;The first time you pack the extension, Chrome will generate two files: a .crx file and a .pem file. The .crx file is your packed extension, all ready for distribution. The .pem file is the private key mentioned earlier. Chrome tells you to keep that file safe, and they mean it&amp;#x2014;if you want to package an update to your extension, you will need that private key file. Without it, Chrome will treat the update as a completely new extension.&lt;/p&gt;&lt;p&gt;Once you have your packed extension, you can distribute it any way you please&amp;#x2014;email it out, put it up on your website, package it in your own installer, drop it on flash drives, whatever fits with your plans.  The main downside to distributing it yourself is you also handle the update process.&lt;/p&gt;&lt;p&gt;For your Chrome extension to check for updates, add a line to the manifest file that tells it where to look for updates (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list7&quot;&gt;Listing 7&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list7&quot;&gt;Listing 7. Checking for updates&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;{
+  &quot;name&quot;: &quot;GawkBlocker&quot;,
+  &quot;version&quot;: &quot;1.7&quot;,
+  &quot;update_url&quot;: &quot;http://yourawesomedomain.com/ext/updates.xml&quot;,
+  ...
+}&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you will need to host an XML file that follows the format specified in the Autoupdating section of the reference document.  It's not complicated, but it does put more work on your end.  And it also means you don't get any visibility in the Chrome Web Store.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1022E&quot;&gt;Getting your extension into the Chrome Web Store&lt;/h2&gt;&lt;p&gt;The process for getting an extension into the Chrome Web Store is less technically involved than distributing the extension on your own, but there are some things you will need to do.&lt;/p&gt;&lt;p&gt;First, get set up as a developer in the Web store. For this you need a Google account. Once you sign in, go to the Developer Dashboard and register as a developer. This will cost you $5.00, and you'll need to pay using Google Wallet.  If your Google account is well established, you might be activated in the Developer Dashboard right away. If your account is new or not well used, there might be a delay while the account is reviewed.&lt;/p&gt;&lt;p&gt;After you register as a developer, go back to the directory with your unpacked extension and zip up all the extension files&amp;#x2014;just the HTML, CSS, JavaScript and any image files. Don't include the .crx or .pem files.  The Chrome Web Store will create a .crx file from your zip, and sign it with a private .pem key file.&lt;/p&gt;&lt;p&gt;Once your account is ready to go and you have a zip file, you're ready to click that big blue &lt;strong&gt;Add new item&lt;/strong&gt; button on the dashboard to upload your extension (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig6&quot;&gt;Figure 6&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig6&quot;&gt;Figure 6. Chrome Web store&lt;/h5&gt;&lt;img alt=&quot;Screen capture of the developer page in Chrome's web store&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig06.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;If anything is wrong with your zip file, the dashboard will spit it out with some error messages. If your zip is well formed and your manifest is correctly formatted, you'll see on a page that asks for meta-data about your extension (screen captures, countries, description, and so on). Enter information appropriate to your extension and you can push it to the store with ease.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1024F&quot;&gt;Learn how updates work&lt;/h2&gt;&lt;p&gt;Once your extension is in the store, make a couple small changes and upload updates to the store to get a feel for what that process is like.  A common gotcha is forgetting to update the version number in the manifest file. Every time you upload an update, you can click the &lt;strong&gt;Update extensions now&lt;/strong&gt; button on the Extensions Management page to force an update.  Chrome Extensions ping for updates every few hours, so it doesn't take long to get updates out to your users.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10259&quot;&gt;Finding the answers&lt;/h2&gt;&lt;p&gt;Let's see how the answers to our questions turned out:&lt;/p&gt;&lt;p&gt;How hard is it to get a presence somewhere in the browser UI? Pretty easy as it turns out. You only needed to specify a browser_action in the manifest file and provide an icon.&lt;/p&gt;&lt;p&gt;What is involved in persisting data between browser sessions? In Chrome, you get access to localStorage that persists across application launches.  That makes persisting data between browser sessions very simple.&lt;/p&gt;&lt;p&gt;How do the different parts of the extension talk to each other? All the pages can talk to the background page using &lt;code&gt;chrome.extension.getBackgroundPage()&lt;/code&gt;, and a message passing API allows the different extension components to talk to each other if needed.&lt;/p&gt;&lt;p&gt;How deep can you go into the user's data? As deep as the user lets you. The permissions each have specific warnings, though it might not be entirely clear to the user exactly what those permissions imply.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1026B&quot;&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Having written a basic extension for Chrome, it won't be long now before you go even deeper.  You can access a lot in the chrome.* APIs and you've only begun to scratch the surface.  Now that you've learned the basics, start over from the beginning and see how far you can extend your reach into Chrome.&lt;/p&gt;
+&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;&lt;table class=&quot;ibm-data-table
+                    dw-download-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Description&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Size&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th scope=&quot;row&quot; class=&quot;ibm-table-row&quot;&gt;Article source code&lt;/th&gt;&lt;td nowrap&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/apps/download/index.jsp?contentid=830867&amp;amp;filename=GawkBlocker.zip&amp;amp;method=http&amp;amp;locale=&quot;&gt;GawkBlocker.zip&lt;/a&gt;&lt;/td&gt;&lt;td nowrap&gt;60KB&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+<title>
+Create your own browser extensions, Part 1: Blocking Gawker sites in Chrome
+</title>
+</item>
+<item>
+<author>
+unknown
+</author>
+<link>
+http://volatility-labs.blogspot.com/2014/01/truecrypt-master-key-extraction-and.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-6037270569478628644&quot;&gt;
+One of the &lt;a href=&quot;http://www.truecrypt.org/docs/unencrypted-data-in-ram#Y445&quot;&gt;disclosed&lt;/a&gt; pitfalls of TrueCrypt disk encryption is that the master keys must remain in RAM in order to provide fully transparent encryption. In other words, if master keys were allowed to be flushed to disk, the design would suffer in terms of security (writing plain-text keys to more permanent storage) and performance. This is a risk that suspects have to live with, and one that law enforcement and government investigators can capitalize on.&lt;br&gt;
+&lt;br&gt;
+The default encryption scheme is AES in XTS mode. In XTS mode, primary and secondary 256-bit keys are concatenated together to form one 512-bit (64 bytes) master key. An advantage you gain right off the bat is that patterns in AES keys can be distinguished from other seemingly random blocks of data. This is how tools like &lt;a href=&quot;https://citp.princeton.edu/memory-content/src/aeskeyfind-1.0.tar.gz&quot;&gt;aeskeyfind&lt;/a&gt;&amp;#xA0;and &lt;a href=&quot;https://github.com/simsong/bulk_extractor&quot;&gt;bulk_extractor&lt;/a&gt; locate the keys in memory dumps, packet captures, etc. In most cases, extracting the keys from RAM is as easy as this:&lt;br&gt;
+&lt;br&gt;
+&lt;span&gt;$ &lt;b&gt;./aeskeyfind Win8SP0x86.raw&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;f12bffe602366806d453b3b290f89429&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;e6f5e6511496b3db550cc4a00a4bdb1b&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;a2cde593dd1023d89851049b8474b9a0&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;269493cfc103ee4ac7cb4dea937abb9b&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;269493cfc103ee4ac7cb4dea937abb9b&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;0f2eb916e673c76b359a932ef2b81a4b&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;&lt;b&gt;7a9df9a5589f1d85fb2dfc62471764ef47d00f35890f1884d87c3a10d9eb5bf4&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;&lt;b&gt;e786793c9da3574f63965803a909b8ef40b140b43be062850d5bb95d75273e41&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;Keyfind progress: 100%&lt;/span&gt;&lt;br&gt;
+
+&lt;div&gt;
+Several keys were identified, but only the two final ones in red are 256-bits (the others are 128-bit keys). Thus, you can bet by combining the two 256-bit keys, you'll have your 512-bit master AES key. That's all pretty straightforward and has been documented in quite a few places - one of my favorites being &lt;a href=&quot;http://mweissbacher.com/blog/tag/truecrypt/&quot;&gt;Michael Weissbacher's blog&lt;/a&gt;.&amp;#xA0;&lt;/div&gt;
+
+&lt;div&gt;
+The problem is - what if suspects change the default AES encryption scheme? TrueCrypt also supports Twofish, Serpent, and combinations thereof (AES-Twofish, AES-Twofish-Serpent). Furthermore, it supports modes other than XTS, such as LWR, CBC, outer CBC, and Inner CBC (though many of the CBCs are either deprecated or not recommended).&lt;br&gt;
+&lt;br&gt;
+What do you do if a suspect uses non-default encryption schemes or modes? You can't find Twofish or Serpent keys with tools designed to scan for AES keys -- that just doesn't work. As pointed out by one of our Twitter followers (@brnocrist), a tool by Carsten Maartmann-Moe named &lt;a href=&quot;http://sourceforge.net/projects/interrogate/&quot;&gt;Interrogate&lt;/a&gt; could be of use here (as could several commercial implementations from Elcomsoft or Passware).&amp;#xA0;&lt;/div&gt;
+&lt;p&gt;
+&lt;br&gt;
+Another challenge that investigators face, in the case of file-based containers, is figuring out which file on the suspect's hard disk serves as the container. If you don't know that, then having the master keys is only as useful as finding the key to a house but having no idea where the house is.&amp;#xA0;&lt;/p&gt;
+
+&lt;div&gt;
+To address these issues, I wrote several new Volatility plugins. The truecryptsummary plugin gives you a detailed description of all TrueCrypt related artifacts in a given memory dump. Here's how it appears on a test system running &lt;a href=&quot;http://volatility-labs.blogspot.com/2014/01/the-secret-to-64-bit-windows-8-and-2012.html&quot;&gt;64-bit Windows 2012&lt;/a&gt;.&amp;#xA0;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;p&gt;
+&lt;span&gt;$ &lt;b&gt;python vol.py -f WIN-QBTA4959AO9.raw --profile=Win2012SP0x64 truecryptsummary&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Volatility Foundation Volatility Framework 2.3.1 (T)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;span&gt;Process &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;TrueCrypt.exe at 0xfffffa801af43980 pid 2096&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Kernel Module &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;truecrypt.sys at 0xfffff88009200000 - 0xfffff88009241000&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Symbolic Link &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Volume{52b24c47-eb79-11e2-93eb-000c29e29398} -&amp;gt; \Device\TrueCryptVolumeZ mounted &lt;span&gt;&lt;b&gt;2013-10-11 03:51:08&lt;/b&gt;&lt;/span&gt; UTC+0000&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Symbolic Link &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Volume{52b24c50-eb79-11e2-93eb-000c29e29398} -&amp;gt; \Device\TrueCryptVolumeR mounted &lt;span&gt;&lt;b&gt;2013-10-11 03:55:13&lt;/b&gt;&lt;/span&gt; UTC+0000&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$Directory at 0x7c2f7070&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$LogFile at 0x7c39d750&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$MftMirr at 0x7c67cd40&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\&lt;span&gt;&lt;b&gt;$Mft&lt;/b&gt;&lt;/span&gt; at 0x7cf05230&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$Directory at 0x7cf50330&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$BitMap at 0x7cfa7a00&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\Chats\Logs\bertha.xml at 0x7cdf4a00&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Driver &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; \Driver\truecrypt at 0x7c9c0530 range 0xfffff88009200000 - 0xfffff88009241000&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Device &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; TrueCryptVolumeR at 0xfffffa801b4be080 type FILE_DEVICE_DISK&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Container &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Path: &lt;b&gt;&lt;span&gt;\Device\Harddisk1\Partition1&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Device &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; TrueCrypt at 0xfffffa801ae3f500 type FILE_DEVICE_UNKNOWN&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+Among other things, you can see that the TrueCrypt volume was mounted on the suspect system on October 11th 2013. Furthermore, the path to the container is \Device\Harddisk1\Partition1, because in this case, the container was an entire partition (a USB thumb drive). If we were dealing with a file-based container as previously mentioned, the output would show the full path on disk to the file.&lt;br&gt;
+&lt;br&gt;
+Perhaps even more exciting than all that is the fact that, despite the partition being fully encrypted, once its mounted, any files accessed on the volume become cached by the &lt;a href=&quot;http://volatility-labs.blogspot.com/2012/10/movp-44-cache-rules-everything-around.html&quot;&gt;Windows Cache Manager&lt;/a&gt;&amp;#xA0;per normal -- which means the &lt;a href=&quot;https://code.google.com/p/volatility/wiki/CommandReference23#dumpfiles&quot;&gt;dumpfiles&lt;/a&gt; plugin can help you recover them in plain text. Yes, this includes the $Mft, $MftMirr, $Directory, and other NTFS meta-data files, which are decrypted immediately when mounting the volume. In fact, even if values that lead us to the master keys are swapped to disk, or if TrueCrypt (or other disk encryption suites like PGP or BitLocker) begin using algorithms without predictable/detectable keys, you can still recover all or part of any files accessed while the volume was mounted based on the fact that the Windows OS itself will cache the file contents (remember, the encryption is transparent to the OS, so it caches files from encrypted volumes in the same way as it always does).&amp;#xA0;&lt;/div&gt;
+
+&lt;p&gt;
+After running a plugin such as truecryptsummary, you should have no doubts as to whether TrueCrypt was installed and in use, and which files or partitions are your targets. You can then run the truecryptmaster plugin which&amp;#xA0;performs nothing short of magic.&amp;#xA0;&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;
+&lt;span&gt;$ &lt;b&gt;python vol.py -f WIN-QBTA4.raw --profile=Win2012SP0x64 truecryptmaster -D .&lt;/b&gt;&amp;#xA0;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Volatility Foundation Volatility Framework 2.3.1 (T)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;
+&lt;span&gt;Container: \Device\Harddisk1\Partition1&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Hidden Volume: No&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Read Only: No&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Disk Length: 7743733760 (bytes)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Host Length: 7743995904 (bytes)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Encryption Algorithm: &lt;b&gt;&lt;span&gt;SERPENT&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Mode: &lt;b&gt;&lt;span&gt;XTS&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Master Key&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;&lt;b&gt;0xfffffa8018eb71a8 bbe1dc7a8e87e9f1f7eef37e6bb30a25 &amp;#xA0; ...z.......~k..%&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;&lt;b&gt;0xfffffa8018eb71b8 90b8948fefee425e5105054e3258b1a7 &amp;#xA0; ......B^Q..N2X..&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;&lt;b&gt;0xfffffa8018eb71c8 a76c5e96d67892335008a8c60d09fb69 &amp;#xA0; .l^..x.3P......i&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;&lt;b&gt;0xfffffa8018eb71d8 efb0b5fc759d44ec8c057fbc94ec3cc9 &amp;#xA0; ....u.D.......&amp;lt;.&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;span&gt;Dumped 64 bytes to ./0xfffffa8018eb71a8_master.key&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+You now have a 512-byte Serpent master key, which you can use to decrypt the roughly 8 GB USB drive. It tells you the encryption mode that the suspect used, the full path to the file or container, and some additional properties such as whether the volume is read-only or hidden. As you may suspect, the plugin works regardless of the encryption algorithm, mode, key length, and various other factors which may complicate the procedure of finding keys. This is because it doesn't rely on the key or key schedule patterns -- it finds them in the exact same way the TrueCrypt driver itself finds the keys in RAM before it needs to encrypt or decrypt a block of data.&amp;#xA0;&lt;/p&gt;
+
+&lt;div&gt;
+The truecryptsummary plugin supports all versions of TrueCrypt since 3.1a (released 2005) and truecryptmaster supports 6.3a (2009) and later. In one of the more exciting &lt;a href=&quot;http://volatility-labs.blogspot.com/search/label/training&quot;&gt;hands-on labs in our memory forensics training class&lt;/a&gt;, students experiment with these plugins and learn how to make suspects wish there was no such thing as Volatility.&amp;#xA0;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+TrueCrypt Master Key Extraction And Volume Identification
 </title>
 </item>
 </channel>
