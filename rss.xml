@@ -15,274 +15,7 @@ myread
 </description>
 <item>
 <author>
-unknown
-</author>
-<link>
-http://www.avc.com/a_vc/2014/01/vc-pitches-in-a-year-or-two.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-			&lt;div class=&quot;entry-body&quot; id=&quot;disqus_post_message&quot;&gt;
-				&lt;p&gt;Entrepreneur: I plan to launch a better streaming music service. It leverages the data on what you and your friends currently listen to, combines that with the schedule of new music launches and acts that are touring in your city in the coming months and creates playlists of music that you should be listening to in order to find new acts to listen to and go see live.&lt;/p&gt;
-&lt;p&gt;VC: Well since Spotify, Beats, and Apple have paid all the telcos so that their services are free on the mobile networks, we are concerned that new music services like yours will have a hard time getting new users to use them because the data plan is so expensive. We like you and the idea very much, but we are going to have to pass.&lt;/p&gt;
-
-&lt;p&gt;Entrepreneur: I plan to launch a service that curates the funniest videos from all across the internet and packages them up in a 30 minute daily video show that people will watch on their phones as they are commuting to work on the subway. It's called SubHumor.&lt;/p&gt;
-&lt;p&gt;VC: Well since YouTube, Hulu, and Netflix have paid all the telcos so that their services are free via a sponsored data plan, I am worried that it will hard to get users to watch any videos on their phones that aren't being served by YouTube, Hulu, or Netflix. We like you and your idea very much, but we are going to have to pass.&lt;/p&gt;
-
-&lt;p&gt;Entrepreneur: I plan to launch a photo sharing service where the faster your friends like the photos, the faster they disappear. It's gamified social snapchat.&lt;/p&gt;
-&lt;p&gt;VC: Well since Facebook, Instagram, Twitter, and Snapchat have paid the telcos so the photos that are served up in their apps don't use up any of the data plan, I worry that users won't want to use any other photo sharing services since they will have to pay high data costs to use them. We love your idea and would have funded it right here in the meeting back in the good old days of the open internet, but we can't do that anymore. We are passing.&lt;/p&gt;
-
-&lt;p&gt;This is Internet 3.0. With &lt;a href=&quot;http://www.buzzfeed.com/jwherrman/welcome-to-the-net-neutrality-nightmare-scenario&quot; target=&quot;_self&quot;&gt;yesterday's court ruling&lt;/a&gt; saying that the FCC can not implement the net neutrality rules they adopted a while back, this nightmare is a likely reality. Telcos will pick their preferred partners, subsidize the data costs for those apps, and make it much harder for new entrants to compete with the incumbents.&lt;/p&gt;
-			&lt;/div&gt;
-				
-
-     
-&lt;br&gt;
-
-
-
-&lt;/div&gt;
-	&lt;/div&gt;
-</description>
-<title>
-VC Pitches in a Year or Two
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://blog.nodejs.org/2014/01/15/the-next-phase-of-node-js/index.html
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;column1&quot; class=&quot;interior&quot;&gt;
-      
-      
-        
-
-          &lt;p&gt;Node's growth has continued and accelerated immensely over the last
-few years.  More people are developing and sharing more code with Node
-and npm than I would have ever imagined.  Countless companies are
-using Node, and npm along with it.
-
-&lt;/p&gt;
-&lt;p&gt;Over the last year, &lt;a href=&quot;https://twitter.com/tjfontaine&quot;&gt;TJ Fontaine&lt;/a&gt; has become absolutely essential to the
-Node.js project.  He's been building releases, managing the test bots,
-&lt;a href=&quot;http://www.joyent.com/blog/walmart-node-js-memory-leak&quot;&gt;fixing nasty
-bugs&lt;/a&gt; and
-making decisions for the project with constant focus on the needs of
-our users.  He was responsible for an update to MDB to &lt;a href=&quot;http://www.slideshare.net/bcantrill/node-summit2013&quot;&gt;support
-running ::findjsobjects on Linux core
-dumps&lt;/a&gt;, and is
-working on a shim layer that will provide a stable C interface for
-Node binary addons.  In partnership with Joyent and The Node Firm,
-he's helped to create a path forward for scalable issue triaging.
-He's become the primary point of contact keeping us all driving the
-project forward together.
-
-&lt;/p&gt;
-&lt;p&gt;Anyone who's been close to the core project knows that he's been
-effectively leading the project for a while now, so we're making it
-official.  Effective immediately, TJ Fontaine is the Node.js project
-lead.  I will remain a Node core committer, and expect to continue to
-contribute to the project in that role.  My primary focus, however,
-will be npm.
-
-&lt;/p&gt;
-&lt;p&gt;At this point, npm needs work, and I am eager to deliver what the Node
-community needs from its package manager.  I am starting a company,
-npm, Inc., to deliver new products and services related to npm.  I'll
-be sharing many more details soon about exactly how this is going to
-work, and what we'll be offering.  For now, suffice it to say that
-everything currently free will remain free, and everything currently
-flaky will get less flaky.  Pursuing new revenue is how we can keep
-providing the npm registry service in a long-term sustainable way, and
-it has to be done very carefully so that we don't damage what we've
-all built together.
-
-&lt;/p&gt;
-&lt;p&gt;npm is what I'm most passionate about, and I am now in a position to
-give it my full attention.  I've done more than I could have hoped to
-accomplish in running Node core, and it's well past time to hand the
-control of the project off to its next gatekeeper.
-
-&lt;/p&gt;
-&lt;p&gt;TJ is exactly the leader who can help us take Node.js to 1.0 and
-beyond.  He brings professionalism, rigor, and a continued focus on
-inclusive community values and culture.  In the coming days, TJ will
-spell out his plans in greater detail.  I look forward to the places
-that Node will go with his guidance.
-
-&lt;/p&gt;
-&lt;p&gt;Please join me in welcoming him to this new role :)
-&lt;/p&gt;
-
-
-          &lt;p class=&quot;respond&quot;&gt;Please post feedback and comments on
-            &lt;a href=&quot;https://groups.google.com/group/nodejs&quot;&gt;the Node.JS
-              user mailing list&lt;/a&gt;.&lt;br&gt;
-            Please post bugs and feature requests on
-            &lt;a href=&quot;https://github.com/joyent/node/issues&quot;&gt;the Node.JS
-              github repository&lt;/a&gt;.&lt;/p&gt;
-
-          &lt;p class=&quot;prev&quot;&gt;&lt;a href=&quot;http://blog.nodejs.org/2013/12/31/node-v0-11-10-unstable/&quot;&gt;&amp;#x2190; Node v0.11.10 (Unstable)&lt;/a&gt;&lt;/p&gt;
-              
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-The Next Phase of Node.js
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.edge.org/response-detail/25401
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;field-content&quot;&gt; 
-&lt;p&gt;The notion of standard deviation has confused hordes of scientists; it is time to retire it from common use and replace it with the more effective one of mean deviation. Standard deviation, STD, should be left to mathematicians, physicists and mathematical statisticians deriving limit theorems. There is no scientific reason to use it in statistical investigations in the age of the computer, as it does more harm than good&amp;#x2014;particularly with the growing class of people in social science mechanistically applying statistical tools to scientific problems.&lt;/p&gt;
-&lt;p&gt;Say someone just asked you to measure the &quot;average daily variations&quot; for the temperature of your town (or for the stock price of a company, or the blood pressure of your uncle) over the past five days. The five changes are: (-23, 7, -3, 20, -1). How do you do it?&lt;/p&gt;
-&lt;p&gt;Do you take every observation: square it, average the total, then take the square root? Or do you remove the sign and calculate the average? For there are serious differences between the two methods. The first produces an average of 15.7, the second 10.8. The first is technically called the root mean square deviation. The second is the mean absolute deviation, MAD. It corresponds to &quot;real life&quot; much better than the first&amp;#x2014;and to reality. In fact, whenever people make decisions after being supplied with the standard deviation number, they act as if it were the expected mean deviation.&lt;/p&gt;
-&lt;p&gt;It is all due to a historical accident: in 1893, the great Karl Pearson introduced the term &quot;standard deviation&quot; for what had been known as &quot;root mean square error&quot;. The confusion started then: people thought it meant mean deviation. The idea stuck: every time a newspaper has attempted to clarify the concept of market &quot;volatility&quot;, it defined it verbally as mean deviation yet produced the numerical measure of the (higher) standard deviation.&lt;/p&gt;
-&lt;p&gt;But it is not just journalists who fall for the mistake: I recall seeing official documents from the department of commerce and the Federal Reserve partaking of the conflation, even regulators in statements on market volatility. What is worse, Goldstein and I found that a high number of data scientists (many with PhDs) also get confused in real life.&lt;/p&gt;
-&lt;p&gt;It all comes from bad terminology for something non-intuitive. By a psychological bias Danny Kahneman calls &lt;em&gt;attribute substitution,&lt;/em&gt; some people mistake MAD for STD because the former is easier to come to mind.&lt;/p&gt;
-&lt;p&gt;1) MAD is more accurate in sample measurements, and less volatile than STD since it is a natural weight whereas standard deviation uses the observation itself as its own weight, imparting large weights to large observations, thus overweighing tail events.&lt;/p&gt;
-&lt;p&gt;2) We often use STD in equations but really end up reconverting it within the process into MAD (say in finance, for option pricing). In the Gaussian world, STD is about ~1.25 time MAD, that is, the square root of (Pi/2). But we adjust with stochastic volatility where STD is often as high as 1.6 times MAD.&lt;/p&gt;
-&lt;p&gt;3) Many statistical phenomena and processes have &quot;infinite variance&quot; (sa the popular Pareto 80/20 rule) but have finite, and very well behaved, mean deviations. Whenever the mean exists, MAD exists. The reverse (infinite MAD and finite STD) is never true.&lt;/p&gt;
-&lt;p&gt;4) Many economists have dismissed &quot;infinite variance&quot; models thinking these meant &quot;infinite mean deviation&quot;. Sad, but true. When the great Benoit Mandelbrot proposed his infinite variance models fifty years ago, economists freaked out because of the conflation.&lt;/p&gt;
-&lt;p&gt;It is sad that such a minor point can lead to so much confusion: our scientific tools are way too far ahead of our casual intuitions, which starts to be a problem with science. So I close with a statement by Sir Ronald A. Fisher: 'The statistician cannot evade the responsibility for understanding the process he applies or recommends.'&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;And the probability-related problems with social and biological science do not stop there: it has bigger problems with researchers using statistical notions out of a can without understanding them and babbling &quot;n of 1&quot; or &quot;n large&quot;, or &quot;this is anecdotal&quot; (for a large Black Swan style deviation), mistaking anecdotes for information and information for anecdote. It was shown that the majority use regression in their papers in &quot;prestigious&quot; journals without quite knowing what it means, and what claims can&amp;#x2014;and cannot&amp;#x2014;be made from it. Because of little check from reality and lack of skin-in-the-game, coupled with a fake layer of sophistication, social scientists can make elementary mistakes with probability yet continue to thrive professionally.&lt;/p&gt;
- &lt;/div&gt;  &lt;/div&gt;
-</description>
-<title>
-Nassim Taleb: We should retire the notion of standard deviation
-</title>
-</item>
-<item>
-<author>
-unknown
-</author>
-<link>
-http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;ibm-col-1-1&quot;&gt;
-
-&lt;h2 id=&quot;N10089&quot;&gt;Before you start&lt;/h2&gt;&lt;p&gt;For this article you need to download and install Google Chrome version 19 or higher (the examples shown here are based on version 19). You'll also want something you can use to edit HTML, CSS, and JavaScript. It will help if you have some experience using Chrome and some Chrome extensions first. Take some time to browse the Chrome Web Store (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;). Look at the extensions that are available, and take some for a spin. This will provide some context for this article.&lt;/p&gt;&lt;h2 id=&quot;N100C1&quot;&gt;Why build a browser extension?&lt;/h2&gt;&lt;p&gt;You might want to build a browser extension for several reasons. A common use of browser extensions is to create an interaction between a browser and another application or service. Evernote, 1Password, and Adobe Shadow all do something like this, as do many other extensions. Or you might want to add some new functionality to the browser that it lacks, by adding developer tools or screen capture utilities. Some developers have written extensions with very focused purposes&amp;#x2014;sports score trackers, enhancements for specific websites, weather reporting, and more. People do a lot of different things with extensions. What will you do?&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100CA&quot;&gt;What extension are you building?&lt;/h2&gt;&lt;p&gt;To demonstrate the process for building an extension in Chrome, you'll write an extension called Gawkblocker. Gawkblocker will allow you to block certain domains that you're trying not to visit for one reason or another. Gawkblocker has several components:&lt;/p&gt;&lt;ul class=&quot;ibm-bullet-list&quot;&gt;&lt;li&gt;A pop-up (shows you what you're blocking)&lt;/li&gt;&lt;li&gt;A visible browser icon (point of entry for the extension)&lt;/li&gt;&lt;li&gt;An options page (configure domains you want to block and where you want to go instead)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Broadly speaking, Gawkblocker will attach a listener to each tab or window, and when the tab URL changes, the extension compares the URL to the list of blocked domains. If the URL matches a blocked domain, the request is redirected to an extension page instead (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig1&quot;&gt;Figure 1&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig1&quot;&gt;Figure 1. The Gawkblocker extension&lt;/h5&gt;&lt;img alt=&quot;Screen capture showing the sites being blocked by Gawkblocker&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig01.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;Gawkblocker reaches into the browser in specific ways to do some specific things that you'll do in other extensions. You want answers to these questions:&lt;/p&gt;&lt;ul class=&quot;ibm-bullet-list&quot;&gt;&lt;li&gt;How hard is it to get a presence somewhere in the browser UI?&lt;/li&gt;&lt;li&gt;What is involved in persisting data between browser sessions?&lt;/li&gt;&lt;li&gt;How do the different parts of the extension talk to each other?&lt;/li&gt;&lt;li&gt;How deep can you go into the user's data?&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The process of building Gawkblocker should answer these questions.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100F4&quot;&gt;What is your reference document?&lt;/h2&gt;&lt;p&gt;Your reference document is the Chrome Extension docs (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;). For the most part the documentation for writing Chrome extensions is pretty thorough. A simple one-page tutorial on how to build a &quot;Hello World&quot; extension will give you a super-simple overview of how extensions are put together, but it won't be much use for a deeper dive on the subject.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N100FF&quot;&gt;Anatomy of a Chrome extension&lt;/h2&gt;&lt;p&gt;A typical Chrome extension consists of a manifest file and some combination of a background page, UI pages, and content scripts. &lt;/p&gt;&lt;p&gt;Everything begins with a manifest file called manifest.json. This file contains the information Chrome needs to know about how to load your extension&amp;#x2014;things like title, description, required permissions, and icon references.&lt;/p&gt;&lt;p&gt;A background page is a single page that is launched and run within its own context, no matter how many tabs or windows are open. An extension can have only one background page. They are useful for extensions where you want to have a process running that persists across all pages within Chrome.&lt;/p&gt;&lt;p&gt;UI Pages refer to any page that the extension presents to the user. A UI Page might be a pop-up, an options page, a page that's part of the extension, or a page that overrides a default Chrome page (like the &lt;em&gt;new tab&lt;/em&gt; page).&lt;/p&gt;&lt;p&gt;Content scripts are JavaScript files that you inject into web pages to interact with them. Content scripts execute in their own isolated context, but they can access the DOM of the page. Content scripts can also communicate with other pages in your extension using a special message passing API.&lt;/p&gt;&lt;p&gt;For Gawkblocker, you will use a manifest file, a JavaScript file that contains some core functionality (something you will make portable), a background page, an options page, a pop-up, a redirect landing page, and an icon or two.  You can download a working Gawkblocker extension from the Chrome Web Store if you want to see the extension in action as the various parts are described.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10115&quot;&gt;Gawkblocker's manifest&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list1&quot;&gt;Listing 1&lt;/a&gt; is a copy of the manifest.json file for Gawkblocker.&lt;/p&gt;&lt;h5 id=&quot;list1&quot;&gt;Listing 1. The manifest.json file for Gawkblocker.&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;{
-  &quot;name&quot;: &quot;GawkBlocker&quot;,
-  &quot;version&quot;: &quot;1.7&quot;,
-  &quot;description&quot;: &quot;Tired of taking the Nerd Bait? Use GawkBlocker!&quot;,
-  &quot;background_page&quot; : &quot;background.html&quot;,
-  &quot;options_page&quot;: &quot;options.html&quot;,
-  &quot;icons&quot;: {
-    &quot;16&quot; : &quot;images/GB-19.png&quot;,
-    &quot;48&quot; : &quot;images/GB-48.png&quot;,
-    &quot;128&quot; : &quot;images/GB-128.png&quot;
-  },
-  &quot;browser_action&quot;: {
-    &quot;default_icon&quot;: &quot;images/GB-19.png&quot;,
-    &quot;default_title&quot;: &quot;GawkBlocker&quot;,
-    &quot;default_popup&quot;: &quot;popup.html&quot;
-  },
-  &quot;permissions&quot;: [&quot;tabs&quot;]
-}&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Look at some of these entries in detail.&lt;/p&gt;&lt;dl&gt;&lt;dt&gt;&lt;strong&gt;version&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;Whenever you upload a new version of your extension to the Chrome Web Store, you will need to increment your version number or the upload will fail.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;icons&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;The icons property contains a list of available icons, according to sizes. Chrome looks for specific sizes of icons to use them in different contexts. &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list1&quot;&gt;Listing 1&lt;/a&gt; specifies paths to icon files that are relative to the extension.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;browser_action&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;When you specify a browser_action, you tell Chrome that you want an icon to the right of the URL bar (Chrome calls the URL the Omnibar), and that clicking on the icon will do something. In this case, clicking on the browser action button opens a pop-up.&lt;br&gt;
-
-Only specify a browser_action when your extension applies to any web page. If you want an alternative that only applies to specific pages or types of pages, then you specify a page_action. You can not specify both a page_action and a browser_action&amp;#x2014;it's one or the other.&lt;/dd&gt;&lt;dt&gt;&lt;strong&gt;permissions&lt;/strong&gt;&lt;/dt&gt;&lt;dd&gt;In this case, the only permission you need to request is 'tabs'&amp;#x2014;this permission will give you some information about individual tabs (all you really want is the URL). More permissions are available, but you should only request the permissions you need. Both Chrome and Android handle permissions in very similar ways&amp;#x2014;when the user installs your extension, Chrome will explicitly show you the permissions the extension is requesting, in much the same way that you are prompted with a list of permissions when installing an Android application.&lt;/dd&gt;&lt;/dl&gt;&lt;p&gt;Now that you've walked through the manifest, let's get into the files that give functionality to Gawkblocker.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10147&quot;&gt;The Gawkblocker core class&lt;/h2&gt;&lt;p&gt;Most of what Gawkblocker does will be controlled by a single core JavaScript file. In the file, you define a Storage Manager object (SM) to handle persisting data between sessions (right now this is just a wrapper for &lt;code&gt;localStorage&lt;/code&gt;), and a Gawkblocker object (GB) that handles some of the common functionality (managing the blocked sites list and options). See &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list2&quot;&gt;Listing 2&lt;/a&gt;.&lt;/p&gt;&lt;h5 id=&quot;list2&quot;&gt;Listing 2. Defining a Storage Manager object and Gawkblocker object&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;var SM = (function () {
-
-    var my = {};
-
-    my.get = function (key) {
-        return localStorage.getItem(key);
-    }
-
-    ...
-
-    return my;
-
-}());
-
-var GB = (function (SM) {
-    var my = {};
-
-    my.blockTheseSites = {
-        &quot;gawker.com&quot;        : &quot;Gawker Media&quot;,
-        &quot;io9.com&quot;           : &quot;SciFi Blog&quot;,
-        &quot;gizmodo.com&quot;       : &quot;Gadget Blog&quot;,
-        ...
-    }
-
-    if (!SM.get(&quot;blocklist&quot;)) {
-        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockTheseSites));
-    }
-
-    my.getBlockedSites = function () {
-        return JSON.parse(SM.get(&quot;blocklist&quot;));
-    }
-
-    my.setWatchThisInstead = function (value) {
-        ...
-    }
-
-    my.getWatchThisInstead = function () {
-        return SM.get(&quot;instead&quot;);        
-    }
-
-    my.addBlockedSite = function (site) {
-        my.blockedSites = JSON.parse(SM.get(&quot;blocklist&quot;));
-        my.blockedSites[site] = &quot;Custom Add&quot;;
-        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockedSites));
-    }
-
-    my.removeBlockedSite = function (site) {
-        my.blockedSites = JSON.parse(SM.get(&quot;blocklist&quot;));
-        delete my.blockedSites[site];
-        SM.put(&quot;blocklist&quot;, JSON.stringify(my.blockedSites));
-    }
-
-    return my;
-}(SM));&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I used the Module Patten here to create a couple objects that should be reasonably portable. Now see what it's like to use them in the background page.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1015E&quot;&gt;The background page&lt;/h2&gt;&lt;p&gt;Gawkblocker will use a background page to listen to URLs and compare them against the blocked sites list. Remember, you can only have one instance of the background page, and it is shared across all open tabs and windows (excluding incognito windows, unless you request that permission or the user explicitly allows it). Because the background page itself has no visible component, there's no display-related HTML in the page itself.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list3&quot;&gt;Listing 3&lt;/a&gt; shows the code that listens to tabs for updates.&lt;/p&gt;&lt;h5 id=&quot;list3&quot;&gt;Listing 3. Listening to tabs for updates&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
-    for (site in GB.getBlockedSites()) {
-        if (tab.url.match(site)) {
-            chrome.tabs.update(tabId, {&quot;url&quot; : GB.getWatchThisInstead()}, 
-function () {});
-        }
-    }
-});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are more performant ways to walk the list of blocked sites, but that's not what you should look at. Instead, look at how you attached to Chrome using &lt;code&gt;chrome.tabs.onUpdated.addListener&lt;/code&gt; and passing in a callback.&lt;/p&gt;&lt;p&gt;Every chrome.* API call varies, but generally they follow this pattern of calling a method and passing in a callback. Most of the API calls are asynchronous. This can cause timing issues if you don't expect this behavior, so read what the reference document has to say on this subject.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10178&quot;&gt;The pop-up&lt;/h2&gt;&lt;p&gt;Gawkblocker doesn't really need a pop-up, but by including one provides an easily accessible place for the user to see what sites are currently being blocked. &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list4&quot;&gt;Listing 4&lt;/a&gt; shows the most interesting part of this page.&lt;/p&gt;&lt;h5 id=&quot;list4&quot;&gt;Listing 4. Pop-up page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(document).ready(function(){
-    $.each(chrome.extension.getBackgroundPage().GB.getBlockedSites(), 
-function (index, value) {
-        $(&quot;#blockedlist&quot;).append(&quot;&amp;lt;div class='siterow' title='&quot;+value+&quot;'&amp;gt;
-&amp;lt;div class='sitename'&amp;gt;&quot;+index+&quot;&amp;lt;/div&amp;gt;&amp;lt;span class='sitedesc'&amp;gt; : 
-&quot;+value+&quot;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&quot;);
-    });
-});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The call to &lt;code&gt;chrome.extension.getBackgroundPage().GB.getBlockedSites()&lt;/code&gt; is how you get information from the background page into the pop-up. This is one way to handle communication between pages within an extension, though it's not necessary to do this in the pop-up. You might include the gawkblocker.js file and call the GB object directly. But if you have a lot of asynchronous activity, it's useful to have the different components ask questions from the same place.&lt;/p&gt;&lt;p&gt;The pop-up asks the background page for a list of blocked sites. It then iterates through that list, and appends the blocked site details to a display div in the pop-up (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig2&quot;&gt;Figure 2&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig2&quot;&gt;Figure 2. Pop-up&lt;/h5&gt;&lt;img alt=&quot;Screen capture of Gawkblocker's pop-up showing blocked sites&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig02.jpg&quot; width=&quot;580&quot;&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1019E&quot;&gt;The options page&lt;/h2&gt;&lt;p&gt;You need a place to control the behavior of the extension. If you specify an Options page using the manifest (as you did), the User can easily access the page either from the extensions management page, or right click on the browser action button. Options pages are themselves optional (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig3&quot;&gt;Figure 3&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig3&quot;&gt;Figure 3. Options page&lt;/h5&gt;&lt;img alt=&quot;Screen capture showing the configurable options for Gawkblocker&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig03.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;Gawkblocker uses the Options page to allow the user to specify behavior when visiting a blocked site, to add new sites to the block list, or to remove sites from the block list entirely (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list5&quot;&gt;Listing 5&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list5&quot;&gt;Listing 5. Options page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(&quot;#blockthistoo&quot;).click(function () {
-    GB.addBlockedSite($(&quot;#dontgothere&quot;).val());
-    ...
-});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can go through the background page, just like you did in the pop-up (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list6&quot;&gt;Listing 6&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list6&quot;&gt;Listing 6. Background page&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;$(&quot;#blockthistoo&quot;).click(function () {
-    chrome.extension.getBackgroundPage().GB.addBlockedSite($(&quot;#dontgothere&quot;).val());
-    ...
-});&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Depending on your extension, you might prefer one method over the other.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N101CE&quot;&gt;The redirect landing&lt;/h2&gt;&lt;p&gt;Finally, when a request is redirected, it needs to go to a local page. This page is the most straight-forward of all. As written, it's simply a page that embeds a YouTube video (&quot;Hey You! Don't Watch That! Watch This!&quot;). It doesn't interact with the rest of the extension in any meaningful way, it's just the end point of the process (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig4&quot;&gt;Figure 4&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig4&quot;&gt;Figure 4. Redirect landing&lt;/h5&gt;&lt;img alt=&quot;Screen capture of a browser page titled 'Wouldn't you rather watch madness??' with a running video&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig04.jpg&quot; width=&quot;580&quot;&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N101E2&quot;&gt;Pulling it all together&lt;/h2&gt;&lt;p&gt;Now you have this great extension, but how do you test it out?  To start, load the extension files without packaging them. This is called loading an &lt;em&gt;unpacked extension&lt;/em&gt; and you control it from the Extension Management page (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#resources&quot;&gt;Resources&lt;/a&gt;) (you can also right-click on any installed extension and select &lt;strong&gt;Manage Extensions&lt;/strong&gt;).&lt;/p&gt;&lt;p&gt;To load unpacked extensions, select the &lt;strong&gt;Developer Mode&lt;/strong&gt; box to enable the &lt;strong&gt;Load unpacked extension&lt;/strong&gt; button. To load your extension, click the &lt;strong&gt;Load unpacked extension&lt;/strong&gt; button and navigate to the folder containing the extension. If your manifest file has an error, your extension might be disabled or simply not load. Chrome will tell you if this is the case.&lt;/p&gt;&lt;p&gt;Once you're certain your extension is ready for prime time, you have a couple different options for distributing your extension. You might send out the raw files, but your users won't be able to install the extension unless they also go to the extensions management page and enable developer mode. Your other options are to distribute a packed extension, or put your extension in the Chrome Web Store.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10200&quot;&gt;Distributing a packed extension&lt;/h2&gt;&lt;p&gt;On the extension management page, next to the Load unpacked extension button, is a &lt;strong&gt;Pack extension&lt;/strong&gt; button (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig5&quot;&gt;Figure 5&lt;/a&gt;). Click this button to start the process of packaging your extension for distribution. Chrome will ask you for the directory of the unpacked extension, and optionally for a private key file. I'll come to that private key file in a moment.&lt;/p&gt;&lt;h5 id=&quot;fig5&quot;&gt;Figure 5. The extensions management page&lt;/h5&gt;&lt;img alt=&quot;Screen capture of Chromes extensions management page&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig05.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;The first time you pack the extension, Chrome will generate two files: a .crx file and a .pem file. The .crx file is your packed extension, all ready for distribution. The .pem file is the private key mentioned earlier. Chrome tells you to keep that file safe, and they mean it&amp;#x2014;if you want to package an update to your extension, you will need that private key file. Without it, Chrome will treat the update as a completely new extension.&lt;/p&gt;&lt;p&gt;Once you have your packed extension, you can distribute it any way you please&amp;#x2014;email it out, put it up on your website, package it in your own installer, drop it on flash drives, whatever fits with your plans.  The main downside to distributing it yourself is you also handle the update process.&lt;/p&gt;&lt;p&gt;For your Chrome extension to check for updates, add a line to the manifest file that tells it where to look for updates (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#list7&quot;&gt;Listing 7&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;list7&quot;&gt;Listing 7. Checking for updates&lt;/h5&gt;&lt;div class=&quot;codesection&quot;&gt;&lt;pre class=&quot;displaycode&quot;&gt;{
-  &quot;name&quot;: &quot;GawkBlocker&quot;,
-  &quot;version&quot;: &quot;1.7&quot;,
-  &quot;update_url&quot;: &quot;http://yourawesomedomain.com/ext/updates.xml&quot;,
-  ...
-}&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you will need to host an XML file that follows the format specified in the Autoupdating section of the reference document.  It's not complicated, but it does put more work on your end.  And it also means you don't get any visibility in the Chrome Web Store.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1022E&quot;&gt;Getting your extension into the Chrome Web Store&lt;/h2&gt;&lt;p&gt;The process for getting an extension into the Chrome Web Store is less technically involved than distributing the extension on your own, but there are some things you will need to do.&lt;/p&gt;&lt;p&gt;First, get set up as a developer in the Web store. For this you need a Google account. Once you sign in, go to the Developer Dashboard and register as a developer. This will cost you $5.00, and you'll need to pay using Google Wallet.  If your Google account is well established, you might be activated in the Developer Dashboard right away. If your account is new or not well used, there might be a delay while the account is reviewed.&lt;/p&gt;&lt;p&gt;After you register as a developer, go back to the directory with your unpacked extension and zip up all the extension files&amp;#x2014;just the HTML, CSS, JavaScript and any image files. Don't include the .crx or .pem files.  The Chrome Web Store will create a .crx file from your zip, and sign it with a private .pem key file.&lt;/p&gt;&lt;p&gt;Once your account is ready to go and you have a zip file, you're ready to click that big blue &lt;strong&gt;Add new item&lt;/strong&gt; button on the dashboard to upload your extension (see &lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#fig6&quot;&gt;Figure 6&lt;/a&gt;).&lt;/p&gt;&lt;h5 id=&quot;fig6&quot;&gt;Figure 6. Chrome Web store&lt;/h5&gt;&lt;img alt=&quot;Screen capture of the developer page in Chrome's web store&quot; src=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/fig06.jpg&quot; width=&quot;580&quot;&gt;&lt;p&gt;If anything is wrong with your zip file, the dashboard will spit it out with some error messages. If your zip is well formed and your manifest is correctly formatted, you'll see on a page that asks for meta-data about your extension (screen captures, countries, description, and so on). Enter information appropriate to your extension and you can push it to the store with ease.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1024F&quot;&gt;Learn how updates work&lt;/h2&gt;&lt;p&gt;Once your extension is in the store, make a couple small changes and upload updates to the store to get a feel for what that process is like.  A common gotcha is forgetting to update the version number in the manifest file. Every time you upload an update, you can click the &lt;strong&gt;Update extensions now&lt;/strong&gt; button on the Extensions Management page to force an update.  Chrome Extensions ping for updates every few hours, so it doesn't take long to get updates out to your users.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N10259&quot;&gt;Finding the answers&lt;/h2&gt;&lt;p&gt;Let's see how the answers to our questions turned out:&lt;/p&gt;&lt;p&gt;How hard is it to get a presence somewhere in the browser UI? Pretty easy as it turns out. You only needed to specify a browser_action in the manifest file and provide an icon.&lt;/p&gt;&lt;p&gt;What is involved in persisting data between browser sessions? In Chrome, you get access to localStorage that persists across application launches.  That makes persisting data between browser sessions very simple.&lt;/p&gt;&lt;p&gt;How do the different parts of the extension talk to each other? All the pages can talk to the background page using &lt;code&gt;chrome.extension.getBackgroundPage()&lt;/code&gt;, and a message passing API allows the different extension components to talk to each other if needed.&lt;/p&gt;&lt;p&gt;How deep can you go into the user's data? As deep as the user lets you. The permissions each have specific warnings, though it might not be entirely clear to the user exactly what those permissions imply.&lt;/p&gt;&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;N1026B&quot;&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Having written a basic extension for Chrome, it won't be long now before you go even deeper.  You can access a lot in the chrome.* APIs and you've only begun to scratch the surface.  Now that you've learned the basics, start over from the beginning and see how far you can extend your reach into Chrome.&lt;/p&gt;
-&lt;p class=&quot;ibm-ind-link ibm-back-to-top&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/opensource/library/os-extendchrome/index.html#ibm-content&quot; class=&quot;ibm-anchor-up-link&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;&lt;table class=&quot;ibm-data-table
-                    dw-download-table&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Description&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Size&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th scope=&quot;row&quot; class=&quot;ibm-table-row&quot;&gt;Article source code&lt;/th&gt;&lt;td nowrap&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/apps/download/index.jsp?contentid=830867&amp;amp;filename=GawkBlocker.zip&amp;amp;method=http&amp;amp;locale=&quot;&gt;GawkBlocker.zip&lt;/a&gt;&lt;/td&gt;&lt;td nowrap&gt;60KB&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-Create your own browser extensions, Part 1: Blocking Gawker sites in Chrome
-</title>
-</item>
-<item>
-<author>
-unknown
+Michael Hale Ligh
 </author>
 <link>
 http://volatility-labs.blogspot.com/2014/01/truecrypt-master-key-extraction-and.html
@@ -407,7 +140,11 @@ You now have a 512-byte Serpent master key, which you can use to decrypt the rou
 
 &lt;div&gt;
 The truecryptsummary plugin supports all versions of TrueCrypt since 3.1a (released 2005) and truecryptmaster supports 6.3a (2009) and later. In one of the more exciting &lt;a href=&quot;http://volatility-labs.blogspot.com/search/label/training&quot;&gt;hands-on labs in our memory forensics training class&lt;/a&gt;, students experiment with these plugins and learn how to make suspects wish there was no such thing as Volatility.&amp;#xA0;&lt;/div&gt;
-
+&lt;div&gt;
+&lt;br&gt;
+&lt;b&gt;UPDATE 1/15/2014&lt;/b&gt;:&amp;#xA0;In our opinion, what's described here is not a vulnerability in TrueCrypt (that was the reason we linked to their FAQ in the first sentence). We don't intend to cause mass paranoia or discourage readers from using the TrueCrypt software. Our best advice to people seeking to keep data secure and private is to read the TrueCrypt documentation carefully, so you're aware of the risks. As stated in the comments to this post, powering your computer off is probably the best way to clear the master keys from RAM. However, you don't always get that opportunity (the FBI doesn't call in advance before kicking in doors) and there's also the possibility of&amp;#xA0;&lt;a href=&quot;https://citp.princeton.edu/research/memory/&quot;&gt;cold boot attacks&lt;/a&gt;&amp;#xA0;even if you do shut down.&lt;br&gt;
+&lt;br&gt;
+-Michael Ligh (&lt;a href=&quot;https://twitter.com/iMHLv2&quot;&gt;@iMHLv2&lt;/a&gt;)&lt;/div&gt;
 
 &lt;/div&gt;
 
@@ -415,6 +152,364 @@ The truecryptsummary plugin supports all versions of TrueCrypt since 3.1a (relea
 </description>
 <title>
 TrueCrypt Master Key Extraction And Volume Identification
+</title>
+</item>
+<item>
+<author>
+Jim Salter
+</author>
+<link>
+http://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/
+</link>
+<description>
+&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
+    
+&lt;figure class=&quot;intro-image image center full-width&quot;&gt;
+      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/unix-filesystem.jpg&quot; width=&quot;640&quot;&gt;
+  
+  &lt;/figure&gt;
+  &lt;p&gt;Most people don't care much about their filesystems. But at the end of the day, the filesystem is probably the single most important part of an operating system. A kernel bug might mean the loss of whatever you're working on right now, but a filesystem bug could wipe out everything you've ever done... and it could do so in ways most people never imagine.&lt;/p&gt;
+&lt;p&gt;Sound too theoretical to make you care about filesystems? Let's talk about &quot;bitrot,&quot; the silent corruption of data on disk or tape. One at a time, year by year, a random bit here or there gets flipped. If you have a malfunctioning drive or controller—or a loose/faulty cable—a &lt;em&gt;lot&lt;/em&gt; of bits might get flipped. Bitrot is a real thing, and it affects you more than you probably realize. The JPEG that ended in blocky weirdness halfway down? Bitrot. The MP3 that startled you with a violent CHIRP!, and you wondered if it had always done that? No, it probably hadn't—blame bitrot. The video with a bright green block in one corner followed by several seconds of weird rainbowy blocky stuff before it cleared up again? Bitrot.&lt;/p&gt;
+&lt;p&gt;The worst thing is that backups won't save you from bitrot. The next backup will cheerfully back up the corrupted data, replacing your last &lt;i&gt;good&lt;/i&gt; backup with the bad one. Before long, you'll have rotated through all of your backups (if you even have multiple backups), and the uncorrupted original is now gone for good.&lt;/p&gt;
+&lt;p&gt;Contrary to popular belief, conventional RAID won't help with bitrot, either. &quot;But my raid5 array has parity and can reconstruct the missing data!&quot; you might say. That only works if a drive &lt;i&gt;completely and cleanly fails. &lt;/i&gt;If the drive instead starts spewing corrupted data, the array may or may not notice the corruption (most arrays don't check parity by default on every read). Even if it does notice... all the array knows is that something in the stripe is bad; it has no way of knowing &lt;i&gt;which&lt;/i&gt; drive returned bad data—and therefore which one to rebuild from parity (or whether the parity block itself was corrupt).&lt;/p&gt;
+&lt;p&gt;What might save your data, however, is a &quot;next-gen&quot; filesystem.&lt;/p&gt;
+&lt;p&gt;Let's look at a graphic demonstration. Here's a picture of my son Finn that I like to call &quot;Genesis of a Supervillain.&quot; I like this picture a lot, and I'd hate to lose it, which is why I store it on a next-gen filesystem with redundancy. But what if I didn't do that?&lt;/p&gt;
+&lt;p&gt;As a test, I set up a virtual machine with six drives. One has the operating system on it, two are configured as a simple btrfs-raid1 mirror, and the remaining three are set up as a conventional raid5. I saved Finn's picture on both the btrfs-raid1 mirror and the conventional raid5 array, and then I took the whole system offline and flipped a single bit—yes, just a single bit from 0 to 1—in the JPG file saved on each array. Here's the result:&lt;/p&gt;
+  &lt;div class=&quot;gallery&quot; score=&quot;31.25&quot;&gt;
+    &lt;div class=&quot;gallery-main-image&quot; score=&quot;47.5&quot;&gt;
+      &lt;div class=&quot;gallery-image-container&quot; score=&quot;18.75&quot;&gt;
+        &lt;div class=&quot;gallery-image-wrap&quot;&gt;
+        &lt;a class=&quot;enlarge&quot; href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
+          &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
+        &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+        
+    
+        &lt;div class=&quot;gallery-thumb-mask&quot; score=&quot;6.5&quot;&gt;
+      &lt;ol class=&quot;gallery-thumbs&quot; score=&quot;3.25&quot;&gt;
+                &lt;li class=&quot;selected&quot; score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+                &lt;li score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+                &lt;li score=&quot;2.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    &lt;div class=&quot;gallery-thumb-copy&quot;&gt;
+
+          
+                      &lt;p&gt;Corrupted image: btrfs-raid1.&lt;/p&gt;
+          
+          &lt;/div&gt;
+          
+        &lt;/li&gt;
+              &lt;/ol&gt;
+    &lt;/div&gt;
+       
+      &lt;/div&gt;
+    
+&lt;p&gt;The raid5 array didn't notice or didn't care about the flipped bit in Finn's picture any more than a standard single disk would. The next-gen btrfs-raid1 system, however, immediately caught &lt;i&gt;and corrected&lt;/i&gt; the problem. The results are pretty obvious. If you care about your data, you want a next-gen filesystem. Here, we'll examine two: the older ZFS and the more recent btrfs.&lt;/p&gt;
+&lt;h2&gt;What is a “next-generation” filesystem, anyway?&lt;/h2&gt;
+&lt;p&gt;&quot;Next-generation&quot; is a phrase that gets handed out like sales flyers in a mall parking lot. But in this case, it actually means something. I define a &quot;generation&quot; of filesystems as a group that uses a particular &quot;killer feature&quot;—or closely related set of them—that earlier filesystems don't but that later filesystems all do. Let's take a quick trip down memory lane and examine past and current generations:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Generation 0:&lt;/strong&gt; No system at all. There was just an arbitrary stream of data. Think punchcards, data on audiocassette, Atari 2600 ROM carts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Generation 1:&lt;/strong&gt; Early random access. Here, there are multiple named files on one device with no folders or other metadata. Think Apple ][ DOS (but not ProDOS!) as one example.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Generation 2:&lt;/strong&gt; Early organization (aka folders). When devices became capable of holding hundreds of files, better organization became necessary. We're referring to TRS-DOS, Apple //c ProDOS, MS-DOS FAT/FAT32, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Generation 3:&lt;/strong&gt; Metadata—ownership, permissions, etc. As the user count on machines grew higher, the ability to restrict and control access became necessary. This includes AT&amp;amp;T UNIX, Netware, early NTFS, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Generation 4:&lt;/strong&gt; Journaling! This is the killer feature defining all current, modern filesystems—ext4, modern NTFS, UFS2, you name it. Journaling keeps the filesystem from becoming inconsistent in the event of a crash, making it much less likely that you'll lose data, or even an entire disk, when the power goes off or the kernel crashes.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;So if you accept my definition, &quot;next-generation&quot; currently means &quot;fifth generation.&quot; It's defined by an entire set of features: built-in volume management, per-block checksumming, self-healing redundant arrays, atomic COW snapshots, asynchronous replication, and far-future scalability.&lt;/p&gt;
+&lt;p&gt;That's quite a laundry list, and one or two individual features from it have shown up in some &quot;current-gen&quot; systems (Windows has Volume Shadow Copy to correspond with snapshots, for example). But there's a strong case to be made for the entire list defining the next generation.&lt;/p&gt;
+&lt;h2&gt;Justify your generation&lt;/h2&gt;
+&lt;p&gt;The quickest objection you could make to defining &quot;generations&quot; like this would be to point at NTFS' Volume Snapshot Service (VSS) or at the Linux Logical Volume Manager (LVM), each of which can take snapshots of filesystems mounted beneath them. However, these snapshots can't be replicated incrementally, meaning that backing up 1TB of data requires groveling over 1TB of data every time you do it. (FreeBSD's UFS2 also offered limited snapshot capability.) Worse yet, you generally can't replicate them as snapshots&lt;i&gt;—&lt;/i&gt;with references intact—which means that your remote storage requirements increase exponentially, and the difficulty of managing backups does as well. With ZFS or btrfs replicated snapshots, you can have a single, immediately browsable, fully functional filesystem with 1,000+ versions of the filesystem available simultaneously. Using VSS with Windows Backup, you must use VHD files as a target. Among other limitations, VHD files are only supported up to 2TiB in size, making them useless for even a single backup of a large disk or array. They must also be mounted with special tools not available on all versions of Windows, which goes even further to limit them as tools for specialists only.&lt;/p&gt;
+&lt;p&gt;Finally, Microsoft's VSS typically depends on &quot;writer&quot; components that interface with applications (such as MS SQL Server) which can themselves hang up, making it difficult to successfully create a VSS snapshot in some cases. To be fair, when working properly, VSS writers offer something that simple snapshots don't—application-level consistency. But VSS writer bugs are a real problem, and I've encountered lots of Windows Servers which were quietly failing to create Shadow Copies. (VSS does not automatically create a writer-less Shadow Copy if the system times out; it just logs the failure and gives up.) I have yet to encounter a ZFS or btrfs filesystem or array that won't immediately create a valid snapshot.&lt;/p&gt;
+&lt;p&gt;At the end of the day, both LVM and VSS offer useful features that a lot of sysadmins do use, but they don't jump right out and demand your attention the way filenames, folders, metadata, or journaling did when they came onto the market. Still, this is only one feature out of the entire laundry list. You could make a case that snapshots made the fifth generation, and the &lt;i&gt;other&lt;/i&gt; features in ZFS and btrfs make the sixth. But by the time you finish this article, you'll see there's no way to argue that btrfs and ZFS definitely constitute a &lt;i&gt;new&lt;/i&gt; generation that is easily distinguishable from everything before them.&lt;/p&gt;
+    		&lt;/div&gt;
+    &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
+    
+&lt;p&gt;One argument for labeling &quot;snapshots, volume management, checksumming, self-healing, replication, and scalability&quot; as the definitive feature set for the next generation of filesystems is that btrfs isn't the first filesystem to implement them as a complete set. ZFS (created by Sun Microsystems before the Oracle acquisition) was first to market.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Interestingly, there was a lot of pushback in the Linux world against ZFS, mostly concerning some of these very same features. In particular, the volume management and data-healing capabilities were loudly denounced as a &quot;rampant layering violation.&quot; In the traditional layering model used by the Linux world, the RAID controller shouldn't know or care about the filesystem, and the filesystem shouldn't know or care about the RAID controller. But data healing depends on the filesystem knowing about redundant copies of data blocks. If the first copy of a block of data read fails its checksum, the filesystem needs to know if a different copy is available to be read, verified, and rewritten. This just isn't possible without merging those layers. A year later, btrfs supported raid0, raid1, and raid10; six years later, raid5 and raid6 support were added to mainline (still in progress).&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We'll be comparing btrfs and ZFS directly moving forward; they each have their pros and cons, both in an absolute sense and when compared to each other.&lt;/p&gt;
+&lt;h2&gt;Next-generation features&lt;/h2&gt;
+&lt;p&gt;Before we look too much at actual usage in an on-the-command-line sense, let's go over the actual features mentioned. It's important to understand how they impact you as a user or sysadmin directly. Once you do, you'll have a better idea of why you do (or, just barely conceivably, don't) need and want them on your own equipment. All of these features are available on ZFS and btrfs.&lt;/p&gt;
+&lt;h3&gt;Atomic COW snapshots&lt;/h3&gt;
+&lt;p&gt;An &quot;atomic COW snapshot&quot;—easily the most hilarious-sounding feature ever to grace a filesystem—is an image of the entire filesystem in exactly the condition it was in at a given instant in time, no matter what else was transpiring at the time. So if you take a snapshot of a filesystem at 8:13 and 32 seconds pm on December 19, 2013, that snapshot will contain every single byte of that filesystem at exactly 8:13 and 32 seconds pm on December 19, 2013—period, no ifs, ands, or buts. This helps keep high-activity structures like databases consistent. As long as the database uses journaling (and if it doesn't, upgrade!), its journal will be consistent in the snapshot. Any partially completed transactions can be cleanly rolled back instead of leaving the database in an inconsistent state.&lt;/p&gt;
+&lt;p&gt;COW stands for Copy On Write, so this snapshot that you took does not occupy any storage space in and of itself. It's just a bunch of extra pointers to the same blocks that already contain your data. As you delete or change your data in production, however, the snapshot will retain its copies. Over time, the space taken up by the snapshot increases from &quot;none&quot; to &quot;the amount of data contained in this snapshot and no other snapshot.&quot; &quot;Atomic,&quot; in this sense, refers to the atom as being an &quot;indivisible&quot; unit (quiet, quantum physicists!).&lt;/p&gt;
+&lt;p&gt;Still not sure what a snapshot is or why you'd want it? Well, imagine you're about to do something potentially dangerous to your system like apply an automatic update to a big cranky application you rely on a lot and don't trust, or manually delete a bunch of stuff in system directories to try to uninstall a program that you can't remove normally. (We're talking big things that could go wrong and may be difficult or impossible to undo.) Before doing them... take a snapshot. Then, if $BigScaryProcedure goes wrong, roll back to the snapshot you just took. &lt;em&gt;Poof&lt;/em&gt;, everything is peachy again.&lt;/p&gt;
+&lt;p&gt;In practice, I take a snapshot every hour on the hour on my own machines and delete the old snapshots as necessary to recover disk space. That gives me the best possible chance to recover from something unexpected going horribly, horribly wrong.&lt;/p&gt;
+&lt;h3&gt;Per-block checksumming&lt;/h3&gt;
+&lt;p&gt;It's a common misconception to think that RAID protects data from corruption since it introduces redundancy. The reality is exactly the opposite: traditional RAID &lt;i&gt;increases&lt;/i&gt; the likelihood of data corruption since it introduces more physical devices with more things to go wrong. What RAID does protect you from is data loss due to the instantaneous failure of a drive. But if the drive isn't so obliging as to just politely die on you and instead starts reading and/or writing bad data, you're still going to &lt;i&gt;get&lt;/i&gt; that bad data. The RAID controller has no way of knowing if the data is bad since parity is written on a per-stripe basis and not a per-block basis. In theory (in practice, parity isn't always strictly checked on every read), a RAID controller could tell you that the data in a stripe was corrupt, but it would have no way of knowing if the actual corrupt data was on any given drive. We demonstrated this in the introduction. Although I was using a raid5 array with parity, the picture of my son stored on it was very visibly corrupted when a single bit changed from a 0 to a 1. Ouch.&lt;/p&gt;
+&lt;p&gt;By contrast, with every individual block of data written, btrfs also writes a checksum. With every individual block of data read, btrfs reads the associated checksum and verifies the block against it. This allows the filesystem (and you) to know immediately if data has been corrupted.&lt;/p&gt;
+&lt;h3&gt;Self-healing redundant arrays&lt;/h3&gt;
+&lt;p&gt;We also demonstrated this in the introduction. The copy of my son's picture on the btrfs-raid1 array got a bit flipped, just like the copy on the raid5 array, but the btrfs array detected and immediately repaired the corrupt data as soon as I attempted to read it.&lt;/p&gt;
+&lt;p&gt;The system's kernel log tells the story there:&lt;/p&gt;
+&lt;pre&gt;[   87.030967] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
+[   87.031188] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
+[   87.031678] btrfs read error corrected: ino 258 off 0 (dev /dev/vde sector 267344)&lt;/pre&gt;
+&lt;p&gt;You have to love that.&lt;/p&gt;
+&lt;p&gt;Healing is made possible by combining per-block checksumming with (redundant) volume and drive management. If you aren't storing your data redundantly, all you can do with a checksum is realize that your data is corrupt. But if you &lt;em&gt;are&lt;/em&gt; storing data redundantly either through mirroring (btrfs-raid1 or btrfs-raid10) or striping-with-parity (btrfs-raid5 or btrfs-raid6), btrfs can immediately detect corruption and repair it. In this case, when a corrupt block is detected, it's read from parity or from an alternate copy, which is also verified. If the reconstruction/alternate copy does pass verification, it's quietly handed to you while btrfs rewrites it over the corrupt version in the background.&lt;/p&gt;
+&lt;p&gt;This is an awesome feature, and (in ZFS) it has personally saved me from data loss on many occasions. It's not uncommon at all to see five, or 10, or 50 checksum errors on a disk that's been in service for a few years... and in some cases I've seen ZFS raidZ arrays with 100,000+ checksum errors on one drive—and no data lost or corrupted. If you care about your data, and especially if you care about your data surviving for decades or longer, you absolutely need this feature.&lt;/p&gt;
+&lt;h3&gt;Volume management&lt;/h3&gt;
+&lt;p&gt;For decades, we've partitioned drives in order to make more granular use of the space on them. If you want 100GB for your operating system and 900GB for data storage (and you don't want overuse of your data storage to cause your OS problems), you partition your drives. But if you change your mind later, deciding you want 200GB for your operating system, you're in for some pain. You &lt;em&gt;can&lt;/em&gt; resize partitions, but it's a potentially dangerous operation, and it frequently requires you to shut your system down while it's going on.&lt;/p&gt;
+&lt;p&gt;Volume management, by contrast, means being able to dynamically define multiple filesystems with attributes including (but not limited to) quota size, read-only or read-write, and mountpoint at the drop of a hat. They can be resized, renamed, cloned, duplicated, and have permissions changed instantly and safely. Most of these features were previously available to Linux users under LVM, the Linux Logical Volume Management stack. Btrfs pretty much makes LVM obsolete.&lt;/p&gt;
+&lt;h3&gt;Far-future scalability&lt;/h3&gt;
+&lt;p&gt;One concept common to each of the last generations of filesystem is that they've tended to be obviously tied to the prevalent media at the time. When all you have are punch cards and audio tapes, not having an actual filesystem at all makes a lot of sense. When you're almost entirely working with floppy drives, scaling past a few MB of storage doesn't look like something worth bothering with. Now, however, we're working with rapidly increasing storage size per drive, and large storage arrays are becoming more and more common. The question &quot;but what do I &lt;em&gt;do&lt;/em&gt; with 6 petabytes of data?&quot; starts to look a lot less silly.&lt;/p&gt;
+&lt;p&gt;ZFS and btrfs both made the decision to plan from the start for what currently looks like absolutely ridiculous scale designs, since the system will almost certainly outlive the hardware we currently implement it on.&lt;/p&gt;
+&lt;p&gt;The designers of ZFS famously claimed that flipping every bit in a maximum-sized zpool would &quot;require enough energy to boil every ocean on the planet.&quot; Btrfs didn't go quite &lt;i&gt;that&lt;/i&gt; far, but it didn't really need to. Its current maximum filesystem size is 16 EiB. To put that in perspective, if you gave every single human being on the planet a brand-new 2TiB hard drive, you'd still fall a little short of 16EiB total, and the resultant monstrosity would consume about 35 times the total power generation capacity of the United States in 2011. That's... probably future-forward enough for now.&lt;/p&gt;
+&lt;h3&gt;Asynchronous incremental replication&lt;/h3&gt;
+&lt;p&gt;Last but certainly not least, we come to replication. Boiled down to a nutshell, asynchronous replication means that you can take an atomic snapshot of an entire filesystem and easily move the entire thing, block-by-block, on to a remote filesystem. Own two computers? Do all your work on computer A, take a snapshot, send the snapshot to computer B. Computer B now has an exact replica of every single bit stored in your filesystem as of the time you took the snapshot. The problem, of course, is that we're talking every single bit of data... so it clearly takes a long time to copy.&lt;/p&gt;
+&lt;p&gt;Which is where &quot;incremental&quot; comes in. Once you've replicated your initial snapshot from computer A to computer B, you take another snapshot. Your filesystem size as a whole might be 4TiB, but if you've only changed, say, 500MiB of data... then that 500MiB is all you have to transfer from computer A to computer B. Now you have replication of the second snapshot taking place in seconds or minutes instead of hours or days. Even better, unlike traditional &quot;synchronization&quot; methods, you don't need to crawl over the filesystem on both sides first to figure out what's changed. Computer A knows exactly what has changed between snapshots 1 and 2, and it can immediately begin squirting that data—and only that data—to computer B.&lt;/p&gt;
+&lt;figure class=&quot;image center&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;20.0&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; Left pane: your whole PC, as of the top of each hour. Right pane: your whole PC, as of the top of each hour, on a remote PC.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;In practice, this means it's actually no-kidding feasible to back your entire computer up on an hourly basis to a remote location—even with terabytes of data and a relatively cheap-and-slow Internet connection.&lt;/p&gt;
+    		&lt;/div&gt;
+    &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div class=&quot;article-content clearfix&quot; score=&quot;10.0&quot;&gt;
+    &lt;h2&gt;Features unique to btrfs&lt;/h2&gt;
+&lt;p&gt;In the last section, I outlined what I consider the &quot;standard set of features&quot; for next-gen filesystems. But btrfs brings some new things to the table that ZFS doesn't.&lt;/p&gt;
+&lt;h3&gt;File-level cloning&lt;/h3&gt;
+&lt;p&gt;This, frankly, is huge. I work a lot with virtual machines, which means I have lots and lots of tremendous files ranging in size from 5GB to 400GB (sometimes bigger) lying around various systems. &quot;File-level cloning&quot; means that I can make a fully writable clone copy of one of these several-hundred-gigabyte files in an instant.&lt;/p&gt;
+&lt;pre&gt;    me@server:~$ cp --reflink=always 200GB_virtual_machine_drive.qcow2 clone_of_200GB_virtual_machine_drive.qcow2&lt;/pre&gt;
+&lt;p&gt;The above command will &quot;copy&quot; that 200GB of data in milliseconds, and it's a deduplicated copy at that. At the time of copying, no actual additional drive space is needed; clone_of_200GB_virtual_machine_drive.qcow2 actually just points to all the same data blocks. As I write to clone_of_200GB_virtual_machine.qcow2, though (or to the original 200GB_virtual_machine_drive.qcow2), each block that I write to is written as a new block. Over time, the file gradually diverges from its parent as needed—but &lt;em&gt;only&lt;/em&gt; as needed.&lt;/p&gt;
+&lt;p&gt;This feature also enables you to selectively copy big chunks of data out of snapshots back into your main filesystem without having to preemptively roll the whole thing back... and again, without taking up any extra disk space unless and until you actually modify the copied (technically, cloned) files. This really can be a lifesaver.&lt;/p&gt;
+&lt;p&gt;By contrast, if you want to get individual files out of a ZFS snapshot (or one of the more primitive snapshots in NTFS or LVM), you have to actually copy them block by block, both consuming extra space and potentially taking a tremendous amount of time if it's a whole lot of data. Wasted disk space aside, the 200GB virtual machine image I used in my example could easily take three hours or more to copy out of a ZFS snapshot. In practice, this means that with ZFS, you want to create tons and tons of child filesystems since you can roll an entire filesystem back to a snapshot of itself instantly, but picking and choosing individual files means painful copy operations. With btrfs, you don't need to do that. Snapshot the entire btrfs filesystem, then just copy stuff back out of it piecemeal if you like. I consider this to be a pretty killer feature.&lt;/p&gt;
+&lt;h3&gt;Online balancing&lt;/h3&gt;
+&lt;p&gt;This is one of the features that home users and hobbyists constantly twit ZFS for lacking. With ZFS, once you set up a RAIDZ array, it's immutable. You can repair it by replacing drives, but you can never expand it, or contract it, or change its level. (You can add another array to a pool, but that's rarely what hobbyists or small businesses actually want.)&lt;/p&gt;
+&lt;p&gt;Btrfs, on the other hand, allows you to do pretty much anything in terms of live storage reconfiguration. Let's say you want to set up a system with two drives in a btrfs-raid1 (mirror) array. First, you run through your Linux installation... and just do a perfectly standard installation to the first disk. Get it all up and running on the one disk. Don't worry about the other one. Got it all running? Time to make sure we know what partition number we're using:&lt;/p&gt;
+&lt;pre&gt;    me@machine:~$ sudo btrfs filesystem show
+    Label: none uuid: c9c5e506-6b87-4741-9017-f416d2f2ae8c
+        Total devices 1 FS bytes used 1.41GB
+        devid   1 size 9.31GB used 3.54GB path /dev/vda1&lt;/pre&gt;
+&lt;p&gt;OK, we're using the first partition of the first drive, which in my case is /dev/vda1. Before we do anything else, we want to copy the partition table layout to our second drive and install the GRUB boot loader onto it so we can boot from it if we lose the first drive:&lt;/p&gt;
+&lt;pre&gt;    me@machine:~$ sudo sfdisk -d /dev/vda | sudo sfdisk /dev/vdb
+    me@machine:~$ sudo grub-install /dev/vdb&lt;/pre&gt;
+&lt;p&gt;Now we add the second drive's first partition to our btrfs filesystem:&lt;/p&gt;
+&lt;pre&gt;    me@machine:~$ sudo btrfs device add /dev/vdb1 /&lt;/pre&gt;
+&lt;p&gt;And we rebalance the filesystem as a btrfs-raid1 mirror:&lt;/p&gt;
+&lt;pre&gt;    me@machine:~$ sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /&lt;/pre&gt;
+&lt;p&gt;The system starts chugging along, busily copying all of the data from our first drive to the second one. The command doesn't return until the operation is done, but—here's the beautiful part—the system remains usable while this is going on! Browse the Internet, play solitaire, open up more terminals... whatever you like. In a few moments, if this is a clean system, the operation is done. You now have a working btrfs-raid1 system.&lt;/p&gt;
+&lt;p&gt;This is impressive enough on its own, but you could have added a third disk and rebalanced -dconvert=raid5 -mconvert=raid5, a fourth disk and raid10 or raid6... whatever you like. You still &lt;i&gt;can. &lt;/i&gt;Btrfs is perfectly happy converting any raid level to any other raid level on the fly while the system is running. This is a killer feature for hobbyists and admins at smaller organizations who can't afford to just build entire new systems and migrate data over.&lt;/p&gt;
+&lt;h3&gt;NODATACOW&lt;/h3&gt;
+&lt;p&gt;One of the more common complaints about next-generation filesystems is that if you hammer them extremely hard with a never-ending stream of really punishing random I/O, they will eventually fall down harder than simpler conventional filesystems. So, the thinking goes, btrfs and ZFS may not be the best choice for that über database server or 128-core/256GB RAM experimental botnet-in-a-box VM host you're thinking of building.&lt;/p&gt;
+&lt;p&gt;Btrfs addresses this, at least in part, by letting you set any given file or directory NODATACOW, which means that the file or files within a directory will not be handled copy-on-write like normal files under btrfs (or zfs) are. This alleviates some of the ultimate-performance concerns mentioned above.&lt;/p&gt;
+&lt;p&gt;That said, in my experience, the vast majority of workloads—including databases and VM hosts under most load conditions—perform just &lt;i&gt;fine&lt;/i&gt; under COW filesystems, so I wouldn't rush to set this on everything. In what little testing I've done, turning NODATACOW on for an image directory containing a Windows Server 2008 R2 VM resulted in a paltry five to 10 percent performance increase &lt;i&gt;at best&lt;/i&gt; in an HDTune Pro benchmark run against its storage. And you will be giving up per-block checksumming at least by doing so. It's there, and it's very cool that it's there, but like most things, don't start tuning until you're sure you &lt;i&gt;need&lt;/i&gt; to start tuning.&lt;/p&gt;
+&lt;h3&gt;File-level/Directory-level compression&lt;/h3&gt;
+&lt;p&gt;ZFS offers compression, but it needs to be enabled on an entire filesystem level. Btrfs also offers compression with multiple algorithms (currently gz is the default, and lzo is available out of the box), but btrfs allows you to control compression at the filesystem, subvolume, directory, and even individual file level. You can also do neat things like choose &lt;em&gt;not&lt;/em&gt; to compress files whose names end in .jpg or .jpeg or .avi since those are compressed formats already, and general-purpose compression can only make them larger and cost you unnecessary CPU cycles. (This is the &lt;i&gt;default&lt;/i&gt; behavior—you don't even need to set it up!)&lt;/p&gt;
+&lt;p&gt;This is pretty awesome. And devs on the mailing list are talking about making the feature even smarter by scanning files for MIME headers and/or test-compressing the first few blocks on write, then writing the rest decompressed if the compression algorithm doesn't seem to be working well.&lt;/p&gt;
+&lt;h2&gt;Using the features: A quick rundown&lt;/h2&gt;
+&lt;p&gt;Let's take a look at a real, if simple, btrfs filesystem:&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs filesystem show
+    failed to open /dev/sr0: No medium found
+    Label: none  uuid: e5398102-7f0f-41e6-92f8-bc05176aa3ae
+    	Total devices 1 FS bytes used 3.03GB
+    	devid    1 size 24.00GB used 6.04GB path /dev/vda1
+
+    Btrfs v0.20-rc1&lt;/pre&gt;
+&lt;p&gt;This is the btrfs filesystem itself as seen on a brand-new, just-installed Ubuntu Saucy virtual machine. By itself, this doesn't seem all that informative, but it becomes a lot more useful if you're running multiple filesystems or a single filesystem on multiple physical devices, such as a btrfs-raid0/1/5/6/10 array.&lt;/p&gt;
+&lt;p&gt;Now let's take a look at the subvolumes within the filesystem:&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub list /
+    ID 256 gen 199294 top level 5 path @
+    ID 257 gen 199294 top level 5 path @home&lt;/pre&gt;
+&lt;p&gt;What we're looking at here is Ubuntu's default installation layout on btrfs: one subvolume for root and another for /home. This allows you (in fact, requires you) to snapshot the two volumes independently, which in turn makes it easier to only back up one or the other or only roll back one or the other. You could, for example, roll back your root filesystem after a disastrous upgrade without affecting data you had saved in your home directory. We can see this reflected in /etc/fstab as well:&lt;/p&gt;
+&lt;pre&gt;    # /etc/fstab: static file system information.
+    #
+    # Use 'blkid' to print the universally unique identifier for a
+    # device; this may be used with UUID= as a more robust way to name devices
+    # that works even if disks are added and removed. See fstab(5).
+    #
+    #                
+    proc            /proc           proc    nodev,noexec,nosuid 0       0
+    # / was on /dev/sda5 during installation
+    UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /               btrfs   defaults,subvol=@     0       1
+    # /home was on /dev/sda5 during installation
+    UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /home           btrfs   defaults,subvol=@home 0       2&lt;/pre&gt;
+&lt;p&gt;Let's say you've got another computer with a btrfs filesystem and you want to back up your home directory from this computer to the other one. We'll use btrfs' built-in asynchronous replication for this. First, let's create a new subvolume underneath /home to contain the snapshots:&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub create /home/.snapshots
+    Create subvolume '/home/.snapshots'&lt;/pre&gt;
+&lt;p&gt;Now, let's take our first snapshot:&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub snapshot -r /home /home/.snapshots/myfirstsnapshot
+    Create a readonly snapshot of '/home' in '/home/.snapshots/myfirstsnapshot'&lt;/pre&gt;
+&lt;p&gt;We can see the new structure with another btrfs subvolume list:&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub list /
+    ID 256 gen 199294 top level 5 path @
+    ID 257 gen 199294 top level 5 path @home
+    ID 849 gen 199310 top level 5 path @home/.snapshots
+    ID 850 gen 199311 top level 5 path @home/.snapshots/myfirstsnapshot&lt;/pre&gt;
+&lt;p&gt;Now, let's replicate the snapshot to our second machine, which has convenient subvolumes named /backup and /backup/home and /backup/home/.snapshots.&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs send /home/.snapshots/myfirstsnapshot | ssh second-machine sudo btrfs receive /backup/home/.snapshots&lt;/pre&gt;
+&lt;p&gt;In its simplest possible form, this demonstrates sending the snapshot—which contains the entire /home subvolume at the time it was taken, remember—and tunneling it through ssh to the btrfs filesystem on the other end. There's nothing too special about this yet. Sure, you're replicating the entire subvolume all at once, which is kind of neat, but you could accomplish this in all kinds of ways. Where this gets cool is when we take and send a &lt;i&gt;second&lt;/i&gt; snapshot.&lt;/p&gt;
+&lt;pre&gt;    me@virtual-machine: sudo btrfs sub snapshot -r /home /home/.snapshots/mysecondsnapshot
+    me@virtual-machine: sudo btrfs send -p /home/.snapshots/myfirstsnapshot /home/.snapshots/mysecondsnapshot | ssh second-machine btrfs receive /backup/home/.snapshots&lt;/pre&gt;
+&lt;p&gt;What we did here was send only the data that has &lt;i&gt;changed on-disk&lt;/i&gt; between &quot;myfirstsnapshot&quot; and &quot;mysecondsnapshot.&quot; What's especially awesome about this is that the system doesn't have to laboriously scan the disks to find things that have changed. It already knows what has or hasn't changed, so it can just immediately start spitting data out to the receive process on the other end. If you have a few text files to replicate, this might not matter. But if you have a terabyte or five of database binaries or virtual machine storage, this is a huge deal. Backups that would have taken hours or days and generated a tremendous amount of system load with older technologies can now complete in minutes with little or no extra load.&lt;/p&gt;
+&lt;p&gt;I have systems that routinely replicate a terabyte or more of data across cheap 3Mbps and slower Internet connections using this technology... sometimes, replicating several times per day. There is literally no other technology that can accomplish this. If you have a six-figure SAN that replicates off-site several times a day, incremental snapshot replication is how it does it.&lt;/p&gt;
+&lt;h2&gt;Great! Where do I start? Well...&lt;/h2&gt;
+&lt;pre&gt;    WARNING! - Btrfs Btrfs v0.20-rc1 IS EXPERIMENTAL
+    WARNING! - see http://btrfs.wiki.kernel.org before using&lt;/pre&gt;
+&lt;p&gt;You will see this message every time you create or mount a btrfs filesystem, and it really does mean what it says. All of the features I've outlined in this article are there, and they work, and they're amazing... but they currently come with a heaping helping of surprises, not all pleasant. While I have not lost any data to btrfs—including in some fairly extensive &quot;drop-testing&quot; explicitly designed to &lt;em&gt;try&lt;/em&gt; to make it lose data—I have seen weird performance death spirals that needed reboots to bring the machine back. There are also deliberately-still-rough areas of the interface like redundant arrays refusing to boot without being fed special arguments if one disk is lost, even though the array is otherwise fine. These headaches will need to be smoothed out before btrfs is ready for prime time.&lt;/p&gt;
+&lt;p&gt;Further, while the on-disk format is now considered &quot;stable&quot; and is not expected to change, btrfs is still evolving rapidly enough that you should probably be using &lt;i&gt;really&lt;/i&gt; bleeding-edge kernels if you want to test it. I began my journey with btrfs using the very latest kernel in Ubuntu's pipeline, and I ended up jumping two steps beyond that to one in the dailies... which is way outside my normal comfort zone. If you're a very experienced or just-plain-determined admin and you're willing to &lt;i&gt;make and use regular backups&lt;/i&gt;, btrfs is ready for you to jump in, test, and even use directly. But if you're looking for a mature filesystem that's ready for normal users and admins to use day to day... it will get there, but it's not there yet.&lt;/p&gt;
+&lt;p&gt;If you're still determined to jump in and test and/or use btrfs—well, dive on in! Be sure to read the wiki at http://btrfs.wiki.kernel.org &lt;i&gt;thoroughly&lt;/i&gt;, and I'd advise subscribing to the btrfs mailing list (referenced at the wiki) as well. The Bugzilla installation at kernel.org is also a must-have resource, both for looking through open bugs and submitting your own.&lt;/p&gt;
+&lt;h2&gt;The final takeaway&lt;/h2&gt;
+&lt;p&gt;The most important part of computing in the long term is keeping your data accessible and intact. Far-future scalability minimizes the need for spurious on-disk format changes (which can trap your data behind legacy equipment) in the future. Easily accessible snapshots mean the danger of &quot;oops I accidentally lost the whole file&quot; errors are largely avoidable. Incremental replication means that even huge volumes of data can be gotten safely, easily, and cheaply to physically remote locations. And easy-to-setup, easy-to-maintain, redundant self-healing arrays finally put the ugly specter of bitrot in a much more manageable position as well.&lt;/p&gt;
+&lt;figure class=&quot;image center&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;20.0&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; Each folder is the whole filesystem, fully browsable. Each folder is on a local server, and on a remote server, exactly the same. Are your backups this easy to understand and use?&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Btrfs and ZFS make keeping your data safe—against all the things that tend to kill it—more possible than it ever has been. It's easy to miss the importance at first glance, because most of us didn't have any digital data 20 years ago. In 1994, for most people, computers were computers and real life was real life, so we aren't missing the lack of it now. But in 2014, we document our real lives directly on our computers—increasingly, only on our computers. In 2034, the difference between current and last-generation filesystems will be at least as obvious in retrospect as the difference between Polaroids and real film is now.  &lt;/p&gt;&lt;div class=&quot;gallery&quot; score=&quot;31.25&quot;&gt;
+    &lt;div class=&quot;gallery-main-image&quot; score=&quot;47.5&quot;&gt;
+      &lt;div class=&quot;gallery-image-container&quot; score=&quot;18.75&quot;&gt;
+        &lt;div class=&quot;gallery-image-wrap&quot;&gt;
+        &lt;a class=&quot;enlarge&quot; href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
+          &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
+        &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+        
+    
+        &lt;div class=&quot;gallery-thumb-mask&quot; score=&quot;6.5&quot;&gt;
+      &lt;ol class=&quot;gallery-thumbs&quot; score=&quot;3.0&quot;&gt;
+                &lt;li class=&quot;selected&quot; score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+                &lt;li score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+                &lt;li score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+                &lt;li score=&quot;1.25&quot;&gt;
+          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits-150x150.jpg&quot;&gt;&lt;/a&gt;
+
+                    
+          
+        &lt;/li&gt;
+              &lt;/ol&gt;
+    &lt;/div&gt;
+       
+      &lt;/div&gt;
+    
+&lt;p&gt;&lt;em&gt;Jim Salter (&lt;a href=&quot;http://twitter.com/jrssnet&quot;&gt;@jrssnet&lt;/a&gt;) is an &lt;a href=&quot;http://jrs-s.net&quot;&gt;author&lt;/a&gt;, &lt;a href=&quot;http://jrs-s.net/presentations/&quot;&gt;public speaker&lt;/a&gt;, small business owner, mercenary sysadmin, and father of three—not necessarily in that order. He got his first real taste of open source by running Apache on his very own dedicated FreeBSD 3.1 server back in 1999, and he's been a fierce advocate of FOSS ever since. He also also created and maintains &lt;a href=&quot;http://freebsdwiki.net&quot;&gt;http://freebsdwiki.net&lt;/a&gt; and &lt;a href=&quot;http://ubuntuwiki.net&quot;&gt;http://ubuntuwiki.net&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+    		&lt;/div&gt;
+    
+</description>
+<title>
+Bitrot and atomic COWs: Inside “next-gen” filesystems
+</title>
+</item>
+<item>
+<link>
+http://security.stackexchange.com/questions/29019/are-passwords-stored-in-memory-safe
+</link>
+<description>
+
+</description>
+<title>
+Are passwords stored in memory safe? 
+</title>
+</item>
+<item>
+<link>
+http://xpra.org/
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;fullcontent&quot;&gt;
+	&lt;a id=&quot;about&quot;&gt;&lt;/a&gt;
+	&lt;div class=&quot;box&quot;&gt;
+		&lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/gears.png&quot; alt=&quot;gears&quot;&gt; About&lt;/h2&gt;
+		Xpra is 'screen for X', and more: it allows you to run X programs, usually on
+		a remote host and direct their display to your local machine. It also allows you
+		to display existing desktop sessions remotely.
+		&lt;br&gt;
+		Xpra is &lt;a href=&quot;http://xpra.org/trac/wiki/About&quot;&gt;&quot;rootless&quot; or &quot;seamless&quot;&lt;/a&gt;, and sessions can be accessed over SSH,
+		or password protected and encrypted over plain TCP sockets.
+		&lt;br&gt;
+		Xpra adapts to bandwidth constraints and is fully open-source.
+		&lt;br&gt;
+		For more details see &lt;a href=&quot;http://xpra.org/trac/wiki/About&quot;&gt;here&lt;/a&gt;, you can find the source &lt;a href=&quot;https://www.xpra.org/trac/wiki/Source&quot;&gt;here&lt;/a&gt;.
+  	&lt;/div&gt;
+
+	&lt;a id=&quot;features&quot;&gt;&lt;/a&gt;
+	&lt;div class=&quot;box&quot;&gt;
+		&lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/features.png&quot; alt=&quot;features&quot;&gt; Enhancements&lt;/h2&gt;
+		This fork adds many enhancements over the &lt;a class=&quot;ext&quot; href=&quot;http://partiwm.googlecode.com&quot;&gt;original version&lt;/a&gt;:
+		better performance and platform support, hardware acceleration, multi-user support, GUI tools and configuration and options;
+		keyboard and clipboard fixes; cursor, sound, system tray and notifications forwarding;
+		IPv6 support, support for shadowing existing displays, etc; and many bug fixes.
+		&lt;br&gt;
+		For more details see &lt;a href=&quot;http://xpra.org/trac/wiki/Enhancements&quot;&gt;here&lt;/a&gt;.
+	&lt;/div&gt;
+
+	&lt;a id=&quot;download&quot;&gt;&lt;/a&gt;
+	
+
+	&lt;a id=&quot;get_started&quot;&gt;&lt;/a&gt;
+	&lt;div class=&quot;box&quot;&gt;
+	  &lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/forward.png&quot; alt=&quot;forward&quot;&gt; Get started with Xpra&lt;/h2&gt;
+		On the machine which will export the application (xterm in this example):
+	    &lt;div class=&quot;codebox&quot;&gt;
+		&lt;pre&gt;&lt;code&gt;xpra start :100 --start-child=xterm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+		We can then attach to this session from the same machine, with:
+		
+		If connecting from a remote machine, you would use something like (or you can also use the GUI):
+		&lt;div class=&quot;codebox&quot;&gt;
+		&lt;pre&gt;&lt;code&gt;xpra attach ssh:serverhostname:100
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;a id=&quot;help&quot;&gt;&lt;/a&gt;
+	
+  &lt;/div&gt;
+
+  
+
+ &lt;/div&gt;
+</description>
+<title>
+Xpra: Screen for X
+</title>
+</item>
+<item>
+<link>
+http://blog.samaltman.com/super-successful-companies
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-body&quot; id=&quot;post_body_642280&quot;&gt;
+&lt;p&gt;I spent some time recently thinking about what companies that grow up to be extremely successful do when they are very young. I came up with the following list. It&amp;#x2019;s from personal experience and I&amp;#x2019;m sure there are plenty of exceptions. While plenty of non-successful startups do some of these things too, I think there is value in trying to match the patterns.&amp;#xA0;&lt;/p&gt;&lt;p&gt;*&lt;b&gt;They are obsessed with the quality of the product/experience.&amp;#xA0;&lt;/b&gt;Almost a little too obsessed&amp;#x2014;they spend a lot of time on details that at first glance wouldn&amp;#x2019;t seem to be really important.&amp;#xA0; The founders of these companies react as if they feel physical pain when something isn&amp;#x2019;t quite right with the product or a user has a bad customer support experience.&lt;b&gt;&amp;#xA0;&lt;/b&gt;Although they believe in launching early and iterating, they generally won't release something crappy. (This is not an excuse to launch slowly.&amp;#xA0; You're probably taking too long to launch.)&lt;/p&gt;&lt;p&gt;As part of this, they don't put anyone between the founders and the users.&amp;#xA0; The founders of these companies do things like sales and customer support themselves.&lt;/p&gt;&lt;p&gt;*&lt;b&gt;They are obsessed with talent.&amp;#xA0;&lt;/b&gt;The founders take great pride in the quality of their team and do whatever it takes to get the best people to join them.&amp;#xA0; Everyone says they only want to hire the best people, but the best founders don't compromise on this point.&amp;#xA0; If they do make a hiring mistake, they fix it very quickly.&lt;/p&gt;&lt;p&gt;And they hire very slowly.&amp;#xA0; They don't get any thrill out of having employees for its own sake, and they do the dirty work themselves at the beginning.&lt;/p&gt;&lt;p&gt;As part of this, they really focus on getting the culture of the company right.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They can explain the vision for the company in a few clear words.&lt;/b&gt;&amp;#xA0;This is most striking in contrast to companies that require multiple complicated sentences to explain, which never seem to do really well.&amp;#xA0; Also, they can articulate why they're going to succeed even if others going after the problem have failed, and they have a clear insight about why their market is a great one.&lt;/p&gt;&lt;p&gt;More generally, they communicate very well.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They generate revenue very early on in their lives.&amp;#xA0;&amp;#xA0;&lt;/b&gt;Often as soon as they get their first user.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They are tough and calm&lt;/b&gt;.&amp;#xA0; Founders of great companies are always tough and unflappable.&amp;#xA0; Every startup seems like it's going to die--sometimes multiple times in a single day--and founders of really successful companies just seem to pull out a gun and shoot the villain&amp;#xA0;without losing their train of thought.&lt;/p&gt;&lt;p&gt;Formidableness can be developed; I've seen weak-seeming founders grow into it fast.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They keep expenses low.&amp;#xA0;&amp;#xA0;&lt;/b&gt;In addition to hiring slowly, they start off very frugal. Interestingly, the companies that don't do this (and usually fail) often justify it by saying &quot;we're thinking really big&quot;. &amp;#xA0;After everything is working really well, they will sometimes ramp up expenses a lot but manage to still only spend where it matters.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They make something a small number of users really love.&lt;/b&gt;&amp;#xA0;Paul Buchheit was the first person I ever heard point this out, but it's really true.&amp;#xA0; Successful startups nearly always start with an initial core of super happy users that become very dependent on their product, and then expand from there.&amp;#xA0; The strategy of something that starts with something a huge number of people sort of like empirically does not work as well.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They grow organically.&amp;#xA0;&amp;#xA0;&lt;/b&gt;And they are generally skeptical of inorganic strategies like big partnership deals and to a lesser extent PR.&amp;#xA0; They certainly don't have huge press events to launch their startup.&amp;#xA0; Mediocre founders focus on big PR launches to answer their growth prayers.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They are focused on growth.&amp;#xA0;&lt;/b&gt;The founders always know their user and revenue numbers.&amp;#xA0; There&amp;#x2019;s never any hesitation when you ask them.&amp;#xA0; They have targets they are trying to hit for the next week, month, and year.&lt;/p&gt;&lt;p&gt;*&lt;b&gt;They balance a focus on growth with strategic thinking about the future.&amp;#xA0;&amp;#xA0;&amp;#xA0;&lt;/b&gt;They have clear plans and strong opinions about what they're going to build that no one can talk them out of.&amp;#xA0; But they focus more on execution in the moment than building out multi-year strategic plans.&lt;/p&gt;&lt;p&gt;Another way this trait shows itself is &quot;right-sized&quot; first projects.&amp;#xA0; You can't go from zero to huge; you have to find something not too big and not too small to build first.&amp;#xA0; They seem to have an innate talent for figuring out right-sized projects.&lt;/p&gt;&lt;div&gt;
+&lt;b&gt;*They do things that don't scale.&amp;#xA0;&amp;#xA0;&lt;/b&gt;Paul Graham has&amp;#xA0;&lt;a href=&quot;http://www.paulgraham.com/ds.html&quot;&gt;written about this&lt;/a&gt;.&amp;#xA0; The best founders take it unusually far.&lt;/div&gt;&lt;p&gt;
+&lt;b&gt;*They have a whatever-it-takes attitude.&lt;/b&gt;&amp;#xA0;There are some things about running a startup that are not fun.&amp;#xA0; Mediocre founders try to hire people for the parts that they don't like.&amp;#xA0; Great founders just do whatever they think is in the best interest of the company, even if they're not &quot;passionate&quot; about that part of the business.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They prioritize well&lt;/b&gt;.&amp;#xA0; In any given day there are 100 reasonable things that you could work on.&amp;#xA0; It's easy to get pulled into a fire on number 7, or even to spend time at a networking event or something like that that probably ranks in the mid-90s.&amp;#xA0; The founders that are really successful are relentless about making sure they get to their top two or three priorities each day (as part of this, they figure out what the right priorities are), and ignoring other items.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*The founders are nice.&lt;/b&gt;&amp;#xA0; I'm sure this doesn't always apply, but the most successful founders I know are nicer than average.&amp;#xA0; They're tough, they're very competitive, and they are ruthless, but they are fundamentally nice people.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They don't get excited about pretending to run a startup.&lt;/b&gt;&amp;#xA0; They care about being successful, not going through the motions to look successful.&amp;#xA0; They get no thrill from having a 'real' company; they don't spend a lot of time interviewing lawyers and accountants or going to network events or anything like that.&amp;#xA0; They want to win and don't care much about how they look doing so.&lt;/p&gt;&lt;p&gt;One reason that this is super important is that they are willing to work on things that seem trivial, like a website that lets you stay on an air mattress in someone's house.&amp;#xA0; Most of the best ideas seem like bad ideas when they start, and if you're more into appearance than substance, you won't want people laughing at you.&amp;#xA0; You are far better off starting a company that people laugh at but keeps growing relentlessly than a company with a beautiful office that seems serious but is always two quarters away from starting its growth ramp.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They get stuff done.&lt;/b&gt;&amp;#xA0;Mediocre founders spend a lot of time talking about grand plans; the best founders may be working on things that seem small but get them done extraordinarily quickly.&amp;#xA0; Every time you talk to them, they've gotten a few new things done.&amp;#xA0; Even if they're working on big projects, they get small chunks done incrementally and have demonstratable progress--they never disappear for a year and jump from nothing to a huge project being completed.&amp;#xA0; And they're reliable--if they tell you they'll do something, it happens.&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;*They move fast.&amp;#xA0;&lt;/b&gt;They make quick decisions on everything.&amp;#xA0; They respond to emails quickly.&amp;#xA0; This is one of the most striking differences between great and mediocre founders.&amp;#xA0; Great founders are execution machines.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+Super successful companies
 </title>
 </item>
 </channel>
