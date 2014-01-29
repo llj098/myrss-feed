@@ -14,476 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-Michael Hale Ligh
-</author>
-<link>
-http://volatility-labs.blogspot.com/2014/01/truecrypt-master-key-extraction-and.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-6037270569478628644&quot;&gt;
-One of the &lt;a href=&quot;http://www.truecrypt.org/docs/unencrypted-data-in-ram#Y445&quot;&gt;disclosed&lt;/a&gt; pitfalls of TrueCrypt disk encryption is that the master keys must remain in RAM in order to provide fully transparent encryption. In other words, if master keys were allowed to be flushed to disk, the design would suffer in terms of security (writing plain-text keys to more permanent storage) and performance. This is a risk that suspects have to live with, and one that law enforcement and government investigators can capitalize on.&lt;br&gt;
-&lt;br&gt;
-The default encryption scheme is AES in XTS mode. In XTS mode, primary and secondary 256-bit keys are concatenated together to form one 512-bit (64 bytes) master key. An advantage you gain right off the bat is that patterns in AES keys can be distinguished from other seemingly random blocks of data. This is how tools like &lt;a href=&quot;https://citp.princeton.edu/memory-content/src/aeskeyfind-1.0.tar.gz&quot;&gt;aeskeyfind&lt;/a&gt;&amp;#xA0;and &lt;a href=&quot;https://github.com/simsong/bulk_extractor&quot;&gt;bulk_extractor&lt;/a&gt; locate the keys in memory dumps, packet captures, etc. In most cases, extracting the keys from RAM is as easy as this:&lt;br&gt;
-&lt;br&gt;
-&lt;span&gt;$ &lt;b&gt;./aeskeyfind Win8SP0x86.raw&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;f12bffe602366806d453b3b290f89429&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;e6f5e6511496b3db550cc4a00a4bdb1b&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;a2cde593dd1023d89851049b8474b9a0&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;269493cfc103ee4ac7cb4dea937abb9b&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;269493cfc103ee4ac7cb4dea937abb9b&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;4d81111573a789169fce790f4f13a7bd&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;0f2eb916e673c76b359a932ef2b81a4b&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;&lt;b&gt;7a9df9a5589f1d85fb2dfc62471764ef47d00f35890f1884d87c3a10d9eb5bf4&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;&lt;b&gt;e786793c9da3574f63965803a909b8ef40b140b43be062850d5bb95d75273e41&lt;/b&gt;&lt;/span&gt;&lt;br&gt;
-&lt;span&gt;Keyfind progress: 100%&lt;/span&gt;&lt;br&gt;
-
-&lt;div&gt;
-Several keys were identified, but only the two final ones in red are 256-bits (the others are 128-bit keys). Thus, you can bet by combining the two 256-bit keys, you'll have your 512-bit master AES key. That's all pretty straightforward and has been documented in quite a few places - one of my favorites being &lt;a href=&quot;http://mweissbacher.com/blog/tag/truecrypt/&quot;&gt;Michael Weissbacher's blog&lt;/a&gt;.&amp;#xA0;&lt;/div&gt;
-
-&lt;div&gt;
-The problem is - what if suspects change the default AES encryption scheme? TrueCrypt also supports Twofish, Serpent, and combinations thereof (AES-Twofish, AES-Twofish-Serpent). Furthermore, it supports modes other than XTS, such as LWR, CBC, outer CBC, and Inner CBC (though many of the CBCs are either deprecated or not recommended).&lt;br&gt;
-&lt;br&gt;
-What do you do if a suspect uses non-default encryption schemes or modes? You can't find Twofish or Serpent keys with tools designed to scan for AES keys -- that just doesn't work. As pointed out by one of our Twitter followers (@brnocrist), a tool by Carsten Maartmann-Moe named &lt;a href=&quot;http://sourceforge.net/projects/interrogate/&quot;&gt;Interrogate&lt;/a&gt; could be of use here (as could several commercial implementations from Elcomsoft or Passware).&amp;#xA0;&lt;/div&gt;
-&lt;p&gt;
-&lt;br&gt;
-Another challenge that investigators face, in the case of file-based containers, is figuring out which file on the suspect's hard disk serves as the container. If you don't know that, then having the master keys is only as useful as finding the key to a house but having no idea where the house is.&amp;#xA0;&lt;/p&gt;
-
-&lt;div&gt;
-To address these issues, I wrote several new Volatility plugins. The truecryptsummary plugin gives you a detailed description of all TrueCrypt related artifacts in a given memory dump. Here's how it appears on a test system running &lt;a href=&quot;http://volatility-labs.blogspot.com/2014/01/the-secret-to-64-bit-windows-8-and-2012.html&quot;&gt;64-bit Windows 2012&lt;/a&gt;.&amp;#xA0;&lt;/div&gt;
-
-&lt;div&gt;
-&lt;p&gt;
-&lt;span&gt;$ &lt;b&gt;python vol.py -f WIN-QBTA4959AO9.raw --profile=Win2012SP0x64 truecryptsummary&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Volatility Foundation Volatility Framework 2.3.1 (T)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span&gt;Process &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;TrueCrypt.exe at 0xfffffa801af43980 pid 2096&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Kernel Module &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;truecrypt.sys at 0xfffff88009200000 - 0xfffff88009241000&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Symbolic Link &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Volume{52b24c47-eb79-11e2-93eb-000c29e29398} -&amp;gt; \Device\TrueCryptVolumeZ mounted &lt;span&gt;&lt;b&gt;2013-10-11 03:51:08&lt;/b&gt;&lt;/span&gt; UTC+0000&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Symbolic Link &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Volume{52b24c50-eb79-11e2-93eb-000c29e29398} -&amp;gt; \Device\TrueCryptVolumeR mounted &lt;span&gt;&lt;b&gt;2013-10-11 03:55:13&lt;/b&gt;&lt;/span&gt; UTC+0000&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$Directory at 0x7c2f7070&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$LogFile at 0x7c39d750&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$MftMirr at 0x7c67cd40&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\&lt;span&gt;&lt;b&gt;$Mft&lt;/b&gt;&lt;/span&gt; at 0x7cf05230&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$Directory at 0x7cf50330&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\$BitMap at 0x7cfa7a00&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;File Object &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;\Device\TrueCryptVolumeR\Chats\Logs\bertha.xml at 0x7cdf4a00&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Driver &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; \Driver\truecrypt at 0x7c9c0530 range 0xfffff88009200000 - 0xfffff88009241000&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Device &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; TrueCryptVolumeR at 0xfffffa801b4be080 type FILE_DEVICE_DISK&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Container &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Path: &lt;b&gt;&lt;span&gt;\Device\Harddisk1\Partition1&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Device &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0; TrueCrypt at 0xfffffa801ae3f500 type FILE_DEVICE_UNKNOWN&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-Among other things, you can see that the TrueCrypt volume was mounted on the suspect system on October 11th 2013. Furthermore, the path to the container is \Device\Harddisk1\Partition1, because in this case, the container was an entire partition (a USB thumb drive). If we were dealing with a file-based container as previously mentioned, the output would show the full path on disk to the file.&lt;br&gt;
-&lt;br&gt;
-Perhaps even more exciting than all that is the fact that, despite the partition being fully encrypted, once its mounted, any files accessed on the volume become cached by the &lt;a href=&quot;http://volatility-labs.blogspot.com/2012/10/movp-44-cache-rules-everything-around.html&quot;&gt;Windows Cache Manager&lt;/a&gt;&amp;#xA0;per normal -- which means the &lt;a href=&quot;https://code.google.com/p/volatility/wiki/CommandReference23#dumpfiles&quot;&gt;dumpfiles&lt;/a&gt; plugin can help you recover them in plain text. Yes, this includes the $Mft, $MftMirr, $Directory, and other NTFS meta-data files, which are decrypted immediately when mounting the volume. In fact, even if values that lead us to the master keys are swapped to disk, or if TrueCrypt (or other disk encryption suites like PGP or BitLocker) begin using algorithms without predictable/detectable keys, you can still recover all or part of any files accessed while the volume was mounted based on the fact that the Windows OS itself will cache the file contents (remember, the encryption is transparent to the OS, so it caches files from encrypted volumes in the same way as it always does).&amp;#xA0;&lt;/div&gt;
-
-&lt;p&gt;
-After running a plugin such as truecryptsummary, you should have no doubts as to whether TrueCrypt was installed and in use, and which files or partitions are your targets. You can then run the truecryptmaster plugin which&amp;#xA0;performs nothing short of magic.&amp;#xA0;&lt;/p&gt;
-
-&lt;div&gt;
-&lt;p&gt;
-&lt;span&gt;$ &lt;b&gt;python vol.py -f WIN-QBTA4.raw --profile=Win2012SP0x64 truecryptmaster -D .&lt;/b&gt;&amp;#xA0;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Volatility Foundation Volatility Framework 2.3.1 (T)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span&gt;Container: \Device\Harddisk1\Partition1&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Hidden Volume: No&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Read Only: No&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Disk Length: 7743733760 (bytes)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Host Length: 7743995904 (bytes)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Encryption Algorithm: &lt;b&gt;&lt;span&gt;SERPENT&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Mode: &lt;b&gt;&lt;span&gt;XTS&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Master Key&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;&lt;b&gt;0xfffffa8018eb71a8 bbe1dc7a8e87e9f1f7eef37e6bb30a25 &amp;#xA0; ...z.......~k..%&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;&lt;b&gt;0xfffffa8018eb71b8 90b8948fefee425e5105054e3258b1a7 &amp;#xA0; ......B^Q..N2X..&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;&lt;b&gt;0xfffffa8018eb71c8 a76c5e96d67892335008a8c60d09fb69 &amp;#xA0; .l^..x.3P......i&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;&lt;b&gt;0xfffffa8018eb71d8 efb0b5fc759d44ec8c057fbc94ec3cc9 &amp;#xA0; ....u.D.......&amp;lt;.&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;span&gt;Dumped 64 bytes to ./0xfffffa8018eb71a8_master.key&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-You now have a 512-byte Serpent master key, which you can use to decrypt the roughly 8 GB USB drive. It tells you the encryption mode that the suspect used, the full path to the file or container, and some additional properties such as whether the volume is read-only or hidden. As you may suspect, the plugin works regardless of the encryption algorithm, mode, key length, and various other factors which may complicate the procedure of finding keys. This is because it doesn't rely on the key or key schedule patterns -- it finds them in the exact same way the TrueCrypt driver itself finds the keys in RAM before it needs to encrypt or decrypt a block of data.&amp;#xA0;&lt;/p&gt;
-
-&lt;div&gt;
-The truecryptsummary plugin supports all versions of TrueCrypt since 3.1a (released 2005) and truecryptmaster supports 6.3a (2009) and later. In one of the more exciting &lt;a href=&quot;http://volatility-labs.blogspot.com/search/label/training&quot;&gt;hands-on labs in our memory forensics training class&lt;/a&gt;, students experiment with these plugins and learn how to make suspects wish there was no such thing as Volatility.&amp;#xA0;&lt;/div&gt;
-&lt;div&gt;
-&lt;br&gt;
-&lt;b&gt;UPDATE 1/15/2014&lt;/b&gt;:&amp;#xA0;In our opinion, what's described here is not a vulnerability in TrueCrypt (that was the reason we linked to their FAQ in the first sentence). We don't intend to cause mass paranoia or discourage readers from using the TrueCrypt software. Our best advice to people seeking to keep data secure and private is to read the TrueCrypt documentation carefully, so you're aware of the risks. As stated in the comments to this post, powering your computer off is probably the best way to clear the master keys from RAM. However, you don't always get that opportunity (the FBI doesn't call in advance before kicking in doors) and there's also the possibility of&amp;#xA0;&lt;a href=&quot;https://citp.princeton.edu/research/memory/&quot;&gt;cold boot attacks&lt;/a&gt;&amp;#xA0;even if you do shut down.&lt;br&gt;
-&lt;br&gt;
--Michael Ligh (&lt;a href=&quot;https://twitter.com/iMHLv2&quot;&gt;@iMHLv2&lt;/a&gt;)&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-TrueCrypt Master Key Extraction And Volume Identification
-</title>
-</item>
-<item>
-<author>
-Jim Salter
-</author>
-<link>
-http://arstechnica.com/information-technology/2014/01/bitrot-and-atomic-cows-inside-next-gen-filesystems/
-</link>
-<description>
-&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
-    
-&lt;figure class=&quot;intro-image image center full-width&quot;&gt;
-      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/unix-filesystem.jpg&quot; width=&quot;640&quot;&gt;
-  
-  &lt;/figure&gt;
-  &lt;p&gt;Most people don't care much about their filesystems. But at the end of the day, the filesystem is probably the single most important part of an operating system. A kernel bug might mean the loss of whatever you're working on right now, but a filesystem bug could wipe out everything you've ever done... and it could do so in ways most people never imagine.&lt;/p&gt;
-&lt;p&gt;Sound too theoretical to make you care about filesystems? Let's talk about &quot;bitrot,&quot; the silent corruption of data on disk or tape. One at a time, year by year, a random bit here or there gets flipped. If you have a malfunctioning drive or controller—or a loose/faulty cable—a &lt;em&gt;lot&lt;/em&gt; of bits might get flipped. Bitrot is a real thing, and it affects you more than you probably realize. The JPEG that ended in blocky weirdness halfway down? Bitrot. The MP3 that startled you with a violent CHIRP!, and you wondered if it had always done that? No, it probably hadn't—blame bitrot. The video with a bright green block in one corner followed by several seconds of weird rainbowy blocky stuff before it cleared up again? Bitrot.&lt;/p&gt;
-&lt;p&gt;The worst thing is that backups won't save you from bitrot. The next backup will cheerfully back up the corrupted data, replacing your last &lt;i&gt;good&lt;/i&gt; backup with the bad one. Before long, you'll have rotated through all of your backups (if you even have multiple backups), and the uncorrupted original is now gone for good.&lt;/p&gt;
-&lt;p&gt;Contrary to popular belief, conventional RAID won't help with bitrot, either. &quot;But my raid5 array has parity and can reconstruct the missing data!&quot; you might say. That only works if a drive &lt;i&gt;completely and cleanly fails. &lt;/i&gt;If the drive instead starts spewing corrupted data, the array may or may not notice the corruption (most arrays don't check parity by default on every read). Even if it does notice... all the array knows is that something in the stripe is bad; it has no way of knowing &lt;i&gt;which&lt;/i&gt; drive returned bad data—and therefore which one to rebuild from parity (or whether the parity block itself was corrupt).&lt;/p&gt;
-&lt;p&gt;What might save your data, however, is a &quot;next-gen&quot; filesystem.&lt;/p&gt;
-&lt;p&gt;Let's look at a graphic demonstration. Here's a picture of my son Finn that I like to call &quot;Genesis of a Supervillain.&quot; I like this picture a lot, and I'd hate to lose it, which is why I store it on a next-gen filesystem with redundancy. But what if I didn't do that?&lt;/p&gt;
-&lt;p&gt;As a test, I set up a virtual machine with six drives. One has the operating system on it, two are configured as a simple btrfs-raid1 mirror, and the remaining three are set up as a conventional raid5. I saved Finn's picture on both the btrfs-raid1 mirror and the conventional raid5 array, and then I took the whole system offline and flipped a single bit—yes, just a single bit from 0 to 1—in the JPG file saved on each array. Here's the result:&lt;/p&gt;
-  &lt;div class=&quot;gallery&quot; score=&quot;31.25&quot;&gt;
-    &lt;div class=&quot;gallery-main-image&quot; score=&quot;47.5&quot;&gt;
-      &lt;div class=&quot;gallery-image-container&quot; score=&quot;18.75&quot;&gt;
-        &lt;div class=&quot;gallery-image-wrap&quot;&gt;
-        &lt;a class=&quot;enlarge&quot; href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
-          &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
-        &lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-        
-    
-        &lt;div class=&quot;gallery-thumb-mask&quot; score=&quot;6.5&quot;&gt;
-      &lt;ol class=&quot;gallery-thumbs&quot; score=&quot;3.25&quot;&gt;
-                &lt;li class=&quot;selected&quot; score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-                &lt;li score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-raid5-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-                &lt;li score=&quot;2.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-btrfsraid1-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    &lt;div class=&quot;gallery-thumb-copy&quot;&gt;
-
-          
-                      &lt;p&gt;Corrupted image: btrfs-raid1.&lt;/p&gt;
-          
-          &lt;/div&gt;
-          
-        &lt;/li&gt;
-              &lt;/ol&gt;
-    &lt;/div&gt;
-       
-      &lt;/div&gt;
-    
-&lt;p&gt;The raid5 array didn't notice or didn't care about the flipped bit in Finn's picture any more than a standard single disk would. The next-gen btrfs-raid1 system, however, immediately caught &lt;i&gt;and corrected&lt;/i&gt; the problem. The results are pretty obvious. If you care about your data, you want a next-gen filesystem. Here, we'll examine two: the older ZFS and the more recent btrfs.&lt;/p&gt;
-&lt;h2&gt;What is a “next-generation” filesystem, anyway?&lt;/h2&gt;
-&lt;p&gt;&quot;Next-generation&quot; is a phrase that gets handed out like sales flyers in a mall parking lot. But in this case, it actually means something. I define a &quot;generation&quot; of filesystems as a group that uses a particular &quot;killer feature&quot;—or closely related set of them—that earlier filesystems don't but that later filesystems all do. Let's take a quick trip down memory lane and examine past and current generations:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Generation 0:&lt;/strong&gt; No system at all. There was just an arbitrary stream of data. Think punchcards, data on audiocassette, Atari 2600 ROM carts.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Generation 1:&lt;/strong&gt; Early random access. Here, there are multiple named files on one device with no folders or other metadata. Think Apple ][ DOS (but not ProDOS!) as one example.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Generation 2:&lt;/strong&gt; Early organization (aka folders). When devices became capable of holding hundreds of files, better organization became necessary. We're referring to TRS-DOS, Apple //c ProDOS, MS-DOS FAT/FAT32, etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Generation 3:&lt;/strong&gt; Metadata—ownership, permissions, etc. As the user count on machines grew higher, the ability to restrict and control access became necessary. This includes AT&amp;amp;T UNIX, Netware, early NTFS, etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Generation 4:&lt;/strong&gt; Journaling! This is the killer feature defining all current, modern filesystems—ext4, modern NTFS, UFS2, you name it. Journaling keeps the filesystem from becoming inconsistent in the event of a crash, making it much less likely that you'll lose data, or even an entire disk, when the power goes off or the kernel crashes.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;So if you accept my definition, &quot;next-generation&quot; currently means &quot;fifth generation.&quot; It's defined by an entire set of features: built-in volume management, per-block checksumming, self-healing redundant arrays, atomic COW snapshots, asynchronous replication, and far-future scalability.&lt;/p&gt;
-&lt;p&gt;That's quite a laundry list, and one or two individual features from it have shown up in some &quot;current-gen&quot; systems (Windows has Volume Shadow Copy to correspond with snapshots, for example). But there's a strong case to be made for the entire list defining the next generation.&lt;/p&gt;
-&lt;h2&gt;Justify your generation&lt;/h2&gt;
-&lt;p&gt;The quickest objection you could make to defining &quot;generations&quot; like this would be to point at NTFS' Volume Snapshot Service (VSS) or at the Linux Logical Volume Manager (LVM), each of which can take snapshots of filesystems mounted beneath them. However, these snapshots can't be replicated incrementally, meaning that backing up 1TB of data requires groveling over 1TB of data every time you do it. (FreeBSD's UFS2 also offered limited snapshot capability.) Worse yet, you generally can't replicate them as snapshots&lt;i&gt;—&lt;/i&gt;with references intact—which means that your remote storage requirements increase exponentially, and the difficulty of managing backups does as well. With ZFS or btrfs replicated snapshots, you can have a single, immediately browsable, fully functional filesystem with 1,000+ versions of the filesystem available simultaneously. Using VSS with Windows Backup, you must use VHD files as a target. Among other limitations, VHD files are only supported up to 2TiB in size, making them useless for even a single backup of a large disk or array. They must also be mounted with special tools not available on all versions of Windows, which goes even further to limit them as tools for specialists only.&lt;/p&gt;
-&lt;p&gt;Finally, Microsoft's VSS typically depends on &quot;writer&quot; components that interface with applications (such as MS SQL Server) which can themselves hang up, making it difficult to successfully create a VSS snapshot in some cases. To be fair, when working properly, VSS writers offer something that simple snapshots don't—application-level consistency. But VSS writer bugs are a real problem, and I've encountered lots of Windows Servers which were quietly failing to create Shadow Copies. (VSS does not automatically create a writer-less Shadow Copy if the system times out; it just logs the failure and gives up.) I have yet to encounter a ZFS or btrfs filesystem or array that won't immediately create a valid snapshot.&lt;/p&gt;
-&lt;p&gt;At the end of the day, both LVM and VSS offer useful features that a lot of sysadmins do use, but they don't jump right out and demand your attention the way filenames, folders, metadata, or journaling did when they came onto the market. Still, this is only one feature out of the entire laundry list. You could make a case that snapshots made the fifth generation, and the &lt;i&gt;other&lt;/i&gt; features in ZFS and btrfs make the sixth. But by the time you finish this article, you'll see there's no way to argue that btrfs and ZFS definitely constitute a &lt;i&gt;new&lt;/i&gt; generation that is easily distinguishable from everything before them.&lt;/p&gt;
-    		&lt;/div&gt;
-    &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div class=&quot;article-content clearfix&quot; score=&quot;7.5&quot;&gt;
-    
-&lt;p&gt;One argument for labeling &quot;snapshots, volume management, checksumming, self-healing, replication, and scalability&quot; as the definitive feature set for the next generation of filesystems is that btrfs isn't the first filesystem to implement them as a complete set. ZFS (created by Sun Microsystems before the Oracle acquisition) was first to market.&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;Interestingly, there was a lot of pushback in the Linux world against ZFS, mostly concerning some of these very same features. In particular, the volume management and data-healing capabilities were loudly denounced as a &quot;rampant layering violation.&quot; In the traditional layering model used by the Linux world, the RAID controller shouldn't know or care about the filesystem, and the filesystem shouldn't know or care about the RAID controller. But data healing depends on the filesystem knowing about redundant copies of data blocks. If the first copy of a block of data read fails its checksum, the filesystem needs to know if a different copy is available to be read, verified, and rewritten. This just isn't possible without merging those layers. A year later, btrfs supported raid0, raid1, and raid10; six years later, raid5 and raid6 support were added to mainline (still in progress).&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We'll be comparing btrfs and ZFS directly moving forward; they each have their pros and cons, both in an absolute sense and when compared to each other.&lt;/p&gt;
-&lt;h2&gt;Next-generation features&lt;/h2&gt;
-&lt;p&gt;Before we look too much at actual usage in an on-the-command-line sense, let's go over the actual features mentioned. It's important to understand how they impact you as a user or sysadmin directly. Once you do, you'll have a better idea of why you do (or, just barely conceivably, don't) need and want them on your own equipment. All of these features are available on ZFS and btrfs.&lt;/p&gt;
-&lt;h3&gt;Atomic COW snapshots&lt;/h3&gt;
-&lt;p&gt;An &quot;atomic COW snapshot&quot;—easily the most hilarious-sounding feature ever to grace a filesystem—is an image of the entire filesystem in exactly the condition it was in at a given instant in time, no matter what else was transpiring at the time. So if you take a snapshot of a filesystem at 8:13 and 32 seconds pm on December 19, 2013, that snapshot will contain every single byte of that filesystem at exactly 8:13 and 32 seconds pm on December 19, 2013—period, no ifs, ands, or buts. This helps keep high-activity structures like databases consistent. As long as the database uses journaling (and if it doesn't, upgrade!), its journal will be consistent in the snapshot. Any partially completed transactions can be cleanly rolled back instead of leaving the database in an inconsistent state.&lt;/p&gt;
-&lt;p&gt;COW stands for Copy On Write, so this snapshot that you took does not occupy any storage space in and of itself. It's just a bunch of extra pointers to the same blocks that already contain your data. As you delete or change your data in production, however, the snapshot will retain its copies. Over time, the space taken up by the snapshot increases from &quot;none&quot; to &quot;the amount of data contained in this snapshot and no other snapshot.&quot; &quot;Atomic,&quot; in this sense, refers to the atom as being an &quot;indivisible&quot; unit (quiet, quantum physicists!).&lt;/p&gt;
-&lt;p&gt;Still not sure what a snapshot is or why you'd want it? Well, imagine you're about to do something potentially dangerous to your system like apply an automatic update to a big cranky application you rely on a lot and don't trust, or manually delete a bunch of stuff in system directories to try to uninstall a program that you can't remove normally. (We're talking big things that could go wrong and may be difficult or impossible to undo.) Before doing them... take a snapshot. Then, if $BigScaryProcedure goes wrong, roll back to the snapshot you just took. &lt;em&gt;Poof&lt;/em&gt;, everything is peachy again.&lt;/p&gt;
-&lt;p&gt;In practice, I take a snapshot every hour on the hour on my own machines and delete the old snapshots as necessary to recover disk space. That gives me the best possible chance to recover from something unexpected going horribly, horribly wrong.&lt;/p&gt;
-&lt;h3&gt;Per-block checksumming&lt;/h3&gt;
-&lt;p&gt;It's a common misconception to think that RAID protects data from corruption since it introduces redundancy. The reality is exactly the opposite: traditional RAID &lt;i&gt;increases&lt;/i&gt; the likelihood of data corruption since it introduces more physical devices with more things to go wrong. What RAID does protect you from is data loss due to the instantaneous failure of a drive. But if the drive isn't so obliging as to just politely die on you and instead starts reading and/or writing bad data, you're still going to &lt;i&gt;get&lt;/i&gt; that bad data. The RAID controller has no way of knowing if the data is bad since parity is written on a per-stripe basis and not a per-block basis. In theory (in practice, parity isn't always strictly checked on every read), a RAID controller could tell you that the data in a stripe was corrupt, but it would have no way of knowing if the actual corrupt data was on any given drive. We demonstrated this in the introduction. Although I was using a raid5 array with parity, the picture of my son stored on it was very visibly corrupted when a single bit changed from a 0 to a 1. Ouch.&lt;/p&gt;
-&lt;p&gt;By contrast, with every individual block of data written, btrfs also writes a checksum. With every individual block of data read, btrfs reads the associated checksum and verifies the block against it. This allows the filesystem (and you) to know immediately if data has been corrupted.&lt;/p&gt;
-&lt;h3&gt;Self-healing redundant arrays&lt;/h3&gt;
-&lt;p&gt;We also demonstrated this in the introduction. The copy of my son's picture on the btrfs-raid1 array got a bit flipped, just like the copy on the raid5 array, but the btrfs array detected and immediately repaired the corrupt data as soon as I attempted to read it.&lt;/p&gt;
-&lt;p&gt;The system's kernel log tells the story there:&lt;/p&gt;
-&lt;pre&gt;[   87.030967] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
-[   87.031188] BTRFS info (device vdf): csum failed ino 258 off 0 csum 3377436548 private 796777854
-[   87.031678] btrfs read error corrected: ino 258 off 0 (dev /dev/vde sector 267344)&lt;/pre&gt;
-&lt;p&gt;You have to love that.&lt;/p&gt;
-&lt;p&gt;Healing is made possible by combining per-block checksumming with (redundant) volume and drive management. If you aren't storing your data redundantly, all you can do with a checksum is realize that your data is corrupt. But if you &lt;em&gt;are&lt;/em&gt; storing data redundantly either through mirroring (btrfs-raid1 or btrfs-raid10) or striping-with-parity (btrfs-raid5 or btrfs-raid6), btrfs can immediately detect corruption and repair it. In this case, when a corrupt block is detected, it's read from parity or from an alternate copy, which is also verified. If the reconstruction/alternate copy does pass verification, it's quietly handed to you while btrfs rewrites it over the corrupt version in the background.&lt;/p&gt;
-&lt;p&gt;This is an awesome feature, and (in ZFS) it has personally saved me from data loss on many occasions. It's not uncommon at all to see five, or 10, or 50 checksum errors on a disk that's been in service for a few years... and in some cases I've seen ZFS raidZ arrays with 100,000+ checksum errors on one drive—and no data lost or corrupted. If you care about your data, and especially if you care about your data surviving for decades or longer, you absolutely need this feature.&lt;/p&gt;
-&lt;h3&gt;Volume management&lt;/h3&gt;
-&lt;p&gt;For decades, we've partitioned drives in order to make more granular use of the space on them. If you want 100GB for your operating system and 900GB for data storage (and you don't want overuse of your data storage to cause your OS problems), you partition your drives. But if you change your mind later, deciding you want 200GB for your operating system, you're in for some pain. You &lt;em&gt;can&lt;/em&gt; resize partitions, but it's a potentially dangerous operation, and it frequently requires you to shut your system down while it's going on.&lt;/p&gt;
-&lt;p&gt;Volume management, by contrast, means being able to dynamically define multiple filesystems with attributes including (but not limited to) quota size, read-only or read-write, and mountpoint at the drop of a hat. They can be resized, renamed, cloned, duplicated, and have permissions changed instantly and safely. Most of these features were previously available to Linux users under LVM, the Linux Logical Volume Management stack. Btrfs pretty much makes LVM obsolete.&lt;/p&gt;
-&lt;h3&gt;Far-future scalability&lt;/h3&gt;
-&lt;p&gt;One concept common to each of the last generations of filesystem is that they've tended to be obviously tied to the prevalent media at the time. When all you have are punch cards and audio tapes, not having an actual filesystem at all makes a lot of sense. When you're almost entirely working with floppy drives, scaling past a few MB of storage doesn't look like something worth bothering with. Now, however, we're working with rapidly increasing storage size per drive, and large storage arrays are becoming more and more common. The question &quot;but what do I &lt;em&gt;do&lt;/em&gt; with 6 petabytes of data?&quot; starts to look a lot less silly.&lt;/p&gt;
-&lt;p&gt;ZFS and btrfs both made the decision to plan from the start for what currently looks like absolutely ridiculous scale designs, since the system will almost certainly outlive the hardware we currently implement it on.&lt;/p&gt;
-&lt;p&gt;The designers of ZFS famously claimed that flipping every bit in a maximum-sized zpool would &quot;require enough energy to boil every ocean on the planet.&quot; Btrfs didn't go quite &lt;i&gt;that&lt;/i&gt; far, but it didn't really need to. Its current maximum filesystem size is 16 EiB. To put that in perspective, if you gave every single human being on the planet a brand-new 2TiB hard drive, you'd still fall a little short of 16EiB total, and the resultant monstrosity would consume about 35 times the total power generation capacity of the United States in 2011. That's... probably future-forward enough for now.&lt;/p&gt;
-&lt;h3&gt;Asynchronous incremental replication&lt;/h3&gt;
-&lt;p&gt;Last but certainly not least, we come to replication. Boiled down to a nutshell, asynchronous replication means that you can take an atomic snapshot of an entire filesystem and easily move the entire thing, block-by-block, on to a remote filesystem. Own two computers? Do all your work on computer A, take a snapshot, send the snapshot to computer B. Computer B now has an exact replica of every single bit stored in your filesystem as of the time you took the snapshot. The problem, of course, is that we're talking every single bit of data... so it clearly takes a long time to copy.&lt;/p&gt;
-&lt;p&gt;Which is where &quot;incremental&quot; comes in. Once you've replicated your initial snapshot from computer A to computer B, you take another snapshot. Your filesystem size as a whole might be 4TiB, but if you've only changed, say, 500MiB of data... then that 500MiB is all you have to transfer from computer A to computer B. Now you have replication of the second snapshot taking place in seconds or minutes instead of hours or days. Even better, unlike traditional &quot;synchronization&quot; methods, you don't need to crawl over the filesystem on both sides first to figure out what's changed. Computer A knows exactly what has changed between snapshots 1 and 2, and it can immediately begin squirting that data—and only that data—to computer B.&lt;/p&gt;
-&lt;figure class=&quot;image center&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;20.0&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; Left pane: your whole PC, as of the top of each hour. Right pane: your whole PC, as of the top of each hour, on a remote PC.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;In practice, this means it's actually no-kidding feasible to back your entire computer up on an hourly basis to a remote location—even with terabytes of data and a relatively cheap-and-slow Internet connection.&lt;/p&gt;
-    		&lt;/div&gt;
-    &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div class=&quot;article-content clearfix&quot; score=&quot;10.0&quot;&gt;
-    &lt;h2&gt;Features unique to btrfs&lt;/h2&gt;
-&lt;p&gt;In the last section, I outlined what I consider the &quot;standard set of features&quot; for next-gen filesystems. But btrfs brings some new things to the table that ZFS doesn't.&lt;/p&gt;
-&lt;h3&gt;File-level cloning&lt;/h3&gt;
-&lt;p&gt;This, frankly, is huge. I work a lot with virtual machines, which means I have lots and lots of tremendous files ranging in size from 5GB to 400GB (sometimes bigger) lying around various systems. &quot;File-level cloning&quot; means that I can make a fully writable clone copy of one of these several-hundred-gigabyte files in an instant.&lt;/p&gt;
-&lt;pre&gt;    me@server:~$ cp --reflink=always 200GB_virtual_machine_drive.qcow2 clone_of_200GB_virtual_machine_drive.qcow2&lt;/pre&gt;
-&lt;p&gt;The above command will &quot;copy&quot; that 200GB of data in milliseconds, and it's a deduplicated copy at that. At the time of copying, no actual additional drive space is needed; clone_of_200GB_virtual_machine_drive.qcow2 actually just points to all the same data blocks. As I write to clone_of_200GB_virtual_machine.qcow2, though (or to the original 200GB_virtual_machine_drive.qcow2), each block that I write to is written as a new block. Over time, the file gradually diverges from its parent as needed—but &lt;em&gt;only&lt;/em&gt; as needed.&lt;/p&gt;
-&lt;p&gt;This feature also enables you to selectively copy big chunks of data out of snapshots back into your main filesystem without having to preemptively roll the whole thing back... and again, without taking up any extra disk space unless and until you actually modify the copied (technically, cloned) files. This really can be a lifesaver.&lt;/p&gt;
-&lt;p&gt;By contrast, if you want to get individual files out of a ZFS snapshot (or one of the more primitive snapshots in NTFS or LVM), you have to actually copy them block by block, both consuming extra space and potentially taking a tremendous amount of time if it's a whole lot of data. Wasted disk space aside, the 200GB virtual machine image I used in my example could easily take three hours or more to copy out of a ZFS snapshot. In practice, this means that with ZFS, you want to create tons and tons of child filesystems since you can roll an entire filesystem back to a snapshot of itself instantly, but picking and choosing individual files means painful copy operations. With btrfs, you don't need to do that. Snapshot the entire btrfs filesystem, then just copy stuff back out of it piecemeal if you like. I consider this to be a pretty killer feature.&lt;/p&gt;
-&lt;h3&gt;Online balancing&lt;/h3&gt;
-&lt;p&gt;This is one of the features that home users and hobbyists constantly twit ZFS for lacking. With ZFS, once you set up a RAIDZ array, it's immutable. You can repair it by replacing drives, but you can never expand it, or contract it, or change its level. (You can add another array to a pool, but that's rarely what hobbyists or small businesses actually want.)&lt;/p&gt;
-&lt;p&gt;Btrfs, on the other hand, allows you to do pretty much anything in terms of live storage reconfiguration. Let's say you want to set up a system with two drives in a btrfs-raid1 (mirror) array. First, you run through your Linux installation... and just do a perfectly standard installation to the first disk. Get it all up and running on the one disk. Don't worry about the other one. Got it all running? Time to make sure we know what partition number we're using:&lt;/p&gt;
-&lt;pre&gt;    me@machine:~$ sudo btrfs filesystem show
-    Label: none uuid: c9c5e506-6b87-4741-9017-f416d2f2ae8c
-        Total devices 1 FS bytes used 1.41GB
-        devid   1 size 9.31GB used 3.54GB path /dev/vda1&lt;/pre&gt;
-&lt;p&gt;OK, we're using the first partition of the first drive, which in my case is /dev/vda1. Before we do anything else, we want to copy the partition table layout to our second drive and install the GRUB boot loader onto it so we can boot from it if we lose the first drive:&lt;/p&gt;
-&lt;pre&gt;    me@machine:~$ sudo sfdisk -d /dev/vda | sudo sfdisk /dev/vdb
-    me@machine:~$ sudo grub-install /dev/vdb&lt;/pre&gt;
-&lt;p&gt;Now we add the second drive's first partition to our btrfs filesystem:&lt;/p&gt;
-&lt;pre&gt;    me@machine:~$ sudo btrfs device add /dev/vdb1 /&lt;/pre&gt;
-&lt;p&gt;And we rebalance the filesystem as a btrfs-raid1 mirror:&lt;/p&gt;
-&lt;pre&gt;    me@machine:~$ sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /&lt;/pre&gt;
-&lt;p&gt;The system starts chugging along, busily copying all of the data from our first drive to the second one. The command doesn't return until the operation is done, but—here's the beautiful part—the system remains usable while this is going on! Browse the Internet, play solitaire, open up more terminals... whatever you like. In a few moments, if this is a clean system, the operation is done. You now have a working btrfs-raid1 system.&lt;/p&gt;
-&lt;p&gt;This is impressive enough on its own, but you could have added a third disk and rebalanced -dconvert=raid5 -mconvert=raid5, a fourth disk and raid10 or raid6... whatever you like. You still &lt;i&gt;can. &lt;/i&gt;Btrfs is perfectly happy converting any raid level to any other raid level on the fly while the system is running. This is a killer feature for hobbyists and admins at smaller organizations who can't afford to just build entire new systems and migrate data over.&lt;/p&gt;
-&lt;h3&gt;NODATACOW&lt;/h3&gt;
-&lt;p&gt;One of the more common complaints about next-generation filesystems is that if you hammer them extremely hard with a never-ending stream of really punishing random I/O, they will eventually fall down harder than simpler conventional filesystems. So, the thinking goes, btrfs and ZFS may not be the best choice for that über database server or 128-core/256GB RAM experimental botnet-in-a-box VM host you're thinking of building.&lt;/p&gt;
-&lt;p&gt;Btrfs addresses this, at least in part, by letting you set any given file or directory NODATACOW, which means that the file or files within a directory will not be handled copy-on-write like normal files under btrfs (or zfs) are. This alleviates some of the ultimate-performance concerns mentioned above.&lt;/p&gt;
-&lt;p&gt;That said, in my experience, the vast majority of workloads—including databases and VM hosts under most load conditions—perform just &lt;i&gt;fine&lt;/i&gt; under COW filesystems, so I wouldn't rush to set this on everything. In what little testing I've done, turning NODATACOW on for an image directory containing a Windows Server 2008 R2 VM resulted in a paltry five to 10 percent performance increase &lt;i&gt;at best&lt;/i&gt; in an HDTune Pro benchmark run against its storage. And you will be giving up per-block checksumming at least by doing so. It's there, and it's very cool that it's there, but like most things, don't start tuning until you're sure you &lt;i&gt;need&lt;/i&gt; to start tuning.&lt;/p&gt;
-&lt;h3&gt;File-level/Directory-level compression&lt;/h3&gt;
-&lt;p&gt;ZFS offers compression, but it needs to be enabled on an entire filesystem level. Btrfs also offers compression with multiple algorithms (currently gz is the default, and lzo is available out of the box), but btrfs allows you to control compression at the filesystem, subvolume, directory, and even individual file level. You can also do neat things like choose &lt;em&gt;not&lt;/em&gt; to compress files whose names end in .jpg or .jpeg or .avi since those are compressed formats already, and general-purpose compression can only make them larger and cost you unnecessary CPU cycles. (This is the &lt;i&gt;default&lt;/i&gt; behavior—you don't even need to set it up!)&lt;/p&gt;
-&lt;p&gt;This is pretty awesome. And devs on the mailing list are talking about making the feature even smarter by scanning files for MIME headers and/or test-compressing the first few blocks on write, then writing the rest decompressed if the compression algorithm doesn't seem to be working well.&lt;/p&gt;
-&lt;h2&gt;Using the features: A quick rundown&lt;/h2&gt;
-&lt;p&gt;Let's take a look at a real, if simple, btrfs filesystem:&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs filesystem show
-    failed to open /dev/sr0: No medium found
-    Label: none  uuid: e5398102-7f0f-41e6-92f8-bc05176aa3ae
-    	Total devices 1 FS bytes used 3.03GB
-    	devid    1 size 24.00GB used 6.04GB path /dev/vda1
-
-    Btrfs v0.20-rc1&lt;/pre&gt;
-&lt;p&gt;This is the btrfs filesystem itself as seen on a brand-new, just-installed Ubuntu Saucy virtual machine. By itself, this doesn't seem all that informative, but it becomes a lot more useful if you're running multiple filesystems or a single filesystem on multiple physical devices, such as a btrfs-raid0/1/5/6/10 array.&lt;/p&gt;
-&lt;p&gt;Now let's take a look at the subvolumes within the filesystem:&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub list /
-    ID 256 gen 199294 top level 5 path @
-    ID 257 gen 199294 top level 5 path @home&lt;/pre&gt;
-&lt;p&gt;What we're looking at here is Ubuntu's default installation layout on btrfs: one subvolume for root and another for /home. This allows you (in fact, requires you) to snapshot the two volumes independently, which in turn makes it easier to only back up one or the other or only roll back one or the other. You could, for example, roll back your root filesystem after a disastrous upgrade without affecting data you had saved in your home directory. We can see this reflected in /etc/fstab as well:&lt;/p&gt;
-&lt;pre&gt;    # /etc/fstab: static file system information.
-    #
-    # Use 'blkid' to print the universally unique identifier for a
-    # device; this may be used with UUID= as a more robust way to name devices
-    # that works even if disks are added and removed. See fstab(5).
-    #
-    #                
-    proc            /proc           proc    nodev,noexec,nosuid 0       0
-    # / was on /dev/sda5 during installation
-    UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /               btrfs   defaults,subvol=@     0       1
-    # /home was on /dev/sda5 during installation
-    UUID=bf9ea9b9-54a7-4efc-8003-6ac0b344c6b5 /home           btrfs   defaults,subvol=@home 0       2&lt;/pre&gt;
-&lt;p&gt;Let's say you've got another computer with a btrfs filesystem and you want to back up your home directory from this computer to the other one. We'll use btrfs' built-in asynchronous replication for this. First, let's create a new subvolume underneath /home to contain the snapshots:&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub create /home/.snapshots
-    Create subvolume '/home/.snapshots'&lt;/pre&gt;
-&lt;p&gt;Now, let's take our first snapshot:&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub snapshot -r /home /home/.snapshots/myfirstsnapshot
-    Create a readonly snapshot of '/home' in '/home/.snapshots/myfirstsnapshot'&lt;/pre&gt;
-&lt;p&gt;We can see the new structure with another btrfs subvolume list:&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs sub list /
-    ID 256 gen 199294 top level 5 path @
-    ID 257 gen 199294 top level 5 path @home
-    ID 849 gen 199310 top level 5 path @home/.snapshots
-    ID 850 gen 199311 top level 5 path @home/.snapshots/myfirstsnapshot&lt;/pre&gt;
-&lt;p&gt;Now, let's replicate the snapshot to our second machine, which has convenient subvolumes named /backup and /backup/home and /backup/home/.snapshots.&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine:~$ sudo btrfs send /home/.snapshots/myfirstsnapshot | ssh second-machine sudo btrfs receive /backup/home/.snapshots&lt;/pre&gt;
-&lt;p&gt;In its simplest possible form, this demonstrates sending the snapshot—which contains the entire /home subvolume at the time it was taken, remember—and tunneling it through ssh to the btrfs filesystem on the other end. There's nothing too special about this yet. Sure, you're replicating the entire subvolume all at once, which is kind of neat, but you could accomplish this in all kinds of ways. Where this gets cool is when we take and send a &lt;i&gt;second&lt;/i&gt; snapshot.&lt;/p&gt;
-&lt;pre&gt;    me@virtual-machine: sudo btrfs sub snapshot -r /home /home/.snapshots/mysecondsnapshot
-    me@virtual-machine: sudo btrfs send -p /home/.snapshots/myfirstsnapshot /home/.snapshots/mysecondsnapshot | ssh second-machine btrfs receive /backup/home/.snapshots&lt;/pre&gt;
-&lt;p&gt;What we did here was send only the data that has &lt;i&gt;changed on-disk&lt;/i&gt; between &quot;myfirstsnapshot&quot; and &quot;mysecondsnapshot.&quot; What's especially awesome about this is that the system doesn't have to laboriously scan the disks to find things that have changed. It already knows what has or hasn't changed, so it can just immediately start spitting data out to the receive process on the other end. If you have a few text files to replicate, this might not matter. But if you have a terabyte or five of database binaries or virtual machine storage, this is a huge deal. Backups that would have taken hours or days and generated a tremendous amount of system load with older technologies can now complete in minutes with little or no extra load.&lt;/p&gt;
-&lt;p&gt;I have systems that routinely replicate a terabyte or more of data across cheap 3Mbps and slower Internet connections using this technology... sometimes, replicating several times per day. There is literally no other technology that can accomplish this. If you have a six-figure SAN that replicates off-site several times a day, incremental snapshot replication is how it does it.&lt;/p&gt;
-&lt;h2&gt;Great! Where do I start? Well...&lt;/h2&gt;
-&lt;pre&gt;    WARNING! - Btrfs Btrfs v0.20-rc1 IS EXPERIMENTAL
-    WARNING! - see http://btrfs.wiki.kernel.org before using&lt;/pre&gt;
-&lt;p&gt;You will see this message every time you create or mount a btrfs filesystem, and it really does mean what it says. All of the features I've outlined in this article are there, and they work, and they're amazing... but they currently come with a heaping helping of surprises, not all pleasant. While I have not lost any data to btrfs—including in some fairly extensive &quot;drop-testing&quot; explicitly designed to &lt;em&gt;try&lt;/em&gt; to make it lose data—I have seen weird performance death spirals that needed reboots to bring the machine back. There are also deliberately-still-rough areas of the interface like redundant arrays refusing to boot without being fed special arguments if one disk is lost, even though the array is otherwise fine. These headaches will need to be smoothed out before btrfs is ready for prime time.&lt;/p&gt;
-&lt;p&gt;Further, while the on-disk format is now considered &quot;stable&quot; and is not expected to change, btrfs is still evolving rapidly enough that you should probably be using &lt;i&gt;really&lt;/i&gt; bleeding-edge kernels if you want to test it. I began my journey with btrfs using the very latest kernel in Ubuntu's pipeline, and I ended up jumping two steps beyond that to one in the dailies... which is way outside my normal comfort zone. If you're a very experienced or just-plain-determined admin and you're willing to &lt;i&gt;make and use regular backups&lt;/i&gt;, btrfs is ready for you to jump in, test, and even use directly. But if you're looking for a mature filesystem that's ready for normal users and admins to use day to day... it will get there, but it's not there yet.&lt;/p&gt;
-&lt;p&gt;If you're still determined to jump in and test and/or use btrfs—well, dive on in! Be sure to read the wiki at http://btrfs.wiki.kernel.org &lt;i&gt;thoroughly&lt;/i&gt;, and I'd advise subscribing to the btrfs mailing list (referenced at the wiki) as well. The Bugzilla installation at kernel.org is also a must-have resource, both for looking through open bugs and submitting your own.&lt;/p&gt;
-&lt;h2&gt;The final takeaway&lt;/h2&gt;
-&lt;p&gt;The most important part of computing in the long term is keeping your data accessible and intact. Far-future scalability minimizes the need for spurious on-disk format changes (which can trap your data behind legacy equipment) in the future. Easily accessible snapshots mean the danger of &quot;oops I accidentally lost the whole file&quot; errors are largely avoidable. Incremental replication means that even huge volumes of data can be gotten safely, easily, and cheaply to physically remote locations. And easy-to-setup, easy-to-maintain, redundant self-healing arrays finally put the ugly specter of bitrot in a much more manageable position as well.&lt;/p&gt;
-&lt;figure class=&quot;image center&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;20.0&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/btrfs_replicated_snapshots.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; Each folder is the whole filesystem, fully browsable. Each folder is on a local server, and on a remote server, exactly the same. Are your backups this easy to understand and use?&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Btrfs and ZFS make keeping your data safe—against all the things that tend to kill it—more possible than it ever has been. It's easy to miss the importance at first glance, because most of us didn't have any digital data 20 years ago. In 1994, for most people, computers were computers and real life was real life, so we aren't missing the lack of it now. But in 2014, we document our real lives directly on our computers—increasingly, only on our computers. In 2034, the difference between current and last-generation filesystems will be at least as obvious in retrospect as the difference between Polaroids and real film is now.  &lt;/p&gt;&lt;div class=&quot;gallery&quot; score=&quot;31.25&quot;&gt;
-    &lt;div class=&quot;gallery-main-image&quot; score=&quot;47.5&quot;&gt;
-      &lt;div class=&quot;gallery-image-container&quot; score=&quot;18.75&quot;&gt;
-        &lt;div class=&quot;gallery-image-wrap&quot;&gt;
-        &lt;a class=&quot;enlarge&quot; href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
-          &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;
-        &lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-        
-    
-        &lt;div class=&quot;gallery-thumb-mask&quot; score=&quot;6.5&quot;&gt;
-      &lt;ol class=&quot;gallery-thumbs&quot; score=&quot;3.0&quot;&gt;
-                &lt;li class=&quot;selected&quot; score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-original-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-                &lt;li score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-                &lt;li score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-two-bits-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-                &lt;li score=&quot;1.25&quot;&gt;
-          &lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits.jpg&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/bitrot-rotted-three-bits-150x150.jpg&quot;&gt;&lt;/a&gt;
-
-                    
-          
-        &lt;/li&gt;
-              &lt;/ol&gt;
-    &lt;/div&gt;
-       
-      &lt;/div&gt;
-    
-&lt;p&gt;&lt;em&gt;Jim Salter (&lt;a href=&quot;http://twitter.com/jrssnet&quot;&gt;@jrssnet&lt;/a&gt;) is an &lt;a href=&quot;http://jrs-s.net&quot;&gt;author&lt;/a&gt;, &lt;a href=&quot;http://jrs-s.net/presentations/&quot;&gt;public speaker&lt;/a&gt;, small business owner, mercenary sysadmin, and father of three—not necessarily in that order. He got his first real taste of open source by running Apache on his very own dedicated FreeBSD 3.1 server back in 1999, and he's been a fierce advocate of FOSS ever since. He also also created and maintains &lt;a href=&quot;http://freebsdwiki.net&quot;&gt;http://freebsdwiki.net&lt;/a&gt; and &lt;a href=&quot;http://ubuntuwiki.net&quot;&gt;http://ubuntuwiki.net&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-    		&lt;/div&gt;
-    
-</description>
-<title>
-Bitrot and atomic COWs: Inside “next-gen” filesystems
-</title>
-</item>
-<item>
-<link>
-http://security.stackexchange.com/questions/29019/are-passwords-stored-in-memory-safe
-</link>
-<description>
-
-</description>
-<title>
-Are passwords stored in memory safe? 
-</title>
-</item>
-<item>
-<link>
-http://xpra.org/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;fullcontent&quot;&gt;
-	&lt;a id=&quot;about&quot;&gt;&lt;/a&gt;
-	&lt;div class=&quot;box&quot;&gt;
-		&lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/gears.png&quot; alt=&quot;gears&quot;&gt; About&lt;/h2&gt;
-		Xpra is 'screen for X', and more: it allows you to run X programs, usually on
-		a remote host and direct their display to your local machine. It also allows you
-		to display existing desktop sessions remotely.
-		&lt;br&gt;
-		Xpra is &lt;a href=&quot;http://xpra.org/trac/wiki/About&quot;&gt;&quot;rootless&quot; or &quot;seamless&quot;&lt;/a&gt;, and sessions can be accessed over SSH,
-		or password protected and encrypted over plain TCP sockets.
-		&lt;br&gt;
-		Xpra adapts to bandwidth constraints and is fully open-source.
-		&lt;br&gt;
-		For more details see &lt;a href=&quot;http://xpra.org/trac/wiki/About&quot;&gt;here&lt;/a&gt;, you can find the source &lt;a href=&quot;https://www.xpra.org/trac/wiki/Source&quot;&gt;here&lt;/a&gt;.
-  	&lt;/div&gt;
-
-	&lt;a id=&quot;features&quot;&gt;&lt;/a&gt;
-	&lt;div class=&quot;box&quot;&gt;
-		&lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/features.png&quot; alt=&quot;features&quot;&gt; Enhancements&lt;/h2&gt;
-		This fork adds many enhancements over the &lt;a class=&quot;ext&quot; href=&quot;http://partiwm.googlecode.com&quot;&gt;original version&lt;/a&gt;:
-		better performance and platform support, hardware acceleration, multi-user support, GUI tools and configuration and options;
-		keyboard and clipboard fixes; cursor, sound, system tray and notifications forwarding;
-		IPv6 support, support for shadowing existing displays, etc; and many bug fixes.
-		&lt;br&gt;
-		For more details see &lt;a href=&quot;http://xpra.org/trac/wiki/Enhancements&quot;&gt;here&lt;/a&gt;.
-	&lt;/div&gt;
-
-	&lt;a id=&quot;download&quot;&gt;&lt;/a&gt;
-	
-
-	&lt;a id=&quot;get_started&quot;&gt;&lt;/a&gt;
-	&lt;div class=&quot;box&quot;&gt;
-	  &lt;h2&gt;&lt;img src=&quot;http://xpra.org/icons/forward.png&quot; alt=&quot;forward&quot;&gt; Get started with Xpra&lt;/h2&gt;
-		On the machine which will export the application (xterm in this example):
-	    &lt;div class=&quot;codebox&quot;&gt;
-		&lt;pre&gt;&lt;code&gt;xpra start :100 --start-child=xterm
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-		We can then attach to this session from the same machine, with:
-		
-		If connecting from a remote machine, you would use something like (or you can also use the GUI):
-		&lt;div class=&quot;codebox&quot;&gt;
-		&lt;pre&gt;&lt;code&gt;xpra attach ssh:serverhostname:100
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-	&lt;/div&gt;
-
-	&lt;a id=&quot;help&quot;&gt;&lt;/a&gt;
-	
-  &lt;/div&gt;
-
-  
-
- &lt;/div&gt;
-</description>
-<title>
-Xpra: Screen for X
-</title>
-</item>
-<item>
 <link>
 http://blog.samaltman.com/super-successful-companies
 </link>
@@ -510,6 +40,198 @@ http://blog.samaltman.com/super-successful-companies
 </description>
 <title>
 Super successful companies
+</title>
+</item>
+<item>
+<link>
+https://stripe.com/blog/ctf3-coming-soon
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;ctf3-coming-soon&quot;&gt;
+
+  
+
+  &lt;p&gt;
+  It's been over a year since our last &lt;a href=&quot;https://stripe.com/blog/capturetheflag&quot;&gt;Capture the Flag&lt;/a&gt;
+  competition, and in the meanwhile we've fielded &lt;a href=&quot;https://twitter.com/jszobody/status/423187875111268352&quot;&gt;dozens&lt;/a&gt;
+  &lt;a href=&quot;https://twitter.com/micahflee/status/327171379764011008&quot;&gt;of&lt;/a&gt;
+  &lt;a href=&quot;https://twitter.com/paraboul/status/363288046331891714&quot;&gt;inquiries&lt;/a&gt;
+  about when the next one's coming. The wait is almost over: CTF3 will
+  be here a week from today.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  Next Wednesday, starting at &lt;a href=&quot;https://stripe-ctf.com/&quot;&gt;11am San Francisco time&lt;/a&gt; (2pm
+  Boston, 7pm London, 6am Melbourne), we'll be launching CTF3.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  This time around, we're trying something a bit different. Rather than
+  being about security, CTF3 will focus on distributed systems
+  engineering. You'll learn how to build fault-tolerant, performant
+  software while playing around with a bunch of cool cutting-edge
+  technologies. Like with previous CTFs, our goal is to give you
+  hands-on exposure to interesting engineering problems that you
+  normally only get to read about. If you've been wanting to really &lt;a href=&quot;http://en.wikipedia.org/wiki/Grok&quot;&gt;grok&lt;/a&gt; things like &lt;a href=&quot;http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf&quot;&gt;Paxos&lt;/a&gt;/&lt;a href=&quot;https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf&quot;&gt;Raft&lt;/a&gt;,
+  &lt;a href=&quot;http://techcrunch.com/2013/03/10/github-hit-with-another-ddos-attack-second-in-two-days-and-major-service-outage/&quot;&gt;DDOS&lt;/a&gt;
+  prevention, &lt;a href=&quot;https://cwiki.apache.org/confluence/display/solr/Distributed+Search+with+Index+Sharding&quot;&gt;distributed
+  search&lt;/a&gt;, or &lt;a href=&quot;http://en.wikipedia.org/wiki/Bitcoin&quot;&gt;Bitcoin&lt;/a&gt; (and maybe
+  even &lt;a href=&quot;http://graphics.stanford.edu/~seander/bithacks.html&quot;&gt;bit
+  twiddling&lt;/a&gt;), now's your chance.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  As always, we're building this CTF for programmers of all skill levels
+  and backgrounds. Even if the above sounds daunting, you should still
+  give it a shot &amp;#x2014; you might be surprised by what you can
+  accomplish. For those looking for some competition, there will be
+  leaderboards where you can compete against your friends or the CTF
+  community at large.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  Want to meet and hack alongside your fellow CTFers in person?  While
+  the main gathering will once again be based on IRC (check back for
+  details next week), we'll also be hosting kickoff events in &lt;a href=&quot;https://stripe.com/events/ctf3-kickoff-sf&quot;&gt;San Francisco&lt;/a&gt;, &lt;a href=&quot;https://stripe.com/events/ctf3-kickoff-cambridge&quot;&gt;Boston&lt;/a&gt;, and
+  &lt;a href=&quot;https://stripe.com/events/ctf3-kickoff-london&quot;&gt;London&lt;/a&gt;.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  Over the next week, the CTF team (&lt;a href=&quot;https://twitter.com/sidd&quot;&gt;Siddarth Chandrasekaran&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/alberge&quot;&gt;Andy Brody&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/chranderson&quot;&gt;Christian Anderson&lt;/a&gt;, and
+  &lt;a href=&quot;https://twitter.com/thegdb&quot;&gt;I&lt;/a&gt;) will be putting the
+  finishing touches on CTF3. See you on the other side!
+  &lt;/p&gt;
+
+  &lt;div id=&quot;get-started&quot;&gt;
+    &lt;p&gt;The countdown has started. &lt;a href=&quot;https://stripe-ctf.com/&quot; class=&quot;button blue medium rounded&quot;&gt;&lt;span&gt;Notify me&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+</description>
+<title>
+Coming soon: Stripe CTF3, distributed systems edition
+</title>
+</item>
+<item>
+<link>
+https://github.com/swannodette/lt-cljs-tutorial
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
+          
+
+
+
+
+
+
+
+  &lt;a href=&quot;https://github.com/swannodette/lt-cljs-tutorial&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
+  &lt;span class=&quot;language-color&quot;&gt;Clojure&lt;/span&gt;
+  &lt;/a&gt;
+
+
+
+
+
+
+
+&lt;a href=&quot;https://github.com/swannodette/lt-cljs-tutorial/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
+
+
+  &lt;div id=&quot;readme&quot; class=&quot;clearfix announce instapaper_body md&quot;&gt;
+    &lt;span class=&quot;name&quot;&gt;
+      
+      README.md
+    &lt;/span&gt;
+
+    &lt;article class=&quot;markdown-body entry-content&quot;&gt;
+
+&lt;p&gt;An introduction to the
+&lt;a href=&quot;http://github.com/clojure/clojurescript&quot;&gt;ClojureScript&lt;/a&gt; programming
+language aimed at &lt;a href=&quot;http://www.lighttable.com&quot;&gt;Light Table&lt;/a&gt; users. You
+can open &lt;code&gt;lt-cljs-tutorial.cljs&lt;/code&gt; in Light Table and evaluate it
+interactively by adding a Light Table UI connection.&lt;/p&gt;
+
+&lt;p&gt;I hope this can be a kind of ClojureScript wiki of sorts for Light
+Table users.  Pull requests welcome.&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+</description>
+<title>
+Light Table ClojureScript Tutorial
+</title>
+</item>
+<item>
+<link>
+http://kimonify.kimonolabs.com/kimload?url=http%3A%2F%2Fwww.kimonolabs.com%2Fwelcome.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;col-md-8 article-body&quot;&gt;
+        &lt;p&gt;Web scraping. It's something we all love to hate. If you're a developer, you know what we're talking about. You wish the data you needed to power your app, model or visualization was available via API. But, most of the time it's not. So, you decide to build a web scraper. You write a ton of code, employ a laundry list of libraries and techniques, all for something that's by definition unstable, has to be hosted somewhere, and needs to be maintained over time.&lt;/p&gt;
+        &lt;p&gt;We've felt this pain, many times over. So we built kimono to do all this heavy lifting for us. We actually decided to go a step further and make it easy enough for anyone to use, not just developers. If getting access to structured data from around the web is so interesting to us, why wouldn't it be interesting to everyone else, even people who can't code? Our first step toward solving this problem is not just to make building a web scraper easy, but to add a simple app builder feature, letting users see their data in an app vs. raw JSON. In fact, my Mom is using an app she built with kimono right now to check ski conditions near Lake Tahoe.&lt;/p&gt;
+        &lt;p&gt;So, what does a web scraper for anyone really look like? Actually, you're already using it (unless you're on a mobile device, in which case you should totally come back using your computer). &lt;/p&gt;
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        &lt;p&gt;Notice how kimono self organized the data into two different collections for you? We felt it important keep things straightforward and allow users to just point and click while we figure out the underlying structure automatically. As we worked through the problem we defined a set of design principles like these that would underpin an ideal solution. We touch upon these below (more detail in blog posts to come). A good solution must:&lt;/p&gt;
+        &lt;ol class=&quot;axioms&quot;&gt;
+          &lt;li&gt;
+            &lt;h3&gt;Be accessible straight from the browser&lt;/h3&gt;
+            &lt;p&gt;We wanted to create something that could be used anytime, anywhere by anyone. This meant no downloads, no installs, no system requirements. The challenge was to create a way for triggering kimono on any page you are looking at in your browser of choice.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;h3&gt;Recognize relationships amongst data like a human would&lt;/h3&gt;
+            &lt;p&gt;Interpreting the HTML tags and DOM hierarchy often doesn't yield the true associations and structure of the data. We therefore needed to build in enough intelligence to figure out what you really want, and how the elements you've chosen are truly associated, without you having to think about a data model or underlying structure.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;h3&gt;Be flexible enough to work across different sites and data formats&lt;/h3&gt;
+            &lt;p&gt;Each web site is different and presents its own unique challenges, from truly malformed HTML to dumps of Microsoft excel / word documents and pages serving up data dynamically with AJAX.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;h3&gt;Run and be hosted in the cloud&lt;/h3&gt;
+            &lt;p&gt;In order to depend on the scraped data, we'd need to be able to store caches of run jobs on cloud hosted servers and send alerts when things go wrong.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+
+        &lt;p&gt;Kimono is the first iteration of our solution to the scraping problem. It's still in beta and we want to invite you to check it out. We would love your feedback  - for bugs, feature suggestions or anything else. Your input will help us make kimono better, so you never have to write a web scraper again. Hope to see you kimonifying pages on the web soon!&lt;/p&gt;
+        
+        &lt;p&gt;&amp;#x2013; Pratap and Ryan&lt;/p&gt;
+        &lt;a class=&quot;btn btn-primary kim-dont-touch kimonolink-bottom&quot; href=&quot;http://www.kimonolabs.com/&quot;&gt;Try it out for free&lt;/a&gt;
+        
+      &lt;/div&gt;
+      
+    &lt;/div&gt;
+</description>
+<title>
+Show HN: Kimono – Never write a web scraper again
+</title>
+</item>
+<item>
+<author>
+Kurt Mackey
+</author>
+<link>
+http://blog.mongohq.com/making-remote-work-work-an-adventure-in-time-and-space/
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;post-368&quot; class=&quot;post-368 post type-post status-publish format-standard hentry category-mongohq-2&quot;&gt;  &lt;p&gt;Mon&amp;#xAD;goHQ is a dis&amp;#xAD;trib&amp;#xAD;uted com&amp;#xAD;pany, with 21 employ&amp;#xAD;ees scat&amp;#xAD;tered across Cal&amp;#xAD;i&amp;#xAD;for&amp;#xAD;nia, Alabama, Utah, Wind&amp;#xAD;sor Ontario, Que&amp;#xAD;bec, and Lon&amp;#xAD;don. This isn&amp;#x2019;t rare, by any means, and is becom&amp;#xAD;ing more com&amp;#xAD;mon as tech&amp;#xAD;nol&amp;#xAD;ogy cor&amp;#xAD;po&amp;#xAD;ra&amp;#xAD;tions evolve &amp;#x2026; par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly when they real&amp;#xAD;ize that the inter&amp;#xAD;sec&amp;#xAD;tion of the entire pop&amp;#xAD;u&amp;#xAD;la&amp;#xAD;tion of good hack&amp;#xAD;ers and the area that&amp;#x2019;s rea&amp;#xAD;son&amp;#xAD;ably acces&amp;#xAD;si&amp;#xAD;ble to their office looks some&amp;#xAD;thing like&amp;#xA0;this:&lt;/p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Good Hacker intersection with office area&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/good-hacker-sf-venn-diagram.png&quot;&gt;&lt;p&gt;Most posts like this talk a lot about the tools, which is under&amp;#xAD;stand&amp;#xAD;able because they&amp;#x2019;re so much fun to futz around with. At their best, though, tools that help with dis&amp;#xAD;trib&amp;#xAD;uted teams are an exten&amp;#xAD;sion of a remote friendly work&amp;#xAD;place, and get&amp;#xAD;ting to that is *hard*. We&amp;#x2019;re prob&amp;#xAD;a&amp;#xAD;bly 80% of the way there, and with enough dili&amp;#xAD;gence will be 82% of the way there by the end of this&amp;#xA0;year.&lt;/p&gt;&lt;h2&gt;Work&amp;#xAD;ing well remotely takes&amp;#xA0;practice&lt;/h2&gt;&lt;p&gt;We&amp;#x2019;ve started ask&amp;#xAD;ing about remote work expe&amp;#xAD;ri&amp;#xAD;ence and skills very early in a promis&amp;#xAD;ing inter&amp;#xAD;view cycle. We expect a lot from peo&amp;#xAD;ple, and the &amp;#x201C;remote require&amp;#xAD;ment&amp;#x201D; just adds another dimen&amp;#xAD;sion of dif&amp;#xAD;fi&amp;#xAD;culty to their jobs. The nor&amp;#xAD;mal response, par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly from peo&amp;#xAD;ple who&amp;#x2019;ve been phys&amp;#xAD;i&amp;#xAD;cally present at offices all their lives, is a bit non&amp;#xAD;cha&amp;#xAD;lant. They assume that &amp;#x201C;remote work&amp;#x201D; means &amp;#x201C;I can spend a lot of time ski&amp;#xAD;ing and work from the&amp;#xA0;lodge&amp;#x201D;.&lt;/p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Steve somewhere exotic, and snowy&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/steve-telecommuting.jpg&quot;&gt;&lt;p&gt;So that&amp;#x2019;s true, kind of, as evi&amp;#xAD;denced by Steve up there. He does go ski&amp;#xAD;ing a lot and has been known to work from the lodge. He also, when not ski&amp;#xAD;ing, starts his days roughly 6 hours later than a nor&amp;#xAD;mal Lon&amp;#xAD;doner to make sure he&amp;#x2019;s around to talk to peo&amp;#xAD;ple on the supe&amp;#xAD;rior Amer&amp;#xAD;i&amp;#xAD;can time zones (except Pacific time, Pacific time is&amp;#xA0;awful).&lt;/p&gt;&lt;p&gt;What they don&amp;#x2019;t always think about, though, is the inher&amp;#xAD;ent fire&amp;#xAD;wall a com&amp;#xAD;mute cre&amp;#xAD;ates between &amp;#x201C;work&amp;#x201D; and &amp;#x201C;per&amp;#xAD;sonal life&amp;#x201D;. Work&amp;#xAD;ing out of a home office opens up an entire world of sur&amp;#xAD;pris&amp;#xAD;ingly difficult-&amp;#x200B;&amp;#x200B;to-&amp;#x200B;&amp;#x200B;handle dis&amp;#xAD;trac&amp;#xAD;tions, par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly for those of us with fam&amp;#xAD;i&amp;#xAD;lies. It&amp;#x2019;s easy to avoid a gui&amp;#xAD;tar wield&amp;#xAD;ing tod&amp;#xAD;dler when the office is 5 miles away and he has no driver&amp;#x2019;s license. It&amp;#x2019;s harder when the wall between the liv&amp;#xAD;ing room and the office makes a delight&amp;#xAD;ful bang&amp;#xAD;ing noise when struck with a&amp;#xA0;guitar.&lt;/p&gt;&lt;h2&gt;Every&amp;#xAD;one works remotely, even from an&amp;#xA0;office&lt;/h2&gt;&lt;p&gt;If you did the math, you noticed we have about four times as many peo&amp;#xAD;ple as we do loca&amp;#xAD;tions. Mon&amp;#xAD;goHQ has offices in both San Mateo, CA (about 15 miles south of San Fran&amp;#xAD;cisco) and Birm&amp;#xAD;ing&amp;#xAD;ham, AL. Hav&amp;#xAD;ing cen&amp;#xAD;tral&amp;#xAD;ized offices can wreck a bud&amp;#xAD;ding remote friendly cul&amp;#xAD;ture. Work&amp;#xAD;ing in a way that&amp;#x2019;s inclu&amp;#xAD;sive of peo&amp;#xAD;ple who aren&amp;#x2019;t phys&amp;#xAD;i&amp;#xAD;cally (or even tem&amp;#xAD;po&amp;#xAD;rally) present is not entirely nat&amp;#xAD;ural, and exclud&amp;#xAD;ing remote employ&amp;#xAD;ees from impor&amp;#xAD;tant inter&amp;#xAD;ac&amp;#xAD;tions is a quick path to&amp;#xA0;agony.&lt;/p&gt;&lt;img alt=&quot;Watercooler gossip&quot; src=&quot;https://blog.mongohq.com/wp-content/uploads/2014/01/4798856225_497f8a1566_b-700x468.jpg&quot;&gt;&lt;p&gt;We&amp;#x2019;ve expe&amp;#xAD;ri&amp;#xAD;enced some vari&amp;#xAD;ant of this prob&amp;#xAD;lem every time a new hire has joined in one of our offices, and are now very explicit about the &amp;#x201C;work as if you&amp;#x2019;re not here&amp;#x201D; stan&amp;#xAD;dard. We expect every&amp;#xAD;one to work with the remote col&amp;#xAD;lab&amp;#xAD;o&amp;#xAD;ra&amp;#xAD;tion tools, be avail&amp;#xAD;able via the same chan&amp;#xAD;nels, and pro&amp;#xAD;duce writ&amp;#xAD;ten arti&amp;#xAD;facts of inter&amp;#xAD;ac&amp;#xAD;tions that are impor&amp;#xAD;tant to share. This is a tough require&amp;#xAD;ment to stick to. We&amp;#x2019;ve encoun&amp;#xAD;tered peo&amp;#xAD;ple who func&amp;#xAD;tion very well in an office envi&amp;#xAD;ron&amp;#xAD;ment, but can&amp;#x2019;t seem to func&amp;#xAD;tion&amp;#xA0;remotely.&lt;/p&gt;&lt;h2&gt;Hyper&amp;#xAD;sen&amp;#xAD;si&amp;#xAD;tiv&amp;#xAD;ity to &amp;#x201C;the&amp;#xA0;feels&amp;#x201D;&lt;/h2&gt;&lt;p&gt;Like most decep&amp;#xAD;tively sim&amp;#xAD;ple ideas, remote work is easy and amaz&amp;#xAD;ing when every&amp;#xAD;thing is going well. If your com&amp;#xAD;pany is killing it, all the hockey sticks point up, and every&amp;#xAD;one gets along amaz&amp;#xAD;ingly well, the remote work cul&amp;#xAD;ture is prob&amp;#xAD;a&amp;#xAD;bly good. There is dan&amp;#xAD;ger, how&amp;#xAD;ever, when things go south. We&amp;#x2019;ve expe&amp;#xAD;ri&amp;#xAD;enced the emo&amp;#xAD;tional troughs as a com&amp;#xAD;pany, and had indi&amp;#xAD;vid&amp;#xAD;u&amp;#xAD;als fight their own per&amp;#xAD;sonal&amp;#xA0;battles.&lt;/p&gt;&lt;p&gt;The real&amp;#xAD;ity of a remote work&amp;#xAD;place is that the con&amp;#xAD;nec&amp;#xAD;tions are largely arti&amp;#xAD;fi&amp;#xAD;cial con&amp;#xAD;structs. Peo&amp;#xAD;ple can be very, very iso&amp;#xAD;lated. A person&amp;#x2019;s default behav&amp;#xAD;ior when they go into a funk is to avoid seek&amp;#xAD;ing out inter&amp;#xAD;ac&amp;#xAD;tions, which is effec&amp;#xAD;tively the same as actively with&amp;#xAD;draw&amp;#xAD;ing in a remote work envi&amp;#xAD;ron&amp;#xAD;ment. It takes a tremen&amp;#xAD;dous effort to get on video chats, use our text based com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion tools, or even call some&amp;#xAD;one dur&amp;#xAD;ing a dark&amp;#xA0;time.&lt;/p&gt;&lt;p&gt;We&amp;#x2019;re learn&amp;#xAD;ing how to inter&amp;#xAD;pret the emo&amp;#xAD;tional state of peo&amp;#xAD;ple we only rarely see, and started work&amp;#xAD;ing to delib&amp;#xAD;er&amp;#xAD;ately draw peo&amp;#xAD;ple out of iso&amp;#xAD;la&amp;#xAD;tion with com&amp;#xAD;pany wide video events. We&amp;#x2019;ve even tried record&amp;#xAD;ing bits of these events (a recent one had a series of light&amp;#xAD;ning talks) and shar&amp;#xAD;ing them around after&amp;#xAD;ward in an effort to get face time, even if just one way. This is a hard prob&amp;#xAD;lem, though, and there&amp;#x2019;s really very lit&amp;#xAD;tle we can do about it other than notice that it&amp;#x2019;s&amp;#xA0;happening.&lt;/p&gt;&lt;h2&gt;The prac&amp;#xAD;ti&amp;#xAD;cal (and the&amp;#xA0;tools!)&lt;/h2&gt;&lt;p&gt;In gen&amp;#xAD;eral, a dis&amp;#xAD;trib&amp;#xAD;uted team is a series of com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion prob&amp;#xAD;lems. We tackle this in two gen&amp;#xAD;eral ways. First, we favor async com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion when&amp;#xA0;possible:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;We have a cen&amp;#xAD;tral &amp;#x201C;work tool&amp;#x201D; (it&amp;#x2019;s home grown, we call it Com&amp;#xAD;pose) we use to record what we&amp;#x2019;re pro&amp;#xAD;duc&amp;#xAD;ing each day. Any&amp;#xAD;one who wants to know what some&amp;#xAD;one is up to, or what&amp;#x2019;s been accom&amp;#xAD;plished on project X, can find out here &amp;#x2026; assum&amp;#xAD;ing everyone&amp;#x2019;s doing their&amp;#xA0;job.&lt;/li&gt;&lt;li&gt;Most day to day com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion hap&amp;#xAD;pens in &lt;a href=&quot;http://hipchat.com&quot; target=&quot;_blank&quot;&gt;Hipchat&lt;/a&gt;, with some work hap&amp;#xAD;pen&amp;#xAD;ing in project spe&amp;#xAD;cific rooms. It&amp;#x2019;s rea&amp;#xAD;son&amp;#xAD;ably easy to catch up on a day or two of activ&amp;#xAD;ity most of the&amp;#xA0;time.&lt;/li&gt;&lt;li&gt;When we do have meet&amp;#xAD;ings (this is a whole post by itself), we like to have pre-&amp;#x200B;&amp;#x200B;reads avail&amp;#xAD;able on a Wiki. These get updated with use&amp;#xAD;ful infor&amp;#xAD;ma&amp;#xAD;tion as the meet&amp;#xAD;ing pro&amp;#xAD;gresses, with the goal of mak&amp;#xAD;ing the actual meet&amp;#xAD;ings optional. We use &lt;a href=&quot;http://hackpad.com&quot; target=&quot;_blank&quot;&gt;Hack&amp;#xAD;pad&lt;/a&gt; for this, mostly, but have also used Con&amp;#xAD;flu&amp;#xAD;ence and Github&amp;#x2019;s&amp;#xA0;wikis.&lt;/li&gt;&lt;li&gt;Email is a bit of a beast, but we do have &amp;#x201C;open&amp;#x201D; mail&amp;#xAD;ing lists and try to include those on most email com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tions. The caveat is &amp;#x201C;try&amp;#x201D;, though, we haven&amp;#x2019;t been com&amp;#xAD;pletely suc&amp;#xAD;cess&amp;#xAD;ful in build&amp;#xAD;ing good com&amp;#xAD;pany email&amp;#xA0;habits.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;We also encour&amp;#xAD;age face&amp;#xA0;time:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://sqwiggle.com&quot; target=&quot;_blank&quot;&gt;Sqwig&amp;#xAD;gle&lt;/a&gt; is really good for this, and there are any&amp;#xAD;where from 3 to 10 peo&amp;#xAD;ple on our Sqwig&amp;#xAD;gle setup at any given time. Sqwig&amp;#xAD;gle takes a pic&amp;#xAD;ture of whoever&amp;#x2019;s on every so often, and gets bonus points for help&amp;#xAD;ing us record peo&amp;#xAD;ples&amp;#x2019; embar&amp;#xAD;rass&amp;#xAD;ing poses for&amp;#xA0;posterity:&lt;/li&gt;&lt;/ul&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Derp&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/sqwiggle-shenanigans.png&quot;&gt;&lt;ul&gt;&lt;li&gt;Google Hang&amp;#xAD;outs come in handy for sched&amp;#xAD;uled events. We used to have a per&amp;#xAD;pet&amp;#xAD;ual Hang&amp;#xAD;out on wall mounted tele&amp;#xAD;vi&amp;#xAD;sions in both offices, but that cre&amp;#xAD;ated a sort of audi&amp;#xAD;ence /&amp;#x200B; pre&amp;#xAD;sen&amp;#xAD;ter vibe that was a lit&amp;#xAD;tle&amp;#xA0;odd.&lt;/li&gt;&lt;li&gt;We have a &lt;a href=&quot;http://doublerobotics.com&quot; target=&quot;_blank&quot;&gt;Dou&amp;#xAD;ble Robot&amp;#xAD;ics&lt;/a&gt; robot in each office. Remote employ&amp;#xAD;ees can &amp;#x201C;drop in&amp;#x201D;, drive around, and even pull off low level&amp;#xA0;pranks.&lt;/li&gt;&lt;li&gt;Does real estate count as a tool? We have an apart&amp;#xAD;ment near our San Mateo office that any&amp;#xAD;one can use when they&amp;#x2019;re in town. Peo&amp;#xAD;ple tend to travel to San Mateo about once every 6 weeks on&amp;#xA0;average.&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;It&amp;#x2019;s a&amp;#xA0;process&lt;/h2&gt;&lt;p&gt;If you are try&amp;#xAD;ing to build a remote friendly cul&amp;#xAD;ture, the best advice we have for you is &amp;#x201C;just keep iter&amp;#xAD;at&amp;#xAD;ing&amp;#x201D;. It&amp;#x2019;s not an easy thing to do, but it&amp;#x2019;s an amaz&amp;#xAD;ing capa&amp;#xAD;bil&amp;#xAD;ity for a com&amp;#xAD;pany to have. Our con&amp;#xAD;tin&amp;#xAD;ued attempts to do it well have resulted in some phe&amp;#xAD;nom&amp;#xAD;e&amp;#xAD;nal peo&amp;#xAD;ple join&amp;#xAD;ing we never would have met oth&amp;#xAD;er&amp;#xAD;wise. We&amp;#x2019;ve mostly been able to get this far by pow&amp;#xAD;er&amp;#xAD;ing through the tough stuff, com&amp;#xAD;mit&amp;#xAD;ting to un-&amp;#x200B;&amp;#x200B;natural but valu&amp;#xAD;able habits, and &lt;a href=&quot;http://joel.is/post/59525266381/the-joys-and-benefits-of-working-as-a-distributed-team&quot; target=&quot;_blank&quot;&gt;learn&amp;#xAD;ing&lt;/a&gt; from other &lt;a href=&quot;https://zapier.com/blog/how-manage-remote-team/&quot; target=&quot;_blank&quot;&gt;com&amp;#xAD;pa&amp;#xAD;nies&lt;/a&gt; who are &lt;a href=&quot;http://zachholman.com/posts/how-github-works-asynchronous/&quot; target=&quot;_blank&quot;&gt;try&amp;#xAD;ing&lt;/a&gt; to do&amp;#xA0;similar.&lt;/p&gt;    &lt;/article&gt; &lt;/div&gt;
+</description>
+<title>
+Making remote work work: An adventure in time and space
 </title>
 </item>
 </channel>
