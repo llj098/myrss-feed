@@ -15,556 +15,6 @@ myread
 </description>
 <item>
 <author>
-Kurt Mackey
-</author>
-<link>
-http://blog.mongohq.com/making-remote-work-work-an-adventure-in-time-and-space/
-</link>
-<description>
-&lt;div&gt;&lt;article id=&quot;post-368&quot; class=&quot;post-368 post type-post status-publish format-standard hentry category-mongohq-2&quot;&gt;  &lt;p&gt;Mon&amp;#xAD;goHQ is a dis&amp;#xAD;trib&amp;#xAD;uted com&amp;#xAD;pany, with 21 employ&amp;#xAD;ees scat&amp;#xAD;tered across Cal&amp;#xAD;i&amp;#xAD;for&amp;#xAD;nia, Alabama, Utah, Wind&amp;#xAD;sor Ontario, Que&amp;#xAD;bec, and Lon&amp;#xAD;don. This isn&amp;#x2019;t rare, by any means, and is becom&amp;#xAD;ing more com&amp;#xAD;mon as tech&amp;#xAD;nol&amp;#xAD;ogy cor&amp;#xAD;po&amp;#xAD;ra&amp;#xAD;tions evolve &amp;#x2026; par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly when they real&amp;#xAD;ize that the inter&amp;#xAD;sec&amp;#xAD;tion of the entire pop&amp;#xAD;u&amp;#xAD;la&amp;#xAD;tion of good hack&amp;#xAD;ers and the area that&amp;#x2019;s rea&amp;#xAD;son&amp;#xAD;ably acces&amp;#xAD;si&amp;#xAD;ble to their office looks some&amp;#xAD;thing like&amp;#xA0;this:&lt;/p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Good Hacker intersection with office area&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/good-hacker-sf-venn-diagram.png&quot;&gt;&lt;p&gt;Most posts like this talk a lot about the tools, which is under&amp;#xAD;stand&amp;#xAD;able because they&amp;#x2019;re so much fun to futz around with. At their best, though, tools that help with dis&amp;#xAD;trib&amp;#xAD;uted teams are an exten&amp;#xAD;sion of a remote friendly work&amp;#xAD;place, and get&amp;#xAD;ting to that is *hard*. We&amp;#x2019;re prob&amp;#xAD;a&amp;#xAD;bly 80% of the way there, and with enough dili&amp;#xAD;gence will be 82% of the way there by the end of this&amp;#xA0;year.&lt;/p&gt;&lt;h2&gt;Work&amp;#xAD;ing well remotely takes&amp;#xA0;practice&lt;/h2&gt;&lt;p&gt;We&amp;#x2019;ve started ask&amp;#xAD;ing about remote work expe&amp;#xAD;ri&amp;#xAD;ence and skills very early in a promis&amp;#xAD;ing inter&amp;#xAD;view cycle. We expect a lot from peo&amp;#xAD;ple, and the &amp;#x201C;remote require&amp;#xAD;ment&amp;#x201D; just adds another dimen&amp;#xAD;sion of dif&amp;#xAD;fi&amp;#xAD;culty to their jobs. The nor&amp;#xAD;mal response, par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly from peo&amp;#xAD;ple who&amp;#x2019;ve been phys&amp;#xAD;i&amp;#xAD;cally present at offices all their lives, is a bit non&amp;#xAD;cha&amp;#xAD;lant. They assume that &amp;#x201C;remote work&amp;#x201D; means &amp;#x201C;I can spend a lot of time ski&amp;#xAD;ing and work from the&amp;#xA0;lodge&amp;#x201D;.&lt;/p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Steve somewhere exotic, and snowy&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/steve-telecommuting.jpg&quot;&gt;&lt;p&gt;So that&amp;#x2019;s true, kind of, as evi&amp;#xAD;denced by Steve up there. He does go ski&amp;#xAD;ing a lot and has been known to work from the lodge. He also, when not ski&amp;#xAD;ing, starts his days roughly 6 hours later than a nor&amp;#xAD;mal Lon&amp;#xAD;doner to make sure he&amp;#x2019;s around to talk to peo&amp;#xAD;ple on the supe&amp;#xAD;rior Amer&amp;#xAD;i&amp;#xAD;can time zones (except Pacific time, Pacific time is&amp;#xA0;awful).&lt;/p&gt;&lt;p&gt;What they don&amp;#x2019;t always think about, though, is the inher&amp;#xAD;ent fire&amp;#xAD;wall a com&amp;#xAD;mute cre&amp;#xAD;ates between &amp;#x201C;work&amp;#x201D; and &amp;#x201C;per&amp;#xAD;sonal life&amp;#x201D;. Work&amp;#xAD;ing out of a home office opens up an entire world of sur&amp;#xAD;pris&amp;#xAD;ingly difficult-&amp;#x200B;&amp;#x200B;to-&amp;#x200B;&amp;#x200B;handle dis&amp;#xAD;trac&amp;#xAD;tions, par&amp;#xAD;tic&amp;#xAD;u&amp;#xAD;larly for those of us with fam&amp;#xAD;i&amp;#xAD;lies. It&amp;#x2019;s easy to avoid a gui&amp;#xAD;tar wield&amp;#xAD;ing tod&amp;#xAD;dler when the office is 5 miles away and he has no driver&amp;#x2019;s license. It&amp;#x2019;s harder when the wall between the liv&amp;#xAD;ing room and the office makes a delight&amp;#xAD;ful bang&amp;#xAD;ing noise when struck with a&amp;#xA0;guitar.&lt;/p&gt;&lt;h2&gt;Every&amp;#xAD;one works remotely, even from an&amp;#xA0;office&lt;/h2&gt;&lt;p&gt;If you did the math, you noticed we have about four times as many peo&amp;#xAD;ple as we do loca&amp;#xAD;tions. Mon&amp;#xAD;goHQ has offices in both San Mateo, CA (about 15 miles south of San Fran&amp;#xAD;cisco) and Birm&amp;#xAD;ing&amp;#xAD;ham, AL. Hav&amp;#xAD;ing cen&amp;#xAD;tral&amp;#xAD;ized offices can wreck a bud&amp;#xAD;ding remote friendly cul&amp;#xAD;ture. Work&amp;#xAD;ing in a way that&amp;#x2019;s inclu&amp;#xAD;sive of peo&amp;#xAD;ple who aren&amp;#x2019;t phys&amp;#xAD;i&amp;#xAD;cally (or even tem&amp;#xAD;po&amp;#xAD;rally) present is not entirely nat&amp;#xAD;ural, and exclud&amp;#xAD;ing remote employ&amp;#xAD;ees from impor&amp;#xAD;tant inter&amp;#xAD;ac&amp;#xAD;tions is a quick path to&amp;#xA0;agony.&lt;/p&gt;&lt;img alt=&quot;Watercooler gossip&quot; src=&quot;https://blog.mongohq.com/wp-content/uploads/2014/01/4798856225_497f8a1566_b-700x468.jpg&quot;&gt;&lt;p&gt;We&amp;#x2019;ve expe&amp;#xAD;ri&amp;#xAD;enced some vari&amp;#xAD;ant of this prob&amp;#xAD;lem every time a new hire has joined in one of our offices, and are now very explicit about the &amp;#x201C;work as if you&amp;#x2019;re not here&amp;#x201D; stan&amp;#xAD;dard. We expect every&amp;#xAD;one to work with the remote col&amp;#xAD;lab&amp;#xAD;o&amp;#xAD;ra&amp;#xAD;tion tools, be avail&amp;#xAD;able via the same chan&amp;#xAD;nels, and pro&amp;#xAD;duce writ&amp;#xAD;ten arti&amp;#xAD;facts of inter&amp;#xAD;ac&amp;#xAD;tions that are impor&amp;#xAD;tant to share. This is a tough require&amp;#xAD;ment to stick to. We&amp;#x2019;ve encoun&amp;#xAD;tered peo&amp;#xAD;ple who func&amp;#xAD;tion very well in an office envi&amp;#xAD;ron&amp;#xAD;ment, but can&amp;#x2019;t seem to func&amp;#xAD;tion&amp;#xA0;remotely.&lt;/p&gt;&lt;h2&gt;Hyper&amp;#xAD;sen&amp;#xAD;si&amp;#xAD;tiv&amp;#xAD;ity to &amp;#x201C;the&amp;#xA0;feels&amp;#x201D;&lt;/h2&gt;&lt;p&gt;Like most decep&amp;#xAD;tively sim&amp;#xAD;ple ideas, remote work is easy and amaz&amp;#xAD;ing when every&amp;#xAD;thing is going well. If your com&amp;#xAD;pany is killing it, all the hockey sticks point up, and every&amp;#xAD;one gets along amaz&amp;#xAD;ingly well, the remote work cul&amp;#xAD;ture is prob&amp;#xAD;a&amp;#xAD;bly good. There is dan&amp;#xAD;ger, how&amp;#xAD;ever, when things go south. We&amp;#x2019;ve expe&amp;#xAD;ri&amp;#xAD;enced the emo&amp;#xAD;tional troughs as a com&amp;#xAD;pany, and had indi&amp;#xAD;vid&amp;#xAD;u&amp;#xAD;als fight their own per&amp;#xAD;sonal&amp;#xA0;battles.&lt;/p&gt;&lt;p&gt;The real&amp;#xAD;ity of a remote work&amp;#xAD;place is that the con&amp;#xAD;nec&amp;#xAD;tions are largely arti&amp;#xAD;fi&amp;#xAD;cial con&amp;#xAD;structs. Peo&amp;#xAD;ple can be very, very iso&amp;#xAD;lated. A person&amp;#x2019;s default behav&amp;#xAD;ior when they go into a funk is to avoid seek&amp;#xAD;ing out inter&amp;#xAD;ac&amp;#xAD;tions, which is effec&amp;#xAD;tively the same as actively with&amp;#xAD;draw&amp;#xAD;ing in a remote work envi&amp;#xAD;ron&amp;#xAD;ment. It takes a tremen&amp;#xAD;dous effort to get on video chats, use our text based com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion tools, or even call some&amp;#xAD;one dur&amp;#xAD;ing a dark&amp;#xA0;time.&lt;/p&gt;&lt;p&gt;We&amp;#x2019;re learn&amp;#xAD;ing how to inter&amp;#xAD;pret the emo&amp;#xAD;tional state of peo&amp;#xAD;ple we only rarely see, and started work&amp;#xAD;ing to delib&amp;#xAD;er&amp;#xAD;ately draw peo&amp;#xAD;ple out of iso&amp;#xAD;la&amp;#xAD;tion with com&amp;#xAD;pany wide video events. We&amp;#x2019;ve even tried record&amp;#xAD;ing bits of these events (a recent one had a series of light&amp;#xAD;ning talks) and shar&amp;#xAD;ing them around after&amp;#xAD;ward in an effort to get face time, even if just one way. This is a hard prob&amp;#xAD;lem, though, and there&amp;#x2019;s really very lit&amp;#xAD;tle we can do about it other than notice that it&amp;#x2019;s&amp;#xA0;happening.&lt;/p&gt;&lt;h2&gt;The prac&amp;#xAD;ti&amp;#xAD;cal (and the&amp;#xA0;tools!)&lt;/h2&gt;&lt;p&gt;In gen&amp;#xAD;eral, a dis&amp;#xAD;trib&amp;#xAD;uted team is a series of com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion prob&amp;#xAD;lems. We tackle this in two gen&amp;#xAD;eral ways. First, we favor async com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion when&amp;#xA0;possible:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;We have a cen&amp;#xAD;tral &amp;#x201C;work tool&amp;#x201D; (it&amp;#x2019;s home grown, we call it Com&amp;#xAD;pose) we use to record what we&amp;#x2019;re pro&amp;#xAD;duc&amp;#xAD;ing each day. Any&amp;#xAD;one who wants to know what some&amp;#xAD;one is up to, or what&amp;#x2019;s been accom&amp;#xAD;plished on project X, can find out here &amp;#x2026; assum&amp;#xAD;ing everyone&amp;#x2019;s doing their&amp;#xA0;job.&lt;/li&gt;&lt;li&gt;Most day to day com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tion hap&amp;#xAD;pens in &lt;a href=&quot;http://hipchat.com&quot; target=&quot;_blank&quot;&gt;Hipchat&lt;/a&gt;, with some work hap&amp;#xAD;pen&amp;#xAD;ing in project spe&amp;#xAD;cific rooms. It&amp;#x2019;s rea&amp;#xAD;son&amp;#xAD;ably easy to catch up on a day or two of activ&amp;#xAD;ity most of the&amp;#xA0;time.&lt;/li&gt;&lt;li&gt;When we do have meet&amp;#xAD;ings (this is a whole post by itself), we like to have pre-&amp;#x200B;&amp;#x200B;reads avail&amp;#xAD;able on a Wiki. These get updated with use&amp;#xAD;ful infor&amp;#xAD;ma&amp;#xAD;tion as the meet&amp;#xAD;ing pro&amp;#xAD;gresses, with the goal of mak&amp;#xAD;ing the actual meet&amp;#xAD;ings optional. We use &lt;a href=&quot;http://hackpad.com&quot; target=&quot;_blank&quot;&gt;Hack&amp;#xAD;pad&lt;/a&gt; for this, mostly, but have also used Con&amp;#xAD;flu&amp;#xAD;ence and Github&amp;#x2019;s&amp;#xA0;wikis.&lt;/li&gt;&lt;li&gt;Email is a bit of a beast, but we do have &amp;#x201C;open&amp;#x201D; mail&amp;#xAD;ing lists and try to include those on most email com&amp;#xAD;mu&amp;#xAD;ni&amp;#xAD;ca&amp;#xAD;tions. The caveat is &amp;#x201C;try&amp;#x201D;, though, we haven&amp;#x2019;t been com&amp;#xAD;pletely suc&amp;#xAD;cess&amp;#xAD;ful in build&amp;#xAD;ing good com&amp;#xAD;pany email&amp;#xA0;habits.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;We also encour&amp;#xAD;age face&amp;#xA0;time:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://sqwiggle.com&quot; target=&quot;_blank&quot;&gt;Sqwig&amp;#xAD;gle&lt;/a&gt; is really good for this, and there are any&amp;#xAD;where from 3 to 10 peo&amp;#xAD;ple on our Sqwig&amp;#xAD;gle setup at any given time. Sqwig&amp;#xAD;gle takes a pic&amp;#xAD;ture of whoever&amp;#x2019;s on every so often, and gets bonus points for help&amp;#xAD;ing us record peo&amp;#xAD;ples&amp;#x2019; embar&amp;#xAD;rass&amp;#xAD;ing poses for&amp;#xA0;posterity:&lt;/li&gt;&lt;/ul&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;Derp&quot; src=&quot;http://blog.mongohq.com/wp-content/uploads/2014/01/sqwiggle-shenanigans.png&quot;&gt;&lt;ul&gt;&lt;li&gt;Google Hang&amp;#xAD;outs come in handy for sched&amp;#xAD;uled events. We used to have a per&amp;#xAD;pet&amp;#xAD;ual Hang&amp;#xAD;out on wall mounted tele&amp;#xAD;vi&amp;#xAD;sions in both offices, but that cre&amp;#xAD;ated a sort of audi&amp;#xAD;ence /&amp;#x200B; pre&amp;#xAD;sen&amp;#xAD;ter vibe that was a lit&amp;#xAD;tle&amp;#xA0;odd.&lt;/li&gt;&lt;li&gt;We have a &lt;a href=&quot;http://doublerobotics.com&quot; target=&quot;_blank&quot;&gt;Dou&amp;#xAD;ble Robot&amp;#xAD;ics&lt;/a&gt; robot in each office. Remote employ&amp;#xAD;ees can &amp;#x201C;drop in&amp;#x201D;, drive around, and even pull off low level&amp;#xA0;pranks.&lt;/li&gt;&lt;li&gt;Does real estate count as a tool? We have an apart&amp;#xAD;ment near our San Mateo office that any&amp;#xAD;one can use when they&amp;#x2019;re in town. Peo&amp;#xAD;ple tend to travel to San Mateo about once every 6 weeks on&amp;#xA0;average.&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;It&amp;#x2019;s a&amp;#xA0;process&lt;/h2&gt;&lt;p&gt;If you are try&amp;#xAD;ing to build a remote friendly cul&amp;#xAD;ture, the best advice we have for you is &amp;#x201C;just keep iter&amp;#xAD;at&amp;#xAD;ing&amp;#x201D;. It&amp;#x2019;s not an easy thing to do, but it&amp;#x2019;s an amaz&amp;#xAD;ing capa&amp;#xAD;bil&amp;#xAD;ity for a com&amp;#xAD;pany to have. Our con&amp;#xAD;tin&amp;#xAD;ued attempts to do it well have resulted in some phe&amp;#xAD;nom&amp;#xAD;e&amp;#xAD;nal peo&amp;#xAD;ple join&amp;#xAD;ing we never would have met oth&amp;#xAD;er&amp;#xAD;wise. We&amp;#x2019;ve mostly been able to get this far by pow&amp;#xAD;er&amp;#xAD;ing through the tough stuff, com&amp;#xAD;mit&amp;#xAD;ting to un-&amp;#x200B;&amp;#x200B;natural but valu&amp;#xAD;able habits, and &lt;a href=&quot;http://joel.is/post/59525266381/the-joys-and-benefits-of-working-as-a-distributed-team&quot; target=&quot;_blank&quot;&gt;learn&amp;#xAD;ing&lt;/a&gt; from other &lt;a href=&quot;https://zapier.com/blog/how-manage-remote-team/&quot; target=&quot;_blank&quot;&gt;com&amp;#xAD;pa&amp;#xAD;nies&lt;/a&gt; who are &lt;a href=&quot;http://zachholman.com/posts/how-github-works-asynchronous/&quot; target=&quot;_blank&quot;&gt;try&amp;#xAD;ing&lt;/a&gt; to do&amp;#xA0;similar.&lt;/p&gt;    &lt;/article&gt; &lt;/div&gt;
-</description>
-<title>
-Making remote work work: An adventure in time and space
-</title>
-</item>
-<item>
-<link>
-http://jorendorff.github.io/hackday/2013/tutoring/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;inbody&quot;&gt;
-
-&lt;section&gt;
-  &lt;p&gt;Imagine some software to teach basic math to grade-school kids.&lt;/p&gt;
-
-  &lt;p&gt;It&amp;#x2019;s a research project. Cutting edge stuff&amp;#x2026; in the year 1985.&lt;/p&gt;
-
-  &lt;p&gt;It presents a math problem.&lt;/p&gt;
-
-  &lt;pre&gt;
-        87
-      x 43
-      ----
-  &lt;/pre&gt;
-
-  &lt;p&gt;You put in the answer.
-  The program checks your work.
-  And here&amp;#x2019;s the clever part.
-  If you miss it, the program analyzes your answer
-  and helpfully tells you where you screwed up.
-  Like if I type, &lt;kbd&gt;32&lt;/kbd&gt;, Enter:
-
-  &lt;/p&gt;&lt;pre&gt;
-  Your answer is wrong.
-
-  Possible causes of error:
-
-  1. You multiplied the number in the multiplicand
-  by the number directly beneath it in the multiplier,
-  and you wrote down the carried number,
-  ignoring the units number.
-  &lt;/pre&gt;
-
-  &lt;p&gt;See, there&amp;#x2019;s your problem right there.
-  Your answer is wrong.
-  It&amp;#x2019;s the, you know, multiplicand&amp;#x2026;&lt;/p&gt;
-
-  &lt;p&gt;Well.
-  I imagine you&amp;#x2019;re thinking,
-  &lt;em&gt;This is an &lt;strong&gt;awful&lt;/strong&gt; error message.
-  Computers can&amp;#x2019;t talk to human beings like that.
-  You need to tweak the wording,
-  fix the tone,
-  tighten up the explanation&amp;#x2026;&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;But that&amp;#x2019;s because you and I, we&amp;#x2019;re software people.
-  We have lots of experience, too much experience, with error messages.
-  It turns out the error message
-  is not the key thing that&amp;#x2019;s wrong here.&lt;/p&gt;
-
-  &lt;p&gt;This story starts with a program.
-  But it&amp;#x2019;s not about software or software people at all.&lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section id=&quot;sec-problem&quot;&gt;
-  &lt;h2&gt;The problem&lt;/h2&gt;
-
-  &lt;p&gt;The error message quoted above is real.
-  This story is about a real person
-  and what happened when he read that error message.&lt;/p&gt;
-
-  &lt;p&gt;His name is Mark Lepper.
-  And he&amp;#x2019;s not a software person.
-  He&amp;#x2019;s a social psychologist. An academic.
-  In the late 1980s and early &amp;#x2019;90s,
-  computer-based education was a big topic due to the PC,
-  much as it is today due to rich Web apps.
-  Lepper was interested.
-  He saw a lot of these programs,
-  and like us, he found them lacking.
-  But he saw a different reason, a different underlying problem.&lt;/p&gt;
-
-  &lt;p&gt;Lepper thought: &lt;i&gt;the root problem here is that these programmers 
-  just don&amp;#x2019;t have the slightest idea what they&amp;#x2019;re doing.
-  They clearly don&amp;#x2019;t understand the psychology
-  of one-on-one teaching situations.
-  Particularly how a kid&amp;#x2019;s motivation can be undermined.
-  I should have pity on them, send them a few papers on this.&lt;/i&gt;&lt;/p&gt;
-
-  &lt;p&gt;So he did a literature search.
-  And came up empty.&lt;/p&gt;
-
-  &lt;p&gt;A lot of research had been done on classroom teaching.
-  But of one-on-one teaching&amp;#x2014;tutoring&amp;#x2014;almost nothing was known.&lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section id=&quot;sec-plan&quot;&gt;
-  &lt;h2&gt;The plan&lt;/h2&gt;
-
-  &lt;p&gt;Naturally, Lepper went to work building a team of researchers,
-  and they ran studies and wrote papers on tutoring for the next decade.&lt;/p&gt;
-
-  &lt;p&gt;All the research had the same basic plan.
-  First, they would pick a topic in basic math.
-  Say, fractions.
-  They&amp;#x2019;d find kids in need of remedial tutoring in that topic
-  and tutors with experience teaching it.
-  They&amp;#x2019;d pre-test the kids for both math skills and motivation.
-  The tutoring sessions would be videotaped.
-  And they&amp;#x2019;d test the kids again afterwards.
-  Sometimes they&amp;#x2019;d have the tutors watch the tape
-  and provide a running commentary.&lt;/p&gt;
-
-  &lt;p&gt;Note how this is set up.
-  Because they measured the student&amp;#x2019;s skills and motivation before and after,
-  they could objectively distinguish effective sessions from ineffective ones.
-  Did the scores go up? or stay flat?&lt;/p&gt;
-
-  &lt;p&gt;Then, they could watch the video
-  and identify the strategies or techniques used in the good sessions.&lt;/p&gt;
-&lt;/section&gt;
-
-&lt;section id=&quot;sec-findings&quot;&gt;
-  &lt;h2&gt;The findings&lt;/h2&gt;
-
-  &lt;p&gt;So what did they find? Two things.&lt;/p&gt;
-
-  &lt;p&gt;One, there is such a thing as a highly effective tutor.
-  The best tutors were amazing.&lt;/p&gt;
-
-  &lt;blockquote&gt;
-    &lt;p&gt;At their best, they were able to turn initially resistant,
-    alienated, and seemingly helpless students
-    into interested and excited participants in the learning process.
-    At their best, they were able to help remedial students
-    to progress through what would normally have been
-    weeks or months of curriculum material
-    in a very short time.
-    Moreover, gains in students' learning remained apparent
-    following and outside of the tutoring situation, showing that these gains
-    were not simply the result of [&amp;#x2026;]
-    scaffolding that tutors provided [directly].&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;Two. The best tutors had a surprisingly consistent approach to tutoring.
-  In fact, Lepper and Woolverton list about twenty
-  specific qualities and techniques of good tutors.
-  We&amp;#x2019;ll just touch on a few of them here.&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;p&gt;&lt;strong&gt;Math knowledge.&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;The best tutors knew the subject matter surprisingly well,
-      even for math tutors.
-      They knew why things work the way they work.
-      They knew details of math history.
-      They had a deep pool of real-world analogies and examples to draw from.
-      They knew what the likely misunderstandings were in advance.&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;&lt;strong&gt;Questions, not directions.&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;Good tutors ask questions.
-      They don&amp;#x2019;t tell the student what to do.&lt;/p&gt;
-
-      &lt;p&gt;The researchers counted what percentage
-      of the remarks their best tutors made were questions,
-      as opposed to statements or instructions.
-      Eighty to ninety percent.&lt;/p&gt;
-
-      &lt;p&gt;This number is insane! Ninety percent questions!
-      You can&amp;#x2019;t talk like that. Nobody talks like that.
-      Except the very best tutors.&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;&lt;strong&gt;Hints, not answers.&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;The best tutors never give away an answer.
-      Instead, they give a hint, the tiniest hint they can think of,
-      let you think it over,
-      and if you&amp;#x2019;re still stuck,
-      they&amp;#x2019;ll give you another hint.
-      And they&amp;#x2019;re very patient.
-      They want you to take the next step on your own.
-      Good tutors may offer five or six hints in a row.&lt;/p&gt;
-
-      &lt;p&gt;The researchers wrote: &amp;#x201C;if we did not have clear outcome data
-      establishing the great success of these same tutors, it would be easy to
-      believe that such [a] strategy [was] dysfunctional.&amp;#x201D;&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;&lt;strong&gt;Productive vs. nonproductive errors&lt;/strong&gt;&lt;/p&gt;
-
-      &lt;p&gt;My favorite.&lt;/p&gt;
-
-      &lt;p&gt;Good tutors would just ignore trivial errors.
-      Quote: &amp;#x201C;Our less successful tutors, however,
-      seemed unable to let any error pass,
-      no matter how trivial or inconsequential.&amp;#x201D;&lt;/p&gt;
-
-      &lt;p&gt;Furthermore:
-      good tutors distinguished between errors
-      that would lead to a wild goose chase
-      and errors that would lead to a teaching moment.
-      &amp;#x201C;[T]o these tutors,
-      some student errors seemed &amp;#x2018;productive&amp;#x2019; [&amp;#x2026;]
-      [They] would provide good occasions for students [&amp;#x2026;]
-      to discover their own mistakes[.]
-      Such errors were therefore deliberately allowed by the tutors,
-      so that they could then be systematically &amp;#x2018;debugged&amp;#x2019;.&amp;#x201D;
-      Some tutors even &lt;em&gt;intentionally chose problems&lt;/em&gt;
-      that would reveal particular errors
-      in the student&amp;#x2019;s understanding.&lt;/p&gt;
-
-      &lt;p&gt;So. Devious.
-      Like white-hat hackers,
-      expert tutors are taking valuable supervillain skills
-      and using them for good.&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;OK. There are some other things too,
-  but first let&amp;#x2019;s review. We have&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;an expert teacher who knows the material thoroughly,&lt;/li&gt;
-    &lt;li&gt;asking lots of questions&lt;/li&gt;
-    &lt;li&gt;and giving hints, instead of presenting answers from authority, and&lt;/li&gt;
-    &lt;li&gt;leading the student into and out of the classic errors.&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;Does this sound familiar? Does it have a name?&lt;/p&gt;
-
-  &lt;p&gt;This is the Socratic method.
-  Popularized by Plato around 380&amp;#xA0;BCE.
-  This educational technology is over two thousand years old.&lt;/p&gt;
-
-  &lt;p&gt;It&amp;#x2019;s the state of the art.&lt;/p&gt;
-
-  &lt;p&gt;Computers can&amp;#x2019;t do this yet!
-  I think we&amp;#x2019;re fairly close to being able to do a little of it in a very shallow way.
-  Doing this well requires a model of the student&amp;#x2019;s understanding of the material.
-  You have to understand their misunderstandings
-  and systematically debug them.&lt;/p&gt;
-
-  &lt;p&gt;I like this picture of how we really learn.&lt;/p&gt;
-
-  &lt;p&gt;But this isn&amp;#x2019;t the whole picture.
-  There&amp;#x2019;s a much more important lesson to learn here.&lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section id=&quot;sec-deeper&quot;&gt;
-  &lt;h2&gt;The deeper lesson&lt;/h2&gt;
-
-  &lt;p&gt;What else do good tutors do?&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;p&gt;They take a few minutes in each lesson
-      to chat with the student.
-      Not about math. Small talk.&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;They exhibit warmth and concern,
-      and confidence that the student can succeed.&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;They present challenging problems,
-      always problems that are just at the edge
-      of what they think the student can do.&lt;/p&gt;
-    &lt;/li&gt;
-
-    &lt;li&gt;
-      &lt;p&gt;They are extremely careful with negative feedback.
-      Some tutors &lt;em&gt;never&lt;/em&gt; explicitly told a student that they got something wrong!
-      Instead, they&amp;#x2019;d ask a question.
-      &amp;#x201C;Did you remember to carry the one?&amp;#x201D;
-      They&amp;#x2019;re also careful not to overdo it with positive feedback.&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;Now these traits are interesting because none of these are teaching techniques at all.
-  They point at something else about learning.&lt;/p&gt;
-
-  &lt;p&gt;Tutoring, apparently, is about motivation.&lt;/p&gt;
-
-  &lt;p&gt;It turns out your mind has to be in a very specific state
-  in order for you to learn.&lt;/p&gt;
-
-  &lt;p&gt;Good tutors not only track the student&amp;#x2019;s understanding.
-  They also track the student&amp;#x2019;s motivation.
-  They know if a kid is bored, discouraged, frustrated, tired, distracted.
-  And they act on that knowledge.
-  Because if your mind is not engaged, you&amp;#x2019;re not learning.&lt;/p&gt;
-
-  &lt;p&gt;Even the Socratic techniques are all about motivation!
-  Let&amp;#x2019;s go back to them.&lt;/p&gt;
-
-  &lt;p&gt;Why do good tutors allow students to make errors, even lead them into errors?
-  Because once you gain a little confidence,
-  detecting a bug in your own understanding is super motivating.
-  You&amp;#x2019;re engaged. You want to fix it.&lt;/p&gt;
-
-  &lt;p&gt;Why do good tutors give hints and not answers?
-  Well, partly because struggling with a problem is how you learn.
-  But just as importantly, giving the student the answer
-  ends the exercise in failure.
-  It tells the student, &lt;i&gt;I give up on you.&lt;/i&gt;
-  Whereas slowly guiding the student all the way through
-  ends with them earning a win.&lt;/p&gt;
-
-  &lt;p&gt;Why do good tutors ask questions?
-  In a one-on-one situation, a question does something almost magical.
-  It compels a response. It turns on the brain.
-  A question makes us care.&lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section id=&quot;sec-so-what&quot;&gt;
-  &lt;h2&gt;So what?&lt;/h2&gt;
-
-  &lt;p&gt;And that&amp;#x2019;s what I know about tutoring.
-  All of this comes from one chapter of one book:
-  &amp;#x201C;The Wisdom of Practice:
-  Lessons Learned from the Study of Highly Effective Tutors&amp;#x201D;
-  by Mark Lepper and Maria Woolverton, in
-  &lt;a href=&quot;https://www.amazon.com/dp/012064455X&quot;&gt;&lt;i&gt;Improving Academic Achievement&lt;/i&gt;&lt;/a&gt;.
-  It is packed with amazing discoveries,
-  much more than I could write about here.&lt;/p&gt;
-
-  &lt;p&gt;But&amp;#x2026; so what? Why should we, as programmers,
-  care about all this?&lt;/p&gt;
-
-  &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;http://www.youtube.com/embed/3buhHvy3t5U&quot;&gt;&lt;/iframe&gt;
-
-  &lt;p&gt;This is a recording of a popular Web site that helps kids learn math.
-  Millions of kids use this site. I recorded this in January 2014.
-  I decided to pretend I was a kid who really didn&amp;#x2019;t get it,
-  and see what it would do if I put in the wrong answer.&lt;/p&gt;
-
-  &lt;p&gt;Note the behavior when I click the button to submit the wrong answer.&lt;/p&gt;
-
-  &lt;p&gt;Now&amp;#x2026; this is really no better or worse
-  than the error message I showed you at the beginning,
-  the one with the multiplicand.
-  But to me, it&amp;#x2019;s really sad,
-  because it&amp;#x2019;s so much less ambitious.&lt;/p&gt;
-
-  &lt;p&gt;Think this over.
-  Now that you know: what would an expert tutor do?
-  What if it was you tutoring the kid in this movie?
-  Is this a productive or nonproductive error?
-  At what point would you intervene?
-  What would you say?&lt;/p&gt;
-
-  &lt;p&gt;Is the computer doing it right?&lt;/p&gt;
-
-  &lt;p&gt;Does it even have the information it would need to do it right?&lt;/p&gt;
-
-  &lt;p&gt;I don&amp;#x2019;t want to pick on this web site.
-  They never claimed to be a substitute for a human tutor.
-  They&amp;#x2019;ve put a lot of work in, and the site does some
-  things quite well.&lt;/p&gt;
-
-  &lt;p&gt;My point is that educational software
-  is not approaching a stable state where it&amp;#x2019;s good enough
-  and we can work on other things.
-  If we take human tutors as the gold standard,
-  we have to admit that
-  &lt;em&gt;educational software just isn&amp;#x2019;t very good yet.&lt;/em&gt;
-  There is something exciting about this.
-  We&amp;#x2019;re doing it wrong;
-  and doing it right looks very hard
-  given programming as we know it.
-  New techniques may be needed.&lt;/p&gt;
-
-  &lt;p&gt;Excellent teaching technology
-  seemed just around the corner in the 1960s.
-  But I expect we will be laboriously catching up to Socrates
-  for another hundred years.&lt;/p&gt;
-&lt;/section&gt;
-
-
-&lt;section id=&quot;sec-volunteer&quot;&gt;
-  &lt;h2&gt;Use your supervillain powers for good&lt;/h2&gt;
-
-  &lt;p&gt;Is a hundred years too long to wait?
-  You can make a difference now.&lt;/p&gt;
-
-  &lt;p&gt;Help teach a bit of what you know
-  to middle school students in the Nashville Metro schools.
-  &lt;a href=&quot;http://emilynbristow.wix.com/digitalexposure&quot;&gt;You can
-  get started here.&lt;/a&gt;&lt;/p&gt;
-&lt;/section&gt;
-
-
-
-
-
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-What's known about tutoring (and why programmers should care)
-</title>
-</item>
-<item>
-<link>
-http://blog.coverity.com/2014/01/13/inconsistent-equality/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;p&gt;Today&amp;#x2019;s episode of &lt;a href=&quot;http://blog.coverity.com/category/ask-the-bug-guys/&quot;&gt;Ask The Bug Guys&lt;/a&gt; features a C# question from reader Jan:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span&gt;Hi Bug Guys! We recently had a bug in our code comparing &lt;code&gt;int&lt;/code&gt;s and &lt;code&gt;short&lt;/code&gt;s, where calling &lt;code&gt;Equals() &lt;/code&gt;produced different results from using the &lt;code&gt;== &lt;/code&gt;operator. Also, the behaviour of &lt;code&gt;Equals()&lt;/code&gt; was not symmetric. Here&amp;#x2019;s a code snippet that reproduces the behaviour we observed:&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-int myInt = 1;
-short myShort = 1;
-Console.WriteLine(myInt == myShort);      // true
-Console.WriteLine(myShort == myInt);      // true
-Console.WriteLine(myInt.Equals(myShort)); // true
-Console.WriteLine(myShort.Equals(myInt)); // false!
-&lt;/pre&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span&gt;We were quite surprised when we found this. What explains this difference? Is it better to use &lt;code&gt;==&lt;/code&gt; instead of &lt;code&gt;Equals()&lt;/code&gt; when comparing integer types?&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Hi Jan! Thanks for the great question.&lt;/p&gt;
-&lt;p&gt;C# was designed to be a &amp;#x201C;pit of success&amp;#x201D; language: that is, a language where the &lt;em&gt;obvious &lt;/em&gt;technique and the &lt;em&gt;correct &lt;/em&gt;technique are the same. And for the most part, that&amp;#x2019;s true. Unfortunately, equality is one of the areas where there are significant pits of failure, and you&amp;#x2019;ve fallen right into one of them.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m going to add some additional cases to your program to illustrate a number of different equalities.&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-int myInt = 1;
-short myShort = 1;
-object objInt1 = myInt;
-object objInt2 = myInt;
-object objShort = myShort;
-Console.WriteLine(myInt == myShort);          // scenario 1 true
-Console.WriteLine(myShort == myInt);          // scenario 2 true
-Console.WriteLine(myInt.Equals(myShort));     // scenario 3 true
-Console.WriteLine(myShort.Equals(myInt));     // scenario 4 false!
-Console.WriteLine(objInt1 == objInt1);        // scenario 5 true
-Console.WriteLine(objInt1 == objShort);       // scenario 6 false!!
-Console.WriteLine(objInt1 == objInt2);        // scenario 7 false!!!
-Console.WriteLine(Equals(objInt1, objInt2));  // scenario 8 true
-Console.WriteLine(Equals(objInt1, objShort)); // scenario 9 false!?!
-&lt;/pre&gt;
-&lt;p&gt;What the heck? As it turns out, we have many different kinds of equality demonstrated here.&lt;/p&gt;
-&lt;p&gt;In scenarios one and two we must first determine what the &lt;code&gt;==&lt;/code&gt; operator means. C# defines over a dozen different built-in &lt;code&gt;==&lt;/code&gt; operators:&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-object == object
-string == string
-int == int
-uint == uint
-long == long
-ulong == ulong
-...
-&lt;/pre&gt;
-&lt;p&gt;There is no &lt;code&gt;int == short&lt;/code&gt; or &lt;code&gt;short == int&lt;/code&gt; operators, so the unique best match on the list of built-in operators must be determined. It turns out that the best match is &lt;code&gt;int == int&lt;/code&gt;. So the &lt;code&gt;short &lt;/code&gt;is converted to &lt;code&gt;int &lt;/code&gt;and then the two values are compared as numbers. They are therefore equal.&lt;/p&gt;
-&lt;p&gt;In scenario three we must first solve an overload resolution problem to determine what &lt;code&gt;Equals&lt;/code&gt; means. The receiver is of type &lt;code&gt;int&lt;/code&gt; and it has three methods named &lt;code&gt;Equals&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-Equals(object, object) // static method from object
-Equals(object)         // virtual method from object
-Equals(int)            // Implements IEquatable&amp;lt;int&amp;gt;.Equals(int)
-&lt;/pre&gt;
-&lt;p&gt;The first one we can eliminate because there are not enough arguments. Of the other two, the unique best method is the one that takes an &lt;code&gt;int&lt;/code&gt;; it is always better to convert the &lt;code&gt;short&lt;/code&gt; argument to &lt;code&gt;int&lt;/code&gt; than to &lt;code&gt;object&lt;/code&gt;. Therefore we call &lt;code&gt;Equals(int)&lt;/code&gt;, which then compares the two integers again using value equality, so this is true.&lt;/p&gt;
-&lt;p&gt;In scenario four we again must determine what &lt;code&gt;Equals&lt;/code&gt; means. The receiver is of type &lt;code&gt;short&lt;/code&gt; which again has three methods named &lt;code&gt;Equals&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-Equals(object, object) // static method from object
-Equals(object)         // virtual method from object
-Equals(short)          // Implements IEquatable&amp;lt;short&amp;gt;.Equals(short)
-&lt;/pre&gt;
-&lt;p&gt;Overload resolution eliminates the first because there are too few arguments and eliminates the third because there is no implicit conversion from &lt;code&gt;int&lt;/code&gt; to &lt;code&gt;short&lt;/code&gt;. That leaves &lt;code&gt;short.Equals(object)&lt;/code&gt;, which has the moral equivalent of this implementation:&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-bool Equals(object z)
-{
-  return z is short &amp;amp;&amp;amp; (short)z == this;
-}
-&lt;/pre&gt;
-&lt;p&gt;That is, for this method to return true the argument passed in must be a boxed &lt;code&gt;short&lt;/code&gt;, and when unboxed it must be equal to the receiver. Since the argument is a boxed &lt;code&gt;int&lt;/code&gt;, this returns false. There is no special gear in this implementation that says &amp;#x201C;well, what if I were to convert myself to the type of the argument and &lt;em&gt;then &lt;/em&gt;compare?&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;In scenarios five, six and seven operator overload resolution chooses the &lt;code&gt;object == object&lt;/code&gt; form, which is equivalent to a call to &lt;code&gt;Object.ReferenceEquals&lt;/code&gt;. Clearly the two references are equal in case five and unequal in cases six and seven. Whether the values of the objects when interpreted as numbers are equal does not come into play at all; only reference equality is relevant.&lt;/p&gt;
-&lt;p&gt;In scenarios eight and nine operator overload resolution chooses the static method &lt;code&gt;Object.Equals&lt;/code&gt;, which you can think of as being implemented like this:&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-public static bool Equals(object x, object y)
-{
-    if (ReferenceEquals(x, y)) return true;
-    if (ReferenceEquals(x, null)) return false;
-    if (ReferenceEquals(y, null)) return false;
-    return x.Equals(y);
-}
-&lt;/pre&gt;
-&lt;p&gt;In scenario eight we have two references that are unequal and not null; therefore we call &lt;code&gt;int.Equals(object)&lt;/code&gt;, which as you would expect from our previous discussion of &lt;code&gt;short.Equals(object)&lt;/code&gt; is implemented as the moral equivalent of:&lt;/p&gt;
-&lt;pre class=&quot;brush: csharp; gutter: false; title: ; notranslate&quot; title=&quot;&quot;&gt;
-bool Equals(object z)
-{
-  return z is int &amp;amp;&amp;amp; (int)z == this;
-}
-&lt;/pre&gt;
-&lt;p&gt;Since the argument is of type &lt;code&gt;int&lt;/code&gt; it is unboxed and compared by reference. In scenario nine the argument is a boxed &lt;code&gt;short&lt;/code&gt; and so the type check fails and this is false.&lt;/p&gt;
-&lt;p&gt;Summing up: I&amp;#x2019;ve shown nine different ways that two things can be compared for equality; despite the fact that clearly in every case we have the number one on both sides of the equality, equality is true in only half the cases. If you think this is crazy and confusing, you&amp;#x2019;re right! Equality is tricky in C#.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;ve been looking a lot at confusing cases for equality over my last year at Coverity; two of our checkers are specifically designed to find situations where you used the wrong kind of equality. But this article is long enough already and I&amp;#x2019;ve answered your question (I hope!), so I&amp;#x2019;ll discuss the specific cases that our checkers look for in another posting.&lt;/p&gt;
-			&lt;/div&gt;
-	
-	
-
-	
-
-	
-&lt;/div&gt;
-</description>
-<title>
-C#: Inconsistent equality
-</title>
-</item>
-<item>
-<link>
-http://prog21.dadgum.com/129.html?repost
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;main&quot;&gt;
-
-&lt;div id=&quot;left&quot;&gt;
-Let's say you've just bought a MacBook Air, and your goal is to become master of the machine, to understand how it works on every level.
-&lt;p&gt;Amit Singh's &lt;i&gt;Mac OS X Internals: A Systems Approach&lt;/i&gt; is a good place to start. It's not about programming so much as an in-depth discussion of how all the parts of the operating system fit together: what the firmware does, the sequence of events during boot-up, what device drivers do, and so on. At 1680 pages, it's not light summer reading.
-&lt;/p&gt;&lt;p&gt;To truly understand the hardware, Intel has kindly provided a free seven volume set of documentation. I'll keep things simple by recommending &lt;i&gt;Intel 64 and IA-32 Architectures Software Developer's Manual Volume 1: Basic Architecture&lt;/i&gt; (550 pages) and the two volumes describing the instruction set (684 pages and 704 pages respectively).
-&lt;/p&gt;&lt;p&gt;Objective-C is the language of OS X. We'll go with Apple's thankfully concise &lt;i&gt;The Objective-C Programming Language&lt;/i&gt; (137 pages).
-&lt;/p&gt;&lt;p&gt;Of course Objective-C is a superset of C, so also work through the second edition of &lt;i&gt;The C Programming Language&lt;/i&gt; (274 pages).
-&lt;/p&gt;&lt;p&gt;Now we're getting to the core APIs of OS X. &lt;i&gt;Cocoa Fundamentals Guide&lt;/i&gt; is 239 pages. &lt;i&gt;Application Kit Framework Reference&lt;/i&gt; is a monster at 5069 pages. That's help a file-like description of every API call. To be fair I'll stop there with the Cocoa documentation, even though there are also more usable guides for drawing and Core Audio and Core Animation and a dozen other things.
-&lt;/p&gt;&lt;p&gt;Ah, wait, OpenGL isn't part of Cocoa, so throw in the 784 page &lt;i&gt;OpenGL Reference Manual&lt;/i&gt;. And another 800 pages for &lt;i&gt;OpenGL Shading Language, Second Edition&lt;/i&gt;.
-&lt;/p&gt;&lt;p&gt;The total of all of this is 79 pages shy of eleven thousand. I neglected to include man pages for hundreds of system utilities and the Xcode documentation. And I didn't even touch upon the graphics knowhow needed to do anything interesting with OpenGL, or how to write good C and Objective-C or anything about object-oriented design, and...
-&lt;/p&gt;&lt;p&gt;(If you liked this, you might enjoy &lt;a href=&quot;http://prog21.dadgum.com/116.html&quot;&gt;Things That Turbo Pascal is Smaller Than&lt;/a&gt;.)
-&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-A Complete Understanding is No Longer Possible
-</title>
-</item>
-<item>
-<author>
 Alex Sexton
 </author>
 <link>
@@ -639,6 +89,578 @@ https://alexsexton.com/blog/2014/1/the-productivity-cycle/
 </description>
 <title>
 The Productivity Cycle
+</title>
+</item>
+<item>
+<author>
+Matt Burns
+</author>
+<link>
+http://techcrunch.com/2014/01/15/farmlogs-raises-4m-series-a-to-bring-farming-into-the-age-of-apps/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
+
+
+&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/combine_and_tractor_working_in_field.jpg?w=400&quot; class=&quot;article-img-feature&quot;&gt;&lt;p&gt;Just a year after securing $1 million in seed funding, Michigan-based &lt;a target=&quot;_blank&quot; href=&quot;http://farmlogs.com&quot;&gt;FarmLogs&lt;/a&gt; is announcing a $4 million Series A led by Drive Capital. The company says it is looking forward to a big 2014 and the co-founder and CEO tells me the company will use the influx of cash to execute on an aggressive product growth plan for the upcoming year.&lt;/p&gt;
+&lt;p&gt;Jesse Vollmar, CEO and co-founder of FarmLogs, explained to me that the company is building out its product to intelligently predict&amp;#xA0;and optimize crop rotations as well as automate activity data collection. FarmLogs is also looking to ingest data collected by modern farming equipment that he tells me traditionally is rarely exported. By using low-cost Bluetooth hardware, the company expects to be able to analyse and upload this data in real time.&lt;/p&gt;
+&lt;p&gt;The Y Combinator alum touts the fact that 5% of farms in the US. are currently using its software. It&amp;#x2019;s an impressive stat considering the startup just graduated from YC in early 2012.&lt;/p&gt;
+&lt;p&gt;Drive Capital led the funding with existing investors Huron River Ventures, Hyde Park Venture Partners and Hyde Park Angels, also participating in the investment.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;We are very excited about the trajectory we are on and having additional support and resources will continue to&amp;#xA0;accelerate our growth,&amp;#x201D; said Jesse Vollmar in a released statement. &amp;#x201C;We&amp;#x2019;ve helped thousands of farmers around the world take advantage of technology, and with their feedback and suggestions they&amp;#x2019;ve helped us create a smarter future for farming.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;FarmLogs&amp;#x2019;&amp;#xA0;data-driven approach to farming leans on the mobile web to help crop farmers quickly and efficiently forecast profits, track expenses and more efficiently schedule operations. Best yet, the software utilizes GPS for additional data about any given location&amp;#x2019;s historical weather data. Farms can quickly jot down notes and input data using the software&amp;#x2019;s mobile app. It&amp;#x2019;s a radical revolution for the age-old industry.&lt;/p&gt;
+&lt;p&gt;FarmLogs launched to an industry ripe for modernization. The incumbent software requires traditional Wintel computers. FarmLogs requires just an iPad, which although admittedly the extent of my &amp;#x201C;farming&amp;#x201D; consists of rebuilding a tiller a few years back, seems like a much friendlier device to have in a tractor than a laptop.&lt;/p&gt;
+
+
+								
+							&lt;/div&gt;
+
+
+
+						&lt;/div&gt;
+</description>
+<title>
+FarmLogs Raises $4M Series A To Further Advance Farming Into The Age of Apps
+</title>
+</item>
+<item>
+<author>
+Donn Felker
+</author>
+<link>
+http://www.donnfelker.com/how-to-hire-outsourced-developers/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;p&gt;&lt;em&gt;This is Part 2 of a 2 part series on hiring developers. Read Part 1, &lt;a title=&quot;How to Hire Programmers&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot;&gt;How to Hire Programmers&lt;/a&gt;, if you&amp;#x2019;re hiring for full time positions. Read this article if you&amp;#x2019;re outsourcing.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;content-box-gray&quot; id=&quot;ab-aod&quot;&gt;
+&lt;h4&gt;Are you having Android Dev Troubles?&lt;/h4&gt;
+&lt;p&gt;I offer Expert On-Demand Android Consulting that can help. &lt;a href=&quot;http://www.donnfelker.com/android-on-demand&quot;&gt;Click here for more info.&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;I recently wrote about &lt;a title=&quot;How I Hire Programmers&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot; target=&quot;_blank&quot;&gt;how to hire programmers&lt;/a&gt; which focuses on hiring full time employees.&amp;#xA0;This post is tailored to help you learn how to hire outsourced developers. You&amp;#x2019;ll see that the two methods share a lot of similarities except hiring a contractor is a bit less involved as they are not going to be joining your team full time.&lt;/p&gt;
+&lt;p&gt;A little background &amp;#x2026; I&amp;#x2019;ve hired almost 10 remote, outsourced developers who were all overseas using the method I explain below. &amp;#xA0;I feel that while its not fool proof, its the best method I&amp;#x2019;ve encountered and I feel that it has the best ROI with the lowest time commitment. Over the years I&amp;#x2019;ve used contract employees for my business and I&amp;#x2019;ve been able to create this process as a by-product of my experiences. Sometimes it went well, other times it didn&amp;#x2019;t and sometimes it was an absolute disaster. After refining my hiring practices many times over I was able to create the process below that always returned top notch talent for outsourced developers. I hope the process below does the same you.&lt;/p&gt;
+&lt;h2&gt;The Process&lt;/h2&gt;
+&lt;p&gt;There are 4 simple steps and if you cut out the job posting step then you actually only have three steps to go through. The goal of this process is to save you time and money while maximizing the chance of getting the best candidate you can find. Please note, during this process you will probably need to spend anywhere from $50-$250 depending on the contractors that you put through this review process &amp;#x2013; more on that later. You will be posting a job, reviewing the candidates and selecting the top X (usually at least the top 10). At that point you&amp;#x2019;ll hire them to do a simple programming task. Once they complete it (if they complete it) you&amp;#x2019;ll be able to review the code and determine who has the best implementation and then you usually will hire that person. The steps are listed below.&lt;/p&gt;
+&lt;h2&gt;4 Steps to Hiring a Good Outsourced Developer&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Post a Job Description a Job Site&lt;/li&gt;
+&lt;li&gt;Prelim Review: Hire the top Candidates (minimum 10) for 1 Hour&lt;/li&gt;
+&lt;li&gt;The Programming Task&lt;/li&gt;
+&lt;li&gt;Keep the Top Candidate(s)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Step 1: Post a Job Description on a Job Site&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Goal: To create an interesting job posting that will attract quality applicants&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: I prefer to use oDesk.com as the site where I hire my contract programers so this entire article is baed around that site.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Log into &lt;a title=&quot;ODesk&quot; href=&quot;http://www.odesk.com&quot; target=&quot;_blank&quot;&gt;oDesk.com&lt;/a&gt; and post a job. Make sure the title accurately explains what you want the person to do. Do not post things like &amp;#x201C;JavaScript Ninja&amp;#x201D; or &amp;#x201C;Rails Badass&amp;#x201D;. Titles such as &amp;#x201C;Senior Rails Developer&amp;#x201D; or &amp;#x201C;Wordpress Developer&amp;#x201D; seem to fare a bit better than abstract titles. The description of the job should describe what you need in detail. Do not leave this as a simple one liner such as &amp;#x201C;Write good code and deliver on time.&amp;#x201D; Inform the candidate what you need from them. If its updating an existing code base inform them of what they&amp;#x2019;re getting into. If you&amp;#x2019;re a business person who does not understand code, explain what you want the product to do or what your product already does and why you need help. Don&amp;#x2019;t spend a ton of time on this. Maybe 10-15 minutes, max.&lt;/p&gt;
+&lt;p&gt;When hiring in oDesk you can provide various options about the job. For each of these sections I tend to use the following settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skills Required
+&lt;ul&gt;
+&lt;li&gt;This is self explanatory. If you have a Rails site, put &amp;#x201C;Ruby on Rails&amp;#x201D; and probably &amp;#x201C;HTML&amp;#x201D; and &amp;#x201C;JavaScript&amp;#x201D;, etc.&lt;/li&gt;
+&lt;li&gt;If its another technology, put those technologies here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How would you like to pay
+&lt;ul&gt;
+&lt;li&gt;Hourly when doing open ended development such as new feature work.&lt;/li&gt;
+&lt;li&gt;Fixed when the exact scope is defined. Such as: Install WordPress and configure theme to look like X.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Estimated workload
+&lt;ul&gt;
+&lt;li&gt;This varies person to person, but I usually have them on for Part Time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Desired Experience Level
+&lt;ul&gt;
+&lt;li&gt;Always choose Intermediate or Expert. Choosing beginner will get you some shoddy work that will eventually cost you 2x as much to replace later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Marketplace Visibility
+&lt;ul&gt;
+&lt;li&gt;Anyone can find this job (UNLESS &amp;#x2026; I&amp;#x2019;m hiring a specific person)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Preferred Qualifications
+&lt;ul&gt;
+&lt;li&gt;Freelancer Type: No preference&lt;/li&gt;
+&lt;li&gt;Minimum Feedback Score: No Preference
+&lt;ul&gt;
+&lt;li&gt;The reason for this is because there are TONS of people who are experts who have never completed a job on oDesk before. Also, sometimes people get a bad score from the only job they did &amp;#x2026; not because it was bad work but because the person managing the product was terrible at their job. Don&amp;#x2019;t count them out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hours billed on ODesk: No preference
+&lt;ul&gt;
+&lt;li&gt;Again, you could have someone who is an expert who just joined. Don&amp;#x2019;t count them out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Location
+&lt;ul&gt;
+&lt;li&gt;This one can be tricky. I personally do not care where they are. But, this is up to you. I usually put No Preference. However, if you are testing the various locations of the world to find what works best for you then choose that location.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;English Level: 5 out of 5
+&lt;ul&gt;
+&lt;li&gt;This is a requirement. A lot of contractors on ODesk will say their 4/5 but when you converse with them via email, IM or Skype/Google Hangout you&amp;#x2019;ll realize they&amp;#x2019;re actually more like a 2 or a 3. Being able to communicate effectively is key to success. Without it, you&amp;#x2019;re fighting an uphill battle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Screening Questions
+&lt;ul&gt;
+&lt;li&gt;I personally don&amp;#x2019;t add these as programming jobs are quite technical and either you know how to program well or you don&amp;#x2019;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, post the job.&lt;/p&gt;
+&lt;p&gt;Wait about 48 hours and then move onto step 2. During this time you&amp;#x2019;ll start having people apply for the position.&lt;/p&gt;
+&lt;h2&gt;Step 2: Prelim Review &amp;#x2013; Hire the Top Candidates (at least 10)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Goal: To hire the top candidates who seem qualified in order to take them to the next step.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You&amp;#x2019;re probably going to get upwards of 25-60 applicants for your job posting from candidates all over the world. The first thing you will need to do is trim the list down. Here&amp;#x2019;s how you do it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cut anyone whose English (or whatever your chosen 5/5 language is) is terrible and very difficult to read. This is an immediate red flag. If you can&amp;#x2019;t communicate now, how do you expect to communicate later?&lt;/li&gt;
+&lt;li&gt;Cut anyone who does not have the skills to do the work. e.g. &amp;#x2013; If you&amp;#x2019;re hiring for a Rails developer and the candidates does not list Rails as one of their skills cut them from the list. You want the highest quality you can afford.&lt;/li&gt;
+&lt;li&gt;Cut anyone that doesn&amp;#x2019;t seem to fit the job description. e.g. &amp;#x2013; If you want someone to develop a Game for you, a line of business web developer probably isn&amp;#x2019;t the best fit for you.&lt;/li&gt;
+&lt;li&gt;Cut anyone who is way out of your budget. Sure, that guy who&amp;#x2019;s charging $155 an hour looks great but maybe your budget is $25/hr. No point in entertaining the thought of getting a $155/hr candidate on the roster. You&amp;#x2019;ll waste their time and yours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After 48-72 hours you&amp;#x2019;ll want to trim your list down to a minimum of 10 candidates.&lt;/p&gt;
+&lt;p&gt;You&amp;#x2019;re at the point where you are now going to spend real money. If the average wage of your applicants is between $5 and $25 and hour you&amp;#x2019;ll spend roughly $50-250 to find the right person (at most). You&amp;#x2019;ll want to hire all 10 candidates. Yes, I&amp;#x2019;m serious. However, when you hire them you will inform them that you&amp;#x2019;re going to hire them to complete a simple task that should take no longer than 1 hour. You will send them the link to the Programming Task (Step 3) so they can complete the task. This one hour is PAID to the contractor when they do the work. This shows good faith to the contractor so they do not feel like they&amp;#x2019;re having to do work for free. If you ask outsourcers/freelancers/contractors to do work for free you&amp;#x2019;ll lose ALL of the good/best developers immediately. When you pay someone a full hour of their rate they take you much more seriously.&lt;/p&gt;
+&lt;p&gt;Something interesting happens at this point in the process. An average of 50% of the candidates never continue past this step. The reason is not exactly known but I suspect it is because they simply do not know how to perform the task that is given to them. That is exactly what Step 3 is for, weeding out the candidates who can do the work from those who cannot.&lt;/p&gt;
+&lt;h2&gt;Step 3: The Programming Task&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;End Goals: Identify if the candidate has the necessary ability to solve programming problems with code. Gain insight into the quality of code that is produced by this candidate.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You&amp;#x2019;ll notice that this step is very similar to Step 3 in the &lt;a title=&quot;How To Hire A Programmer&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot; target=&quot;_blank&quot;&gt;How to Hire A Programmer&lt;/a&gt; article with a few alterations sprinkled about. While the articles share similarities there are key differences in the process so please continue reading if you&amp;#x2019;ve already read the previous article on How to Hire a Programmer.&lt;/p&gt;
+&lt;p&gt;During the Programming Task* the candidate will be tasked with solving a real problem using the language that I specify. The coding task should not take an experienced programmer more than 1 hour to complete at most. I only pay for one hour of the contractors time. They can take as long as they want to get it done, but I&amp;#x2019;ll only pay for one hour. The goal is simple: To determine if the candidate can produce the code that is needed.&lt;/p&gt;
+&lt;p&gt;The programming challenge is the great equalizer. Not because the problem is necessarily difficult (it&amp;#x2019;s not, its easy), but because it allows you to gain insight into the quality of code that the person writes. It also answers a vast array of other questions as well:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does the candidate communicate effectively?&lt;/li&gt;
+&lt;li&gt;Does the candidate know how to follow directions?&lt;/li&gt;
+&lt;li&gt;Does the candidate know how to use Git and GitHub?&lt;/li&gt;
+&lt;li&gt;Does the candidate follow coding best practices?&lt;/li&gt;
+&lt;li&gt;Does the candidate know how to code?&lt;/li&gt;
+&lt;li&gt;Does the candidate follow through and succeed?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I usually inform the candidate that the solution to the problem is due within 24 hours. The programming challenge is posted online on GitHub/BitBucket in a Git repo that is shared across all candidates. The same repo is used for everyone. Yes, that means that others can see the same answers as other applicants (via pull request). Thats fine because if someone wants to cheat it is easy to detect. If 3 people&amp;#x2019;s repo&amp;#x2019;s look exactly the same then the person who checked in the code first is most likely the person who wrote it. No two people write the exact same code every single time.&lt;/p&gt;
+&lt;p&gt;The repo contains all the necessary information about the task. The candidate is to follow the instructions and email me when their done. Here are a few example of some of the programming challenges I&amp;#x2019;ve created:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a title=&quot;NodeJS Example&quot; href=&quot;https://github.com/donnfelker/example-nodejs-challenge&quot; target=&quot;_blank&quot;&gt;NodeJS Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title=&quot;Android Example&quot; href=&quot;https://github.com/donnfelker/example-android-challenge&quot; target=&quot;_blank&quot;&gt;Android Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a title=&quot;Rails Example&quot; href=&quot;https://github.com/donnfelker/example-rails-challenge&quot; target=&quot;_blank&quot;&gt;Rails Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feel free to fork these and save them for yourself. If you visited any of the sites above you&amp;#x2019;ll see that each of these examples had the candidate perform a series of steps. If the candidate is not sure of what to do, they could ask me for clarification or simply Google for the answer. When the candidate is done they&amp;#x2019;re to submit a pull request to me so I can review it.&lt;/p&gt;
+&lt;p&gt;This challenge is genius because it answers so many questions about the candidate. Namely, can they code and get something done on time. It also gives me the chance to review the code to see if it is a complete hack or if its something that is quite good. What I&amp;#x2019;ve found is that on average over 60% of candidates will never finish the problem &amp;#x2013; they simply don&amp;#x2019;t know how. Of the 40% that finish only about 20% actual do it correctly and usually at that point you&amp;#x2019;re left with either 1 or 2 candidates that are looking good. If you have more to choose from then thats a good problem to have!&lt;/p&gt;
+&lt;p&gt;It is also important to note that ODesk requires that the candidates install monitoring software that takes periodic screen shots of the work they&amp;#x2019;re doing so that you can review the work. This allows me to view their progress and semi-evaluate their process of solving the problem.&lt;/p&gt;
+&lt;p&gt;A common concern when letting someone do this task is: What happens if they cheat? What if they call their friend or have someone else do it for them? That is a possibility, but I see this as a real world problem. Sometimes programmers don&amp;#x2019;t know how to solve a problem so they have to call for help. They call friends, IM them, look stuff up on the internet or just find an open source project that does what they want and they take the code and modify it. Thats the world programmers live in. If I do that at an office or at home, who cares. If you&amp;#x2019;re truly a hack I&amp;#x2019;ll know fairly quickly. If you do get hired, I&amp;#x2019;m going to sniff out a problem very quickly and at that point you&amp;#x2019;ll need to make the decision to keep the person or not. If you&amp;#x2019;re a business person who can&amp;#x2019;t sniff this out, you may notice other things slipping such as timeframes, budgets etc. Any red flags are exactly that, red flags &amp;#x2013; so evaluate each one with caution.&lt;/p&gt;
+&lt;p&gt;If the candidate fails to complete the programming challenge, thats an immediate red flag. The task should be easy enough for an experienced programmer to finish in an hour. If the candidate cannot finish within the time allotted either the programming task is way too hard or the candidate is not suited for the position. If you&amp;#x2019;r using my Git repos from the links above (or something very similar) then this should not be the case. At this point I advise to stop the interview process for those who cannot complete the task and move onto the next candidate.&lt;/p&gt;
+&lt;p&gt;For those that do solve the problem correctly I like to review the code and if everything is satisfactory I&amp;#x2019;ll put them on the list of potential hires.&lt;/p&gt;
+&lt;p&gt;If you&amp;#x2019;re someone who cannot code, but you want to follow this process I highly suggest you find a friend, friend of the family, or coworker who is a programmer and ask them to help you. Offer to pay for 2 hours of their time so you can get their opinion of the candidates. Explain to them the process you&amp;#x2019;re going through so they know what their role is &amp;#x2013; a code reviewer. If you use this approach you will want to give the code reviewer instructions to give you a scale of &amp;#x201C;No/Maybe/Yes&amp;#x201D; for each code review. No means No &amp;#x2013; do not hire. Maybe means &amp;#x2013; its ok, not perfect, but workable. Yes means Yes, hire this person, this is good work. I include maybe because sometimes code looks good, but its not perfect. Thats OK. Sometimes you need to get out an MVP of a product out the door ASAP and it does not have to be perfect, it just has to work. The &amp;#x201C;Maybe&amp;#x201D; candidates are suitable for this because you&amp;#x2019;re testing a market/etc and you&amp;#x2019;re trying to get things done as fast as possible. However, you want to aim for YES candidates at all times if possible.&lt;/p&gt;
+&lt;p&gt;If you don&amp;#x2019;t find anyone who can solve the problem, repost the job posting to get some new leads. I&amp;#x2019;ve had to post a job a couple of times to get the correct person for the job. Yes, this costs more money, but it is much cheaper to pay this up front than months down the road.&lt;/p&gt;
+&lt;h2&gt;Step 4: Keep the Top Candidate(s)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt; Goal: To hire the proper person/people for the position&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the previous step you identified who you can hire through code review and through initial filtering based upon communication through the application process. At this point you should be ready to hire your contractor. You may have had 2-3 people make it this far.&lt;/p&gt;
+&lt;p&gt;If you&amp;#x2019;re hiring for one position, hire the top candidate and let the other two know that you decided to go with someone else but you may be in contact with them shortly because you were impressed and you may need to grow your team. This leaves the door open for future conversation with those candidates. If you need to hire two people, hire the top two. You get the point here.&lt;/p&gt;
+&lt;p&gt;If you don&amp;#x2019;t end up with enough contractors, then repost the position.&lt;/p&gt;
+&lt;h2&gt;Wrap Up&lt;/h2&gt;
+&lt;p&gt;Hiring a contractor can be a challenging task, but if you follow the steps outlined above you&amp;#x2019;ll find that you can lock in a good outsourced developer and eliminate the cruft in a few easy steps. I hope this helps you land a great outsourced developer.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;* I&amp;#x2019;d love to take full credit for creating the programming challenge on my own, but I cannot. The implementation of this challenge was inspired by a company by the name of Integrum (who no longer does programming) for this method of programming challenge.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+How To Hire Outsourced Developers
+</title>
+</item>
+<item>
+<author>
+Kyle Orland
+</author>
+<link>
+http://arstechnica.com/gaming/2014/01/how-an-emulator-fueled-robot-reprogrammed-super-mario-world-on-the-fly/
+</link>
+<description>
+&lt;div class=&quot;article-content clearfix&quot; score=&quot;10.0&quot;&gt;
+    
+&lt;figure class=&quot;intro-image image center full-width&quot; score=&quot;12.5&quot;&gt;
+      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/tasmario.png&quot; width=&quot;512&quot;&gt;
+  
+    &lt;figcaption class=&quot;caption&quot; score=&quot;17.5&quot;&gt;
+			&lt;div class=&quot;caption-text&quot;&gt;Don't worry, Yoshi. That's just the fabric of reality reprogramming itself before our eyes.&lt;/div&gt;
+	
+			
+	  &lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;In the world of personal computing, hacks that exploit memory errors to allow for the execution of arbitrary (and often malicious) code &lt;a href=&quot;http://arstechnica.com/apple/2009/06/safari-charlie-to-reveal-iphone-unsigned-code-exploit-next-month/&quot;&gt;are&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/information-technology/2005/11/1909/&quot;&gt;far&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/apple/2009/05/apple-has-yet-to-patch-critical-java-vulnerabilitya-vulnerability-in-the-java-virtual-machine-which/&quot;&gt;from&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/security/2013/09/microsoft-issues-fix-to-stop-active-attacks-exploiting-serious-ie-bug/&quot;&gt;surprising&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/uncategorized/2004/09/4227-2/&quot;&gt;anymore&lt;/a&gt;. What's more surprising is that such &quot;arbitrary code&quot; bugs are also present on the relatively locked-down computers inside of video game consoles.&lt;/p&gt;
+&lt;p&gt;This was demonstrated quite dramatically last week at &lt;a href=&quot;http://gamesdonequick.com/&quot;&gt;Awesome Games Done Quick&lt;/a&gt; (AGDQ), an annual marathon fundraiser that this year raised over $1 million for the Prevent Cancer foundation. The event focuses on live speedruns of classic games by human players and included a &lt;a href=&quot;http://www.destructoid.com/these-two-blindfolded-punch-out-speedruns-are-must-see-268824.phtml&quot;&gt;blindfolded &lt;i&gt;Mike Tyson's Punch-Out!!&lt;/i&gt; run&lt;/a&gt; that ranks among the most impressive live video game playing performances I have ever seen. The most remarkable moment of the weeklong marathon, though, came when a robotic player took &quot;total control&quot; of an unmodified &lt;i&gt;Super Mario World&lt;/i&gt; cartridge, reprogramming it on the fly to run simple versions of &lt;i&gt;Pong&lt;/i&gt; and &lt;i&gt;Snake&lt;/i&gt; simply by sending a precise set of inputs through the standard controller ports on the system.&lt;/p&gt;
+&lt;figure class=&quot;video&quot;&gt;&lt;/figure&gt;
+&lt;p&gt;The &lt;a href=&quot;http://www.youtube.com/watch?v=OPcV9uIY5i4&quot;&gt;two-and-a-half minute video of this incredible exploit&lt;/a&gt; is pretty tough to follow if you're not intimately familiar with the state of emulator-assisted speedruns. At first, it looks like the game must have been hacked in some way to allow for things like multiple on-screen Yoshis, item boxes that spawn multiple 1-ups, and the ability for Mario to carry items while riding on Yoshi. In actuality, these seeming impossibilities are just &lt;a href=&quot;http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html&quot;&gt;glitches that have been discovered over the years&lt;/a&gt; through painstaking emulated playthroughs by the community at &lt;a href=&quot;http://tasvideos.org/&quot;&gt;TASVideos&lt;/a&gt; (short for tool-assisted speedrun videos).&lt;/p&gt;
+&lt;p&gt;Most of these glitches are impossible or near-impossible for a human to perform in the course of standard gameplay since they require intricate patterns of inputs that have to be entered precisely at specific frames of in-game video (i.e. within 1/30th of a second). It's only through the emulators that allow for input recording and single frame pausing and advancement (not to mention sometimes intense &lt;a href=&quot;http://www.lua.org/&quot;&gt;Lua scripting&lt;/a&gt;) that these glitches were discoverable and replicable. Still, it's important to clarify that everything happening in the video is the result of the standard &lt;i&gt;Super Mario World&lt;/i&gt; software responding to conventional button inputs—this isn't the result of &lt;a href=&quot;http://arstechnica.com/gaming/2012/07/how-the-new-game-genie-lets-you-hack-your-ps3-saves/&quot;&gt;Game Genie-style external memory editing&lt;/a&gt; or the like.&lt;/p&gt;
+&lt;h2&gt;Massaging the memory&lt;/h2&gt;
+&lt;p&gt;It's at 1:39 in the video where things really start going pear-shaped, as the fabric of the game's reality comes apart at the seams for a few seconds before inexplicably transitioning to Mario-themed versions of &lt;i&gt;Pong&lt;/i&gt; and &lt;i&gt;Snake&lt;/i&gt;. Understanding what's going on here requires some deep knowledge of the Super NES' internal sprite and memory management, which is &lt;a href=&quot;http://tasvideos.org/3957S.html&quot;&gt;explained in detail here&lt;/a&gt; and &lt;a href=&quot;http://tasvideos.org/4156S.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Suffice it to say that the first minute-and-a-half or so of this TAS is merely an effort to spawn a specific set of sprites into the game's Object Attribute Memory (OAM) buffer in a specific order. The TAS runner then uses a &lt;a href=&quot;http://tasvideos.org/forum/viewtopic.php?p=299597#299597&quot;&gt;stun glitch&lt;/a&gt; to spawn an unused sprite into the game, which in turn causes the system to treat the sprites in that OAM buffer as &lt;a href=&quot;http://pastebin.com/WRvYCr2V&quot;&gt;raw executable code&lt;/a&gt;. In this case, that code has been arranged to jump to the memory location for controller data, in essence letting the user insert whatever executable program he or she wants into memory by converting the binary data for precisely ordered button presses into assembly code (interestingly, this data is entered more quickly by simulating the inputs of eight controllers plugged in through simulated multitaps on each controller port).&lt;/p&gt;
+&lt;p&gt;This same general method of using memory addressing errors and tool-assisted controller inputs to alter the way a game plays has been demonstrated on &lt;a href=&quot;http://tasvideos.org/Movies-C3058Y.html&quot;&gt;a number of other titles&lt;/a&gt;, including &lt;i&gt;Battletoads&lt;/i&gt;, &lt;i&gt;Kirby's Adventure&lt;/i&gt;, and &lt;i&gt;Crash Bandicoot 2&lt;/i&gt;. In fact, the essential proof-of-concept for the &lt;i&gt;Super Mario World&lt;/i&gt; &quot;arbitrary code&quot; glitch was first demonstrated and confirmed by the TASVideos community last April.&lt;/p&gt;
+&lt;p&gt;For the most part, though, these memory-corruption efforts are used to simply jump the game's state to the &quot;ending&quot; movie, thereby &quot;completing&quot; it in a much shorter time than is usually possible. This new &lt;i&gt;Super Mario World&lt;/i&gt; TAS sets itself apart by using its total control of the system to actually program a new game on top of the existing one (&lt;a href=&quot;http://tasvideos.org/2341M.html&quot;&gt;this TAS of &lt;i&gt;Pokemon Yellow&lt;/i&gt;&lt;/a&gt; does something similar, using the game as a stage to choreograph a pi-themed song-and-dance number).&lt;/p&gt;
+&lt;figure class=&quot;image center large full-width&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario-640x359.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;17.5&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; The Awesome Games Done Quick crowd reacts with glee as the &lt;i&gt;Super Mario World&lt;/i&gt; &quot;total control&quot; exploit is demonstrated live for the first time.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Last week's Awesome Games Done Quick &quot;total control&quot; demo is also notable for being run on actual, bare-bones SNES hardware rather than on an emulator (as is standard with most TAS videos). The robotic player at the event was powered by a Raspberry Pi hooked up to a special adapter (mounted amusingly to &lt;a href=&quot;http://www.pcmag.com/slideshow/story/288162/10-bizarre-video-game-accessories/10&quot;&gt;an NES R.O.B. controller&lt;/a&gt;) that let the computer send its preprogrammed controller inputs into the controller ports at superhuman, frame-level speed. Thus, the demonstration proved that this exploit was present in the actual system and cartridge released by Nintendo and not some sort of artifact of faulty emulation. That isn't a foregone conclusion, either, as syncing up the vagaries of split-second timing and memory management between real and emulated hardware are not trivial (this is yet another area where the idea of &lt;a href=&quot;http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/&quot;&gt;perfect emulation accuracy&lt;/a&gt; might come in handy).&lt;/p&gt;
+&lt;p&gt;Running this exploit on actual hardware also turns the usually sterile, disconnected Internet file sharing of tool-assisted speed runs into a thrilling live performance in front of a crowd of dozens at the AGDQ ballroom and thousands watching the marathon online. There's something about &lt;a href=&quot;http://www.youtube.com/watch?v=Uep1H_NvZS0&quot;&gt;watching the video archive of that stream&lt;/a&gt;—hearing the disbelieving laughter, the applause, and the cries of &quot;Oh my god&quot; from a crowd seeing a Super NES transformed into a fully programmable computer before their eyes—that makes the feat all the more impressive. That surprised reaction was apparently genuine, too, as the TGASVideos team says the crowd had no idea what was coming from a submission that had been tested and approved just the night before.&lt;/p&gt;
+&lt;p&gt;More than anything, though, this demo is a testament to the power of an Internet community and to the desire of that community to achieve total understanding and mastery of a game that started as a simple, child-focused amusement over 20 years ago.&lt;/p&gt;
+    		&lt;/div&gt;
+    
+</description>
+<title>
+How an emulator-fueled robot reprogrammed Super Mario World on the fly
+</title>
+</item>
+<item>
+<author>
+Philip Guo
+</author>
+<link>
+http://www.slate.com/articles/technology/technology/2014/01/programmer_privilege_as_an_asian_male_computer_science_major_everyone_gave.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;body parsys&quot;&gt;
+
+
+
+                    &lt;a name=&quot;pagebreak_anchor_1&quot;&gt;&lt;/a&gt;
+                    
+                    
+                     
+                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
+
+
+
+
+&lt;figure class=&quot;image inline &quot;&gt;
+
+&lt;img title=&quot;140115_TECH_TechPrivilege1&quot; alt=&quot;140115_TECH_TechPrivilege1&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege1.jpg.CROP.promo-mediumlarge.jpg&quot;&gt;
+
+
+
+  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
+&lt;/figure&gt;
+
+
+&lt;/figure&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;&lt;span class=&quot;drop-capped&quot;&gt;I&lt;/span&gt; started programming when I was 5, first with Logo and then BASIC. The picture above is me, age 9 (with horrible posture). By the time this photo was taken, I had already written several BASIC games that I distributed as shareware on our local BBS. I was fast growing bored, so my parents (both software engineers) gave me the original &lt;a href=&quot;http://www.amazon.com/dp/0201100886/?tag=slatmaga-20&quot; class=&quot;entry-content-asset&quot;&gt;dragon compiler textbook&lt;/a&gt; from their grad school days. That's when I started learning C and writing my own simple interpreters and compilers. My early interpreters were for BASIC, but by the time I entered high school I had already created a &lt;a href=&quot;http://en.wikipedia.org/wiki/Self-hosting&quot; class=&quot;entry-content-asset&quot;&gt;self-hosting compiler&lt;/a&gt; for a nontrivial subset of C. Throughout most of high school, I spent weekends coding in x86 assembly, obsessed with hand-tuning code for the newly released &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Intel_Pentium_II_microprocessors&quot; class=&quot;entry-content-asset&quot;&gt;Pentium II chips&lt;/a&gt;. When I started my freshman year at MIT as a computer science major, I already had over 10 years of programming experience. So I felt right at home there.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;OK, all of the above was a lie. With one exception: That is me in the photo. When it was taken, I didn't even know how to touch-type. My parents were just like, &amp;#x201C;Quick, pose in front of our new computer!&amp;#x201D; (Look closely. My fingers aren't even in the right position.) My parents were both humanities majors, and there wasn't a single programming book in my house. In sixth grade I tried teaching myself BASIC for a few weeks, but quit because it was too hard. The only real exposure I had to programming prior to college was taking AP computer science in 11&lt;sup&gt;th&lt;/sup&gt; grade, taught by a math teacher who had learned the material &lt;a href=&quot;http://pgbovine.net/ap-computer-science.htm&quot; class=&quot;entry-content-asset&quot;&gt;only a month before class started&lt;/a&gt;. Despite its shortcomings, that class inspired me to major in computer science in college. But when I started freshman year at MIT, I felt a bit anxious because many of my classmates actually &lt;em&gt;did&lt;/em&gt; have over 10 years of childhood programming experience; I had less than one.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Even though I didn't grow up in a tech-savvy household and couldn't code my way out of a paper bag, I had one big thing going for me: I &lt;em&gt;looked like&lt;/em&gt; I was good at programming. Here's me during freshman year of college:&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
+
+
+
+
+&lt;figure class=&quot;image inline &quot;&gt;
+
+&lt;img title=&quot;140115_TECH_TechPrivilege2&quot; alt=&quot;140115_TECH_TechPrivilege2&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege2.jpg.CROP.promovar-mediumlarge.jpg&quot;&gt;
+
+
+
+  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
+&lt;/figure&gt;
+
+
+&lt;/figure&gt;
+
+                        
+                    
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;As an Asian male student at MIT, I fit society's image of a young programmer. Thus, throughout college, nobody ever said to me (as they said to some other CS students I knew):&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;p class=&quot;entry-content-asset&quot;&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;#x201C;Well, you only got into MIT because you're an Asian boy.&amp;#x201D;&lt;/li&gt;
+&lt;li&gt;(&lt;em&gt;while struggling with a problem set&lt;/em&gt;) &amp;#x201C;Well, not everyone is cut out for computer science; have you considered majoring in bio?&amp;#x201D;&lt;/li&gt;
+&lt;li&gt;(&lt;em&gt;after being assigned to a class project team&lt;/em&gt;) &amp;#x201C;How about you just design the graphics while we handle the backend? It'll be easier for everyone that way.&amp;#x201D;&lt;/li&gt;
+&lt;li&gt;&amp;#x201C;Are you sure you know how to do this?&amp;#x201D;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;/p&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Although I started off as a complete novice (like everyone once was), I never faced any &lt;a href=&quot;http://en.wikipedia.org/wiki/Microinequity&quot; class=&quot;entry-content-asset&quot;&gt;micro-inequities&lt;/a&gt; that impeded my intellectual growth. Throughout college and grad school, I gradually learned more and more via classes, research, and internships, incrementally taking on harder and harder projects, and getting better and better at programming while falling deeper and deeper in love with it. Instead of doing my &lt;a href=&quot;http://www.newyorker.com/online/blogs/sportingscene/2013/08/psychology-ten-thousand-hour-rule-complexity.html&quot; class=&quot;entry-content-asset&quot;&gt;10 years of deliberate practice&lt;/a&gt; from ages 8 to 18, I did mine from ages 18 to 28. And nobody ever got in the way of my learning&amp;#x2014;not even inadvertently&amp;#x2014;probably because I looked like the sort of person who would be good at such things. (The software engineer Tess Rinearson writes about this dynamic from a different perspective in her essay &amp;#x201C;&lt;a href=&quot;https://medium.com/tales-from-the-front/cc9ed433ec3c&quot; class=&quot;entry-content-asset&quot;&gt;On Technical Entitlement&lt;/a&gt;.&amp;#x201D;)&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Instead of facing implicit bias or &lt;a href=&quot;http://en.wikipedia.org/wiki/Stereotype_threat&quot; class=&quot;entry-content-asset&quot;&gt;stereotype threat&lt;/a&gt;, I had the privilege of implicit endorsement. For instance, whenever I attended technical meetings, people would assume that I knew what I was doing (regardless of whether I did or not) and treat me accordingly. If I stared at someone in silence and nodded as they were talking, they would assume that I understood, not that I was clueless. Nobody ever talked down to me, and I always got the benefit of the doubt in technical settings.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;As a result, I was able to fake it till I made it, often landing jobs whose postings required skills I hadn't yet learned but knew that I could pick up on the spot. Most of my interviews for research assistantships and summer internships were quite casual&amp;#x2014;people just gave me the chance to try. And after enough rounds of practice, I actually did start knowing what I was doing. As I gained experience, I was able to land more meaningful programming jobs, which led to a virtuous cycle of further improvement.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;pullquotebox section&quot;&gt;
+ 
+
+&lt;aside class=&quot;pullquote&quot;&gt;
+
+  &lt;p class=&quot;quote&quot;&gt;For every white or Asian male expert programmer you know, imagine a parallel universe where they were of another ethnicity and/or gender.&lt;/p&gt;
+  
+  
+&lt;/aside&gt;
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;This kind of privilege that I and other people who looked like me possessed was silent, manifested not in what people said to us, but rather in what they didn't say. We had the &lt;a href=&quot;http://pgbovine.net/implicit-privilege.htm&quot; class=&quot;entry-content-asset&quot;&gt;privilege&lt;/a&gt; to spend enormous amounts of time developing technical expertise without anyone's interference or implicit discouragement. Sure, we worked really hard, but our efforts directly translated into skill improvements without much loss due to interpersonal friction. Because we looked the part.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;In contrast, ask any computer science major who isn't from a majority demographic (i.e., white or Asian male), and I guarantee that he or she has encountered discouraging comments such as &amp;#x201C;You know, not everyone is cut out for computer science.&amp;#x201D; They probably still remember the words and actions that have hurt the most, even though &lt;a href=&quot;https://medium.com/tales-from-the-front/b5931b3cf837&quot; class=&quot;entry-content-asset&quot;&gt;those making the remarks&lt;/a&gt; often aren't trying to harm.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;For example, one of my good friends took the &lt;a href=&quot;http://ocw.mit.edu/courses/civil-and-environmental-engineering/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012/&quot; class=&quot;entry-content-asset&quot;&gt;Intro to Java&lt;/a&gt; course during freshman year and enjoyed it. She wanted to get better at Java GUI programming, so she got a summer research assistantship at the MIT Media Lab. However, instead of letting her build the GUI (like the job ad described), the supervisor assigned her the mind-numbing task of hand-transcribing audio clips all summer long. He assigned a new male student to build the GUI application. And it wasn't like that student was a programming prodigy&amp;#x2014;he was also a freshman with the same amount of (limited) experience that she had. The other student spent the summer getting better at GUI programming while she just grinded away mindlessly transcribing audio. As a result, she grew resentful and shied away from learning more CS.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    
+
+            
+
+            
+
+
+
+
+
+&lt;/div&gt;
+
+        
+        
+        
+        
+    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;body parsys&quot;&gt;
+
+
+
+            
+            
+            
+        
+                    &lt;a name=&quot;pagebreak_anchor_2&quot;&gt;&lt;/a&gt;
+                    
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Thinking about this story always angers me. Here was someone with a natural interest who took the initiative to learn more and was denied the opportunity to do so. I have no doubt that my friend could have gotten good at programming&amp;#x2014;and really enjoyed it&amp;#x2014;if she had the same opportunities as I did. (It didn&amp;#x2019;t help that when she was accepted to MIT, her aunt&amp;#x2014;whose son had been rejected&amp;#x2014;congratulated her by saying, &amp;#x201C;Well, you only got into MIT because you're a girl.&amp;#x201D;)&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Over a decade later, she now does some programming at her research job, but wishes that she had learned more back in college. However, she had such a negative association with everything CS-related that it was hard to motivate herself to do so for fear of being shot down again.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;One trite retort is &amp;#x201C;Well, your friend should've been tougher and not given up so easily. If she wanted it badly enough, she should've tried again, even knowing that she might face resistance.&amp;#x201D; These sorts of remarks aggravate me. Writing code for a living isn't like being a Navy SEAL &lt;a href=&quot;http://abcnews.go.com/International/story?id=7325633&quot; class=&quot;entry-content-asset&quot;&gt;sharpshooter&lt;/a&gt;. Programming is seriously &lt;em&gt;not&lt;/em&gt; that demanding, so you shouldn't need to be a tough-as-nails superhero to enter this profession.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                        
+                    
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Just look at this photo of me from a software engineering summer internship:&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
+
+
+
+
+&lt;figure class=&quot;image inline &quot;&gt;
+
+&lt;img title=&quot;140115_TECH_TechPrivilege3&quot; alt=&quot;140115_TECH_TechPrivilege3&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege3.jpg.CROP.promo-mediumlarge.jpg&quot;&gt;
+
+
+
+  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
+&lt;/figure&gt;
+
+
+&lt;/figure&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Even though I was hacking on a hardware simulator in C++, which sounds mildly hard-core, I was actually pretty squishy, chillin' in my cubicle and often taking extended lunch breaks. All of the guys around me (yes, the programmers were all men, with the exception of one older woman who didn't hang out with us) were also fairly squishy. These guys made a fine living and were good at what they did; but they weren't superheroes. The most hardship that one of the guys faced all summer was staying up late playing &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Doom_3&quot; class=&quot;entry-content-asset&quot;&gt;Doom 3&lt;/a&gt;&lt;/em&gt; and then rolling into the office dead-tired the next morning. Anyone with enough practice and motivation could have done our jobs, and most other programming and CS-related jobs as well. Seriously, companies aren't looking to hire the next Steve Wozniak&amp;#x2014;they just want to ship code that works.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;It frustrates me that people not in the majority demographic often need to be tough as nails to succeed in this field, constantly bearing the lasting effects of thousands of micro-inequities. &lt;em&gt;Psychology Today&lt;/em&gt; &lt;a href=&quot;http://www.psychologytoday.com/blog/the-superhuman-mind/201304/micro-inequities-40-years-later&quot; class=&quot;entry-content-asset&quot;&gt;notes&lt;/a&gt; that according to one researcher, Mary Rowe:&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;blockquote&gt;[M]icro-inequities often had serious cumulative, harmful effects, resulting in hostile work environments and continued minority discrimination in public and private workplaces and organizations. What makes micro-inequities particularly problematic is that they consist in micro-messages that are hard to recognize for victims, bystanders and perpetrators alike. When victims of micro-inequities do recognize the micro-messages &amp;#x2026; it is exceedingly hard to explain to others why these small behaviors can be a huge problem.&lt;/blockquote&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;In contrast, people who look like me can just kinda do programming for work if we want, or not do it, or switch into it later, or out of it again, or work quietly, or nerd-rant on how &lt;a href=&quot;https://www.ruby-lang.org/en/&quot; class=&quot;entry-content-asset&quot;&gt;Ruby&lt;/a&gt; sucks or rocks or whatever, or name-drop &lt;a href=&quot;http://en.wikipedia.org/wiki/Monad_(functional_programming)&quot; class=&quot;entry-content-asset&quot;&gt;monads&lt;/a&gt;. And nobody will make remarks about our appearance, about whether we're truly dedicated hackers, or how our behavior might reflect badly on &amp;#x201C;our kind&amp;#x201D; of people. &lt;em&gt;That's&lt;/em&gt; silent technical privilege.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;Ideally, we want to spur interest in young people from underrepresented demographics who might never otherwise think to pursue CS or STEM studies. There are great people and organizations working toward this goal. Although I think that increased and broader participation is critical, a more immediate concern is reducing attrition of those already in the field. For instance, according to a 2012 &lt;a href=&quot;http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-engage-to-excel-final_2-25-12.pdf&quot; class=&quot;entry-content-asset&quot;&gt;STEM education report to the president&lt;/a&gt;:&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;blockquote&gt;[E]conomic forecasts point to a need for producing, over the next decade, approximately 1 million more college graduates in STEM fields than expected under current assumptions. Fewer than 40% of students who enter college intending to major in a STEM field complete a STEM degree. Merely increasing the retention of STEM majors from 40% to 50% would generate three quarters of the targeted 1 million additional STEM degrees over the next decade.&lt;/blockquote&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;That's why I plan to start by taking steps to encourage and retain those who already want to learn. So here's a thought experiment: For every white or Asian male expert programmer you know, imagine a parallel universe where they were of another ethnicity and/or gender but had the exact same initial interest and aptitude levels. Would they still have been willing to devote the 10,000-plus hours of deliberate practice to achieve mastery in the face of dozens or hundreds of instances of implicit discouragement they would inevitably encounter over the years? Sure, some super-resilient outliers would, but many wouldn't. Many of us would quit, even though we had the potential and interest to thrive in this field.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;I hope to live in a future where people who already have the interest to pursue CS or programming don't self-select themselves out of the field. I want those people to experience what I was privileged enough to have gotten in college and beyond: unimpeded opportunities to develop expertise in something that they find beautiful, practical, and fulfilling.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+                    
+                     
+                    &lt;div class=&quot;entry-content-asset&quot;&gt;
+
+&lt;p&gt;&lt;em&gt;This piece is adapted from &lt;/em&gt;&lt;a href=&quot;http://pgbovine.net/tech-privilege.htm&quot; class=&quot;entry-content-asset&quot;&gt;&lt;em&gt;Guo&amp;#x2019;s blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+            
+
+            
+
+
+
+
+
+&lt;/div&gt;
+
+               
+    &lt;/div&gt;
+</description>
+<title>
+Programmer privilege: As an Asian male computer science major, everyone gave me the benefit of the doubt.
 </title>
 </item>
 </channel>
