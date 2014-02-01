@@ -15,298 +15,6 @@ myread
 </description>
 <item>
 <author>
-Alex Sexton
-</author>
-<link>
-https://alexsexton.com/blog/2014/1/the-productivity-cycle/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;p&gt;People are interesting. We know so little about ourselves compared to what we&amp;#x2019;d like to think we know. We&amp;#x2019;re all subtly different even though we&amp;#x2019;re, on a whole, overwhelmingly predictable. There are copious studies to back up &amp;#x201C;average&amp;#x201D; data from people, and plenty of arm-chair anthropologists and psychologists that have very nice theories on how we tick. But most of us aren&amp;#x2019;t &amp;#x2018;average,&amp;#x2019; and perhaps some of us &lt;em&gt;tock&lt;/em&gt; more than we &lt;em&gt;tick&lt;/em&gt; (mark this as the first of many &amp;#x201C;stretches&amp;#x201D; in this post).&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;d like to take the chance, while we&amp;#x2019;re still mostly clueless, to write some of my non-scientific theories on cognitive ability and &amp;#x201C;focus&amp;#x201D; (the noun) in the context of creating and building things (or &amp;#x201C;shipping,&amp;#x201D; as it were).&lt;/p&gt;
-&lt;h2&gt;Motive and Privilege&lt;/h2&gt;
-&lt;p&gt;I see a thin thread woven through everything that I do, and everything that I see my peers do.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Legacy.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We&amp;#x2019;re all creative, and many of us want to &amp;#x201C;build things.&amp;#x201D; I hear it often in interviews, and over beers, that it&amp;#x2019;s just built into the core of many of us to want to &amp;#x201C;create something from nothing.&amp;#x201D; It often takes shape as some other pleasant-sounding turn of phrase, but the &amp;#x201C;need to create&amp;#x201D; seems to be innate in all but the most blissful of us. In my experience, this can often be traced back to the desire for someone to &amp;#x2018;make their mark,&amp;#x2019; or as I previously alluded, the desire to pursue a legacy.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m all for this. This feeling is built in to my DNA as well. And while I would hope to have purely selfless reasons for wanting to create things, I&amp;#x2019;m certain that my ego, and my human-nature drive me to want to live longer than my bones.&lt;/p&gt;
-&lt;p&gt;I can&amp;#x2019;t help but lead with &amp;#x201C;ego&amp;#x201D; and &amp;#x201C;legacy&amp;#x201D; because the entire ability to create something from nothing (programming) and to get disproportionally rewarded for doing so (programming salaries) comes along with more than a touch of blind privilege. It&amp;#x2019;s a pretty good spot to be in to be hacking your mental focus levels so you can build bigger and better websites. Blindness to our privilege is mostly to be expected as long as we fight to improve our own awareness and adjust our actions appropriately. Read on now, forewarned of my ego, blindness to privilege, and extreme lack of brevity.&lt;/p&gt;
-&lt;h2&gt;Caffeine is a Zero-Sum Game&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://alexsexton.com/images/prod_cycle/focuswave.png&quot; alt=&quot;/images/prod_cycle/focuswave.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;Ostensibly, this is a graph of my potential &amp;#x201C;focus&amp;#x201D; levels during a day.&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;I read a &lt;em&gt;fascinating&lt;/em&gt; blog post several years ago by &lt;a href=&quot;http://randomwalker.info/&quot;&gt;Arvind Narayanan&lt;/a&gt; called &lt;a href=&quot;http://arvindn.livejournal.com/57651.html&quot;&gt;The Calculus of Caffeine Consumption&lt;/a&gt;. It was pretty eye-opening for me to see my &amp;#x201C;focus&amp;#x201D; levels throughout the day graphed out as a sine wave. Naturally, it&amp;#x2019;s a massive over-simplification, but in my personal experience, not an entirely incorrect approximation of my energy levels in a day. I am tired, perk up, get hungry and eat and dip down, then hit a stride, rinse and repeat. It&amp;#x2019;s not a sine wave, but it&amp;#x2019;s a wave alright.&lt;/p&gt;
-&lt;p&gt;Like my Uncle Ray always says, &lt;em&gt;&amp;#x201C;Any wave is sinusoidal with a sufficiently low sampling rate!&amp;#x201D;&lt;/em&gt;, though I think eventually it becomes a straight line. (Which I guess is a wave with an amplitude of zero?)&lt;/p&gt;
-&lt;p&gt;Our wave of &amp;#x201C;focus&amp;#x201D;/energy has all the normal properties of a wave: a wavelength, a period, and an amplitude. The premise of the article is that caffeine, a stimulant, is often consumed during the low points in our day. So we drink coffee when we wake up or when we feel tired after lunch in order to boost our ability to concentrate and sometimes even function. The effect of this decision that is lost on us, is that &lt;em&gt;this reduces the total amplitude of our &amp;#x201C;focus&amp;#x201D; wave&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;In other words, &lt;strong&gt;by consuming caffeine to reduce how low we get during the low points, we inherently reduce our high points as well.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Narayanan states that this type of consumption actually works pretty well for people who are trying keep from falling below a threshold of &amp;#x201C;focus&amp;#x201D; or energy. Consider a construction worker, data-entry employee, truck-driver, or similar, where the time put into the task is important, and dipping below a certain level of energy would be dangerous/deadly.&lt;/p&gt;
-&lt;p&gt;Creative workers, however, don&amp;#x2019;t have the same limitations. They often need &amp;#x201C;a moment of clarity&amp;#x201D; to spark their work, or to break out of &amp;#x201C;writer&amp;#x2019;s block.&amp;#x201D; They would want the absolute highest amplitude of focus, regardless of the consequences on the downside, and to be working while at their highs.&lt;/p&gt;
-&lt;p&gt;Narayanan, a true hacker spirit (read: CS Ph.D. and Assistant Professor at Princeton), attempts to exploit this relationship to his advantage. Could he use caffeine to increase the amplitude of his &amp;#x201C;focus?&amp;#x201D; A conclusive answer here would take quite a few more double blind studies, but in my experience, and seemingly in Dr. Narayanan&amp;#x2019;s as well, the answer is a resounding &lt;strong&gt;&amp;#x201C;yes.&amp;#x201D;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Drink a latte 30 minutes before a high point, work as hard as you can, and then use the warmth of your laptop to take a nap a few hours later, because you&amp;#x2019;ll be spent.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Caffeine is a zero-sum game, but you can use that to your advantage. Consuming caffeine in time for it to affect you at the exact peak of your &amp;#x201C;focus wave&amp;#x201D; effectively makes the highs higher, and the lows lower. The rich get richer, while the poor get poorer. It&amp;#x2019;s like the sad state of our socioeconomic classes, except not awful, and for brain power!&lt;/p&gt;
-&lt;h2&gt;You Require More Vespene Gas&lt;/h2&gt;
-&lt;p&gt;Many people who have read Daniel Kahneman&amp;#x2019;s &lt;a href=&quot;http://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555&quot;&gt;&lt;em&gt;Thinking Fast And Slow&lt;/em&gt;&lt;/a&gt; will remember the &lt;a href=&quot;http://books.google.com/books?id=TA7Q27RWlj0C&amp;amp;lpg=PT62&amp;amp;ots=qSRd7MEIpZ&amp;amp;pg=PT62#v=onepage&amp;amp;q&amp;amp;f=false&quot;&gt;chocolate cake experiment&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://alexsexton.com/images/prod_cycle/cake.jpg&quot; alt=&quot;/images/prod_cycle/cake.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;Photo by &lt;a href=&quot;http://www.flickr.com/photos/foodthinkers/&quot;&gt;Food Thinkers&lt;/a&gt; under &lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/2.0/&quot;&gt;CC-by-NC-SA&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
-&lt;p&gt;The experiment, led by Baba Shiv at Stanford University, is pretty simple. Half the students are asked to remember a 2 digit number, and half are asked to remember a 7-digit number. They walk down a hall, are told they&amp;#x2019;re done, and are asked if they want chocolate cake, or fruit salad as a refreshment. The students who were asked to remember the 7-digit number were nearly twice as likely to choose the chocolate cake. Why is this?&lt;/p&gt;
-&lt;p&gt;Simply put, we have a finite amount of mental energy. The students who spent their energy on remembering 7-digit numbers had no more energy left to spend on avoiding cake.&lt;/p&gt;
-&lt;p&gt;The prefrontal cortex is primarily responsible for the things that creative people crave, like focus, but also other functions like short-term memory, abstract problem solving, and willpower. The conclusion of the chocolate cake experiment implies that there is a finite amount of resources in the prefrontal cortex, and that one system&amp;#x2019;s use of those resources could directly affect the available resources of another function.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://alexsexton.com/images/prod_cycle/wavearea.jpg&quot; alt=&quot;Graph with area under curve highlighted&quot;&gt; In the context of our sine-wave, I&amp;#x2019;m pretty sure I could make a good reference to calculus, because this concept has a lot to do with the area under the curve, but I&amp;#x2019;ll get it wrong, and I won&amp;#x2019;t hear the end of it in the comments.&lt;/p&gt;
-&lt;p&gt;This plays into our first theory quite well. If we use more mental energy in a quick burst (because we have a higher amplitude), we&amp;#x2019;ll need deeper rest in order to recharge this energy. During our rest periods, the troughs in our sine-wave, we have to refill the energy that we spent during our peaks.&lt;/p&gt;
-&lt;p&gt;I can&amp;#x2019;t safely postulate much about how to best do this, except for that studies show that naps are increasingly good for doing such things. Since you&amp;#x2019;re probably not going to have your big break during a lull in your cognitive ability, why not speed up the process of getting to another high point? Nap away! Refuel the exact part of your brain that will allow you to get in the zone again.&lt;/p&gt;
-&lt;p&gt;Some folks will recommend a &lt;a href=&quot;http://en.wikipedia.org/wiki/Power_nap#The_caffeine_nap&quot;&gt;caffeine nap&lt;/a&gt;. I don&amp;#x2019;t have a ton of &lt;em&gt;intentional&lt;/em&gt; experience with caffeine naps, but the idea is that if you consume caffeine just prior to taking a nap, you&amp;#x2019;ll sleep until it kicks in (usually takes at least 30min for caffeine to metabolize), and then it&amp;#x2019;ll allow you to skip some of the groggier&lt;em&gt;[1]&lt;/em&gt; steps on your way back to productivity. It probably works.&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;&lt;em&gt;[1]&lt;/em&gt; Apparently, I can&amp;#x2019;t write the word &amp;#x2018;grog&amp;#x2019; without thinking about Guybrush Threepwood.&lt;/small&gt;&lt;/p&gt;
-&lt;h3&gt;Moderation&lt;/h3&gt;
-&lt;p&gt;I would add, finally, that Dr. Narayanan found that the body adjusts to regular caffeine intake in as little as 2 to 3 weeks. That means that if you&amp;#x2019;re a long-time coffee-drinker, you &lt;em&gt;really do&lt;/em&gt; need that cup of coffee to get going in the morning in order to get up to your pre-caffeine addiction baseline.&lt;/p&gt;
-&lt;p&gt;He notes that it takes 5 days to reach adenosine normality (good) if you&amp;#x2019;re not consuming caffeine. He retrospectively adds that he initially did not place enough value in these &amp;#x2018;quitting cycles&amp;#x2019; (hinting that perhaps you should not repeat his mistakes).&lt;/p&gt;
-&lt;h2&gt;Practical Application&lt;/h2&gt;
-&lt;p&gt;Most of this should be obvious at this point, so I won&amp;#x2019;t drag on.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Plan your high points, work during them&lt;/li&gt;
-&lt;li&gt;Refuel during low points instead of stretching them out with forced work&lt;/li&gt;
-&lt;li&gt;Slingshot your amplitude with caffeine; 3 weeks on and 1 week off&lt;/li&gt;
-&lt;li&gt;Avoid non-intentional caffeine, only drink it on schedule&lt;/li&gt;
-&lt;li&gt;Don&amp;#x2019;t ignore the people you love&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;The Nap Month&lt;/h2&gt;
-&lt;p&gt;I have nothing but my own personal experience to back this up, but I find that my motivation and passion levels work in a similar way on a &lt;strong&gt;yearly&lt;/strong&gt; cycle as they do on a &lt;strong&gt;daily&lt;/strong&gt; cycle. For parts of the year, I&amp;#x2019;m excited by work, and go out of my way to build things in my free time, and other parts of the year, I just want to come home and binge watch a season of a TV show on Netflix.&lt;/p&gt;
-&lt;p&gt;For this reason I have to wonder if some of the same energy principles apply. &lt;strong&gt;Can I increase the intensity and duration of the productive months?&lt;/strong&gt; If so, at what cost?&lt;/p&gt;
-&lt;p&gt;I really struggle (in a not very serious kind of way) during the month or two when I feel like I can&amp;#x2019;t get anything done, but I think we can use a similar trick to help our productivity pick up again. Specifically, we need to A) simulate caffeine on a macro scale, and B) simulate naps on a macro scale.&lt;/p&gt;
-&lt;h3&gt;Macrocaffeine&lt;/h3&gt;
-&lt;p&gt;I find that an interesting, new passion project gets my creative energy flowing much better than jumping into old work. If I really want to get in the mood to program, I&amp;#x2019;ll hop off my projects with deadlines and build something that I know probably won&amp;#x2019;t ever even get finished, but that I&amp;#x2019;m just excited to build.&lt;/p&gt;
-&lt;p&gt;Caffeine blocks adenosine (a sleep chemical) receptors in our brain, causing us to avoid sleep longer. If we substitute the current list of things we have to do, with a temporarily more engaging list, it may give us the same slingshot effect that caffeine does for our energy on a micro level.&lt;/p&gt;
-&lt;h3&gt;Macronaps&lt;/h3&gt;
-&lt;p&gt;This one seems a little bit more straight forward to me.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Just stop working so much.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Take a nap from your work. I understand that this is not a viable solution for businesses that intend to make money, but I think there can be some good compromises here. Namely, most hip tech companies have very generous vacation allowances already. Use your vacation during a low point, and in perfect clich&amp;#xE9; form, &amp;#x201C;recharge.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;Additionally, companies with large enough teams can have two modes of employment that employees could ideally opt into. &amp;#x201C;Passion-mode&amp;#x201D; and &amp;#x201C;coast-mode.&amp;#x201D; Someone who is on an upswing should get put on a big project that&amp;#x2019;s going to take a lot of energy. Someone who is burnt out from the last big project should be given work that will allow them to show up a little late, and leave a little early.&lt;/p&gt;
-&lt;p&gt;There&amp;#x2019;s lots of work like this. The support team at your company would probably love it if developers frequently did 6-hour customer support stints. In no way do I imply that the support team doesn&amp;#x2019;t regularly break its back working very demanding hours/problems and doesn&amp;#x2019;t deserve their own down-time. There&amp;#x2019;s also plenty of documentation that I&amp;#x2019;m happy to churn out during my down month.&lt;/p&gt;
-&lt;p&gt;The point is to allow employees to be maximally lazy while still maintaining their minimum required value. The more quickly I&amp;#x2019;m able to get through the less motivated time, the more quickly I&amp;#x2019;ll be able to jump back into a difficult and challenging project and do it well.&lt;/p&gt;
-&lt;h2&gt;A Final Moment of Clarity&lt;/h2&gt;
-&lt;p&gt;I have very few projects and accomplishments that haven&amp;#x2019;t come to me in a &amp;#x201C;moment of clarity.&amp;#x201D; Naturally, I want to maximize the amount of these moments, and increase the odds that I&amp;#x2019;ll be working on something that I love when they occur. I have no idea if hacking your body is a good long-term strategy for making this happen, but I find that researching all of this sleep stuff is an excellent tool for procrastinating during my focus droughts.&lt;/p&gt;
-&lt;p&gt;I can&amp;#x2019;t guarantee that any of this will resonate with you, or work for you if you try it. But I do think that everyone goes through the motivational recessions, and we should be actively attempting to eliminate or reduce them. What is Quantitative Easing for the Soul?&lt;/p&gt;
-&lt;p&gt;I simply want my hard work to be spent most efficiently.&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;Special thanks to &lt;a href=&quot;https://twitter.com/hazelcough&quot;&gt;Michelle Bu&lt;/a&gt; for reading this ahead of time.&lt;/small&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-The Productivity Cycle
-</title>
-</item>
-<item>
-<author>
-Matt Burns
-</author>
-<link>
-http://techcrunch.com/2014/01/15/farmlogs-raises-4m-series-a-to-bring-farming-into-the-age-of-apps/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
-
-
-&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/combine_and_tractor_working_in_field.jpg?w=400&quot; class=&quot;article-img-feature&quot;&gt;&lt;p&gt;Just a year after securing $1 million in seed funding, Michigan-based &lt;a target=&quot;_blank&quot; href=&quot;http://farmlogs.com&quot;&gt;FarmLogs&lt;/a&gt; is announcing a $4 million Series A led by Drive Capital. The company says it is looking forward to a big 2014 and the co-founder and CEO tells me the company will use the influx of cash to execute on an aggressive product growth plan for the upcoming year.&lt;/p&gt;
-&lt;p&gt;Jesse Vollmar, CEO and co-founder of FarmLogs, explained to me that the company is building out its product to intelligently predict&amp;#xA0;and optimize crop rotations as well as automate activity data collection. FarmLogs is also looking to ingest data collected by modern farming equipment that he tells me traditionally is rarely exported. By using low-cost Bluetooth hardware, the company expects to be able to analyse and upload this data in real time.&lt;/p&gt;
-&lt;p&gt;The Y Combinator alum touts the fact that 5% of farms in the US. are currently using its software. It&amp;#x2019;s an impressive stat considering the startup just graduated from YC in early 2012.&lt;/p&gt;
-&lt;p&gt;Drive Capital led the funding with existing investors Huron River Ventures, Hyde Park Venture Partners and Hyde Park Angels, also participating in the investment.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;We are very excited about the trajectory we are on and having additional support and resources will continue to&amp;#xA0;accelerate our growth,&amp;#x201D; said Jesse Vollmar in a released statement. &amp;#x201C;We&amp;#x2019;ve helped thousands of farmers around the world take advantage of technology, and with their feedback and suggestions they&amp;#x2019;ve helped us create a smarter future for farming.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;FarmLogs&amp;#x2019;&amp;#xA0;data-driven approach to farming leans on the mobile web to help crop farmers quickly and efficiently forecast profits, track expenses and more efficiently schedule operations. Best yet, the software utilizes GPS for additional data about any given location&amp;#x2019;s historical weather data. Farms can quickly jot down notes and input data using the software&amp;#x2019;s mobile app. It&amp;#x2019;s a radical revolution for the age-old industry.&lt;/p&gt;
-&lt;p&gt;FarmLogs launched to an industry ripe for modernization. The incumbent software requires traditional Wintel computers. FarmLogs requires just an iPad, which although admittedly the extent of my &amp;#x201C;farming&amp;#x201D; consists of rebuilding a tiller a few years back, seems like a much friendlier device to have in a tractor than a laptop.&lt;/p&gt;
-
-
-								
-							&lt;/div&gt;
-
-
-
-						&lt;/div&gt;
-</description>
-<title>
-FarmLogs Raises $4M Series A To Further Advance Farming Into The Age of Apps
-</title>
-</item>
-<item>
-<author>
-Donn Felker
-</author>
-<link>
-http://www.donnfelker.com/how-to-hire-outsourced-developers/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;p&gt;&lt;em&gt;This is Part 2 of a 2 part series on hiring developers. Read Part 1, &lt;a title=&quot;How to Hire Programmers&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot;&gt;How to Hire Programmers&lt;/a&gt;, if you&amp;#x2019;re hiring for full time positions. Read this article if you&amp;#x2019;re outsourcing.&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;content-box-gray&quot; id=&quot;ab-aod&quot;&gt;
-&lt;h4&gt;Are you having Android Dev Troubles?&lt;/h4&gt;
-&lt;p&gt;I offer Expert On-Demand Android Consulting that can help. &lt;a href=&quot;http://www.donnfelker.com/android-on-demand&quot;&gt;Click here for more info.&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;I recently wrote about &lt;a title=&quot;How I Hire Programmers&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot; target=&quot;_blank&quot;&gt;how to hire programmers&lt;/a&gt; which focuses on hiring full time employees.&amp;#xA0;This post is tailored to help you learn how to hire outsourced developers. You&amp;#x2019;ll see that the two methods share a lot of similarities except hiring a contractor is a bit less involved as they are not going to be joining your team full time.&lt;/p&gt;
-&lt;p&gt;A little background &amp;#x2026; I&amp;#x2019;ve hired almost 10 remote, outsourced developers who were all overseas using the method I explain below. &amp;#xA0;I feel that while its not fool proof, its the best method I&amp;#x2019;ve encountered and I feel that it has the best ROI with the lowest time commitment. Over the years I&amp;#x2019;ve used contract employees for my business and I&amp;#x2019;ve been able to create this process as a by-product of my experiences. Sometimes it went well, other times it didn&amp;#x2019;t and sometimes it was an absolute disaster. After refining my hiring practices many times over I was able to create the process below that always returned top notch talent for outsourced developers. I hope the process below does the same you.&lt;/p&gt;
-&lt;h2&gt;The Process&lt;/h2&gt;
-&lt;p&gt;There are 4 simple steps and if you cut out the job posting step then you actually only have three steps to go through. The goal of this process is to save you time and money while maximizing the chance of getting the best candidate you can find. Please note, during this process you will probably need to spend anywhere from $50-$250 depending on the contractors that you put through this review process &amp;#x2013; more on that later. You will be posting a job, reviewing the candidates and selecting the top X (usually at least the top 10). At that point you&amp;#x2019;ll hire them to do a simple programming task. Once they complete it (if they complete it) you&amp;#x2019;ll be able to review the code and determine who has the best implementation and then you usually will hire that person. The steps are listed below.&lt;/p&gt;
-&lt;h2&gt;4 Steps to Hiring a Good Outsourced Developer&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Post a Job Description a Job Site&lt;/li&gt;
-&lt;li&gt;Prelim Review: Hire the top Candidates (minimum 10) for 1 Hour&lt;/li&gt;
-&lt;li&gt;The Programming Task&lt;/li&gt;
-&lt;li&gt;Keep the Top Candidate(s)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Step 1: Post a Job Description on a Job Site&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Goal: To create an interesting job posting that will attract quality applicants&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: I prefer to use oDesk.com as the site where I hire my contract programers so this entire article is baed around that site.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Log into &lt;a title=&quot;ODesk&quot; href=&quot;http://www.odesk.com&quot; target=&quot;_blank&quot;&gt;oDesk.com&lt;/a&gt; and post a job. Make sure the title accurately explains what you want the person to do. Do not post things like &amp;#x201C;JavaScript Ninja&amp;#x201D; or &amp;#x201C;Rails Badass&amp;#x201D;. Titles such as &amp;#x201C;Senior Rails Developer&amp;#x201D; or &amp;#x201C;Wordpress Developer&amp;#x201D; seem to fare a bit better than abstract titles. The description of the job should describe what you need in detail. Do not leave this as a simple one liner such as &amp;#x201C;Write good code and deliver on time.&amp;#x201D; Inform the candidate what you need from them. If its updating an existing code base inform them of what they&amp;#x2019;re getting into. If you&amp;#x2019;re a business person who does not understand code, explain what you want the product to do or what your product already does and why you need help. Don&amp;#x2019;t spend a ton of time on this. Maybe 10-15 minutes, max.&lt;/p&gt;
-&lt;p&gt;When hiring in oDesk you can provide various options about the job. For each of these sections I tend to use the following settings:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Skills Required
-&lt;ul&gt;
-&lt;li&gt;This is self explanatory. If you have a Rails site, put &amp;#x201C;Ruby on Rails&amp;#x201D; and probably &amp;#x201C;HTML&amp;#x201D; and &amp;#x201C;JavaScript&amp;#x201D;, etc.&lt;/li&gt;
-&lt;li&gt;If its another technology, put those technologies here.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How would you like to pay
-&lt;ul&gt;
-&lt;li&gt;Hourly when doing open ended development such as new feature work.&lt;/li&gt;
-&lt;li&gt;Fixed when the exact scope is defined. Such as: Install WordPress and configure theme to look like X.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Estimated workload
-&lt;ul&gt;
-&lt;li&gt;This varies person to person, but I usually have them on for Part Time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Desired Experience Level
-&lt;ul&gt;
-&lt;li&gt;Always choose Intermediate or Expert. Choosing beginner will get you some shoddy work that will eventually cost you 2x as much to replace later.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Marketplace Visibility
-&lt;ul&gt;
-&lt;li&gt;Anyone can find this job (UNLESS &amp;#x2026; I&amp;#x2019;m hiring a specific person)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Preferred Qualifications
-&lt;ul&gt;
-&lt;li&gt;Freelancer Type: No preference&lt;/li&gt;
-&lt;li&gt;Minimum Feedback Score: No Preference
-&lt;ul&gt;
-&lt;li&gt;The reason for this is because there are TONS of people who are experts who have never completed a job on oDesk before. Also, sometimes people get a bad score from the only job they did &amp;#x2026; not because it was bad work but because the person managing the product was terrible at their job. Don&amp;#x2019;t count them out.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Hours billed on ODesk: No preference
-&lt;ul&gt;
-&lt;li&gt;Again, you could have someone who is an expert who just joined. Don&amp;#x2019;t count them out.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Location
-&lt;ul&gt;
-&lt;li&gt;This one can be tricky. I personally do not care where they are. But, this is up to you. I usually put No Preference. However, if you are testing the various locations of the world to find what works best for you then choose that location.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;English Level: 5 out of 5
-&lt;ul&gt;
-&lt;li&gt;This is a requirement. A lot of contractors on ODesk will say their 4/5 but when you converse with them via email, IM or Skype/Google Hangout you&amp;#x2019;ll realize they&amp;#x2019;re actually more like a 2 or a 3. Being able to communicate effectively is key to success. Without it, you&amp;#x2019;re fighting an uphill battle.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Screening Questions
-&lt;ul&gt;
-&lt;li&gt;I personally don&amp;#x2019;t add these as programming jobs are quite technical and either you know how to program well or you don&amp;#x2019;t.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now, post the job.&lt;/p&gt;
-&lt;p&gt;Wait about 48 hours and then move onto step 2. During this time you&amp;#x2019;ll start having people apply for the position.&lt;/p&gt;
-&lt;h2&gt;Step 2: Prelim Review &amp;#x2013; Hire the Top Candidates (at least 10)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Goal: To hire the top candidates who seem qualified in order to take them to the next step.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;You&amp;#x2019;re probably going to get upwards of 25-60 applicants for your job posting from candidates all over the world. The first thing you will need to do is trim the list down. Here&amp;#x2019;s how you do it.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cut anyone whose English (or whatever your chosen 5/5 language is) is terrible and very difficult to read. This is an immediate red flag. If you can&amp;#x2019;t communicate now, how do you expect to communicate later?&lt;/li&gt;
-&lt;li&gt;Cut anyone who does not have the skills to do the work. e.g. &amp;#x2013; If you&amp;#x2019;re hiring for a Rails developer and the candidates does not list Rails as one of their skills cut them from the list. You want the highest quality you can afford.&lt;/li&gt;
-&lt;li&gt;Cut anyone that doesn&amp;#x2019;t seem to fit the job description. e.g. &amp;#x2013; If you want someone to develop a Game for you, a line of business web developer probably isn&amp;#x2019;t the best fit for you.&lt;/li&gt;
-&lt;li&gt;Cut anyone who is way out of your budget. Sure, that guy who&amp;#x2019;s charging $155 an hour looks great but maybe your budget is $25/hr. No point in entertaining the thought of getting a $155/hr candidate on the roster. You&amp;#x2019;ll waste their time and yours.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;After 48-72 hours you&amp;#x2019;ll want to trim your list down to a minimum of 10 candidates.&lt;/p&gt;
-&lt;p&gt;You&amp;#x2019;re at the point where you are now going to spend real money. If the average wage of your applicants is between $5 and $25 and hour you&amp;#x2019;ll spend roughly $50-250 to find the right person (at most). You&amp;#x2019;ll want to hire all 10 candidates. Yes, I&amp;#x2019;m serious. However, when you hire them you will inform them that you&amp;#x2019;re going to hire them to complete a simple task that should take no longer than 1 hour. You will send them the link to the Programming Task (Step 3) so they can complete the task. This one hour is PAID to the contractor when they do the work. This shows good faith to the contractor so they do not feel like they&amp;#x2019;re having to do work for free. If you ask outsourcers/freelancers/contractors to do work for free you&amp;#x2019;ll lose ALL of the good/best developers immediately. When you pay someone a full hour of their rate they take you much more seriously.&lt;/p&gt;
-&lt;p&gt;Something interesting happens at this point in the process. An average of 50% of the candidates never continue past this step. The reason is not exactly known but I suspect it is because they simply do not know how to perform the task that is given to them. That is exactly what Step 3 is for, weeding out the candidates who can do the work from those who cannot.&lt;/p&gt;
-&lt;h2&gt;Step 3: The Programming Task&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;End Goals: Identify if the candidate has the necessary ability to solve programming problems with code. Gain insight into the quality of code that is produced by this candidate.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;You&amp;#x2019;ll notice that this step is very similar to Step 3 in the &lt;a title=&quot;How To Hire A Programmer&quot; href=&quot;http://www.donnfelker.com/how-to-hire-programmers/&quot; target=&quot;_blank&quot;&gt;How to Hire A Programmer&lt;/a&gt; article with a few alterations sprinkled about. While the articles share similarities there are key differences in the process so please continue reading if you&amp;#x2019;ve already read the previous article on How to Hire a Programmer.&lt;/p&gt;
-&lt;p&gt;During the Programming Task* the candidate will be tasked with solving a real problem using the language that I specify. The coding task should not take an experienced programmer more than 1 hour to complete at most. I only pay for one hour of the contractors time. They can take as long as they want to get it done, but I&amp;#x2019;ll only pay for one hour. The goal is simple: To determine if the candidate can produce the code that is needed.&lt;/p&gt;
-&lt;p&gt;The programming challenge is the great equalizer. Not because the problem is necessarily difficult (it&amp;#x2019;s not, its easy), but because it allows you to gain insight into the quality of code that the person writes. It also answers a vast array of other questions as well:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Does the candidate communicate effectively?&lt;/li&gt;
-&lt;li&gt;Does the candidate know how to follow directions?&lt;/li&gt;
-&lt;li&gt;Does the candidate know how to use Git and GitHub?&lt;/li&gt;
-&lt;li&gt;Does the candidate follow coding best practices?&lt;/li&gt;
-&lt;li&gt;Does the candidate know how to code?&lt;/li&gt;
-&lt;li&gt;Does the candidate follow through and succeed?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I usually inform the candidate that the solution to the problem is due within 24 hours. The programming challenge is posted online on GitHub/BitBucket in a Git repo that is shared across all candidates. The same repo is used for everyone. Yes, that means that others can see the same answers as other applicants (via pull request). Thats fine because if someone wants to cheat it is easy to detect. If 3 people&amp;#x2019;s repo&amp;#x2019;s look exactly the same then the person who checked in the code first is most likely the person who wrote it. No two people write the exact same code every single time.&lt;/p&gt;
-&lt;p&gt;The repo contains all the necessary information about the task. The candidate is to follow the instructions and email me when their done. Here are a few example of some of the programming challenges I&amp;#x2019;ve created:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a title=&quot;NodeJS Example&quot; href=&quot;https://github.com/donnfelker/example-nodejs-challenge&quot; target=&quot;_blank&quot;&gt;NodeJS Example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a title=&quot;Android Example&quot; href=&quot;https://github.com/donnfelker/example-android-challenge&quot; target=&quot;_blank&quot;&gt;Android Example&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a title=&quot;Rails Example&quot; href=&quot;https://github.com/donnfelker/example-rails-challenge&quot; target=&quot;_blank&quot;&gt;Rails Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Feel free to fork these and save them for yourself. If you visited any of the sites above you&amp;#x2019;ll see that each of these examples had the candidate perform a series of steps. If the candidate is not sure of what to do, they could ask me for clarification or simply Google for the answer. When the candidate is done they&amp;#x2019;re to submit a pull request to me so I can review it.&lt;/p&gt;
-&lt;p&gt;This challenge is genius because it answers so many questions about the candidate. Namely, can they code and get something done on time. It also gives me the chance to review the code to see if it is a complete hack or if its something that is quite good. What I&amp;#x2019;ve found is that on average over 60% of candidates will never finish the problem &amp;#x2013; they simply don&amp;#x2019;t know how. Of the 40% that finish only about 20% actual do it correctly and usually at that point you&amp;#x2019;re left with either 1 or 2 candidates that are looking good. If you have more to choose from then thats a good problem to have!&lt;/p&gt;
-&lt;p&gt;It is also important to note that ODesk requires that the candidates install monitoring software that takes periodic screen shots of the work they&amp;#x2019;re doing so that you can review the work. This allows me to view their progress and semi-evaluate their process of solving the problem.&lt;/p&gt;
-&lt;p&gt;A common concern when letting someone do this task is: What happens if they cheat? What if they call their friend or have someone else do it for them? That is a possibility, but I see this as a real world problem. Sometimes programmers don&amp;#x2019;t know how to solve a problem so they have to call for help. They call friends, IM them, look stuff up on the internet or just find an open source project that does what they want and they take the code and modify it. Thats the world programmers live in. If I do that at an office or at home, who cares. If you&amp;#x2019;re truly a hack I&amp;#x2019;ll know fairly quickly. If you do get hired, I&amp;#x2019;m going to sniff out a problem very quickly and at that point you&amp;#x2019;ll need to make the decision to keep the person or not. If you&amp;#x2019;re a business person who can&amp;#x2019;t sniff this out, you may notice other things slipping such as timeframes, budgets etc. Any red flags are exactly that, red flags &amp;#x2013; so evaluate each one with caution.&lt;/p&gt;
-&lt;p&gt;If the candidate fails to complete the programming challenge, thats an immediate red flag. The task should be easy enough for an experienced programmer to finish in an hour. If the candidate cannot finish within the time allotted either the programming task is way too hard or the candidate is not suited for the position. If you&amp;#x2019;r using my Git repos from the links above (or something very similar) then this should not be the case. At this point I advise to stop the interview process for those who cannot complete the task and move onto the next candidate.&lt;/p&gt;
-&lt;p&gt;For those that do solve the problem correctly I like to review the code and if everything is satisfactory I&amp;#x2019;ll put them on the list of potential hires.&lt;/p&gt;
-&lt;p&gt;If you&amp;#x2019;re someone who cannot code, but you want to follow this process I highly suggest you find a friend, friend of the family, or coworker who is a programmer and ask them to help you. Offer to pay for 2 hours of their time so you can get their opinion of the candidates. Explain to them the process you&amp;#x2019;re going through so they know what their role is &amp;#x2013; a code reviewer. If you use this approach you will want to give the code reviewer instructions to give you a scale of &amp;#x201C;No/Maybe/Yes&amp;#x201D; for each code review. No means No &amp;#x2013; do not hire. Maybe means &amp;#x2013; its ok, not perfect, but workable. Yes means Yes, hire this person, this is good work. I include maybe because sometimes code looks good, but its not perfect. Thats OK. Sometimes you need to get out an MVP of a product out the door ASAP and it does not have to be perfect, it just has to work. The &amp;#x201C;Maybe&amp;#x201D; candidates are suitable for this because you&amp;#x2019;re testing a market/etc and you&amp;#x2019;re trying to get things done as fast as possible. However, you want to aim for YES candidates at all times if possible.&lt;/p&gt;
-&lt;p&gt;If you don&amp;#x2019;t find anyone who can solve the problem, repost the job posting to get some new leads. I&amp;#x2019;ve had to post a job a couple of times to get the correct person for the job. Yes, this costs more money, but it is much cheaper to pay this up front than months down the road.&lt;/p&gt;
-&lt;h2&gt;Step 4: Keep the Top Candidate(s)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt; Goal: To hire the proper person/people for the position&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In the previous step you identified who you can hire through code review and through initial filtering based upon communication through the application process. At this point you should be ready to hire your contractor. You may have had 2-3 people make it this far.&lt;/p&gt;
-&lt;p&gt;If you&amp;#x2019;re hiring for one position, hire the top candidate and let the other two know that you decided to go with someone else but you may be in contact with them shortly because you were impressed and you may need to grow your team. This leaves the door open for future conversation with those candidates. If you need to hire two people, hire the top two. You get the point here.&lt;/p&gt;
-&lt;p&gt;If you don&amp;#x2019;t end up with enough contractors, then repost the position.&lt;/p&gt;
-&lt;h2&gt;Wrap Up&lt;/h2&gt;
-&lt;p&gt;Hiring a contractor can be a challenging task, but if you follow the steps outlined above you&amp;#x2019;ll find that you can lock in a good outsourced developer and eliminate the cruft in a few easy steps. I hope this helps you land a great outsourced developer.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;* I&amp;#x2019;d love to take full credit for creating the programming challenge on my own, but I cannot. The implementation of this challenge was inspired by a company by the name of Integrum (who no longer does programming) for this method of programming challenge.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-How To Hire Outsourced Developers
-</title>
-</item>
-<item>
-<author>
-Kyle Orland
-</author>
-<link>
-http://arstechnica.com/gaming/2014/01/how-an-emulator-fueled-robot-reprogrammed-super-mario-world-on-the-fly/
-</link>
-<description>
-&lt;div class=&quot;article-content clearfix&quot; score=&quot;10.0&quot;&gt;
-    
-&lt;figure class=&quot;intro-image image center full-width&quot; score=&quot;12.5&quot;&gt;
-      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/tasmario.png&quot; width=&quot;512&quot;&gt;
-  
-    &lt;figcaption class=&quot;caption&quot; score=&quot;17.5&quot;&gt;
-			&lt;div class=&quot;caption-text&quot;&gt;Don't worry, Yoshi. That's just the fabric of reality reprogramming itself before our eyes.&lt;/div&gt;
-	
-			
-	  &lt;/figcaption&gt;
-  &lt;/figure&gt;
-  &lt;p&gt;In the world of personal computing, hacks that exploit memory errors to allow for the execution of arbitrary (and often malicious) code &lt;a href=&quot;http://arstechnica.com/apple/2009/06/safari-charlie-to-reveal-iphone-unsigned-code-exploit-next-month/&quot;&gt;are&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/information-technology/2005/11/1909/&quot;&gt;far&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/apple/2009/05/apple-has-yet-to-patch-critical-java-vulnerabilitya-vulnerability-in-the-java-virtual-machine-which/&quot;&gt;from&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/security/2013/09/microsoft-issues-fix-to-stop-active-attacks-exploiting-serious-ie-bug/&quot;&gt;surprising&lt;/a&gt; &lt;a href=&quot;http://arstechnica.com/uncategorized/2004/09/4227-2/&quot;&gt;anymore&lt;/a&gt;. What's more surprising is that such &quot;arbitrary code&quot; bugs are also present on the relatively locked-down computers inside of video game consoles.&lt;/p&gt;
-&lt;p&gt;This was demonstrated quite dramatically last week at &lt;a href=&quot;http://gamesdonequick.com/&quot;&gt;Awesome Games Done Quick&lt;/a&gt; (AGDQ), an annual marathon fundraiser that this year raised over $1 million for the Prevent Cancer foundation. The event focuses on live speedruns of classic games by human players and included a &lt;a href=&quot;http://www.destructoid.com/these-two-blindfolded-punch-out-speedruns-are-must-see-268824.phtml&quot;&gt;blindfolded &lt;i&gt;Mike Tyson's Punch-Out!!&lt;/i&gt; run&lt;/a&gt; that ranks among the most impressive live video game playing performances I have ever seen. The most remarkable moment of the weeklong marathon, though, came when a robotic player took &quot;total control&quot; of an unmodified &lt;i&gt;Super Mario World&lt;/i&gt; cartridge, reprogramming it on the fly to run simple versions of &lt;i&gt;Pong&lt;/i&gt; and &lt;i&gt;Snake&lt;/i&gt; simply by sending a precise set of inputs through the standard controller ports on the system.&lt;/p&gt;
-&lt;figure class=&quot;video&quot;&gt;&lt;/figure&gt;
-&lt;p&gt;The &lt;a href=&quot;http://www.youtube.com/watch?v=OPcV9uIY5i4&quot;&gt;two-and-a-half minute video of this incredible exploit&lt;/a&gt; is pretty tough to follow if you're not intimately familiar with the state of emulator-assisted speedruns. At first, it looks like the game must have been hacked in some way to allow for things like multiple on-screen Yoshis, item boxes that spawn multiple 1-ups, and the ability for Mario to carry items while riding on Yoshi. In actuality, these seeming impossibilities are just &lt;a href=&quot;http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html&quot;&gt;glitches that have been discovered over the years&lt;/a&gt; through painstaking emulated playthroughs by the community at &lt;a href=&quot;http://tasvideos.org/&quot;&gt;TASVideos&lt;/a&gt; (short for tool-assisted speedrun videos).&lt;/p&gt;
-&lt;p&gt;Most of these glitches are impossible or near-impossible for a human to perform in the course of standard gameplay since they require intricate patterns of inputs that have to be entered precisely at specific frames of in-game video (i.e. within 1/30th of a second). It's only through the emulators that allow for input recording and single frame pausing and advancement (not to mention sometimes intense &lt;a href=&quot;http://www.lua.org/&quot;&gt;Lua scripting&lt;/a&gt;) that these glitches were discoverable and replicable. Still, it's important to clarify that everything happening in the video is the result of the standard &lt;i&gt;Super Mario World&lt;/i&gt; software responding to conventional button inputs—this isn't the result of &lt;a href=&quot;http://arstechnica.com/gaming/2012/07/how-the-new-game-genie-lets-you-hack-your-ps3-saves/&quot;&gt;Game Genie-style external memory editing&lt;/a&gt; or the like.&lt;/p&gt;
-&lt;h2&gt;Massaging the memory&lt;/h2&gt;
-&lt;p&gt;It's at 1:39 in the video where things really start going pear-shaped, as the fabric of the game's reality comes apart at the seams for a few seconds before inexplicably transitioning to Mario-themed versions of &lt;i&gt;Pong&lt;/i&gt; and &lt;i&gt;Snake&lt;/i&gt;. Understanding what's going on here requires some deep knowledge of the Super NES' internal sprite and memory management, which is &lt;a href=&quot;http://tasvideos.org/3957S.html&quot;&gt;explained in detail here&lt;/a&gt; and &lt;a href=&quot;http://tasvideos.org/4156S.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Suffice it to say that the first minute-and-a-half or so of this TAS is merely an effort to spawn a specific set of sprites into the game's Object Attribute Memory (OAM) buffer in a specific order. The TAS runner then uses a &lt;a href=&quot;http://tasvideos.org/forum/viewtopic.php?p=299597#299597&quot;&gt;stun glitch&lt;/a&gt; to spawn an unused sprite into the game, which in turn causes the system to treat the sprites in that OAM buffer as &lt;a href=&quot;http://pastebin.com/WRvYCr2V&quot;&gt;raw executable code&lt;/a&gt;. In this case, that code has been arranged to jump to the memory location for controller data, in essence letting the user insert whatever executable program he or she wants into memory by converting the binary data for precisely ordered button presses into assembly code (interestingly, this data is entered more quickly by simulating the inputs of eight controllers plugged in through simulated multitaps on each controller port).&lt;/p&gt;
-&lt;p&gt;This same general method of using memory addressing errors and tool-assisted controller inputs to alter the way a game plays has been demonstrated on &lt;a href=&quot;http://tasvideos.org/Movies-C3058Y.html&quot;&gt;a number of other titles&lt;/a&gt;, including &lt;i&gt;Battletoads&lt;/i&gt;, &lt;i&gt;Kirby's Adventure&lt;/i&gt;, and &lt;i&gt;Crash Bandicoot 2&lt;/i&gt;. In fact, the essential proof-of-concept for the &lt;i&gt;Super Mario World&lt;/i&gt; &quot;arbitrary code&quot; glitch was first demonstrated and confirmed by the TASVideos community last April.&lt;/p&gt;
-&lt;p&gt;For the most part, though, these memory-corruption efforts are used to simply jump the game's state to the &quot;ending&quot; movie, thereby &quot;completing&quot; it in a much shorter time than is usually possible. This new &lt;i&gt;Super Mario World&lt;/i&gt; TAS sets itself apart by using its total control of the system to actually program a new game on top of the existing one (&lt;a href=&quot;http://tasvideos.org/2341M.html&quot;&gt;this TAS of &lt;i&gt;Pokemon Yellow&lt;/i&gt;&lt;/a&gt; does something similar, using the game as a stage to choreograph a pi-themed song-and-dance number).&lt;/p&gt;
-&lt;figure class=&quot;image center large full-width&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario-640x359.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;17.5&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/agdqmario.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; The Awesome Games Done Quick crowd reacts with glee as the &lt;i&gt;Super Mario World&lt;/i&gt; &quot;total control&quot; exploit is demonstrated live for the first time.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Last week's Awesome Games Done Quick &quot;total control&quot; demo is also notable for being run on actual, bare-bones SNES hardware rather than on an emulator (as is standard with most TAS videos). The robotic player at the event was powered by a Raspberry Pi hooked up to a special adapter (mounted amusingly to &lt;a href=&quot;http://www.pcmag.com/slideshow/story/288162/10-bizarre-video-game-accessories/10&quot;&gt;an NES R.O.B. controller&lt;/a&gt;) that let the computer send its preprogrammed controller inputs into the controller ports at superhuman, frame-level speed. Thus, the demonstration proved that this exploit was present in the actual system and cartridge released by Nintendo and not some sort of artifact of faulty emulation. That isn't a foregone conclusion, either, as syncing up the vagaries of split-second timing and memory management between real and emulated hardware are not trivial (this is yet another area where the idea of &lt;a href=&quot;http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/&quot;&gt;perfect emulation accuracy&lt;/a&gt; might come in handy).&lt;/p&gt;
-&lt;p&gt;Running this exploit on actual hardware also turns the usually sterile, disconnected Internet file sharing of tool-assisted speed runs into a thrilling live performance in front of a crowd of dozens at the AGDQ ballroom and thousands watching the marathon online. There's something about &lt;a href=&quot;http://www.youtube.com/watch?v=Uep1H_NvZS0&quot;&gt;watching the video archive of that stream&lt;/a&gt;—hearing the disbelieving laughter, the applause, and the cries of &quot;Oh my god&quot; from a crowd seeing a Super NES transformed into a fully programmable computer before their eyes—that makes the feat all the more impressive. That surprised reaction was apparently genuine, too, as the TGASVideos team says the crowd had no idea what was coming from a submission that had been tested and approved just the night before.&lt;/p&gt;
-&lt;p&gt;More than anything, though, this demo is a testament to the power of an Internet community and to the desire of that community to achieve total understanding and mastery of a game that started as a simple, child-focused amusement over 20 years ago.&lt;/p&gt;
-    		&lt;/div&gt;
-    
-</description>
-<title>
-How an emulator-fueled robot reprogrammed Super Mario World on the fly
-</title>
-</item>
-<item>
-<author>
 Philip Guo
 </author>
 <link>
@@ -661,6 +369,140 @@ http://www.slate.com/articles/technology/technology/2014/01/programmer_privilege
 </description>
 <title>
 Programmer privilege: As an Asian male computer science major, everyone gave me the benefit of the doubt.
+</title>
+</item>
+<item>
+<link>
+http://www.sightsmap.com/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;modal-body&quot;&gt;
+
+The heatmap shows the places people like, based on the number of 
+&lt;a href=&quot;http://www.panoramio.com&quot; target=&quot;wiki&quot;&gt;panoramio&lt;/a&gt;
+photos at each place in the world. The dark areas have few photos, the red areas have more and the 
+yellow areas have a large number of photos geotagged.
+&lt;p&gt;
+The hottest places have markers linking photos, streetview, wikipedia, wikivoyage, foursquare and google plus articles
+about the site. The place names are selected by the wikipedia readership numbers and foursquare checkins. Area populations are based on the geonames database.
+&lt;/p&gt;&lt;p&gt;
+Street level heatmaps are available for top 15000 places in the world, sorted by the number of photos in an area
+of a size of a few square kilometers around the place center. The popularity ranking of places in high-res area maps
+is computed by combining place hotness with popularity rankings from wikipedia, foursquare and 
+real-time google places selection.
+&lt;/p&gt;&lt;p&gt;
+It is possible to use a link ending with any place name, like this: 
+&lt;a href=&quot;http://www.sightsmap.com/New_York&quot;&gt;http://www.sightsmap.com/New_York&lt;/a&gt;.
+&lt;/p&gt;&lt;p&gt;
+Zoom in, enjoy the photos, search special places, plan a trip, build and share your own map of any area.
+&lt;/p&gt;&lt;p&gt;
+Your ideas, suggestions and questions are welcome: contact tanel.tammet at gmail.com
+&lt;/p&gt;&lt;p&gt;
+All rights reserved.
+&lt;/p&gt;&lt;/div&gt;    
+
+  
+  
+
+&lt;/div&gt;
+</description>
+<title>
+World’s most photographed places
+</title>
+</item>
+<item>
+<link>
+http://blog.tkdocs.com/2014/01/happy-25th-tcl.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+		&lt;div class=&quot;entry-body&quot;&gt;
+			&lt;blockquote&gt;&lt;em&gt;Note: check out discussion/reaction via &lt;a href=&quot;http://www.reddit.com/r/programming/comments/1vbd25/happy_25th_tcl/&quot;&gt;Reddit&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=7068656&quot;&gt;Hacker News&lt;/a&gt; &amp;#x2014; Mark&lt;/em&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;It struck me that 2014 marks 25 years since the programming language Tcl (Tool Command Language) escaped from John Ousterhout's lab at UC Berkeley and was unleashed on the world. I think that's a milestone worth recognizing, and indeed celebrating.&lt;/p&gt;
+
+&lt;p&gt;For anyone under 40 years old, you can think of Tcl like Ruby or Python, if those languages didn't have objects, if absolutely everything in them was treated as a string, and if every syntax rule added to the language resulted in its creator being tortured for one year. &lt;/p&gt;
+
+&lt;p&gt;Assignments? Math? We don't need no special syntax for those! What in any other language would be written as &quot;&lt;tt&gt;a=b+c&lt;/tt&gt;&quot; in Tcl would be:&lt;br&gt;
+&lt;/p&gt;&lt;blockquote&gt;&lt;tt&gt;set a [expr {$b+$c}]&lt;/tt&gt;&lt;/blockquote&gt;	&lt;br&gt;
+What's not to love? Sure, it's four times as long to do something really simple, but just admire the conceptual purity...!
+
+&lt;p&gt;In other words, Tcl as a language is what would happen if Lisp and csh met at a party, got way too drunk, hooked up, got pregnant, and kept drinking throughout the pregnancy.&lt;/p&gt;
+
+&lt;p&gt;And this is coming from a fan of the language.&lt;/p&gt;
+
+&lt;h3&gt;Why was Tcl important?&lt;/h3&gt;
+
+&lt;p&gt;John created Tcl as a scripting language to be embedded in other applications, so that each didn't create its own shitty configuration language from scratch. He also created a desktop graphical user interface toolkit for it, called Tk. Surprisingly, especially for John, people took his little add-on language and began creating substantial programs with it... no matter how much he begged them to stop. And because it was incredibly easy to hook up to C code, soon just about everything that had a C API soon had a Tcl API. Or ten.&lt;/p&gt;
+
+&lt;p&gt;For most people though, myself included, Tk was the real selling point. This was a time when most of the innovative programmers were working on Unix-based systems running X11. Back then, doing a &quot;Hello World&quot; program in X11 was hundreds of lines of code, but Tcl and Tk reduced it to just one:&lt;br&gt;
+&lt;/p&gt;&lt;blockquote&gt;&lt;tt&gt;pack [button .b -text &quot;Hello World&quot; -command exit]&lt;/tt&gt;&lt;/blockquote&gt;	 &lt;br&gt;
+Yes, only about twice as long as our simple addition/assignment statement from before. 
+
+&lt;p&gt;Tcl and Tk took off with the cool kids in the early-mid 90's, peaked around 2000, and interest gradually eroded since then. It had its share of successes and controversies (if you want some historical entertainment, Google &quot;Why you should not use Tcl&quot;), organizational transitions and missed opportunities (did you know that Tcl almost became Javascript?). You can find more at the &lt;a href=&quot;http://www.tcl.tk/about/history.html&quot;&gt;Tcl history page&lt;/a&gt; at &lt;a href=&quot;http://www.tcl.tk&quot;&gt;www.tcl.tk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Lasting influence&lt;/h3&gt;
+
+&lt;p&gt;Despite the ridiculous syntax, Tcl did a ton of things right, well ahead of its time. The internal code quality has always been top-notch, and backed up by a rich automated testing suite. The complex implementation details of two language development, scripting, language extensions, and how to manage backwards compatibility and deployment in that kind of dynamic environment were greatly refined by Tcl over the years. Very early versions aside, Tcl was also wicked fast, I18N-savvy, and cross-platform.&lt;/p&gt;
+
+&lt;p&gt;While there's not a lot of new projects started with Tcl anymore, there's still a whole lot of legacy code out there, both scripts and applications written in Tcl, and all kinds of programs that have Tcl embedded inside them. &lt;/p&gt;
+
+&lt;p&gt;And of course, lots of other languages borrowed ideas and code from Tcl. Most notable is Tk, which became the defacto standard desktop GUI for just about every other scripting language, including those still in common use today such as Python (tkinter), Ruby (RubyTk), and Perl (Tkx). &lt;/p&gt;
+
+&lt;p&gt;Tcl was after all designed as a language to be embedded in other programs, so it's only slightly perverse to think that even other programming languages embed a Tcl interpreter. &lt;/p&gt;
+
+&lt;p&gt;And while desktop user interfaces have largely been supplanted by the web or mobile platforms, you'd be surprised how many people are still plugging away with Tk (whether from Tcl, Python, Ruby or some other language). &lt;/p&gt;
+
+&lt;p&gt;It's just one data point, but this site (&lt;a href=&quot;http://www.tkdocs.com&quot;&gt;TkDocs.com&lt;/a&gt;), which provides relatively up-to-date cross-language documentation on how to use the more modern features in Tk, gets over 10,000 unique visitors each month, and a Python-specific ebook version of the material (Modern Tkinter) still sells 50+ copies a month.&lt;/p&gt;
+
+&lt;h3&gt;Standing on the Shoulders of Giants&lt;/h3&gt;
+
+&lt;p&gt;A skit I wrote a few years back tackles the question of &lt;a href=&quot;http://www.markroseman.com/tcl/dyingout.html&quot;&gt;Is Tcl/Tk Dying Out?&lt;/a&gt;. But old programming languages never really die, they just tend to stagnate over time.&lt;/p&gt;
+
+&lt;p&gt;In the tech industry we're often too quick to throw things out and ignore lessons from the past. It's nice to know that some of the great ideas, principles, and yes, even code from Tcl continue to be built on even today. And there's still a core group of people slowly but surely working on the language itself.&lt;/p&gt;
+
+&lt;p&gt;So, 25 years after the beast was released, I just wanted to say thanks to the many thousands of people who contributed their time and energy over the years.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;br&gt;
+&lt;/p&gt;
+		&lt;/div&gt;
+		
+		
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+</description>
+<title>
+Happy 25th Tcl!
+</title>
+</item>
+<item>
+<link>
+item?id=7069013
+</link>
+<description>
+
+</description>
+<title>
+Tell HN: Server Status
+</title>
+</item>
+<item>
+<link>
+http://video.pbs.org/video/2365155890/
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;video_2365155890&quot; class=&quot;pageContainer&quot;&gt;&lt;div id=&quot;page&quot; class=&quot;page&quot;&gt;&lt;div id=&quot;mainContainer&quot;&gt;&lt;div id=&quot;content&quot;&gt;&lt;section id=&quot;videoPagePlayer&quot; class=&quot;videoPage&quot;&gt;&lt;section&gt;&lt;div class=&quot;endHDNotification&quot;&gt;&lt;div class=&quot;innerPanel&quot;&gt;&lt;p&gt;Want to watch HD PBS Video? Sign in with one of our supported services and unlock high definition video!&lt;/p&gt;&lt;p&gt;By signing in, you are authorizing PBS to share your email address with your local PBS station to send you periodic communications about station events, services and support. Any other uses of your information by PBS are governed by PBS&amp;#x2019;s Privacy Policy.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;ccSettings&quot;&gt;&lt;div id=&quot;ccSettingsContent&quot;&gt;&lt;div class=&quot;message&quot;&gt;&lt;h3&gt;Preview&lt;/h3&gt;&lt;p id=&quot;ccPreview&quot; class=&quot;&quot;&gt;&lt;span id=&quot;previewWindowColor&quot;&gt;&lt;span id=&quot;previewText&quot;&gt;
+                    Captions look like this&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;div id=&quot;ccConf&quot;&gt;&lt;p class=&quot;column&quot;&gt;&lt;h3&gt;Captions size&lt;/h3&gt;&lt;/p&gt;&lt;p class=&quot;column&quot;&gt;&lt;h3&gt;Captions color&lt;/h3&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;&lt;section id=&quot;pageDescription&quot; class=&quot;videoPage&quot;&gt;&lt;h3 class=&quot;program&quot;&gt;&lt;a href=&quot;http://video.pbs.org/program/frontline/&quot;&gt;FRONTLINE&lt;/a&gt;&lt;/h3&gt;&lt;/section&gt;&lt;section id=&quot;aditionalContent&quot;&gt;&lt;/section&gt;&lt;div class=&quot;kidsShop&quot;&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://pbskids.org/mobile/pbs-kids-video.html&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;image&quot; src=&quot;http://d27s92d8z1yatv.cloudfront.net/img/dummy_kids.png&quot;&gt;&lt;/a&gt;&lt;h3 class=&quot;title&quot;&gt;PBS KIDS&lt;/h3&gt;&lt;p class=&quot;description&quot;&gt;
+                                    Watch videos from your favorite PBS KIDS shows with the &lt;a href=&quot;http://pbskids.org/mobile/pbs-kids-video.html&quot; target=&quot;_blank&quot;&gt;PBS KIDS Video app&lt;/a&gt; for your tablet or phone.
+                                &lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;a id=&quot;footerDonateStationLogo&quot; href=&quot;http://www.pbs.org/cgi-registry/sitemembershiplink.cgir&quot; target=&quot;_blank&quot;&gt;&lt;img class=&quot;image&quot; src=&quot;http://image.pbs.org/station-images/station-logos/donate-button/PBS.gif.resize.106x104.gif&quot;&gt;&lt;/a&gt;&lt;h3 class=&quot;title&quot;&gt;Donate&lt;/h3&gt;&lt;p class=&quot;description&quot;&gt;
+                                    
+                                         helps all of us explore new worlds and ideas.
+                                    
+                                    &lt;a id=&quot;footerDonateGiveNowText&quot; href=&quot;http://www.pbs.org/cgi-registry/sitemembershiplink.cgir&quot; target=&quot;_blank&quot;&gt;Give Now&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+Secret State of North Korea [video]
 </title>
 </item>
 </channel>
