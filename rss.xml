@@ -14,480 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-Philip Guo
-</author>
-<link>
-http://www.slate.com/articles/technology/technology/2014/01/programmer_privilege_as_an_asian_male_computer_science_major_everyone_gave.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;body parsys&quot;&gt;
-
-
-
-                    &lt;a name=&quot;pagebreak_anchor_1&quot;&gt;&lt;/a&gt;
-                    
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140115_TECH_TechPrivilege1&quot; alt=&quot;140115_TECH_TechPrivilege1&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege1.jpg.CROP.promo-mediumlarge.jpg&quot;&gt;
-
-
-
-  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;&lt;span class=&quot;drop-capped&quot;&gt;I&lt;/span&gt; started programming when I was 5, first with Logo and then BASIC. The picture above is me, age 9 (with horrible posture). By the time this photo was taken, I had already written several BASIC games that I distributed as shareware on our local BBS. I was fast growing bored, so my parents (both software engineers) gave me the original &lt;a href=&quot;http://www.amazon.com/dp/0201100886/?tag=slatmaga-20&quot; class=&quot;entry-content-asset&quot;&gt;dragon compiler textbook&lt;/a&gt; from their grad school days. That's when I started learning C and writing my own simple interpreters and compilers. My early interpreters were for BASIC, but by the time I entered high school I had already created a &lt;a href=&quot;http://en.wikipedia.org/wiki/Self-hosting&quot; class=&quot;entry-content-asset&quot;&gt;self-hosting compiler&lt;/a&gt; for a nontrivial subset of C. Throughout most of high school, I spent weekends coding in x86 assembly, obsessed with hand-tuning code for the newly released &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Intel_Pentium_II_microprocessors&quot; class=&quot;entry-content-asset&quot;&gt;Pentium II chips&lt;/a&gt;. When I started my freshman year at MIT as a computer science major, I already had over 10 years of programming experience. So I felt right at home there.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;OK, all of the above was a lie. With one exception: That is me in the photo. When it was taken, I didn't even know how to touch-type. My parents were just like, &amp;#x201C;Quick, pose in front of our new computer!&amp;#x201D; (Look closely. My fingers aren't even in the right position.) My parents were both humanities majors, and there wasn't a single programming book in my house. In sixth grade I tried teaching myself BASIC for a few weeks, but quit because it was too hard. The only real exposure I had to programming prior to college was taking AP computer science in 11&lt;sup&gt;th&lt;/sup&gt; grade, taught by a math teacher who had learned the material &lt;a href=&quot;http://pgbovine.net/ap-computer-science.htm&quot; class=&quot;entry-content-asset&quot;&gt;only a month before class started&lt;/a&gt;. Despite its shortcomings, that class inspired me to major in computer science in college. But when I started freshman year at MIT, I felt a bit anxious because many of my classmates actually &lt;em&gt;did&lt;/em&gt; have over 10 years of childhood programming experience; I had less than one.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Even though I didn't grow up in a tech-savvy household and couldn't code my way out of a paper bag, I had one big thing going for me: I &lt;em&gt;looked like&lt;/em&gt; I was good at programming. Here's me during freshman year of college:&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140115_TECH_TechPrivilege2&quot; alt=&quot;140115_TECH_TechPrivilege2&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege2.jpg.CROP.promovar-mediumlarge.jpg&quot;&gt;
-
-
-
-  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                        
-                    
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;As an Asian male student at MIT, I fit society's image of a young programmer. Thus, throughout college, nobody ever said to me (as they said to some other CS students I knew):&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;p class=&quot;entry-content-asset&quot;&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&amp;#x201C;Well, you only got into MIT because you're an Asian boy.&amp;#x201D;&lt;/li&gt;
-&lt;li&gt;(&lt;em&gt;while struggling with a problem set&lt;/em&gt;) &amp;#x201C;Well, not everyone is cut out for computer science; have you considered majoring in bio?&amp;#x201D;&lt;/li&gt;
-&lt;li&gt;(&lt;em&gt;after being assigned to a class project team&lt;/em&gt;) &amp;#x201C;How about you just design the graphics while we handle the backend? It'll be easier for everyone that way.&amp;#x201D;&lt;/li&gt;
-&lt;li&gt;&amp;#x201C;Are you sure you know how to do this?&amp;#x201D;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;/p&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Although I started off as a complete novice (like everyone once was), I never faced any &lt;a href=&quot;http://en.wikipedia.org/wiki/Microinequity&quot; class=&quot;entry-content-asset&quot;&gt;micro-inequities&lt;/a&gt; that impeded my intellectual growth. Throughout college and grad school, I gradually learned more and more via classes, research, and internships, incrementally taking on harder and harder projects, and getting better and better at programming while falling deeper and deeper in love with it. Instead of doing my &lt;a href=&quot;http://www.newyorker.com/online/blogs/sportingscene/2013/08/psychology-ten-thousand-hour-rule-complexity.html&quot; class=&quot;entry-content-asset&quot;&gt;10 years of deliberate practice&lt;/a&gt; from ages 8 to 18, I did mine from ages 18 to 28. And nobody ever got in the way of my learning&amp;#x2014;not even inadvertently&amp;#x2014;probably because I looked like the sort of person who would be good at such things. (The software engineer Tess Rinearson writes about this dynamic from a different perspective in her essay &amp;#x201C;&lt;a href=&quot;https://medium.com/tales-from-the-front/cc9ed433ec3c&quot; class=&quot;entry-content-asset&quot;&gt;On Technical Entitlement&lt;/a&gt;.&amp;#x201D;)&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Instead of facing implicit bias or &lt;a href=&quot;http://en.wikipedia.org/wiki/Stereotype_threat&quot; class=&quot;entry-content-asset&quot;&gt;stereotype threat&lt;/a&gt;, I had the privilege of implicit endorsement. For instance, whenever I attended technical meetings, people would assume that I knew what I was doing (regardless of whether I did or not) and treat me accordingly. If I stared at someone in silence and nodded as they were talking, they would assume that I understood, not that I was clueless. Nobody ever talked down to me, and I always got the benefit of the doubt in technical settings.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;As a result, I was able to fake it till I made it, often landing jobs whose postings required skills I hadn't yet learned but knew that I could pick up on the spot. Most of my interviews for research assistantships and summer internships were quite casual&amp;#x2014;people just gave me the chance to try. And after enough rounds of practice, I actually did start knowing what I was doing. As I gained experience, I was able to land more meaningful programming jobs, which led to a virtuous cycle of further improvement.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;pullquotebox section&quot;&gt;
- 
-
-&lt;aside class=&quot;pullquote&quot;&gt;
-
-  &lt;p class=&quot;quote&quot;&gt;For every white or Asian male expert programmer you know, imagine a parallel universe where they were of another ethnicity and/or gender.&lt;/p&gt;
-  
-  
-&lt;/aside&gt;
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;This kind of privilege that I and other people who looked like me possessed was silent, manifested not in what people said to us, but rather in what they didn't say. We had the &lt;a href=&quot;http://pgbovine.net/implicit-privilege.htm&quot; class=&quot;entry-content-asset&quot;&gt;privilege&lt;/a&gt; to spend enormous amounts of time developing technical expertise without anyone's interference or implicit discouragement. Sure, we worked really hard, but our efforts directly translated into skill improvements without much loss due to interpersonal friction. Because we looked the part.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;In contrast, ask any computer science major who isn't from a majority demographic (i.e., white or Asian male), and I guarantee that he or she has encountered discouraging comments such as &amp;#x201C;You know, not everyone is cut out for computer science.&amp;#x201D; They probably still remember the words and actions that have hurt the most, even though &lt;a href=&quot;https://medium.com/tales-from-the-front/b5931b3cf837&quot; class=&quot;entry-content-asset&quot;&gt;those making the remarks&lt;/a&gt; often aren't trying to harm.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;For example, one of my good friends took the &lt;a href=&quot;http://ocw.mit.edu/courses/civil-and-environmental-engineering/1-00-introduction-to-computers-and-engineering-problem-solving-spring-2012/&quot; class=&quot;entry-content-asset&quot;&gt;Intro to Java&lt;/a&gt; course during freshman year and enjoyed it. She wanted to get better at Java GUI programming, so she got a summer research assistantship at the MIT Media Lab. However, instead of letting her build the GUI (like the job ad described), the supervisor assigned her the mind-numbing task of hand-transcribing audio clips all summer long. He assigned a new male student to build the GUI application. And it wasn't like that student was a programming prodigy&amp;#x2014;he was also a freshman with the same amount of (limited) experience that she had. The other student spent the summer getting better at GUI programming while she just grinded away mindlessly transcribing audio. As a result, she grew resentful and shied away from learning more CS.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    
-
-            
-
-            
-
-
-
-
-
-&lt;/div&gt;
-
-        
-        
-        
-        
-    &lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;div class=&quot;body parsys&quot;&gt;
-
-
-
-            
-            
-            
-        
-                    &lt;a name=&quot;pagebreak_anchor_2&quot;&gt;&lt;/a&gt;
-                    
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Thinking about this story always angers me. Here was someone with a natural interest who took the initiative to learn more and was denied the opportunity to do so. I have no doubt that my friend could have gotten good at programming&amp;#x2014;and really enjoyed it&amp;#x2014;if she had the same opportunities as I did. (It didn&amp;#x2019;t help that when she was accepted to MIT, her aunt&amp;#x2014;whose son had been rejected&amp;#x2014;congratulated her by saying, &amp;#x201C;Well, you only got into MIT because you're a girl.&amp;#x201D;)&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Over a decade later, she now does some programming at her research job, but wishes that she had learned more back in college. However, she had such a negative association with everything CS-related that it was hard to motivate herself to do so for fear of being shot down again.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;One trite retort is &amp;#x201C;Well, your friend should've been tougher and not given up so easily. If she wanted it badly enough, she should've tried again, even knowing that she might face resistance.&amp;#x201D; These sorts of remarks aggravate me. Writing code for a living isn't like being a Navy SEAL &lt;a href=&quot;http://abcnews.go.com/International/story?id=7325633&quot; class=&quot;entry-content-asset&quot;&gt;sharpshooter&lt;/a&gt;. Programming is seriously &lt;em&gt;not&lt;/em&gt; that demanding, so you shouldn't need to be a tough-as-nails superhero to enter this profession.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                        
-                    
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Just look at this photo of me from a software engineering summer internship:&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140115_TECH_TechPrivilege3&quot; alt=&quot;140115_TECH_TechPrivilege3&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/technology/2014/01/140115_TECH_TechPrivilege3.jpg.CROP.promo-mediumlarge.jpg&quot;&gt;
-
-
-
-  &lt;p class=&quot;credit&quot;&gt;Photo courtesy Philip Guo&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Even though I was hacking on a hardware simulator in C++, which sounds mildly hard-core, I was actually pretty squishy, chillin' in my cubicle and often taking extended lunch breaks. All of the guys around me (yes, the programmers were all men, with the exception of one older woman who didn't hang out with us) were also fairly squishy. These guys made a fine living and were good at what they did; but they weren't superheroes. The most hardship that one of the guys faced all summer was staying up late playing &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Doom_3&quot; class=&quot;entry-content-asset&quot;&gt;Doom 3&lt;/a&gt;&lt;/em&gt; and then rolling into the office dead-tired the next morning. Anyone with enough practice and motivation could have done our jobs, and most other programming and CS-related jobs as well. Seriously, companies aren't looking to hire the next Steve Wozniak&amp;#x2014;they just want to ship code that works.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;It frustrates me that people not in the majority demographic often need to be tough as nails to succeed in this field, constantly bearing the lasting effects of thousands of micro-inequities. &lt;em&gt;Psychology Today&lt;/em&gt; &lt;a href=&quot;http://www.psychologytoday.com/blog/the-superhuman-mind/201304/micro-inequities-40-years-later&quot; class=&quot;entry-content-asset&quot;&gt;notes&lt;/a&gt; that according to one researcher, Mary Rowe:&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;blockquote&gt;[M]icro-inequities often had serious cumulative, harmful effects, resulting in hostile work environments and continued minority discrimination in public and private workplaces and organizations. What makes micro-inequities particularly problematic is that they consist in micro-messages that are hard to recognize for victims, bystanders and perpetrators alike. When victims of micro-inequities do recognize the micro-messages &amp;#x2026; it is exceedingly hard to explain to others why these small behaviors can be a huge problem.&lt;/blockquote&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;In contrast, people who look like me can just kinda do programming for work if we want, or not do it, or switch into it later, or out of it again, or work quietly, or nerd-rant on how &lt;a href=&quot;https://www.ruby-lang.org/en/&quot; class=&quot;entry-content-asset&quot;&gt;Ruby&lt;/a&gt; sucks or rocks or whatever, or name-drop &lt;a href=&quot;http://en.wikipedia.org/wiki/Monad_(functional_programming)&quot; class=&quot;entry-content-asset&quot;&gt;monads&lt;/a&gt;. And nobody will make remarks about our appearance, about whether we're truly dedicated hackers, or how our behavior might reflect badly on &amp;#x201C;our kind&amp;#x201D; of people. &lt;em&gt;That's&lt;/em&gt; silent technical privilege.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Ideally, we want to spur interest in young people from underrepresented demographics who might never otherwise think to pursue CS or STEM studies. There are great people and organizations working toward this goal. Although I think that increased and broader participation is critical, a more immediate concern is reducing attrition of those already in the field. For instance, according to a 2012 &lt;a href=&quot;http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-engage-to-excel-final_2-25-12.pdf&quot; class=&quot;entry-content-asset&quot;&gt;STEM education report to the president&lt;/a&gt;:&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;blockquote&gt;[E]conomic forecasts point to a need for producing, over the next decade, approximately 1 million more college graduates in STEM fields than expected under current assumptions. Fewer than 40% of students who enter college intending to major in a STEM field complete a STEM degree. Merely increasing the retention of STEM majors from 40% to 50% would generate three quarters of the targeted 1 million additional STEM degrees over the next decade.&lt;/blockquote&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;That's why I plan to start by taking steps to encourage and retain those who already want to learn. So here's a thought experiment: For every white or Asian male expert programmer you know, imagine a parallel universe where they were of another ethnicity and/or gender but had the exact same initial interest and aptitude levels. Would they still have been willing to devote the 10,000-plus hours of deliberate practice to achieve mastery in the face of dozens or hundreds of instances of implicit discouragement they would inevitably encounter over the years? Sure, some super-resilient outliers would, but many wouldn't. Many of us would quit, even though we had the potential and interest to thrive in this field.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;I hope to live in a future where people who already have the interest to pursue CS or programming don't self-select themselves out of the field. I want those people to experience what I was privileged enough to have gotten in college and beyond: unimpeded opportunities to develop expertise in something that they find beautiful, practical, and fulfilling.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;&lt;em&gt;This piece is adapted from &lt;/em&gt;&lt;a href=&quot;http://pgbovine.net/tech-privilege.htm&quot; class=&quot;entry-content-asset&quot;&gt;&lt;em&gt;Guo&amp;#x2019;s blog&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-            
-
-            
-
-
-
-
-
-&lt;/div&gt;
-
-               
-    &lt;/div&gt;
-</description>
-<title>
-Programmer privilege: As an Asian male computer science major, everyone gave me the benefit of the doubt.
-</title>
-</item>
-<item>
-<link>
-http://www.sightsmap.com/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;modal-body&quot;&gt;
-
-The heatmap shows the places people like, based on the number of 
-&lt;a href=&quot;http://www.panoramio.com&quot; target=&quot;wiki&quot;&gt;panoramio&lt;/a&gt;
-photos at each place in the world. The dark areas have few photos, the red areas have more and the 
-yellow areas have a large number of photos geotagged.
-&lt;p&gt;
-The hottest places have markers linking photos, streetview, wikipedia, wikivoyage, foursquare and google plus articles
-about the site. The place names are selected by the wikipedia readership numbers and foursquare checkins. Area populations are based on the geonames database.
-&lt;/p&gt;&lt;p&gt;
-Street level heatmaps are available for top 15000 places in the world, sorted by the number of photos in an area
-of a size of a few square kilometers around the place center. The popularity ranking of places in high-res area maps
-is computed by combining place hotness with popularity rankings from wikipedia, foursquare and 
-real-time google places selection.
-&lt;/p&gt;&lt;p&gt;
-It is possible to use a link ending with any place name, like this: 
-&lt;a href=&quot;http://www.sightsmap.com/New_York&quot;&gt;http://www.sightsmap.com/New_York&lt;/a&gt;.
-&lt;/p&gt;&lt;p&gt;
-Zoom in, enjoy the photos, search special places, plan a trip, build and share your own map of any area.
-&lt;/p&gt;&lt;p&gt;
-Your ideas, suggestions and questions are welcome: contact tanel.tammet at gmail.com
-&lt;/p&gt;&lt;p&gt;
-All rights reserved.
-&lt;/p&gt;&lt;/div&gt;    
-
-  
-  
-
-&lt;/div&gt;
-</description>
-<title>
-World’s most photographed places
-</title>
-</item>
-<item>
-<link>
-http://blog.tkdocs.com/2014/01/happy-25th-tcl.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;div class=&quot;entry-body&quot;&gt;
-			&lt;blockquote&gt;&lt;em&gt;Note: check out discussion/reaction via &lt;a href=&quot;http://www.reddit.com/r/programming/comments/1vbd25/happy_25th_tcl/&quot;&gt;Reddit&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com/item?id=7068656&quot;&gt;Hacker News&lt;/a&gt; &amp;#x2014; Mark&lt;/em&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;It struck me that 2014 marks 25 years since the programming language Tcl (Tool Command Language) escaped from John Ousterhout's lab at UC Berkeley and was unleashed on the world. I think that's a milestone worth recognizing, and indeed celebrating.&lt;/p&gt;
-
-&lt;p&gt;For anyone under 40 years old, you can think of Tcl like Ruby or Python, if those languages didn't have objects, if absolutely everything in them was treated as a string, and if every syntax rule added to the language resulted in its creator being tortured for one year. &lt;/p&gt;
-
-&lt;p&gt;Assignments? Math? We don't need no special syntax for those! What in any other language would be written as &quot;&lt;tt&gt;a=b+c&lt;/tt&gt;&quot; in Tcl would be:&lt;br&gt;
-&lt;/p&gt;&lt;blockquote&gt;&lt;tt&gt;set a [expr {$b+$c}]&lt;/tt&gt;&lt;/blockquote&gt;	&lt;br&gt;
-What's not to love? Sure, it's four times as long to do something really simple, but just admire the conceptual purity...!
-
-&lt;p&gt;In other words, Tcl as a language is what would happen if Lisp and csh met at a party, got way too drunk, hooked up, got pregnant, and kept drinking throughout the pregnancy.&lt;/p&gt;
-
-&lt;p&gt;And this is coming from a fan of the language.&lt;/p&gt;
-
-&lt;h3&gt;Why was Tcl important?&lt;/h3&gt;
-
-&lt;p&gt;John created Tcl as a scripting language to be embedded in other applications, so that each didn't create its own shitty configuration language from scratch. He also created a desktop graphical user interface toolkit for it, called Tk. Surprisingly, especially for John, people took his little add-on language and began creating substantial programs with it... no matter how much he begged them to stop. And because it was incredibly easy to hook up to C code, soon just about everything that had a C API soon had a Tcl API. Or ten.&lt;/p&gt;
-
-&lt;p&gt;For most people though, myself included, Tk was the real selling point. This was a time when most of the innovative programmers were working on Unix-based systems running X11. Back then, doing a &quot;Hello World&quot; program in X11 was hundreds of lines of code, but Tcl and Tk reduced it to just one:&lt;br&gt;
-&lt;/p&gt;&lt;blockquote&gt;&lt;tt&gt;pack [button .b -text &quot;Hello World&quot; -command exit]&lt;/tt&gt;&lt;/blockquote&gt;	 &lt;br&gt;
-Yes, only about twice as long as our simple addition/assignment statement from before. 
-
-&lt;p&gt;Tcl and Tk took off with the cool kids in the early-mid 90's, peaked around 2000, and interest gradually eroded since then. It had its share of successes and controversies (if you want some historical entertainment, Google &quot;Why you should not use Tcl&quot;), organizational transitions and missed opportunities (did you know that Tcl almost became Javascript?). You can find more at the &lt;a href=&quot;http://www.tcl.tk/about/history.html&quot;&gt;Tcl history page&lt;/a&gt; at &lt;a href=&quot;http://www.tcl.tk&quot;&gt;www.tcl.tk&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;Lasting influence&lt;/h3&gt;
-
-&lt;p&gt;Despite the ridiculous syntax, Tcl did a ton of things right, well ahead of its time. The internal code quality has always been top-notch, and backed up by a rich automated testing suite. The complex implementation details of two language development, scripting, language extensions, and how to manage backwards compatibility and deployment in that kind of dynamic environment were greatly refined by Tcl over the years. Very early versions aside, Tcl was also wicked fast, I18N-savvy, and cross-platform.&lt;/p&gt;
-
-&lt;p&gt;While there's not a lot of new projects started with Tcl anymore, there's still a whole lot of legacy code out there, both scripts and applications written in Tcl, and all kinds of programs that have Tcl embedded inside them. &lt;/p&gt;
-
-&lt;p&gt;And of course, lots of other languages borrowed ideas and code from Tcl. Most notable is Tk, which became the defacto standard desktop GUI for just about every other scripting language, including those still in common use today such as Python (tkinter), Ruby (RubyTk), and Perl (Tkx). &lt;/p&gt;
-
-&lt;p&gt;Tcl was after all designed as a language to be embedded in other programs, so it's only slightly perverse to think that even other programming languages embed a Tcl interpreter. &lt;/p&gt;
-
-&lt;p&gt;And while desktop user interfaces have largely been supplanted by the web or mobile platforms, you'd be surprised how many people are still plugging away with Tk (whether from Tcl, Python, Ruby or some other language). &lt;/p&gt;
-
-&lt;p&gt;It's just one data point, but this site (&lt;a href=&quot;http://www.tkdocs.com&quot;&gt;TkDocs.com&lt;/a&gt;), which provides relatively up-to-date cross-language documentation on how to use the more modern features in Tk, gets over 10,000 unique visitors each month, and a Python-specific ebook version of the material (Modern Tkinter) still sells 50+ copies a month.&lt;/p&gt;
-
-&lt;h3&gt;Standing on the Shoulders of Giants&lt;/h3&gt;
-
-&lt;p&gt;A skit I wrote a few years back tackles the question of &lt;a href=&quot;http://www.markroseman.com/tcl/dyingout.html&quot;&gt;Is Tcl/Tk Dying Out?&lt;/a&gt;. But old programming languages never really die, they just tend to stagnate over time.&lt;/p&gt;
-
-&lt;p&gt;In the tech industry we're often too quick to throw things out and ignore lessons from the past. It's nice to know that some of the great ideas, principles, and yes, even code from Tcl continue to be built on even today. And there's still a core group of people slowly but surely working on the language itself.&lt;/p&gt;
-
-&lt;p&gt;So, 25 years after the beast was released, I just wanted to say thanks to the many thousands of people who contributed their time and energy over the years.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;br&gt;
-&lt;/p&gt;
-		&lt;/div&gt;
-		
-		
-	&lt;/div&gt;
-	
-&lt;/div&gt;
-</description>
-<title>
-Happy 25th Tcl!
-</title>
-</item>
-<item>
-<link>
-item?id=7069013
-</link>
-<description>
-
-</description>
-<title>
-Tell HN: Server Status
-</title>
-</item>
-<item>
 <link>
 http://video.pbs.org/video/2365155890/
 </link>
@@ -503,6 +29,259 @@ http://video.pbs.org/video/2365155890/
 </description>
 <title>
 Secret State of North Korea [video]
+</title>
+</item>
+<item>
+<author>
+Signe Brewster
+</author>
+<link>
+http://gigaom.com/2014/01/14/the-search-for-the-lost-cray-supercomputer-os/
+</link>
+<description>
+&lt;div&gt;&lt;section class=&quot;body entry-content&quot;&gt;
+		&lt;div id=&quot;post-content-790380&quot;&gt;
+			&lt;p&gt;In 1976, famed computer architect &lt;a href=&quot;http://en.wikipedia.org/wiki/Seymour_Cray&quot;&gt;Seymour Cray&lt;/a&gt; released one of the most successful supercomputers ever made: the &lt;a href=&quot;http://en.wikipedia.org/wiki/Cray-1&quot;&gt;Cray-1&lt;/a&gt;, a stylish 5.5-ton C-shaped tower that was quickly embraced by laboratories all over the world. While it soon gave way to newer, faster Cray models that then faded away entirely in the &amp;#x2019;90s due to huge cost and performance advances in supercomputing, its iconic shape and early success left a lasting legacy in the industry.&lt;/p&gt;
+&lt;div id=&quot;attachment_790388&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-11-34-24-am.png&quot;&gt;&lt;img alt=&quot;Seymour Cray and a Cray-1 supercomputer. Photo courtesy of Cray.&quot; src=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-11-34-24-am.png?w=708&amp;amp;h=735&quot; class=&quot;size-large wp-image-790388&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Seymour Cray and a Cray-1 supercomputer. Photo courtesy of Cray.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;That legacy led hobbyists &lt;a href=&quot;http://www.chrisfenton.com/&quot;&gt;Chris Fenton&lt;/a&gt;&amp;#xA0;and &lt;a href=&quot;http://www.linkedin.com/pub/andras-tantos/1/b2/388&quot;&gt;Andras Tantos&lt;/a&gt; to pose&amp;#xA0;what they thought would be a simple question to answer: How can I build a Cray-1 for my desk?&lt;/p&gt;
+&lt;h2 id=&quot;a-tiny-replica-takes-shape&quot;&gt;A tiny replica takes shape&lt;/h2&gt;
+&lt;p&gt;In 2010, Fenton, a New York City-based electrical engineer who actually works on modern supercomputers, decided to replicate&amp;#xA0;the physical form of the computer. Its hardware was &lt;a href=&quot;http://ed-thelen.org/comp-hist/CRAY-1-HardRefMan/CRAY-1-HRM.html&quot;&gt;well-documented online&lt;/a&gt;, so building it came together quickly. Fenton used a CNC machine and glue to build the tower and bench out of wood. Then he painted the tower and covered the bench in pleather. The complete model is 1/10 the size of the original Cray.&lt;/p&gt;
+&lt;div&gt;&lt;a href=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-12-22-03-pm.png&quot;&gt;&lt;img alt=&quot;Chris Fenton scale model of Cray-1&quot; src=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-12-22-03-pm.png?w=295&amp;amp;h=300&quot; width=&quot;295&quot; class=&quot;alignleft size-medium wp-image-790410&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-12-21-46-pm.png&quot;&gt;&lt;img alt=&quot;Chris Fenton scale model of Cray-1&quot; src=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-12-21-46-pm.png?w=283&amp;amp;h=300&quot; width=&quot;283&quot; class=&quot;alignleft size-medium wp-image-790411&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Considering that&amp;#xA0;an iPad&amp;#xA0;&lt;a href=&quot;http://bits.blogs.nytimes.com/2011/05/09/the-ipad-in-your-hand-as-fast-as-a-supercomputer-of-yore/&quot;&gt;packs far more computing power&lt;/a&gt;&amp;#xA0;than a Cray-1, it wasn&amp;#x2019;t difficult to find a board&amp;#xA0;option that could handle emulating the original Cray computational architecture. Fenton settled on the &lt;a href=&quot;http://www.amazon.com/Spartan-3E-1600-Development-Board/dp/B005GA91JK&quot;&gt;$225 Spartan 3E-1600&lt;/a&gt;, which is tiny enough to fit in a drawer built into the bench. Considering the first Crays cost between $5 and 8 million, that&amp;#x2019;s a pretty impressive bargain.&lt;/p&gt;
+&lt;h2 id=&quot;a-lead-emerges-from-a-minnesot&quot;&gt;A lead emerges from a Minnesota basement&lt;/h2&gt;
+&lt;p&gt;But while Fenton was able to replicate the architecture, he hit a wall when he began searching for software to make the Cray model fully operational.&amp;#xA0;He determined none of the code from the original OS was available via the internet, so he went analog. He asked the Computer History Museum and government whether they had a copy laying around. Nope.&lt;/p&gt;
+&lt;p&gt;His first lead came via a friend who introduced him to&amp;#xA0;&lt;a href=&quot;http://www.linkedin.com/pub/donald-lee/2/963/764&quot;&gt;Donald Lee&lt;/a&gt;, a former Cray software engineer who had &amp;#x201C;this giant 10-pound disk pack&amp;#x201D; &amp;#x2014; an early, removable medium for data storage &amp;#x2014; in the basement of his Minnesota home. Lee told me last week that&amp;#xA0;he isn&amp;#x2019;t exactly sure how the disk ended up in his possession, but he might have picked it up at a garage sale or when someone was cleaning house before leaving Cray.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-4-50-25-pm.png&quot;&gt;&lt;img alt=&quot;Cray-1 disk pack&quot; src=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-4-50-25-pm.png?w=708&quot; class=&quot;aligncenter size-full wp-image-790496&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To run the disk, Fenton&amp;#xA0;needed a disk drive. He borrowed a 1970s-era one from the Museum of Information Technology at Arlington in Texas. Poor archival conditions had left the drive in rough shape, so he cobbled together a system involving a robot made from the innards of a MakerBot Thing-O-Matic. The robot slowly passed over the disk, allowing a converter to change the data from analog to digital and feed it onto Fenton&amp;#x2019;s computer.&lt;/p&gt;
+&lt;div id=&quot;attachment_790497&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-4-52-22-pm.png&quot;&gt;&lt;img alt=&quot;The disk drive. Photo courtesy of Chris Fenton&quot; src=&quot;http://gigaom2.files.wordpress.com/2014/01/screen-shot-2014-01-08-at-4-52-22-pm.png?w=708&quot; class=&quot;size-full wp-image-790497&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;The disk drive. Photo courtesy of Chris Fenton&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Disappointingly, the disk pack only held factory-testing software.&lt;/p&gt;
+&lt;h2 id=&quot;a-second-disk-pack-surfaces&quot;&gt;A second disk pack surfaces&lt;/h2&gt;
+&lt;p&gt;The publicity Fenton garnered via his documentation of the project caught the attention of&amp;#xA0;&lt;a href=&quot;http://www.linkedin.com/in/geekscape&quot;&gt;Andy Gelme&lt;/a&gt;, an Australian software developer who once worked for Cray. He too had a disk pack.&lt;/p&gt;
+&lt;p&gt;Concerned that shipping would damage or demagnetize the disk, a friend of Gelme&amp;#x2019;s couriered it to Fenton during a planned trip to New York City a few weeks later.&amp;#xA0;While the disk didn&amp;#x2019;t contain the original Cray-1 OS, it did carry the last ever version of the Cray OS, which was made for a Cray-1 successor: the &lt;a href=&quot;http://en.wikipedia.org/wiki/Cray_X-MP&quot;&gt;Cray X-MP&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Fenton used the recovery system he developed with the disk drive to pull information off the disk. He was not able to convert it into working software, but he had begun to correspond with Tantos, a Microsoft electrical engineer, who had independently been pursuing the Cray OS.&lt;/p&gt;
+&lt;p&gt;Tantos took over working with the disk. He rewrote the recovery tools, plus a simulator for the software and supporting equipment like printers, monitors, keyboards and more. For the greater part of the last year, he arduously reverse engineered the OS from the image.&amp;#xA0;Despite a few remaining bugs, the Cray OS now works.&lt;/p&gt;
+&lt;span class=&quot;embed-youtube&quot;&gt;&lt;iframe class=&quot;youtube-player&quot; type=&quot;text/html&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/D6R8FOANclc?version=3&amp;amp;rel=1&amp;amp;fs=1&amp;amp;showsearch=0&amp;amp;showinfo=1&amp;amp;iv_load_policy=1&amp;amp;wmode=transparent&quot;&gt;&lt;/iframe&gt;&lt;/span&gt;
+&lt;p&gt;Fenton is now in the process of upgrading his desktop machine to be compatible with the Cray X-MP OS. The two are also on the lookout for a compiler:&amp;#xA0;a computer program that would allow them to write their own applications and feed them into the Cray.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;For these machines (Cray-1 or X-MP) you couldn&amp;#x2019;t really go into a store and buy an application, like you do for a PC these days. Now, you just &amp;#x2018;install&amp;#x2019; Word and it runs. For these machines, everything came in source-code format and you needed to compile it before you could run it.&amp;#xA0;You use the &amp;#x2026; compiler to turn it into machine code the machine could understand,&amp;#x201D; Tantos said. &amp;#x201C;That was the main way you interacted with these machines. Without the compiler, you can&amp;#x2019;t feed it that.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;If you have any information that could help Fenton and Tantos, you can contact them &lt;a href=&quot;http://www.chrisfenton.com/about-2/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;preserving-whats-available&quot;&gt;Preserving what&amp;#x2019;s available&lt;/h2&gt;
+&lt;p&gt;Both hobbyists say they tackled the project for fun, but found it to be an important exercise in the preservation of computing history. Despite the fame of these early computers,&amp;#xA0;little effort was made to ensure full documentation survived.&lt;/p&gt;
+&lt;span class=&quot;embed-youtube&quot;&gt;&lt;iframe class=&quot;youtube-player&quot; type=&quot;text/html&quot; width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/vtOA1vuoDgQ?version=3&amp;amp;rel=1&amp;amp;fs=1&amp;amp;showsearch=0&amp;amp;showinfo=1&amp;amp;iv_load_policy=1&amp;amp;wmode=transparent&quot;&gt;&lt;/iframe&gt;&lt;/span&gt;
+&lt;p&gt;&amp;#x201C;In some ways it&amp;#x2019;s sad, but in other ways it&amp;#x2019;s fascinating,&amp;#x201D; Tantos said. &amp;#x201C;Seeing how extremely hard it is to come by software for these early computers, it&amp;#x2019;s even more important that we preserve what is available.&lt;/p&gt;
+&lt;p&gt;When they finally are able to pair the OS with Fenton&amp;#x2019;s desk model, it will be both novel and historical, as it will be the first working &amp;#x201C;Cray&amp;#x201D; in decades.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;The Cray-1 is one of those&amp;#xA0;iconic&amp;#xA0;machines that just makes you say &amp;#x2018;Now that&amp;#x2019;s&amp;#xA0;a supercomputer!&amp;#x2019;&amp;#x201D; Fenton &lt;a href=&quot;http://www.chrisfenton.com/homebrew-cray-1a/&quot;&gt;wrote on his blog&lt;/a&gt; in 2010. &amp;#x201C;Sure, your iPhone is 10X faster, and it&amp;#x2019;s completely useless to own one, but admit it &amp;#x2026; you really want one, don&amp;#x2019;t you?&lt;/p&gt;
+		&lt;/div&gt;
+			&lt;/section&gt;
+	
+&lt;/div&gt;
+</description>
+<title>
+The search for the lost Cray supercomputer OS
+</title>
+</item>
+<item>
+<author>
+Art Patnaude @artpatnaude art.patnaude@wsj.com Biography connect Art Patnaude @artpatnaude art.patnaude@wsj.com Biography
+</author>
+<link>
+http://online.wsj.com/news/articles/SB10001424052702304549504579319373775553890?mod=WSJ_hps_MIDDLE_Video_Third&mg=reno64-wsj&url=http%3A%2F%2Fonline.wsj.com%2Farticle%2FSB10001424052702304549504579319373775553890.html%3Fmod%3DWSJ_hps_MIDDLE_Video_Third&fpid=2,7,121,122,201,401,641,1009
+</link>
+<description>
+&lt;div&gt;&lt;p class=&quot;module datestamp-dsk&quot;&gt;Jan. 15, 2014 10:30 p.m. ET&lt;/p&gt;
+&lt;article id=&quot;articleBody&quot; class=&quot;module articleBody&quot;&gt;
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+
+  
+  
+  
+
+       &lt;p&gt;LONDON&amp;#x2014;Nicole Vloeimans, a 31-year-old worker at an NGO, lives in the very center of this expensive city. She has a 755-square-foot floor to herself. She pays &amp;#xA3;389 a month, about $635.&lt;/p&gt; &lt;p&gt;&quot;I don't really know what to do with the space,&quot; says Ms. Vloeimans. &quot;I don't have that much furniture.&quot; &lt;/p&gt; &lt;p&gt;There are some hitches. No parties are allowed. She needs permission to go on vacation. There is a hole in the kitchen ceiling. She had to paint over a swath of graffiti. The four-week notice to move out can come any time.&lt;/p&gt; &lt;p&gt;But so great is the demand for a reasonable flat that Londoners like Ms. Vloeimans are lining up to live in empty office buildings.&lt;/p&gt; 
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+       &lt;p&gt;London's housing market is soaring. The average price for a home in the capital was &amp;#xA3;396,646 in November, Land Registry data show. The average rent for a one-bedroom apartment in central London was &amp;#xA3;1,368 in the 12 months ending in September, according to data from the U.K. government's Valuation Office Agency.&lt;/p&gt; &lt;p&gt;The boom has attracted growing throngs to a cheaper option: being a guardian. &lt;/p&gt; &lt;p&gt;Ms. Vloeimans's home is an abandoned office building once inhabited by squatters (&quot;WE CALL IT EVOLUTION, U CALL IT A CRIME&quot; reads graffiti in her kitchen). Squatters were evicted from her building last January. In exchange for the discounted rent, Ms. Vloeimans is meant to keep them from coming back. &lt;/p&gt; &lt;p&gt;The need for guardians is in part a consequence of Britain's peculiar laws on squatting. It isn't a crime to squat in an empty nonresidential building. It is a crime to remove a squatter without a lengthy civil-eviction court procedure.&lt;/p&gt; &lt;p&gt;So developers looking to rehab&amp;#x2014;or tear down&amp;#x2014;a building will fill it with guardians to keep the squatters away before work begins. The presence of guardians is often enough to deter squatters, because it is illegal to squat in an occupied building. &lt;/p&gt; &lt;p&gt;John Durkin, 55, lives in an old police station overlooking the River Thames. The condominiums next door sell to celebrities for around &amp;#xA3;2 million. He pays &amp;#xA3;450 a month. &lt;/p&gt; &lt;p&gt;&quot;It's like being 17 years old, and your father tells you that he has a flat in London. 'And if you don't tell your mother, I'll let you keep it,' &quot; said Mr. Durkin, a psychologist. &lt;/p&gt; &lt;p&gt;The living room has Wi-Fi and a stunning view, but his bedroom overlooking the train tracks has no electricity, meaning no heating. &quot;I'm OK with a cold nose,&quot; he said. &lt;/p&gt; &lt;p&gt;Squatters were kicked out of an old brick building near Liverpool Street Station, one of London's main train hubs, in August. The front door opens to warped flooring, one dusty table, stained chairs, drums, a keyboard and amplifiers. A brown couch with yellow stuffing sprouting from its back sits against the front windows. &lt;/p&gt; &lt;p&gt;&quot;They've done it up nice. You should have seen it before,&quot; said Arthur Duke, owner of Live-In Guardians, which supplies guardians for building owners. This place, at &amp;#xA3;250 a month, sits far below the usual properties he takes on. &lt;/p&gt; &lt;p&gt;Becoming a guardian isn't easy. &quot;Demand is just out of control,&quot; said Mr. Duke. Live-In Guardians has about 2,000 people on its waiting list&amp;#x2014;by far the biggest backlog he has had since starting the business in 2009, he said. When a new property comes along, says Mr. Duke, 50 people will come to the open house.&lt;/p&gt; &lt;p&gt;Hip neighborhoods go fast. &quot;If we put a property up on the website in Hackney, it's gone in five minutes,&quot; said Zoe Oakes of Ad Hoc, one of the largest guardian firms in London.&lt;/p&gt; 
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+       &lt;p&gt;Guardian companies, which have guardians' fees as a source of revenue, tout themselves as cheaper alternatives to traditional security firms. Guardians need to be employed full time and can be subject to background checks.&lt;/p&gt; &lt;p&gt;In the city's gentrifying East End sits an &quot;unremarkable three-story brick clad building&quot; for light industry firms, according to a 2011 document of design plans. The building is set to be torn down. Meantime, guardians live there.&lt;/p&gt; &lt;p&gt;Oreste Noda, 46, is a Cuban percussionist. After moving into the building two years ago, his massive apartment became a hub for jam sessions. &lt;/p&gt; &lt;p&gt;&quot;People would just come up from the street and be like, 'Man, this is great, what's the name of this club?' &quot; said Michael Angelov, who lives in the same building. &quot;I'd have to tell them it isn't a club, it's a home.&quot;&lt;/p&gt; &lt;p&gt;Mr. Angelov, a 31-year-old filmmaker, lives with his girlfriend in what he reckons was a media company's office. It is clean and has hardwood floors, nice desks and sofas. &lt;/p&gt; &lt;p&gt;His two bedrooms have glass walls. When friends stay over, &quot;they're a bit like, 'What's this?' &quot; he said. &quot;But when it's just me and my girlfriend, it's fun.&quot;&lt;/p&gt; &lt;p&gt;For London's young professionals, guarding is a respectable alternative to squatting. Sam Golden, 24, who works in public relations, says he learned about property guardians from a longtime squatter&amp;#x2014;who was griping about capitalists edging in on squatters' turf.&lt;/p&gt; &lt;p&gt;Mr. Golden signed up with Guardians of London. Squatting &quot;was on the fringes of the law, which is not viable for young professionals,&quot; he said. Now he lives in a once-empty building, one tube stop away from Wembley Stadium. &lt;/p&gt; &lt;p&gt;Other than having to take two days off work to clean the place, which included clearing a dead pigeon off one of the two pool tables, &quot;it worked out perfectly.&quot; &lt;/p&gt; &lt;p&gt;Guardians do occasionally have to do some guarding. Once, the front door of a building in the southern city of Brighton managed by Oaksure Property Protection was smashed. Guardian Andrew Faley, 26, heard the sound and went down at 5 a.m. to check it out. He called it in to Oaksure's owners, and the door was fixed, he said.&lt;/p&gt; &lt;p&gt;Mark Ovenden, 50, has five oak-paneled rooms overlooking a central-London park. The bedroom is &quot;about as big as any flat in Paris,&quot; said Mr. Ovenden, who lived in the French capital for six years. In the office Mr. Ovenden, a freelance television producer, has a wall-size world map detailing locations of major oil wells&amp;#x2014;a perk left over from an oil brokerage.&lt;/p&gt; &lt;p&gt;Getting around parts of the building without electricity requires light from his iPhone's flash. His two bathroom sinks lack hot water. And like all guardians, Mr. Ovenden is well aware that his time in the large, centrally located apartment for a discounted rent is fleeting. &quot;I know we'll get moved out eventually. I'm prepared to make some sacrifices.&quot;&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Write to &lt;/strong&gt; Art Patnaude at &lt;a href=&quot;mailto:art.patnaude@wsj.com&quot; target=&quot;_new&quot; class=&quot;icon &quot;&gt;art.patnaude@wsj.com&lt;/a&gt; &lt;/p&gt;
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+In London 'Guardians' live in empty office buildings
+</title>
+</item>
+<item>
+<link>
+http://www.kimonolabs.com/
+</link>
+<description>
+&lt;div&gt;&lt;section id=&quot;Wrap&quot;&gt;&lt;/section&gt;&lt;/div&gt;
+</description>
+<title>
+As a long time web scraper developer, this makes me cry with joy.
+</title>
+</item>
+<item>
+<author>
+PETER BAKER
+</author>
+<link>
+http://www.nytimes.com/2014/01/16/us/obamas-path-from-critic-to-defender-of-spying.html
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
+
+    
+
+    
+    &lt;div class=&quot;lede-container&quot;&gt;
+        &lt;figure class=&quot;promo media video lede layout-large-horizontal&quot;&gt;
+    
+    &lt;figcaption class=&quot;caption&quot;&gt;
+        
+        
+        &lt;p class=&quot;summary&quot;&gt;Throughout his political career, President Obama has expressed a range of views on balancing national security needs with personal rights and freedoms.&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+        
+    &lt;/div&gt;
+
+                
+    &lt;p class=&quot;story-body-text story-content&quot;&gt;WASHINGTON &amp;#x2014; As a young lawmaker defining himself as a presidential candidate, &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/people/o/barack_obama/index.html?inline=nyt-per&quot; title=&quot;More articles about Barack Obama&quot; class=&quot;meta-per&quot;&gt;Barack Obama&lt;/a&gt; visited a center for scholars in August 2007 to give a speech on terrorism. He described a surveillance state run amok and vowed to rein it in. &amp;#x201C;That means no more illegal wiretapping of American citizens,&amp;#x201D; he declared. &amp;#x201C;No more national security letters to spy on citizens who are not suspected of a crime.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;More than six years later, the onetime constitutional lawyer is now the commander in chief presiding over a surveillance state that some of his own advisers think has once again gotten out of control. On Friday, he will give another speech, this time at the Justice Department defending government spying even as he adjusts it to address a wave of public concern over civil liberties.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The journey between those two speeches reflects the transition from the backbench of the United States Senate to the chair behind the Resolute Desk in the Oval Office. Like other presidents before him, the idealistic candidate skeptical of government power found that the tricky trade-offs of national security issues look different to the person charged with using that power to ensure public safety.&lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-small-horizontal&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/16/world/prexy/prexy-master180.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
+            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/16/world/prexy/prexy-master180.jpg&quot;&gt;
+            &lt;meta value=&quot;120&quot;&gt;
+            &lt;meta value=&quot;180&quot;&gt;
+    &lt;/div&gt;
+        &lt;figcaption class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;In &amp;#x2019;07, then-Senator Obama spoke disapprovingly at the Woodrow Wilson International Center for Scholars about spying.&lt;/span&gt; &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;Aides said that even as a senator, Mr. Obama supported robust surveillance as long as it was legal and appropriate, and that as president he still shares the concerns about overreach he expressed years ago. But they said his views have been shaped to a striking degree by the reality of waking up every day in the White House responsible for heading off the myriad threats he finds in his daily intelligence briefings.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;When you get the package every morning, it puts steel in your spine,&amp;#x201D; said David Plouffe, the president&amp;#x2019;s longtime adviser. &amp;#x201C;There are people out there every day who are plotting. The notion that we would put down a tool that would protect people here in America is hard to fathom.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;At the same time, aides said Mr. Obama was surprised to learn after leaks by Edward J. Snowden, the former &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/organizations/n/national_security_agency/index.html?inline=nyt-org&quot; title=&quot;More articles about National Security Agency, U.S.&quot; class=&quot;meta-org&quot;&gt;National Security Agency&lt;/a&gt; contractor, just how far the surveillance had gone. &amp;#x201C;Things seem to have grown at the N.S.A.,&amp;#x201D; Mr. Plouffe said, citing specifically the tapping of foreign leaders&amp;#x2019; telephones. &amp;#x201C;I think it was disturbing to most people, and I think he found it disturbing.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Yet it is hard to express indignation at actions of the government after five years of running it, and some involved in surveillance note that it was Mr. Obama who pushed national security agencies to be aggressive in hunting terrorists. &amp;#x201C;For some, his outrage does ring a little bit hollow,&amp;#x201D; said a former counterterrorism official.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;All of which leads to worries by critics of government surveillance that he will not go far enough on Friday. &amp;#x201C;If the speech is anything like what is being reported, the president will go down in history for having retained and defended George W. Bush&amp;#x2019;s surveillance programs rather than reformed them,&amp;#x201D; said Anthony D. Romero, executive director of the American Civil Liberties Union.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama first confronted the questions of national security and privacy during his 2004 campaign for Senate, taking aim at the &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/subjects/u/usa_patriot_act/index.html?inline=nyt-classifier&quot; title=&quot;More articles about the USA Patriot Act.&quot; class=&quot;meta-classifier&quot;&gt;Patriot Act&lt;/a&gt; for &amp;#x201C;violating our fundamental notions of privacy&amp;#x201D; and declaring that &amp;#x201C;we don&amp;#x2019;t like federal agents poking around our libraries.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Once elected, Mr. Obama took an interest in curbing surveillance. &amp;#x201C;He would ask me about various issues that relate to the topic of the day &amp;#x2014; how do you come up with policies that make sure that security and liberty are not mutually exclusive?&amp;#x201D; recalled Senator Ron Wyden, Democrat of Oregon and a leading critic of surveillance policies then and now.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama was a sponsor of a bill in 2005 to raise the standard required for federal agents using administrative subpoenas known as national security letters to obtain business records without court order. He joined other Democrats fighting the renewal of the Patriot Act until it was amended to address civil liberties concerns, then voted for its extension in 2006 after a compromise, breaking with Mr. Wyden who voted no.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama&amp;#x2019;s 2007 speech at the Woodrow Wilson International Center for Scholars came after the revelation that President George W. Bush had authorized warrantless surveillance in terrorism cases without permission from the Foreign Intelligence Surveillance Court. A presidential candidate, Mr. Obama criticized Mr. Bush&amp;#x2019;s &amp;#x201C;false choice between the liberties we cherish and the security we provide.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But as a former Obama aide put it recently, &amp;#x201C;The rhetoric was probably sharper than his votes.&amp;#x201D; By summer 2008, with the Democratic nomination secured and the White House now a real possibility, Mr. Obama voted for legislation essentially ratifying Mr. Bush&amp;#x2019;s surveillance programs. Mr. Obama realized he would &amp;#x201C;take my lumps&amp;#x201D; from the left and said it &amp;#x201C;was not an easy call for me,&amp;#x201D; but he argued that putting the programs under the jurisdiction of the intelligence court restored accountability.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;As a result, after he won the election, surveillance issues were off his agenda; instead, he focused on banning interrogation techniques he deemed torture and trying, futilely, to close the prison at Guant&amp;#xE1;namo Bay, Cuba. &amp;#x201C;There wasn&amp;#x2019;t really any serious discussion of what N.S.A. was up to,&amp;#x201D; said a former intelligence official, who like others did not want to be named describing internal conversations.&lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-horizontal&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/16/us/politics/Obama/Obama-articleLarge.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
+            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/16/us/politics/Obama/Obama-articleLarge.jpg&quot;&gt;
+            &lt;meta value=&quot;412&quot;&gt;
+            &lt;meta value=&quot;600&quot;&gt;
+    &lt;/div&gt;
+        &lt;figcaption class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;President Obama, in Raleigh, N.C., on Wednesday, will speak on Friday at the Justice Department on government spying.&lt;/span&gt; &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama was told before his inauguration of a supposed plot by Somali extremists to attack the ceremony, what David Axelrod, his adviser, called a &amp;#x201C;welcome-to-the-N.B.A. moment before the first game.&amp;#x201D; Although the report proved unfounded, it reinforced to Mr. Obama the need to detect threats before they materialized. &amp;#x201C;The whole Somali threat injected their team into the realities of national security in a tangible and complicated way,&amp;#x201D; recalled Juan C. Zarate, the departing counterterrorism adviser to Mr. Bush who worked with the Obama team on the threat.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;So while instituting additional procedural changes, Mr. Obama undertook no major overhaul of the surveillance programs he inherited. &amp;#x201C;He&amp;#x2019;s sitting on the other end of the pen now,&amp;#x201D; said the former Obama aide. &amp;#x201C;He has more information than he did then. And he trusts himself to use these powers more than he did the Bush administration.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Just weeks after the inauguration, Judge Reggie B. Walton issued a secret ruling reprimanding the N.S.A. for violating its own procedures. But when Mr. Obama was briefed, the case did not stir consternation. The president&amp;#x2019;s team instructed the Justice Department to fix the problem, but &amp;#x201C;this was not a central concern and he was very quick in knowing how to deal with it,&amp;#x201D; said a former administration official.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The calculus had shifted enough that Mr. Obama began presiding over a record number of leak prosecutions. When civil liberties advocates visited to press him to do more to reverse Mr. Bush&amp;#x2019;s policies, Mr. Obama pushed back. &amp;#x201C;He reminded me that he had a different role to play, that he was commander in chief and that he needed to protect the American people,&amp;#x201D; recalled Mr. Romero of the A.C.L.U.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That was brought home even more starkly at Christmas in 2009 when a Nigerian man tried to detonate explosives in his underwear aboard an airliner. At a meeting at the White House afterward, an agitated Mr. Obama &amp;#x201C;was extremely firm&amp;#x201D; with intelligence officials, saying that he &amp;#x201C;expected us to do better,&amp;#x201D; recalled one who was in the room.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;We hadn&amp;#x2019;t had a major attack in a number of years and the fact that this guy came as close as he did &amp;#x2014; basically the detonator didn&amp;#x2019;t work &amp;#x2014; and the fact that we hadn&amp;#x2019;t detected it in advance really came as a shock to them,&amp;#x201D; said John E. McLaughlin, a former deputy C.I.A. director who participated in a review of the incident for the administration.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Feeling little pressure to curb the security agencies, Mr. Obama largely left them alone until Mr. Snowden began disclosing secret programs last year. Mr. Obama was angry at the revelations, privately excoriating Mr. Snowden as a self-important narcissist who had not thought through the consequences of his actions.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;He was surprised at the uproar that ensued, advisers said, particularly that so many Americans did not trust him, much less trust the oversight provided by the intelligence court and Congress. As more secrets spilled out, though, aides said even Mr. Obama was chagrined. They said he was exercised to learn that the mobile phone of Chancellor Angela Merkel of Germany was being tapped.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama appointed a panel to review the programs. &amp;#x201C;The point we made to him was, &amp;#x2018;We&amp;#x2019;re not really concerned about you, Barack, but God forbid some other guy&amp;#x2019;s in the office five years from now and there&amp;#x2019;s another 9/11,&amp;#x2019;&amp;#xA0;&amp;#x201D; said Richard A. Clarke, a former White House counterterrorism adviser who served on the panel. He had to &amp;#x201C;lay down some roadblocks in addition to what we have now so that once you&amp;#x2019;re gone it&amp;#x2019;ll be harder&amp;#x201D; to abuse spying abilities.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;On the other hand, Mr. Obama was acutely aware of the risks of being seen as handcuffing the security agencies. &amp;#x201C;Whatever reforms he makes, you can be sure if there&amp;#x2019;s another incident &amp;#x2014; and the odds are there will be in our history &amp;#x2014; there&amp;#x2019;ll be someone on CNN within seconds saying if the president hadn&amp;#x2019;t hamstrung the intelligence community, this wouldn&amp;#x2019;t have happened,&amp;#x201D; Mr. Axelrod said.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Benjamin J. Rhodes, a deputy national security adviser working on Friday&amp;#x2019;s speech, said Mr. Obama saw the issue as two separate questions &amp;#x2014; abuse of government power and extent of government power. With the 2008 legislation setting a new structure, the president had focused on avoiding abuse until the latest revelations. &amp;#x201C;At this point, we&amp;#x2019;re looking more systematically at these programs to ensure that we&amp;#x2019;re taking into account both technological advances and also the need to inspire greater public confidence,&amp;#x201D; Mr. Rhodes said. &amp;#x201C;We have an ability to do essentially anything technologically. So do we have the appropriate legal and policy overlay to ensure that&amp;#x2019;s focused?&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That will be the question Mr. Obama tries to answer in the speech.&lt;/p&gt;
+            &lt;div id=&quot;addendums&quot; class=&quot;addendums&quot;&gt;
+    &lt;div class=&quot;story-addendum story-content theme-correction&quot;&gt;
+        &lt;strong&gt; Correction: January 17, 2014 &lt;/strong&gt; &lt;br&gt;
+    	&lt;p&gt;An article on Wednesday about President Obama&amp;#x2019;s shift from critic to defender of government surveillance misstated the month in 2007 when he gave a speech at the Woodrow Wilson International Center for Scholars. It was in August, not in October.&lt;/p&gt;    &lt;/div&gt;
+&lt;/div&gt;
+    &lt;footer class=&quot;story-footer story-content&quot;&gt;
+        
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+Obama’s Path From Critic to Overseer of Spying
 </title>
 </item>
 </channel>
