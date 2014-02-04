@@ -15,67 +15,111 @@ myread
 </description>
 <item>
 <author>
-PETER BAKER
+Seth Ladd
 </author>
 <link>
-http://www.nytimes.com/2014/01/16/us/obamas-path-from-critic-to-defender-of-spying.html
+http://news.dartlang.org/2014/01/dart-11-features-up-to-25-faster.html
 </link>
 <description>
-&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
-
-    
-
-    
-    &lt;div class=&quot;lede-container&quot;&gt;
-        &lt;figure class=&quot;promo media video lede layout-large-horizontal&quot;&gt;
-    
-    &lt;figcaption class=&quot;caption&quot;&gt;
-        
-        
-        &lt;p class=&quot;summary&quot;&gt;Throughout his political career, President Obama has expressed a range of views on balancing national security needs with personal rights and freedoms.&lt;/p&gt;
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-        
-    &lt;/div&gt;
-
-                
-    &lt;p class=&quot;story-body-text story-content&quot;&gt;WASHINGTON &amp;#x2014; As a young lawmaker defining himself as a presidential candidate, &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/people/o/barack_obama/index.html?inline=nyt-per&quot; title=&quot;More articles about Barack Obama&quot; class=&quot;meta-per&quot;&gt;Barack Obama&lt;/a&gt; visited a center for scholars in August 2007 to give a speech on terrorism. He described a surveillance state run amok and vowed to rein it in. &amp;#x201C;That means no more illegal wiretapping of American citizens,&amp;#x201D; he declared. &amp;#x201C;No more national security letters to spy on citizens who are not suspected of a crime.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;More than six years later, the onetime constitutional lawyer is now the commander in chief presiding over a surveillance state that some of his own advisers think has once again gotten out of control. On Friday, he will give another speech, this time at the Justice Department defending government spying even as he adjusts it to address a wave of public concern over civil liberties.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The journey between those two speeches reflects the transition from the backbench of the United States Senate to the chair behind the Resolute Desk in the Oval Office. Like other presidents before him, the idealistic candidate skeptical of government power found that the tricky trade-offs of national security issues look different to the person charged with using that power to ensure public safety.&lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-small-horizontal&quot;&gt;
-    &lt;div class=&quot;image&quot;&gt;
-            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/16/world/prexy/prexy-master180.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
-            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/16/world/prexy/prexy-master180.jpg&quot;&gt;
-            &lt;meta value=&quot;120&quot;&gt;
-            &lt;meta value=&quot;180&quot;&gt;
-    &lt;/div&gt;
-        &lt;figcaption class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;In &amp;#x2019;07, then-Senator Obama spoke disapprovingly at the Woodrow Wilson International Center for Scholars about spying.&lt;/span&gt; &lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;Aides said that even as a senator, Mr. Obama supported robust surveillance as long as it was legal and appropriate, and that as president he still shares the concerns about overreach he expressed years ago. But they said his views have been shaped to a striking degree by the reality of waking up every day in the White House responsible for heading off the myriad threats he finds in his daily intelligence briefings.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;When you get the package every morning, it puts steel in your spine,&amp;#x201D; said David Plouffe, the president&amp;#x2019;s longtime adviser. &amp;#x201C;There are people out there every day who are plotting. The notion that we would put down a tool that would protect people here in America is hard to fathom.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;At the same time, aides said Mr. Obama was surprised to learn after leaks by Edward J. Snowden, the former &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/organizations/n/national_security_agency/index.html?inline=nyt-org&quot; title=&quot;More articles about National Security Agency, U.S.&quot; class=&quot;meta-org&quot;&gt;National Security Agency&lt;/a&gt; contractor, just how far the surveillance had gone. &amp;#x201C;Things seem to have grown at the N.S.A.,&amp;#x201D; Mr. Plouffe said, citing specifically the tapping of foreign leaders&amp;#x2019; telephones. &amp;#x201C;I think it was disturbing to most people, and I think he found it disturbing.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Yet it is hard to express indignation at actions of the government after five years of running it, and some involved in surveillance note that it was Mr. Obama who pushed national security agencies to be aggressive in hunting terrorists. &amp;#x201C;For some, his outrage does ring a little bit hollow,&amp;#x201D; said a former counterterrorism official.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;All of which leads to worries by critics of government surveillance that he will not go far enough on Friday. &amp;#x201C;If the speech is anything like what is being reported, the president will go down in history for having retained and defended George W. Bush&amp;#x2019;s surveillance programs rather than reformed them,&amp;#x201D; said Anthony D. Romero, executive director of the American Civil Liberties Union.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama first confronted the questions of national security and privacy during his 2004 campaign for Senate, taking aim at the &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/subjects/u/usa_patriot_act/index.html?inline=nyt-classifier&quot; title=&quot;More articles about the USA Patriot Act.&quot; class=&quot;meta-classifier&quot;&gt;Patriot Act&lt;/a&gt; for &amp;#x201C;violating our fundamental notions of privacy&amp;#x201D; and declaring that &amp;#x201C;we don&amp;#x2019;t like federal agents poking around our libraries.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Once elected, Mr. Obama took an interest in curbing surveillance. &amp;#x201C;He would ask me about various issues that relate to the topic of the day &amp;#x2014; how do you come up with policies that make sure that security and liberty are not mutually exclusive?&amp;#x201D; recalled Senator Ron Wyden, Democrat of Oregon and a leading critic of surveillance policies then and now.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama was a sponsor of a bill in 2005 to raise the standard required for federal agents using administrative subpoenas known as national security letters to obtain business records without court order. He joined other Democrats fighting the renewal of the Patriot Act until it was amended to address civil liberties concerns, then voted for its extension in 2006 after a compromise, breaking with Mr. Wyden who voted no.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama&amp;#x2019;s 2007 speech at the Woodrow Wilson International Center for Scholars came after the revelation that President George W. Bush had authorized warrantless surveillance in terrorism cases without permission from the Foreign Intelligence Surveillance Court. A presidential candidate, Mr. Obama criticized Mr. Bush&amp;#x2019;s &amp;#x201C;false choice between the liberties we cherish and the security we provide.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But as a former Obama aide put it recently, &amp;#x201C;The rhetoric was probably sharper than his votes.&amp;#x201D; By summer 2008, with the Democratic nomination secured and the White House now a real possibility, Mr. Obama voted for legislation essentially ratifying Mr. Bush&amp;#x2019;s surveillance programs. Mr. Obama realized he would &amp;#x201C;take my lumps&amp;#x201D; from the left and said it &amp;#x201C;was not an easy call for me,&amp;#x201D; but he argued that putting the programs under the jurisdiction of the intelligence court restored accountability.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;As a result, after he won the election, surveillance issues were off his agenda; instead, he focused on banning interrogation techniques he deemed torture and trying, futilely, to close the prison at Guant&amp;#xE1;namo Bay, Cuba. &amp;#x201C;There wasn&amp;#x2019;t really any serious discussion of what N.S.A. was up to,&amp;#x201D; said a former intelligence official, who like others did not want to be named describing internal conversations.&lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-horizontal&quot;&gt;
-    &lt;div class=&quot;image&quot;&gt;
-            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/16/us/politics/Obama/Obama-articleLarge.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
-            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/16/us/politics/Obama/Obama-articleLarge.jpg&quot;&gt;
-            &lt;meta value=&quot;412&quot;&gt;
-            &lt;meta value=&quot;600&quot;&gt;
-    &lt;/div&gt;
-        &lt;figcaption class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;President Obama, in Raleigh, N.C., on Wednesday, will speak on Friday at the Justice Department on government spying.&lt;/span&gt; &lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama was told before his inauguration of a supposed plot by Somali extremists to attack the ceremony, what David Axelrod, his adviser, called a &amp;#x201C;welcome-to-the-N.B.A. moment before the first game.&amp;#x201D; Although the report proved unfounded, it reinforced to Mr. Obama the need to detect threats before they materialized. &amp;#x201C;The whole Somali threat injected their team into the realities of national security in a tangible and complicated way,&amp;#x201D; recalled Juan C. Zarate, the departing counterterrorism adviser to Mr. Bush who worked with the Obama team on the threat.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;So while instituting additional procedural changes, Mr. Obama undertook no major overhaul of the surveillance programs he inherited. &amp;#x201C;He&amp;#x2019;s sitting on the other end of the pen now,&amp;#x201D; said the former Obama aide. &amp;#x201C;He has more information than he did then. And he trusts himself to use these powers more than he did the Bush administration.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Just weeks after the inauguration, Judge Reggie B. Walton issued a secret ruling reprimanding the N.S.A. for violating its own procedures. But when Mr. Obama was briefed, the case did not stir consternation. The president&amp;#x2019;s team instructed the Justice Department to fix the problem, but &amp;#x201C;this was not a central concern and he was very quick in knowing how to deal with it,&amp;#x201D; said a former administration official.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The calculus had shifted enough that Mr. Obama began presiding over a record number of leak prosecutions. When civil liberties advocates visited to press him to do more to reverse Mr. Bush&amp;#x2019;s policies, Mr. Obama pushed back. &amp;#x201C;He reminded me that he had a different role to play, that he was commander in chief and that he needed to protect the American people,&amp;#x201D; recalled Mr. Romero of the A.C.L.U.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That was brought home even more starkly at Christmas in 2009 when a Nigerian man tried to detonate explosives in his underwear aboard an airliner. At a meeting at the White House afterward, an agitated Mr. Obama &amp;#x201C;was extremely firm&amp;#x201D; with intelligence officials, saying that he &amp;#x201C;expected us to do better,&amp;#x201D; recalled one who was in the room.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;We hadn&amp;#x2019;t had a major attack in a number of years and the fact that this guy came as close as he did &amp;#x2014; basically the detonator didn&amp;#x2019;t work &amp;#x2014; and the fact that we hadn&amp;#x2019;t detected it in advance really came as a shock to them,&amp;#x201D; said John E. McLaughlin, a former deputy C.I.A. director who participated in a review of the incident for the administration.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Feeling little pressure to curb the security agencies, Mr. Obama largely left them alone until Mr. Snowden began disclosing secret programs last year. Mr. Obama was angry at the revelations, privately excoriating Mr. Snowden as a self-important narcissist who had not thought through the consequences of his actions.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;He was surprised at the uproar that ensued, advisers said, particularly that so many Americans did not trust him, much less trust the oversight provided by the intelligence court and Congress. As more secrets spilled out, though, aides said even Mr. Obama was chagrined. They said he was exercised to learn that the mobile phone of Chancellor Angela Merkel of Germany was being tapped.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Mr. Obama appointed a panel to review the programs. &amp;#x201C;The point we made to him was, &amp;#x2018;We&amp;#x2019;re not really concerned about you, Barack, but God forbid some other guy&amp;#x2019;s in the office five years from now and there&amp;#x2019;s another 9/11,&amp;#x2019;&amp;#xA0;&amp;#x201D; said Richard A. Clarke, a former White House counterterrorism adviser who served on the panel. He had to &amp;#x201C;lay down some roadblocks in addition to what we have now so that once you&amp;#x2019;re gone it&amp;#x2019;ll be harder&amp;#x201D; to abuse spying abilities.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;On the other hand, Mr. Obama was acutely aware of the risks of being seen as handcuffing the security agencies. &amp;#x201C;Whatever reforms he makes, you can be sure if there&amp;#x2019;s another incident &amp;#x2014; and the odds are there will be in our history &amp;#x2014; there&amp;#x2019;ll be someone on CNN within seconds saying if the president hadn&amp;#x2019;t hamstrung the intelligence community, this wouldn&amp;#x2019;t have happened,&amp;#x201D; Mr. Axelrod said.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Benjamin J. Rhodes, a deputy national security adviser working on Friday&amp;#x2019;s speech, said Mr. Obama saw the issue as two separate questions &amp;#x2014; abuse of government power and extent of government power. With the 2008 legislation setting a new structure, the president had focused on avoiding abuse until the latest revelations. &amp;#x201C;At this point, we&amp;#x2019;re looking more systematically at these programs to ensure that we&amp;#x2019;re taking into account both technological advances and also the need to inspire greater public confidence,&amp;#x201D; Mr. Rhodes said. &amp;#x201C;We have an ability to do essentially anything technologically. So do we have the appropriate legal and policy overlay to ensure that&amp;#x2019;s focused?&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;That will be the question Mr. Obama tries to answer in the speech.&lt;/p&gt;
-            &lt;div id=&quot;addendums&quot; class=&quot;addendums&quot;&gt;
-    &lt;div class=&quot;story-addendum story-content theme-correction&quot;&gt;
-        &lt;strong&gt; Correction: January 17, 2014 &lt;/strong&gt; &lt;br&gt;
-    	&lt;p&gt;An article on Wednesday about President Obama&amp;#x2019;s shift from critic to defender of government surveillance misstated the month in 2007 when he gave a speech at the Woodrow Wilson International Center for Scholars. It was in August, not in October.&lt;/p&gt;    &lt;/div&gt;
+&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-3446908176761469110&quot;&gt;
+Better performance, more features, and improved tools mark the 1.1 release of Dart. Just two months after the &lt;a href=&quot;http://news.dartlang.org/2013/11/dart-10-stable-sdk-for-structured-web.html&quot;&gt;1.0 release&lt;/a&gt;, this new release delivers a set of compatible updates that makes applications easier to develop and faster for end users.&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/x8M3iXe0w38GFot8UN96tDodmHswpQdsHNwHrZdDq6Dna9rYPc8Q9bF5xrRYwnlRLDKH3vnehGc213Oz0u9tgNEs0j6DMMOaFxBy5uk45uyQe0CBEsu75ddyMQ&quot; width=&quot;640&quot;&gt;&lt;/p&gt;&lt;p&gt;Dart&amp;#x2019;s Javascript output continues to shine. &lt;a href=&quot;https://www.dartlang.org/performance/&quot;&gt;Performance&lt;/a&gt; on the Richards benchmark is 25% better than the first release, making runtime comparable to the original JavaScript. Performance of the newest benchmark, FluidMotion, has doubled since November. Dart2js now generates Javascript that performs as well as, if not better than, the idiomatic Javascript equivalent.&lt;/p&gt;&lt;p&gt;While there&amp;#x2019;s a lot of focus on Dart for browser applications, there is also growing interest in Dart for server solutions. This release provides a number of enhancements for server-side Dart, including support for large files, file copying, process signal handlers, and terminal information. New in this release is support for UDP, which, for example, allows developers to write more efficient media streaming apps.&lt;/p&gt;&lt;p&gt;The Dart Editor has added a number of features to increase productivity. Developers will find improved debugging, better code completion, and more descriptive tooltips. Overall performance of the Editor and the analyzer has also improved.&lt;/p&gt;&lt;p&gt;Take a look at the updated &lt;a href=&quot;https://www.dartlang.org/docs/spec/&quot;&gt;Dart language spec&lt;/a&gt;. You may also be interested in new articles on &lt;a href=&quot;https://www.dartlang.org/docs/serverguide.html&quot;&gt;command-line applications&lt;/a&gt;, &lt;a href=&quot;https://www.dartlang.org/articles/js-dart-interop/&quot;&gt;Dart-Javascript interoperability&lt;/a&gt;, and &lt;a href=&quot;https://www.dartlang.org/articles/broadcast-streams/&quot;&gt;Streams&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;We&amp;#x2019;re excited about the new features now available in Dart 1.1. Tell us what you build with Dart in our &lt;a href=&quot;http://g.co/dartisans&quot;&gt;Google+ community&lt;/a&gt; and &lt;a href=&quot;http://dartbug.com/&quot;&gt;let us know&lt;/a&gt; if you have any issues or feature requests.
+&lt;/p&gt;
 &lt;/div&gt;
-    &lt;footer class=&quot;story-footer story-content&quot;&gt;
-        
-    &lt;/footer&gt;
-&lt;/article&gt;
+
 &lt;/div&gt;
 </description>
 <title>
-Obama’s Path From Critic to Overseer of Spying
+Dart 1.1 released: Up to 25% faster Javascript
+</title>
+</item>
+<item>
+<author>
+James Ball
+</author>
+<link>
+http://www.theguardian.com/world/2014/jan/16/nsa-collects-millions-text-messages-daily-untargeted-global-sweep
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;flexible-content-body&quot;&gt;
+                
+	&lt;p&gt;The National Security Agency has collected almost 200 million text messages a day from across the globe, using them to extract data including location, contact networks and credit card details, according to top-secret documents.&lt;/p&gt;
+&lt;p&gt;The untargeted collection and storage of SMS messages &amp;#x2013; including their contacts &amp;#x2013; is revealed in a joint investigation between the Guardian and the UK&amp;#x2019;s Channel 4 News based on material provided by NSA whistleblower Edward Snowden.&lt;/p&gt;
+&lt;p&gt;The documents also reveal the UK spy agency GCHQ has made use of the NSA database to search the metadata of &amp;#x201C;untargeted and unwarranted&amp;#x201D; communications belonging to people in the UK.&lt;/p&gt;
+&lt;p&gt;The NSA program, codenamed Dishfire, collects &amp;#x201C;pretty much everything it can&amp;#x201D;, according to GCHQ documents, rather than merely storing the communications of existing surveillance targets.&lt;/p&gt;
+&lt;p&gt;The NSA has made extensive use of its vast text message database to extract information on people&amp;#x2019;s travel plans, contact books, financial transactions and more &amp;#x2013; including of individuals under no suspicion of illegal activity.&lt;/p&gt;
+&lt;p&gt;An agency presentation from 2011 &amp;#x2013; subtitled &amp;#x201C;SMS Text Messages: A Goldmine to Exploit&amp;#x201D; &amp;#x2013; reveals the program collected an average of 194 million text messages a day in April of that year. In addition to storing the messages themselves, a further program known as &amp;#x201C;Prefer&amp;#x201D; conducted automated analysis on the untargeted communications.&lt;/p&gt;
+    
+		&lt;figure class=&quot;element element-image&quot;&gt;
+		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389894898274/adecf37d-b211-447d-ba18-c41ba5b5fb63-460x345.jpeg&quot; alt=&quot;sms1&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
+		    		        &lt;figcaption&gt;An NSA presentation from 2011 on the agency's Dishfire program to collect millions of text messages daily. Photograph: Guardian&lt;/figcaption&gt;
+		    		&lt;/figure&gt;
+	    
+	&lt;p&gt;The Prefer program uses automated text messages such as missed call alerts or texts sent with international roaming charges to extract information, which the agency describes as &amp;#x201C;content-derived metadata&amp;#x201D;, and explains that &amp;#x201C;such gems are not in current metadata stores and would enhance current analytics&amp;#x201D;.&lt;/p&gt;
+&lt;p&gt;On average, each day the NSA was able to extract:&lt;/p&gt;
+&lt;p&gt;&amp;#x2022; More than 5 million missed-call alerts, for use in contact-chaining analysis (working out someone&amp;#x2019;s social network from who they contact and when)&lt;/p&gt;
+&lt;p&gt;&amp;#x2022; Details of 1.6 million border crossings a day, from network roaming alerts&lt;/p&gt;
+&lt;p&gt;&amp;#x2022; More than 110,000 names, from electronic business cards, which also included the ability to extract and save images.&lt;/p&gt;
+&lt;p&gt;&amp;#x2022; Over 800,000 financial transactions, either through text-to-text payments or linking credit cards to phone users&lt;/p&gt;
+&lt;p&gt;The agency was also able to extract geolocation data from more than 76,000 text messages a day, including from &amp;#x201C;requests by people for route info&amp;#x201D; and &amp;#x201C;setting up meetings&amp;#x201D;. Other travel information was obtained from itinerary texts sent by travel companies, even including cancellations and delays to travel plans.&lt;/p&gt;
+    
+		&lt;figure class=&quot;element element-image&quot;&gt;
+		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389895896336/d37371e4-5d38-4568-81e2-09c8eaa3936a-460x345.jpeg&quot; alt=&quot;sms5&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
+		    		        &lt;figcaption&gt;A slide on the Dishfire program describes the&amp;#xA0;'analytic gems' of&amp;#xA0;collected metadata. Photograph: Guardian&lt;/figcaption&gt;
+		    		&lt;/figure&gt;
+	    
+	&lt;p&gt;Communications from US phone numbers, the documents suggest, were removed (or &amp;#x201C;minimized&amp;#x201D;) from the database &amp;#x2013; but those of other countries, including the UK, were retained.&lt;/p&gt;
+&lt;p&gt;The revelation the NSA is collecting and extracting personal information from hundreds of millions of global text messages a day is likely to intensify international pressure on US president Barack Obama, who on Friday is set to give his response to the report of his NSA review panel.&lt;/p&gt;
+&lt;p&gt;While US attention has focused on whether the NSA&amp;#x2019;s controversial phone metadata program will be discontinued, the panel also suggested US spy agencies should pay more consideration to the privacy rights of foreigners, and reconsider spying efforts against allied heads of state and diplomats.&lt;/p&gt;
+&lt;p&gt;In a statement to the Guardian, a spokeswoman for the NSA said any implication that the agency&amp;#x2019;s collection was &amp;#x201C;arbitrary and unconstrained is false&amp;#x201D;. The agency&amp;#x2019;s capabilities were directed only against &amp;#x201C;valid foreign intelligence targets&amp;#x201D; and were subject to stringent legal safeguards, she said.&lt;/p&gt;
+&lt;p&gt;The ways in which the UK spy agency GCHQ has made use of the NSA Dishfire database also seems likely to raise questions on the scope of its powers.&lt;/p&gt;
+&lt;p&gt;While GCHQ is not allowed to search through the content of messages without a warrant &amp;#x2013; though the contents are stored rather than deleted or &amp;#x201C;minimized&amp;#x201D; from the database &amp;#x2013; the agency&amp;#x2019;s lawyers decided analysts were able to see who UK phone numbers had been texting, and search for them in the database.&lt;/p&gt;
+&lt;p&gt;The GCHQ memo sets out in clear terms what the agency&amp;#x2019;s access to Dishfire allows it to do, before handling how UK communications should be treated. The unique property of Dishfire, it states, is how much untargeted or unselected information it stores.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;In contrast to [most] GCHQ equivalents, DISHFIRE contains a large volume of&amp;#xA0;&lt;em&gt;unselected&lt;/em&gt;&amp;#xA0;SMS traffic,&amp;#x201D; it states (emphasis original). &amp;#x201C;This makes it particularly useful for the development of new targets, since it is possible to examine the content of messages sent months or even years&amp;#xA0;&lt;em&gt;before&lt;/em&gt;&amp;#xA0;the target was known to be of interest.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;It later explains in plain terms how useful this capability can be. Comparing Dishfire favourably to a GCHQ counterpart which only collects against phone numbers that have specifically been targeted, it states &amp;#x201C;Dishfire collects pretty much everything it can, so you can see SMS from a selector which is not targeted&amp;#x201D;.&lt;/p&gt;
+&lt;p&gt;The document also states the database allows for broad, bulk searches of keywords which could result in a high number of hits, rather than just narrow searches against particular phone numbers: &amp;#x201C;It is also possible to search against the content&amp;#xA0;&lt;em&gt;in bulk&lt;/em&gt;&amp;#xA0;(e.g. for a name or home telephone number) if the target&amp;#x2019;s mobile phone number is not known.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Analysts are warned to be careful when searching content for terms relating to UK citizens or people currently residing in the UK, as these searches could be successful but would not be legal without a warrant or similar targeting authority.&lt;/p&gt;
+&lt;p&gt;However, a note from GCHQ&amp;#x2019;s operational legalities team, dated May 2008, states agents can search Dishfire for &amp;#x201C;events&amp;#x201D; data relating to UK numbers &amp;#x2013; who is contacting who, and when.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;You may run a search of UK numbers in DISHFIRE in order to retrieve only events data,&amp;#x201D; the note states, before setting out how an analyst can prevent himself seeing the content of messages when he searches &amp;#x2013; by toggling a single setting on the search tool.&lt;/p&gt;
+&lt;p&gt;Once this is done, the document continues, &amp;#x201C;this will now enable you to run a search without displaying the content of the SMS, especially useful for untargeted and unwarranted UK numbers.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;A separate document gives a sense of how large-scale each Dishfire search can be, asking analysts to restrain their searches to no more than 1,800 phone numbers at a time.&lt;/p&gt;
+    
+		&lt;figure class=&quot;element element-image&quot;&gt;
+		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389896000357/757975eb-636f-48d5-8e1a-476ad212db48-460x345.jpeg&quot; alt=&quot;sms8&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
+		    		        &lt;figcaption&gt;An NSA slide on the 'Prefer' program reveals the program collected an average of 194 million text messages a day in April 2011.&amp;#xA0;Photograph: Guardian&lt;/figcaption&gt;
+		    		&lt;/figure&gt;
+	    
+	&lt;p&gt;The note warns analysts they must be careful to make sure they use the form&amp;#x2019;s toggle before searching, as otherwise the database will return the content of the UK messages &amp;#x2013; which would, without a warrant, cause the analyst to &amp;#x201C;unlawfully be seeing the content of the SMS&amp;#x201D;.&lt;/p&gt;
+&lt;p&gt;The note also adds that the NSA automatically removes all &amp;#x201C;US-related SMS&amp;#x201D; from the database, so it is not available for searching.&lt;/p&gt;
+&lt;p&gt;A GCHQ spokesman refused to comment on any particular matters, but said all its intelligence activities were in compliance with UK law and oversight.&lt;/p&gt;
+&lt;p&gt;But Vodafone, one of the world&amp;#x2019;s largest mobile phone companies with operations in 25 countries including Britain, greeted the latest revelations with shock.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;It&amp;#x2019;s the first we&amp;#x2019;ve heard about it and naturally we&amp;#x2019;re shocked and surprised,&amp;#x201D; the group&amp;#x2019;s privacy officer and head of legal for privacy, security and content standards told Channel 4 News.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;What you&amp;#x2019;re describing sounds concerning to us because the regime that we are required to comply with is very clear and we will only disclose information to governments where we are legally compelled to do so, won&amp;#x2019;t go beyond the law and comply with due process.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;But what you&amp;#x2019;re describing is something that sounds as if that&amp;#x2019;s been circumvented. And for us as a business this is anathema because our whole business is founded on protecting privacy as a fundamental imperative.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;He said the company would be challenging the UK government over this. &amp;#x201C;From our perspective, the law is there to protect our customers and it doesn&amp;#x2019;t sound as if that is what is necessarily happening.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;The NSA&amp;#x2019;s access to, and storage of, the content of communications of UK citizens may also be contentious in the light of earlier Guardian revelations that the agency was drafting policies to facilitate spying on the citizens of its allies, including the UK and Australia, which would &amp;#x2013; if enacted &amp;#x2013; enable the agency to search its databases for UK citizens without informing GCHQ or UK politicians.&lt;/p&gt;
+&lt;p&gt;The documents seen by the Guardian were from an internal Wikipedia-style guide to the NSA program provided for GCHQ analysts, and noted the Dishfire program was &amp;#x201C;operational&amp;#x201D; at the time the site was accessed, in 2012.&lt;/p&gt;
+&lt;p&gt;The documents do not, however, state whether any rules were subsequently changed, or give estimates of how many UK text messages are collected or stored in the Dishfire system, or from where they are being intercepted.&lt;/p&gt;
+&lt;p&gt;In the statement, the NSA spokeswoman said: &amp;#x201C;As we have previously stated, the implication that NSA's collection is arbitrary and unconstrained is false.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;NSA's activities are focused and specifically deployed against &amp;#x2013; and only against &amp;#x2013; valid foreign intelligence targets in response to intelligence requirements.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Dishfire is a system that processes and stores lawfully collected SMS data. Because some SMS data of US persons may at times be incidentally collected in NSA&amp;#x2019;s lawful foreign intelligence mission, privacy protections for US persons exist across the entire process concerning the use, handling, retention, and dissemination of SMS data in Dishfire.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;In addition, NSA actively works to remove extraneous data, to include that of innocent foreign citizens, as early as possible in the process.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;The agency draws a distinction between the bulk collection of communications and the use of that data to monitor or find specific targets.&lt;/p&gt;
+&lt;p&gt;A spokesman for GCHQ refused to respond to any specific queries regarding Dishfire, but said the agency complied with UK law and regulators.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;It is a longstanding policy that we do not comment on intelligence matters,&amp;#x201D; he said. &amp;#x201C;Furthermore, all of GCHQ's work is carried out in accordance with a strict legal and policy framework which ensures that our activities are authorised, necessary and proportionate, and that there is rigorous oversight, including from the Secretary of State, the Interception and Intelligence Services Commissioners and the Parliamentary Intelligence and Security Committee.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;GCHQ also directed the Guardian towards a statement made to the House of Commons in June 2013 by foreign secretary William Hague, in response to revelations of the agency&amp;#x2019;s use of the Prism program.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Any data obtained by us from the US involving UK nationals is subject to proper UK statutory controls and safeguards, including the relevant sections of the Intelligence Services Act, the Human Rights Act and the Regulation of Investigatory Powers Act,&amp;#x201D; Hague told MPs.&lt;/p&gt;
+        &lt;/div&gt;
+
+
+    &lt;/div&gt;
+</description>
+<title>
+NSA collects millions of text messages daily in 'untargeted' global sweep
 </title>
 </item>
 <item>
 <link>
-http://marc.info/?l=openbsd-misc&m=138972987203440&w=2
+http://marc.info/?l=openbsd-misc&amp;amp;m=138972987203440&amp;amp;w=2
 </link>
 <description>
 &lt;div&gt;
@@ -520,522 +564,291 @@ OpenBSD will shut down if we do not have the funding to keep the lights on
 </item>
 <item>
 <link>
-https://www.schneier.com/blog/archives/2014/01/today_i_briefed.html
+http://blog.samaltman.com/value-is-created-by-doing
 </link>
 <description>
-&lt;div class=&quot;indivbody&quot; score=&quot;31.25&quot;&gt;
+&lt;div&gt;&lt;div class=&quot;post-body&quot; id=&quot;post_body_642712&quot;&gt;
+&lt;p&gt;Value is created by doing.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#x2019;s easy to forget this.&amp;#xA0;
+A lot of stuff feels like work&amp;#x2014;commenting on HN, tweeting, reading about
+other companies&amp;#x2019; funding rounds, grabbing coffee, etc [1]&amp;#x2014;is not actually
+work.&amp;#xA0; (If you count that as work, think
+really hard about the value you&amp;#x2019;re creating in your job.)&amp;#xA0; These activities can be worthwhile in small
+doses&amp;#x2014;it&amp;#x2019;s important to network and meet interesting people to stay in the flow
+of ideas&amp;#x2014;but they are not by themselves how new wealth gets created.&lt;/p&gt;
+
+&lt;p&gt;Value gets created when a company does things like build
+widgets and sell them to customers.&amp;#xA0; As a
+rough guideline, it&amp;#x2019;s good to stay in roles where you&amp;#x2019;re close to the doing.&lt;/p&gt;
+
+&lt;p&gt;Of course you have to do the right things.&amp;#xA0; Writing software no one wants does not create
+value&amp;#x2014;that&amp;#x2019;s called a class project.&amp;#xA0; So
+it&amp;#x2019;s critical to figure out the right thing to work on, and strategy is far
+more valuable than a lot of pivot-happy companies would have you believe.&amp;#xA0; But strategy alone has no value&amp;#x2014;value gets
+captured by execution.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#x2019;s easier to sit around and talk about building a startup
+than it is to actually start a startup.&amp;#xA0;
+And it&amp;#x2019;s fun to talk about.&amp;#xA0; But
+over time, the difference between fun and fulfilling becomes clear.&amp;#xA0; Doing things is really hard&amp;#x2014;it&amp;#x2019;s why, for
+example, you can generally tell people what you&amp;#x2019;re working on without NDAs, and
+most patents never matter.&amp;#xA0; The value,
+and the difficulty, comes from execution.&lt;/p&gt;
+
+&lt;p&gt;There are good tricks for keeping yourself honest here.&amp;#xA0; When I was running a company, I used to make
+a list of everything I got done at the end of the day.&amp;#xA0; It was remarkable how I could feel like I had
+a really busy day and realize that night I got nothing done.&amp;#xA0; Similarly, I could have a day that felt only
+somewhat busy, but accomplish 3 or 4 major things.&amp;#xA0;&lt;/p&gt;
+
+&lt;p&gt;Err on the side of doing too much of the sort of work that
+matters and blowing off all the rest, or as Machiavelli said:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;i&gt;Make
+mistakes of ambition and not mistakes of sloth.&amp;#xA0;
+Develop the strength to do bold things, not the strength to suffer.&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;You build what you measure&amp;#x2014;if you measure your productivity
+by the number of meetings you have in a day, you will have a lot of
+meetings.&amp;#xA0; If you measure yourself by revenue
+growth or number of investments closed or something like that, you will
+probably have fewer meetings.&lt;/p&gt;
+
+&lt;p&gt;Another example of not-quite-work is every night in San
+Francisco, there are dinner parties where people get together and talk about
+the future.&amp;#xA0; It&amp;#x2019;s always fun and usually
+not very contentious&amp;#x2014;most people agree we need to go to space, for
+example.&amp;#xA0; But at the end of it, everyone
+goes home and works on something else.&lt;/p&gt;
+
+&lt;p&gt;If you believe that going to space is the most important
+project for humanity, then work on it.&amp;#xA0;
+If you can&amp;#x2019;t figure out how to raise hundreds of millions of dollars, go
+work for SpaceX (joining a great company is a much better plan than starting a
+mediocre one).&amp;#xA0; If enterprise software is
+what you really love, then work on that. [2]&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#x2019;re reading this and feeling unproductive, there&amp;#x2019;s a
+silver lining.&amp;#xA0; You can just close the
+browser window.&amp;#xA0; The good news is that it&amp;#x2019;s easy to course-correct, and it feels great.&lt;/p&gt;
 
 
 
+&lt;p&gt;[1] I count blogging as a marginal use of time, but the
+reason I started is because I realized it was important to be good at writing,
+I was bad at it, and the only way I was going to improve was with lots of
+practice.&amp;#xA0; And sometimes I meet really
+interesting founders because of something I wrote.&lt;/p&gt;
 
+&lt;p&gt;[2] This isn&amp;#x2019;t meant as any sort of relative value judgment;
+if what you want to do is build an enterprise software company, then you should
+do that.&amp;#xA0; The problem comes when what you
+really want to do is build rockets.&amp;#xA0; A
+lot of people feel like they first should do something to make money and then
+do what they care about (or first work at a company for awhile before starting
+a company they really want to start).&amp;#xA0;
+While you of course should take care of your family before anything
+else, you should try to work on what you really care about.&amp;#xA0; You can usually find a way.&amp;#xA0; The danger is that life is short and you only
+get to work on a small number of companies over the course of a career&amp;#x2014;it&amp;#x2019;s
+worth trying to make them count.&lt;/p&gt;
+&lt;/div&gt;
 
-
-
-&lt;p&gt;
-
-&lt;a href=&quot;https://www.schneier.com/blog/archives/2014/01/edward_elgars_c.html&quot;&gt;« Edward Elgar's Ciphers&lt;/a&gt; |
-
-&lt;a href=&quot;https://www.schneier.com/blog/&quot;&gt;Main&lt;/a&gt;
-
-| &lt;a href=&quot;https://www.schneier.com/blog/archives/2014/01/sierramontana_n.html&quot;&gt;SIERRAMONTANA: NSA Exploit of the Day »&lt;/a&gt;
-
-&lt;/p&gt;
-
-
-
-
-&lt;h2&gt;Today I Briefed Congress on the NSA&lt;/h2&gt;
-
-&lt;p&gt;This morning, I spent an hour in a closed room with six members of Congress: Rep. Lofgren, Rep. Sensenbrenner, Rep. Scott, Rep. Goodlatte, Rep Thompson, and Rep. Amash.  No staffers, no public: just them.  Lofgren had asked me to brief her and a few Representatives on the NSA.  She said that the NSA wasn't forthcoming about their activities, and they wanted me -- as someone with access to the Snowden documents -- to explain to them what the NSA was doing.  Of course, I'm not going to give details on the meeting, except to say that it was candid and interesting.  And that it's extremely freaky that Congress has such a difficult time getting information out of the NSA that they have to ask me.  I really want oversight to work better in this country.&lt;/p&gt;
-
-&lt;p&gt;Surreal part of setting up this meeting:  I suggested that we hold this meeting in a &lt;a href=&quot;https://en.wikipedia.org/wiki/Sensitive_Compartmented_Information_Facility&quot;&gt;SCIF&lt;/a&gt;, because they wanted me to talk about top secret documents that had not been made public.  The problem is that I, as someone without a clearance, would not be allowed into the SCIF.  So we had to have the meeting in a regular room.&lt;/p&gt;
-
-&lt;p&gt;EDITED TO ADD: This really was an extraordinary thing.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;entry-tags&quot;&gt;Tags: &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=accountability&quot; rel=&quot;tag&quot;&gt;accountability&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=Edward%20Snowden&quot; rel=&quot;tag&quot;&gt;Edward Snowden&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=laws&quot; rel=&quot;tag&quot;&gt;laws&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=NSA&quot; rel=&quot;tag&quot;&gt;NSA&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=privacy&quot; rel=&quot;tag&quot;&gt;privacy&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=Schneier%20news&quot; rel=&quot;tag&quot;&gt;Schneier news&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=secrecy&quot; rel=&quot;tag&quot;&gt;secrecy&lt;/a&gt;, &lt;a href=&quot;https://www.schneier.com/cgi-bin/mt/mt-search.cgi?tag=surveillance&quot; rel=&quot;tag&quot;&gt;surveillance&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p class=&quot;endnote&quot;&gt;&lt;em&gt;To receive these entries once a month by e-mail, &lt;a href=&quot;https://www.schneier.com/crypto-gram-sub.html&quot;&gt;sign up&lt;/a&gt; for the &lt;a href=&quot;https://www.schneier.com/crypto-gram.html&quot;&gt;Crypto-Gram Newsletter&lt;/a&gt;.&lt;/em&gt;
-&lt;/p&gt;&lt;/div&gt;
-
-
+&lt;/div&gt;
 </description>
 <title>
-Today I Briefed Congress on the NSA
+Value is created by doing
 </title>
 </item>
 <item>
 <link>
-http://www.utf8everywhere.org/
+https://github.com/trevorlinton/webkit.js
 </link>
 <description>
-&lt;div&gt;&lt;div class=&quot;topDiv&quot;&gt;
+&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
 
-&lt;p class=&quot;subtitle&quot;&gt;Manifesto&lt;/p&gt;
+&lt;p&gt;An experimental port of WebKit (Specifically, webcore) to JavaScript aimed at running in both node.js and browsers. This is currently non-functional and is intended for developers and contributors.&lt;/p&gt;
 
-
-&lt;h2 id=&quot;intro&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#intro&quot;&gt;Purpose of this document&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;This document contains special characters. Without proper rendering support, you may see question marks, boxes, or other symbols.&lt;/p&gt;
-
-&lt;p&gt;To promote usage and support of the UTF-8 encoding, to convince that this should be the default choice of encoding for storing text strings in memory or on disk, for communication and all other uses. We believe that all other encodings of Unicode (or text, in general) belong to rare edge-cases of optimization and should be avoided by mainstream users.&lt;/p&gt;
-
-&lt;p&gt;In particular, we believe that the very popular UTF-16 encoding (mistakenly used as a synonym to &amp;#x2018;widechar&amp;#x2019; and &amp;#x2018;Unicode&amp;#x2019; in the Windows world) has no place in library APIs (except for specialized libraries, which deal with text).&lt;/p&gt;
-
-&lt;p&gt;This document recommends choosing UTF-8 as string storage in Windows applications, despite the fact that this standard is less popular there, due to historical reasons and the lack of native UTF-8 support by the API. Yet, we believe that, even on this platform, the following arguments outweigh the lack of native support. Also, we recommend forgetting forever what &amp;#x2018;ANSI codepages&amp;#x2019; are and what they were used for. It is in the customer&amp;#x2019;s bill of rights to mix any number of languages in any text string.&lt;/p&gt;
-
-&lt;p&gt;We recommend avoiding C++ application code that depends on &lt;code&gt;_UNICODE&lt;/code&gt; define. This includes &lt;code&gt;TCHAR&lt;/code&gt;/&lt;code&gt;LPTSTR&lt;/code&gt; types on Windows and APIs defined as macros, such as &lt;code&gt;CreateWindow&lt;/code&gt;. We also recommend alternative ways to reach the goals of these APIs.&lt;/p&gt;
-
-&lt;p&gt;We also believe that, if an application is not supposed to specialize in text, the infrastructure must make it possible for the program to be unaware of encoding issues. For instance, a file copy utility should not be written differently to support non-English file names. &lt;a href=&quot;http://www.joelonsoftware.com/articles/Unicode.html&quot;&gt;Joel&amp;#x2019;s great article on Unicode&lt;/a&gt; explains the encodings well for the beginners, but it lacks the most important part: how a programmer should proceed, if she does not care &lt;a href=&quot;http://en.wikipedia.org/wiki/Opaque_data_type&quot;&gt;what is inside the string&lt;/a&gt;.&lt;/p&gt;
-
-
-&lt;h2 id=&quot;background&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#background&quot;&gt;Background&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;In 1988, Joseph D. Becker published the &lt;a href=&quot;http://unicode.org/history/unicode88.pdf&quot;&gt;first Unicode draft proposal&lt;/a&gt;. At the basis of his design was the na&amp;#xEF;ve assumption that 16 bits per character would suffice. In 1991, the first version of the Unicode standard was published, with code points limited to 16 bits. In the following years many systems have added support for Unicode and switched to the UCS-2 encoding. It was especially attractive for new technologies, like Qt framework (1992), Windows NT 3.1 (1993) and Java (1995).&lt;/p&gt;
-
-&lt;p&gt;However, it was soon discovered that 16 bits per character will not do for Unicode. In 1996, the UTF-16 encoding was created so existing systems would be able to work with non-16-bit characters. This effectively nullified the rationale behind choosing 16-bit encoding in the first place, namely being a fixed-width encoding. Currently Unicode spans over 109449 characters, about 74500 of them being CJK ideographs.&lt;/p&gt;
-
-&lt;div&gt;
-	&lt;img src=&quot;http://www.utf8everywhere.org/data/nagoya-museum.jpg&quot; alt=&quot;A little child playing an encodings game in front of a large poster about encodings.&quot;&gt;
-	&lt;p&gt;Nagoya City Science Museum. Photo by Vadim Zlotnik.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Microsoft has, ever since, mistakenly used &amp;#x2018;Unicode&amp;#x2019; and &amp;#x2018;widechar&amp;#x2019; as synonyms for &amp;#x2018;UCS-2&amp;#x2019; and &amp;#x2018;UTF-16&amp;#x2019;. Furthermore, since UTF-8 cannot be set as the encoding for narrow string WinAPI, one must compile her code with &lt;code&gt;_UNICODE&lt;/code&gt; rather than &lt;code&gt;_MBCS&lt;/code&gt;. Windows C++ programmers are educated that Unicode must be done with &amp;#x2018;widechars&amp;#x2019;. As a result of this mess, they are now among the most confused ones about what is the right thing to do about text.&lt;/p&gt;
-
-&lt;p&gt;At the same time, in the Linux and the Web worlds, there is a silent agreement that UTF-8 is the most correct encoding for Unicode on the planet Earth. Even though it gives a strong preference to English and therefore to computer languages (such as C++, HTML, XML, etc) over any other text, it is seldom less efficient than UTF-16 for commonly used character sets.&lt;/p&gt;
-
-&lt;h2 id=&quot;facts&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#facts&quot;&gt;The Facts&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;
+&lt;a name=&quot;goals&quot; class=&quot;anchor&quot; href=&quot;https://github.com/trevorlinton/webkit.js#goals&quot;&gt;&lt;/a&gt;Goals&lt;/h2&gt;
 
 &lt;ul&gt;
-	&lt;li&gt;In both UTF-8 and UTF-16 encodings, code points may take up to 4 bytes (contrary to what &lt;a href=&quot;http://www.joelonsoftware.com/articles/Unicode.html&quot;&gt;Joel says&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Produce a renderer in pure JavaScript that supports rendering to WebGL/Canvas contexts.&lt;/li&gt;
+&lt;li&gt;Develop frameworks for image/webpage capturing and automated web testing (similar to PhantomJS).&lt;/li&gt;
+&lt;li&gt;Develop a framework for prototyping CSS filters, HTML elements and attributes.&lt;/li&gt;
+&lt;li&gt;Experimental harness for pure javascript rendering performance.&lt;/li&gt;
+&lt;li&gt;Develop a javascript based browser in nodejs (just for fun).&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;
+&lt;a name=&quot;status&quot; class=&quot;anchor&quot; href=&quot;https://github.com/trevorlinton/webkit.js#status&quot;&gt;&lt;/a&gt;Status&lt;/h2&gt;
 
-	&lt;li&gt;UTF-8 is endianness independent. UTF-16 comes in two flavors: UTF-16LE and UTF-16BE (for different byte orders, respectively). Here we name them collectively as UTF-16.&lt;/li&gt;
-
-	&lt;li&gt;Widechar is 2 bytes in size on some platforms, 4 on others.&lt;/li&gt;
-
-	&lt;li&gt;UTF-8 and UTF-32 result the same order when sorted lexicographically. UTF-16 does not.&lt;/li&gt;
-
-	&lt;li&gt;UTF-8 favors efficiency for English letters and other ASCII characters (one byte per character) while UTF-16 favors several Asian character sets (2 bytes instead of 3 in UTF-8). This is what made UTF-8 the favorite choice in the Web world, where English HTML/XML tags are intermixed with any-language text. Cyrillic, Hebrew and several other popular Unicode blocks are 2 bytes both in UTF-16 and UTF-8.&lt;/li&gt;
-
-	&lt;li&gt;In the Linux world, narrow strings are considered UTF-8 by default almost everywhere. This way, for example, a file copy utility would not need to care about encodings. Once tested on ASCII strings for file name arguments, it would certainly work correctly for file names in any language, as arguments are treated as &lt;a href=&quot;http://en.wikipedia.org/wiki/Opaque_data_type&quot;&gt;cookies&lt;/a&gt;. The code of the file copy utility would not need to change at all to support foreign languages. &lt;code&gt;fopen()&lt;/code&gt; would accept Unicode seamlessly, and so would &lt;code&gt;argv&lt;/code&gt;.&lt;/li&gt;
-
-	&lt;li&gt;On Microsoft Windows, however, making a file copy utility that can accept file names in a mix of several different Unicode blocks requires advanced trickery. First, the application must be compiled as Unicode-aware. In this case, it cannot have &lt;code&gt;main()&lt;/code&gt; function with standard-C parameters. It will then accept UTF-16 encoded &lt;code&gt;argv&lt;/code&gt;. To convert a Windows program written with narrow text in mind to support Unicode, one has to refactor deep and to take care of each and every string variable.&lt;/li&gt;
-
-	&lt;li&gt;On Windows, &lt;code&gt;SetCodePage()&lt;/code&gt; API enables receiving non-ASCII characters, but only from a single ANSI codepage. An unimplemented parameter &lt;code&gt;CF_UTF8&lt;/code&gt; would enable doing the above, on Windows.&lt;/li&gt;
-
-	&lt;li&gt;
-		The standard library shipped with MSVC is poorly implemented. It forwards narrow-string parameters directly to the OS ANSI API. There is no way to override this. Changing &lt;code&gt;std::locale&lt;/code&gt; does not work. It&amp;#x2019;s impossible to open a file with a Unicode name on MSVC using standard features of C++. The standard way to open a file is:
-		&lt;pre&gt;&lt;code&gt;std::fstream fout(&quot;abc.txt&quot;);&lt;/code&gt;&lt;/pre&gt;
-		The proper way to get around is by using Microsoft&amp;#x2019;s own hack that accepts wide-string parameter, which is a non-standard extension.
-	&lt;/li&gt;
-
-	&lt;li&gt;There is no way to return Unicode from &lt;code&gt;std::exception::what()&lt;/code&gt; other than using UTF-8.&lt;/li&gt;
-
-	&lt;li&gt;UTF-16 is often misused as a fixed-width encoding, even by Windows native programs themselves: in plain Windows edit control (until Vista), it takes two backspaces to delete a character which takes 4 bytes in UTF-16. On Windows 7 the console displays that character as two invalid characters, regardless of the font used.&lt;/li&gt;
-
-	&lt;li&gt;Many third-party libraries for Windows do not support Unicode: they accept narrow string parameters and pass them to the ANSI API. Sometimes, even for file names. In the general case, it is impossible to work around this, as a string may not be representable completely in any ANSI code page (if it contains characters from a mix of Unicode blocks). What is normally done on Windows for file names is getting an 8.3 path to the file (if it already exists) and feeding it into such a library. It is not possible if the library is supposed to create a non-existing file. It is not possible if the path is very long and the 8.3 form is longer than &lt;code&gt;MAX_PATH&lt;/code&gt;. It is not possible if short-name generation is disabled in OS settings.&lt;/li&gt;
-
-	&lt;li&gt;UTF-16 is very popular today, even outside the Windows world. Qt, Java, C#, Python, the ICU&amp;#x2014;they all use UTF-16 for internal string representation.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h2 id=&quot;conclusions&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#conclusions&quot;&gt;Our Conclusions&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;UTF-16 is the worst of both worlds&amp;#x2014;variable length and too wide. It exists for historical reasons, adds a lot of confusion and will hopefully die out.&lt;/p&gt;
-
-&lt;p&gt;Portability, cross-platform interoperability and simplicity are more important than interoperability with existing platform APIs. So, the best approach is to use UTF-8 narrow strings everywhere and convert them back and forth on Windows before calling APIs that accept strings. &lt;a href=&quot;http://www.utf8everywhere.org/#faq.cvt.perf&quot;&gt;Performance is seldom an issue&lt;/a&gt; of any relevance when dealing with string-accepting system APIs (e.g. UI code and file system APIs), but there is a huge advantage to using the same encoding everywhere, and &lt;a href=&quot;http://www.utf8everywhere.org/#faq.liberal&quot;&gt;we see no sufficient reason to do otherwise&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Speaking of performance, machines often use strings to communicate (e.g. HTTP headers, XML). Many see this as a mistake, but regardless of that it is nearly always done in English, giving UTF-8 further advantage there. Using different encodings for different kinds of strings significantly increases complexity and consequent bugs.&lt;/p&gt;
-
-&lt;p&gt;In particular, we believe that adding &lt;code&gt;wchar_t&lt;/code&gt; to C++ was a mistake, and so are the Unicode additions to C++11. What must be demanded from the implementations, though, is that the &lt;em&gt;basic execution character set&lt;/em&gt; would be capable of storing any Unicode data. Then, every &lt;code&gt;std::string&lt;/code&gt; or &lt;code&gt;char*&lt;/code&gt; parameter would be Unicode-compatible. &amp;#x2018;If this accepts text, it should be Unicode compatible&amp;#x2019;&amp;#x2014;and with UTF-8, it is also easy to do.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.boost.org/doc/libs/1_49_0/libs/locale/doc/html/rationale.html&quot;&gt;The standard facets have many design flaws&lt;/a&gt;. This includes &lt;code&gt;std::numpunct&lt;/code&gt;, &lt;code&gt;std::moneypunct&lt;/code&gt; and &lt;code&gt;std::ctype&lt;/code&gt; not supporting variable-length encoded characters (non-ASCII UTF-8 and non-BMP UTF-16). They must be fixed:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Toolchain&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-	&lt;li&gt;&lt;code&gt;decimal_point()&lt;/code&gt; and &lt;code&gt;thousands_sep()&lt;/code&gt; should return a string rather than a single code unit. (By the way C locales do support this, albeit not customizable.)&lt;/li&gt;
-
-	&lt;li&gt;&lt;code&gt;toupper()&lt;/code&gt; and &lt;code&gt;tolower()&lt;/code&gt; shall not be phrased in terms of code units, as it does not work in Unicode. For example, the German &amp;#xDF; must be converted to SS and &amp;#xFB04; to FFL.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h2 id=&quot;how&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#how&quot;&gt;How to do text on Windows&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;The following is what we recommend to everyone else for compile-time checked Unicode correctness, ease of use and better multi-platformness of the code. This substantially differs from what is usually recommended as the proper way of using Unicode on Windows. Yet, an in-depth research of these recommendations resulted in the same conclusion. So here it goes:&lt;/p&gt;
+&lt;li&gt;(BAD) Currently will only compile with Emscripten 1.8.2 on MacOSX in Xcode. &lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Building&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-	&lt;li&gt;Do not use &lt;code&gt;wchar_t&lt;/code&gt; or &lt;code&gt;std::wstring&lt;/code&gt; in any place other than adjacent point to APIs accepting UTF-16.&lt;/li&gt;
-
-	&lt;li&gt;Do not use &lt;code&gt;_T(&quot;&quot;)&lt;/code&gt; or &lt;code&gt;L&quot;&quot;&lt;/code&gt; literals in any place other than parameters to APIs accepting UTF-16.&lt;/li&gt;
-
-	&lt;li&gt;Do not use types, functions, or their derivatives that are sensitive to the &lt;code&gt;_UNICODE&lt;/code&gt; constant, such as &lt;code&gt;LPTSTR&lt;/code&gt; or &lt;code&gt;CreateWindow()&lt;/code&gt;.&lt;/li&gt;
-
-	&lt;li&gt;Yet, &lt;code&gt;_UNICODE&lt;/code&gt; is always defined, to avoid passing narrow strings to WinAPI getting silently compiled.&lt;/li&gt;
-
-	&lt;li&gt;&lt;code&gt;std::strings&lt;/code&gt; and &lt;code&gt;char*&lt;/code&gt;, anywhere in the program, are considered UTF-8 (if not said otherwise).&lt;/li&gt;
-
-	&lt;li&gt;
-		Only use Win32 functions that accept widechars (&lt;code&gt;LPWSTR&lt;/code&gt;), never those which accept &lt;code&gt;LPTSTR&lt;/code&gt; or &lt;code&gt;LPSTR&lt;/code&gt;. Pass parameters this way:
-		&lt;pre&gt;&lt;code&gt;::SetWindowTextW(widen(someStdString or &quot;string litteral&quot;).c_str())&lt;/code&gt;&lt;/pre&gt;
-		(The policy uses conversion functions described below.)
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		With MFC strings:
-		&lt;pre&gt;&lt;code&gt;CString someoneElse; // something that arrived from MFC.
-
-// Converted as soon as possible, before passing any further away from the API call:
-std::string s = str(boost::format(&quot;Hello %s\n&quot;) % narrow(someoneElse));
-AfxMessageBox(widen(s).c_str(), L&quot;Error&quot;, MB_OK);&lt;/code&gt;&lt;/pre&gt;
-	&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3 id=&quot;how.files&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#how.files&quot;&gt;Working with files, filenames and fstreams on Windows&lt;/a&gt;&lt;/h3&gt;
+&lt;li&gt;(GOOD) Currently the latest nightly WebKit builds.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Linking&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-	&lt;li&gt;Never produce text output files with non-UTF-8 content&lt;/li&gt;
-
-	&lt;li&gt;Using &lt;code&gt;fopen()&lt;/code&gt; should anyway be avoided for &lt;a href=&quot;http://en.wikipedia.org/wiki/RAII&quot;&gt;RAII/OOD&lt;/a&gt; reasons. However, if necessary, use &lt;code&gt;_wfopen()&lt;/code&gt; and WinAPI conventions as described above.&lt;/li&gt;
-
-	&lt;li&gt;Never pass &lt;code&gt;std::string&lt;/code&gt; or &lt;code&gt;const char*&lt;/code&gt; filename arguments to the &lt;code&gt;fstream&lt;/code&gt; family. MSVC CRT does not support UTF-8 arguments, but it has a non-standard extension which should be used as follows:&lt;/li&gt;
-
-	&lt;li&gt;
-		Convert &lt;code&gt;std::string&lt;/code&gt; arguments to &lt;code&gt;std::wstring&lt;/code&gt; with &lt;code&gt;widen&lt;/code&gt;:
-		&lt;pre&gt;&lt;code&gt;std::ifstream ifs(widen(&quot;hello&quot;), std::ios_base::binary);&lt;/code&gt;&lt;/pre&gt;
-		We will have to manually remove the conversion, when MSVC&amp;#x2019;s attitude to &lt;code&gt;fstream&lt;/code&gt; changes.
-	&lt;/li&gt;
-
-	&lt;li&gt;This code is not multi-platform and may have to be changed manually in the future.&lt;/li&gt;
-
-	&lt;li&gt;Alternatively use a set of wrappers that hide the conversions.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3 id=&quot;how.cvt&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#how.cvt&quot;&gt;Conversion functions&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;This guideline uses the conversion functions from the &lt;a href=&quot;http://cppcms.com/files/nowide/html/&quot;&gt;Boost.Nowide library&lt;/a&gt; (it is not yet a part of boost):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;std::string narrow(const wchar_t *s);
-std::wstring widen(const char *s);
-std::string narrow(const std::wstring &amp;amp;s);
-std::wstring widen(const std::string &amp;amp;s);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The library also provides a set of wrappers for commonly used standard C and C++ library functions that deal with files, as well as means of reading an writing UTF-8 through iostreams.&lt;/p&gt;
-
-&lt;p&gt;These functions and wrappers are easy to implement using Windows&amp;#x2019; &lt;code&gt;MultiByteToWideChar&lt;/code&gt; and &lt;code&gt;WideCharToMultiByte&lt;/code&gt; functions. Any other (possibly faster) conversion routines can be used.&lt;/p&gt;
-
-
-&lt;h2 id=&quot;faq&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq&quot;&gt;FAQ&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ol class=&quot;faqList&quot;&gt;
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.linuxer&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.linuxer&quot;&gt;Q: Are you a linuxer? Is this a concealed religious fight against Windows?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: No, I grew up on Windows, and I am a Windows fan. I believe that they did a wrong choice in the text domain, because they did it earlier than others.&amp;#x2014;&lt;em&gt;Pavel&lt;/em&gt;&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.anglophile&quot;&gt;&lt;a id=&quot;faq.angle.saxon&quot;&gt;&lt;/a&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.anglophile&quot;&gt;Q: Are you an Anglophile? Do you secretly think English alphabet and culture are superior to any other?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: No, and my country is non-ASCII speaking. I do not think that using a format which encodes ASCII characters in single byte is Anglo-centrism, or has anything to do with human interaction. Even though one can argue that source codes of programs, web pages and XML files, OS file names and other computer-to-computer text interfaces should never have existed, as long as they do exist, text is not only for human readers.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.why.care&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.why.care&quot;&gt;Q: Why do you guys care? I program in C# and/or Java and I don&amp;#x2019;t need to care about encodings at all.&lt;/a&gt;&lt;/h3&gt;
-
-		&lt;p&gt;A: Not true. Both C# and Java offer a 16 bit &lt;code&gt;char&lt;/code&gt; type, which is less than a Unicode character, congratulations. The .NET indexer &lt;code&gt;str[i]&lt;/code&gt; works in units of the internal representation, hence a leaky abstraction once again. Substring methods will happily return an invalid string, cutting a non-BMP character in parts.&lt;/p&gt;
-		
-		&lt;p&gt;Furthermore, you have to mind encodings when you are writing your text to files on disk, network communications, external devices, or any place for other program to read from. Please be kind to use &lt;code&gt;System.Text.Encoding.UTF8&lt;/code&gt; (.NET) in these cases, never &lt;code&gt;Encoding.ASCII&lt;/code&gt;, UTF-16 or cellphone PDU, regardless of the assumptions about the contents.&lt;/p&gt;
-
-		&lt;p&gt;Web frameworks like ASP.NET do suffer from the poor choice of internal string representation in the underlying framework: the expected string output (and input) of a web application is nearly always UTF-8, resulting in significant conversion overhead in high-throughput web applications and web services.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.liberal&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.liberal&quot;&gt;Q: Why not just let any programmer use her favorite encoding internally, as long as she knows how to use it?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: We have nothing against correct using of any encoding. However, it becomes a problem when the same type, such as &lt;code&gt;std::string&lt;/code&gt;, means different things in different contexts. While it is &amp;#x2018;ANSI codepage&amp;#x2019; for some, for others, it means &amp;#x2018;this code is broken and does not support non-English text&amp;#x2019;. In our programs, it means Unicode-aware UTF-8 string. This diversity is a source of many bugs and much misery: this additional complexity is something that world does not really need, and the result is much Unicode-broken software, industry-wide.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.almostfw&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.almostfw&quot;&gt;Q: UTF-16 characters that take more than two bytes are extremely rare in the real world. This practically makes UTF-16 a fixed-width encoding, giving it a whole bunch of advantages. Can&amp;#x2019;t we just neglect these characters?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Are you serious about not supporting all of Unicode in your software design? And, if you are going to support it anyway, how does the fact that non-BMP characters are rare practically change anything, except for making software testing harder? What does matter, however, is that text manipulations are relatively rare in real applications&amp;#x2014;compared to just passing strings around as-is. This means the &quot;almost fixed width&quot; has little performance advantage (see Performance), while having shorter strings may be significant.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.def.unicode&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.def.unicode&quot;&gt;Q: Why do you turn on the &lt;code&gt;_UNICODE&lt;/code&gt; define, if you do not intend to use Windows&amp;#x2019; &lt;code&gt;LPTSTR&lt;/code&gt;/&lt;code&gt;TCHAR&lt;/code&gt;/etc macros?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: This is a precaution against plugging a UTF-8 char* string into ANSI-expecting functions of Windows API. We want it to generate a compiler error. It is the same kind of a hard-to-find bug as passing an &lt;code&gt;argv[]&lt;/code&gt; string to &lt;code&gt;fopen()&lt;/code&gt; on Windows: it assumes that the user will never pass non-current-codepage filenames. You will be unlikely to find this kind of a bug by manual testing, unless your testers are trained to supply Chinese file names occasionally, and yet it is a broken program logic. Thanks to &lt;code&gt;_UNICODE&lt;/code&gt; define, you get an error for that.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.naive&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.naive&quot;&gt;Q: Isn&amp;#x2019;t it quite na&amp;#xEF;ve to think that Microsoft will stop using widechars one day?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Let&amp;#x2019;s first see when they start supporting &lt;code&gt;CP_UTF8&lt;/code&gt; as a valid locale. This should not be very hard to do. Then, we see no reason why anybody would continue using the widechar APIs. Also, adding support for &lt;code&gt;CP_UTF8&lt;/code&gt; would &amp;#x2018;unbreak&amp;#x2019; some of existing unicode-broken programs and libraries.&lt;/p&gt;
-
-		&lt;p&gt;Some say that adding &lt;code&gt;CP_UTF8&lt;/code&gt; support would &lt;em&gt;break&lt;/em&gt; existing applications that use the ANSI API, and that this was supposedly the reason why Microsoft had to resort to creating the wide string API. This is not true. Even some popular ANSI encodings are variable length (Shift JIS, for example), so no correct code would become broken. The reason Microsoft chose UCS-2 is purely historical. Back then UTF-8 hasn&amp;#x2019;t yet existed, Unicode was believed to be &amp;#x2018;just a wider ASCII&amp;#x2019;, and it was cosidered important to use a fixed-width encoding.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.glossary&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.glossary&quot;&gt;Q: What are characters, code points, code units and grapheme clusters?&lt;/a&gt;&lt;/h3&gt;
-
-		&lt;p&gt;A: Here is an excerpt of the definitions according to the Unicode Standard with our comments. Refer to the relevant sections of the standard for more detailed description.&lt;/p&gt;
-
-		&lt;dl&gt;
-			&lt;dt&gt;Code point&lt;/dt&gt;
-			&lt;dd&gt;Any numerical value in the Unicode codespace.&lt;sup&gt;[&amp;#xA7;3.4, D10]&lt;/sup&gt; For instance: U+3243F. &lt;/dd&gt;
-
-			&lt;dt&gt;Code unit&lt;/dt&gt;
-			&lt;dd&gt;The minimal bit combination that can represent a unit of encoded text.&lt;sup&gt;[&amp;#xA7;3.9, D77]&lt;/sup&gt; For example, UTF-8, UTF-16 and UTF-32 use 8-bit, 16-bit and 32-bit code units respectively. The above code point will be encoded as &amp;#x2018;&lt;code&gt;f0 b2 90 bf&lt;/code&gt;&amp;#x2019; in UTF-8, &amp;#x2018;&lt;code&gt;d889 dc3f&lt;/code&gt;&amp;#x2019; in UTF-16 and &amp;#x2018;&lt;code&gt;0003243f&lt;/code&gt;&amp;#x2019; in UTF-32. Note that these are just sequences of &lt;em&gt;groups of bits&lt;/em&gt;; how they are stored further depends on the endianess of the particular encoding. So, when storing the above UTF-16 code units on an octet-oriented media, they will be converted to &amp;#x2018;&lt;code&gt;d8 89 dc 3f&lt;/code&gt;&amp;#x2019; for UTF-16BE and to &amp;#x2018;&lt;code&gt;89 d8 3f dc&lt;/code&gt;&amp;#x2019; for UTF-16LE.&lt;/dd&gt;
-
-			&lt;dt&gt;Abstract character&lt;/dt&gt;
-			&lt;dd&gt;
-				&lt;p&gt;A unit of information used for the organization, control, or representation of textual data.&lt;sup&gt;[&amp;#xA7;3.4, D7]&lt;/sup&gt; The standard further says in &amp;#xA7;3.1:&lt;/p&gt;
-
-				&lt;blockquote&gt;&lt;p&gt;For the Unicode Standard, [...] the repertoire is inherently open. Because Unicode is a universal encoding, any abstract character that could ever be encoded is a potential candidate to be encoded, regardless of whether the character is currently known.&lt;/p&gt;&lt;/blockquote&gt;
-
-				&lt;p&gt;The definition is indeed abstract. Whatever one can think of as a character&amp;#x2014;&lt;em&gt;is&lt;/em&gt; an abstract character. For example, &lt;img src=&quot;http://www.utf8everywhere.org/data/glyph-ungwe.png&quot; alt=&quot;&quot;&gt; &lt;em&gt;tengwar letter ungwe&lt;/em&gt; is an abstract character, although it is not yet representable in Unicode.&lt;/p&gt;
-			&lt;/dd&gt;
-
-			&lt;dt&gt;Encoded character&lt;/dt&gt;
-			&lt;dt&gt;Coded character&lt;/dt&gt;
-			&lt;dd&gt;
-				&lt;p&gt;A mapping between a code point and an abstract character.&lt;sup&gt;[&amp;#xA7;3.4, D11]&lt;/sup&gt; For example, U+1F428 is a coded character which represents the abstract character &amp;#x1F428; &lt;span class=&quot;uniname&quot;&gt;koala&lt;/span&gt;.&lt;/p&gt;
-
-				&lt;p&gt;This mapping is neither total, nor injective, nor surjective:&lt;/p&gt;
-
-				&lt;ul&gt;
-					&lt;li&gt;Surragates, noncharacters and unassigned code points do not correspond to abstract characters at all.&lt;/li&gt;
-					&lt;li&gt;Some abstract characters can be encoded by different code points; U+03A9 &lt;span class=&quot;uniname&quot;&gt;greek capital letter omega&lt;/span&gt; and U+2126 &lt;span class=&quot;uniname&quot;&gt;ohm sign&lt;/span&gt; both correspond to the same abstract character &amp;#x2018;&amp;#x3A9;&amp;#x2019;, and &lt;em&gt;must be treated idnetically&lt;/em&gt;.&lt;/li&gt;
-					&lt;li&gt;Some abstract characters cannot be encoded by a single code point. These are represented by &lt;em&gt;sequences&lt;/em&gt; of coded characters. For example, the only way to represent the abstract character &amp;#x44E;&amp;#x301; &lt;em&gt;cyrillic small letter yu with acute&lt;/em&gt; is by the sequence U+044E &lt;span class=&quot;uniname&quot;&gt;cyrillic small letter yu&lt;/span&gt; followed by U+0301 &lt;span class=&quot;uniname&quot;&gt;combining acute accent&lt;/span&gt;.&lt;/li&gt;
-				&lt;/ul&gt;
-				
-				&lt;p&gt;Moreover, for some abstract characters, there exist representations using multiple code points, &lt;em&gt;in addition&lt;/em&gt; to the single coded character form. The abstract character &amp;#x1F5; can be coded by the single code point U+01F5 &lt;span class=&quot;uniname&quot;&gt;latin small letter g with acute&lt;/span&gt;, or by the sequence &amp;lt;U+0067 &lt;span class=&quot;uniname&quot;&gt;latin small letter g&lt;/span&gt;, U+0301 &lt;span class=&quot;uniname&quot;&gt;combining acute accent&lt;/span&gt;&amp;gt;.&lt;/p&gt;
-			&lt;/dd&gt;
-
-			&lt;dt&gt;User-perceived character&lt;/dt&gt;
-			&lt;dd&gt;Whatever the end user thinks of as a character. This notion is language dependent. For instance, &amp;#x2018;ch&amp;#x2019; is two letters in English and Latin, but considered to be one letter in Czech and Slovak.&lt;/dd&gt;
-
-			&lt;dt&gt;Grapheme cluster&lt;/dt&gt;
-			&lt;dd&gt;A sequence of coded characters that &amp;#x2018;should be kept together&amp;#x2019;.&lt;sup&gt;[&amp;#xA7;2.11]&lt;/sup&gt; Grapheme clusters approximate the notion of user-perceived characters in a language independent way. They are used for, e.g., cursor movement and selection.&lt;/dd&gt;
-
-			&lt;dt&gt;Character&lt;/dt&gt;
-			&lt;dd&gt;
-				&lt;p&gt;May mean any of the above. The Unicode Standard uses it as a synonym for &lt;em&gt;coded character&lt;/em&gt;.&lt;sup&gt;[&amp;#xA7;3.4]&lt;/sup&gt;&lt;/p&gt;
-
-				&lt;p&gt;When some programming language or library documentation says &amp;#x2018;character&amp;#x2019;, it almost always means a code unit. When an end user is asked about the number of characters in a string, she will count the user-perceived characters. When a programmer tries to count the number of characters, she will count the number of code units, code points, or grapheme clusters, according to the level of her expertise.  All this is a source of confusion, as people conclude that, if for the length of the string &amp;#x2018;&amp;#x1F428;&amp;#x2019; the library returns a value other than one, then it &amp;#x2018;does not support Unicode&amp;#x2019;.&lt;/p&gt;
-			&lt;/dd&gt;
-		&lt;/dl&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.asians&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.asians&quot;&gt;Q: Why would the Asians give up on UTF-16 encoding, which saves them 50% the memory per character?&lt;/a&gt;&lt;/h3&gt;
-
-		&lt;p&gt;A: It does so only in artificially constructed examples containing only characters in the U+0800 to U+FFFF range. However, computer-to-computer text interfaces dominate any other. This includes XML, HTTP, filesystem paths and configuration files&amp;#x2014;they all use almost exclusively ASCII characters, and in fact UTF-8 is used just as often in those countries.&lt;/p&gt;
-
-		&lt;p&gt;For a dedicated storage of Chinese books, UTF-16 may still be used as a fair optimization. As soon as the text is retrieved from such storage, it should be converted to the standard compatible with the rest of the world. Anyway, if storage is at premium, a lossless compression will be used. In such cases, UTF-8 and UTF-16 will take roughly the same space. Furthermore, &amp;#x2018;in the said languages, a glyph conveys more information than a [L]atin character so it is justified for it to take more space.&amp;#x2019; (Tronic, &lt;a href=&quot;http://programmers.stackexchange.com/a/102211/34925&quot;&gt;UTF-16 harmful&lt;/a&gt;).&lt;/p&gt;
-
-		&lt;p&gt;Here are the results of a simple experiment. The space used by the HTML source of some web page (Japan article, retrieved from Japanese Wikipedia on 2012&amp;#x2013;01&amp;#x2013;01) is shown in the first column. The second column shows the results for text with markup removed, that is &amp;#x2018;select all, copy, paste into plain text file&amp;#x2019;.&lt;/p&gt;
-
-		&lt;table class=&quot;basicTable&quot;&gt;
-			&lt;tbody&gt;
-				&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;HTML Source (&amp;#x394; UTF-8)&lt;/th&gt;&lt;th&gt;Dense text (&amp;#x394; UTF-8)&lt;/th&gt;&lt;/tr&gt;
-				&lt;tr&gt;&lt;th&gt;UTF-8&lt;/th&gt;&lt;td&gt;767 KB (0%)&lt;/td&gt;&lt;td&gt;222 KB (0%)&lt;/td&gt;&lt;/tr&gt;
-				&lt;tr&gt;&lt;th&gt;UTF-16&lt;/th&gt;&lt;td&gt;1&amp;#x2009;186 KB (+55%)&lt;/td&gt;&lt;td&gt;176 KB (&amp;#x2212;21%)&lt;/td&gt;&lt;/tr&gt;
-				&lt;tr&gt;&lt;th&gt;UTF-8 zipped&lt;/th&gt;&lt;td&gt;179 KB (&amp;#x2212;77%)&lt;/td&gt;&lt;td&gt;83 KB (&amp;#x2212;63%)&lt;/td&gt;&lt;/tr&gt;
-				&lt;tr&gt;&lt;th&gt;UTF-16LE zipped&lt;/th&gt;&lt;td&gt;192 KB (&amp;#x2212;75%)&lt;/td&gt;&lt;td&gt;76 KB (&amp;#x2212;66%)&lt;/td&gt;&lt;/tr&gt;
-				&lt;tr&gt;&lt;th&gt;UTF-16BE zipped&lt;/th&gt;&lt;td&gt;194 KB (&amp;#x2212;75%)&lt;/td&gt;&lt;td&gt;77 KB (&amp;#x2212;65%)&lt;/td&gt;&lt;/tr&gt;
-			&lt;/tbody&gt;
-		&lt;/table&gt;
-
-		&lt;p&gt;As can be seen, UTF-16 takes about 50% more space than UTF-8 on real data, it only saves 20% for dense Asian text, and hardly competes with general purpose compression algorithms.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.boms&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.boms&quot;&gt;Q: What do you think about BOMs?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: They are another reason not to use UTF-16. UTF-8 has a BOM too, even though byte order is not an issue in this encoding. This is to manifest that this is a UTF-8 stream. If UTF-8 remains the only popular encoding (as it already is in the internet world), the BOM becomes redundant. In practice, many UTF-8 text files omit BOMs today. The Unicode Standard does not recommend using BOMs.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.crlf&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.crlf&quot;&gt;Q: What do you think about line endings?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: All files shall be read and written in binary mode since this guarantees interoperability&amp;#x2014;a program will always give the same output on any system. Since the C and C++ standards use &lt;code&gt;\n&lt;/code&gt; as in-memory line endings, this will cause all files to be written in the POSIX convention. It may cause trouble when the file is opened in Notepad on Windows; however, any decent text viewer understands such line endings.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.uni.perf&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.uni.perf&quot;&gt;Q: But what about performance of text processing algorithms, byte alignment, etc?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Is it really better with UTF-16? Maybe so. ICU uses UTF-16 for historical reasons, thus it is quite hard to measure. However, most of the times strings are treated as cookies, not sorted or reversed every second use. Smaller encoding is then favorable for performance.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.utf8.fossil&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.utf8.fossil&quot;&gt;Q: Isn&amp;#x2019;t UTF-8 merely an attempt to be compatible with ASCII? Why keep this old fossil?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Maybe it was. Today, it is a better and more popular encoding of Unicode than any other.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.utf16.fault&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.utf16.fault&quot;&gt;Q: Is it really a fault of UTF-16 that people misuse it, assuming that it is 16 bits per character?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Not really. But yes, safety is an important feature of every design.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.confuse&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.confuse&quot;&gt;Q: If &lt;code&gt;std::string&lt;/code&gt; means UTF-8, wouldn&amp;#x2019;t that get confused with code that stores plain text in &lt;code&gt;std::string&lt;/code&gt;s?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: There is no such thing as plain text. There is no reason for storing codepage-ANSI or ASCII-only text in a class named &amp;#x2018;string&amp;#x2019;.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.cvt.perf&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.cvt.perf&quot;&gt;Q: Won&amp;#x2019;t the conversions between UTF-8 and UTF-16 when passing strings to Windows slow down my application?&lt;/a&gt;&lt;/h3&gt;
-
-		&lt;p&gt;A: First, you will do &lt;em&gt;some&lt;/em&gt; conversion either way. It&amp;#x2019;s either when calling the system, or when interacting with the rest of the world. Even if your interaction with the system is more frequent in your application, here is a little experiment.&lt;/p&gt;
-
-		&lt;p&gt;A typical use of the OS is to open files. This function executes in (184&amp;#x2009;&amp;#xB1;&amp;#x2009;3)&amp;#x3BC;s on my machine:&lt;/p&gt;
-
-		&lt;pre&gt;&lt;code&gt;void f(const wchar_t* name)
-{
-    HANDLE f = CreateFile(name, GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_ALWAYS, 0, 0);
-    DWORD written;
-    WriteFile(f, &quot;Hello world!\n&quot;, 13, &amp;amp;written, 0);
-    CloseHandle(f);
-}&lt;/code&gt;&lt;/pre&gt;
-
-		&lt;p&gt;While this runs in (186&amp;#x2009;&amp;#xB1;&amp;#x2009;0.7)&amp;#x3BC;s:&lt;/p&gt;
-
-		&lt;pre&gt;&lt;code&gt;void f(const char* name)
-{
-    HANDLE f = CreateFile(widen(name).c_str(), GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_ALWAYS, 0, 0);
-    DWORD written;
-    WriteFile(f, &quot;Hello world!\n&quot;, 13, &amp;amp;written, 0);
-    CloseHandle(f);
-}&lt;/code&gt;&lt;/pre&gt;
-
-		&lt;p&gt;(Run with &lt;code&gt;name=&quot;D:\\a\\test\\subdir\\subsubdir\\this is the sub dir\\a.txt&quot;&lt;/code&gt; in both cases. It was averaged over 5 runs. We used an optimized &lt;code&gt;widen&lt;/code&gt; that relies on &lt;code&gt;std::string&lt;/code&gt; contiguous storage guarantee given by C++11.)&lt;/p&gt;
-
-		&lt;p&gt;This is just (1&amp;#x2009;&amp;#xB1;&amp;#x2009;2)% overhead. Moreover, &lt;code&gt;MultiByteToWideChar&lt;/code&gt; is almost surely suboptimal. Better UTF-8&amp;#x2194;UTF-16 conversion functions exist.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.literal&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.literal&quot;&gt;Q: How do I write UTF-8 string literal in my C++ code?&lt;/a&gt;&lt;/h3&gt;
-
-		&lt;p&gt;A: If you internationalize your software then all non-ASCII strings will be loaded from an external translation database, so it is not a problem.&lt;/p&gt;
-
-		&lt;p&gt;If you still want to embed a special character you can do it as follows. In C++11 you can do it as:&lt;/p&gt;
-
-		&lt;p class=&quot;display&quot;&gt;&lt;code&gt;u8&quot;&amp;#x2203;y &amp;#x2200;x &amp;#xAC;(x &amp;#x227A; y)&quot;&lt;/code&gt;&lt;/p&gt;
-
-		&lt;p&gt;With compilers that do not support &amp;#x2018;u8&amp;#x2019; you can hard-code the UTF-8 code units as follows:&lt;/p&gt;
-
-		&lt;p class=&quot;display&quot;&gt;&lt;code&gt;&quot;\xE2\x88\x83y \xE2\x88\x80x \xC2\xAC(x \xE2\x89\xBA y)&quot;&lt;/code&gt;&lt;/p&gt;
-
-		&lt;p&gt;However the most straightforward way is to just write the string as-is and save the source file encoded in UTF-8:&lt;/p&gt;
-
-		&lt;p class=&quot;display&quot;&gt;&lt;code&gt;&quot;&amp;#x2203;y &amp;#x2200;x &amp;#xAC;(x &amp;#x227A; y)&quot;&lt;/code&gt;&lt;/p&gt;
-
-		&lt;p&gt;Unfortunately, MSVC converts it to some ANSI codepage, corrupting the string. To work around this, save the file in UTF-8 &lt;em&gt;without BOM&lt;/em&gt;. MSVC will assume that it is in the correct codepage and will not touch your strings. However, it renders it impossible to use Unicode identifiers and wide string literals (that you will not be using anyway).&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.validation&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.validation&quot;&gt;Q: How can I check for presence of a specific ASCII character, e.g. apostrophe (') for SQL injection prevention, or HTML markup special characters, etc. in a UTF-8 encoded string?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Do as you would for an ASCII string. Every non-ASCII character is encoded in UTF-8 as a sequence of bytes, each of them having value greater than 127. This leaves no place for collision for a na&amp;#xEF;ve algorithm&amp;#x2014;simple, fast and elegant.&lt;/p&gt;
-		&lt;p&gt;Also, you can search for a UTF-8 encoded substring in a UTF-8 string as if it was a plain byte array&amp;#x2014;no need to mind code point boundaries. This is a design feature of UTF-8&amp;#x2014;a leading byte of an encoded code point can never hold value corresponding to one of trailing bytes of any other code point.&lt;/p&gt;
-	&lt;/li&gt;
-
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.convert&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.convert&quot;&gt;Q: I have a complex large char-based Windows application. What is the easiest way to make it Unicode-aware?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;Keep the chars. Define _UNICODE to get compiler errors where narrow()/widen() should be used. Find all fstream and fopen() uses, and use wide overloads as described above. By now, you are almost done.&lt;/p&gt;
-		&lt;p&gt;If you use 3rd-party libraries that do not support Unicode, e.g. forwarding file name strings as-is to fopen(), you will have to work around with tools such as GetShortPathName() as shown above.&lt;/p&gt;
-	&lt;/li&gt;
-	
-	&lt;li&gt;
-		&lt;h3 id=&quot;faq.whats.now&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#faq.whats.now&quot;&gt;Q: I already use this approach and I want to make our vision come true. What can I do?&lt;/a&gt;&lt;/h3&gt;
-		&lt;p&gt;A: Review your code and see what library is most painful to use in portable Unicode-aware code. Open a bug report to the authors.&lt;/p&gt;
-		&lt;p&gt;If you are a C or C++ library author, use &lt;code&gt;char*&lt;/code&gt; and &lt;code&gt;std::string&lt;/code&gt; with UTF-8 implied, and refuse to support ANSI code pages&amp;#x2014;since they are inherently Unicode-broken.&lt;/p&gt;
-		&lt;p&gt;If you are a Microsoft employee, push for implementing support of the &lt;code&gt;CP_UTF8&lt;/code&gt; as one of narrow API code pages.&lt;/p&gt;
-	&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;h2 id=&quot;myths&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myths&quot;&gt;Myths&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p class=&quot;note&quot;&gt;Note: If you are not familiar with the Unicode terminology, please read &lt;a href=&quot;http://www.utf8everywhere.org/#faq.glossary&quot;&gt;this FAQ&lt;/a&gt; first.&lt;/p&gt;
-
-&lt;p class=&quot;note&quot;&gt;Note: For the purpose of this discussion, indexing into the string is also a kind of character counting.&lt;/p&gt;
-
-&lt;h3 id=&quot;myth.utf16.o1&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myth.utf16.o1&quot;&gt;Counting characters can be done in constant time with UTF-16.&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;This is a common mistake by those who think that UTF-16 is a fixed-width encoding. It is not. In fact UTF-16 is a variable length encoding. Refer to &lt;a href=&quot;http://www.utf8everywhere.org/#faq.almostfw&quot;&gt;this FAQ&lt;/a&gt; if you still deny the existence of non-BMP characters.&lt;/p&gt;
-
-&lt;p&gt;Many try to fix this statement by switching encodings, and come with the following statement:&lt;/p&gt;
-
-&lt;h3 id=&quot;myth.utf32.o1&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myth.utf32.o1&quot;&gt;Counting characters can be done in constant time with UTF-32.&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Now, the truth of this statement depends on the meaning of the ambiguous and overloaded word &amp;#x2018;character&amp;#x2019;. The only interpretations that would make the claim true are &amp;#x2018;code units&amp;#x2019; and &amp;#x2018;code points&amp;#x2019;, which coincide in UTF-32. However, code points are not characters, neither according to Unicode nor according to the end user. Some of them are &lt;em&gt;non-characters&lt;/em&gt;. These should not be interchanged though. So, assuming we can guarantee that the string does not contain non-characters, each code point would represent a single &lt;em&gt;coded character&lt;/em&gt;, and we could count them.&lt;/p&gt;
-
-&lt;p&gt;But, is it so an important achievement? Why the above concern raises at all?&lt;/p&gt;
-
-&lt;h3 id=&quot;myth.strlen&quot;&gt;&lt;a id=&quot;myth.nth.char&quot;&gt;&lt;/a&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myth.strlen&quot;&gt;Counting coded characters or code points is important.&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;The importance of code points is frequently overstated. This is due to misunderstanding of the complexity of Unicode, which merely reflects the complexity of human languages. It is easy to tell how many characters are there in &amp;#x2018;Abracadabra&amp;#x2019;, but it is not so simple for the following string:&lt;/p&gt;
-
-&lt;p class=&quot;display&quot;&gt;&amp;#x41F;&amp;#x440;&amp;#x438;&amp;#x432;&amp;#x435;&amp;#x301;&amp;#x442; &amp;#x928;&amp;#x92E;&amp;#x938;&amp;#x94D;&amp;#x924;&amp;#x947; &amp;#x5E9;&amp;#x5B8;&amp;#x5C1;&amp;#x5DC;&amp;#x5D5;&amp;#x5B9;&amp;#x5DD;&lt;/p&gt;
-
-&lt;p&gt;The above string consists of 22 (!) code points but only 16 grapheme clusters. So, &amp;#x2018;Abracadabra&amp;#x2019; consists of 11 code points, the above string consists of 22 code points, and further of 20 if converted to &lt;a href=&quot;http://unicode.org/reports/tr15/&quot;&gt;NFC&lt;/a&gt;. Yet, the number of code points is irrelevant to almost any software engineering question, with perhaps the only exception of converting the string to UTF-32. For example:&lt;/p&gt;
+&lt;li&gt;(HORRIFIC) There are plenty of linking issues to be addressed; however visibility into this is minimal. Currently the system links but has quite a few unresolved symbols that will cause the renderer to crash. &lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Tests&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-	&lt;li&gt;For cursor movement, text selection and alike, grapheme clusters shall be used. &lt;/li&gt;
+&lt;li&gt;(NON EXISTANT) Tests for javascript&amp;lt;-&amp;gt;C++ needs to be developed (non-layout related code)&lt;/li&gt;
+&lt;li&gt;(BAD) Unit tests that integrate with WebKit's LayoutTests&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Supported Features&lt;/strong&gt;&lt;/p&gt;
 
-	&lt;li&gt;For limiting the length of a string in input fields, file formats, protocols, or databases, the length is measured in &lt;em&gt;code units&lt;/em&gt; of some predetermined encoding. The reason is that any length limit is derived from the fixed amount of memory allocated for the string at a lower level, be it in memory, disk or in a particular data structure.&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(GOOD) Features that are &lt;em&gt;not&lt;/em&gt; currently supported:&lt;/p&gt;
 
-	&lt;li&gt;The size of the string as it appears on the screen is unrelated to the number of code points in the string. One has to communicate with the rendering engine for this. Code points do not occupy one column even in monospace fonts and terminals. POSIX takes this into account. &lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Accelerated 2D Canvas&lt;/li&gt;
+&lt;li&gt;CSS Image Resolution&lt;/li&gt;
+&lt;li&gt;CSS Image Orientation&lt;/li&gt;
+&lt;li&gt;CSS3 Text&lt;/li&gt;
+&lt;li&gt;Draggable Regions&lt;/li&gt;
+&lt;li&gt;Encrypted Media&lt;/li&gt;
+&lt;li&gt;Font Load Events&lt;/li&gt;
+&lt;li&gt;Input Speech&lt;/li&gt;
+&lt;li&gt;Audio&lt;/li&gt;
+&lt;li&gt;Video&lt;/li&gt;
+&lt;li&gt;Media Streams&lt;/li&gt;
+&lt;li&gt;JavaScript Debugger / Inspector&lt;/li&gt;
+&lt;li&gt;MHTML&lt;/li&gt;
+&lt;li&gt;PDF/PDFKit&lt;/li&gt;
+&lt;li&gt;Quota's&lt;/li&gt;
+&lt;li&gt;Web Workers&lt;/li&gt;
+&lt;li&gt;Web Sockets&lt;/li&gt;
+&lt;li&gt;Shadow DOM&lt;/li&gt;
+&lt;li&gt;Web Timing&lt;/li&gt;
+&lt;li&gt;XSLT&lt;/li&gt;
+&lt;li&gt;Native Widgets (IFRAME, Buttons, Text Boxes, etc.)&lt;/li&gt;
+&lt;li&gt;Any Resource Loaders&lt;/li&gt;
+&lt;li&gt;Font Rendering&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Frameworks&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;myth.nfc&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myth.nfc&quot;&gt;In NFC each code point corresponds to one user-perceived character.&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(NON EXISTANT) Frameworks to easily perform common tasks with the renderer under various contexts.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;No, because the number of user-perceived characters that can be represented in Unicode is virtually infinite. Even in practice, most characters do not have a fully composed form. For example, the NFD string from the example above, which consists of three &lt;em&gt;real&lt;/em&gt; words in three &lt;em&gt;real&lt;/em&gt; languages, will consist of 20 code points in NFC. This is still far more than the 16 user-perceived characters it has.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(NON EXISTANT) Lots and lots of documentation, currently this is it.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;
+&lt;a name=&quot;building&quot; class=&quot;anchor&quot; href=&quot;https://github.com/trevorlinton/webkit.js#building&quot;&gt;&lt;/a&gt;Building&lt;/h2&gt;
 
-&lt;h3 id=&quot;myth.strlen.correctness&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#myth.strlen.correctness&quot;&gt;The string &lt;code&gt;length()&lt;/code&gt; operation must count user-perceived or coded characters. If not, it does not support Unicode properly.&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Unicode support of libraries and programming languages is frequently judged by the value returned for the &amp;#x2018;length of the string&amp;#x2019; operation. According to this evaluation of Unicode support, most popular languages, such as C#, Java, and even the ICU itself, would not support Unicode. For example, the length of the one character string &amp;#x2018;&amp;#x1F428;&amp;#x2019; will be often reported to be 2 where UTF-16 is used as for the internal string representation and 4 for the languages that internally use UTF-8. The source of the misconception is that the specification of these languages use the word &amp;#x2018;character&amp;#x2019; to mean a code unit, while the programmer expects it to be something else.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MacOS X Lion with Xcode 4+&lt;/li&gt;
+&lt;li&gt;Emscripten 1.8.2+&lt;/li&gt;
+&lt;li&gt;At least 16GB of free space (seriously)&lt;/li&gt;
+&lt;li&gt;At least 4GB of RAM&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Building webkit.js step-by-step&lt;/strong&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;Clone the repo.&lt;/li&gt;
+&lt;li&gt;Go to WebKitJS/tools and in a terminal run 
+&lt;code&gt;sh
+cp -pa ./WebKitJS/tools/EmscriptenXcode.xcplugin /Applications/Xcode.app/Contents/PlugIns/EmscriptenXcode.plugin 
+vim /Applications/Xcode.app/Contents/PlugIns/EmscriptenXcode.xcplugin/Contents/Resources/GCC\ 4.5.xcspec 
+&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Modify line 35 and set ExecPath to the path of em++ included with Emscripten.&lt;/li&gt;
+&lt;li&gt;Then run:
+&lt;code&gt;sh
+vim WebKit/Source/WebCore/Configurations/Base.xcconfig
+&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Replace &quot;EMSCRIPTEN_SYSTEM&quot; with the path to the system headers for emscripten.&lt;/li&gt;
+&lt;li&gt;Open WebKit.xcworkspace in Xcode&lt;/li&gt;
+&lt;li&gt;Change the Schema to &quot;WebcoreJS&quot; and make sure you build in Release (some systems Normal), not Debug. Hit Play and get some coffee or go do some chores.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your linking will most likely fail.  If so, just run the terminal command:&lt;/p&gt;
 
-&lt;h2 id=&quot;about&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#about&quot;&gt;About the authors&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlight highlight-sh&quot;&gt;&lt;pre&gt;em++ -r -isysroot /Path/To/Emscripten/1.8.2/system /Path/To/Your/WebKitBuild/*.o -std&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c++11 -s &lt;span class=&quot;nv&quot;&gt;FULL_ES2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 -O2 -stdlib&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;libc++ -s &lt;span class=&quot;nv&quot;&gt;LINKABLE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 -o /Path/To/Your/WebKitBuild/webkit.js
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can also create individual js files for each class in WebKit to ease debugging. Run:&lt;/p&gt;
 
-&lt;p&gt;This manifesto was written by &lt;a href=&quot;http://stackoverflow.com/users/73656/pavel-radzivilovsky&quot;&gt;Pavel Radzivilovsky&lt;/a&gt;, Yakov Galka and &lt;a href=&quot;http://slavanov.com&quot;&gt;Slava Novgorodov&lt;/a&gt;, as a result of much experience and research of real-world Unicode issues and mistakes done by real-world programmers. The goal is to improve awareness of text issues and to inspire industry-wide changes to make Unicode-aware programming easier, ultimately improving the experience of users of those programs written by human engineers. Neither of us is involved in the Unicode consortium.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-sh&quot;&gt;&lt;pre&gt;find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.o&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; xargs -I &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt; em++ -isysroot /Path/To/Your/Emscripten/1.8.2/system &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt; -std&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c++11 -s &lt;span class=&quot;nv&quot;&gt;FULL_ES2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 -O2 -stdlib&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;libc++ -s &lt;span class=&quot;nv&quot;&gt;LINKABLE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 -s &lt;span class=&quot;nv&quot;&gt;SIDE_MODULE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 -o /Some/Folder/For/Output/&lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;.js
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;
+&lt;a name=&quot;contributing&quot; class=&quot;anchor&quot; href=&quot;https://github.com/trevorlinton/webkit.js#contributing&quot;&gt;&lt;/a&gt;Contributing&lt;/h2&gt;
 
-&lt;p&gt;Much of the text was inspired by &lt;a href=&quot;http://programmers.stackexchange.com/questions/102205/should-utf-16-be-considered-harmful&quot;&gt;discussions on StackOverflow initiated by Artyom Beilis&lt;/a&gt;, the author of Boost.Locale. You can leave comments/feedback there. Additional inspiration came from the development conventions at &lt;a href=&quot;http://www.visionmap.com&quot;&gt;VisionMap&lt;/a&gt; and Michael Hartl&amp;#x2019;s &lt;a href=&quot;http://tauday.com/tau-manifesto&quot;&gt;tauday.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There's so much to be done any help is appreciated, at the moment I have a brutal wrapper/harness that can render DIV's with various colors to a WebGL surface in Chrome 32. It's not impressive but its a proof of concept.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Getting around the code&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;extern&quot;&gt;&lt;a class=&quot;aId&quot; href=&quot;http://www.utf8everywhere.org/#extern&quot;&gt;External links&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKit/&lt;/code&gt; This is a modified version of Apple's official repo.&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKit/Source/WebCore&lt;/code&gt; This is where 90% of the work is done.&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKit/Source/WebCore/bindings/scripts&lt;/code&gt; This is an important folder where WebKit autogenerates bindings&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKit/Source/WTF/&lt;/code&gt; is a cross-platform library for common tasks such as HashMaps, etc.&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKit/Source/WTF/PlatformJS.h&lt;/code&gt; these are C++ pre-process settings for PLATFORM(JS)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;/WebKit/Source/WebCore/Configurations/&lt;/code&gt; these are important compile-time configurations for WebCore&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;/WebKitJS/&lt;/code&gt; When compiled the output of WebKit is placed in WebKitJS/webkit.js&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKitJS/tools/&lt;/code&gt; Any helpful tools i've come across (only one for now...)&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKitJS/tools/cppfilter.js&lt;/code&gt;  This demangles C++ symbols contained in emscripten.js&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;/WebKitJS/tools/EmscriptenXcode.plugin&lt;/code&gt; This is a Xcode plugin, and a temporary hack for using emscripten&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;It's important to know&lt;/strong&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The code within the WebKit folder is pulled from upstream, be careful not to move any files, remove any files or heavily refactor any source file as it will cause headaches when merging.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Place a .gitignore on ./WebKit/WebKitBuild/ so you do not accidently commit build files.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Enabling/disabling settings within the Configurations folder in WebCore will have a lot of consequences, most of the disabled features are disabled because there's no possible work around for including the platform specific code (it needs to be created in JS from scratch)&lt;/li&gt;
+&lt;li&gt;A good amount of the bindings and code within the WebCore is auto generated from scripts, be careful when you have build errors to make sure you're not modifying a &quot;Derived Source&quot; otherwise you'll find your changes will be just over-written the next time the derived sources runs.&lt;/li&gt;
+&lt;li&gt;The current webkit.js in WebKitJS folder was compiled exposing its symbols, this results in a heavy file size (current 44MB - 1/15/14). This can come down considerably once a framework/API is developed, tests are created and optimizations can become a priority.&lt;/li&gt;
+&lt;li&gt;Do not modify code within ./WebKitJS/webkit.js or ./WebKitJS/debug/ these files are over-written when WebKit is built, so its somewhat pointless unless you're testing.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;What's Desperately Needed&lt;/strong&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;A build toolchain similar to GYP/gconfig. QtWebkit has one already, possibly re-map that.&lt;/li&gt;
+&lt;li&gt;Create &quot;Debug&quot; and &quot;Release&quot; modes that allow for easier debugging. In addition creating anything that helps debug and spot problems easier.&lt;/li&gt;
+&lt;li&gt;Scripts to auto-generate code with Emscripten JS Bindings (e.g., IDL generation, and some other bindings/scripts tasks)&lt;/li&gt;
+&lt;li&gt;Integration of WTF library into WebCore&lt;/li&gt;
+&lt;li&gt;Closer examination of optimization/best practices/guidance on Emscripten.&lt;/li&gt;
+&lt;li&gt;Closer examination of optimization/best practices/guidance on compiling WebCore/renderer.&lt;/li&gt;
+&lt;li&gt;Removal of &quot;oddity&quot; code (e.g., no mans land code, existing dead code, platform specific code)&lt;/li&gt;
+&lt;li&gt;Start smaller with GYP and only develop one pass layout system from CSS/HTML/DOM code with minimal features and build up.&lt;/li&gt;
+&lt;li&gt;Take each file one by one in ./webkitjs/debug/ and port?...&lt;/li&gt;
+&lt;li&gt;Conversation, topics, discussions on best practices, methods and use cases&lt;/li&gt;
+&lt;li&gt;Dependency and/or symbol graph that rebuilds automatically after a compile (expressed as a HTML doc?) The core reason for this is to visualize dependencies between classes, unresolved symbols still to be developed, and spot key integration points. This can be done by regex over the existing ./webkitjs/debug for symbols and building a D3 graph to show the symbols dependency possibly? Is there already key software that does this? Can emscripten/llvm spit this out?&lt;/li&gt;
+&lt;li&gt;Identify what key import symbols may require significant retooling.&lt;/li&gt;
+&lt;li&gt;Integrate libxml.js (rather than depending on browser pass through decoding to a buffer)&lt;/li&gt;
+&lt;li&gt;Integrate libxslt.js (currently unsupported)&lt;/li&gt;
+&lt;li&gt;Integrate ffmpeg.js ?.... pure javascript video support?..... .&lt;/li&gt;
+&lt;li&gt;Integrate libpng.js (rather than depending on browser pass through decoding to a buffer)&lt;/li&gt;
+&lt;li&gt;Integrate libjpeg-turbo.js/libjpeg.js (rather than depending on browser pass through decoding to a buffer)&lt;/li&gt;
+&lt;li&gt;Integrate zlib (rather than depending on browser pass through decoding to a buffer)&lt;/li&gt;
+&lt;li&gt;Use embind/cppfilter.js to automatically generate all the WebCore C++ interfaces (derived from WebCore.exp) directly into javascript, then simply reuse existing webcore demos/examples.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;
+&lt;a name=&quot;license&quot; class=&quot;anchor&quot; href=&quot;https://github.com/trevorlinton/webkit.js#license&quot;&gt;&lt;/a&gt;License&lt;/h2&gt;
 
-&lt;table class=&quot;layoutTable&quot;&gt;&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;http://validator.w3.org/check?uri=referer&quot;&gt;&lt;img src=&quot;http://www.w3.org/Icons/valid-xhtml10&quot; alt=&quot;Valid XHTML 1.0 Strict&quot;&gt;&lt;/a&gt; &lt;a href=&quot;http://jigsaw.w3.org/css-validator/check/referer&quot;&gt;&lt;img src=&quot;http://jigsaw.w3.org/css-validator/images/vcss&quot; alt=&quot;Valid CSS!&quot;&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Last modified: 2013-02-15&lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
+&lt;p&gt;BSD License (see &lt;a href=&quot;http://www.webkit.org/coding/bsd-license.html&quot;&gt;http://www.webkit.org/coding/bsd-license.html&lt;/a&gt;)
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE files contained in the root of the respective source code.&lt;/p&gt;
 
+&lt;p&gt;&amp;#xA9; True Interactions 2014&lt;/p&gt;
 
-
-
-&lt;/div&gt;
+&lt;p&gt;[trevor linton]:mailto:trevor dot linton plus github at gmail dot com&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
 </description>
 <title>
-UTF-8 Everywhere
-</title>
-</item>
-<item>
-<author>
-Seth Ladd
-</author>
-<link>
-http://news.dartlang.org/2014/01/dart-11-features-up-to-25-faster.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-3446908176761469110&quot;&gt;
-Better performance, more features, and improved tools mark the 1.1 release of Dart. Just two months after the &lt;a href=&quot;http://news.dartlang.org/2013/11/dart-10-stable-sdk-for-structured-web.html&quot;&gt;1.0 release&lt;/a&gt;, this new release delivers a set of compatible updates that makes applications easier to develop and faster for end users.&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/x8M3iXe0w38GFot8UN96tDodmHswpQdsHNwHrZdDq6Dna9rYPc8Q9bF5xrRYwnlRLDKH3vnehGc213Oz0u9tgNEs0j6DMMOaFxBy5uk45uyQe0CBEsu75ddyMQ&quot; width=&quot;640&quot;&gt;&lt;/p&gt;&lt;p&gt;Dart&amp;#x2019;s Javascript output continues to shine. &lt;a href=&quot;https://www.dartlang.org/performance/&quot;&gt;Performance&lt;/a&gt; on the Richards benchmark is 25% better than the first release, making runtime comparable to the original JavaScript. Performance of the newest benchmark, FluidMotion, has doubled since November. Dart2js now generates Javascript that performs as well as, if not better than, the idiomatic Javascript equivalent.&lt;/p&gt;&lt;p&gt;While there&amp;#x2019;s a lot of focus on Dart for browser applications, there is also growing interest in Dart for server solutions. This release provides a number of enhancements for server-side Dart, including support for large files, file copying, process signal handlers, and terminal information. New in this release is support for UDP, which, for example, allows developers to write more efficient media streaming apps.&lt;/p&gt;&lt;p&gt;The Dart Editor has added a number of features to increase productivity. Developers will find improved debugging, better code completion, and more descriptive tooltips. Overall performance of the Editor and the analyzer has also improved.&lt;/p&gt;&lt;p&gt;Take a look at the updated &lt;a href=&quot;https://www.dartlang.org/docs/spec/&quot;&gt;Dart language spec&lt;/a&gt;. You may also be interested in new articles on &lt;a href=&quot;https://www.dartlang.org/docs/serverguide.html&quot;&gt;command-line applications&lt;/a&gt;, &lt;a href=&quot;https://www.dartlang.org/articles/js-dart-interop/&quot;&gt;Dart-Javascript interoperability&lt;/a&gt;, and &lt;a href=&quot;https://www.dartlang.org/articles/broadcast-streams/&quot;&gt;Streams&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;We&amp;#x2019;re excited about the new features now available in Dart 1.1. Tell us what you build with Dart in our &lt;a href=&quot;http://g.co/dartisans&quot;&gt;Google+ community&lt;/a&gt; and &lt;a href=&quot;http://dartbug.com/&quot;&gt;let us know&lt;/a&gt; if you have any issues or feature requests.
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-Dart 1.1 released: Up to 25% faster Javascript
+WebKit.js: Pure JavaScript Port of WebKit
 </title>
 </item>
 </channel>
