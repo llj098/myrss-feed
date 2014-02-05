@@ -14,652 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-Seth Ladd
-</author>
-<link>
-http://news.dartlang.org/2014/01/dart-11-features-up-to-25-faster.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-3446908176761469110&quot;&gt;
-Better performance, more features, and improved tools mark the 1.1 release of Dart. Just two months after the &lt;a href=&quot;http://news.dartlang.org/2013/11/dart-10-stable-sdk-for-structured-web.html&quot;&gt;1.0 release&lt;/a&gt;, this new release delivers a set of compatible updates that makes applications easier to develop and faster for end users.&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/x8M3iXe0w38GFot8UN96tDodmHswpQdsHNwHrZdDq6Dna9rYPc8Q9bF5xrRYwnlRLDKH3vnehGc213Oz0u9tgNEs0j6DMMOaFxBy5uk45uyQe0CBEsu75ddyMQ&quot; width=&quot;640&quot;&gt;&lt;/p&gt;&lt;p&gt;Dart&amp;#x2019;s Javascript output continues to shine. &lt;a href=&quot;https://www.dartlang.org/performance/&quot;&gt;Performance&lt;/a&gt; on the Richards benchmark is 25% better than the first release, making runtime comparable to the original JavaScript. Performance of the newest benchmark, FluidMotion, has doubled since November. Dart2js now generates Javascript that performs as well as, if not better than, the idiomatic Javascript equivalent.&lt;/p&gt;&lt;p&gt;While there&amp;#x2019;s a lot of focus on Dart for browser applications, there is also growing interest in Dart for server solutions. This release provides a number of enhancements for server-side Dart, including support for large files, file copying, process signal handlers, and terminal information. New in this release is support for UDP, which, for example, allows developers to write more efficient media streaming apps.&lt;/p&gt;&lt;p&gt;The Dart Editor has added a number of features to increase productivity. Developers will find improved debugging, better code completion, and more descriptive tooltips. Overall performance of the Editor and the analyzer has also improved.&lt;/p&gt;&lt;p&gt;Take a look at the updated &lt;a href=&quot;https://www.dartlang.org/docs/spec/&quot;&gt;Dart language spec&lt;/a&gt;. You may also be interested in new articles on &lt;a href=&quot;https://www.dartlang.org/docs/serverguide.html&quot;&gt;command-line applications&lt;/a&gt;, &lt;a href=&quot;https://www.dartlang.org/articles/js-dart-interop/&quot;&gt;Dart-Javascript interoperability&lt;/a&gt;, and &lt;a href=&quot;https://www.dartlang.org/articles/broadcast-streams/&quot;&gt;Streams&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;We&amp;#x2019;re excited about the new features now available in Dart 1.1. Tell us what you build with Dart in our &lt;a href=&quot;http://g.co/dartisans&quot;&gt;Google+ community&lt;/a&gt; and &lt;a href=&quot;http://dartbug.com/&quot;&gt;let us know&lt;/a&gt; if you have any issues or feature requests.
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-Dart 1.1 released: Up to 25% faster Javascript
-</title>
-</item>
-<item>
-<author>
-James Ball
-</author>
-<link>
-http://www.theguardian.com/world/2014/jan/16/nsa-collects-millions-text-messages-daily-untargeted-global-sweep
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;flexible-content-body&quot;&gt;
-                
-	&lt;p&gt;The National Security Agency has collected almost 200 million text messages a day from across the globe, using them to extract data including location, contact networks and credit card details, according to top-secret documents.&lt;/p&gt;
-&lt;p&gt;The untargeted collection and storage of SMS messages &amp;#x2013; including their contacts &amp;#x2013; is revealed in a joint investigation between the Guardian and the UK&amp;#x2019;s Channel 4 News based on material provided by NSA whistleblower Edward Snowden.&lt;/p&gt;
-&lt;p&gt;The documents also reveal the UK spy agency GCHQ has made use of the NSA database to search the metadata of &amp;#x201C;untargeted and unwarranted&amp;#x201D; communications belonging to people in the UK.&lt;/p&gt;
-&lt;p&gt;The NSA program, codenamed Dishfire, collects &amp;#x201C;pretty much everything it can&amp;#x201D;, according to GCHQ documents, rather than merely storing the communications of existing surveillance targets.&lt;/p&gt;
-&lt;p&gt;The NSA has made extensive use of its vast text message database to extract information on people&amp;#x2019;s travel plans, contact books, financial transactions and more &amp;#x2013; including of individuals under no suspicion of illegal activity.&lt;/p&gt;
-&lt;p&gt;An agency presentation from 2011 &amp;#x2013; subtitled &amp;#x201C;SMS Text Messages: A Goldmine to Exploit&amp;#x201D; &amp;#x2013; reveals the program collected an average of 194 million text messages a day in April of that year. In addition to storing the messages themselves, a further program known as &amp;#x201C;Prefer&amp;#x201D; conducted automated analysis on the untargeted communications.&lt;/p&gt;
-    
-		&lt;figure class=&quot;element element-image&quot;&gt;
-		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389894898274/adecf37d-b211-447d-ba18-c41ba5b5fb63-460x345.jpeg&quot; alt=&quot;sms1&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
-		    		        &lt;figcaption&gt;An NSA presentation from 2011 on the agency's Dishfire program to collect millions of text messages daily. Photograph: Guardian&lt;/figcaption&gt;
-		    		&lt;/figure&gt;
-	    
-	&lt;p&gt;The Prefer program uses automated text messages such as missed call alerts or texts sent with international roaming charges to extract information, which the agency describes as &amp;#x201C;content-derived metadata&amp;#x201D;, and explains that &amp;#x201C;such gems are not in current metadata stores and would enhance current analytics&amp;#x201D;.&lt;/p&gt;
-&lt;p&gt;On average, each day the NSA was able to extract:&lt;/p&gt;
-&lt;p&gt;&amp;#x2022; More than 5 million missed-call alerts, for use in contact-chaining analysis (working out someone&amp;#x2019;s social network from who they contact and when)&lt;/p&gt;
-&lt;p&gt;&amp;#x2022; Details of 1.6 million border crossings a day, from network roaming alerts&lt;/p&gt;
-&lt;p&gt;&amp;#x2022; More than 110,000 names, from electronic business cards, which also included the ability to extract and save images.&lt;/p&gt;
-&lt;p&gt;&amp;#x2022; Over 800,000 financial transactions, either through text-to-text payments or linking credit cards to phone users&lt;/p&gt;
-&lt;p&gt;The agency was also able to extract geolocation data from more than 76,000 text messages a day, including from &amp;#x201C;requests by people for route info&amp;#x201D; and &amp;#x201C;setting up meetings&amp;#x201D;. Other travel information was obtained from itinerary texts sent by travel companies, even including cancellations and delays to travel plans.&lt;/p&gt;
-    
-		&lt;figure class=&quot;element element-image&quot;&gt;
-		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389895896336/d37371e4-5d38-4568-81e2-09c8eaa3936a-460x345.jpeg&quot; alt=&quot;sms5&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
-		    		        &lt;figcaption&gt;A slide on the Dishfire program describes the&amp;#xA0;'analytic gems' of&amp;#xA0;collected metadata. Photograph: Guardian&lt;/figcaption&gt;
-		    		&lt;/figure&gt;
-	    
-	&lt;p&gt;Communications from US phone numbers, the documents suggest, were removed (or &amp;#x201C;minimized&amp;#x201D;) from the database &amp;#x2013; but those of other countries, including the UK, were retained.&lt;/p&gt;
-&lt;p&gt;The revelation the NSA is collecting and extracting personal information from hundreds of millions of global text messages a day is likely to intensify international pressure on US president Barack Obama, who on Friday is set to give his response to the report of his NSA review panel.&lt;/p&gt;
-&lt;p&gt;While US attention has focused on whether the NSA&amp;#x2019;s controversial phone metadata program will be discontinued, the panel also suggested US spy agencies should pay more consideration to the privacy rights of foreigners, and reconsider spying efforts against allied heads of state and diplomats.&lt;/p&gt;
-&lt;p&gt;In a statement to the Guardian, a spokeswoman for the NSA said any implication that the agency&amp;#x2019;s collection was &amp;#x201C;arbitrary and unconstrained is false&amp;#x201D;. The agency&amp;#x2019;s capabilities were directed only against &amp;#x201C;valid foreign intelligence targets&amp;#x201D; and were subject to stringent legal safeguards, she said.&lt;/p&gt;
-&lt;p&gt;The ways in which the UK spy agency GCHQ has made use of the NSA Dishfire database also seems likely to raise questions on the scope of its powers.&lt;/p&gt;
-&lt;p&gt;While GCHQ is not allowed to search through the content of messages without a warrant &amp;#x2013; though the contents are stored rather than deleted or &amp;#x201C;minimized&amp;#x201D; from the database &amp;#x2013; the agency&amp;#x2019;s lawyers decided analysts were able to see who UK phone numbers had been texting, and search for them in the database.&lt;/p&gt;
-&lt;p&gt;The GCHQ memo sets out in clear terms what the agency&amp;#x2019;s access to Dishfire allows it to do, before handling how UK communications should be treated. The unique property of Dishfire, it states, is how much untargeted or unselected information it stores.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;In contrast to [most] GCHQ equivalents, DISHFIRE contains a large volume of&amp;#xA0;&lt;em&gt;unselected&lt;/em&gt;&amp;#xA0;SMS traffic,&amp;#x201D; it states (emphasis original). &amp;#x201C;This makes it particularly useful for the development of new targets, since it is possible to examine the content of messages sent months or even years&amp;#xA0;&lt;em&gt;before&lt;/em&gt;&amp;#xA0;the target was known to be of interest.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;It later explains in plain terms how useful this capability can be. Comparing Dishfire favourably to a GCHQ counterpart which only collects against phone numbers that have specifically been targeted, it states &amp;#x201C;Dishfire collects pretty much everything it can, so you can see SMS from a selector which is not targeted&amp;#x201D;.&lt;/p&gt;
-&lt;p&gt;The document also states the database allows for broad, bulk searches of keywords which could result in a high number of hits, rather than just narrow searches against particular phone numbers: &amp;#x201C;It is also possible to search against the content&amp;#xA0;&lt;em&gt;in bulk&lt;/em&gt;&amp;#xA0;(e.g. for a name or home telephone number) if the target&amp;#x2019;s mobile phone number is not known.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;Analysts are warned to be careful when searching content for terms relating to UK citizens or people currently residing in the UK, as these searches could be successful but would not be legal without a warrant or similar targeting authority.&lt;/p&gt;
-&lt;p&gt;However, a note from GCHQ&amp;#x2019;s operational legalities team, dated May 2008, states agents can search Dishfire for &amp;#x201C;events&amp;#x201D; data relating to UK numbers &amp;#x2013; who is contacting who, and when.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;You may run a search of UK numbers in DISHFIRE in order to retrieve only events data,&amp;#x201D; the note states, before setting out how an analyst can prevent himself seeing the content of messages when he searches &amp;#x2013; by toggling a single setting on the search tool.&lt;/p&gt;
-&lt;p&gt;Once this is done, the document continues, &amp;#x201C;this will now enable you to run a search without displaying the content of the SMS, especially useful for untargeted and unwarranted UK numbers.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;A separate document gives a sense of how large-scale each Dishfire search can be, asking analysts to restrain their searches to no more than 1,800 phone numbers at a time.&lt;/p&gt;
-    
-		&lt;figure class=&quot;element element-image&quot;&gt;
-		    &lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/16/1389896000357/757975eb-636f-48d5-8e1a-476ad212db48-460x345.jpeg&quot; alt=&quot;sms8&quot; width=&quot;460&quot; class=&quot;gu-image&quot;&gt;
-		    		        &lt;figcaption&gt;An NSA slide on the 'Prefer' program reveals the program collected an average of 194 million text messages a day in April 2011.&amp;#xA0;Photograph: Guardian&lt;/figcaption&gt;
-		    		&lt;/figure&gt;
-	    
-	&lt;p&gt;The note warns analysts they must be careful to make sure they use the form&amp;#x2019;s toggle before searching, as otherwise the database will return the content of the UK messages &amp;#x2013; which would, without a warrant, cause the analyst to &amp;#x201C;unlawfully be seeing the content of the SMS&amp;#x201D;.&lt;/p&gt;
-&lt;p&gt;The note also adds that the NSA automatically removes all &amp;#x201C;US-related SMS&amp;#x201D; from the database, so it is not available for searching.&lt;/p&gt;
-&lt;p&gt;A GCHQ spokesman refused to comment on any particular matters, but said all its intelligence activities were in compliance with UK law and oversight.&lt;/p&gt;
-&lt;p&gt;But Vodafone, one of the world&amp;#x2019;s largest mobile phone companies with operations in 25 countries including Britain, greeted the latest revelations with shock.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;It&amp;#x2019;s the first we&amp;#x2019;ve heard about it and naturally we&amp;#x2019;re shocked and surprised,&amp;#x201D; the group&amp;#x2019;s privacy officer and head of legal for privacy, security and content standards told Channel 4 News.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;What you&amp;#x2019;re describing sounds concerning to us because the regime that we are required to comply with is very clear and we will only disclose information to governments where we are legally compelled to do so, won&amp;#x2019;t go beyond the law and comply with due process.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;But what you&amp;#x2019;re describing is something that sounds as if that&amp;#x2019;s been circumvented. And for us as a business this is anathema because our whole business is founded on protecting privacy as a fundamental imperative.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;He said the company would be challenging the UK government over this. &amp;#x201C;From our perspective, the law is there to protect our customers and it doesn&amp;#x2019;t sound as if that is what is necessarily happening.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;The NSA&amp;#x2019;s access to, and storage of, the content of communications of UK citizens may also be contentious in the light of earlier Guardian revelations that the agency was drafting policies to facilitate spying on the citizens of its allies, including the UK and Australia, which would &amp;#x2013; if enacted &amp;#x2013; enable the agency to search its databases for UK citizens without informing GCHQ or UK politicians.&lt;/p&gt;
-&lt;p&gt;The documents seen by the Guardian were from an internal Wikipedia-style guide to the NSA program provided for GCHQ analysts, and noted the Dishfire program was &amp;#x201C;operational&amp;#x201D; at the time the site was accessed, in 2012.&lt;/p&gt;
-&lt;p&gt;The documents do not, however, state whether any rules were subsequently changed, or give estimates of how many UK text messages are collected or stored in the Dishfire system, or from where they are being intercepted.&lt;/p&gt;
-&lt;p&gt;In the statement, the NSA spokeswoman said: &amp;#x201C;As we have previously stated, the implication that NSA's collection is arbitrary and unconstrained is false.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;NSA's activities are focused and specifically deployed against &amp;#x2013; and only against &amp;#x2013; valid foreign intelligence targets in response to intelligence requirements.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Dishfire is a system that processes and stores lawfully collected SMS data. Because some SMS data of US persons may at times be incidentally collected in NSA&amp;#x2019;s lawful foreign intelligence mission, privacy protections for US persons exist across the entire process concerning the use, handling, retention, and dissemination of SMS data in Dishfire.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;In addition, NSA actively works to remove extraneous data, to include that of innocent foreign citizens, as early as possible in the process.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;The agency draws a distinction between the bulk collection of communications and the use of that data to monitor or find specific targets.&lt;/p&gt;
-&lt;p&gt;A spokesman for GCHQ refused to respond to any specific queries regarding Dishfire, but said the agency complied with UK law and regulators.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;It is a longstanding policy that we do not comment on intelligence matters,&amp;#x201D; he said. &amp;#x201C;Furthermore, all of GCHQ's work is carried out in accordance with a strict legal and policy framework which ensures that our activities are authorised, necessary and proportionate, and that there is rigorous oversight, including from the Secretary of State, the Interception and Intelligence Services Commissioners and the Parliamentary Intelligence and Security Committee.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;GCHQ also directed the Guardian towards a statement made to the House of Commons in June 2013 by foreign secretary William Hague, in response to revelations of the agency&amp;#x2019;s use of the Prism program.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Any data obtained by us from the US involving UK nationals is subject to proper UK statutory controls and safeguards, including the relevant sections of the Intelligence Services Act, the Human Rights Act and the Regulation of Investigatory Powers Act,&amp;#x201D; Hague told MPs.&lt;/p&gt;
-        &lt;/div&gt;
-
-
-    &lt;/div&gt;
-</description>
-<title>
-NSA collects millions of text messages daily in 'untargeted' global sweep
-</title>
-</item>
-<item>
-<link>
-http://marc.info/?l=openbsd-misc&amp;amp;m=138972987203440&amp;amp;w=2
-</link>
-<description>
-&lt;div&gt;
-&lt;b&gt;&lt;a href=&quot;http://marc.info/?q=about&quot;&gt;Mailing list ARChives&lt;/a&gt;&lt;/b&gt;
-
-    
-    
-&lt;table width=&quot;100%&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
-&lt;tr&gt;&lt;td&gt;Search: &lt;br&gt;[] List [] Subjects [] Authors [] Bodies for list 'openbsd-misc'
-&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-Set Page Width:
-[&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;w=1&quot;&gt; 80 &lt;/a&gt;]
-[&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;w=2&quot;&gt; 90 &lt;/a&gt;]
-[&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;w=3&quot;&gt; 100 &lt;/a&gt;]
-[&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;w=4&quot;&gt; 120 &lt;/a&gt;]
-
-
-&lt;dl&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderopen.gif&quot; alt=&quot;Group: &quot;&gt; *BSD&lt;/a&gt;&lt;/b&gt; BSD-derived Operating Systems Projects
-&lt;/dt&gt;&lt;dl&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a name=&quot;openbsd-misc&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderopen.gif&quot; alt=&quot;List: &quot;&gt; openbsd-misc&lt;/a&gt;&lt;/b&gt; 
-  &lt;/dt&gt;&lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201401&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2014-01-01 - 2014-02-01 (249 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201312&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-12-01 - 2014-01-01 (669 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201311&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-11-01 - 2013-12-01 (759 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201310&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-10-01 - 2013-11-01 (729 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201309&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-09-01 - 2013-10-01 (888 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201308&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-08-01 - 2013-09-01 (520 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201307&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-07-01 - 2013-08-01 (635 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201306&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-06-01 - 2013-07-01 (552 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201305&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-05-01 - 2013-06-01 (718 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201304&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-04-01 - 2013-05-01 (456 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201303&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-03-01 - 2013-04-01 (586 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201302&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-02-01 - 2013-03-01 (668 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201301&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2013-01-01 - 2013-02-01 (728 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201212&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-12-01 - 2013-01-01 (651 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201211&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-11-01 - 2012-12-01 (605 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201210&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-10-01 - 2012-11-01 (764 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201209&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-09-01 - 2012-10-01 (695 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201208&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-08-01 - 2012-09-01 (600 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201207&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-07-01 - 2012-08-01 (1026 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201206&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-06-01 - 2012-07-01 (1117 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201205&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-05-01 - 2012-06-01 (1090 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201204&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-04-01 - 2012-05-01 (659 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201203&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-03-01 - 2012-04-01 (794 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201202&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-02-01 - 2012-03-01 (716 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201201&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2012-01-01 - 2012-02-01 (854 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201112&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-12-01 - 2012-01-01 (973 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201111&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-11-01 - 2011-12-01 (973 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201110&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-10-01 - 2011-11-01 (945 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201109&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-09-01 - 2011-10-01 (890 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201108&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-08-01 - 2011-09-01 (616 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201107&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-07-01 - 2011-08-01 (687 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201106&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-06-01 - 2011-07-01 (920 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201105&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-05-01 - 2011-06-01 (974 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201104&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-04-01 - 2011-05-01 (912 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201103&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-03-01 - 2011-04-01 (910 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201102&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-02-01 - 2011-03-01 (895 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201101&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2011-01-01 - 2011-02-01 (820 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201012&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-12-01 - 2011-01-01 (1079 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201011&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-11-01 - 2010-12-01 (1171 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201010&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-10-01 - 2010-11-01 (1250 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201009&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-09-01 - 2010-10-01 (742 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201008&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-08-01 - 2010-09-01 (892 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201007&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-07-01 - 2010-08-01 (974 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201006&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-06-01 - 2010-07-01 (1182 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201005&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-05-01 - 2010-06-01 (1131 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201004&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-04-01 - 2010-05-01 (1287 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201003&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-03-01 - 2010-04-01 (1475 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201002&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-02-01 - 2010-03-01 (1253 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=201001&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2010-01-01 - 2010-02-01 (1472 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200912&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-12-01 - 2010-01-01 (1445 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200911&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-11-01 - 2009-12-01 (1397 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200910&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-10-01 - 2009-11-01 (1308 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200909&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-09-01 - 2009-10-01 (1131 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200908&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-08-01 - 2009-09-01 (975 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200907&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-07-01 - 2009-08-01 (1053 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200906&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-06-01 - 2009-07-01 (1093 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200905&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-05-01 - 2009-06-01 (1499 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200904&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-04-01 - 2009-05-01 (1753 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200903&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-03-01 - 2009-04-01 (1345 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200902&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-02-01 - 2009-03-01 (1179 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200901&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2009-01-01 - 2009-02-01 (1036 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200812&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-12-01 - 2009-01-01 (1039 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200811&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-11-01 - 2008-12-01 (1329 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200810&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-10-01 - 2008-11-01 (1197 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200809&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-09-01 - 2008-10-01 (1148 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200808&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-08-01 - 2008-09-01 (967 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200807&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-07-01 - 2008-08-01 (1381 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200806&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-06-01 - 2008-07-01 (1235 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200805&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-05-01 - 2008-06-01 (1585 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200804&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-04-01 - 2008-05-01 (1250 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200803&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-03-01 - 2008-04-01 (1365 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200802&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-02-01 - 2008-03-01 (1811 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200801&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2008-01-01 - 2008-02-01 (2231 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200712&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-12-01 - 2008-01-01 (2301 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200711&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-11-01 - 2007-12-01 (2034 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200710&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-10-01 - 2007-11-01 (1880 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200709&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-09-01 - 2007-10-01 (1860 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200708&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-08-01 - 2007-09-01 (953 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200707&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-07-01 - 2007-08-01 (1034 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200706&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-06-01 - 2007-07-01 (1472 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200705&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-05-01 - 2007-06-01 (1713 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200704&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-04-01 - 2007-05-01 (1547 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200703&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-03-01 - 2007-04-01 (2071 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200702&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-02-01 - 2007-03-01 (1399 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200701&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2007-01-01 - 2007-02-01 (1651 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200612&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-12-01 - 2007-01-01 (1391 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200611&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-11-01 - 2006-12-01 (1779 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200610&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-10-01 - 2006-11-01 (2183 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200609&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-09-01 - 2006-10-01 (1506 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200608&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-08-01 - 2006-09-01 (1533 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200607&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-07-01 - 2006-08-01 (1632 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200606&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-06-01 - 2006-07-01 (1795 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200605&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-05-01 - 2006-06-01 (2078 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200604&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-04-01 - 2006-05-01 (1683 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200603&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-03-01 - 2006-04-01 (2020 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200602&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-02-01 - 2006-03-01 (1551 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200601&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2006-01-01 - 2006-02-01 (1732 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200512&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-12-01 - 2006-01-01 (1417 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200511&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-11-01 - 2005-12-01 (1952 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200510&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-10-01 - 2005-11-01 (1761 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200509&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-09-01 - 2005-10-01 (1693 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200508&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-08-01 - 2005-09-01 (1983 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200507&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-07-01 - 2005-08-01 (1608 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200506&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-06-01 - 2005-07-01 (2024 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200505&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-05-01 - 2005-06-01 (1850 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200504&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-04-01 - 2005-05-01 (1638 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200503&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-03-01 - 2005-04-01 (2427 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200502&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-02-01 - 2005-03-01 (1969 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200501&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2005-01-01 - 2005-02-01 (2127 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200412&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-12-01 - 2005-01-01 (1933 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200411&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-11-01 - 2004-12-01 (2611 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200410&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-10-01 - 2004-11-01 (2312 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200409&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-09-01 - 2004-10-01 (2120 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200408&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-08-01 - 2004-09-01 (1876 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200407&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-07-01 - 2004-08-01 (1786 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200406&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-06-01 - 2004-07-01 (1916 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200405&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-05-01 - 2004-06-01 (1969 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200404&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-04-01 - 2004-05-01 (1668 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200403&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-03-01 - 2004-04-01 (1623 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200402&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-02-01 - 2004-03-01 (1726 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200401&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2004-01-01 - 2004-02-01 (1463 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200312&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-12-01 - 2004-01-01 (1404 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200311&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-11-01 - 2003-12-01 (1846 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200310&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-10-01 - 2003-11-01 (1543 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200309&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-09-01 - 2003-10-01 (1826 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200308&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-08-01 - 2003-09-01 (1906 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200307&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-07-01 - 2003-08-01 (1650 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200306&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-06-01 - 2003-07-01 (2025 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200305&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-05-01 - 2003-06-01 (2386 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200304&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-04-01 - 2003-05-01 (2255 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200303&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-03-01 - 2003-04-01 (1990 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200302&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-02-01 - 2003-03-01 (2261 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200301&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2003-01-01 - 2003-02-01 (1977 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200212&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-12-01 - 2003-01-01 (1946 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200211&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-11-01 - 2002-12-01 (2512 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200210&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-10-01 - 2002-11-01 (1777 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200209&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-09-01 - 2002-10-01 (2040 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200208&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-08-01 - 2002-09-01 (1684 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200207&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-07-01 - 2002-08-01 (2619 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200206&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-06-01 - 2002-07-01 (2428 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200205&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-05-01 - 2002-06-01 (2068 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200204&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-04-01 - 2002-05-01 (2311 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200203&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-03-01 - 2002-04-01 (2087 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200202&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-02-01 - 2002-03-01 (2323 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200201&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2002-01-01 - 2002-02-01 (2607 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200112&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-12-01 - 2002-01-01 (2224 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200111&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-11-01 - 2001-12-01 (2056 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200110&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-10-01 - 2001-11-01 (1773 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200109&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-09-01 - 2001-10-01 (1723 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200108&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-08-01 - 2001-09-01 (2587 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200107&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-07-01 - 2001-08-01 (2414 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200106&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-06-01 - 2001-07-01 (2367 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200105&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-05-01 - 2001-06-01 (2088 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200104&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-04-01 - 2001-05-01 (2013 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200103&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-03-01 - 2001-04-01 (2289 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200102&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-02-01 - 2001-03-01 (2476 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200101&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2001-01-01 - 2001-02-01 (2117 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200012&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-12-01 - 2001-01-01 (2367 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200011&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-11-01 - 2000-12-01 (1687 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200010&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-10-01 - 2000-11-01 (2410 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200009&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-09-01 - 2000-10-01 (1996 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200008&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-08-01 - 2000-09-01 (2187 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200007&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-07-01 - 2000-08-01 (2110 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200006&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-06-01 - 2000-07-01 (1869 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200005&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-05-01 - 2000-06-01 (1530 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200004&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-04-01 - 2000-05-01 (1209 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200003&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-03-01 - 2000-04-01 (1193 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200002&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-02-01 - 2000-03-01 (1201 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=200001&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 2000-01-01 - 2000-02-01 (1273 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199912&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-12-01 - 2000-01-01 (1510 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199911&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-11-01 - 1999-12-01 (1205 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199910&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-10-01 - 1999-11-01 (1112 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199909&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-09-01 - 1999-10-01 (856 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199908&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-08-01 - 1999-09-01 (669 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199907&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-07-01 - 1999-08-01 (597 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199906&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-06-01 - 1999-07-01 (572 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199905&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-05-01 - 1999-06-01 (726 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199904&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-04-01 - 1999-05-01 (458 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199903&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-03-01 - 1999-04-01 (479 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199902&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-02-01 - 1999-03-01 (336 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199901&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1999-01-01 - 1999-02-01 (594 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199812&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-12-01 - 1999-01-01 (618 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199811&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-11-01 - 1998-12-01 (453 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199810&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-10-01 - 1998-11-01 (519 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199809&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-09-01 - 1998-10-01 (465 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199808&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-08-01 - 1998-09-01 (567 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199807&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-07-01 - 1998-08-01 (549 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199806&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-06-01 - 1998-07-01 (485 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199805&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-05-01 - 1998-06-01 (167 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199804&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-04-01 - 1998-05-01 (4 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199802&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-02-01 - 1998-03-01 (2 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199801&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1998-01-01 - 1998-02-01 (2 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199712&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1997-12-01 - 1998-01-01 (1 message)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199701&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1997-01-01 - 1997-02-01 (4 messages)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199601&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1996-01-01 - 1996-02-01 (1 message)&lt;/a&gt;
-  &lt;dd&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;r=1&amp;amp;b=199403&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/bookclosed.gif&quot; alt=&quot;- &quot;&gt; 1994-03-01 - 1994-04-01 (1 message)&lt;/a&gt;
- &lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;/dd&gt;&lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=aic7xxx&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; aic7xxx&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=appscript-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; appscript-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=appscript-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; appscript-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=bsdi-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; bsdi-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=bsdi-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; bsdi-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=bsdinstaller-discussion&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; bsdinstaller-discussion&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=calendarserver-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; calendarserver-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=calendarserver-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; calendarserver-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=calendarserver-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; calendarserver-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=darwinbuild-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; darwinbuild-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=darwinbuild-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; darwinbuild-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-bugs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-bugs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-commits&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-commits&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-docs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-docs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-kernel&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-kernel&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-submit&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-submit&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=dragonfly-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; dragonfly-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=fink-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; fink-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=fink-beginners&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; fink-beginners&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=fink-commits&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; fink-commits&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=fink-devel&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; fink-devel&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=fink-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; fink-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebob-cvs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebob-cvs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebob-devel&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebob-devel&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-advocacy&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-advocacy&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-alpha&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-alpha&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-amd64&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-amd64&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-arch&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-arch&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-arm&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-arm&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-atm&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-atm&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-audit&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-audit&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-bugs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-bugs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-chat&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-chat&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-cluster&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-cluster&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-commits-all&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-commits-all&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-current&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-current&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-cvs-all&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-cvs-all&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-cvsweb&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-cvsweb&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-database&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-database&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-doc&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-doc&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-emulation&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-emulation&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-firewire&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-firewire&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-fs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-fs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-hackers&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-hackers&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-hardware&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-hardware&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-i18n&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-i18n&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-ia64&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-ia64&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-ipfw&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-ipfw&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-isdn&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-isdn&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-isp&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-isp&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-jail&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-jail&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-java&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-java&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-jobs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-jobs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-lfs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-lfs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-mips&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-mips&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-mobile&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-mobile&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-multimedia&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-multimedia&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-net&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-net&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-newbies&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-newbies&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-openoffice&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-openoffice&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-performance&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-performance&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-pf&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-pf&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-policy&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-policy&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-ports&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-ports&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-ports-bugs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-ports-bugs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-ppc&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-ppc&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-print&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-print&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-qa&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-qa&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-questions&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-questions&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-scsi&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-scsi&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-security&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-security&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-security-notifications&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-security-notifications&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-smp&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-smp&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-sparc64&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-sparc64&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-stable&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-stable&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-standards&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-standards&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-threads&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-threads&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-wireless&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-wireless&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=freebsd-www&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; freebsd-www&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=launchd-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; launchd-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=launchd-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; launchd-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=macports-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; macports-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=macports-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; macports-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=macports-tickets&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; macports-tickets&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=macports-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; macports-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=miros-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; miros-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=miros-discuss&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; miros-discuss&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-bugs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-bugs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-current-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-current-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-cvs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-cvs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-help&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-help&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-alpha&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-alpha&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-amd64&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-amd64&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-i386&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-i386&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-mac68k&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-mac68k&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-sparc&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-sparc&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-port-xen&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-port-xen&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-ports&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-ports&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-source-changes&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-source-changes&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-kern&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-kern&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-net&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-net&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-pkg&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-pkg&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-security&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-security&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-toolchain&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-toolchain&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-tech-userlevel&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-tech-userlevel&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=netbsd-users&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; netbsd-users&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-advocacy&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-advocacy&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-alpha&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-alpha&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-arm&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-arm&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-bugs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-bugs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-cvs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-cvs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-elf&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-elf&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-hppa&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-hppa&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-ipv6&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-ipv6&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-m88k&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-m88k&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-mac68k&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-mac68k&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-mirrors&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-mirrors&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-mobile&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-mobile&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-newbies&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-newbies&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-pf&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-pf&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-ports&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-ports&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-ports-cvs&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-ports-cvs&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-ppc&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-ppc&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-security-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-security-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-sgi&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-sgi&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-smp&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-smp&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-sparc&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-sparc&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-tech&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-tech&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-vax&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-vax&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-www&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-www&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=openbsd-x11&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; openbsd-x11&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=osx-cocoa-dev&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; osx-cocoa-dev&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=osx-darwin-development&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; osx-darwin-development&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=osx-darwin-drivers&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; osx-darwin-drivers&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=osx-darwin-kernel&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; osx-darwin-kernel&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=osx-unix-porting&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; osx-unix-porting&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=tru64-unix-managers&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; tru64-unix-managers&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=trustedbsd-announce&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; trustedbsd-announce&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=trustedbsd-audit&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; trustedbsd-audit&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=trustedbsd-discuss&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; trustedbsd-discuss&lt;/a&gt;&lt;/b&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?l=x86-64-announce-bsd&amp;amp;r=1&amp;amp;w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;List: &quot;&gt; x86-64-announce-bsd&lt;/a&gt;&lt;/b&gt;
-&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dl&gt;
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Misc&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Linux&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Databases&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; KDE Project&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Railroad Industry&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Information Security&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Microsoft Windows&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Mozilla&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Samba&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; WWW&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; GUI&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; OpenSSL&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Multimedia&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Network / Infrastructure&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Development&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; UNIX Flavors&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Linux Distributions&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Apache&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Software Packaging&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Java&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Productivity&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Perl&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; PHP&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Mobiles&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; OLPC&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Python&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Other Platforms&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Haskell&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Games&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Mapping / GIS&lt;/a&gt;&lt;/b&gt;
-
- &lt;dt&gt;&lt;b&gt;&lt;a href=&quot;http://marc.info/?w=2&quot;&gt;&lt;img border=&quot;0&quot; width=&quot;16&quot; src=&quot;http://marc.info/images/folderclosed.gif&quot; alt=&quot;Group: &quot;&gt; Mail&lt;/a&gt;&lt;/b&gt;
-
-&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dt&gt;&lt;/dl&gt;
-
-  &lt;br&gt;
-    &lt;a href=&quot;http://marc.info/?q=configure&quot;&gt;Configure&lt;/a&gt; | 
-
-    &lt;a href=&quot;http://marc.info/?q=about&quot;&gt;About&lt;/a&gt; |
-    &lt;a href=&quot;http://marc.info/?q=news&quot;&gt;News&lt;/a&gt; |
-    &lt;a href=&quot;http://marc.info/?q=about#Begware&quot;&gt;Donate&lt;/a&gt; |
-    &lt;a href=&quot;mailto:webguy@marc.info?subject=Add%20a%20list%20to%20MARC&quot;&gt;Add a list&lt;/a&gt; |
-    Sponsored by &lt;a href=&quot;http://www.korelogic.com/&quot;&gt;KoreLogic&lt;/a&gt;
-
-&lt;/div&gt;
-
-</description>
-<title>
-OpenBSD will shut down if we do not have the funding to keep the lights on
-</title>
-</item>
-<item>
-<link>
-http://blog.samaltman.com/value-is-created-by-doing
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body&quot; id=&quot;post_body_642712&quot;&gt;
-&lt;p&gt;Value is created by doing.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#x2019;s easy to forget this.&amp;#xA0;
-A lot of stuff feels like work&amp;#x2014;commenting on HN, tweeting, reading about
-other companies&amp;#x2019; funding rounds, grabbing coffee, etc [1]&amp;#x2014;is not actually
-work.&amp;#xA0; (If you count that as work, think
-really hard about the value you&amp;#x2019;re creating in your job.)&amp;#xA0; These activities can be worthwhile in small
-doses&amp;#x2014;it&amp;#x2019;s important to network and meet interesting people to stay in the flow
-of ideas&amp;#x2014;but they are not by themselves how new wealth gets created.&lt;/p&gt;
-
-&lt;p&gt;Value gets created when a company does things like build
-widgets and sell them to customers.&amp;#xA0; As a
-rough guideline, it&amp;#x2019;s good to stay in roles where you&amp;#x2019;re close to the doing.&lt;/p&gt;
-
-&lt;p&gt;Of course you have to do the right things.&amp;#xA0; Writing software no one wants does not create
-value&amp;#x2014;that&amp;#x2019;s called a class project.&amp;#xA0; So
-it&amp;#x2019;s critical to figure out the right thing to work on, and strategy is far
-more valuable than a lot of pivot-happy companies would have you believe.&amp;#xA0; But strategy alone has no value&amp;#x2014;value gets
-captured by execution.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#x2019;s easier to sit around and talk about building a startup
-than it is to actually start a startup.&amp;#xA0;
-And it&amp;#x2019;s fun to talk about.&amp;#xA0; But
-over time, the difference between fun and fulfilling becomes clear.&amp;#xA0; Doing things is really hard&amp;#x2014;it&amp;#x2019;s why, for
-example, you can generally tell people what you&amp;#x2019;re working on without NDAs, and
-most patents never matter.&amp;#xA0; The value,
-and the difficulty, comes from execution.&lt;/p&gt;
-
-&lt;p&gt;There are good tricks for keeping yourself honest here.&amp;#xA0; When I was running a company, I used to make
-a list of everything I got done at the end of the day.&amp;#xA0; It was remarkable how I could feel like I had
-a really busy day and realize that night I got nothing done.&amp;#xA0; Similarly, I could have a day that felt only
-somewhat busy, but accomplish 3 or 4 major things.&amp;#xA0;&lt;/p&gt;
-
-&lt;p&gt;Err on the side of doing too much of the sort of work that
-matters and blowing off all the rest, or as Machiavelli said:&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;&lt;i&gt;Make
-mistakes of ambition and not mistakes of sloth.&amp;#xA0;
-Develop the strength to do bold things, not the strength to suffer.&lt;/i&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;You build what you measure&amp;#x2014;if you measure your productivity
-by the number of meetings you have in a day, you will have a lot of
-meetings.&amp;#xA0; If you measure yourself by revenue
-growth or number of investments closed or something like that, you will
-probably have fewer meetings.&lt;/p&gt;
-
-&lt;p&gt;Another example of not-quite-work is every night in San
-Francisco, there are dinner parties where people get together and talk about
-the future.&amp;#xA0; It&amp;#x2019;s always fun and usually
-not very contentious&amp;#x2014;most people agree we need to go to space, for
-example.&amp;#xA0; But at the end of it, everyone
-goes home and works on something else.&lt;/p&gt;
-
-&lt;p&gt;If you believe that going to space is the most important
-project for humanity, then work on it.&amp;#xA0;
-If you can&amp;#x2019;t figure out how to raise hundreds of millions of dollars, go
-work for SpaceX (joining a great company is a much better plan than starting a
-mediocre one).&amp;#xA0; If enterprise software is
-what you really love, then work on that. [2]&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#x2019;re reading this and feeling unproductive, there&amp;#x2019;s a
-silver lining.&amp;#xA0; You can just close the
-browser window.&amp;#xA0; The good news is that it&amp;#x2019;s easy to course-correct, and it feels great.&lt;/p&gt;
-
-
-
-&lt;p&gt;[1] I count blogging as a marginal use of time, but the
-reason I started is because I realized it was important to be good at writing,
-I was bad at it, and the only way I was going to improve was with lots of
-practice.&amp;#xA0; And sometimes I meet really
-interesting founders because of something I wrote.&lt;/p&gt;
-
-&lt;p&gt;[2] This isn&amp;#x2019;t meant as any sort of relative value judgment;
-if what you want to do is build an enterprise software company, then you should
-do that.&amp;#xA0; The problem comes when what you
-really want to do is build rockets.&amp;#xA0; A
-lot of people feel like they first should do something to make money and then
-do what they care about (or first work at a company for awhile before starting
-a company they really want to start).&amp;#xA0;
-While you of course should take care of your family before anything
-else, you should try to work on what you really care about.&amp;#xA0; You can usually find a way.&amp;#xA0; The danger is that life is short and you only
-get to work on a small number of companies over the course of a career&amp;#x2014;it&amp;#x2019;s
-worth trying to make them count.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-Value is created by doing
-</title>
-</item>
-<item>
 <link>
 https://github.com/trevorlinton/webkit.js
 </link>
@@ -849,6 +203,696 @@ found in the LICENSE files contained in the root of the respective source code.&
 </description>
 <title>
 WebKit.js: Pure JavaScript Port of WebKit
+</title>
+</item>
+<item>
+<author>
+Google
+</author>
+<link>
+http://googleblog.blogspot.com/2014/01/introducing-our-smart-contact-lens.html
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;maia-main&quot;&gt;
+&lt;div class=&quot;maia-cols&quot;&gt;
+&lt;div class=&quot;maia-col-9&quot;&gt;
+
+&lt;div class=&quot;section&quot; id=&quot;main&quot;&gt;&lt;div class=&quot;widget Blog&quot; id=&quot;Blog1&quot;&gt;
+&lt;div class=&quot;post&quot;&gt;
+&lt;meta value=&quot;http://4.bp.blogspot.com/-mi6GFZvtLgM/UthX4TvBpjI/AAAAAAAAN_A/KYGNt93Ri5E/s1600/Hand+holding+-+zoomed+in.jpg&quot;&gt;
+
+
+&lt;div class=&quot;post-content&quot;&gt;
+You&amp;#x2019;ve probably heard that diabetes is a huge and growing problem&amp;#x2014;affecting one in every 19 people on the planet. But you may not be familiar with the daily struggle that many people with diabetes face as they try to keep their blood sugar levels under control. Uncontrolled blood sugar puts people at risk for a range of dangerous complications, some short-term and others longer term, including damage to the eyes, kidneys and heart. A friend of ours told us she worries about her mom, who once passed out from low blood sugar and drove her car off the road. &lt;br&gt;
+&lt;br&gt;
+Many people I&amp;#x2019;ve talked to say managing their diabetes is like having a part-time job. Glucose levels change frequently with normal activity like exercising or eating or even sweating. Sudden spikes or precipitous drops are dangerous and not uncommon, requiring round-the-clock monitoring. Although some people wear glucose monitors with a glucose sensor embedded under their skin, all people with diabetes must still prick their finger and test drops of blood throughout the day. It&amp;#x2019;s disruptive, and it&amp;#x2019;s painful. And, as a result, many people with diabetes check their blood glucose less often than they should.  &lt;br&gt;
+&lt;br&gt;
+Over the years, many scientists have investigated various body fluids&amp;#x2014;such as tears&amp;#x2014;in the hopes of finding an easier way for people to track their glucose levels. But as you can imagine, tears are hard to collect and study. At Google[x], we wondered if miniaturized electronics&amp;#x2014;think: chips and sensors so small they look like bits of glitter, and an antenna thinner than a human hair&amp;#x2014;might be a way to crack the mystery of tear glucose and measure it with greater accuracy.&lt;br&gt;
+&lt;div class=&quot;separator&quot;&gt;
+&lt;a href=&quot;http://4.bp.blogspot.com/-mi6GFZvtLgM/UthX4TvBpjI/AAAAAAAAN_A/KYGNt93Ri5E/s1600/Hand+holding+-+zoomed+in.jpg&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://4.bp.blogspot.com/-mi6GFZvtLgM/UthX4TvBpjI/AAAAAAAAN_A/KYGNt93Ri5E/s1600/Hand+holding+-+zoomed+in.jpg&quot; width=&quot;400&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+We&amp;#x2019;re now testing a smart contact lens that&amp;#x2019;s built to measure glucose levels in tears using a tiny wireless chip and miniaturized glucose sensor that are embedded between two layers of soft contact lens material. We&amp;#x2019;re testing prototypes that can generate a reading once per second.  We&amp;#x2019;re also investigating the potential for this to serve as an early warning for the wearer, so we&amp;#x2019;re exploring integrating tiny LED lights that could light up to indicate that glucose levels have crossed above or below certain thresholds.  It&amp;#x2019;s still early days for this technology, but we&amp;#x2019;ve completed multiple clinical research studies which are helping to refine our prototype. We hope this could someday lead to a new way for people with diabetes to manage their disease.&lt;br&gt;
+&lt;br&gt;
+We&amp;#x2019;re in discussions with the FDA, but there&amp;#x2019;s still a lot more work to do to turn this technology into a system that people can use. We&amp;#x2019;re not going to do this alone: we plan to look for partners who are experts in bringing products like this to market. These partners will use our technology for a smart contact lens and develop apps that would make the measurements available to the wearer and their doctor. We&amp;#x2019;ve &lt;a href=&quot;http://investor.google.com/corporate/2004/ipo-founders-letter.html&quot;&gt;always said&lt;/a&gt; that we&amp;#x2019;d seek out projects that seem a bit speculative or strange, and at a time when the &lt;a href=&quot;http://www.idf.org/sites/default/files/Global_WDD_Final.pdf&quot;&gt;International Diabetes Federation&lt;/a&gt;&amp;#xA0;(PDF) is declaring that the world is &amp;#x201C;losing the battle&amp;#x201D; against diabetes, we thought this project was worth a shot. &lt;br&gt;
+&lt;br&gt;
+&lt;span class=&quot;byline-author&quot;&gt;Posted by Brian Otis and Babak Parviz, project co-founders&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;blog-pager&quot; id=&quot;blog-pager&quot;&gt;
+&lt;span id=&quot;blog-pager-newer-link&quot;&gt;
+&lt;a class=&quot;blog-pager-newer-link&quot; href=&quot;http://googleblog.blogspot.com/2014/01/hit-road-with-president-obama-in-first.html&quot; id=&quot;Blog1_blog-pager-newer-link&quot; title=&quot;Newer Post&quot;&gt;
+Newer Post
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;span id=&quot;blog-pager-older-link&quot;&gt;
+&lt;a class=&quot;blog-pager-older-link&quot; href=&quot;http://googleblog.blogspot.com/2014/01/a-new-wind-investment-in-texas.html&quot; id=&quot;Blog1_blog-pager-older-link&quot; title=&quot;Older Post&quot;&gt;
+Older Post
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;a class=&quot;home-link&quot; href=&quot;http://googleblog.blogspot.com/&quot;&gt;
+Home
+&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;
+</description>
+<title>
+Introducing our smart contact lens project (for diabetics)
+</title>
+</item>
+<item>
+<link>
+http://antirez.com/articoli/tclmisunderstood.html
+</link>
+<description>
+&lt;div&gt;&lt;p&gt;
+In an article recently linked from reddit entitled
+&lt;a href=&quot;http://www.cabochon.com/~stevey/blog-rants/tour-de-babel.html&quot;&gt;
+Tour de Babel&lt;/a&gt; you can read (among lots of other nonsense):
+&lt;i&gt;Heck, people still use Tcl as an embedded interpreter, even though Python is far superior to Tcl in every conceivable way -- except, that is, for the frost thing.&lt;/i&gt;
+&lt;/p&gt;&lt;p&gt;
+Ok, the whole article is well.. not very valid, but unfortunately while
+many misconceptions are promptly recognized by the informed reader,
+this one against Tcl is generally believed at face value. I hope this article
+will convince people that Tcl is not that bad.
+
+&lt;/p&gt;&lt;p&gt;
+In my programming life I have used a lot of languages to write different
+kind of applications: many free/paywork programs in C, a web CMS
+in Scheme, a number of networking/web applications in Tcl, a shop
+management system in Python, and so on. I used to play with a number
+of other programming languages like Smalltalk, Self, FORTH, Ruby, Joy,...
+And yet, I have no doubt, that &lt;b&gt;there is no language that is as misunderstood
+in the programming community as Tcl is&lt;/b&gt;.
+&lt;/p&gt;&lt;p&gt;Tcl is not without faults, but most of its limitations are not
+hard coded in the language design, they are just the result of the
+fact that Tcl lost its &quot;father&quot; (John Ousterhout) a number of years ago, and together with him any kind
+of single-minded strong leadership that was able to take strong
+decisions. With the right changes it is possible
+to overcome most of the limitations of Tcl, and at the same
+time preserve the power of the language. If you don't trust Tcl is remarkably
+powerful please &lt;b&gt;take the time&lt;/b&gt; to read this article first. Maybe
+you still won't like it afterwards, but hopefully you will respect it, and you will certainly  have strong arguments against
+the &lt;i&gt;Tcl is a toy language&lt;/i&gt; misconception that's even more petty than
+&lt;i&gt;Lisp has too many parenthesis&lt;/i&gt;.
+&lt;/p&gt;&lt;p&gt;
+Before we begin, I'll spend some time explaining
+how Tcl works. Like the best languages in the world, Tcl has a few
+concepts that, combined together, allow for programming freedom
+and expressiveness.
+&lt;/p&gt;&lt;p&gt;After this short introduction to Tcl, you'll see how in Tcl
+things very similar to Lisp macros just happen using normal
+procedures (in a much more powerful way than Ruby blocks),
+how it's possible to redefine almost every part of the language
+itself, and how it is possible to mostly ignore
+types when programming. The Tcl community developed
+a number of OOP systems, radical language modifications, macro
+systems, and many other interesting things, just writing Tcl
+programs. If you like programmable programming languages I bet
+you'll at least look on it with interest.
+
+&lt;/p&gt;&lt;p&gt;
+The first idea of the Tcl language is: commands.
+Programs are commands, one after the other. For
+example to set the variable 'a' to 5 and print its value
+you write two commands:
+&lt;/p&gt;&lt;pre&gt;
+set a 5
+puts $a
+&lt;/pre&gt;
+&lt;p&gt;
+Commands are space separated words.
+A command ends with a newline or with a &lt;b&gt;;&lt;/b&gt; character.
+&lt;b&gt;Everything&lt;/b&gt; is a command in Tcl - as you can see there
+is no assignment operator.  To set a variable you need a command,
+the &lt;b&gt;set&lt;/b&gt; command, that sets the variable specified as the
+first argument to the value specified as the second argument.
+&lt;/p&gt;&lt;p&gt;
+Almost every Tcl command returns a value, For example the &lt;b&gt;set&lt;/b&gt;
+command returns the value assigned to the variable. If the
+&lt;b&gt;set&lt;/b&gt; command is called with just one argument (the variable
+name), the current value of the variable is returned.
+&lt;/p&gt;&lt;p&gt;
+The second idea is command substitution. In a command some arguments
+may appear between &lt;b&gt;[&lt;/b&gt; and &lt;b&gt;]&lt;/b&gt; braces. If so
+the argument is substituted with the return value of the code
+included inside the braces. For example:
+&lt;/p&gt;&lt;pre&gt;
+set a 5
+puts [set a]
+&lt;/pre&gt;
+&lt;p&gt;
+The first argument of the second command, [set a], will be
+substituted with the return value of &quot;set a&quot; (that's 5).
+After the substitution step the command will be converted from:
+&lt;/p&gt;&lt;pre&gt;
+puts [set a]
+&lt;/pre&gt;&lt;pre&gt;
+puts 5
+&lt;/pre&gt;&lt;p&gt;
+And, at that point, it will be executed.
+&lt;/p&gt;&lt;p&gt;
+Always using the &lt;b&gt;set&lt;/b&gt; command for variable substitution
+would be too verbose, so even if not strictly needed, variable substitution
+was introduced at some time during the early development of Tcl.
+If a variable name is preceded by the &lt;b&gt;$&lt;/b&gt; character
+it is substituted with its value. So instead of
+&lt;/p&gt;&lt;pre&gt;
+puts [set a]
+&lt;/pre&gt;&lt;pre&gt;
+puts $a
+&lt;/pre&gt;
+&lt;p&gt;
+If commands are space separated words, how to deal with the
+need for arguments that may contain spaces? For example:
+&lt;/p&gt;&lt;pre&gt;
+puts Hello World
+&lt;/pre&gt;
+&lt;p&gt;
+is an incorrect program as Hello and World are two different
+arguments. This problem is solved by grouping. Text inside &quot;&quot;
+is considered a single argument, so the right program is:
+&lt;/p&gt;&lt;pre&gt;
+puts &quot;Hello World&quot;
+&lt;/pre&gt;
+&lt;p&gt;
+Commands and variables substitution work inside this kind
+of grouping, For example I can write:
+&lt;/p&gt;&lt;pre&gt;
+set a 5
+set b foobar
+puts &quot;Hello $a World [string length $b]&quot;
+&lt;/pre&gt;
+&lt;p&gt;
+And the result will be &quot;Hello 5 World 6&quot;. Also, escapes
+like \t, \n will do what you think.   There is, however, another kind
+of grouping where every kind of special character is just
+considered verbatim without any kind of substitution step.
+Everything between { and } is seen by Tcl as a unique argument
+where no substitutions are performed. So:
+&lt;/p&gt;&lt;pre&gt;
+set a 5
+puts {Hello $a World}
+&lt;/pre&gt;
+&lt;p&gt;
+Will print &lt;i&gt;Hello $a World&lt;/i&gt;.
+&lt;/p&gt;&lt;pre&gt;
+set a 5
+if $a {
+    puts Hello!
+}
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;b&gt;if&lt;/b&gt; is a command, with two arguments. The first is the value
+of the variable a substituted, the second is the string { ... puts Hello! ... }.
+The &lt;b&gt;if&lt;/b&gt; command uses a special version of &lt;b&gt;Eval&lt;/b&gt;
+that we'll see in a moment to run the script passed as the second
+argument, and returns the result. Of course, you can write
+your version of &lt;b&gt;if&lt;/b&gt; or any other control structure if
+you want. You may even redefine &lt;b&gt;if&lt;/b&gt; itself and add some
+feature to it!
+&lt;/p&gt;&lt;pre&gt;
+set a pu
+set b ts
+$a$b &quot;Hello World&quot;
+&lt;/pre&gt;
+&lt;p&gt;
+Yes, in Tcl everything happens at runtime and is dynamic: it's
+the ultimate late binding programming language, and there are no
+types. The command name is not a special type but just a string.
+Numbers are also just strings, so is Tcl code, a string (remember
+we passed a string to the &lt;b&gt;if&lt;/b&gt; command as second argument?).
+In Tcl what a string represents is up to the command that's manipulating
+it. the string &quot;5&quot; will be seen as a string of characters by
+the &quot;string length 5&quot; command, and as a boolean value by &quot;if $a ...&quot;
+command. Of course commands check that values have a suitable
+form, If I try to add &quot;foo&quot; to &quot;bar&quot; Tcl will produce an exception
+because it can't parse &quot;foo&quot; nor &quot;bar&quot; as numbers. This kind
+of checks in Tcl are very strict, so you'll not get the PHP-alike
+effect of silent absurd type conversions. The type conversion only
+happens if the string makes sense interpreted as the thing the command
+needs as arguments.
+&lt;/p&gt;&lt;p&gt;
+So Tcl is so dynamic, but guess what? It is more or less as fast as current
+Ruby implementations. There is a trick in the implementation of
+Tcl: objects (not in the OOP sense, but C structs representing
+Tcl values) cache the native value of the last use of a given
+string. If a Tcl value is always used as a number the C struct
+representing it will contain an integer inside, and as long as
+the next commands continue to use it as an integer, the string
+representation of the object is not touched at all. It's a bit more complex
+than this, but the result is that &lt;b&gt;the programmer doesn't need to
+think about types&lt;/b&gt;, and programs still work as fast as other
+dynamic programming languages where types are more explicit.
+&lt;/p&gt;&lt;p&gt;
+One of the more interesting types (or better.. string formats)
+Tcl uses is lists. Lists are mostly the central structure
+of a Tcl program: a Tcl list is always a valid Tcl command!
+(and both are just strings, in the end).
+In the simplest form lists are like commands: space separated
+words. For example the string &quot;a b foo bar&quot; is a list with four elements.
+There are commands to take a range of elements from a list,
+to add elements, and so on. Of course, lists may have elements
+containing spaces, so in order to create well formatted lists
+the &lt;b&gt;list&lt;/b&gt; command is used. Example:
+&lt;/p&gt;&lt;pre&gt;
+set l [list a b foo &quot;hello world&quot;]
+puts [llength $l]
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;b&gt;llength&lt;/b&gt; returns the length of the list, so the above
+program will print 4 as output. &lt;b&gt;lindex&lt;/b&gt; will
+instead return the element at the specified position,
+so &quot;lindex $l 2&quot; will return &quot;foo&quot;, and so on.
+Like in Lisp, in Tcl most programmers use the list type
+to model as many concepts as possible in programs.
+&lt;/p&gt;&lt;p&gt;
+I bet most Lisp hackers already noted how Tcl is a prefix-notation
+language, so you may think like in Lisp, math in Tcl is performed
+using math operators as commands, like: puts [+ 1 2].
+Instead, things work in a different way: in order to make Tcl more
+friendly there is a command taking infix math expressions as
+argument and evaluating them. This command is called &lt;b&gt;expr&lt;/b&gt;, and
+math in Tcl works like this:
+&lt;/p&gt;&lt;pre&gt;
+set a 10
+set b 20
+puts [expr $a+$b]
+&lt;/pre&gt;
+&lt;p&gt;
+Commands like &lt;b&gt;if&lt;/b&gt; and &lt;b&gt;while&lt;/b&gt; use &lt;b&gt;expr&lt;/b&gt;
+internally in order to evaluate expressions, for instance:
+&lt;/p&gt;&lt;pre&gt;
+&lt;p&gt;
+while {$a &amp;lt; $b} {
+    puts Hello
+}
+&lt;/p&gt;&lt;/pre&gt;
+&lt;p&gt;
+where the while command takes two arguments - the first string being evaluated
+as an &lt;b&gt;expr&lt;/b&gt;ession to check if it's true at every iteration,
+and the second &lt;b&gt;eval&lt;/b&gt;uated itself each time.
+I think it's a design error that math commands are not builtins,
+I see &lt;b&gt;expr&lt;/b&gt; like a cool tool to have where there is
+complex math to do, but to just add two numbers [+ $a $b]
+is more convenient.  It's worth noting that this has been formally
+proposed as a change to the language.
+&lt;/p&gt;&lt;p&gt;
+Naturally, nothing stops a Tcl programmer from writing a procedure (that's
+a user defined command) in order to use math operators as commands.
+Like this:
+&lt;/p&gt;&lt;pre&gt;
+proc + {a b} {
+    expr {$a+$b}
+}
+&lt;/pre&gt;
+&lt;p&gt;
+The &lt;b&gt;proc&lt;/b&gt; command is used to create a procedure: its first
+argument is the procedure name, the second is the list of arguments
+the procedure takes as input, and finally the last argument
+is the body of the procedure. Note that the second argument,
+the arguments list, is a Tcl list. As you can see the return
+value of the last command in a procedure is used as return
+value of the procedure (unless the &lt;b&gt;return&lt;/b&gt; command is used
+explicitly).
+But wait... Everything is a command in Tcl right? So we can create
+the procedures for +, -, *, ... in a simpler way instead of writing four
+different procedures:
+&lt;/p&gt;&lt;pre&gt;
+set operators [list + - * /]
+foreach o $operators {
+    proc $o {a b} [list expr &quot;\$a $o \$b&quot;]
+}
+&lt;/pre&gt;
+&lt;p&gt;
+After this we can use [+ 1 2], [/ 10 2] and so on.
+Of course it's smarter to create these procedures as varargs
+like Scheme's procedures. In Tcl procedures can have the same names
+as built in commands, so you can redefine Tcl itself. For example, in order
+to write &lt;a href=&quot;http://wiki.tcl.tk/sugar&quot;&gt;a macro system for Tcl&lt;/a&gt;
+I redefined &lt;b&gt;proc&lt;/b&gt;. Redefining proc is also useful
+for writing profilers (Tcl profilers are developed in Tcl itself usually).
+After a built in command is redefined you can still call it if you
+&lt;b&gt;rename&lt;/b&gt;d it to some other name prior to overwriting it with &lt;b&gt;proc&lt;/b&gt;.
+&lt;/p&gt;&lt;p&gt;
+If you are reading this article you already know what &lt;b&gt;Eval&lt;/b&gt;
+is. The command &lt;i&gt;eval {puts hello}&lt;/i&gt; will of course evaluate the
+code passed as argument, as happens in many other
+programming languages. In Tcl there is another beast,
+a command called &lt;b&gt;uplevel&lt;/b&gt; that can evaluate code in the
+context of the calling procedure, or for what it's worth, in
+the context of the caller of the caller (or directly at the top level).
+What this means is that what in Lisp are macros, in Tcl are just
+simple procedures. Example: in Tcl there is no &quot;built-in&quot;
+for a command &lt;b&gt;repeat&lt;/b&gt; to be used like this:
+&lt;/p&gt;&lt;pre&gt;
+repeat 5 {
+    puts &quot;Hello five times&quot;
+}
+&lt;/pre&gt;&lt;p&gt;
+But to write it is trivial.
+&lt;/p&gt;&lt;pre&gt;
+proc repeat {n body} {
+    set res &quot;&quot;
+    while {$n} {
+        incr n -1
+        set res [uplevel $body]
+    }
+    return $res
+}
+&lt;/pre&gt;
+&lt;p&gt;
+Note that we take care to save the result of the last
+evaluation, so our &lt;b&gt;repeat&lt;/b&gt; will (like most Tcl
+commands) return the last evaluated result.
+An example of usage:
+&lt;/p&gt;&lt;pre&gt;
+set a 10
+repeat 5 {incr a} ;# Repeat will return 15
+&lt;/pre&gt;
+&lt;p&gt;
+As you can guess, the &lt;b&gt;incr&lt;/b&gt; command is used to increment
+an integer var by one (if you omit its second argument).
+&quot;incr a&quot; is executed in the context of the calling procedure,
+(i.e. the previous stack frame).
+&lt;/p&gt;&lt;p&gt;Congratulations, you know more than 90% of Tcl concepts!
+&lt;/p&gt;&lt;p&gt;
+I am not going to show you every single Tcl feature, but I want to give an idea
+of advanced programming tasks that are solved in a very nice
+way with Tcl. I want to stress that I think &lt;b&gt;Tcl has a number
+of faults&lt;/b&gt;, but most of them are not in the main ideas of
+the language itself.  I think there is room for a Tcl-derived
+language that can compete with Ruby, Lisp and Python today in interesting
+domains like web programming, network programming, GUI development, DSL
+and as scripting language.
+&lt;/p&gt;&lt;p&gt;Tcl syntax is so simple that you can write a parser for Tcl
+in few lines of code in Tcl itself. I wrote
+&lt;a href=&quot;http://wiki.tcl.tk/sugar&quot;&gt;a macro system for Tcl in Tcl&lt;/a&gt;
+									    as I already mentioned, which is able to do source level transformations complex enough
+to allow tail call optimization.
+At the same time, Tcl syntax is able to scale to appear more
+algol-like, it depends on your programming style.
+&lt;/p&gt;&lt;p&gt;
+There are no types, and you don't need to perform conversions,
+however, you aren't likely to introduce bugs because the checks on the format
+of the strings are very strict. Even better, you &lt;b&gt;don't need
+serialization&lt;/b&gt;. Have a big complex Tcl list and want to send
+it via a TCP socket? Just write: &lt;b&gt;puts $socket $mylist&lt;/b&gt;.
+On the other side of the socket read it as &lt;b&gt;set mylist [read $socket]&lt;/b&gt;.
+and you are done.
+&lt;/p&gt;&lt;p&gt;
+Tcl has built-in event-driven programming, integrated with the I/O library. To write complex networking programs with just what is provided in the core language is so simple it's funny. An example: the following program is
+a &lt;b&gt;concurrent&lt;/b&gt; (internally select(2) based) TCP server that outputs
+the current time to every client.
+&lt;/p&gt;&lt;pre&gt;
+socket -server handler 9999
+proc handler {fd clientaddr clientport} {
+    set t [clock format [clock seconds]]
+    puts $fd &quot;Hello $clientaddr:$clientport, current date is $t&quot;
+    close $fd
+}
+vwait forever
+&lt;/pre&gt;
+&lt;p&gt;
+Non-blocking I/O and events are handled so well that you can even
+write to a socket where there is no longer output buffer and Tcl
+will automatically buffer it in userland and send it in background to the socket
+when there is again space on the socket's output buffer.
+&lt;/p&gt;&lt;p&gt;
+Python users know a good idea when they see it - Python's &quot;Twisted&quot;
+framework makes use of the same select-driven IO concepts that Tcl has
+had natively for years.
+&lt;/p&gt;&lt;p&gt;
+In Tcl you can write object oriented code, functional style code,
+and imperative code in a mix, like it happens in Common Lisp more
+or less. A number of OOP systems and Functional Programming primitives
+where implemented in the past. There are everything from prototype-based
+OOP systems to SmallTalk-like ones, and many are implemented in Tcl
+itself (or were initially, as a proof-of-concept). Furthermore, because code in Tcl
+is first class, it is very simple to write functional language
+primitives that play well with the logic of the language.
+An example is &lt;b&gt;lmap&lt;/b&gt;:
+&lt;/p&gt;&lt;pre&gt;
+lmap i {1 2 3 4 5} {
+    expr $i*$i
+}
+&lt;/pre&gt;
+&lt;p&gt;
+which will return a list of squares, 1 4 9 12 25. You can write
+a &lt;b&gt;map&lt;/b&gt;-like function based on a version of lamba
+(also developed in Tcl itself), but Tcl has already what you
+need to allow for a more natural functional programming than
+the Lisp way (which works well for Lisp but maybe not for everything
+else).  Note what happens when you try to add functional programming
+to a language that's too rigid: Python and the endless debate of
+its functional primitives.
+&lt;/p&gt;&lt;p&gt;
+If you are a Lisp programmer you know how beautiful is to
+have a flexible data structure like the list everywhere in your
+programs, especially when the literal is as simple as
+&quot;foo bar 3 4 5 6&quot; in most cases.
+&lt;/p&gt;&lt;p&gt;
+Via eval, uplevel, upvar and the very powerful introspection
+capabilities of Tcl you can redefine the language and invent
+new ways of solving problems. For example, the following interesting
+command if called as first command in a function will &lt;b&gt;automagically
+make it a memoizing version&lt;/b&gt; of the function:
+&lt;/p&gt;&lt;pre&gt;
+proc memoize {} {
+    set cmd [info level -1]
+    if {[info level] &amp;gt; 2 &amp;amp;&amp;amp; [lindex [info level -2] 0] eq &quot;memoize&quot;} return
+    if {![info exists ::Memo($cmd)]} {set ::Memo($cmd) [eval $cmd]}
+    return -code return $::Memo($cmd)
+}
+&lt;/pre&gt;&lt;p&gt;
+Then, when you write a procedure just write something like:
+&lt;/p&gt;&lt;pre&gt;
+proc myMemoizingProcedure { ... } {
+    memoize
+    ... the rest of the code ...
+} 
+&lt;/pre&gt;
+&lt;p&gt;
+Tcl is probably the language with the best internationalization
+support. Every string is internally encoded in utf-8, all the
+string operations are Unicode-safe, including the regular expression
+engine. Basically, in Tcl programs, encodings are not a problem -
+they just work.
+&lt;/p&gt;&lt;p&gt;
+If you define a procedure called &lt;b&gt;unknown&lt;/b&gt; it is called
+with a Tcl list representing arguments of every command Tcl tried
+to execute, but failed because the command name was not defined. You can do
+what you like with it, and return a value, or raise an error.
+If you just return a value, the command will appear to work even
+if unknown to Tcl, and the return value returned by &lt;b&gt;unknown&lt;/b&gt;
+will be used as return value of the not defined command.
+Add this to uplevel and upvar, and the language itself that's almost
+syntax free, and what you get is an impressive environment for
+Domain Specific Languages development. Tcl has almost no syntax,
+like Lisp and FORTH, but there are different ways to have no syntax.
+Tcl looks like a configuration file by default:
+&lt;/p&gt;&lt;pre&gt;
+disable ssl
+validUsers jim barbara carmelo
+hostname foobar {
+    allow from 2:00 to 8:00
+}
+&lt;/pre&gt;
+&lt;p&gt;
+The above is a valid Tcl program, once you define the commands
+used, &lt;b&gt;disable&lt;/b&gt;, &lt;b&gt;validUsers&lt;/b&gt; and &lt;b&gt;hostname&lt;/b&gt;.
+&lt;/p&gt;&lt;p&gt;
+Unfortunately there isn't room to show a lot of interesting features:
+most Tcl commands just do one single thing well with easy to remember names.
+Strings operations, introspection and other features
+are implemented as single commands with subcommands, for example
+&lt;b&gt;string length&lt;/b&gt;, &lt;b&gt;string range&lt;/b&gt; and so on. Every part of
+the language that gets indexes as argument support an &lt;b&gt;end-num&lt;/b&gt;
+notation, so for example to take all the elements of a list but
+not the first nor the last you just write:
+&lt;/p&gt;&lt;pre&gt;
+lrange $mylist 1 end-1
+&lt;/pre&gt;
+&lt;p&gt;
+And in general there is a lot of good design and optimization
+for the common case inside. Moreover the Tcl source code is one
+of the best written C programs you'll find, and the quality of
+the interpreter is amazing: commercial grade in the best sense of the
+word. Another interesting thing about the implementation is that
+it works exactly the same in different environments, from Windows
+to Unix, to Mac OS X. No quality difference among different
+operating systems (yes, &lt;b&gt;including&lt;/b&gt; Tk, the main GUI library of Tcl).
+&lt;/p&gt;&lt;p&gt;
+I don't claim everybody should like Tcl. What I claim is that Tcl
+is a powerful language and not a Toy, and it's possible to create
+a new Tcl-alike language without most of the limitations of Tcl
+but with all of its power. I tried this myself, and
+the &lt;a href=&quot;http://jim.berlios.de&quot;&gt;Jim interpreter&lt;/a&gt; is the
+result: the code is there and working and can run most Tcl
+programs, but then I had no longer time to work for free to
+language development, so the project is now more or less abandoned.
+Another attempt to develop a Tcl-alike language,
+&lt;a href=&quot;http://www.hecl.org/&quot;&gt;Hecl&lt;/a&gt;, is currently
+in progress, as a scripting language for Java applications,
+where the author (David Welton) exploits the fact that the Tcl core
+implementation is small, and the command based design simple to
+use as a glue between the two languages (This is not typical with
+modern dynamic languages, but both the ideas apply to Scheme too).
+I'll be very glad if, after reading this article, you no longer think of Tcl
+as a Toy. Thank you. Salvatore.
+&lt;/p&gt;&lt;/div&gt;
+</description>
+<title>
+Tcl the misunderstood (2006)
+</title>
+</item>
+<item>
+<link>
+https://github.com/JelteF/PyLaTeX
+</link>
+<description>
+&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
+
+&lt;p&gt;PyLaTeX is a Python library for creating LaTeX files. The point of this library
+is being an easy, but extensible interface between Python and LaTeX.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;features&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#features&quot;&gt;&lt;/a&gt;Features&lt;/h3&gt;
+
+&lt;p&gt;The library contains some basic features I have had the need for so far.
+Currently those are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Document generation and compilation&lt;/li&gt;
+&lt;li&gt;Section, table and package classes&lt;/li&gt;
+&lt;li&gt;An escape function&lt;/li&gt;
+&lt;li&gt;Bold and italic functions&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Everything else you want you can still add to the document by adding LaTeX
+formatted strings instead of classes or regular strings.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;dependencies&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#dependencies&quot;&gt;&lt;/a&gt;Dependencies&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python 3.3 (2.7 currently works as well)&lt;/li&gt;
+&lt;li&gt;pdflatex (only if you want to compile the tex file)&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+&lt;a name=&quot;installation&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#installation&quot;&gt;&lt;/a&gt;Installation&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;pip install pylatex&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;example&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#example&quot;&gt;&lt;/a&gt;Example&lt;/h3&gt;
+
+&lt;div class=&quot;highlight highlight-python&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pylatex&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pylatex.utils&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;italic&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Yaay the first section, it can even be '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'italic'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'r|ccl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_hline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_hline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_empty_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_pdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code will generate this:
+&lt;a href=&quot;https://raw.github.com/JelteF/PyLaTeX/master/docs/static/screenshot.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://raw.github.com/JelteF/PyLaTeX/master/docs/static/screenshot.png&quot; alt=&quot;Generated PDF by PyLaTeX&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;future-development&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#future-development&quot;&gt;&lt;/a&gt;Future development&lt;/h3&gt;
+
+&lt;p&gt;I will keep adding functionality I need to this library, an interface for
+graphics and math will probably be added in a future version.&lt;/p&gt;
+
+&lt;p&gt;If you add a feature yourself, or fix a bug, please send a pull request.&lt;/p&gt;
+
+&lt;p&gt;You can submit issues, but it will not be my priority to fix them. My job and
+education are a bit higher on the priority list.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;support&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#support&quot;&gt;&lt;/a&gt;Support&lt;/h3&gt;
+
+&lt;p&gt;This library is being developed for Python 3.3. It currently works for Python
+2.7 as well, but further aditions to the library might break that compatibility.
+It is also only tested on Linux, so it might not work on any different
+platforms.&lt;/p&gt;
+
+&lt;p&gt;I have no intention of testing on any different platforms or with different
+Python versions. I also don't have the intention to write fixes for platform or
+environment specific bugs, but pull requests that fix those are always welcome.&lt;/p&gt;
+
+&lt;h3&gt;
+&lt;a name=&quot;copyright-and-license&quot; class=&quot;anchor&quot; href=&quot;https://github.com/JelteF/PyLaTeX#copyright-and-license&quot;&gt;&lt;/a&gt;Copyright and License&lt;/h3&gt;
+
+&lt;p&gt;Copyright 2014 Jelte Fennema, under &lt;a href=&quot;https://github.com/JelteF/PyLaTeX/blob/master/LICENSE&quot;&gt;the MIT
+license&lt;/a&gt;&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+</description>
+<title>
+PyLaTeX: Easily create LaTeX documents with Python
+</title>
+</item>
+<item>
+<link>
+http://www.matasano.com/matasano-square-microcontroller-ctf/
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;primary-content&quot;&gt;
+  &lt;h2&gt;Announcing The Matasano/Square CTF&lt;/h2&gt;
+  
+  &lt;p&gt;We've teamed up with &lt;a href=&quot;https://www.squareup.com&quot;&gt;Square&lt;/a&gt; to run a joint Capture The Flag contest.&lt;/p&gt;
+  
+  &lt;h2&gt;What is it?&lt;/h2&gt;
+  
+  &lt;p&gt;Your target is a small embedded device; a microcontroller running compiled C code.&lt;/p&gt;
+  
+  &lt;p&gt;You get access to the device, disassembly of its code, and a low-level debugger and assembler. We &quot;run&quot; the devices, you interact with them via a vanilla web interface.&lt;/p&gt;
+  
+  &lt;p&gt;At each level, you'll get a simple input that, owing to some C software bug, can be used to own the target. You'll use the debugger to reverse the target, find the input, and then deliver it to a &quot;production&quot; instance to beat the level.&lt;/p&gt;
+  
+  &lt;p&gt;You'll face a series of revisions of the target, starting from &quot;comically broken&quot; and proceeding vendor-fix by vendor-fix through basic memory corruption, stack overflows, randomization, memory protection schemes, allocator vulnerabilities, and DRM-style software protection.&lt;/p&gt;
+  
+  &lt;p&gt;All this happens on an architecture you've probably used, but likely never have written any code for. Have you ever reverse-engineered a program from its assembly code to understand what it's doing? That'll happen too.&lt;/p&gt;
+  
+  &lt;p&gt;We're keeping a leaderboard, by completion time, CPU cycles, and input size. Part of the fun of a challenge like this is to see how others are doing in real-time.&lt;/p&gt;
+  
+  &lt;p&gt;If you've done a lot of exploit development, you won't have much trouble. &lt;em&gt;But we hope the real fun is reserved for the people who haven't&lt;/em&gt;: you'll get to play with concepts that, in the real world, involve tedious toolchain installs and comprehensive knowledge of the memory layouts of gigantic browser library codebases. You won't need any of that here: we're looking forward to seeing people who have never written a line of assembly beating people who've been doing this for years.&lt;/p&gt;
+  
+  &lt;h2&gt;How do I start?&lt;/h2&gt;
+  
+  &lt;p&gt;Visit &lt;a href=&quot;http://microcorruption.com&quot;&gt;microcorruption.com&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+      
+      
+    &lt;/div&gt;
+</description>
+<title>
+Announcing The Matasano/Square CTF
 </title>
 </item>
 </channel>
