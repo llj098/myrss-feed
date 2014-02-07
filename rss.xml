@@ -14,185 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-http://www.matasano.com/matasano-square-microcontroller-ctf/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;primary-content&quot;&gt;
-  &lt;h2&gt;Announcing The Matasano/Square CTF&lt;/h2&gt;
-  
-  &lt;p&gt;We've teamed up with &lt;a href=&quot;https://www.squareup.com&quot;&gt;Square&lt;/a&gt; to run a joint Capture The Flag contest.&lt;/p&gt;
-  
-  &lt;h2&gt;What is it?&lt;/h2&gt;
-  
-  &lt;p&gt;Your target is a small embedded device; a microcontroller running compiled C code.&lt;/p&gt;
-  
-  &lt;p&gt;You get access to the device, disassembly of its code, and a low-level debugger and assembler. We &quot;run&quot; the devices, you interact with them via a vanilla web interface.&lt;/p&gt;
-  
-  &lt;p&gt;At each level, you'll get a simple input that, owing to some C software bug, can be used to own the target. You'll use the debugger to reverse the target, find the input, and then deliver it to a &quot;production&quot; instance to beat the level.&lt;/p&gt;
-  
-  &lt;p&gt;You'll face a series of revisions of the target, starting from &quot;comically broken&quot; and proceeding vendor-fix by vendor-fix through basic memory corruption, stack overflows, randomization, memory protection schemes, allocator vulnerabilities, and DRM-style software protection.&lt;/p&gt;
-  
-  &lt;p&gt;All this happens on an architecture you've probably used, but likely never have written any code for. Have you ever reverse-engineered a program from its assembly code to understand what it's doing? That'll happen too.&lt;/p&gt;
-  
-  &lt;p&gt;We're keeping a leaderboard, by completion time, CPU cycles, and input size. Part of the fun of a challenge like this is to see how others are doing in real-time.&lt;/p&gt;
-  
-  &lt;p&gt;If you've done a lot of exploit development, you won't have much trouble. &lt;em&gt;But we hope the real fun is reserved for the people who haven't&lt;/em&gt;: you'll get to play with concepts that, in the real world, involve tedious toolchain installs and comprehensive knowledge of the memory layouts of gigantic browser library codebases. You won't need any of that here: we're looking forward to seeing people who have never written a line of assembly beating people who've been doing this for years.&lt;/p&gt;
-  
-  &lt;h2&gt;How do I start?&lt;/h2&gt;
-  
-  &lt;p&gt;Visit &lt;a href=&quot;http://microcorruption.com&quot;&gt;microcorruption.com&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-      
-      
-    &lt;/div&gt;
-</description>
-<title>
-Announcing The Matasano/Square CTF
-</title>
-</item>
-<item>
-<author>
-Also on The Switch, Amazon is a hornet's nest of malware
-</author>
-<link>
-http://www.washingtonpost.com/blogs/the-switch/wp/2014/01/16/yale-students-made-a-better-version-of-its-course-catalog-then-yale-shut-it-down/
-</link>
-<description>
-&lt;article id=&quot;post-14189&quot; class=&quot;post-14189 post type-post status-publish format-standard hentry category-uncategorized&quot; score=&quot;51.25&quot;&gt;
-		&lt;header class=&quot;entry-header&quot;&gt;
-			&lt;/header&gt;
-		
-		&lt;div id=&quot;post-content&quot; class=&quot;cf entry-content&quot; score=&quot;32.5&quot;&gt;
-		&lt;div id=&quot;attachment_14196&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-14196&quot; alt=&quot;(CourseTable.com)&quot; src=&quot;http://www.washingtonpost.com/blogs/the-switch/files/2014/01/coursetable.jpg&quot; width=&quot;711&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;The page students inside Yale saw when attempting to access a student creating online class planning service earlier this week. (CourseTable.com)&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;A pair of Yale students and brothers, Peter Xu and Harry Yu, built a site that let students plan out their schedules while comparing class evaluations and teacher ratings for the past three semesters. Thousands of Yale students used it, apparently finding it a better resource than similar sites run by the university. But this week, as the &quot;shopping period&quot; where students are able to try out classes and finalize their schedules began, Yale not only blocked the Web site from campus networks, labeling it &quot;malicious,&quot; but forced the brothers to take it down or face disciplinary action.&lt;/p&gt;
-&lt;p&gt;&quot;We found that it was really hard to find and compare courses when we first arrived at Yale,&quot; said Yu,&quot;and given the amount of freedom that Yale gives students to take courses, we found it really frustrating.&quot; So they created their own personal tool to help them use average class and professor evaluations to make informed decisions about their course selections.&lt;/p&gt;
-&lt;p&gt;The information they used was already available to students through internal systems. But there was no centralized database that allowed students to perform comparisons at a glance. So they started collecting information from internal resources and programmed an interface that would compile everything in one place. As it evolved, they thought that other students might be interested in their system as well. So they launched it as &quot;Yale Bluebook+&quot; -- a riff on an officially sanctioned course planning tool. And they were right: According to their data, 2,094 students have used the site, with 1,871 students creating worksheets last semester. That's a significant chunk of Yale's roughly 5,000-person undergraduate student body.&lt;/p&gt;
-&lt;p&gt;As first reported by the &lt;a href=&quot;http://yaledailynews.com/blog/2014/01/14/yale-shuts-down-yale-bluebook/&quot;&gt;Yale Daily News&lt;/a&gt;, representatives of the registrar's office contacted Yu and Xu last week asking how they had obtained their data, with whose permission, and where it was hosted. Officials also expressed concerns that the site was making course evaluation information available to individuals not authorized to view the information. While the site required Yale credentials to log in, it did not have a way to sort between undergrad students and other members of the academic community. In later correspondence, the administration cited concerns about the prominence of evaluation information and unauthorized use of the words &quot;Yale,&quot; &quot;Bluebook,&quot; and the Yale logo.&lt;/p&gt;
-&lt;p&gt;At a meeting Friday, the brothers say they were told they needed to shut down the site due to these issues. &quot;They seemed to be panicking a little bit about it,&quot; Xu said in an interview. But the brothers countered with proposals aimed at addressing the university's concerns and they rushed to implement changes over the weekend -- including changing the name to CourseTable and adjusting how they displayed rating data. &quot;We thought we could work out all of these issues,&quot; says Xu, &quot;up until Sunday night.&quot;&lt;/p&gt;
-&lt;p&gt;Then, without further warning, Yale blocked the page from university networks -- effectively cutting off students who intended to use their service to guide their shopping period. Xu and Yu said they scrambled to e-mail out saved worksheets to students and tried to get in contact with the administration to talk through the situation further. In response, they received a written notice that they would be referred to the Executive Committee for disciplinary action if the site was not taken down by 5 p.m. Tuesday.&lt;/p&gt;
-&lt;p&gt;So they took down the site. &quot;We're disappointed, but we're afraid of compromising our degree,&quot; said Yu. Both students expressed their continued affection for the institution, but they also saw its actions as contradicting the values like a &quot;drive to promote innovation&quot; and &quot;academic freedom&quot; that they believe are central to their education at Yale.&lt;/p&gt;
-&lt;p&gt;The brothers were especially surprised that the university was unwilling to cooperate with them because the administration's existing course selection software — which Yu and Xu's product was meant to improve — was &lt;a href=&quot;http://yaledailynews.com/blog/2012/08/01/university-acquires-yale-bluebook/&quot;&gt;itself a student-created product&lt;/a&gt;, eventually bought out by the university. In fact, the brothers say, the original Yale Bluebook used some of the same methods to scrape its data, and they worked with a member of the app's team to help create the process.&lt;/p&gt;
-&lt;p&gt;But their conversations with the administration and the content of the sites led them to believe the sticking point was the way they displayed course evaluations, which was different from Yale Bluebook because it averaged the ratings and made them easily comparable. &quot;The registrar said that originally when Yale faculty agreed to put that information online, they didn't want it to be displayed that prominently,&quot; said Yu.&lt;/p&gt;
-&lt;p&gt;The brothers don't find that a very compelling reason to limit the way the information could be displayed. &quot;First, we don't think that helps professors that much,&quot;said Xu, saying that the ratings for most classes were positive. &quot;And second, we think it hurts students by limiting their ability to understand information about the classes they want to take.&quot;&lt;/p&gt;
-&lt;p&gt;But the administration appears to disagree: A response sent by the Yale IT department to students who filed tickets about the blocking of the site specifically cited the its use of ratings as among the reasons the site was blocked, saying &quot;the design of the site focused on a few ratings never intended to be used for this purpose.&quot; It added, &quot;Yale takes advising and course selection seriously and has given students digital resources to help them design their schedules, such as syllabi, course descriptions, and thoughtful narrative responses written by students.&quot;&lt;/p&gt;
-&lt;p&gt;Yale declined Washington Post interview requests for this story, but did share a short statement about the situation from Yale College Dean Mary Miller. The statement did not directly address their blocking of the website or the threat of disciplinary action, or the site's use of course ratings.&lt;/p&gt;
-&lt;p&gt;&quot;Yale's policy on free expression and free speech entitles no one to appropriate a Yale resource and use it as their own,&quot; the statement read. It further stated its main priority at this time was supporting its own resources, &quot;not others created independently and without the university's cooperation or permission,&quot; and that &quot;all the information on the website remains remains available to students on the Yale site.&quot;&lt;/p&gt;
-&lt;p&gt;Since the blocking of the Web site and the forced takedown, the brothers say they have received &quot;radio silence&quot; in response to attempts to meet in person with the dean's or the registrar's office -- a situation they find frustrating, but not particularly surprising. &quot;They want this to blow over,&quot; argued Yu. &quot;In another few weeks, students will be enrolled in classes and it won't be a be a big deal anymore.&quot;&lt;/p&gt;
-&lt;p&gt;But they still believe &quot;Yale as a whole remains a great place for technology. &quot; And they say they've received a lot of support in conversations with faculty and members of the administration outside of the dean's and registrar's office. Plus their &lt;a href=&quot;http://petition.yaleplus.com/&quot;&gt;online petition&lt;/a&gt; asking the university to allow the site has attracted over 500 signatures. &quot;We think that Yale as a whole does not try to stifle innovation,&quot; they explain. &quot;Rather, the overly cautious dean's and registrar's office has just really mishandled this specific case.&quot;&lt;/p&gt;
-
-&lt;p&gt;Related -- &lt;a href=&quot;http://www.washingtonpost.com/national/16-photos-that-make-you-appreciate-america/2013/04/04/7c1f91f6-9ca6-11e2-a941-a19bce7af755_gallery.html#photo=1&quot;&gt;GALLERY: They were teachers before they celebrities&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.washingtonpost.com/national/16-photos-that-make-you-appreciate-america/2013/04/04/7c1f91f6-9ca6-11e2-a941-a19bce7af755_gallery.html#photo=1&quot;&gt;GALLERY: 19 photos that make you appreciate America&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;relative gallery-container&quot;&gt;&lt;a href=&quot;http://www.washingtonpost.com/national/16-photos-that-make-you-appreciate-america/2013/04/04/7c1f91f6-9ca6-11e2-a941-a19bce7af755_gallery.html#photo=1&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://img.washingtonpost.com/rf/image_606w/2010-2019/WashingtonPost/2013/08/29/Interactivity/Images/tumblr_mr61gfp9uj1r81c8do1_1280.jpg&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-
-
-
-	&lt;/div&gt;
-			&lt;div class=&quot;entry-footer&quot; score=&quot;0.0&quot;&gt;
-		
-	&lt;/div&gt;
-	
-		
-&lt;/article&gt;
-
-</description>
-<title>
-Yale students made a better version of its course catalog. Yale shut it down
-</title>
-</item>
-<item>
-<link>
-http://blog.rdio.com/us/2014/01/keep-the-music-playing-rdio-is-now-free-on-the-web.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-body&quot;&gt;
-                    &lt;p&gt;&lt;a class=&quot;asset-img-link&quot; href=&quot;http://blog.rdio.com/.a/6a014e87574ac9970d01a3fbf4b69a970b-pi&quot;&gt;&lt;img class=&quot;asset  asset-image at-xid-6a014e87574ac9970d01a3fbf4b69a970b image-full img-responsive&quot; alt=&quot;Blog-image-20140108-jj&quot; title=&quot;Blog-image-20140108-jj&quot; src=&quot;http://blog.rdio.com/.a/6a014e87574ac9970d01a3fbf4b69a970b-800wi&quot; border=&quot;0&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;If you love something, set it free.  Well, we couldn't agree more.  So starting today &lt;a href=&quot;http://www.rdio.com/&quot;&gt;Rdio&lt;/a&gt; is free in the U.S. on the web. That means you can listen to 20 million songs plus all the albums, playlists, and stations you love anywhere there&amp;#x2019;s a computer. Absolutely free.&lt;/p&gt;
-
-&lt;p&gt;As part of this update, we&amp;#x2019;ve added in-stream messaging to Rdio on the web. These new ads are short and sweet. Free listeners will hear a mix of new feature announcements, messages from partner brands, notifications about exclusive content, and other helpful tips.&lt;/p&gt;
-
-&lt;p&gt;Our ad-free option, &lt;a href=&quot;http://www.rdio.com/settings/subscription/&quot;&gt;Rdio Unlimited,&lt;/a&gt; will still be available for $9.99 a month for mobile and web access. If you&amp;#x2019;re already an Rdio Unlimited subscriber, your listening experience will stay exactly the same. &lt;/p&gt;
-
-&lt;p&gt;And don&amp;#x2019;t forget that Stations are always free on your phone. So now you can hear music you love, whether you&amp;#x2019;re walking around town or listening through your computer, without paying a thing.&lt;/p&gt;
-
-&lt;p&gt;To celebrate our new found freedom, we figured there is no better mode of expression than music.  &lt;a href=&quot;http://www.rdio.com/people/RdioOnRdio/playlists/7878164/I%27m_Free/&quot;&gt;Turn up these songs&lt;/a&gt; and let freedom reign:&lt;/p&gt;
-
-
-
-&lt;p&gt;New to Rdio? Start listening &lt;a href=&quot;http://www.rdio.com/&quot;&gt;for free&lt;/a&gt; right now.   Want the most of your Rdio experience? Upgrade to &lt;a href=&quot;http://www.rdio.com/settings/subscription/&quot;&gt;Rdio Unlimited&lt;/a&gt; for mobile on-demand features and ad-free listening.&lt;/p&gt;
-
-                &lt;/div&gt;
-
-                
-                
-                
-                    
-                    &lt;/div&gt;
-</description>
-<title>
-Rdio is Now Free on the Web
-</title>
-</item>
-<item>
-<author>
-Joshua Hunt
-</author>
-<link>
-http://www.newyorker.com/online/blogs/elements/2014/01/the-ipod-of-prison-sony-radio.html
-</link>
-<description>
-&lt;div&gt;
- &lt;div class=&quot;entry-content&quot;&gt;
-&lt;article&gt;
- &lt;p&gt;&lt;img alt=&quot;prison-580.jpg&quot; src=&quot;http://www.newyorker.com/online/blogs/elements/prison-580.jpg&quot; width=&quot;580&quot; class=&quot;mt-image-center&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;In early 2005, Josh Demmitt arrived at a federal prison camp, in Sheridan, Oregon, to serve a thirty-month sentence for starting a fire outside an animal-testing facility at Brigham Young University. The nineteen-year-old received a warm welcome from his fellow inmates, who greeted him with coffee and cigarettes, advice on procuring vegan meals, and a pocket AM/FM radio. &lt;/p&gt;
-
-&lt;p&gt;The radio provided hours of welcome distraction for Demmitt, who had come from Sheridan&amp;#x2019;s adjoining detention center, where, he says, he spent weeks without a radio while confined to a small cell for at least twenty-three hours a day. The radio was unlike any Demmitt had seen outside prison, with a transparent plastic body that revealed the landscape within: a single AA battery rested at the bottom of its circuit board, while its antenna&amp;#x2014;one and three quarter inches of copper wire coiled around a small ferrite bar&amp;#x2014;peeked through a white Sony logo, just above the AM/FM dial. &lt;/p&gt;
- 
-
-
- &lt;div id=&quot;entry-more&quot;&gt;&lt;p&gt;The pocket analog radio, known by the bland model number SRF-39FP, is a Sony &amp;#x201C;ultralight&amp;#x201D; model manufactured for prisons. Its clear housing is meant to prevent inmates from using it to smuggle contraband, and, at under thirty dollars, it is the most affordable Sony radio on the prison market. &lt;/p&gt;
-
-&lt;p&gt;That market consists of commissaries, which were established by the Department of Justice in 1930 to provide prisoners with items not supplied by their institutions; by offering a selection of shampoos and soaps, they shifted personal hygiene costs to inmates, while distractions like playing cards eased tensions among the nation&amp;#x2019;s growing prison population. More than half a million inmates each week shop at commissaries stocked by the Keefe Group, a privately held company that sells items to the Federal Bureau of Prisons, and twelve out of fourteen privately managed state departments of corrections. A sample commissary order form lists items like an I.B.M. typewriter ribbon, hair dye, RC Cola, Sensodyne toothpaste, chili-garlic sauce, Koss CL-20 headphones, and a &amp;#x201C;Sony Radio.&amp;#x201D;&lt;/p&gt;
-
-&lt;p&gt;Commissaries often carry other, bargain-brand radios, but according to former inmates and employees of the Bureau of Prisons and the Keefe Group, who spoke on the condition of anonymity, America&amp;#x2019;s federal prisoners are most likely to own a Sony. Melissa Dolan, a Sony spokesperson, confirmed in an e-mail that selling portable radios in American prisons has long been a &amp;#x201C;stable business&amp;#x201D; that represents &amp;#x201C;sizable&amp;#x201D; sales for the company. Of the models available, the SRF-39FP remains an undisputed classic, still found on commissary lists an impressive fifteen years after its initial release, making it nearly as common behind prison walls as Apple&amp;#x2019;s iPod once was outside of them, despite competition from newer devices like digital radios and MP3 players.&lt;/p&gt;
-
-&lt;p&gt;But sheer availability doesn&amp;#x2019;t explain its ubiquity. The SRF-39FP is the gold standard among prison radios in part because it runs on a single AA battery, and offers forty hours of listening time&amp;#x2014;&lt;a href=&quot;http://www.apple.com/ipodclassic/features.html&quot; target=&quot;_blank&quot;&gt;longer than an iPod Classic&lt;/a&gt;. Digital models can require twice as many batteries, like the Sony SRF-M35FP, which runs on two AAAs. Federal inmates are particularly attuned to battery life because they are allowed to spend just three hundred and twenty dollars each month on commissary goods; more cash spent on batteries means less for snacks, stationery, clothing, and toiletries. &lt;/p&gt;
-
-&lt;p&gt;The importance of radio battery life in prison communities cannot be overstated; the devices are relied on for more than listening to music, hearing about local news and weather, and watching television (TV sets in common areas often use transmitters to broadcast sound on a dedicated frequency). &lt;a href=&quot;http://mcs.sagepub.com/content/29/2/179.full.pdf+html&quot; target=&quot;_blank&quot;&gt;A study&lt;/a&gt; conducted at San Vittore prison in Milan, Italy, found that &amp;#x201C;in a place where privacy is constantly denied, radio becomes a vital tool for building and maintaining one&amp;#x2019;s private self.&amp;#x201D; Some inmates even had a term for using their radio to create a bubble of personal space: &amp;#x201C;I headphone myself,&amp;#x201D; one said. &lt;/p&gt;
-
-&lt;p&gt;There is also a bit of prison culture itself at work in the story of the SRF-39FP. Radios like the one that was loaned to Demmitt are usually left behind by inmates who have re&amp;#xEB;ntered the free world. Some prisoners believe that it is bad luck for radios to leave prison with their owners, while others believe that taking them simply violates the &amp;#x201C;convict code,&amp;#x201D; according to former inmates like Demmitt and Steven Grayson, author of &amp;#x201C;&lt;a href=&quot;http://bureauofprisons.com/&quot; target=&quot;_blank&quot;&gt;The Unauthorized Federal Prison Manual.&lt;/a&gt;&amp;#x201D; Whether radios are abandoned as a matter of solidarity, convenience, or good karma, they pass from inmate to inmate, serving one sentence after another. The durable, analog SRF-39FPs have been changing hands in this manner for a decade and a half, which adds up to a lot of radios in circulation. &lt;/p&gt;
-
-&lt;p&gt;This practice helps explain the relative rarity of the SRF-39FP outside prisons. A unit in good condition can fetch up to double or triple its retail value among enthusiasts and collectors like Gary DeBock, a co-founder of the Ultralight Radio Group. According to DeBock, the outside supply depends upon stock siphoned from the California prison system and sold on auction sites like eBay.&lt;/p&gt;
-
-&lt;p&gt;DeBock is a member of the &lt;a href=&quot;http://www.dxing.info/introduction.dx&quot; target=&quot;_blank&quot;&gt;&amp;#x201C;DXing&amp;#x201D; community&lt;/a&gt;, whose hobbyists attempt to pick up distant radio or television signals, including those from amateur or pirate radio stations. (&amp;#x201C;DX&amp;#x201D; is shorthand for &amp;#x201C;distant stations.&amp;#x201D;) DeBock&amp;#x2019;s fascination with the SRF-39FP began when he realized that it could receive AM signals from places as distant as Japan and Korea at his home in Puyallup, Washington. &amp;#x201C;Since then, I&amp;#x2019;ve probably had more exposure to the SRF-39FP than anyone else who has managed to stay out of prison,&amp;#x201D; DeBock said. &lt;/p&gt;
-
-&lt;p&gt;Others in the online DXing community argue that the SRF-39FP is superior to virtually every other pocket analog radio, praising it for its large tuning thumbwheel, over-all sensitivity and audio quality, and, above all, its reputed indestructibility. Electronics and radio collectors also marvel at features that are normally associated with professional equipment rather than consumer goods: in particular, an exceptional single-integrated-circuit receiver that insures reception in remote locations&amp;#x2014;or deep within heavy prison walls. In fact, the SRF-39FP was one of the first radios to use the breakthrough CXA1129N integrated-circuit chip, considered by DeBock to be the primary innovation among Sony pocket radios; it helped make the SRF-39FP the smallest and most sophisticated in a line of pocket radios that had launched two decades earlier, in the late nineteen-seventies.&lt;/p&gt;
-
-&lt;p&gt;In recent years, Sony has opted to shift its prison-radio lineup away from analog, focussing instead on digital models like the SRF-M35FP. Last year, the Bureau of Prisons decided that it was time to further upgrade prison tech. Following a successful test at the same West Virginia federal prison camp where Martha Stewart spent five months for lying about a stock sale, prison officials began selling MP3 players that allow inmates to download songs at terminals in prison commissaries. &lt;/p&gt;
-
-&lt;p&gt;A Bureau of Prisons spokesperson said that the MP3 program wasn&amp;#x2019;t expected to make money in its early years. Price is one reason: the MP3 player sold in federal prisons costs roughly three times as much as an SRF-39FP, and downloads can cost up to a dollar and fifty-five cents per song. Limited song selection is another reason; the Bureau of Prisons prohibits songs deemed explicit or likely to incite the inmate population. (JPay, a company that provides services to inmates, boasts that, &lt;a href=&quot;http://jpay.com/pmusic.aspx&quot; target=&quot;_blank&quot;&gt;with its catalogue of ten million songs&lt;/a&gt;, &amp;#x201C;no other music service in corrections offers as many tracks for download.&amp;#x201D;) However, despite modest expectations for the technology upgrade, the Bureau of Prisons spokesperson Ed Ross said that more than fifty per cent of federal inmates have already bought MP3 players. It seems inevitable that the MP3 player will soon completely eclipse radios like the SRF-39FP in American prisons, just as they did outside, but for now both devices are woven into prison life. &lt;/p&gt;
-
-&lt;p&gt;Josh Demmitt left his Oregon prison camp in May, 2007, two and a half years after he had arrived. While his radio didn&amp;#x2019;t come back with him to suburban Utah, within a matter of weeks he bought his first iPod.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://twitter.com/viajoshhunt&quot;&gt;Joshua Hunt&lt;/a&gt; is a freelance journalist who has reported on business, technology, and sports in Japan for the New York Times.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Illustration by Matthew Hollister.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;/article&gt;
- &lt;/div&gt;
-
- &lt;/div&gt;
-</description>
-<title>
-The iPod of Prison
-</title>
-</item>
-<item>
 <author>
 Zachary M. Seward, David Yanofsky, Zachary M. Seward and David Yanofsky
 </author>
@@ -239,6 +60,390 @@ http://qz.com/167993/frere-jones-is-suing-hoefler-for-his-half-of-the-worlds-pre
 </description>
 <title>
 Frere-Jones is suing Hoefler for half of preeminent digital type foundry
+</title>
+</item>
+<item>
+<author>
+Robinson Meyer
+</author>
+<link>
+http://www.theatlantic.com/politics/archive/2014/01/what-happens-when-the-president-sits-down-next-to-you-at-a-cafe/283074/
+</link>
+<description>
+&lt;div class=&quot;article-content&quot; score=&quot;40.0&quot;&gt;
+
+                
+                
+        &lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;http://cdn.theatlantic.com/newsroom/img/posts/2014/01/arrow_at_rob/a291b9199.jpg&quot; width=&quot;570&quot;&gt;&lt;figcaption class=&quot;caption&quot;&gt;The author, at &quot;work&quot; (Pete Souza/The White House)&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;strong&gt;&lt;big&gt;Before&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thursday into Friday, my head cold got worse, so on Friday morning I walked down to a bar-cafe-restaurant in my neighborhood. I had been there for a few hours when youthful, vigorous men and women wearing Business Semi-Formal started quietly going one by one among the customers sitting near me. They would crouch, adopt an expression of deep sympathy, and say something. The customer would look a little confused, pick up laptop and coat, and move to another table.&lt;/p&gt;
+
+
+&lt;p&gt;Next to me, cafe staff had made a long table by pushing three smaller tables together. Five Millennials sat around it. They were well-dressed like Ryan Seacrest is well-dressed, and they seemed nervous. The head of their table hadn’t been filled. I had assumed someone important, someone hoity-toity, would be coming, someone like a foundation executive director.&lt;/p&gt;
+
+&lt;p&gt;This was a little bit annoying, but my legs ached and the Internet was spotty and I wanted to go to a different, better coffee shop, so I asked for the check. &lt;/p&gt;
+
+&lt;p&gt;Then a man, another of the handsome ones, came by.&lt;/p&gt;
+
+&lt;p&gt;“Hey,” he murmured. “Will you be leaving soon?”&lt;/p&gt;
+
+&lt;p&gt;I said I wasn’t sure. I’d asked for the check.&lt;/p&gt;
+
+&lt;p&gt;“Okay,” he said. “I just wanted to let you know the president will be stopping by.”&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Oh&lt;/em&gt;, I thought. &lt;em&gt;The president of what?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;“You’re welcome to stay, but one of our agents will be coming around to swipe you.”&lt;/p&gt;
+
+&lt;p&gt;Then I understood. An agent came around to swipe me.&lt;/p&gt;
+
+&lt;p&gt;The world is made of people: I get this. Our republic only works if we know our leaders are fallible humans. I disagree with the Obama Administration about plenty. None of this kept me from experiencing immediate, full-on, feverish anxiety.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;During&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When the president arrived, 40 minutes later—stepping out of his SUV, smiling, with a little wave—the nerves subsided. The cafe is split into two long halves, and he first turned to visit its opposite half, smiling, shaking hands, shaking more hands.&lt;/p&gt;
+
+&lt;p&gt;And then—for the first time in nearly an hour—I could work. I found that I was so accustomed to his voice, how he holds his body, his aura, that ignoring him in person is as easy as ignoring a TV. &lt;em&gt;Easier,&lt;/em&gt; in fact. He stops being the president and starts being That Guy Who You See In Tweets, That Guy Who Gives Speeches, That Guy.&lt;/p&gt;
+
+&lt;p&gt;That Guy shook exactly half the hands on the other side of the restaurant. He came back to our side. He addressed the five people sitting adjacent to me—who were, indeed, apparently there to talk to him.&lt;/p&gt;
+
+&lt;p&gt;That Guy said he would save our whole side of the restaurant for after the meal. But then, next to me, on my other side, he spotted a baby.&lt;/p&gt;
+
+&lt;p&gt;He apologized to the group. He could not resist, he said, a baby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;Concerning the Baby&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+&lt;p&gt;He picked up the baby. The baby’s mom told him about the baby. Before, I had asked her if she would like pictures of them meeting, so I got out my phone and documented the event. One of those pictures is above.&lt;/p&gt;
+
+&lt;p&gt;Pete Souza, the official White House photographer, was also there. He documented the event a little better than I did.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;
+&lt;p&gt;✈ Baby Force One ✈ &lt;a href=&quot;http://t.co/0e2075cbb2&quot;&gt;pic.twitter.com/0e2075cbb2&lt;/a&gt;&lt;/p&gt;
+— The White House (@WhiteHouse) &lt;a href=&quot;https://twitter.com/WhiteHouse/statuses/421801910937481216&quot;&gt;January 11, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;There is little else to say about the baby. He was adorable. Obama really seemed to appreciate holding him, and bounced him for probably a minute. The baby's mom told him that their family had just been stationed in Kenya, that that’s where the baby was born.&lt;/p&gt;
+
+&lt;p&gt;He seemed to stumble for a second, as he realized he could not phrase a joke in exactly the way he could phrase it in private.&lt;/p&gt;
+
+&lt;p&gt;“That’s, that’s where Donald Trump thinks I was born,” he said.&lt;/p&gt;
+
+&lt;p&gt;Then he handed the baby back to his mom. It was then that I made my only physical contact with the president. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;My Only Physical Contact With the President&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The president hands the baby back to its mom. The president makes eye contact with me.&lt;/p&gt;
+
+&lt;p&gt;“Great to see you,” says the president.&lt;/p&gt;
+
+&lt;p&gt;The president extends his hand while simultaneously pivoting on his right foot.&lt;/p&gt;
+
+&lt;p&gt;His hands grasp mine. &lt;em&gt;They feel like the rough surface of your favorite baseball.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Eye contact was broken mid-handshake. His hand trailed his turned body *which has already turned on the pivoted foot.* He greeted a couple across the way from me.&lt;/p&gt;
+
+&lt;p&gt;This concludes my communication with the president of the United States.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;My Only Source for This Section Is What I Eavesdropped&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;http://cdn.theatlantic.com/newsroom/img/posts/2014/01/IMG_0002-1/2031f8e7a.jpg&quot; width=&quot;570&quot;&gt;&lt;/figure&gt;&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Obama sat down at the head of the table. There was a brief photo op at the opposite end of the table. I surreptitiously took a picture to remember what being on the other side of a wall of cameras felt like, but now it seems more remarkable that &lt;/span&gt;&lt;span&gt;I can see the president’s undershirt.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;He had come to my local cafe to meet with five young people. According to White House background, provided to me after he left, they met to discuss how to get more 18-34 year-olds to sign up for the coverage under the Affordable Care Act. (The law depends on 18-34 year-olds signing up for healthcare.) One of the five was a navigator, someone employed to help families sign up; another helped explain the law at a mall over the holidays.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;They talked about health care stuff for the first 20 minutes. The five shared their experiences, and some of them spoke quietly, so I couldn’t hear them that well.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;At one point the president said, “Now, this isn’t public yet.” I perked up.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;span&gt;“Thirty percent of somethingsomethingsomething is mumblemumble,” he said.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;span&gt;I didn’t hear. I had failed as a journalist, so I went to the bathroom.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;Failure&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When I got back, they were talking about music. Circumstantial evidence indicates that, while I was in the bathroom, they talked about Beyoncé. &lt;/p&gt;
+
+&lt;p&gt;The conversation moved on. They talked about cell phones, and Obama mentioned how Malia did not receive one until she was 16. One of the young people pointed out that, unlike most parents, the president could always argue that he’d know where she was.&lt;/p&gt;
+
+&lt;p&gt;They segued to talking about social media (I couldn’t hear their exact words). &lt;em&gt;Now&lt;/em&gt;, I thought. Now I could do tech journalism.&lt;/p&gt;
+
+&lt;p&gt;The president said something—I could not hear all of it—about new social media apps that were for messaging, new apps that only somethingsomething’d for eight seconds.&lt;/p&gt;
+
+&lt;p&gt;“Snapchat,” said one of the young people.&lt;/p&gt;
+
+&lt;p&gt;The president made a comment about how different apps were now popular. Someone—it might have been the president—said the word “Instagram.” &lt;/p&gt;
+
+&lt;p&gt;I guess that they were talking about the difficulty of doing political outreach on Snapchat or one of this newer, less textual ilk? I’m not sure. Then the president drops this:&lt;/p&gt;
+
+&lt;p&gt;“It seems like they don’t use Facebook anymore,” he said.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Facebook is so uncool even the president of the United States knows it.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I am not sure who the &lt;em&gt;they&lt;/em&gt; is. A White House representative I talked to afterward hypothesized that it might be the 18 to 34 year-olds whom the President hopes will sign up for the healthcare law.  Maybe it was the third-person singular, gender-neutral pronoun. I don’t know.&lt;/p&gt;
+
+&lt;p&gt;It is a question of high hermeneutic importance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;&lt;span&gt;The Only Other Thing I Overheard&lt;/span&gt;&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Michelle has begun watching &lt;em&gt;Scandal.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;“It’s not that exciting,” said the president, of the White House. Staffers “don’t have enough time to engage in too much scandalous behavior.”&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Then the meal was over. Obama got up and took a photo with the five. He put his jacket back down, walked past me, and greeted the rest of the restaurant’s customers. He turned at the end, said good-bye to the baby again as he passed (tousling his hair), rounded the corner, and was gone.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;span&gt;A crowd had gathered across the street. It cheered as Obama got back in his SUV.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;big&gt;After&lt;/big&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Millennial closest to Obama, and therefore also closest to me, asked who I was. They asked me if I had photo-bombed. I had not, really. In this, I missed the greatest photobombing opportunity of my life.&lt;/p&gt;
+
+&lt;p&gt;I had, however, won Snapchat. Forever.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;http://cdn.theatlantic.com/newsroom/img/posts/2014/01/IMG_0005_2/e64bb3375.jpg&quot; width=&quot;346&quot;&gt;&lt;figcaption class=&quot;caption&quot;&gt; &lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+        
+            &lt;/div&gt;
+
+
+</description>
+<title>
+Facebook is so uncool even the president of the United States knows it.
+</title>
+</item>
+<item>
+<link>
+http://blog.spark.io/2014/01/17/open-source-thermostat/
+</link>
+<description>
+&lt;div&gt;&lt;section&gt;
+            &lt;p&gt;Earlier this week, Google bought Nest, a connected devices company, for $3.2 billion. This might seem like an ungodly sum for a company that makes thermostats and smoke detectors, but it makes absolute sense. Nest&amp;#x2019;s products are beautifully designed, their team is overflowing with talent, and they were the first company to figure out what the &amp;#x201C;Internet of Things&amp;#x201D; means to consumers and deliver products that people actually &lt;em&gt;want&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;But in order to do this, Nest had to spend millions of dollars on R&amp;amp;D to build the basic infrastructure behind the product. The high cost made it impossible for anyone but the extremely well-capitalized to enter the market and create connected things.&lt;/p&gt;
+
+&lt;p&gt;Well, we want to change that. At Spark, we&amp;#x2019;re making it easier to bring connected devices to market with the Spark Core, our Wi-Fi development kit, and the Spark Cloud, our cloud service for connected devices. And to prove it, we built our own approximation of the Nest Learning Thermostat in one day &amp;#x2014; and we&amp;#x2019;ve open sourced everything. In this process, we&amp;#x2019;ve come to respect the incredible technical challenges that Nest has solved while also coming to understand how much the game has changed since they first started.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/finalproduct.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/finalproduct.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Fair warning - we&amp;#x2019;re not claiming to have matched the Nest thermostat in a day; far from it. But remember &amp;#x2014; every polished product starts as a rough prototype. As Alexis Ohanian &lt;a href=&quot;https://twitter.com/towynlin/status/421456323138441216&quot;&gt;said&lt;/a&gt; last week, &amp;#x201C;The first version of everything you love is janky!&amp;#x201D;&lt;/p&gt;
+
+&lt;h2 id=&quot;hardware&quot;&gt;Hardware&lt;/h2&gt;
+
+&lt;p&gt;First, you need hardware. In our case, that means sensors for temperature and humidity, plus a motion sensor to figure out whether you&amp;#x2019;re home, and relays to control the furnace and the fan. We also need a display so you can see the current temperature, and an enclosure to protect the messy bits.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/breadboarded.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/breadboarded.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;The first thing we did this morning (after whiteboarding our attack plan) was to breadboard the hardware. Breadboarding is a non-permanent way to create an early hardware prototype. We chose a number of components for this product:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;http://www.spark.io&quot;&gt;Spark Core&lt;/a&gt; served as our connected brain.&lt;/li&gt;
+
+&lt;li&gt;We display the temperature on a few &lt;a href=&quot;http://www.adafruit.com/products/870&quot;&gt;Adafruit 8x8 LED matrices&lt;/a&gt;. The interface for the displays is a common I2C bus.&lt;/li&gt;
+
+&lt;li&gt;The primary sensor is a &lt;a href=&quot;http://www.digikey.com/product-detail/en/HIH6131-021-001/480-3652-6-ND/2704706&quot;&gt;Honeywell HumidIcon&lt;/a&gt; temperature and humidity sensor, which shares the I2C bus with the displays.&lt;/li&gt;
+
+&lt;li&gt;For our MVP, we decided a couple LEDs could represent whether the heat and fan were on. In the end the same pins would be connected to relays instead of the LEDs.&lt;/li&gt;
+
+&lt;li&gt;If you want to save energy when a person&amp;#x2019;s not home, then you need a way to know when they are home so you can err on the side of comfort again. We added a &lt;a href=&quot;http://pewa.panasonic.com/assets/pcsd/catalog/napion-catalog.pdf&quot;&gt;Panasonic PIR motion detector&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All in all, it took about an hour to throw together this breadboarded prototype, although we had to order the components a couple of days beforehand. It took another couple of hours to pull together working firmware (see the software section below).&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/cncmilled.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/cncmilled.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;The next step is to build an enclosure. The Nest enclosure is glass and aluminum, which are both very pretty but not very handy for prototyping. Instead, we chose acrylic and wood.&lt;/p&gt;
+
+&lt;p&gt;First, we CNC milled two wooden rings: one to act as a stationary base, and other to spin freely as a temperature controller (turn the ring clockwise to increase the temperature, and counterclockwise to decrease the temperature).&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/lasercut.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/lasercut.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Next, we laser cut three acrylic disks: one to act as the faceplate (which we later sanded to make it frosty), a second to act as the wall mounting plate, and a third connects the spinning wooden ring to a potentiometer.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/enclosure.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/enclosure.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Once we completed the enclosure, we converted our breadboarded circuit into a more permanent design by permanently soldering the components.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/mohitsoldering.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/mohitsoldering.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;h2 id=&quot;software&quot;&gt;Software&lt;/h2&gt;
+
+&lt;p&gt;Next, you need software. Some of this software runs on the thermostat (often called &amp;#x2018;firmware&amp;#x2019;), reading data from the sensors, controlling the relays, and displaying data on the screen. But since this is a connected thermostat, we also want a web interface so that it can be controlled from your smartphone or computer. And since it&amp;#x2019;s a learning thermostat, we also want to do some machine learning so that we can over time improve your comfort and energy efficiency. This software will run in the cloud.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/workingproto.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/workingproto.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;&amp;#x2018;Firmware&amp;#x2019; is called &lt;em&gt;firm&lt;/em&gt; because it&amp;#x2019;s traditionally more locked down than software, since it runs on a little chip that usually is never accessed again after the product is delivered to the customer. But adding an internet connection changes things pretty significantly. Firmware is no longer &lt;em&gt;firm&lt;/em&gt; when you can update it from anywhere with the click of a button. With a Spark Core, you can flash new code onto your chip using our web IDE.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/joescode.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/joescode.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Our thermostat is complemented with a cloud-based web app that handles all of the complex logic of the thermostat. By doing this in the cloud, we can iterate faster using high-level programming languages and frameworks like Ruby on Rails rather than low-level embedded C.&lt;/p&gt;
+
+&lt;p&gt;The Spark Cloud exposes your connected device through a REST API. That means that you can interact with it from any language that can generate HTTP requests, which is basically anything.&lt;/p&gt;
+
+&lt;p&gt;The beauty of a connected device is that it can be constantly improving, whether it&amp;#x2019;s by updating the firmware, updating the cloud software, or by using machine learning to optimize and improve the logic of the device.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/softwareinaction.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/softwareinaction.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Our user interface is a simple web app with a javascript knob that lets you select the desired temperature. The UI also includes a graph of historical temperatures, because data.&lt;/p&gt;
+
+&lt;h2 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h2&gt;
+
+&lt;p&gt;Once you&amp;#x2019;ve got your hardware and your software, it&amp;#x2019;s time to link the two worlds.&lt;/p&gt;
+
+&lt;p&gt;Somehow you&amp;#x2019;ve got to get your thing online, and there are dozens of ways to do this. The simplest method is by adding a Wi-Fi module, so your product can act as a client on your local Wi-Fi network.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.spark.io&quot;&gt;Spark Core&lt;/a&gt; has a Wi-Fi module built in, and because it&amp;#x2019;s integrated with the micro-controller, &amp;#x2018;connectivity&amp;#x2019; is made easy. The Core automatically connects to the Spark Cloud through an encrypted tunnel, so you&amp;#x2019;ve got a secure connection to a cloud gateway out of the box. No programming the Wi-Fi module, and no finding or building communications protocols.&lt;/p&gt;
+
+&lt;h2 id=&quot;putting_it_all_together&quot;&gt;Putting it all together&lt;/h2&gt;
+
+&lt;p&gt;Once our thermostat was complete, it was time to assemble it all together into the final package and mount it on the wall.&lt;/p&gt;
+&lt;video width=&quot;820&quot;&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/underthecovers.mp4&quot; type=&quot;video/mp4&quot;&gt;&lt;/source&gt;
+  &lt;source src=&quot;http://s3.amazonaws.com/blog.spark.io/underthecovers.webm&quot; type=&quot;video/webm&quot;&gt;&lt;/source&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;All in, we spent about $70 on components to put this together (including $39 for the Spark Core); the wood and acrylic were free. We started working at 10am and finished at 3am, with 3.5 engineers involved (one went to bed early), and the only work we did in advance was order the electronic components.&lt;/p&gt;
+
+&lt;h2 id=&quot;get_excited_crazy_things_are_possible&quot;&gt;Get excited, crazy things are possible.&lt;/h2&gt;
+
+&lt;p&gt;We&amp;#x2019;re not saying that you can build a $3.2 billion company in a day. But we &lt;em&gt;are&lt;/em&gt; saying that you can build a $3.2 billion company, and it&amp;#x2019;s easier now than it&amp;#x2019;s ever been before.&lt;/p&gt;
+
+&lt;p&gt;Connected devices/Internet of Things/M2M/Industrial Internet is a certified &lt;strong&gt;big deal&lt;/strong&gt;, and the Nest acquisition proves it. It doesn&amp;#x2019;t matter whether you&amp;#x2019;re a software developer with no hardware experience, an embedded designer with no web experience, or a psych major with no experience whatsoever. This is the next frontier, and it&amp;#x2019;s time to check it out.&lt;/p&gt;
+
+&lt;p&gt;Your billion dollar company starts with a million dollar product, and your million dollar product starts with a hundred dollar prototype. So what are you waiting for?&lt;/p&gt;
+
+&lt;p&gt;To download the open source files for the Spark thermostat, visit our &lt;a href=&quot;http://www.github.com/spark/thermostat&quot;&gt;Github page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Follow us on &lt;a href=&quot;http://www.twitter.com/sparkdevices&quot;&gt;Twitter&lt;/a&gt;, discuss at &lt;a href=&quot;https://news.ycombinator.com/item?id=7075626&quot;&gt;Hacker News&lt;/a&gt;, and get a Spark Core at &lt;a href=&quot;http://www.spark.io&quot;&gt;spark.io&lt;/a&gt;.&lt;/p&gt;
+            
+
+
+        &lt;/section&gt;
+
+        &lt;/div&gt;
+</description>
+<title>
+Building an open source Nest
+</title>
+</item>
+<item>
+<link>
+http://jstherightway.org/
+</link>
+<description>
+&lt;div&gt;&lt;section class=&quot;wrapper&quot;&gt;
+                
+
+                &lt;h3&gt;ABOUT&lt;/h3&gt;
+
+                &lt;p&gt;
+                    Created by Netscape in 1995 as an extension of HTML for Netscape Navigator 2.0, JavaScript had as its main function the manipulation of HTML documents and form validation.
+
+                    Before winning this name so famous nowadays, JavaScript was called Mocha, after LiveScript and finally, when it was released by Sun Microsystems, was baptized with the name by which he is known today.
+
+                    Because of the similar names, people confuses JavaScript with Java. Although both have the lexical structure of programming, they are not the same language.
+
+                    Different from C, C# and Java, JavaScript is an interpreted language. It means that it needs an &quot;interpreter&quot;. In case of JavaScript, the interpreter is the browser.
+                &lt;/p&gt;
+
+                &lt;h3&gt;CURRENT VERSION&lt;/h3&gt;
+
+                &lt;p&gt;
+                    The JavaScript standard is ECMAScript. As of 2012, all modern browsers fully support ECMAScript 5.1. Older browsers support at least ECMAScript 3. A 6th major revision of the standard is being worked on.
+                &lt;/p&gt;
+
+                &lt;p&gt;
+                    A good reference to versions, references and news about JavaScript, you can find at &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript&quot;&gt;Mozilla Developer Network&lt;/a&gt;.
+                &lt;/p&gt;
+
+                &lt;h3&gt;THE DOM&lt;/h3&gt;
+
+                &lt;p&gt;
+                    The Document Object Model (DOM) is an API for HTML and XML documents. It provides a structural representation of the document, enabling you to modify its content and visual presentation by using a scripting language such as JavaScript. See more at &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/DOM&quot;&gt;Mozilla Developer Network - DOM&lt;/a&gt;.
+                &lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+</description>
+<title>
+JavaScript: The Right Way
+</title>
+</item>
+<item>
+<link>
+http://pages.cs.wisc.edu/~remzi/OSTEP/
+</link>
+<description>
+&lt;div&gt;&lt;td width=&quot;800pt&quot;&gt;
+
+&lt;p&gt;Welcome to &lt;b&gt;Operating Systems: Three Easy Pieces&lt;/b&gt; (now version 0.6.1 -- see
+&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/log.html&quot;&gt;BOOK NEWS&lt;/a&gt; for details), a free
+online (and available for purchase in printed form) operating systems book!
+The book is centered around three conceptual pieces that are fundamental to
+operating systems: &lt;b&gt;virtualization,&lt;/b&gt; &lt;b&gt;concurrency,&lt;/b&gt; and &lt;b&gt;persistence.&lt;/b&gt; 
+In understanding the conceptual, you will also learn the practical, including
+how an operating system does things like schedule the CPU, manage memory, and
+store files persistently. Lots of fun stuff!&lt;/p&gt; 
+
+&lt;p&gt;This book &lt;b&gt;is and will always be free&lt;/b&gt; in PDF form, as
+seen below, on a chapter-by-chapter basis. For those of you wishing to &lt;b&gt;BUY&lt;/b&gt; 
+a copy, please consider the following:&lt;/p&gt; 
+
+&lt;table&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;
+&lt;p&gt;&lt;img width=&quot;70&quot; src=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-cover-two.jpg&quot;&gt; &lt;/p&gt; 
+&lt;/td&gt; 
+
+&lt;td&gt;
+&lt;ul&gt;
+&lt;li&gt;A wonderful
+&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-hardcover.html&quot;&gt;hardcover edition&lt;/a&gt; - this may be the best printed
+form of the book (it really looks pretty good), but it is also the most
+expensive way to obtain &lt;i&gt;the black book&lt;/i&gt; of operating systems.&lt;/li&gt; 
+&lt;li&gt;An almost-as-wonderful (and somewhat cheaper)
+&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-softcover.html&quot;&gt;softcover edition&lt;/a&gt; - this way is pretty great too,
+if you like to read printed material but want to save a few bucks.&lt;/li&gt; 
+&lt;li&gt;A pretty awesome
+&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-electronic.html&quot;&gt;electronic edition&lt;/a&gt; (for only ten dollars!) -
+this is a nice convenience and adds things like a hyperlinked table of contents,
+glossary of terms, lists of hints, tips, and other systems-building advice,
+and a few other small things not seen in the free version below.&lt;/li&gt; 
+&lt;/ul&gt; 
+ 
+&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; 
+
+
+&lt;p&gt;These paid methods are both brought to you by the demand of various students
+and professors; they are also a nice way to show your pecuniary appreciation
+to the authors.&lt;/p&gt; 
+
+
+&lt;p&gt;
+And now, the free online form of the book, in chapter-by-chapter form:
+&lt;/p&gt; 
+
+&lt;/td&gt;&lt;/div&gt;
+</description>
+<title>
+Two professors at my university have decided to create a free OS book because &quot;book prices are too high&quot;
 </title>
 </item>
 </channel>
