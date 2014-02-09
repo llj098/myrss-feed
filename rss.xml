@@ -15,256 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://pages.cs.wisc.edu/~remzi/OSTEP/
-</link>
-<description>
-&lt;div&gt;&lt;td width=&quot;800pt&quot;&gt;
-
-&lt;p&gt;Welcome to &lt;b&gt;Operating Systems: Three Easy Pieces&lt;/b&gt; (now version 0.6.1 -- see
-&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/log.html&quot;&gt;BOOK NEWS&lt;/a&gt; for details), a free
-online (and available for purchase in printed form) operating systems book!
-The book is centered around three conceptual pieces that are fundamental to
-operating systems: &lt;b&gt;virtualization,&lt;/b&gt; &lt;b&gt;concurrency,&lt;/b&gt; and &lt;b&gt;persistence.&lt;/b&gt; 
-In understanding the conceptual, you will also learn the practical, including
-how an operating system does things like schedule the CPU, manage memory, and
-store files persistently. Lots of fun stuff!&lt;/p&gt; 
-
-&lt;p&gt;This book &lt;b&gt;is and will always be free&lt;/b&gt; in PDF form, as
-seen below, on a chapter-by-chapter basis. For those of you wishing to &lt;b&gt;BUY&lt;/b&gt; 
-a copy, please consider the following:&lt;/p&gt; 
-
-&lt;table&gt;
-
-&lt;tr&gt;
-
-&lt;td&gt;
-&lt;p&gt;&lt;img width=&quot;70&quot; src=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-cover-two.jpg&quot;&gt; &lt;/p&gt; 
-&lt;/td&gt; 
-
-&lt;td&gt;
-&lt;ul&gt;
-&lt;li&gt;A wonderful
-&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-hardcover.html&quot;&gt;hardcover edition&lt;/a&gt; - this may be the best printed
-form of the book (it really looks pretty good), but it is also the most
-expensive way to obtain &lt;i&gt;the black book&lt;/i&gt; of operating systems.&lt;/li&gt; 
-&lt;li&gt;An almost-as-wonderful (and somewhat cheaper)
-&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-softcover.html&quot;&gt;softcover edition&lt;/a&gt; - this way is pretty great too,
-if you like to read printed material but want to save a few bucks.&lt;/li&gt; 
-&lt;li&gt;A pretty awesome
-&lt;a href=&quot;http://pages.cs.wisc.edu/~remzi/OSTEP/book-electronic.html&quot;&gt;electronic edition&lt;/a&gt; (for only ten dollars!) -
-this is a nice convenience and adds things like a hyperlinked table of contents,
-glossary of terms, lists of hints, tips, and other systems-building advice,
-and a few other small things not seen in the free version below.&lt;/li&gt; 
-&lt;/ul&gt; 
- 
-&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; 
-
-
-&lt;p&gt;These paid methods are both brought to you by the demand of various students
-and professors; they are also a nice way to show your pecuniary appreciation
-to the authors.&lt;/p&gt; 
-
-
-&lt;p&gt;
-And now, the free online form of the book, in chapter-by-chapter form:
-&lt;/p&gt; 
-
-&lt;/td&gt;&lt;/div&gt;
-</description>
-<title>
-Two professors at my university have decided to create a free OS book because &quot;book prices are too high&quot;
-</title>
-</item>
-<item>
-<link>
-https://noggin.intel.com/sites/default/files/Intel-Recommended-Reading-List_1H14_0.pdf
-</link>
-<description>
-
-</description>
-<title>
-Intel's Recommended Reading List for Developers: 1st Half 2014 
-</title>
-</item>
-<item>
-<link>
-http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=3546;bug=727708
-</link>
-<description>
-&lt;div&gt;
-An error occurred.
-Error was: No bug number
-&lt;/div&gt;
-</description>
-<title>
-Decide which init system to default to in Debian
-</title>
-</item>
-<item>
-<link>
-https://gobyexample.com/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;intro&quot;&gt;
-      
-      &lt;p&gt;
-        &lt;a href=&quot;http://golang.org&quot;&gt;Go&lt;/a&gt; is an
-        open source programming language designed for
-        building simple, fast, and reliable software.
-      &lt;/p&gt;
-
-      &lt;p&gt;
-        &lt;em&gt;Go by Example&lt;/em&gt; is a hands-on introduction
-        to Go using annotated example programs. Check out
-        the &lt;a href=&quot;https://gobyexample.com/hello-world&quot;&gt;first example&lt;/a&gt; or
-        browse the full list below.
-      &lt;/p&gt;
-
-      &lt;ul&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/hello-world&quot;&gt;Hello World&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/values&quot;&gt;Values&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/variables&quot;&gt;Variables&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/constants&quot;&gt;Constants&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/for&quot;&gt;For&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/if-else&quot;&gt;If/Else&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/switch&quot;&gt;Switch&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/arrays&quot;&gt;Arrays&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/slices&quot;&gt;Slices&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/maps&quot;&gt;Maps&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/range&quot;&gt;Range&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/functions&quot;&gt;Functions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/multiple-return-values&quot;&gt;Multiple Return Values&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/variadic-functions&quot;&gt;Variadic Functions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/closures&quot;&gt;Closures&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/recursion&quot;&gt;Recursion&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/pointers&quot;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/structs&quot;&gt;Structs&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/methods&quot;&gt;Methods&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/interfaces&quot;&gt;Interfaces&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/errors&quot;&gt;Errors&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/goroutines&quot;&gt;Goroutines&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/channels&quot;&gt;Channels&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/channel-buffering&quot;&gt;Channel Buffering&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/channel-synchronization&quot;&gt;Channel Synchronization&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/channel-directions&quot;&gt;Channel Directions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/select&quot;&gt;Select&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/timeouts&quot;&gt;Timeouts&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/non-blocking-channel-operations&quot;&gt;Non-Blocking Channel Operations&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/closing-channels&quot;&gt;Closing Channels&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/range-over-channels&quot;&gt;Range over Channels&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/timers&quot;&gt;Timers&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/tickers&quot;&gt;Tickers&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/worker-pools&quot;&gt;Worker Pools&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/rate-limiting&quot;&gt;Rate Limiting&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/atomic-counters&quot;&gt;Atomic Counters&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/mutexes&quot;&gt;Mutexes&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/stateful-goroutines&quot;&gt;Stateful Goroutines&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/sorting&quot;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/sorting-by-functions&quot;&gt;Sorting by Functions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/panic&quot;&gt;Panic&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/defer&quot;&gt;Defer&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/collection-functions&quot;&gt;Collection Functions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/string-functions&quot;&gt;String Functions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/string-formatting&quot;&gt;String Formatting&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/regular-expressions&quot;&gt;Regular Expressions&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/json&quot;&gt;JSON&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/time&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/epoch&quot;&gt;Epoch&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/time-formatting-parsing&quot;&gt;Time Formatting / Parsing&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/random-numbers&quot;&gt;Random Numbers&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/number-parsing&quot;&gt;Number Parsing&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/url-parsing&quot;&gt;URL Parsing&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/sha1-hashes&quot;&gt;SHA1 Hashes&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/base64-encoding&quot;&gt;Base64 Encoding&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/reading-files&quot;&gt;Reading Files&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/writing-files&quot;&gt;Writing Files&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/line-filters&quot;&gt;Line Filters&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/command-line-arguments&quot;&gt;Command-Line Arguments&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/command-line-flags&quot;&gt;Command-Line Flags&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/environment-variables&quot;&gt;Environment Variables&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/spawning-processes&quot;&gt;Spawning Processes&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/execing-processes&quot;&gt;Exec'ing Processes&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/signals&quot;&gt;Signals&lt;/a&gt;&lt;/li&gt;
-      
-        &lt;li&gt;&lt;a href=&quot;https://gobyexample.com/exit&quot;&gt;Exit&lt;/a&gt;&lt;/li&gt;
-      
-      &lt;/ul&gt;
-      &lt;p class=&quot;footer&quot;&gt;
-        by &lt;a href=&quot;https://twitter.com/mmcgrana&quot;&gt;@mmcgrana&lt;/a&gt; | &lt;a href=&quot;mailto:mmcgrana@gmail.com&quot;&gt;feedback&lt;/a&gt; | &lt;a href=&quot;https://github.com/mmcgrana/gobyexample&quot;&gt;source&lt;/a&gt; | &lt;a href=&quot;https://github.com/mmcgrana/gobyexample#license&quot;&gt;license&lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-Go by Example
-</title>
-</item>
-<item>
-<link>
 http://greig.cc/journal/2014/1/i-never-finish-anyth
 </link>
 <description>
@@ -278,6 +28,80 @@ http://greig.cc/journal/2014/1/i-never-finish-anyth
 </description>
 <title>
 I never finish anyth
+</title>
+</item>
+<item>
+<link>
+http://badassjs.com/post/73526882798/webkit-js-its-happening-for-real-with-emscriptens
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;mainText&quot;&gt;&lt;p&gt;Remember that April fools post I wrote a couple years ago on &lt;a href=&quot;http://badassjs.com/post/20294238453/webkit-js-yes-it-has-finally-happened-browser&quot; target=&quot;_blank&quot;&gt;WebKit.js&lt;/a&gt;? That someone had ported the entire WebKit rendering engine to JavaScript so you could browse while you browse? It was going to solve all our compatibility woes. That one was vaporware, but now it&amp;#x2019;s actually happening for real. &amp;#xA0;Trevor Linton is porting WebKit to JavaScript via Emscripten. &amp;#xA0;The &lt;a href=&quot;https://github.com/trevorlinton/webkit.js&quot; target=&quot;_blank&quot;&gt;real WebKit.js&lt;/a&gt; is here.&lt;/p&gt;
+&lt;p&gt;It&amp;#x2019;s an early build and there&amp;#x2019;s no demo yet, but you can go see the &lt;a href=&quot;https://github.com/trevorlinton/webkit.js/blob/master/WebKitJS/webkit.js&quot; target=&quot;_blank&quot;&gt;massive&lt;/a&gt;&amp;#xA0;output file it produced, meaning it actually does compile. &amp;#xA0;The goals of the project are&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Produce a renderer in pure JavaScript that supports rendering to WebGL/Canvas contexts.&lt;/li&gt;
+&lt;li&gt;Develop frameworks for image/webpage capturing and automated web testing (similar to PhantomJS).&lt;/li&gt;
+&lt;li&gt;Develop a framework for prototyping CSS filters, HTML elements and attributes.&lt;/li&gt;
+&lt;li&gt;Experimental harness for pure javascript rendering performance.&lt;/li&gt;
+&lt;li&gt;Develop a javascript based browser in nodejs (just for fun).&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Those are interesting goals. I have no idea how realistic or practical they are, but its a great showcase of the power of Emscripten to compile &lt;a href=&quot;https://github.com/bgrins/videoconverter.js&quot; target=&quot;_blank&quot;&gt;just&lt;/a&gt; &lt;a href=&quot;http://www.unrealengine.com/html5/&quot; target=&quot;_blank&quot;&gt;about&lt;/a&gt; &lt;a href=&quot;https://github.com/devongovett/ogg.js&quot; target=&quot;_blank&quot;&gt;anything&lt;/a&gt; these days.&lt;/p&gt;
+&lt;p&gt;Currently a lot is not working yet, but its interesting to see the vaporware of two years ago become reality today. &amp;#xA0;Go check it out on &lt;a href=&quot;https://github.com/trevorlinton/webkit.js&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;, and try your hand at getting various WebKit features working.&lt;/p&gt;&lt;/div&gt;
+
+            
+          &lt;/div&gt;
+</description>
+<title>
+WebKit.js: It's happening for real, with Emscripten's help
+</title>
+</item>
+<item>
+<link>
+https://lists.debian.org/debian-ctte/2014/01/msg00287.html
+</link>
+<description>
+&lt;div&gt;&lt;div dir=&quot;ltr&quot;&gt;&lt;p&gt;Friends,&lt;/p&gt;&lt;p&gt;Spotify, an online streaming music service, is a significant user of Debian GNU/Linux. We have some 5000 physical servers and well over a thousand virtual servers using both public and private clouds running Debian GNU/Linux serving millions of songs to our users every day.&lt;/p&gt;
+&lt;p&gt;We would like to take this opportunity to endorse systemd as our preferred init system and we would like to see it as default on Debian GNU/Linux moving forward.&lt;/p&gt;&lt;p&gt;Our main reasons for this preference:&lt;/p&gt;
+&lt;p&gt;- We believe that the dependency model of systemd is easier to understand, explain and work with than the event based counterpart of upstart.&lt;/p&gt;&lt;p&gt;- We believe that the various features built on top of the way systemd uses cgroups, notably mechanisms for resource limitations, would be very useful in a highly scalable highly available environment such as ours.&lt;/p&gt;
+&lt;p&gt;- We believe that systemd will have the stronger community momentum moving forward when it comes to seeing close integration between modern init system features and upstream projects.&lt;/p&gt;
+&lt;p&gt;With kind regards&lt;/p&gt;&lt;p&gt;Spotify infrastructure and operations&lt;/p&gt;&lt;p&gt;via&amp;#xA0;&lt;/p&gt;&lt;p&gt;Noa Resare, Free Software ombudsman&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;/div&gt;
+</description>
+<title>
+Spotify position in support of systemd in the default init debate
+</title>
+</item>
+<item>
+<link>
+item?id=7077234
+</link>
+<description>
+
+</description>
+<title>
+Ask HN: How to find part-time developer work?
+</title>
+</item>
+<item>
+<author>
+douglas.macmillan@wsj.com Biography
+</author>
+<link>
+http://online.wsj.com/news/articles/SB10001424052702303465004579327001976757542
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;articleBody&quot;&gt;
+      
+
+ &lt;p&gt;Dropbox Inc. has closed on about $250 million in a funding round that values the online-storage provider at close to $10 billion, according to two people familiar with the deal.&lt;/p&gt; &lt;p&gt;A BlackRock Inc. investment fund is leading the deal, which is set to include...
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description>
+<title>
+Dropbox raises about $250 million at $10 billion valuation
 </title>
 </item>
 </channel>
