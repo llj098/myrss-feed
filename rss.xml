@@ -14,313 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-douglas.macmillan@wsj.com Biography
-</author>
-<link>
-http://online.wsj.com/news/articles/SB10001424052702303465004579327001976757542
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;articleBody&quot;&gt;
-      
-
- &lt;p&gt;Dropbox Inc. has closed on about $250 million in a funding round that values the online-storage provider at close to $10 billion, according to two people familiar with the deal.&lt;/p&gt; &lt;p&gt;A BlackRock Inc. investment fund is leading the deal, which is set to include...
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-Dropbox raises about $250 million at $10 billion valuation
-</title>
-</item>
-<item>
-<link>
-http://www.nytimes.com/interactive/2014/01/17/us/nsa-changes-graphic.html?hp
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;g-graphic&quot;&gt;
-
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Phone Records&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Documents &lt;a href=&quot;http://www.nytimes.com/2013/06/07/us/nsa-verizon-calls.html&quot;&gt;released in June&lt;/a&gt; reveal that the N.S.A. has been systematically collecting logs of every Americans&amp;#x2019; phone calls and storing the data for five years. Agency analysts may examine call records of people up to three links (or &amp;#x201C;hops&amp;#x201D;) removed from any number for which they decide there is &amp;#x201C;reasonable, articulable suspicion&amp;#x201D; of ties to terrorism.&lt;/p&gt;&lt;p&gt;Mr. Obama says he wants to find a way not to have the government collect records in bulk, but rather keep them in private hands. In the meantime, analysts will now be able to examine only records of people two hops away from a suspect number. And the N.S.A. must obtain a court order ahead of time from a judge who agrees that the standard of suspicion has been met, with an exception for after-the-fact court review in a fast-moving exigency.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      There are two options for doing this. One is to require each telecommunications provider to retain its customers&amp;#x2019; calling records for a certain time and store the data in a way that the government could quickly get access it &amp;#x2013; and cross-reference it with other providers&amp;#x2019; records. The other is to create a private consortium that would comingle the records. Mr. Obama says there are difficulties with both options, and has directed his administration to study options and work with Congress to come up with a solution.&lt;/p&gt;&lt;p&gt;Mr. Obama has rejected the idea of scrapping the program entirely, as some lawmakers and civil libertarians have called for, saying he wants to retain its capabilities but  restructure it to reduce the possibility of abuses.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Aides said Mr. Obama would like to get the N.S.A. out of the business of holding the data at all, so it was deemed to make little sense to order the agency to purge the data more quickly. That leaves open the question of how long telecommunications providers or a consortium would be required to retain the records.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Emails and Phone Calls&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Mr. Obama said he would ask the attorney general and the director of national intelligence to come up with ideas for additional restrictions on government&amp;#x2019;s ability to retain, search and use the communications of Americans that were &amp;#x201C;incidentally&amp;#x201D; collected without a warrant.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;National Security Letters&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      National Security Letters are subpoenas the F.B.I. can use to compel businesses to turn over a range of records about their customers, like financial transactions or data on communications, while gagging the recipients from talking about them. The F.B.I. uses the device tens of thousands of times a year, and it objected to losing the power to issues them unless a court approved.&lt;/p&gt;&lt;p&gt;Mr. Obama rejected the recommendation to impose a court approval requirement. But he is ending the open-ended secrecy, saying the gag orders will expire after a fixed period in most cases. And he said providers would be allowed to say more to the public about the scope and scale of the orders they receive.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Foreign Leaders and Foreign Nationals&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Disclosures that the N.S.A. has been &lt;a href=&quot;http://www.nytimes.com/2013/10/31/world/europe/tap-on-merkel-provides-peek-at-vast-spy-net.html&quot;&gt;eavesdropping on foreign leaders&lt;/a&gt;, including the cellphone of Chancellor Angela Merkel of Germany, led to a diplomatic crisis for the Obama administration in October. &lt;/p&gt;&lt;p&gt;Mr. Obama said he would generally ban the practice for &amp;#x201C;close friends and allies&amp;#x201D; and a senior administration official said this list included &amp;#x201C;dozens&amp;#x201D; of leaders of foreign countries, without specifying them. The administration did not address whether the U.S. would spy on other top officials from those countries.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Recent disclosures revealed that the N.S.A. collects vast amounts of information from overseas telecommunications networks, vacuuming up metadata in bulk and intercepting the contents of communications.&lt;/p&gt;&lt;p&gt;Mr. Obama said that new safeguards would limit the duration that the government can hold personal information about foreigners and restrict its use. While he acknowledged the United State&amp;#x2019;s responsibility to ask &amp;#x201C;tough questions&amp;#x201D; about its technological capabilities, he made clear that foreigners  overseas do not enjoy the same protections as U.S. citizens. &amp;#x201C;This is not unique to America,&amp;#x201D; he said. &amp;#x201C;Few, if any, spy agencies around the world constrain their activities beyond their own borders.&amp;#x201D;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Fisa Court Structure&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      A senior official said the advocates would be called on only in cases presenting novel and important privacy law issues. The panel would apparently not have the authority to monitor the court&amp;#x2019;s caseload and independently decide when a case warranted its presence.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Currently, Chief Justice John G. Roberts Jr., selects all the judges who serve a term of extra duty on the secret court, and he has used that power to overwhelmingly pick Republican-appointed judges. Critics have called for diversifying the court by having other Supreme Court justices, or the chief judges of the appeals courts, play a role.  Administration officials said that Mr. Obama would accept that kind of a change if Congress made it.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Cybersecurity and Encryption&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      In July, &lt;a href=&quot;http://www.nytimes.com/2013/07/14/world/europe/nations-buying-as-hackers-sell-computer-flaws.html&quot;&gt;The New York Times reported&lt;/a&gt; that the N.S.A. had been collecting previously undiscovered &amp;#x201C;zero day&amp;#x201D; flaws in common computer programs and using them for mounting cyberattacks. White House says the recommendation is now under review by the security council to &amp;#x201C;review and, as necessary, adjust existing processes.&amp;#x2019;&amp;#x2019;  
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      Documents released in September revealed that the agency had been working to weaken encryption standards so it could more easily crack secure systems. White House says its cybersecurity and science and technology offices are reviewing the issues and &amp;#x201C;we support the recommendation&amp;#x2019;s aim to protect the standards for commercial encryption.&amp;#x2019;&amp;#x2019; 
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;Agency Organization and Security&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      In 2009, Defense Secretary Robert M. Gates combined into one position the heads of the N.S.A., which is responsible for gathering intelligence, and the Cyber Command, the military's cyberwarfare unit.&lt;/p&gt;&lt;p&gt;Mr. Obama has already rejected the recommendation to split command of the N.S.A. from the Cyber Command.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;g-rec&quot;&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    
-    &lt;p class=&quot;&quot;&gt;
-      The public debate over the scope of N.S.A. surveillance started when a former N.S.A. contractor, Edward J. Snowden, secretly made copies of four hard drives worth of top-secret documents and &lt;a href=&quot;http://www.nytimes.com/2013/06/10/us/former-cia-worker-says-he-leaked-surveillance-data.html&quot;&gt;then leaked them&lt;/a&gt;. While Mr. Obama acknowledged Mr. Snowden&amp;#x2019;s role in starting the debate over privacy and national security, he did not address recommendations to secure classified information.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  
-
-&lt;/div&gt;
-
-
-
-
-
-
-    &lt;/div&gt;
-</description>
-<title>
-Obama’s Changes to Government Surveillance
-</title>
-</item>
-<item>
-<author>
-Ian O'Neill
-</author>
-<link>
-http://news.discovery.com/space/mystery-rock-appears-in-front-of-mars-rover-140117.htm
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;editorial-body&quot;&gt;
-				
-	
-	
-			&lt;p&gt;After a decade of exploring the Martian surface, the scientists overseeing veteran rover Opportunity thought they&amp;#x2019;d seen it all. That was until a rock mysteriously &amp;#x201C;appeared&amp;#x201D; a few feet in front of the six wheeled rover a few days ago.&lt;/p&gt;
-    		&lt;p&gt;News of the errant rock was announced by NASA Mars Exploration Rover lead scientist Steve Squyres of Cornell University at a special NASA Jet Propulsion Laboratory &amp;#x201C;10 years of roving Mars&amp;#x201D; event at the California Institute of Technology (Caltech), Pasadena, Calif., on Thursday night. &lt;a href=&quot;http://www.jpl.nasa.gov/news/news.php?release=2014-013&quot;&gt;The science star-studded public event&lt;/a&gt; was held in celebration of the decade since twin rovers Spirit and Opportunity landed on the Red Planet in January 2004.&lt;/p&gt;
-    		&lt;p&gt;&lt;a href=&quot;http://news.discovery.com/space/history-of-space/photos-man-made-marks-mars-120824.htm&quot;&gt;PHOTOS: Alien Robots That Left Their Mark on Mars&lt;/a&gt;&lt;/p&gt;
-    		&lt;p&gt;While chronicling the scientific discoveries made by both rovers over the years, Squyres discussed the recent finding of &lt;a href=&quot;http://news.discovery.com/space/history-of-space/mars-water-mineral-rover-111208.htm&quot;&gt;suspected gypsum near the rim of Endeavour Crater&lt;/a&gt; &amp;#x2014; a region of Meridiani Planum that Opportunity has been studying since 2011 &amp;#x2014; and &lt;a href=&quot;http://news.discovery.com/space/opportunity-mars-rover-clays-water-130607.htm&quot;&gt;the discovery of clays&lt;/a&gt; that likely formed in a pH-neutral wet environment in Mars past. While these discoveries have been nothing short of groundbreaking, Squyres shared the Mars rover&amp;#x2019;s team&amp;#x2019;s excitement for that one strange rock, exclaiming: &amp;#x201C;Mars keeps throwing new stuff at us!&amp;#x201D;&lt;/p&gt;
-    								
-			
-		
-	
-	
-    		&lt;p&gt;In a comparison of recent photographs captured by the rover&amp;#x2019;s panoramic camera, or Pancam, on sol 3528 of the mission, only bare bedrock can be seen. But on sol 3540, a fist-sized rock had appeared (raw Pancam images can be found &lt;a href=&quot;http://marsrover.nasa.gov/gallery/all/opportunity.html&quot;&gt;in the mission archive&lt;/a&gt;). MER scientists promptly nicknamed the object &amp;#x201C;Pinnacle Island.&amp;#x201D;&lt;/p&gt;
-    		&lt;p&gt;&amp;#x201C;It&amp;#x2019;s about the size of a jelly doughnut,&amp;#x201D; Squyres told Discovery News. &amp;#x201C;It was a total surprise, we were like &amp;#x2018;wait a second, that wasn&amp;#x2019;t there before, it can&amp;#x2019;t be right. Oh my god! It wasn&amp;#x2019;t there before!&amp;#x2019; We were absolutely startled.&amp;#x201D;&lt;/p&gt;
-    		&lt;p&gt;But the rover didn&amp;#x2019;t roll over that area, so where did Pinnacle Island come from?&lt;/p&gt;
-    		&lt;h2&gt;&lt;a href=&quot;http://news.discovery.com/space/asteroids-meteors-meteorites/weirdest-mars-craters-111230.htm&quot;&gt;Photos: Weirdest Mars Craters Spotted by HiRISE&lt;/a&gt;&lt;/h2&gt;
-    		
-    		&lt;p&gt;Only two options have so far been identified as the rock&amp;#x2019;s source: 1) The rover either &amp;#x201C;flipped&amp;#x201D; the object as it maneuvered or, 2) it landed there, right in front of the rover, after a nearby meteorite impact event. The impact ejecta theory, however, is the least likely of the two.&lt;/p&gt;
-    		&lt;p&gt;&amp;#x201C;So my best guess for this rock &amp;#x2026; is that it&amp;#x2019;s something that was nearby,&amp;#x201D; said Squyres. &amp;#x201C;I must stress that I&amp;#x2019;m guessing now, but I think it happened when the rover did a turn in place a meter or two from where this rock now lies.&amp;#x201D;&lt;/p&gt;
-    		&lt;p&gt;Opportunity&amp;#x2019;s front right steering actuator has stopped working, so Squyres identified that as the possible culprit behind the whole mystery.&lt;/p&gt;
-    		&lt;p&gt;Each wheel on the rover has its own actuator. Should an actuator jam or otherwise fail, the robot&amp;#x2019;s mobility can suffer. In the case of this wheel, it can no longer turn left or right. &amp;#x201C;So if you do a turn in place on bedrock,&amp;#x201D; continued Squyres, &amp;#x201C;as you turn that wheel across the rock, it&amp;#x2019;s gonna kinda &amp;#x2018;chatter.&amp;#x2019;&amp;#x201D; This jittery motion across the bedrock may have propelled the rock out of place, &amp;#x201C;tiddlywinking&amp;#x201D; the object from its location and flipping it a few feet away from the rover.&lt;/p&gt;
-    		&lt;p&gt;&lt;a href=&quot;http://news.discovery.com/space/opportunity-mars-rover-clays-water-130607.htm&quot;&gt;NEWS: Opportunity Finds More Hints of Mars Habitability&lt;/a&gt;&lt;/p&gt;
-    		&lt;p&gt;Never missing a scientific opportunity, Opportunity scientists hope to study the bright rock. &amp;#x201C;It obligingly turned upside down, so we&amp;#x2019;re seeing a side that hasn&amp;#x2019;t seen the Martian atmosphere in billions of years and there it is for us to investigate. It&amp;#x2019;s just a stroke of luck,&amp;#x201D; he said.&lt;/p&gt;
-    		&lt;p&gt;&amp;#x201C;You think of Mars as being a very static place and I don&amp;#x2019;t think there&amp;#x2019;s a smoking hole nearby so it&amp;#x2019;s not a bit of crater ejecta, I think it&amp;#x2019;s something that we did &amp;#x2026; we flung it.&amp;#x201D;&lt;/p&gt;
-    		&lt;p&gt;Although this is the leading theory behind the case of the random rock, Squyres pointed out that the investigation is still under way and it will be a few days before his team can definitively say where Pinnacle Island came from.&lt;/p&gt;
-    		&lt;p&gt;Opportunity has outlived its 3-month primary mission by ten years, notching up nearly 23 miles on the odometer &lt;i&gt;so far&lt;/i&gt;. Sister rover Spirit succumbed to the Martian elements in 2009 when it became stuck in a sand trap in Gusev Crater. Spirit&amp;#x2019;s mission was declared lost when it stopped transmitting in March 2010, likely drained of energy. Although Spirit had the rougher time on Mars and was the first to die, it was also a huge success, aiding our understanding of of Mars&amp;#x2019; geological history and outliving its warranty by 5 years. But now it&amp;#x2019;s just Opportunity and Mars&amp;#x2019; new arrival Curiosity that soldier on to reveal more than we ever dreamed about our neighboring Red Planet.&lt;/p&gt;
-    		&lt;p&gt;As the NASA Jet Propulsion Laboratory rover drivers, scientists and engineers recounted stories of their beloved robots on Thursday, it became very clear that they aren't just machines of discovery, they are family.&lt;/p&gt;
-    	
-			&lt;/div&gt;
-			
-							
-													
-											
-				&lt;/div&gt;
-</description>
-<title>
-Mystery Rock 'Appears' in Front of Mars Rover
-</title>
-</item>
-<item>
-<author>
-Author: Sanjeev Radhakrishnan
-</author>
-<link>
-https://www.mobilespan.com/content/chrome-is-the-new-c-runtime
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;field-item even&quot;&gt; &lt;p&gt;Cross-platform app development is more important than ever. 10 years ago, you just whipped out your Visual Studio when you needed a client application, but not anymore. With &amp;#x201C;app-ification&amp;#x201D; going mainstream on Android, iOS, Windows, and Mac, what is a developer to do? 
-
-&lt;/p&gt;&lt;p&gt;Web apps are a good solution some of the time (except for that little detail called IE!). 
- 
-&lt;/p&gt;&lt;p&gt;But what about when you need the features and performance of native code, across platforms? And you&amp;#x2019;re a startup with a small team and impossible deadlines?&lt;/p&gt;
-
-&lt;p&gt;Well, at MobileSpan we&amp;#x2019;ve been living in this world for the past 2 years, and we want to share our approach.&lt;/p&gt;
-
-&lt;p&gt;We chose to build our application by integrating with the source code of &lt;a href=&quot;http://www.chromium.org/Home&quot;&gt;Chromium&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Chromium is the open-source base of Google Chrome. My co-founder and I are Xooglers from the Chrome team, so we were very familiar with it and it was an easy choice for us. But you don't have to spend 4 years at Google to take advantage of Chrome's rich code base.
-&lt;/p&gt;&lt;h2&gt;But... I'm not building a browser!&lt;/h2&gt;
-
-&lt;p&gt;So, why would Chrome source be useful to me for cross-platform app development?  I'm not building a browser...&lt;/p&gt;
-
-&lt;p&gt;In reality, Chrome is much more than just a browser. Chrome code is highly tuned for performance, reliability, and cross-platform compatibility across PCs and iOS + Android devices.&lt;/p&gt;
-
-&lt;p&gt;Out of necessity, the Chrome team has created cross-platform abstractions for many low-level platform features. We use this source as the core API on which we build our business logic, and it's made the bulk of our app cross-platform with little effort.&lt;/p&gt;
-
-&lt;p&gt;Most importantly -- Chrome code has been battle-tested like almost nothing else, with an installed base in the hundreds of millions. That makes all the difference when you want to spend your days working on your company&amp;#x2019;s business logic instead of debugging platform issues.&lt;/p&gt;
-&lt;p&gt;Basically, you can structure your code like the diagram below, where you only write your application logic, and let Chromium do the heavy lifting.&lt;/p&gt;&lt;p&gt;
-&lt;img src=&quot;https://www.mobilespan.com/sites/default/files/images/blog/chrome-dev-platform.png&quot; title=&quot;Chrome Development Diagram&quot; alt=&quot;Chrome Development Diagram&quot;&gt;&lt;/p&gt;
-&lt;h2&gt;So what's in Chrome that's so great?&lt;/h2&gt;
-&lt;p&gt;Well, consider the parts of a modern browser.  Chrome contains high-performance, cross-platform implementations of:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Concurrency handling&lt;/li&gt;
-&lt;li&gt;Compression&lt;/li&gt;
-&lt;li&gt;Encryption&lt;/li&gt;
-&lt;li&gt;Certificate handling&lt;/li&gt;
-&lt;li&gt;Low-level socket interfaces&lt;/li&gt;
-&lt;li&gt;High-level protocol implementations like HTTP, HTTPS, FTP)&lt;/li&gt;
-&lt;li&gt;DNS resolution&lt;/li&gt;
-&lt;li&gt;Proxy handling&lt;/li&gt;
-&lt;li&gt;Complex disk caching&lt;/li&gt;
-&lt;li&gt;Cookie handling&lt;/li&gt;
-&lt;/ul&gt;
-... and more
-
-&lt;p&gt;What it lets you do is build a single, cross-platform application layer, on top of all this goodness.&lt;/p&gt;
-
-
-&lt;p&gt;Chrome code also has other unexpected, higher-level goodies like:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Chrome Remote Desktop,&lt;/li&gt;
-&lt;li&gt;a full P2P (TURN, STUN, etc) stack (used by the Chrome Remote Desktop code),&lt;/li&gt;
-&lt;li&gt;an XMPP client (used by Chrome Sync as well as Chrome Remote Desktop)&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Where Do I Start?&lt;/h2&gt;
-
-&lt;h3&gt;First Things First: The right tools to generate your project&lt;/h3&gt;
-
-&lt;p&gt;The first step in starting your project is to create the appropriate project file for your platform (Visual Studio, XCode etc). Chromium uses &lt;a href=&quot;https://code.google.com/p/gyp&quot;&gt;GYP&lt;/a&gt; to declaratively specify files and project settings in a platform independent manner. I strongly recommend starting your project as a GYP file. GYP generates project files for each platform (Visual Studio solution and project files, XCode project files and Android .mk files). In addition, powerful dependency options in GYP allow compiler and linker settings needed by the various Chromium project files to automatically flow into the projects that depend on them. This drastically reduces your own build headaches, as well as problems when you update your checkout of Chrome sources.&lt;/p&gt;
-&lt;h3&gt;A basketful of helpers prevent your project from becoming a basket-case.&lt;/h3&gt;
-
-&lt;p&gt;Once you get to the meat of your app, you will find yourself needing all sorts of helper libraries for everything ranging from string manipulation, concurrency handling, synchronization, thread pools, message loops, logging, file manipulation, timers, shared memory management, and more.&lt;/p&gt;
-
-&lt;p&gt;If you find yourself starting to write a generic helper class or library, search the Chromium sources first. Chances are very high that you will find just the class you want, with very good unit-test coverage to boot.&lt;/p&gt;
-
-&lt;p&gt;The base library in the Chromium sources (found in src/base) provides a vast array of cross-platform tools that cover all the areas mentioned above and a lot more. There are also helpers for platform-specific areas such as the Windows registry or the iOS keychain.&lt;/p&gt;
-
-&lt;p&gt;It has become quite the game for developers at MobileSpan to search the Chromium sources for helpers they need.&lt;/p&gt;
-&lt;h3&gt;Network stack, anyone?&lt;/h3&gt;
-
-&lt;p&gt;Unless you are building your app for Windows 3.1, chances are that you want to talk to a server of some kind. This might involve simple HTTP or HTTPS API calls or low-level socket calls or anything in between.&lt;/p&gt;
-
-&lt;p&gt;The net library in Chromium (src/net) is your friend here. You&amp;#x2019;ll find a full cross-platform HTTP and HTTPS stack, code for cookie handling, caching, TCP and UDP sockets and socket pools, SSL certificate handling, DNS resolution, proxy server resolution ..., well, you get the idea, pretty much anything network related.&lt;/p&gt;
-&lt;h3&gt;Encryption&lt;/h3&gt;
-
-&lt;p&gt;Need to handle public/private keys, encrypt data store secrets? The crypto library (src/crypto) is another excellent cross-platform library that is almost sure to have the encryption or key management routine you are looking for. By now, you get the picture of how the sources are organized.&lt;/p&gt;
-&lt;h3&gt;XMPP, P2P, Protocol Buffers etc.&lt;/h3&gt;
-
-&lt;p&gt;These aren&amp;#x2019;t things you would normally expect to find in a web browser but Chromium includes an extensive XMPP and P2P client library built on top of libjingle (look at src/jingle and src/remoting). If you use protocol buffers in your code, GYP has support for .proto files. Just add the .proto files to your GYP file and it will do the right thing of building the protoc compiler and generate wrapper code for your protobufs. This even works for iOS projects.&lt;/p&gt;
-&lt;h3&gt;Testing&lt;/h3&gt;
-
-&lt;p&gt;Your code is only as good the unit-tests you write for them, right? Though not strictly a part of the Chrome, the GTest and GMock libraries that are part of the Chrome checkout provide an excellent framework for writing unit-tests and mocking your C++ classes. All Chrome tests are written using these frameworks so you have a big sample codebase to get inspired by.&lt;/p&gt;
-&lt;p&gt; GYP even creates platform-appropriate containers for your tests. For example, on iOS, it will automatically create an iOS app to contain your tests so you can run them in the simulator. You just write your tests in cc files, add them to a gyp file, add the right dependencies and viola, you have cross-platform unit-tests.&lt;/p&gt;
-
-&lt;p&gt;At MobileSpan, we implemented the core of our business logic in a cross-platform library that is built using Chrome. We then built our UI per platform that uses this underlying library. Porting our app to a new platform means mainly building the UI layer on the new platform and then tying it together with the cross-platform client library.&lt;/p&gt;
-&lt;h2&gt;Conclusion: Tying It Together&lt;/h2&gt;
-
-&lt;p&gt;If I am sounding like a Chrome fan-boy, that&amp;#x2019;s because I am one. Since we embraced Chromium more than 2 years ago, we have found it to work really well for us as a dev platform, saving countless person-hours. It has allowed us to reuse some really well-written and, more importantly, well-tested code across several client platforms, and to concentrate our efforts on making a solid product that works equally well on multiple platforms.&lt;/p&gt;
-&lt;h2&gt;Items for a future post&lt;/h2&gt;
-
-&lt;p&gt;This just scratches the surface of using Chrome source as a development platform. What should I cover in a next post?&lt;/p&gt;
-
-&lt;p&gt;Some options include:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Deep dive into specific libraries like Network, Crypto, etc.&lt;/li&gt;
-&lt;li&gt;Keeping up to date with Chromium sources&lt;/li&gt;
-&lt;li&gt;How to fork and keep your sanity (and knowing when to fork certain sources)&lt;/li&gt;
-&lt;li&gt;Process of checking out Chromium sources&lt;/li&gt;
-&lt;li&gt;More details on cross-platform UI development&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Have you poked at Chrome's codebase or used it to build a cool product? Tell us about it in the comments section.&lt;/p&gt;
-
-
-
-&lt;div class=&quot;content-left&quot;&gt;
-&lt;div class=&quot;team&quot;&gt;
-  &lt;div class=&quot;team-img&quot;&gt;
-    &lt;img alt=&quot;Sanjeev Radhakrishnan&quot; src=&quot;https://www.mobilespan.com/sites/default/files/team/Sanjeev.png&quot;&gt;&lt;/div&gt;
-  &lt;h2&gt;Sanjeev Radhakrishnan&lt;/h2&gt;
-  &lt;p&gt;Co-Founder and CTO, Sanjeev leads technology development and architecture at MobileSpan. He brings many years of experience from working on Google Chrome's security and sandboxing.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-Chrome Is The New C Runtime
-</title>
-</item>
-<item>
 <link>
 http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1
 </link>
@@ -365,6 +58,128 @@ Please try to &lt;em&gt;include links&lt;/em&gt; to pages describing the data st
 </description>
 <title>
 What are the lesser known but useful data structures?
+</title>
+</item>
+<item>
+<link>
+item?id=7079543
+</link>
+<description>
+
+</description>
+<title>
+Ask PG: How would you fill out a YC application with YC as your idea?
+</title>
+</item>
+<item>
+<link>
+http://sicpinclojure.com
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
+    &lt;span class=&quot;print-link&quot;&gt;&lt;span class=&quot;print_html&quot;&gt;&lt;a href=&quot;http://sicpinclojure.com/?q=print/content/introduction&quot; title=&quot;Display a printer-friendly version of this page.&quot; class=&quot;print-page&quot; rel=&quot;nofollow&quot;&gt;&lt;img src=&quot;http://sicpinclojure.com/sites/all/modules/print/icons/print_icon.gif&quot; alt=&quot;Printer-friendly version&quot; title=&quot;Printer-friendly version&quot; width=&quot;16&quot; class=&quot;print-icon print-icon-margin&quot;&gt;Printer-friendly version&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;p&gt;This site exists to make it easier to use Clojure rather than Scheme while working through &lt;span class=&quot;caps&quot;&gt;SICP&lt;/span&gt;. The folks behind &lt;span class=&quot;caps&quot;&gt;SICP&lt;/span&gt; were kind enough to release it under a &lt;a href=&quot;http://creativecommons.org/licenses/by-nc/3.0/&quot;&gt;Creative Commons Attribution-Noncommercial 3.0 Unported License&lt;/a&gt;, which will allow me to annotate the text and adapt its source code and exercises to fit the Clojure&amp;#xA0;language.&lt;/p&gt;&lt;div class=&quot;intro&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;http://mitpress.mit.edu/sicp/&quot;&gt;&lt;cite&gt;Structure and Interpretation of Computer Programs&lt;/cite&gt;&lt;/a&gt;, or &lt;span class=&quot;caps&quot;&gt;SICP&lt;/span&gt;, is widely considered one of the most influential texts in computer science education. &lt;a href=&quot;http://sicpinclojure.com/sites/default/files/images/sicpcover_0.jpg&quot; rel=&quot;lightbox&quot;&gt;&lt;img src=&quot;http://sicpinclojure.com/sites/default/files/resize/images/sicpcover_0-150x217.jpg&quot; alt=&quot;The cover of Structure and Interpretation of Computer Programs&quot; title=&quot;&quot; width=&quot;150&quot; class=&quot;right&quot;&gt;&lt;/a&gt;If you believe Peter Norvig, &lt;a href=&quot;http://www.amazon.com/review/R403HR4VL71K8/ref=cm_cr_rdp_perm&quot;&gt;it will change your life&lt;/a&gt;. &lt;a href=&quot;http://groups.csail.mit.edu/mac/projects/scheme/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;MIT&lt;/span&gt; Scheme&lt;/a&gt;, a minimalist dialect of Lisp, is used for all code examples and&amp;#xA0;exercises.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://clojure.org/&quot;&gt;Clojure&lt;/a&gt; is a &amp;#x201C;modern&amp;#x201D; Lisp that runs on the Java Virtual Machine. Its speed, easy access to Java libraries, and focus on concurrency make it an appealing language for many&amp;#xA0;applications.&lt;/p&gt;
+&lt;p&gt;This site exists to make it easier to use Clojure while working through &lt;span class=&quot;caps&quot;&gt;SICP&lt;/span&gt;. The folks behind &lt;span class=&quot;caps&quot;&gt;SICP&lt;/span&gt; were kind enough to release it under a &lt;a href=&quot;http://creativecommons.org/licenses/by-nc/3.0/&quot;&gt;Creative Commons Attribution-Noncommercial 3.0 Unported License&lt;/a&gt;, which will allow me to annotate the text and adapt its source code and exercises to fit the Clojure&amp;#xA0;language.&lt;/p&gt;
+&lt;p&gt;All credit, of course, belongs to the authors: Harold Abelson and Gerald Jay Sussman, with Julie&amp;#xA0;Sussman.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;announcement&quot;&gt;
+&lt;h2&gt;You should not be here&amp;#xA0;yet.&lt;/h2&gt;
+&lt;p&gt;Actually, you&amp;#x2019;re more than welcome to look around. I&amp;#x2019;ll avoid putting up any gifs of traffic cones and stop signs, but this site is very much under construction, and is nowhere near the point of being useful yet. It&amp;#x2019;s quite slow as well, since I have disabled all performance optimizations for development purposes. If you&amp;#x2019;re interested, take a look at the &lt;a href=&quot;http://sicpinclojure.com/content/current-status&quot;&gt;status page&lt;/a&gt; for a better idea of where things&amp;#xA0;stand.&lt;/p&gt;
+&lt;/div&gt;  &lt;/div&gt;
+
+  
+&lt;/div&gt;
+</description>
+<title>
+SICP in Clojure
+</title>
+</item>
+<item>
+<link>
+http://www.michaelv.org/
+</link>
+<description>
+&lt;div&gt;
+&lt;div id=&quot;screen&quot;&gt;
+&lt;div id=&quot;iconlist&quot;&gt;&lt;table id=&quot;icontable&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+</description>
+<title>
+Windows 3.1 written in JS/HTML
+</title>
+</item>
+<item>
+<link>
+http://esft.com/how-startups-can-compete-with-big-company-perks/
+</link>
+<description>
+&lt;div&gt;
+
+            &lt;section class=&quot;post-content&quot;&gt;
+                &lt;p&gt;Big companies like Facebook, Google and Twitter can afford to hire a professional chef to cook meals every day. They can also afford to do your laundry, drive you to and from work, and clean your apartment. These perks make their job offers incredibly appealing, and it makes their employees &lt;a href=&quot;http://www.aaronsw.com/weblog/googlife&quot;&gt;less likely to leave&lt;/a&gt;. But when you're a startup with &amp;lt;=$10M in the bank, there's simply no way you can afford to provide all these perks in-house.&lt;/p&gt;
+
+&lt;p&gt;In the past few years, there have been a surge of new startups built to help other startups (&lt;a href=&quot;http://cdixon.org/2011/02/05/selling-pickaxes-during-a-gold-rush/&quot;&gt;Selling pickaxes during a gold rush&lt;/a&gt;, as Chris Dixon puts it). Predominantly, these startups are focused on making it easier to develop &amp;amp; distribute your software. However, there is a new trend of startups that are helping solve the problem nearly every founder faces: attracting &amp;amp; retaining employees.&lt;/p&gt;
+
+&lt;p&gt;By taking advantage of &lt;a href=&quot;http://thesocietypages.org/cyborgology/2011/02/24/digital-dualism-versus-augmented-reality/&quot;&gt;digital dualism&lt;/a&gt;, these startups are able to keep their prices incredibly low while providing a great user experience, which is atypical in their respective markets. Below are some of the most prevalent startups, spanning from professionally cooked food to chauffeur services.&lt;/p&gt;
+
+&lt;h4 id=&quot;doyouremployeeschores&quot;&gt;Do your employee's chores&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.homejoy.com/perks&quot;&gt;Homejoy&lt;/a&gt;&lt;/strong&gt; - home/apartment cleaning for &lt;strong&gt;$20/hr&lt;/strong&gt;. Before their service existed, you could either scour craigslist for a reasonably priced cleaner (and hope that they're also trustworthy) or pay a premium for a verified business. This is no longer the case, as Homejoy uses simple software &amp;amp; verified user reviews to ensure a great experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://sfwash.com/pricing-and-payment/&quot;&gt;SFWash&lt;/a&gt;&lt;/strong&gt; - laundry pickup service for &lt;strong&gt;$1.25/pound&lt;/strong&gt;. SFWash seems to be the most popular &quot;pick up at your door&quot; laundry service. They've been around since 2006, so they're a safe bet for consistency.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://swifto.com/&quot;&gt;Swifto&lt;/a&gt;&lt;/strong&gt; - dog walking service for &lt;strong&gt;~$25/walk&lt;/strong&gt;. While your employees are at work, they won't have to worry about how their dog is doing, as their dog will be out and about having the time of his life. Happy pets make for happy employees.&lt;/p&gt;
+
+&lt;h4 id=&quot;feedyouremployees&quot;&gt;Feed your employees&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.pplfood.com&quot;&gt;People Food&lt;/a&gt;&lt;/strong&gt; - professionally catered food for &lt;strong&gt;$7/meal&lt;/strong&gt;.
+A lot of catering services don't make the food themselves and instead buy from restaurants. The problem is that this becomes very expensive, as both the restaurant and the catering service need to make a profit. People Food is able to keep their costs low by doing all of this in-house. You order the food off of their website; they have a professional chef who cooks the food, and they deliver it to your office via their fleet of bike messengers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.fluc.com/&quot;&gt;Fluc&lt;/a&gt;&lt;/strong&gt; - food delivered on demand from almost any restaurant. Whether your employees are into fast food or local restaurants, Fluc can deliver it within 40 minutes. They also deliver drinks from coffee shops if you want to avoid going outside for your next coffee run.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://zerocater.com/&quot;&gt;ZeroCater&lt;/a&gt;&lt;/strong&gt; - food catered from local restaurants. Being the original software assisted catering service, ZeroCater makes the process of scouting and ordering from restaurants unbelievably simple. ZeroCater's software even allows you to enter in food allergies, ensuring that all of your employees can eat delicious lunches. ZeroCater has been growing like crazy since they launched in 2011 and have recently started expanding nationally.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.doordash.com/&quot;&gt;DoorDash&lt;/a&gt;&lt;/strong&gt; - food delivered on demand from local restaurants. If you're in the mood for some delicious dishes from a local joint, DoorDash can deliver it within 40 minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.instacart.com/store&quot;&gt;Instacart&lt;/a&gt;&lt;/strong&gt; - groceries delivered to your door. Keep your company's fridge and snack cabinet stocked with delicious food &amp;amp; drinks for late night work sessions.&lt;/p&gt;
+
+&lt;h4 id=&quot;keepemployeeshappy&quot;&gt;Keep employees happy&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.goldbely.com/&quot;&gt;Goldbely&lt;/a&gt;&lt;/strong&gt; - yummy handmade foods in America, delivered to your door. Want to surprise your employees on game night? Order a pizza from &lt;a href=&quot;https://www.goldbely.com/featured/lou-malnatis-pizza&quot;&gt;Lou Malnati's in Chicago&lt;/a&gt; and have it delivered in two days. Did your product ship in time? Buy your engineering team &lt;a href=&quot;https://www.goldbely.com/featured/jenis-splendid-ice-creams&quot;&gt;Jeni's delectable ice cream sandwiches&lt;/a&gt;. Surprise treats are a great gift to show how much you appreciate their work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.bloomthat.com/&quot;&gt;BloomThat&lt;/a&gt;&lt;/strong&gt; - handcrafted flowers delivered in 90 minutes, starting at &lt;strong&gt;$35&lt;/strong&gt;. Whether it's an anniversary, a new baby, or a company welcome gift, Bloomthat can send flowers directly to your employees on demand.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://yiftee.com/&quot;&gt;Yiftee&lt;/a&gt;&lt;/strong&gt; - simple giftcarding service. Reward your employees for a job well done by sending them a virtual gift card to that coffee shop down the street. They also have an &lt;a href=&quot;http://yiftee.com/developers&quot;&gt;API&lt;/a&gt; that you can take advantage of (automatically send a gift card upon an employee's first git commit, etc).&lt;/p&gt;
+
+&lt;h4 id=&quot;chauffeuryouremployeestoandfromwork&quot;&gt;Chauffeur your employees to and from work&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.lyft.com&quot;&gt;Lyft&lt;/a&gt;&lt;/strong&gt; - &quot;your best friend with a car&quot; for &lt;strong&gt;$3.25 a flag pull&lt;/strong&gt; plus &lt;strong&gt;$1.80 per mile&lt;/strong&gt;. Lyft has become crazy popular because of their low prices and their super friendly drivers. If your employees like chatting with new people, Lyft might be a good fit for your company.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.uber.com&quot;&gt;UberX&lt;/a&gt;&lt;/strong&gt; - chauffeur service for &lt;strong&gt;$3.00 a flag pull&lt;/strong&gt; plus &lt;strong&gt;$1.50 per mile&lt;/strong&gt;. If your employees aren't morning people, UberX might be a good option. Their drivers act like pros and aren't particularly chatty. Uber &lt;a href=&quot;http://techcrunch.com/2014/01/09/big-uberx-price-cuts/&quot;&gt;recently slashed the prices of UberX&lt;/a&gt; to undercut Lyft, so they're the cheapest chauffeur service available right now.&lt;/p&gt;
+
+
+
+&lt;p&gt;If you feed your employees lunch everyday (with People Food), clean their apartment every other week (with Homejoy), and do their laundry every other week (with SFWash), you would be paying &lt;strong&gt;$280/month/employee&lt;/strong&gt; to keep them super happy as well as &lt;a href=&quot;http://www.incentivemag.com/Incentive-Programs/Engagement/Articles/The-Power-of-Perks/&quot;&gt;dramatically increase employee retention &amp;amp; attraction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the war for talent, a two person startup can now effectively compete with billion dollar companies. Game on.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(Disclamer: I know a few founders that run some of the companies listed above. This isn't a paid endorsement - if you have any startups I missed, I'd be more than happy to add them to the list.)&lt;/em&gt;&lt;/p&gt;
+            &lt;/section&gt;
+
+            
+
+        
+
+    &lt;/div&gt;
+</description>
+<title>
+How startups can compete with big company perks
 </title>
 </item>
 </channel>
