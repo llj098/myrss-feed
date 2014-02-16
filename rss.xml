@@ -15,478 +15,6 @@ myread
 </description>
 <item>
 <author>
-Ron Amadeo
-</author>
-<link>
-http://arstechnica.com/security/2014/01/malware-vendors-buy-chrome-extensions-to-send-adware-filled-updates/?
-</link>
-<description>
-&lt;div class=&quot;article-content clearfix&quot; score=&quot;10.0&quot;&gt;
-    
-&lt;figure class=&quot;intro-image image center full-width&quot;&gt;
-      &lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/code-640x283.png&quot; width=&quot;640&quot;&gt;
-  
-  &lt;/figure&gt;
-  &lt;p&gt;One of the coolest things about Chrome is the silent, automatic updates that always ensure that users are always running the latest version. While Chrome itself is updated automatically by Google, that update process also includes Chrome's extensions, which are updated by the extension owners. This means that it's up to the user to decide if the owner of an extension is trustworthy or not, since you are basically giving them permission to push new code out to your browser whenever they feel like it.&lt;/p&gt;
-&lt;p&gt;To make matters worse, ownership of a Chrome extension can be &lt;em&gt;&lt;/em&gt;transferred to another party, and users are never informed when an ownership change happens. Malware and adware vendors have caught wind of this and have started showing up at the doors of extension authors, looking to buy their extensions. Once the deal is done and the ownership of the extension is transferred, the new owners can issue an ad-filled update over Chrome's update service, which sends the adware out to every user of that extension.&lt;/p&gt;
-&lt;p&gt;We ought to clarify here that Google isn't explicitly responsible for such unwanted adware, but vendors are exploiting Google's extension system to create a subpar—and possibly dangerous—browsing experience. Ars has contacted Google for comment, but we haven't heard back yet. We'll update this article if we do.&lt;/p&gt;
-&lt;figure class=&quot;image center full&quot; score=&quot;12.5&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/2014-01-17_14-20-38.png&quot; width=&quot;613&quot;&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;20.0&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;User reviews for Add to Feedly complaining about the adware.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;A &lt;a href=&quot;http://www.labnol.org/internet/sold-chrome-extension/28377/&quot;&gt;first-hand account&lt;/a&gt; of this, which was first spotted by &lt;a href=&quot;http://www.omgchrome.com/malware-buying-google-chrome-extensions/&quot;&gt;OMGChrome&lt;/a&gt;, was given by Amit Agarwal, developer of the &quot;&lt;a href=&quot;https://chrome.google.com/webstore/detail/add-to-feedly/ejkjjleifeeaccajkekdcckflfpenoen?hl=en&quot;&gt;Add to Feedly&lt;/a&gt;&quot; extension. One morning, Agarwal got an e-mail offering &quot;4 figures&quot; for the sale of his Chrome extension. The extension was only about an hour's worth of work, so Agarwal agreed to the deal, the money was sent over PayPal, and he transferred ownership of the extension to another Google account. A month later, the new extension owners released their first (and so far only) update, which injected adware on all webpages and started redirecting links. Chrome's extension auto-update mechanism silently pushed out the update to all 30,000 Add to Feedly users, and the ad revenue likely started rolling in. While Agarwal had no idea what the buyer's intention was when the deal was made, he later learned that he ended up selling his users to the wolves. The buyer was not after the Chrome extension, they were just looking for an easy attack vector in the extension's user base.&lt;/p&gt;
-&lt;p&gt;This isn't a one-time event, either. About a month ago, I had a very simple Chrome extension called &quot;&lt;a href=&quot;https://chrome.google.com/webstore/detail/tweet-this-page/ppilhaolhbpfembaoedfdbkegfedfgip/reviews&quot;&gt;Tweet This Page&lt;/a&gt;&quot; suddenly transform into an ad-injecting machine and start hijacking Google searches. A quick search for the Chrome Web Store reveals several other extensions that reviewers say suddenly made a U-turn from useful extension to ad-injector. There is even an extension that purports to &lt;a href=&quot;https://chrome.google.com/webstore/detail/stop-extensions-from-inje/bjdaconoeojhhkdjndlelgklkmalleon&quot;&gt;stop other extensions&lt;/a&gt; from injecting ads. Injected ads &lt;a href=&quot;https://developers.google.com/chrome/web-store/program_policies&quot;&gt;are allowed&lt;/a&gt; in Chrome extensions, but Google's policy states that which app the ads are coming from must be clearly disclosed to the user, and they cannot interfere with any native ads or the functionality of the website.&lt;/p&gt;
-&lt;figure class=&quot;image center large full-width&quot; score=&quot;12.5&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/2014-01-17_14-08-2114.png&quot; class=&quot;enlarge&quot;&gt;&lt;img src=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/2014-01-17_14-08-2114-640x203.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;figcaption class=&quot;caption&quot; score=&quot;17.5&quot;&gt;&lt;div class=&quot;caption-text&quot;&gt;&lt;a href=&quot;http://cdn.arstechnica.net/wp-content/uploads/2014/01/2014-01-17_14-08-2114.png&quot; class=&quot;enlarge&quot;&gt;Enlarge&lt;/a&gt; &lt;span class=&quot;sep&quot;&gt;/&lt;/span&gt; Code from Tweet This Page, which hijacks Google, Yahoo, and Bing results and redirects to searchgist.com.&lt;/div&gt; &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;span&gt;When malicious apps don't follow Google's disclosure policy, diagnosing something like this is extremely difficult. When Tweet This Page started spewing ads and malware into my browser&lt;/span&gt;&lt;span&gt;, the only &lt;/span&gt;initial&lt;span&gt; sign was that ads on the Internet had suddenly become much more intrusive, and many auto-played sound. The extension only started injecting ads a few days after it was installed in an attempt to make it more difficult to detect. After a while, Google search became useless, because every link would redirect to some other webpage. My initial thought was to take an inventory of every program I had installed recently—I never suspected an &lt;/span&gt;&lt;em&gt;update&lt;/em&gt;&lt;span&gt; would bring in malware. &lt;/span&gt;&lt;span&gt;I ran a ton of malware/virus scanners, and they all found nothing. I was only clued into the fact that Chrome was the culprit because the same thing started happening on &lt;/span&gt;&lt;span&gt;my Chromebook—if I didn't notice that, the next step would have probably been a full wipe of my computer. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;The difficult part of this for users is that normal removal techniques will not work. Virus scanners are unlikely to flag ad-injecting JavaScript as malicious. Extensions are synced to your Google account, which means that even wiping out a computer and reinstalling the OS will not remove the malware—signing-in to Chrome will just download it again. The only way to be rid of the malware is to find the extension in chrome://extensions and remove it—and to make sure the removal gets propagated to your account and down to all your other devices. &lt;/span&gt;&lt;span&gt;Even when you have it narrowed down to Chrome, since nothing detects a malicious Chrome extension, the best course of action is to meticulously check the latest reviews of every extension and hope that someone else has figured out where the ads are coming from.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;What can users do to protect themselves? It's very hard to keep yourself in the loop with Chrome extension updates. Extensions usually don't have changelogs, and there is currently no way to disable extension auto-updating. One way to stay a least slightly informed of what is going on is to install an extension that will &lt;a href=&quot;https://chrome.google.com/webstore/detail/extensions-update-notifie/nlldbplhbaopldicmcoogopmkonpebjm?hl=en&quot;&gt;notify you&lt;/a&gt; when your other extensions get updated. Other than that, the only other option is to stop using extensions entirely, which is a little extreme. Just keep an eye on the simpler extensions from smaller extension makers—those are the ones &lt;span&gt;at most risk of being gobbled up by a malicious entity. Chrome will require your approval if an extension adds &lt;/span&gt;&lt;a href=&quot;http://developer.chrome.com/extensions/permission_warnings.html&quot;&gt;new permissions&lt;/a&gt;&lt;span&gt;, but the magic permission that allows ad-injecting is called &quot;access your data on all web pages,&quot; which many legitimate extensions already use. A malicious extension buyer could even look for an extension that already uses this permission so that their update will arouse the least suspicion among current users.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The reality, though, is that while it's extremely easy for a novice user to install an extension, it's nearly impossible for them to diagnose and remove an extension that has turned sour, and Chrome Sync will make sure that extension hangs around on all their devices for a long time. The author of Add to Feedly stated that his extension had around 30,000 users before it was sold and packed full of ads. Today, despite the flood of unhappy user reviews, the Chrome Web Store shows 31,548 users. Auto-updating from a trusted source is one thing, but when that user trust can be bought and sold—and extension ownership can change hands without the users being informed—something needs to be done.&lt;/p&gt;
-    		&lt;/div&gt;
-    
-</description>
-<title>
-Adware vendors buy Chrome Extensions to send ad- and malware-filled updates
-</title>
-</item>
-<item>
-<link>
-http://www.phoronix.com/scan.php?page=news_item&amp;px=MTU3Mzc
-</link>
-<description>
-&lt;div&gt;&lt;div&gt;
-&lt;h3&gt;Today&lt;/h3&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19581&quot; title=&quot;Early Ubuntu 14.04 Tests Show Some Performance Changes&quot;&gt;Early Ubuntu 14.04 Tests Show Some Performance Changes&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:27 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Operating%20Systems&quot;&gt;Operating Systems&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91622&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;If you have been wanting to take some time this holiday season to switch from Ubuntu 13.10 stable to the latest development packages for Ubuntu 14.04 LTS, here's some quick benchmarks I did last week showing some of the performance changes to be found right now from using the latest Ubuntu 14.04 development packages.&lt;/p&gt;&lt;h3&gt;16 December&lt;/h3&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19557&quot; title=&quot;FreeBSD 10.0 Kernel Comes To Debian&quot;&gt;FreeBSD 10.0 Kernel Comes To Debian&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;09:15 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Operating%20Systems&quot;&gt;Operating Systems&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Advancing prudently but quietly within the Debian camp is the Debian GNU/kFreeBSD operating system that pairs Debian's GNU user-land with the FreeBSD kernel. For Debian 8.0 &quot;Jessie&quot; there are continued improvements on this spin that does away with the Linux kernel. Debian GNU/kFreeBSD Jessie/Sid currently defaults to the FreeBSD 9.2.0 kernel, but a FreeBSD 10.0 development kernel has already landed in Debian and is the focus of today's benchmarks.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NTQ&quot; title=&quot;BGFX Makes It Easy Targeting Multiple Rendering APIs&quot;&gt;BGFX Makes It Easy Targeting Multiple Rendering APIs&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;04:39 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Free%20Software&quot;&gt;Free Software&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91604&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;BGFX is a cross-platform rendering library that makes it easy targeting multiple versions of OpenGL and Direct3D on platforms ranging from Apple iOS to Windows to Google Native Client.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NTM&quot; title=&quot;OpenDocument ODF Support Coming To The Web&quot;&gt;OpenDocument ODF Support Coming To The Web&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;03:25 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Free%20Software&quot;&gt;Free Software&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91602&amp;amp;goto=newpost&quot;&gt;2 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;WebODF is a new open-source projet that allows ODF document files to be displayed within a web-browser. WebODF is used by the new OwnCloud release for its collaborative, web-based ODF file editing.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19632&quot; title=&quot;SteamOS vs. Windows 8.1 NVIDIA Performance&quot;&gt;SteamOS vs. Windows 8.1 NVIDIA Performance&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:43 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Linux%20Gaming&quot;&gt;Linux Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91595&amp;amp;goto=newpost&quot;&gt;23 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;For those NVIDIA gaming customers running Microsoft Windows 8.1 that have been thinking about giving Valve's SteamOS Linux-based gaming platform a try, here are some early benchmarks of the SteamOS 1.0 beta that compare the performance to Microsoft Windows 8.1 Pro x64 on multiple NVIDIA GeForce graphics cards.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NTI&quot; title=&quot;FreeBSD 10.0 RC2 Brings Radeon KMS Fixes&quot;&gt;FreeBSD 10.0 RC2 Brings Radeon KMS Fixes&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;phxcms_home_con&quot;&gt;The second release candidate to FreeBSD 10.0 is now available and with it comes Radeon KMS graphics driver bug-fixes and other cleaned-up and fixed code.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NTE&quot; title=&quot;Linux Kernel Support For Intel Processor Trace (Intel PT)&quot;&gt;Linux Kernel Support For Intel Processor Trace (Intel PT)&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;phxcms_home_con&quot;&gt;Patches were published last week that enable support for the Intel Processor Trace extension within the Linux kernel's perf sub-system.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19483&quot; title=&quot;Intel HD Graphics Linux 3.13 + Mesa 10.1 Update&quot;&gt;Intel HD Graphics Linux 3.13 + Mesa 10.1 Update&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;07:30 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Display%20Drivers&quot;&gt;Display Drivers&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91572&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;In continuing from yesterday's article that offered up fresh benchmarks of Intel Sandy Bridge &amp;amp; Ivy Bridge CPUs with the latest Linux code atop Ubuntu 13.10, out today are new graphics benchmarks using the very latest open-source Intel Linux graphics driver code and trying out CPUs with HD Graphics 2000, 2500, 3000. The open-source Intel graphics driver has certainly matured a lot since the debut of Sandy Bridge and Ivy Bridge CPUs!&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NTA&quot; title=&quot;Ubuntu Now Supports Cross-Compiling CMake Projects&quot;&gt;Ubuntu Now Supports Cross-Compiling CMake Projects&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;phxcms_home_con&quot;&gt;The latest developer package uploads into Ubuntu 14.04 &quot;Trusty Tahr&quot; allow for cross-compiling CMake-based projects, e.g. compiling Mir and Unity 8 for ARM from an x86 system.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDk&quot; title=&quot;Gummiboot Gains Splash Screen Support&quot;&gt;Gummiboot Gains Splash Screen Support&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;05:05 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Hardware&quot;&gt;Hardware&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91551&amp;amp;goto=newpost&quot;&gt;7 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Gummiboot, the simple and open-source UEFI boot manager, now has support for displaying a user-defined splash screen.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDg&quot; title=&quot;Debian 7.3 Officially Released&quot;&gt;Debian 7.3 Officially Released&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;04:59 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Distributions&quot;&gt;Distributions&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Coincidentally, Debian GNU/Linux 7.3 was released this weekend -- the same weekend as it being known that SteamOS is Debian-based.&lt;/p&gt;&lt;h3&gt;15 December&lt;/h3&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19623&quot; title=&quot;SteamOS vs. Ubuntu 13.10 - Intel HD Graphics Performance&quot;&gt;SteamOS vs. Ubuntu 13.10 - Intel HD Graphics Performance&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;05:25 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Linux%20Gaming&quot;&gt;Linux Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91518&amp;amp;goto=newpost&quot;&gt;25 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;When Valve announced the public release of the beta for SteamOS 1.0 &quot;Alchemist&quot; on Friday they listed NVIDIA graphics as a hardware requirement, but I showed that AMD Radeon graphics with Catalyst would work and it's possible to get Intel graphics working (or the open-source graphics drivers in general) through a minor change to the Linux-based SteamOS kernel parameters. After that I ran some benchmarks and here are a few performance results comparing SteamOS 1.0 Beta to Ubuntu 13.10 with Intel HD Graphics.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDc&quot; title=&quot;Linux 3.13-rc4 Kernel Released, But It's Too Big&quot;&gt;Linux 3.13-rc4 Kernel Released, But It's Too Big&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;04:12 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Linux%20Kernel&quot;&gt;Linux Kernel&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91510&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Linux 3.13-rc4 was released today but Linus Torvalds isn't too happy as this latest test release is much bigger than the earlier development RCs.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDY&quot; title=&quot;Lenovo X201 Support Comes To Coreboot&quot;&gt;Lenovo X201 Support Comes To Coreboot&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;02:09 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Hardware&quot;&gt;Hardware&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91505&amp;amp;goto=newpost&quot;&gt;2 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;The Lenovo ThinkPad X201 laptop is now supported by mainline Coreboot.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDU&quot; title=&quot;It's Easy Getting Intel Graphics To Work On SteamOS&quot;&gt;It's Easy Getting Intel Graphics To Work On SteamOS&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;12:12 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91502&amp;amp;goto=newpost&quot;&gt;9 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;While Valve only advertises NVIDIA graphics driver support in the SteamOS Beta released on Friday, I already found that AMD Radeon GPUs work with Catalyst on this Debian Linux derived OS. With a simple tweak, Intel HD Graphics can also run quite fine on SteamOS.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDQ&quot; title=&quot;AMD Catalyst Graphics Do Work On SteamOS&quot;&gt;AMD Catalyst Graphics Do Work On SteamOS&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;09:52 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91489&amp;amp;goto=newpost&quot;&gt;7 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;The binary Catalyst graphics driver is pre-installed and does work on Valve's SteamOS.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDM&quot; title=&quot;Linux Kernel Works To Make Better Random Reseeding&quot;&gt;Linux Kernel Works To Make Better Random Reseeding&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;09:05 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Hardware&quot;&gt;Hardware&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91482&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;While /dev/random was made faster and more random in Linux 3.13, in light of the NSA controversies and that Intel/VIA hardware encryption and random generators may not even be trustworthy, there's been a rework in how reseeding happens for the Linux kernel's random component.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19621&quot; title=&quot;The First NVIDIA GeForce Benchmarks On The SteamOS Beta&quot;&gt;The First NVIDIA GeForce Benchmarks On The SteamOS Beta&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;12:35 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Linux%20Gaming&quot;&gt;Linux Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91440&amp;amp;goto=newpost&quot;&gt;21 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;A comprehensive performance comparison is underway at Phoronix that pits SteamOS against other desktop Linux distributions, but for those anxious to see some performance numbers, here are benchmarks done so far this weekend from seven NVIDIA GeForce graphics cards on the public SteamOS 1.0 Beta operating system. In this article are early benchmarks from seven NVIDIA GeForce graphics cards running Valve's Debian Linux based SteamOS on an Intel Haswell system.&lt;/p&gt;&lt;h3&gt;14 December&lt;/h3&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDI&quot; title='The Steam Controller Works &quot;Out Of The Box&quot; On Linux'&gt;The Steam Controller Works &quot;Out Of The Box&quot; On Linux&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;07:03 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91435&amp;amp;goto=newpost&quot;&gt;12 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Valve's initial Steam Controller prototype for use with the Steam Machines Linux-based game console will also work &quot;out of the box&quot; on other Linux distributions.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19478&quot; title=&quot;Intel Core i3/i5 Linux Performance Update&quot;&gt;Intel Core i3/i5 Linux Performance Update&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;02:30 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Processors&quot;&gt;Processors&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;For those curious about the performance of Intel's Sandy Bridge and Ivy Bridge processors when upgrading to Ubuntu 13.10 and the experimental Linux 3.13 along with the latest stable GCC 4.8.2 compiler, here's some fresh benchmarks from several different Intel Core i3 and Core i5 CPUs.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDE&quot; title=&quot;Mesa Support Comes For Adaptive Vsync&quot;&gt;Mesa Support Comes For Adaptive Vsync&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;11:37 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Mesa&quot;&gt;Mesa&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91402&amp;amp;goto=newpost&quot;&gt;27 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Patches published for Mesa today are beginning to work on adaptive vsync support and eventually the GLX_EXT_swap_control_tear extension.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0NDA&quot; title=&quot;Running The SteamOS Kernel On Ubuntu Linux&quot;&gt;Running The SteamOS Kernel On Ubuntu Linux&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;10:07 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Ubuntu&quot;&gt;Ubuntu&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91401&amp;amp;goto=newpost&quot;&gt;13 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;It is possible to install Valve's SteamOS modified Linux kernel onto an Ubuntu Linux installation, but I would recommend against doing so, at least for now.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mzk&quot; title=&quot;DRI3 Patches Published For Gallium3D Drivers&quot;&gt;DRI3 Patches Published For Gallium3D Drivers&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;08:05 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=X.Org&quot;&gt;X.Org&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91382&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Besides clearing out 1,000+ X.Org Server warnings, Keith Packard at Intel recently has been working on a new patch-set so DRI3 can be used by Mesa's Gallium3D graphics drivers.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mzg&quot; title=&quot;Android's ION Proposed For Mainline Linux&quot;&gt;Android's ION Proposed For Mainline Linux&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;07:49 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Linux%20Kernel&quot;&gt;Linux Kernel&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91381&amp;amp;goto=newpost&quot;&gt;10 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Android's ION memory allocator has been proposed for mainlining into the Linux kernel.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzE&quot; title=&quot;Linux 3.13 Kernel CPU Governor Benchmarks&quot;&gt;Linux 3.13 Kernel CPU Governor Benchmarks&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;07:06 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Linux%20Kernel&quot;&gt;Linux Kernel&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91375&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;At the request of several Phoronix readers, here are some new CPU governor benchmarks from the Linux 3.13 development kernel as of Friday.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19470&quot; title=&quot;NVIDIA Linux Anti-Aliasing Performance Update&quot;&gt;NVIDIA Linux Anti-Aliasing Performance Update&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;06:38 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Display%20Drivers&quot;&gt;Display Drivers&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;After delivering Radeon Gallium3D MSAA benchmarks earlier in the week to share where the open-source AMD driver is at in its support for multi-sample anti-aliasing, here's some AA benchmarks from NVIDIA's high-class binary Linux graphics driver. The NVIDIA Linux driver offers some of the best anti-aliasing support among Linux graphics drivers.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mzc&quot; title=&quot;Former NVIDIA, Microsoft Developers Doing Lots Of The SteamOS Work&quot;&gt;Former NVIDIA, Microsoft Developers Doing Lots Of The SteamOS Work&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:09 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91348&amp;amp;goto=newpost&quot;&gt;28 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;A former NVIDIA engineer joined Valve some months ago and is responsible for lots of the work on SteamOS and their Linux support. A long-time Microsoft employee is also involved in designing SteamOS. Here's also a few other bits of information in my SteamOS adventures this evening.&lt;/p&gt;&lt;h3&gt;13 December&lt;/h3&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzY&quot; title=&quot;SteamOS Compositor Details, Kernel Patches, Screenshots&quot;&gt;SteamOS Compositor Details, Kernel Patches, Screenshots&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;09:08 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91336&amp;amp;goto=newpost&quot;&gt;36 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Here are more details on the innards of SteamOS along with some screenshots of the GNOME-based desktop environment outside of the Steam Big Picture Mode.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzU&quot; title=&quot;SteamOS Has Its Own Graphics Compositor&quot;&gt;SteamOS Has Its Own Graphics Compositor&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;07:02 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91327&amp;amp;goto=newpost&quot;&gt;51 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;More details regarding the Debian-based SteamOS are emerging. There's also a SteamOS installer now available but the server is getting slaughtered at the moment by those trying to download SteamOS.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzQ&quot; title=&quot;Enlightenment 0.18 Release Candidate 2 Released&quot;&gt;Enlightenment 0.18 Release Candidate 2 Released&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;06:45 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Desktop&quot;&gt;Desktop&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91317&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;As some additional exciting news on Friday night besides the SteamOS beta being out is that the second release candidate to Enlightenment 0.18 is now available.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzM&quot; title=&quot;SteamOS 1.0 Is Based Upon Debian Wheezy&quot;&gt;SteamOS 1.0 Is Based Upon Debian Wheezy&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;06:22 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91316&amp;amp;goto=newpost&quot;&gt;42 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;As expected, SteamOS is starting to surface today. Here's the first details!&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzI&quot; title=&quot;X.Org Server: 1,047 Warnings Reduced To Zero&quot;&gt;X.Org Server: 1,047 Warnings Reduced To Zero&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;06:03 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=X.Org&quot;&gt;X.Org&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91315&amp;amp;goto=newpost&quot;&gt;36 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Keith Packard has been working on an X.Org Server clean-up of the aging code-base and he's managed to reduce the number of generated warnings down to zero.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzA&quot; title=&quot;More Ubuntu Benchmarks Of The Haswell Chromebook&quot;&gt;More Ubuntu Benchmarks Of The Haswell Chromebook&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;04:11 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Hardware&quot;&gt;Hardware&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91302&amp;amp;goto=newpost&quot;&gt;10 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Yesterday I shared the first Phoronix tests of Ubuntu running on the Acer C720 Chromebook, a ChromeOS-focused device powered by an Intel Celeron &quot;Haswell&quot; processor. The performance was great -- as was the build quality and features -- for being a $199 USD device that can be loaded with other operating systems too.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mjk&quot; title=&quot;KDE digiKam 4.0 Beta Released&quot;&gt;KDE digiKam 4.0 Beta Released&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:43 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=KDE&quot;&gt;KDE&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91294&amp;amp;goto=newpost&quot;&gt;2 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;KDE's digiKam software for managing digital camera images is finally up to version 4.0, albeit in beta form. The digiKam 4.0 Beta brings new features and lands a lot of the GSoC 2013 changes.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mjg&quot; title=&quot;NetworkManager Gets A New Text Interface&quot;&gt;NetworkManager Gets A New Text Interface&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;12:21 PM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=GNOME&quot;&gt;GNOME&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91276&amp;amp;goto=newpost&quot;&gt;16 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;While NetworkManager already has great integration with the GNOME and KDE desktops and there are command-line interfaces to this open-source network management program, there's now a new curses-based interface.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/vr.php?view=19564&quot; title=&quot;Red Hat Enterprise Linux 7 Beta 1 Looks Great, Performance Is Great&quot;&gt;Red Hat Enterprise Linux 7 Beta 1 Looks Great, Performance Is Great&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;04:00 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=category&amp;amp;item=Operating%20Systems&quot;&gt;Operating Systems&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91240&amp;amp;goto=newpost&quot;&gt;27 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Red Hat this week released the first beta to Red Hat Enterprise Linux 7. RHEL 7 is based upon improvements and other work that happened over the past few release cycles in Fedora and is riding on its new enterprise Linux 3.10 kernel. In this article is a first look at RHEL 7 Beta 1 along with our first benchmarks of Red Hat Enterprise Linux 7 comparing the results to Red Hat Enterprise Linux 6.5.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MjY&quot; title=&quot;Valve Set To Debut SteamOS Linux Today&quot;&gt;Valve Set To Debut SteamOS Linux Today&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:56 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Gaming&quot;&gt;Gaming&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91231&amp;amp;goto=newpost&quot;&gt;15 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;If all goes according to plan, Valve will be making publicly available their Linux-based SteamOS platform in a matter of hours.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MjU&quot; title=&quot;GNOME 3.12 To Plug Into Facebook In New Ways&quot;&gt;GNOME 3.12 To Plug Into Facebook In New Ways&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;01:10 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=GNOME&quot;&gt;GNOME&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91229&amp;amp;goto=newpost&quot;&gt;18 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;GNOME applications are seeing greater integration support with Facebook in the GNOME 3.12 development cycle.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0Mjc&quot; title=&quot;Xen PVH Support Brought Back Up For The Linux Kernel&quot;&gt;Xen PVH Support Brought Back Up For The Linux Kernel&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;12:29 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Virtualization&quot;&gt;Virtualization&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91228&amp;amp;goto=newpost&quot;&gt;1 Comment&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;Konrad Rzeszutek Wilk at Oracle has re-posted the Xen PVH patches for the Linux kernel as he seeks to get support for para-virtualized hardware extensions into the Linux kernel.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MjQ&quot; title=&quot;ECMA Is Working On Standardizing Google's Dart&quot;&gt;ECMA Is Working On Standardizing Google's Dart&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;phxcms_home_page_sub&quot;&gt;12:15 AM EST - &lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_topic&amp;amp;q=Google&quot;&gt;Google&lt;/a&gt; - &lt;a href=&quot;http://www.phoronix.com/forums/showthread.php?t=91225&amp;amp;goto=newpost&quot;&gt;19 Comments&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;phxcms_home_con&quot;&gt;ECMA International has formed a technical committee to work on a standard specification for the Dart web programming language that's developed by Google as an alternative to JavaScript.&lt;/p&gt;&lt;h2&gt;&lt;a href=&quot;http://www.phoronix.com/rss.php&quot;&gt;RSS Feed&lt;/a&gt; | &lt;a href=&quot;http://www.phoronix.com/scan.php?page=phoronix_articles&quot;&gt;Articles &amp;amp; Reviews&lt;/a&gt; | &lt;a href=&quot;http://www.phoronix.com/scan.php?page=phoronix_news&quot;&gt;News Archives&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div&gt;
-
-
-
-
-
-&lt;div class=&quot;phxcms_contentphx_right_bar&quot;&gt;
-
-&lt;div class=&quot;phxcms_bar_align&quot;&gt;
-&lt;div class=&quot;text-align: center; margin: 10px auto;&quot;&gt;In addition to supporting our site through our advertisers or by subscribing to &lt;a href=&quot;http://www.phoronix.com/scan.php?page=phoronix_premium&quot;&gt;Phoronix Premium&lt;/a&gt;, another way you can support our Linux hardware and software efforts is by clicking the links below when shopping at your favorite Internet retailers, for which we generate a commission off whatever you purchase. It's that easy, thanks!&lt;p&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;amp;location=http%3A%2F%2Fwww.amazon.com%2F&amp;amp;tag=phoronix-20&amp;amp;linkCode=ur2&amp;amp;camp=1789&amp;amp;creative=390957&quot;&gt;Amazon.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-
-&lt;div class=&quot;phxcms_contentphx_right_bar&quot;&gt;
-
-&lt;div class=&quot;phxcms_bar_align&quot;&gt;
-&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4MDE&quot; title=&quot;AMD: AMD Intentionally Crippled Their HDMI Adapters&quot;&gt;AMD Intentionally Crippled Their HDMI Adapters&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NDU&quot; title=&quot;AMD: AMD Posts A Horde Of New 3D GPU Documentation&quot;&gt;AMD Posts A Horde Of New 3D GPU Documentation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MDU&quot; title=&quot;AMD: AMD's Mantle Graphics API For Linux?&quot;&gt;AMD's Mantle Graphics API For Linux?&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NDA&quot; title=&quot;BSD: Arch BSD Is Still Around &amp;amp; Keeping It Simple&quot;&gt;Arch BSD Is Still Around &amp;amp; Keeping It Simple&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwODY&quot; title=&quot;BSD: The State Of FreeBSD's Bhyve Virtualization&quot;&gt;The State Of FreeBSD's Bhyve Virtualization&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MzU&quot; title=&quot;BSD: FreeBSD 9.2 Brings ZFS TRIM, ZFS LZ4, Updated DTrace&quot;&gt;FreeBSD 9.2 Brings ZFS TRIM, ZFS LZ4, Updated DTrace&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NzQ&quot; title=&quot;Compiler: Debian To Switch To Systemd Or Upstart&quot;&gt;Debian To Switch To Systemd Or Upstart&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NjM&quot; title=&quot;Compiler: GCC 4.9 Will Make Compilers More Exciting In 2014&quot;&gt;GCC 4.9 Will Make Compilers More Exciting In 2014&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNzQ&quot; title=&quot;Compiler: GCC 4.9 Continues Piling On New Features&quot;&gt;GCC 4.9 Continues Piling On New Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4ODc&quot; title=&quot;Desktop: Glx-Dock 3.3 Has A Big Core Rewrite&quot;&gt;Glx-Dock 3.3 Has A Big Core Rewrite&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMDA&quot; title=&quot;Desktop: Enlightenment EFL 1.8 Coming Next Week, 1.9 In 2014&quot;&gt;Enlightenment EFL 1.8 Coming Next Week, 1.9 In 2014&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNzM&quot; title=&quot;Desktop: New Lightworks Linux Beta Steps Up The Features&quot;&gt;New Lightworks Linux Beta Steps Up The Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwNDE&quot; title=&quot;Distributions: Debian Trying Out Xfce Over GNOME By Default&quot;&gt;Debian Trying Out Xfce Over GNOME By Default&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4NTA&quot; title=&quot;Distributions: Debian 8.0 To Be Frozen, Features Announced&quot;&gt;Debian 8.0 To Be Frozen, Features Announced&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNzY&quot; title=&quot;Distributions: Canonical Developer Criticizes Linux Mint's Security&quot;&gt;Canonical Developer Criticizes Linux Mint's Security&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5ODc&quot; title=&quot;Fedora: Fedora 20 Beta vs. Ubuntu 13.10 Benchmarks&quot;&gt;Fedora 20 Beta vs. Ubuntu 13.10 Benchmarks&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4MTc&quot; title=&quot;Fedora: Ubuntu 13.10 vs. Fedora Linux CPU Benchmarks&quot;&gt;Ubuntu 13.10 vs. Fedora Linux CPU Benchmarks&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMDg&quot; title='Fedora: Exciting Features For Fedora 20 &quot;Heisenbug&quot;'&gt;Exciting Features For Fedora 20 &quot;Heisenbug&quot;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4NDI&quot; title=&quot;Free Software: OpenRISC Emulator In JavaScript Can Run Wayland&quot;&gt;OpenRISC Emulator In JavaScript Can Run Wayland&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MDM&quot; title=&quot;Free Software: IBM Releases FusedOS Operating System&quot;&gt;IBM Releases FusedOS Operating System&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNjM&quot; title=&quot;Free Software: NVIDIA, Mentor Graphics May Harm GCC&quot;&gt;NVIDIA, Mentor Graphics May Harm GCC&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzY&quot; title=&quot;Gaming: SteamOS Compositor Details, Kernel Patches, Screenshots&quot;&gt;SteamOS Compositor Details, Kernel Patches, Screenshots&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MzU&quot; title=&quot;Gaming: SteamOS Has Its Own Graphics Compositor&quot;&gt;SteamOS Has Its Own Graphics Compositor&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTU0MTA&quot; title=&quot;Gaming: Activision Is Preventing A Game From Coming To Linux&quot;&gt;Activision Is Preventing A Game From Coming To Linux&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2Nzg&quot; title=&quot;GNOME: What's Your Hopes From Valve's SteamOS?&quot;&gt;What's Your Hopes From Valve's SteamOS?&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MjM&quot; title='GNOME: GNOME &quot;Flashback&quot; Released, GNOME Panel 3.8'&gt;GNOME &quot;Flashback&quot; Released, GNOME Panel 3.8&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4ODM&quot; title=&quot;GNOME: Wireshark Is Being Ported From GTK+ To Qt&quot;&gt;Wireshark Is Being Ported From GTK+ To Qt&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2ODY&quot; title=&quot;Google: GNOME 3.10 Has Been Officially Released&quot;&gt;GNOME 3.10 Has Been Officially Released&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4NzE&quot; title=&quot;Google: Linux Won't Get Aura UI Stack Until Google Chrome 33&quot;&gt;Linux Won't Get Aura UI Stack Until Google Chrome 33&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyMTM&quot; title=&quot;Google: Google Shows Off Nice Performance On SPDY&quot;&gt;Google Shows Off Nice Performance On SPDY&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NzE&quot; title='Hardware: The ASUS &quot;Bay Trail&quot; T100 Is Not Linux Friendly'&gt;The ASUS &quot;Bay Trail&quot; T100 Is Not Linux Friendly&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNTc&quot; title=&quot;Hardware: Is All Hope Lost For Non-Android Linux Tablets?&quot;&gt;Is All Hope Lost For Non-Android Linux Tablets?&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5Mjc&quot; title=&quot;Hardware: ARM Cortex-A15 big.LITTLE Pitted Against Intel, AMD&quot;&gt;ARM Cortex-A15 big.LITTLE Pitted Against Intel, AMD&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzODc&quot; title=&quot;Intel: Intel Developer Finds 50 Watt Power Regression In Linux&quot;&gt;Intel Developer Finds 50 Watt Power Regression In Linux&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMDc&quot; title=&quot;Intel: Choosing A 2013 Laptop/Ultrabook For Linux&quot;&gt;Choosing A 2013 Laptop/Ultrabook For Linux&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyNzY&quot; title=&quot;Intel: Intel Makes Major Zlib Performance Improvements&quot;&gt;Intel Makes Major Zlib Performance Improvements&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyNDk&quot; title=&quot;KDE: KDE's Kdenlive Video Editor Has Gone Dark&quot;&gt;KDE's Kdenlive Video Editor Has Gone Dark&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwMTQ&quot; title=&quot;KDE: KDE Developers Continue To Be Frustrated With Canonical&quot;&gt;KDE Developers Continue To Be Frustrated With Canonical&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NjE&quot; title=&quot;KDE: A Look At Some KDE 4.12 Features&quot;&gt;A Look At Some KDE 4.12 Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxNTk&quot; title=&quot;Linux Kernel: 13 Reasons Linux 3.13 Is Going To Be Very Exciting&quot;&gt;13 Reasons Linux 3.13 Is Going To Be Very Exciting&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5MDU&quot; title=&quot;Linux Kernel: NFTables IPTables-Replacement Queued For Linux 3.13&quot;&gt;NFTables IPTables-Replacement Queued For Linux 3.13&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwMzA&quot; title=&quot;Linux Kernel: Linux 3.12 Kernel Released; Linux 4.0 Planning Talked Up&quot;&gt;Linux 3.12 Kernel Released; Linux 4.0 Planning Talked Up&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NjU&quot; title=&quot;Mesa: Hi10P Support Proposed For VDPAU&quot;&gt;Hi10P Support Proposed For VDPAU&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MTc&quot; title=&quot;Mesa: The New Linux OpenGL ABI Is Nearing Reality&quot;&gt;The New Linux OpenGL ABI Is Nearing Reality&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4MzI&quot; title=&quot;Mesa: Mesa 10.0 Is Declared: OpenGL 3.2 Comes For Intel Linux&quot;&gt;Mesa 10.0 Is Declared: OpenGL 3.2 Comes For Intel Linux&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NjY&quot; title='Mozilla: Mozilla Pushes &quot;Shumway&quot; Flash Into Firefox'&gt;Mozilla Pushes &quot;Shumway&quot; Flash Into Firefox&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzOTk&quot; title=&quot;Mozilla: Mozilla Firefox 26 Is Shipping Today With Fun Features&quot;&gt;Mozilla Firefox 26 Is Shipping Today With Fun Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5Nzk&quot; title=&quot;Mozilla: Firefox 25 Now Shipping With Minor Enhancements&quot;&gt;Firefox 25 Now Shipping With Minor Enhancements&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NDM&quot; title=&quot;Multimedia: VLC Media Player Adds Support For H.265 / HEVC&quot;&gt;VLC Media Player Adds Support For H.265 / HEVC&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4Njg&quot; title=&quot;Multimedia: FFmpeg Now Supports HEVC/H.265 Decoding&quot;&gt;FFmpeg Now Supports HEVC/H.265 Decoding&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NzU&quot; title=&quot;Multimedia: FFmpeg 2.1 Supports VP9, HEVC, PulseAudio Output&quot;&gt;FFmpeg 2.1 Supports VP9, HEVC, PulseAudio Output&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzODU&quot; title=&quot;Nouveau: NVIDIA Helping Nouveau With Video Decoding&quot;&gt;NVIDIA Helping Nouveau With Video Decoding&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MTU&quot; title=&quot;Nouveau: Nouveau Keeps Pushing Forward With Improvements&quot;&gt;Nouveau Keeps Pushing Forward With Improvements&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3OTY&quot; title='Nouveau: Reverse-Engineering Could Yield A Linux NV &quot;PerfKit&quot;'&gt;Reverse-Engineering Could Yield A Linux NV &quot;PerfKit&quot;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NDE&quot; title=&quot;NVIDIA: NVIDIA Drops Linux Driver Feature Not Found On Windows&quot;&gt;NVIDIA Drops Linux Driver Feature Not Found On Windows&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NzY&quot; title=&quot;NVIDIA: NVIDIA To Begin Publishing Open GPU Documentation&quot;&gt;NVIDIA To Begin Publishing Open GPU Documentation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NzA&quot; title=&quot;NVIDIA: NVIDIA Releases Major Linux Driver With New Features, EGL&quot;&gt;NVIDIA Releases Major Linux Driver With New Features, EGL&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyMDE&quot; title=&quot;Operating Systems: UEFI Makes It Easy To Boot Rust Applications&quot;&gt;UEFI Makes It Easy To Boot Rust Applications&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyOTQ&quot; title=&quot;Operating Systems: Genode OS 13.11 Brings Many Fantastic Features&quot;&gt;Genode OS 13.11 Brings Many Fantastic Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMjg&quot; title=&quot;Oracle: Benchmarking Oracle's Unbreakable Enterprise Kernel&quot;&gt;Benchmarking Oracle's Unbreakable Enterprise Kernel&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMTg&quot; title=&quot;Phoronix: December Should Be Very Exciting For Linux Users&quot;&gt;December Should Be Very Exciting For Linux Users&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwMDI&quot; title=&quot;Phoronix: Linux 3.12, Ubuntu Spooked Users This Month&quot;&gt;Linux 3.12, Ubuntu Spooked Users This Month&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUzMTI&quot; title=&quot;Phoronix: Linux 3.13, NVIDIA GPUs Won Over November&quot;&gt;Linux 3.13, NVIDIA GPUs Won Over November&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MTY&quot; title=&quot;Red Hat: NVIDIA, Red Hat Partner Up For New Graphics Project&quot;&gt;NVIDIA, Red Hat Partner Up For New Graphics Project&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxMzI&quot; title=&quot;Red Hat: Red Hat Puts Out Ceylon 1.0 Language, Compiler&quot;&gt;Red Hat Puts Out Ceylon 1.0 Language, Compiler&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5MTU&quot; title=&quot;Red Hat: QXL SPICE X.Org Driver Supports New Features&quot;&gt;QXL SPICE X.Org Driver Supports New Features&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxODc&quot; title=&quot;Standards: Khronos Finalizes The OpenCL 2.0 Specification&quot;&gt;Khronos Finalizes The OpenCL 2.0 Specification&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxODg&quot; title=&quot;Standards: OpenVX 1.0: A Computer Vision Acceleration API&quot;&gt;OpenVX 1.0: A Computer Vision Acceleration API&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyMDA&quot; title=&quot;Standards: Khronos Keeps Advancing, Pushing Its Standards&quot;&gt;Khronos Keeps Advancing, Pushing Its Standards&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NTY&quot; title=&quot;SUSE: OpenSUSE Looks To Switch To Btrfs For Next Release&quot;&gt;OpenSUSE Looks To Switch To Btrfs For Next Release&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4ODE&quot; title=&quot;SUSE: Why SUSE Likes The Btrfs File-System&quot;&gt;Why SUSE Likes The Btrfs File-System&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NTU&quot; title=&quot;SUSE: OpenSUSE 13.1 Goes Into Beta With Linux 3.11&quot;&gt;OpenSUSE 13.1 Goes Into Beta With Linux 3.11&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4OTM&quot; title=&quot;Ubuntu: Ubuntu 14.04 Codename Revealed, Mir Haters Attacked&quot;&gt;Ubuntu 14.04 Codename Revealed, Mir Haters Attacked&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUxOTQ&quot; title=&quot;Ubuntu: Ubuntu 14.04 LTS Won't Be Powered By Mir&quot;&gt;Ubuntu 14.04 LTS Won't Be Powered By Mir&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5MDI&quot; title=&quot;Ubuntu: Shuttleworth Challenged Over Mir Comments&quot;&gt;Shuttleworth Challenged Over Mir Comments&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NjM&quot; title=&quot;Virtualization: VirtualBox 4.3 Beta 3 Fixes 3D, Modern Kernels&quot;&gt;VirtualBox 4.3 Beta 3 Fixes 3D, Modern Kernels&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUyNzQ&quot; title=&quot;Virtualization: QEMU 1.7 Is Bringing New Features For Linux Emulation&quot;&gt;QEMU 1.7 Is Bringing New Features For Linux Emulation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4NjA&quot; title=&quot;Virtualization: VirtualBox 4.3 Supports Multi-Touch, New OSes&quot;&gt;VirtualBox 4.3 Supports Multi-Touch, New OSes&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NDA&quot; title=&quot;Wayland: GNOME Shell 3.10 Is Ready To Shine On Wayland&quot;&gt;GNOME Shell 3.10 Is Ready To Shine On Wayland&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ2NDU&quot; title=&quot;Wayland: Raspberry Pi Is Running Well On Wayland/Weston&quot;&gt;Raspberry Pi Is Running Well On Wayland/Weston&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MjE&quot; title=&quot;Wayland: The State Of Wayland, Weston (September 2013)&quot;&gt;The State Of Wayland, Weston (September 2013)&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3MTE&quot; title=&quot;WINE: Wine 1.7.3 Readies D3D Command Stream Improvements&quot;&gt;Wine 1.7.3 Readies D3D Command Stream Improvements&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ5NTM&quot; title=&quot;WINE: Wine 1.7.5 Has... Font, Unicode Improvements&quot;&gt;Wine 1.7.5 Has... Font, Unicode Improvements&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ4MzY&quot; title=&quot;WINE: Wine 1.7.4 Continues With The D3D Command Stream&quot;&gt;Wine 1.7.4 Continues With The D3D Command Stream&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3Nzk&quot; title=&quot;X.Org: The Re-Opened X.Org Server 1.15 Pushes Ahead&quot;&gt;The Re-Opened X.Org Server 1.15 Pushes Ahead&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTQ3NjI&quot; title=&quot;X.Org: We Have Mir &amp;amp; Wayland, But There Still Could Be X12&quot;&gt;We Have Mir &amp;amp; Wayland, But There Still Could Be X12&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;phxcms_page_sub&quot;&gt;&lt;a href=&quot;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=MTUwNTk&quot; title=&quot;X.Org: Open-Source HTML5 Terminal Emulator To Support X11&quot;&gt;Open-Source HTML5 Terminal Emulator To Support X11&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-[Phoronix] Ryan Gordon's Linux Game Porting Guidance
-</title>
-</item>
-<item>
-<link>
-http://paulgraham.com/cities.html
-</link>
-<description>
-&lt;div&gt;&lt;td width=&quot;455&quot;&gt;&lt;img src=&quot;http://ep.yimg.com/ca/I/paulgraham_2202_7992711&quot; width=&quot;157&quot; border=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; alt=&quot;Cities and Ambition&quot;&gt;&lt;p&gt;May 2008&lt;p&gt;
-Great cities attract ambitious people.  You can sense it when you
-walk around one.  In a hundred subtle ways, the city sends you a
-message: you could do more; you should try harder.&lt;/p&gt;&lt;p&gt;The surprising thing is how different these messages can be.  New
-York tells you, above all: you should make more money.  There are
-other messages too, of course.  You should be hipper.  You should
-be better looking.  But the clearest message is that you should be
-richer.&lt;/p&gt;&lt;p&gt;What I like about Boston (or rather Cambridge) is that the message
-there is: you should be smarter.  You really should get around to
-reading all those books you've been meaning to.&lt;/p&gt;&lt;p&gt;When you ask what message a city sends, you sometimes get surprising
-answers.  As much as they respect brains in Silicon Valley, the
-message the Valley sends is: you should be more powerful.&lt;/p&gt;&lt;p&gt;That's not quite the same message New York sends.  Power matters
-in New York too of course, but New York is pretty impressed by a
-billion dollars even if you merely inherited it.  In Silicon Valley
-no one would care except a few real estate agents.  What matters
-in Silicon Valley is how much effect you have on the world.  The
-reason people there care about Larry and Sergey is not their wealth
-but the fact that they control Google, which affects practically
-everyone.&lt;/p&gt;_____&lt;/p&gt;&lt;p&gt;How much does it matter what message a city sends?  Empirically,
-the answer seems to be: a lot. You might think that if you had
-enough strength of mind to do great things, you'd be able to transcend
-your environment.  Where you live should make at most a couple
-percent difference.  But if you look at the historical evidence,
-it seems to matter more than that.  Most people who did great things
-were clumped together in a few places where that sort of thing was
-done at the time.&lt;/p&gt;&lt;p&gt;You can see how powerful cities are from something I wrote about
-&lt;a href=&quot;http://paulgraham.com/taste.html&quot;&gt;earlier&lt;/a&gt;: the case of the Milanese Leonardo.  
-Practically every
-fifteenth century Italian painter you've heard of was from Florence,
-even though Milan was just as big.  People in Florence weren't
-genetically different, so you have to assume there was someone born
-in Milan with as much natural ability as Leonardo.  What happened
-to him?&lt;/p&gt;&lt;p&gt;If even someone with the same natural ability as Leonardo
-couldn't beat the force of environment, do you suppose you can?&lt;/p&gt;&lt;p&gt;I don't.  I'm fairly stubborn, but I wouldn't try to fight this
-force.  I'd rather use it.  So I've thought a lot about where to
-live.&lt;/p&gt;&lt;p&gt;I'd always imagined Berkeley would be the ideal place&amp;#x2014;that
-it would basically be Cambridge with good weather.  But when I
-finally tried living there a couple years ago, it turned out not
-to be.  The message Berkeley sends is: you should live better.  Life
-in Berkeley is very civilized.  It's probably the place in America
-where someone from Northern Europe would feel most at home.  But
-it's not humming with ambition.&lt;/p&gt;&lt;p&gt;In retrospect it shouldn't have been surprising that a place so
-pleasant would attract people interested above all in quality of
-life.  Cambridge with good weather, it turns out, is not Cambridge.
-The people you find in Cambridge are not there by accident.  You
-have to make sacrifices to live there.  It's expensive and somewhat
-grubby, and the weather's often bad.  So the kind of people you
-find in Cambridge are the kind of people who want to live where the
-smartest people are, even if that means living in an expensive,
-grubby place with bad weather.&lt;/p&gt;&lt;p&gt;As of this writing, Cambridge seems to be the intellectual capital
-of the world.  I realize that seems a preposterous claim.  What
-makes it true is that it's more preposterous to claim about anywhere
-else.  American universities currently seem to be the best, judging
-from the flow of ambitious students.  And what US city has a stronger
-claim?  New York?  A fair number of smart people, but diluted by a
-much larger number of neanderthals in suits.  The Bay Area has a
-lot of smart people too, but again, diluted;  there are two great
-universities, but they're far apart.  Harvard and MIT are practically
-adjacent by West Coast standards, and they're surrounded by about
-20 other colleges and universities.
-[&lt;a href=&quot;http://paulgraham.com/cities.html#f1n&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;&lt;p&gt;Cambridge as a result feels like a town whose main industry is
-ideas, while New York's is finance and Silicon Valley's is startups.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;When you talk about cities in the sense we are, what you're really
-talking about is collections of people.  For a long time cities
-were the only large collections of people, so you could use the two
-ideas interchangeably.  But we can see how much things are changing
-from the examples I've mentioned.  New York is a classic great city.
-But Cambridge is just part of a city, and Silicon Valley is not
-even that.  (San Jose is not, as it sometimes claims, the capital
-of Silicon Valley.  It's just 178 square miles at one end of it.)&lt;/p&gt;&lt;p&gt;Maybe the Internet will change things further.  Maybe one day the
-most important community you belong to will be a virtual one, and
-it won't matter where you live physically.  But I wouldn't bet on
-it.  The physical world is very high bandwidth, and some of the
-ways cities send you messages are quite subtle.&lt;/p&gt;&lt;p&gt;One of the exhilarating things about coming back to Cambridge every
-spring is walking through the streets at dusk, when you can see
-into the houses.  When you walk through Palo Alto in the evening,
-you see nothing but the blue glow of TVs.  In Cambridge you see
-shelves full of promising-looking books.  Palo Alto was probably
-much like Cambridge in 1960, but you'd never guess now that there
-was a university nearby.  Now it's just one of the richer neighborhoods
-in Silicon Valley. 
-[&lt;a href=&quot;http://paulgraham.com/cities.html#f2n&quot;&gt;2&lt;/a&gt;]&lt;/p&gt;&lt;p&gt;A city speaks to you mostly by accident&amp;#x2014;in things you see
-through windows, in conversations you overhear.  It's not something
-you have to seek out, but something you can't turn off.  One of the
-occupational hazards of living in Cambridge is overhearing the
-conversations of people who use interrogative intonation in declarative
-sentences.  But on average I'll take Cambridge conversations over
-New York or Silicon Valley ones.&lt;/p&gt;&lt;p&gt;A friend who moved to Silicon Valley in the late 90s said the worst
-thing about living there was the low quality of the eavesdropping.
-At the time I thought she was being deliberately eccentric. Sure,
-it can be interesting to eavesdrop on people, but is good quality
-eavesdropping so important that it would affect where you chose to
-live?  Now I understand what she meant.  The conversations you
-overhear tell you what sort of people you're among.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;No matter how determined you are, it's hard not to be influenced
-by the people around you.  It's not so much that you do whatever a
-city expects of you, but that you get discouraged when no one around
-you cares about the same things you do.&lt;/p&gt;&lt;p&gt;There's an imbalance between encouragement and discouragement like
-that between gaining and losing money.  Most people overvalue
-negative amounts of money: they'll work much harder to avoid losing
-a dollar than to gain one.  Similarly, though there are plenty of
-people strong enough to resist doing something just because that's
-what one is supposed to do where they happen to be, there are few
-strong enough to keep working on something no one around them cares
-about.&lt;/p&gt;&lt;p&gt;Because ambitions are to some extent incompatible and admiration
-is a zero-sum game, each city tends to focus on one type of ambition.
-The reason Cambridge is the intellectual capital is not just that
-there's a concentration of smart people there, but that there's
-nothing &lt;i&gt;else&lt;/i&gt; people there care about more.  Professors in
-New York and the Bay area are second class citizens&amp;#x2014;till they
-start hedge funds or startups respectively.&lt;/p&gt;&lt;p&gt;This suggests an answer to a question people in New York have
-wondered about since the Bubble: whether New York could grow into
-a startup hub to rival Silicon Valley.  One reason that's unlikely
-is that someone starting a startup in New York would feel like a
-second class citizen. 
-[&lt;a href=&quot;http://paulgraham.com/cities.html#f3n&quot;&gt;3&lt;/a&gt;]
-There's already something else people in New York admire more.&lt;/p&gt;&lt;p&gt;In the long term, that could be a bad thing for New York.  The power
-of an important new technology does eventually convert to money.
-So by caring more about money and less about power than Silicon
-Valley, New York is recognizing the same thing, but slower.
-[&lt;a href=&quot;http://paulgraham.com/cities.html#f4n&quot;&gt;4&lt;/a&gt;]
-And in fact it has been losing to Silicon Valley at its own game:
-the ratio of New York to California residents in the Forbes 400 has
-decreased from 1.45 (81:56) when the list was first published in
-1982 to .83 (73:88) in 2007.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;Not all cities send a message.  Only those that are centers for
-some type of ambition do.  And it can be hard to tell exactly what
-message a city sends without living there.  I understand the messages
-of New York, Cambridge, and Silicon Valley because I've lived for
-several years in each of them.  DC and LA seem to send messages
-too, but I haven't spent long enough in either to say for sure what
-they are.&lt;/p&gt;&lt;p&gt;The big thing in LA seems to be fame.  There's an A List of people
-who are most in demand right now, and what's most admired is to be
-on it, or friends with those who are.  Beneath that the message is
-much like New York's, though perhaps with more emphasis on physical
-attractiveness.&lt;/p&gt;&lt;p&gt;In DC the message seems to be that the most important thing is who
-you know.  You want to be an insider.  In practice this seems to
-work much as in LA.  There's an A List and you want to be on it or
-close to those who are.  The only difference is how the A List is
-selected.  And even that is not that different.&lt;/p&gt;&lt;p&gt;At the moment, San Francisco's message seems to be the same as
-Berkeley's: you should live better.  But this will change if enough
-startups choose SF over the Valley.  During the Bubble that was a
-predictor of failure&amp;#x2014;a self-indulgent choice, like buying
-expensive office furniture.  Even now I'm suspicious when startups
-choose SF.  But if enough good ones do, it stops being a self-indulgent
-choice, because the center of gravity of Silicon Valley will shift
-there.&lt;/p&gt;&lt;p&gt;I haven't found anything like Cambridge for intellectual ambition.
-Oxford and Cambridge (England) feel like Ithaca or Hanover: the
-message is there, but not as strong.&lt;/p&gt;&lt;p&gt;Paris was once a great intellectual center.  If you went there in
-1300, it might have sent the message Cambridge does now.  But I
-tried living there for a bit last year, and the ambitions of the
-inhabitants are not intellectual ones.  The message Paris sends now
-is: do things with style.  I liked that, actually.  Paris is the
-only city I've lived in where people genuinely cared about art.  In
-America only a few rich people buy original art, and even the more
-sophisticated ones rarely get past judging it by the brand name of
-the artist.  But looking through windows at dusk in Paris you can
-see that people there actually care what paintings look like.
-Visually, Paris has the best eavesdropping I know. 
-[&lt;a href=&quot;http://paulgraham.com/cities.html#f5n&quot;&gt;5&lt;/a&gt;]&lt;/p&gt;&lt;p&gt;There's one more message I've heard from cities: in London you can
-still (barely) hear the message that one should be more aristocratic.
-If you listen for it you can also hear it in Paris, New York, and
-Boston.  But this message is everywhere very faint.  It would have
-been strong 100 years ago, but now I probably wouldn't have picked
-it up at all if I hadn't deliberately tuned in to that wavelength
-to see if there was any signal left.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;So far the complete list of messages I've picked up from cities is:
-wealth, style, hipness, physical attractiveness, fame, political
-power, economic power, intelligence, social class, and quality of
-life.&lt;/p&gt;&lt;p&gt;My immediate reaction to this list is that it makes me slightly
-queasy.  I'd always considered ambition a good thing, but I realize
-now that was because I'd always implicitly understood it to mean
-ambition in the areas I cared about.  When you list everything
-ambitious people are ambitious about, it's not so pretty.&lt;/p&gt;&lt;p&gt;On closer examination I see a couple things on the list that are
-surprising in the light of history.  For example, physical
-attractiveness wouldn't have been there 100 years ago (though it
-might have been 2400 years ago).  It has always mattered for women,
-but in the late twentieth century it seems to have started to matter
-for men as well.  I'm not sure why&amp;#x2014;probably some combination
-of the increasing power of women, the increasing influence of actors
-as models, and the fact that so many people work in offices now:
-you can't show off by wearing clothes too fancy to wear in a factory,
-so you have to show off with your body instead.&lt;/p&gt;&lt;p&gt;Hipness is another thing you wouldn't have seen on the list 100
-years ago.  Or wouldn't you?  What it means is to know what's what.
-So maybe it has simply replaced the component of social class that
-consisted of being &quot;au fait.&quot;  That could explain why hipness seems
-particularly admired in London: it's version 2 of the traditional
-English delight in obscure codes that only insiders understand.&lt;/p&gt;&lt;p&gt;Economic power would have been on the list 100 years ago, but what
-we mean by it is changing.  It used to mean the control of vast
-human and material resources.  But increasingly it means the ability
-to direct the course of technology, and some of the people in a
-position to do that are not even rich&amp;#x2014;leaders of important
-open source projects, for example.  The Captains of Industry of
-times past had laboratories full of clever people cooking up new
-technologies for them.  The new breed are themselves those people.&lt;/p&gt;&lt;p&gt;As this force gets more attention, another is dropping off the list:
-social class.  I think the two changes are related.  Economic power,
-wealth, and social class are just names for the same thing at
-different stages in its life: economic power converts to wealth,
-and wealth to social class.  So the focus of admiration is simply
-shifting upstream.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;Does anyone who wants to do great work have to live in a great city?
-No; all great cities inspire some sort of ambition, but they aren't
-the only places that do.  For some kinds of work, all you need is
-a handful of talented colleagues.&lt;/p&gt;&lt;p&gt;What cities provide is an audience, and a funnel for peers.  These
-aren't so critical in something like math or physics, where no
-audience matters except your peers, and judging ability is sufficiently
-straightforward that hiring and admissions committees can do it
-reliably.  In a field like math or physics all you need is a
-department with the right colleagues in it.  It could be anywhere&amp;#x2014;in
-Los Alamos, New Mexico, for example.&lt;/p&gt;&lt;p&gt;It's in fields like the arts or writing or technology that the
-larger environment matters.  In these the best practitioners aren't
-conveniently collected in a few top university departments and
-research labs&amp;#x2014;partly because talent is harder to judge, and
-partly because people pay for these things, so one doesn't need to
-rely on teaching or research funding to support oneself.  It's in
-these more chaotic fields that it helps most to be in a great city:
-you need the encouragement of feeling that people around you care
-about the kind of work you do, and since you have to find peers for
-yourself, you need the much larger intake mechanism of a great city.&lt;/p&gt;&lt;p&gt;You don't have to live in a great city your whole life to benefit
-from it.  The critical years seem to be the early and middle ones
-of your career.  Clearly you don't have to grow up in a great city.
-Nor does it seem to matter if you go to college in one.  To most
-college students a world of a few thousand people seems big enough.
-Plus in college you don't yet have to face the hardest kind of
-work&amp;#x2014;discovering new problems to solve.&lt;/p&gt;&lt;p&gt;It's when you move on to the next and much harder step that it helps
-most to be in a place where you can find peers and encouragement.
-You seem to be able to leave, if you want, once you've found both.
-The Impressionists show the typical pattern: they were born all
-over France (Pissarro was born in the Carribbean) and died all over
-France, but what defined them were the years they spent together
-in Paris.&lt;/p&gt;&lt;p&gt;_____&lt;/p&gt;&lt;p&gt;Unless you're sure what you want to do and where the leading center
-for it is, your best bet is probably to try living in several
-places when you're young.  You can never tell what message a city
-sends till you live there, or even whether it still sends one.
-Often your information will be wrong: I tried living in Florence
-when I was 25, thinking it would be an art center, but it turned
-out I was 450 years too late.&lt;/p&gt;&lt;p&gt;Even when a city is still a live center of ambition, you won't know
-for sure whether its message will resonate with you till you hear
-it.  When I moved to New York, I was very excited at first.  It's
-an exciting place.  So it took me quite a while to realize I just
-wasn't like the people there.  I kept searching for the Cambridge
-of New York.  It turned out it was way, way uptown: an hour uptown
-by air.&lt;/p&gt;&lt;p&gt;Some people know at 16 what sort of work they're going to do, but
-in most ambitious kids, ambition seems to precede anything specific
-to be ambitious about.  They know they want to do something great.
-They just haven't decided yet whether they're going to be a rock
-star or a brain surgeon.  There's nothing wrong with that.  But it
-means if you have this most common type of ambition, you'll probably
-have to figure out where to live by trial and error.  You'll
-probably have to find the city where you feel at home to know what sort of
-ambition you have.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Notes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;[&lt;a name=&quot;f1n&quot;&gt;1&lt;/a&gt;]
-This is one of the advantages of not having the universities
-in your country controlled by the government.  When governments
-decide how to allocate resources, political deal-making causes
-things to be spread out geographically.  No central goverment would
-put its two best universities in the same town, unless it was the
-capital (which would cause other problems).  But scholars seem to
-like to cluster together as much as people in any other field, and
-when given the freedom to they derive the same advantages from it.&lt;/p&gt;&lt;p&gt;[&lt;a name=&quot;f2n&quot;&gt;2&lt;/a&gt;]
-There are still a few old professors in Palo Alto, but one by
-one they die and their houses are transformed by developers into
-McMansions and sold to VPs of Bus Dev.&lt;/p&gt;&lt;p&gt;[&lt;a name=&quot;f3n&quot;&gt;3&lt;/a&gt;]
-How many times have you read about startup founders who continued
-to live inexpensively as their companies took off?  Who continued
-to dress in jeans and t-shirts, to drive the old car they had in
-grad school, and so on?  If you did that in New York, people would
-treat you like shit.  If you walk into a fancy restaurant in San
-Francisco wearing a jeans and a t-shirt, they're nice to you; who
-knows who you might be?  Not in New York.&lt;/p&gt;&lt;p&gt;One sign of a city's potential as a technology center is the number
-of restaurants that still require jackets for men.  According to
-Zagat's there are none in San Francisco, LA, Boston, or Seattle, 
-4 in DC, 6 in Chicago, 8 in London, 13 in New York, and 20 in Paris.&lt;/p&gt;&lt;p&gt;(Zagat's lists the Ritz Carlton Dining Room in SF as requiring jackets
-but I couldn't believe it, so I called to check and in fact they
-don't. Apparently there's only one restaurant left on the entire West
-Coast that still requires jackets: The French Laundry in Napa Valley.)&lt;/p&gt;&lt;p&gt;[&lt;a name=&quot;f4n&quot;&gt;4&lt;/a&gt;]
-Ideas are one step upstream from economic power, so it's
-conceivable that intellectual centers like Cambridge will one day
-have an edge over Silicon Valley like the one the Valley has over
-New York.&lt;/p&gt;&lt;p&gt;This seems unlikely at the moment; if anything Boston is falling
-further and further behind.  The only reason I even mention the
-possibility is that the path from ideas to startups has recently
-been getting smoother.  It's a lot easier now for a couple of hackers
-with no business experience to start a startup than it was 10 years
-ago.  If you extrapolate another 20 years, maybe the balance of
-power will start to shift back.  I wouldn't bet on it, but I wouldn't
-bet against it either.&lt;/p&gt;&lt;p&gt;[&lt;a name=&quot;f5n&quot;&gt;5&lt;/a&gt;]
-If Paris is where people care most about art, why is New York
-the center of gravity of the art business?  Because in the twentieth
-century, art as brand split apart from art as stuff.  New York is
-where the richest buyers are, but all they demand from art is brand,
-and since you can base brand on anything with a sufficiently
-identifiable style, you may as well use the local stuff.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Thanks&lt;/b&gt; to Trevor Blackwell, Sarah Harlin, Jessica Livingston,
-Jackie McDonough, Robert Morris, and David Sloo for reading drafts
-of this.&lt;/p&gt;&lt;/td&gt;&lt;/div&gt;
-</description>
-<title>
-Cities and Ambition (2008)
-</title>
-</item>
-<item>
-<link>
-http://techcrunch.com/2014/01/18/why-silicon-valley-cant-find-europe/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
-
-
-&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/shutterstock_162097541.jpg?w=738&quot; class=&quot;&quot;&gt;&lt;p&gt;&lt;strong&gt;Editor&amp;#x2019;s note:&lt;/strong&gt;&amp;#xA0;&lt;i&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/person/sten-kamkivi&quot;&gt;Sten Tamkivi&lt;/a&gt; has been a software entrepreneur for 16 years and spent the recent half of his career as an early executive at Skype in Tallinn, Estonia. Sten is now an Entrepreneur in Residence at &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/andreessen-horowitz&quot;&gt;Andreessen Horowitz&lt;/a&gt;. Follow him on his &lt;a target=&quot;_blank&quot; href=&quot;http://sten.tamkivi.com/&quot;&gt;blog&lt;/a&gt;&amp;#xA0;and on Twitter &lt;/i&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://twitter.com/seikatsu&quot;&gt;@seikatsu&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Go to Europe these days &amp;#x2013; to Berlin, London, Helsinki &amp;#x2013; drop in on any of the regional tech confabs and you will quickly see&amp;#xA0;that the European startup scene is in the most bustling, vibrant shape it&amp;#x2019;s ever been. The potential is everywhere, and the energy is undeniable. Then you return Stateside, in my case to Palo Alto, and Europe isn&amp;#x2019;t just irrelevant among the tech industry power-set. It has virtually ceased to exist.&lt;/p&gt;
-&lt;p&gt;That is a mistake. Blame for the ruptured relationship lies on both sides of the Atlantic, but it is Europeans that have the power, and should have the motivation, to mend things.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m proud to be Estonian and European, but recently realized that very soon I will have been living in California for 10 percent of my life. I had a front-row seat to the first Internet boom as an exchange student at the super-wired Monta Vista High School in Apple&amp;#x2019;s backyard. I returned to the U.S. with some frequency initially as an executive with Skype, and later to pursue a business degree at Stanford. My latest perch in Silicon Valley today is as an entrepreneur-in-residence with venture capital firm Andreessen Horowitz.&lt;/p&gt;
-&lt;p&gt;Let me give you a small taste of the way Europe was woven into the discussion at Stanford&amp;#x2019;s Graduate School of Business. Over the course of four quarters I heard one professor make one joke about short-term macroeconomic troubles in Greece. We also had a visit from a well-dressed and charming British banker in our private equity class. That&amp;#x2019;s it. No European startups, no cases of European success stories or failures. A joke and a banker.&lt;/p&gt;
-&lt;p&gt;A few isolated examples of systematic bridge building, like the fantastic five-years-running European Entrepreneurship seminar at Stanford&amp;#x2019;s Engineering school can fulfill targeted curiosity, but Europe is not visible as a theme in other classes across the curriculum.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Important Places&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m not blaming Stanford. In talking to many people about my growing realization that the place of my birth simply didn&amp;#x2019;t matter to most people in the Valley, I began to understand that there is a mental hierarchy of &amp;#x201C;important places&amp;#x201D; for people building, investing in and studying tech companies in Silicon Valley. They exist in the following order:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. Silicon Valley.&lt;/strong&gt; Practically considered, the opportunity cost of venturing out of the bustling 30-mile radius of Sand Hill Road, whether you are an entrepreneur, investor or academic, is usually just too high.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. The U.S. East Coast.&lt;/strong&gt; Yes, stuff is happening in Boston and New York, but not so much that a once-a-month trip can&amp;#x2019;t cover most of it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. China.&lt;/strong&gt; Massive tech companies do rise in China and go public in the United States, and Chinese investors have gobs of cash to invest in the Valley. There is a constant back and forth between both Pacific coasts. But it&amp;#x2019;s not just geography, and the historic manufacturing relationship that is stimulating this cozy dynamic. The Valley is looking more and more towards China for the next tech trends and expansion opportunities.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. The rest of Asia.&lt;/strong&gt; India&amp;#x2019;s diaspora links to the U.S. are strong. Southeast Asia&amp;#x2019;s growth is hard to miss, and there is interesting mobile stuff happening in Korea and Japan.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. Latin America/South America.&lt;/strong&gt; Markets in Mexico and Brazil are increasingly ripe for Silicon Valley tech, but the region is still a distant gleam for most companies.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;6. Europe.&lt;/strong&gt; Here is what I mostly hear about Europe: &amp;#x201C;I took my wife/husband to Paris last year for our anniversary, and we dropped by Rome. Great food, so much history, Europe is wonderful!&amp;#x201D; For vacation.&lt;/p&gt;
-&lt;p&gt;Rather than relying solely on my anecdotal examples of &amp;#x201C;important places,&amp;#x201D; I turned to LinkedIn. Mapping my network through the lens of the topic at hand, I can confirm that, while Estonia, the Nordics and Europe in general comprise a tightly knit blue blob, and Skype in Estonia (orange) and internationally (green) is an organism in itself, the Silicon Valley venture capital and serial entrepreneurship circles float as a distant burgundy cloud. And the international graduate student and teacher body of Stanford is even further out on the right.&lt;/p&gt;
-&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/sten-tamkivi-europe-map.jpg&quot;&gt;&lt;img class=&quot;aligncenter  wp-image-941576&quot; alt=&quot;Sten Tamkivi Europe map&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/sten-tamkivi-europe-map.jpg?w=1024&amp;amp;h=625&quot; width=&quot;1024&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Those familiar with Granovetter&amp;#x2019;s theory about the strength of weak ties should feel a wave of joy here. Sure, there are benefits of weak ties, but then again, there are virtues to tight-knit communities talking to each other frequently, sharing the successes and learning from each other&amp;#x2019;s mistakes.&lt;/p&gt;
-&lt;p&gt;And that is exactly what is missing between the U.S. and Europe &amp;#x2014; a real bridge. So how do we build one, and what can both partners in constructing this connection hope to gain?&lt;/p&gt;
-&lt;p&gt;Let&amp;#x2019;s start with Europe.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Why the Hell Are You in Silicon Valley?&amp;#xA0;&lt;/b&gt;&lt;b&gt;And Don&amp;#x2019;t Say It&amp;#x2019;s the Money&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Raising money tends to be the No. 1 rationale from founders when asked why they&amp;#x2019;re in the Valley. It&amp;#x2019;s also the No. 1 mistake people make. You will be far more successful raising seed and early-stage VC financing close to home, on whichever side of the Atlantic it may be.&lt;/p&gt;
-&lt;p&gt;Yes, the internationalization of the venture capital industry is well on its way, and one can draw quite pretty graphs of the increasing money flow across the globe. Bollocks. Here&amp;#x2019;s why you, European entrepreneur, aren&amp;#x2019;t going to get that money.&lt;/p&gt;
-&lt;p&gt;Looking at closed early-stage deals listings in Pitchbook, it is very clear that U.S.-based VCs invest in U.S. companies, and European VCs invest in Europe.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter size-full wp-image-941577&quot; alt=&quot;Tamkivi chart&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/tamkivi-chart.jpg?w=1024&amp;amp;h=576&quot; width=&quot;1024&quot;&gt;&lt;/p&gt;
-&lt;p&gt;In my experience, this mindset applies to institutional investors in a clearly structured way, but is a notable behavior even for private angels in AngelList. Investors believe that there is much more that they bring to the table than just money &amp;#x2013; but that ineffable &amp;#x201C;value&amp;#x201D; is hard to bring across long distances and multiple time zones. No matter how much the video calling has improved, board seats, hiring networks, corporate development efforts and just quick (unscheduled!) calls work much better in proximity. Raise your money at home.&lt;/p&gt;
-&lt;p&gt;Part of building a solid bridge with the U.S. is having a solid reason for being here, other than money.&amp;#xA0;Selfies&amp;#xA0;at Infinite Loop Drive and group pictures in front of Facebook and Google headquarters don&amp;#x2019;t count.&lt;/p&gt;
-&lt;p&gt;One good reason for touching down at SFO might be that it&amp;#x2019;s because the companies that matter in your space &amp;#x2013; the&amp;#xA0;ones you want to compete with, learn from, partner with or steal bored employees from &amp;#x2013;&amp;#xA0;are in Silicon Valley. Ditto for customers.&lt;/p&gt;
-&lt;p&gt;That said, you need to honestly evaluate decamping from Europe against your own personal strengths and networks. I am in the thick of things on Sand Hill Road. Yet that relative advantage doesn&amp;#x2019;t change the fact that I have been building software companies for 16 years in Estonia and worked mostly with teams around Scandinavia and in Prague or London. This is where the best engineers I know are. This is the core of my network. This is my actual unfair home-court advantage.&lt;/p&gt;
-&lt;p&gt;If anything makes me stay Stateside, it must far outweigh the strongholds I&amp;#x2019;m leaving behind. That applies to every European (indeed everyone wherever they are from) pondering a move to Silicon Valley.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Why Silicon Valley Should Love Europe Back&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;So if exchanging money for equity isn&amp;#x2019;t the way to create tighter bonds between Europe and the Valley, the question becomes: how can we build more&amp;#xA0;&lt;i&gt;non-financial&lt;/i&gt;&amp;#xA0;ties between our scenes?&lt;/p&gt;
-&lt;p&gt;When building high-value ties in any network, the question should never be what you&amp;#xA0;&lt;i&gt;get&lt;/i&gt;, but rather what can you&amp;#xA0;&lt;i&gt;give&lt;/i&gt;&amp;#xA0;to the other party? What can you help with? What can you teach? What can you spare? This tends to be true with your friends, your community, and your country &amp;#x2013;&amp;#xA0; and how you ought to think about transatlantic relationships.&lt;/p&gt;
-&lt;p&gt;If we Europeans can muster the confidence, and the U.S. can tone down its arrogance, Europe actually has a lot to give to Silicon Valley. Here are just a few examples.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Talent.&lt;/strong&gt; Silicon Valley&amp;#x2019;s weakest spot today is finding enough good engineers and designers. The European contribution here in the simplest case is talent. The next level of complexity, but more sustainable for both sides, are development outposts across the pond. This could also take the form of M&amp;amp;A targets that Europe could offer &amp;#x2013; something that Meg Whitman in her eBay CEO days used to call &amp;#x201C;off-balance-sheet R&amp;amp;D&amp;#x201D; when buying up another innovative marketplace team in the Netherlands or Sweden.&lt;/p&gt;
-&lt;p&gt;What about making this a two-way street, and providing interesting-timed job adventures for early-career Valley experts? Why be the 3,481st guy in Facebook, when during a three-year stint in a cool European city you can be No.1 in the entire country in what you do? Yes, moving American hotshots to Europe can be a tough sell, but we did it successfully at Skype, and companies like Soundcloud are doing it again.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Sharing new models.&lt;/strong&gt; For any European who has spent an extended time here, Silicon Valley can often feel surprisingly backwards. When it comes to online and mobile applications truly embedded in how people go about their daily chores, how they sign and exchange legal documents, how they interact with the government, how they do their consumer banking, how they receive services from their doctors and so forth, many places in Europe are light years ahead of what is widely available in the U.S. We can share those ideas and expertise.&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;400 million customers.&lt;/strong&gt; For most&amp;#xA0;successful entrepreneurial ventures, there comes a day when growth needs to be found outside of the home market. And no matter how much the mobile handset makers talk about the next billion people coming online in Africa, and how lucrative the already-online billions of users in Asia are, the most common scenario for the Groupons and Airbnbs and Ubers of the foreseeable future is still to figure out their expansion strategy for the U.K., Germany and France.&lt;/p&gt;
-&lt;p&gt;Europe is still the rational next market for most U.S. rocket ships who are looking to find customers with above-average incomes and access to credit cards who live on infrastructure you can deliver your products and services to. Who better&lt;b&gt;&amp;#xA0;&lt;/b&gt;to help U.S. entrepreneurs crack Europe than Europeans?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Global skills.&lt;/strong&gt; The value of understanding foreign markets does not stop with Europe, though. Far too much of U.S.-originated innovation is born in the form of English-language, iOS-only apps with hard-coded dollar signs. European entrepreneurs, especially those from the smallest countries, are much better trained at operating globally in multi-currency, multi-cultural markets. As a proof point, look at how the likes of Finnish Rovio (Angry Birds) and Supercell (Clash of Clans) or Skypers in London or Tallinn and Evernoters in Z&amp;#xFC;rich or Moscow have conquered the astonishingly tough Chinese and Japanese markets.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Security and privacy.&lt;/strong&gt; In the post-Snowden days we&amp;#x2019;re living in, there is a new set of questions around the physical and legal location of users&amp;#x2019; data and the regulations governing its privacy. Although the rules and behaviors driving this have been evolving in a U.S.-centric way thanks to U.S.-based Internet giants, if you look at where the&amp;#xA0;&lt;i&gt;users&lt;/i&gt;&amp;#xA0;of the Internet live today,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users&quot;&gt;less than 10 percent&lt;/a&gt;&amp;#xA0;of them are in the United States. And that share is declining.&lt;/p&gt;
-&lt;p&gt;It is obvious that nations other than the U.S. will have an increasing say in the governance mechanisms and regulation of the system with Europe at the forefront. And this is not just a government thing. The European tech scene can help its U.S. peers figure things out as private entities first.&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;If we Europeans can follow through with an approach of giving something unique and valuable, as opposed to just trying to get funding from the other side, I believe the European and Silicon Valley tech scenes have a shot at moving closer together. For U.S. players, this would presume paying a little bit more attention to the world outside. For Europeans, it&amp;#x2019;s mustering a bit more confidence in ourselves.&lt;/p&gt;
-&lt;p&gt;I am sure more non-financial bridges can be built. And as it&amp;#xA0;&lt;a&gt;has been shown by some VC investment-related research&lt;/a&gt;: Cold hard cash will eventually follow the international corridors where smart people are already on the move.&lt;/p&gt;
-&lt;p&gt;[Image: &lt;a target=&quot;_blank&quot; href=&quot;http://www.shutterstock.com&quot;&gt;Shutterstock&lt;/a&gt;]&lt;/p&gt;
-
-
-								
-							&lt;/div&gt;
-
-
-&lt;/div&gt;
-</description>
-<title>
-Why Silicon Valley Can’t Find Europe
-</title>
-</item>
-<item>
-<author>
 ROBERT HARRIS
 </author>
 <link>
@@ -519,6 +47,667 @@ http://www.nytimes.com/2014/01/18/opinion/the-whistle-blower-who-freed-dreyfus.h
 </description>
 <title>
 The Whistle-Blower Who Freed Dreyfus
+</title>
+</item>
+<item>
+<author>
+Michael Hausenblas on Jan 16, 2014 |
+</author>
+<link>
+http://www.infoq.com/news/2014/01/twitter-summingbird
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;article_page_left news_container text_content_container&quot;&gt;
+			
+	&lt;div class=&quot;text_info&quot;&gt;
+   		&lt;p&gt;Twitter has &lt;a href=&quot;https://blog.twitter.com/2013/streaming-mapreduce-with-summingbird&quot;&gt;open sourced&lt;/a&gt; their MapReduce streaming framework, called &lt;a href=&quot;https://github.com/twitter/summingbird&quot;&gt;Summingbird&lt;/a&gt;. Available under the Apache 2 license, Summingbird is a large-scale data processing system enabling developers to uniformly execute code in either batch-mode (Hadoop/MapReduce-based) or stream-mode (&lt;a href=&quot;http://storm-project.net/&quot;&gt;Storm&lt;/a&gt;-based) or a combination thereof, called hybrid mode.&lt;/p&gt;
+&lt;p&gt;In order for Twitter to be able to keep up processing &lt;a href=&quot;http://strata.oreilly.com/2013/09/how-twitter-monitors-millions-of-time-series.html&quot;&gt;500 millions tweets&lt;/a&gt; and growing, they had to find a replacement for their existing stack that required manually integrating MapReduce (Pig/Scalding) and streaming-based (Storm) code. The main motivation to create Summingbird, &lt;a href=&quot;https://blog.twitter.com/2013/streaming-mapreduce-with-summingbird&quot;&gt;mentioned&lt;/a&gt; by the Twitter engineers, came from the realization that running a fully real-time system on Storm was difficult due to:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Re-computation over months of historical logs must be coordinated with Hadoop or streamed through Storm with a custom log-loading mechanism.&lt;/li&gt;
+    &lt;li&gt;Storm is focused on message passing and random-write databases are harder to maintain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This insight led to Summingbird, a flexible and general solution addressing the engineers&amp;#x2019; practical issues with the existing approach:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Two sets of aggregation logic have to be kept in sync in two different systems&lt;/li&gt;
+    &lt;li&gt;Keys and values must be serialized consistently between each system and the client&lt;/li&gt;
+    &lt;li&gt;The client is responsible for reading from both datastores, performing a final aggregation and serving the combined results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Summingbird is also &lt;a href=&quot;http://gigaom.com/2013/09/03/twitter-open-sources-storm-hadoop-hybrid-called-summingbird/&quot;&gt;one of the first&lt;/a&gt; openly available &lt;a href=&quot;http://lambda-architecture.net/&quot;&gt;Lambda Architecture&lt;/a&gt; compliant systems. Similar projects include Yahoo&amp;#x2019;s &lt;a href=&quot;http://developer.yahoo.com/blogs/ydn/storm-yarn-released-open-source-143745133.html&quot;&gt;Storm-YARN&lt;/a&gt; and a Spanish start-up&amp;#x2019;s upcoming &lt;a href=&quot;http://www.slideshare.net/Datadopter/lambdoop-a-framework-for-easy-development-of-big-data-applications&quot;&gt;Lambdoop&lt;/a&gt;, a Java framework for developing Big Data applications in a Lambda Architecture conformant way. The characteristics of the Lambda Architecture - immutable master dataset and the combination of batch, serving, and speed layer - enables people to build robust large-scale data processing systems that can deal with both batch and stream processing and has use cases from social media platforms (such as Twitter, LinkedIn, etc.) over the Internet of Things (smart city, wearables, manufacturing, etc.) to the financial sector (fraud detection, recommendations).&lt;/p&gt;
+&lt;p&gt;The main authors of Summingbird - Oscar Boykin, Sam Ritchie (&lt;a href=&quot;http://www.wired.com/wiredenterprise/2013/11/twitter-summingbird/&quot;&gt;nephew of&lt;/a&gt; computer science legend Dennis Ritchie) and Ashutosh Singhal - have further revealed the roadmap for Summingbird:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;support for Apache &lt;a href=&quot;http://spark.incubator.apache.org/&quot;&gt;Spark&lt;/a&gt; and the columnar data storage format &lt;a href=&quot;http://parquet.io/&quot;&gt;Parquet&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;libraries of higher-level mathematics and machine learning code on top of Summingbird&amp;#x2019;s Producer primitives, and&lt;/li&gt;
+    &lt;li&gt;deeper integration with &lt;a href=&quot;https://engineering.twitter.com/opensource/projects&quot;&gt;related open source&lt;/a&gt; projects such as Algebird or Storehaus.&lt;/li&gt;
+&lt;/ul&gt;
+        
+		
+		
+		
+		
+		
+		
+	   	
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+	
+
+
+
+
+
+		
+
+		
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	&lt;a id=&quot;noOfComments&quot; title=&quot;&quot; href=&quot;http://www.infoq.com/news/2014/01/twitter-summingbird#theCommentsSection&quot; class=&quot;comments_like&quot;&gt;
+		
+	    
+	        
+	    
+	&lt;/a&gt;
+
+	&lt;/div&gt;
+			
+	
+&lt;/div&gt;
+		
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+		&lt;/div&gt;
+</description>
+<title>
+Twitter Open-Sources its MapReduce Streaming Framework Summingbird
+</title>
+</item>
+<item>
+<link>
+http://media.steampowered.com/apps/abrashblog/Abrash%20Dev%20Days%202014.pdf
+</link>
+<description>
+
+</description>
+<title>
+What VR could, should, and almost certainly will be within two years [pdf]
+</title>
+</item>
+<item>
+<link>
+http://hoplon.io/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h2&gt;Overview &lt;small&gt;Hoplon in a nutshell.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon provides a number of libraries promoting a simpler model
+               for web applications. The project can be divided into three main
+               components: the HTML evaluator, the clientside state machine, and
+               serverside RPC middleware. These components can be used together
+               as a full stack, or individually as a part of another stack.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;More concretely, Hoplon ships with a compiler for compiling
+               Hoplon pages into HTML and JavaScript (implemented as a build
+               task for the &lt;a shape=&quot;rect&quot; class=&quot;Hyphenator407hide&quot; href=&quot;https://github.com/tailrecursion/boot&quot; target=&quot;_blank&quot;&gt;boot&lt;/a&gt; build tool), ClojureScript libraries for creating
+               spreadsheet-like dataflow programs and wiring them to the DOM,
+               and ClojureScript and Clojure libraries for RPC interaction
+               between client and server.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;The source code for Hoplon is hosted on &lt;a shape=&quot;rect&quot; class=&quot;Hyphenator407hide&quot; href=&quot;https://github.com/tailrecursion/hoplon&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; and Maven artifacts are deployed to &lt;a shape=&quot;rect&quot; class=&quot;Hyphenator407hide&quot; href=&quot;https://clojars.org/tailrecursion/hoplon&quot; target=&quot;_blank&quot;&gt;Clojars&lt;/a&gt;. Contributions of code, feedback, feature requests, etc. are
+                welcome. Please read the &lt;a shape=&quot;rect&quot; class=&quot;Hyphenator407hide&quot; href=&quot;http://hoplon.io/#/community/&quot;&gt;Community&lt;/a&gt; page for more information.&lt;/p&gt;&lt;h2&gt;Web Apps &lt;small&gt;Single-page applications, not documents.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Web applications are not documents. Users need to be able to
+               interact with them. They contain state. Through them the user
+               communicates with backend systems to have some effect on the
+               real world.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon web apps are organized like applications. The Hoplon
+               compiler produces artifacts, not documents. These artifacts are
+               equivalent to JAR files in Maven&amp;#x2013;their coordinates being the
+               URL on which they're deployed. The compilation unit is the &amp;#x201C;page&amp;#x201D;,
+               which is compiled to produce an HTML file&amp;#x2013;a single-page app.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon does not perform any serverside HTML rendering; it is
+               completely unnecessary, even for SEO purposes. (Reload this
+               page with JavaScript disabled and see how the content was
+               &amp;#x201C;prerendered&amp;#x201D; at compile time.)&lt;/p&gt;&lt;h2&gt;HTML Evaluator &lt;small&gt;Page markup is a program.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Web application user interfaces are specified as trees of
+               nested elements in HTML markup, but this document-like
+               appearance is misleading. Without JavaScript this markup cannot
+               provide the dynamic behavior that web applications require.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;It is at the boundary between the DOM and the JavaScript
+               environment that the incidental complexities of web application
+               UI development are found. There is a fundamental disconnect
+               between the literal representation of the DOM (the HTML markup)
+               and the dynamic environment (the JavaScript VM). The page markup
+               is evaluated by the browser and the resulting DOM is then
+               accessible from JavaScript, but it's a one-way linkage&amp;#x2013;there is
+               no way to refer to objects created dynamically in the JavaScript
+               environment from the markup. The browser's HTML evaluation model
+               lacks a means of abstraction, preventing the development of new
+               elements by composition.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon provides an HTML evaluator that closes the loop, unifying
+               the page markup and the JavaScript environment. Page markup,
+               expressed in either the standard HTML5 syntax or Clojure sexps,
+               is evaluated as ClojureScript and the result becomes the DOM for
+               the page. HTML tags are simply ClojureScript vars. Of course,
+               Hoplon ships with all of the standard HTML5 primitives but the
+               evaluation model now facilitates the use of custom compound
+               elements defined in the environment, too.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Additionally, the unification of HTML and ClojureScript syntax,
+               semantics, and namespace in the HTML evaluator facilitates the
+               use of macros in markup.  This makes it possible to write
+               powerful looping and control structures for use in the page's
+               HTML markup itself, bringing the power and expressiveness of
+               Lisp to HTML.&lt;/p&gt;&lt;h2&gt;Components &lt;small&gt;First-class custom DOM elements.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;While there is no shortage of templating systems to create
+               blobs of DOM elements, there is no mechanism to create custom
+               elements that are composable in any meaningful way. Consider
+               the situation where a template engine binds a DOM template to
+               some data and returns the filled-in DOM subtree. What happens
+               when you append a child to, or set an attribute on that DOM
+               element? The child gets appended to, or attribute set on the
+               outermost element of the filled template, generally not what is
+               required for the composition semantic.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon provides facilities for creating real, first-class
+               components. That is to say, Hoplon components are first-class
+               citizens in the DOM world&amp;#x2013;they are, essentially, user-defined
+               custom DOM elements. They have a literal representation in the
+               page markup and they implement the semantics of HTML: setting
+               attributes and appending children. When a child is appended to
+               a Hoplon component or an attribute is set, either in HTML markup
+               or programmatically, the component's implementation is used
+               instead of the built-in DOM one. In this way components can be
+               built by composing simpler components and those may be used as
+               a basis for even more complex components, without running into
+               the limitations of template composition.&lt;/p&gt;&lt;h2&gt;Spreadsheets &lt;small&gt;Client state made simple.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Remember how awesome spreadsheets are? You never think about
+               state when you&amp;#x2019;re programming a spreadsheet. Instead, you focus
+               on values and the formulas that define the relationships between
+               them. When a new value is entered into a cell the rest of the
+               spreadsheet updates itself as necessary to maintain the
+               correctness of the formulas.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;After a spreadsheet is set up you can link its cells to charts
+               and forms to create a user interface that manages its own state,
+               automatically. User input flows from forms to input cells.
+               Formulas then recompute their values as necessary. These values
+               then flow to charts and graphs for the user to view.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon applies this crazy, futuristic technology to frontend
+              web development. Forgoing the clunky grid metaphor and names
+              like &lt;em class=&quot;Hyphenator407hide&quot;&gt;A1&lt;/em&gt; and &lt;em class=&quot;Hyphenator407hide&quot;&gt;B27&lt;/em&gt;, Hoplon provides a cell
+              reference type. These cells, like cells in a spreadsheet, are
+              either updated directly (input cells), or automatically in
+              accordance with a formula.&lt;/p&gt;&lt;h2&gt;Charts and Forms &lt;small&gt;Stateless, automatic UI.&lt;/small&gt;&lt;/h2&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;The purpose of a program's user interface is to transmit input
+              from the user to the underlying state model and to present output
+              derived from the underlying state model to the user for viewing.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;In a web application the user interface is derived from the page
+              markup. User input consists entirely of DOM events: &lt;em class=&quot;Hyphenator407hide&quot;&gt;click&lt;/em&gt;, &lt;em class=&quot;Hyphenator407hide&quot;&gt;change&lt;/em&gt;, etc. Output is presented to
+              the user by manipulating the properties of DOM elements: adding
+              or removing CSS classes, changing the content of text nodes,
+              etc.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;Hoplon provides bindings that can be used to link DOM elements
+              to the underlying state model in the same way that charts and
+              forms are linked to cells in a spreadsheet. Once the structure
+              of the DOM and the linkages between the DOM and cells are
+              defined, the user interface manages itself.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;col-md-6&quot;&gt;&lt;h2&gt;&lt;small&gt;Examples&lt;/small&gt;&lt;/h2&gt;&lt;div class=&quot;list-group&quot;&gt;&lt;div class=&quot;list-group-item&quot;&gt;&lt;a shape=&quot;rect&quot;&gt;&lt;/a&gt;&lt;h3 class=&quot;panel-title&quot;&gt;Typical Page&lt;/h3&gt;&lt;div&gt;&lt;h3 class=&quot;panel-title&quot;&gt;Typical Page&lt;/h3&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;The page can be coded in either ClojureScript or HTML
+                     syntax. The compiler can parse either one. It's easy to add
+                     a preprocessing step to parse HAML, etc. if desired.  HTML
+                     is usually more verbose and noisy than ClojureScript, so
+                     most examples in this document will be using the latter
+                     syntax.&lt;/p&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;Using ClojureScript syntax:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;foo/bar.html&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:require&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;my.lib&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defc&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;clicks&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;head&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:rel&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:href&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lib/heading-large&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;You've clicked ~{clicks} times.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:on-click&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;swap!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;clicks&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Click me!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;Using HTML syntax:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/hoplon&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  (page &quot;foo/bar.html&quot;
+    (:require [my.lib :as lib]))
+
+  (defc clicks 0)
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello World&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;lib.heading-large&amp;gt;&lt;/span&gt;Hello, world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/lib.heading-large&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;text&amp;gt;&lt;/span&gt;You've clicked ~{clicks} times.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;on-click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ #(swap! clicks inc) }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      Click me!
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;list-group-item&quot;&gt;&lt;a shape=&quot;rect&quot; class=&quot;topfix&quot;&gt;&lt;/a&gt;&lt;a shape=&quot;rect&quot;&gt;&lt;/a&gt;&lt;h3 class=&quot;panel-title&quot;&gt;BMI Calculator&lt;/h3&gt;&lt;div&gt;&lt;h3 class=&quot;panel-title&quot;&gt;BMI Calculator&lt;/h3&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;This is an example of a spreadsheet-like application.
+                    The application's state is contained in &lt;em class=&quot;Hyphenator407hide&quot;&gt;cells&lt;/em&gt; which are wired up to the DOM. DOM events cause changes
+                    to the underlying cells and formula cells in turn cause
+                    changes to the DOM.&lt;/p&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The demo:&lt;/p&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The cells:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cell&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; height in cm&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cell&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; weight in kg&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; formula: [bmi, description, color]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cell=&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;htm&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;/ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; height in meters&lt;/span&gt;
+          &lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;/ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;* &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;htm&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;htm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cond&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;lt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;18.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;underweight&quot;&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;lt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;25.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;normal&quot;&lt;/span&gt;      &lt;span class=&quot;s&quot;&gt;&quot;inherit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;lt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;30.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;overweight&quot;&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;:else&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;obese&quot;&lt;/span&gt;           &lt;span class=&quot;s&quot;&gt;&quot;red&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The user interface:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;;; Some details related to &amp;lt;input type=&quot;range&quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;;; have been omitted for clarity.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;form&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Height (~{height} cm)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;input&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bmi-h&quot;&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:on-change&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reset!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;val-id&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bmi-h&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Weight (~{weight} kg)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;input&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bmi-w&quot;&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;weight&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:on-change&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reset!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;weight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;val-id&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;bmi-w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;BMI ~(first bmi) (~(second bmi))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;input&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:do-value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cell=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;first &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:do-css&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cell=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:background-color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nth &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bmi&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)})))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;list-group-item&quot;&gt;&lt;a shape=&quot;rect&quot; class=&quot;topfix&quot;&gt;&lt;/a&gt;&lt;a shape=&quot;rect&quot;&gt;&lt;/a&gt;&lt;h3 class=&quot;panel-title&quot;&gt;List Component&lt;/h3&gt;&lt;div&gt;&lt;h3 class=&quot;panel-title&quot;&gt;List Component&lt;/h3&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;This is an example of a custom element, or component. The &lt;em class=&quot;Hyphenator407hide&quot;&gt;on-append!&lt;/em&gt; function is used to provide the implementation for
+                    appending children and setting attributes. This ensures
+                    that children are, in this case, properly wrapped in list
+                    item elements and appended to the inner unordered list
+                    instead of to the outermost element. A special &lt;em class=&quot;Hyphenator407hide&quot;&gt;title&lt;/em&gt; attribute is also implemented here that sets the text of
+                    the inner bold element.&lt;/p&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;By implementing the HTML semantic this component becomes
+                    a first-class DOM element. It can be used in page markup
+                    and it can be passed around without any need for the
+                    recipient to understand its internal structure. It can be
+                    combined with other elements at any level to create more
+                    complex components.&lt;/p&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The demo:&lt;/p&gt;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;div class=&quot;panel-body&quot;&gt;&lt;div&gt;&lt;p class=&quot;hyphenate Hyphenator407hide&quot;&gt;See the list component below.&lt;/p&gt;&lt;p class=&quot;my-list&quot;&gt;&lt;b&gt;Items:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;item one&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;item two&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;item three&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The component constructor:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;;; Define custom element &amp;lt;my-list&amp;gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defelem&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;my-list&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;attrs&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;; Obtain references to inner&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;; container elements.&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:class&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;my-list&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;;; Implement appendChild/setAttribute.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;on-append!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;this&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fn &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:keys&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;attrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;;; The &quot;title&quot; attribute sets title text.&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;when &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;do!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:text&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;;; Other attributes are set on outer div.&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add-attributes!&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dissoc &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;attrs&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;;; Children are wrapped in &amp;lt;li&amp;gt;s and&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;;; appended to inner &amp;lt;ul&amp;gt; element.&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;;; Initialize element.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;attrs&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;p class=&quot;text-muted hyphenate Hyphenator407hide&quot;&gt;The page markup:&lt;/p&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;div&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;See the list component below.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;my-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:title&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Items:&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;item one&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;item two&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;item three&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;panel panel-default&quot;&gt;&lt;p class=&quot;panel-heading&quot;&gt;&lt;h3 class=&quot;panel-title&quot;&gt;Architecture&lt;/h3&gt;&lt;/p&gt;&lt;div class=&quot;panel-body&quot;&gt;&lt;div&gt;&lt;div class=&quot;tab-content&quot;&gt;&lt;img class=&quot;tab-pane active&quot; width=&quot;523px&quot; src=&quot;http://hoplon.io/img/arch-full.png&quot;&gt;&lt;img class=&quot;tab-pane&quot; width=&quot;523px&quot; src=&quot;http://hoplon.io/img/arch-client.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+Hoplon: A Simpler Way to Program the Web
+</title>
+</item>
+<item>
+<link>
+http://imgur.com/a/F7AcL
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;image-container&quot;&gt;
+                                                    &lt;a name=&quot;PL7KIRX&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;PL7KIRX&quot;&gt;
+                                                                    &lt;h2 class=&quot;first&quot;&gt;1.8 Brainfuck computer&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/PL7KIRX.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;1.8 Brainfuck computer&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;div class=&quot;description textbox&quot;&gt;This is a fully functional computer running the esoteric programming language brainfuck. It's currently running on the 14w03b snapshot and uses quite a bit of the new functionality. While this may have been possible to implement in earlier versions, it would likely have been ten times as big. It's not optimized yet and the speed is a bit under 1 Hz.
+
+The save can be downloaded at &lt;a rel=&quot;nofollow&quot; target=&quot;_blank&quot; href=&quot;https://mega.co.nz/#&quot;&gt;https://mega.co.nz/#&lt;/a&gt;!GNoSia5b!YWhyl39GAOd78RGNAyw3aSKcGo9rn0F6fKrCH18XXuc
+
+Brainfuck is not actually meant to be used for programming but great for a proof of concept like this because it consists of only 8 simple commands (&amp;lt;&amp;gt;+-.,[]). You can read more about brainfuck at &lt;a rel=&quot;nofollow&quot; target=&quot;_blank&quot; href=&quot;http://en.wikipedia.org/wiki/Brainfuck&quot;&gt;http://en.wikipedia.org/wiki/Brainfuck&lt;/a&gt;.&lt;/div&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;UpFxzVT&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;UpFxzVT&quot;&gt;
+                                                                    &lt;h2&gt;Overview&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/UpFxzVT.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Overview&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;Here's an overview of all the parts including the input (brown), output (green), registers (the tower between input and output), the command dispatcher (light blue), and the circuits implementing conditions and jumps (white and yellow).&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;olRFoJx&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;olRFoJx&quot;&gt;
+                                                                    &lt;h2&gt;Program code and counter&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/olRFoJx.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Program code and counter&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;The program code is stored using villagers with different names for each command. While the program is running they are moved between three compartments containing code to run (left), the current instruction (center), and code that has been run (right).
+
+This is only possible because Minecraft returns entities in the order in which they were spawned, which means that using the selector @e[type=Villager,c=1,r=1,x=11,y=58,z=876] gives you the villager at that position that has been spawned first while c=-1 gives you the last.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;PXOjTdD&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;PXOjTdD&quot;&gt;
+                                                                    &lt;h2&gt;Control panel&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/PXOjTdD.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Control panel&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;This is the interface of the computer. You can enter, print, delete, and start a program as well as reset the state to run the next program (it currently doesn't clean up the state by itself). Note that the reset only works if the program has stopped running. You'll have to delete the program, wait for it to stop, and then reset if you want to recover from a bad state (e.g. an infinite loop). The green area allows you to input a character by replacing a sign and pushing the button that appears after executing a ',' command.
+
+The box on the right can be used to manually adding a program by using the spawn eggs in the chest right in front of it. This can also be used to add code before or after loading one of the example programs.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;cvoWk8a&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;cvoWk8a&quot;&gt;
+                                                                    &lt;h2&gt;Registers&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/cvoWk8a.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Registers&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;These are the 8 registers that store the data. Each consists of two droppers and two hoppers that exchange dirt blocks. One dropper is the actual register (marked with a carpet) while the other acts as a reservoir holding the spare blocks.
+
+The 9th circuit at the bottom is not a regular register but instead is used to select the active register. Whenever its value is changed, the cyan part gets activated and opens the input and output for the selected register.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;mCBfw9L&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;mCBfw9L&quot;&gt;
+                                                                    &lt;h2&gt;Command dispatcher&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/mCBfw9L.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Command dispatcher&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;This part decides which command to run, estimates how long the command takes and sends a signal back once the next command can be executed. Four commands send a signal to the registers to either switch between them ('&amp;lt;','&amp;gt;') or change the current value ('+','-'). The two IO commands activate the output ('.') or the input (',') and the jump commands ('[',']') require additional logic.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;ypyt9T2&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;ypyt9T2&quot;&gt;
+                                                                    &lt;h2&gt;Condition and jump circuits&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/ypyt9T2.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Condition and jump circuits&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;This part rewinds the instructions to jump from a closing bracket to the corresponding opening bracket. Only after reaching the opening bracket is a signal send back to resume regular execution. The same logic is used in the yellow circuit for forward jumps. Brackets could theoretically get nested until the dropper at the back is full (9*64) but it's currently set up to support only 64.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;NPRDXH4&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;NPRDXH4&quot;&gt;
+                                                                    &lt;h2&gt;Output device&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/NPRDXH4.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Output device&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;This part reads the value of the selected register and prints the corresponding character with /tellraw. I'm using a special encoding with 64 printable characters and one control character (RESET,0-9,' ','.',A-Z,a-z). The value of the registers is read using /testforblock commands (e.g. testforblock ~-8 ~ ~16 minecraft:dropper 3 {Items:[0:{Slot:0b,id:&quot;minecraft:dirt&quot;,Damage:0s,Count:2b}]}). Each layer has the same functionality but for a different register.
+
+To keep it as small as possible I didn't add any reset functionality which means that you can't print the same character twice in a row using the same register. You'll first have to print a different character to reset the output, for instance the control character that has the value 0.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;nAOlnLt&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;nAOlnLt&quot;&gt;
+                                                                    &lt;h2&gt;Input device&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/nAOlnLt.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Input device&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;Similar to the output device, each layer of this circuit reads the value of the input sign using /testforblock commands (e.g. testforblock ~-5 ~-2 ~-8 minecraft:wall_sign 4 {Text1:&quot;0&quot;}) and sets the current register to the corresponding numerical value.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;TVTSjVh&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;TVTSjVh&quot;&gt;
+                                                                    &lt;h2&gt;Example programs&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/TVTSjVh.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Example programs&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;There are three simple example programs that can be loaded at the moment. The first goes through all values and prints them in an infinite loop. The second adds the numerical value of two input characters and prints the character corresponding to the sum. 
+
+Finally, the most complex is a &quot;Hello World&quot; program that takes about 15 minutes to complete. Here's the full code: +++++[-&amp;gt;&amp;gt;+++++&amp;lt;&amp;lt;]&amp;gt;&amp;gt;.[-&amp;lt;++&amp;lt;++&amp;gt;&amp;gt;]&amp;lt;---.&amp;lt;++.&amp;gt;----.--.&amp;lt;++++.&amp;gt;--.+++++.&amp;lt;++.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                                                    &lt;a name=&quot;M8acNZY&quot;&gt;&lt;/a&gt;
+                            &lt;div class=&quot;image&quot; id=&quot;M8acNZY&quot;&gt;
+                                                                    &lt;h2&gt;Thank you for your attention! :)&lt;/h2&gt;
+                                
+
+                                
+                                &lt;div class=&quot;wrapper&quot;&gt;
+                                    &lt;div class=&quot;image-hover action-button combobox left&quot; title=&quot;Actions&quot;&gt;
+    &lt;div class=&quot;options&quot;&gt;
+        
+        
+        
+
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+                                    &lt;a class=&quot;zoom&quot; href=&quot;http://i.imgur.com/M8acNZY.png&quot;&gt;
+                                        &lt;img class=&quot;unloaded&quot; alt=&quot;Thank you for your attention! :)&quot;&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+
+                                                                    &lt;p class=&quot;description textbox&quot;&gt;I hope you'll have fun playing with this and use some of the ideas in your own projects. I learned a lot during this project and already have ideas to make it both smaller and faster. I'll try to update the download if a snapshot breaks it before the release of 1.8.&lt;/p&gt;
+                                
+                            &lt;/div&gt;
+                        
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+</description>
+<title>
+Minecraft redstone computer running brainfuck (x-post from /r/Minecraft)
 </title>
 </item>
 </channel>
