@@ -14,245 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-http://bgriffen.scripts.mit.edu/www/2014/01/graphs-of-wikipedia-programming-languages-and-paradigms/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;bk-post-featured-content-wrap&quot;&gt;&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/programminglanguages-label.png&quot;&gt;&lt;img src=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/programminglanguages-label-940x390.png&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;bk-blog-content-wrap dividable-content&quot;&gt;&lt;p&gt;A while back I posted about a graph of &lt;a title=&quot;Graphs Of Wikipedia: Influential Thinkers&quot; href=&quot;http://bgriffen.scripts.mit.edu/www/2013/01/interactive-graphs-of-wikipedia/&quot;&gt;the personalities on Wikipedia&lt;/a&gt;. This time I wanted to see which programming languages were linked to one another by user-entered &amp;#x201C;Influenced&amp;#x201D; and &amp;#x201C;Influenced-by&amp;#x201D; information. Take for instance the functional language Haskell:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/Haskell-Programming-Wiki.png&quot;&gt;&lt;img class=&quot;size-large wp-image-1439 aligncenter&quot; alt=&quot;Haskell-Programming-Wiki&quot; src=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/Haskell-Programming-Wiki-1024x455.png&quot; width=&quot;940&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In the infobox on the side we find a large list of languages Haskell is connected to in one way or another. Wikipedia devotes &lt;a href=&quot;https://en.wikipedia.org/wiki/Haskell_(programming_language)#Related_languages&quot;&gt;an entire section&lt;/a&gt; to how it is related to other programming languages for those interested.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/Haskell-Programming-Influenced.png&quot;&gt;&lt;img class=&quot;size-full wp-image-1438 aligncenter&quot; alt=&quot;Haskell Programming - Influenced&quot; src=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/Haskell-Programming-Influenced.png&quot; width=&quot;243&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It must be emphasized that the links are&amp;#xA0;&lt;em&gt;user-generated&lt;/em&gt;&lt;em&gt;&amp;#xA0;&lt;/em&gt;and any such comparison is largely subjective in nature (especially when comparing concepts rather than syntax). The following query &lt;a href=&quot;http://dbpedia.org/snorql/&quot; target=&quot;_blank&quot;&gt;executed here&lt;/a&gt; provided me with the bulk of the data:&lt;/p&gt;
-&lt;pre class=&quot;brush: sql; title: ; notranslate&quot; title=&quot;&quot;&gt;
-SELECT *
-WHERE { ?p a &amp;lt;http://dbpedia.org/ontology/ProgrammingLanguage&amp;gt; .
-?p &amp;lt;http://dbpedia.org/ontology/influenced&amp;gt; ?influenced . }
-&lt;/pre&gt;
-&lt;p&gt;The output was then decoded using &lt;a href=&quot;http://meyerweb.com/eric/tools/dencoder/&quot; target=&quot;_blank&quot;&gt;a nifty URL decoder&lt;/a&gt;. It was then &lt;a href=&quot;https://github.com/bgriffen/griffsgraphs/blob/master/programminglanguages/proglanguages.py&quot; target=&quot;_blank&quot;&gt;fed through a Python script&lt;/a&gt; to arrange it in a format most suitable for Gephi. The graph below represents the connections between all programming languages in Wikipedia. A force algorithm was applied such that closer nodes are more strongly connected in nature. The size of the node indicates how many connections that language has to the others in the network. The colors are achieved by carrying out a modularity algorithm applied by Gephi to highlight subnetworks.  The curvature of outgoing edges is clockwise indicating influence direction. Lisp for example has many clockwise edges going out and only few counter-clockwise coming in. I can see some relations in the languages I am familiar with but perhaps you notice a few things that are flat out wrong? Please let me know in the comments as I&amp;#x2019;d be interested in hearing your thoughts. The raw Gephi graph data (.dl, .dfg, .gephi, .dexf, .gml etc.) can be &lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/programminglanguage-data.zip&quot; target=&quot;_blank&quot;&gt;found here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-[&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/programminglanguages-label.png&quot; target=&quot;_blank&quot;&gt;PNG&lt;/a&gt;]&lt;br&gt;
-&lt;br&gt;
-I also include the same graph but with straight arrows clearly showing the influence direction.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-[&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/programminglanguagesarrows-label.png&quot; target=&quot;_blank&quot;&gt;PNG&lt;/a&gt;] &lt;/p&gt;
-&lt;p&gt;As one might expect all of the major players are the biggest nodes. C, Haskell, Lisp, Python and Java all feature prominently. Anything strange you notice? Let me know in the comments. I really must commend the designers on their nomenclature. See if you can find one of the more humorous languages by zooming in. I also obtained the designer of each language and connected the people together based on the programming languages they were involved with. This was obtained by the following query:&lt;/p&gt;
-&lt;pre class=&quot;brush: sql; title: ; notranslate&quot; title=&quot;&quot;&gt;
-SELECT *
-WHERE {?p a &amp;lt;http://dbpedia.org/ontology/ProgrammingLanguage&amp;gt; .
-?p &amp;lt;http://dbpedia.org/ontology/designer&amp;gt; ?designer . }
-&lt;/pre&gt;
-
-&lt;p&gt;[&lt;a href=&quot;http://bgriffen.scripts.mit.edu/www/wp-content/uploads/2014/01/designers-highreslabel.png&quot; target=&quot;_blank&quot;&gt;PNG&lt;/a&gt;]&lt;br&gt;
-Large nodes do not represent more influential people but simply the people whose work spawned the most number of languages in the subsequent years. As expected, it is a very homogeneous playing field as many people were involved in multiple languages and at times had many collaborators. It must be stressed that the dataset is incomplete and was the result of my somewhat rudimentary way of parsing the data. Without a doubt, things could be improved. &lt;a href=&quot;https://github.com/bgriffen/griffsgraphs&quot; target=&quot;_blank&quot;&gt;I&amp;#x2019;ve setup a GitHub repository&lt;/a&gt; for all (Gephi) graph files and images for those interested. Feel free to embed or share the above images. Lastly, please keep in mind where this data is coming from: contributors of Wikipedia. Whilst they are a studious bunch, they aren&amp;#x2019;t without faults so take up any problems with the graph with the pages themselves as that is all this represents.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-Graph Of Programming Languages and Their Designers
-</title>
-</item>
-<item>
-<author>
-SAM POLK
-</author>
-<link>
-http://www.nytimes.com/2014/01/19/opinion/sunday/for-the-love-of-money.html
-</link>
-<description>
-&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
-
-    
-
-    
-    
-
-                
-    &lt;p class=&quot;story-body-text story-content&quot;&gt;IN my last year on Wall Street my bonus was $3.6 million &amp;#x2014; and I was angry because it wasn&amp;#x2019;t big enough. I was 30 years old, had no children to raise, no debts to pay, no philanthropic goal in mind. I wanted more money for exactly the same reason an alcoholic needs another drink: I was addicted.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Eight years earlier, I&amp;#x2019;d walked onto the trading floor at Credit Suisse First Boston to begin my summer internship. I already knew I wanted to be rich, but when I started out I had a different idea about what wealth meant. I&amp;#x2019;d come to Wall Street after reading in the book &amp;#x201C;Liar&amp;#x2019;s Poker&amp;#x201D; how Michael Lewis earned a $225,000 bonus after just two years of work on a trading floor. That seemed like a fortune. Every January and February, I think about that time, because these are the months when bonuses are decided and distributed, when fortunes are made.&lt;/p&gt;    &lt;aside class=&quot;marginalia related-coverage-marginalia&quot;&gt;
-        
-            &lt;header&gt;
-        
-    &lt;/header&gt;
-
-        &lt;ul&gt;
-                                                &lt;li&gt;
-&lt;article class=&quot;story theme-summary&quot;&gt;
-    &lt;a class=&quot;story-link&quot; href=&quot;http://www.nytimes.com/roomfordebate/2014/01/16/why-we-like-to-watch-rich-people/&quot;&gt;
-
-        
-        &lt;h2 class=&quot;story-heading&quot;&gt;
-                                                    &lt;span class=&quot;story-heading-text&quot;&gt;Room for Debate: Why We Like to Watch Rich People&lt;/span&gt;&lt;time class=&quot;dateline&quot; datetime=&quot;2014-01-16&quot;&gt;JAN. 16, 2014&lt;/time&gt;
-        &lt;/h2&gt;
-
-    &lt;/a&gt;
-&lt;/article&gt;
-&lt;/li&gt;
-                                    &lt;/ul&gt;
-
-    &lt;/aside&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;I&amp;#x2019;d learned about the importance of being rich from my dad. He was a modern-day Willy Loman, a salesman with huge dreams that never seemed to materialize. &amp;#x201C;Imagine what life will be like,&amp;#x201D; he&amp;#x2019;d say, &amp;#x201C;when I make a million dollars.&amp;#x201D; While he dreamed of selling a screenplay, in reality he sold kitchen cabinets. And not that well. We sometimes lived paycheck to paycheck off my mom&amp;#x2019;s nurse-practitioner salary.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Dad believed money would solve all his problems. At 22, so did I. When I walked onto that trading floor for the first time and saw the glowing flat-screen TVs, high-tech computer monitors and phone turrets with enough dials, knobs and buttons to make it seem like the cockpit of a fighter plane, I knew exactly what I wanted to do with the rest of my life. It looked as if the traders were playing a video game inside a spaceship; if you won this video game, you became what I most wanted to be &amp;#x2014; rich.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;IT was a miracle I&amp;#x2019;d made it to Wall Street at all. While I was competitive and ambitious &amp;#x2014; a wrestler at Columbia University &amp;#x2014; I was also a daily drinker and pot smoker and a regular user of cocaine, Ritalin and ecstasy. I had a propensity for self-destruction that had resulted in my getting suspended from Columbia for burglary, arrested twice and fired from an Internet company for fistfighting. I learned about rage from my dad, too. I can still see his red, contorted face as he charged toward me. I&amp;#x2019;d lied my way into the C.S.F.B. internship by omitting my transgressions from my r&amp;#xE9;sum&amp;#xE9; and was determined not to blow what seemed a final chance. The only thing as important to me as that internship was my girlfriend, a starter on the Columbia volleyball team. But even though I was in love with her, when I got drunk I&amp;#x2019;d sometimes end up with other women.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Three weeks into my internship she wisely dumped me. I don&amp;#x2019;t like who you&amp;#x2019;ve become, she said. I couldn&amp;#x2019;t blame her, but I was so devastated that I couldn&amp;#x2019;t get out of bed. In desperation, I called a counselor whom I had reluctantly seen a few times before and asked for help.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;She helped me see that I was using alcohol and drugs to blunt the powerlessness I felt as a kid and suggested I give them up. That began some of the hardest months of my life. Without the alcohol and drugs in my system, I felt like my chest had been cracked open, exposing my heart to air. The counselor said that my abuse of drugs and alcohol was a symptom of an underlying problem &amp;#x2014; a &amp;#x201C;spiritual malady,&amp;#x201D; she called it. C.S.F.B. didn&amp;#x2019;t offer me a full-time job, and I returned, distraught, to Columbia for senior year.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;After graduation, I got a job at Bank of America, by the grace of a managing director willing to take a chance on a kid who had called him every day for three weeks. With a year of sobriety under my belt, I was sharp, cleareyed and hard-working. At the end of my first year I was thrilled to receive a $40,000 bonus. For the first time in my life, I didn&amp;#x2019;t have to check my balance before I withdrew money. But a week later, a trader who was only four years my senior got hired away by C.S.F.B. for $900,000. After my initial envious shock &amp;#x2014; his haul was 22 times the size of my bonus &amp;#x2014; I grew excited at how much money was available.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Over the next few years I worked like a maniac and began to move up the Wall Street ladder. I became a bond and credit default swap trader, one of the more lucrative roles in the business. Just four years after I started at Bank of America, Citibank offered me a &amp;#x201C;1.75 by 2&amp;#x201D; which means $1.75 million per year for two years, and I used it to get a promotion. I started dating a pretty blonde and rented a loft apartment on Bond Street for $6,000 a month.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I felt so important. At 25, I could go to any restaurant in Manhattan &amp;#x2014; Per Se, Le Bernardin &amp;#x2014; just by picking up the phone and calling one of my brokers, who ingratiate themselves to traders by entertaining with unlimited expense accounts. I could be second row at the Knicks-Lakers game just by hinting to a broker I might be interested in going. The satisfaction wasn&amp;#x2019;t just about the money. It was about the power. Because of how smart and successful I was, it was someone else&amp;#x2019;s job to make me happy.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Still, I was nagged by envy. On a trading desk everyone sits together, from interns to managing directors. When the guy next to you makes $10 million, $1 million or $2 million doesn&amp;#x2019;t look so sweet. Nonetheless, I was thrilled with my progress.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;My counselor didn&amp;#x2019;t share my elation. She said I might be using money the same way I&amp;#x2019;d used drugs and alcohol &amp;#x2014; to make myself feel powerful &amp;#x2014; and that maybe it would benefit me to stop focusing on accumulating more and instead focus on healing my inner wound. &amp;#x201C;Inner wound&amp;#x201D;? I thought that was going a little far and went to work for a hedge fund.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Now, working elbow to elbow with billionaires, I was a giant fireball of greed. I&amp;#x2019;d think about how my colleagues could buy Micronesia if they wanted to, or become mayor of New York City. They didn&amp;#x2019;t just have money; they had power &amp;#x2014; power beyond getting a table at Le Bernardin. Senators came to their offices. They were royalty.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I wanted a billion dollars. It&amp;#x2019;s staggering to think that in the course of five years, I&amp;#x2019;d gone from being thrilled at my first bonus &amp;#x2014; $40,000 &amp;#x2014; to being disappointed when, my second year at the hedge fund, I was paid &amp;#x201C;only&amp;#x201D; $1.5 million.&lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-horizontal&quot;&gt;
-    &lt;div class=&quot;image&quot;&gt;
-            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/19/sunday-review/19MONEYjp/19MONEYjp-articleLarge-v2.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
-            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/19/sunday-review/19MONEYjp/19MONEYjp-articleLarge-v2.jpg&quot;&gt;
-            &lt;meta value=&quot;597&quot;&gt;
-            &lt;meta value=&quot;600&quot;&gt;
-    &lt;/div&gt;
-        &lt;figcaption class=&quot;caption&quot;&gt; &lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;But in the end, it was actually my absurdly wealthy bosses who helped me see the limitations of unlimited wealth. I was in a meeting with one of them, and a few other traders, and they were talking about the new hedge-fund regulations. Most everyone on Wall Street thought they were a bad idea. &amp;#x201C;But isn&amp;#x2019;t it better for the system as a whole?&amp;#x201D; I asked. The room went quiet, and my boss shot me a withering look. I remember his saying, &amp;#x201C;I don&amp;#x2019;t have the brain capacity to think about the system as a whole. All I&amp;#x2019;m concerned with is how this affects our company.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I felt as if I&amp;#x2019;d been punched in the gut. He was afraid of losing money, despite all that he had.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;From that moment on, I started to see Wall Street with new eyes. I noticed the vitriol that traders directed at the government for limiting bonuses after the crash. I heard the fury in their voices at the mention of higher taxes. These traders despised anything or anyone that threatened their bonuses. Ever see what a drug addict is like when he&amp;#x2019;s used up his junk? He&amp;#x2019;ll do anything &amp;#x2014; walk 20 miles in the snow, rob a grandma &amp;#x2014; to get a fix. Wall Street was like that. In the months before bonuses were handed out, the trading floor started to feel like a neighborhood in &amp;#x201C;The Wire&amp;#x201D; when the heroin runs out.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I&amp;#x2019;d always looked enviously at the people who earned more than I did; now, for the first time, I was embarrassed for them, and for me. I made in a single year more than my mom made her whole life. I knew that wasn&amp;#x2019;t fair; that wasn&amp;#x2019;t right. Yes, I was sharp, good with numbers. I had marketable talents. But in the end I didn&amp;#x2019;t really do anything. I was a derivatives trader, and it occurred to me the world would hardly change at all if credit derivatives ceased to exist. Not so nurse practitioners. What had seemed normal now seemed deeply distorted.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I had recently finished Taylor Branch&amp;#x2019;s three-volume series on the Rev. Dr. Martin Luther King Jr. and the civil rights movement, and the image of the Freedom Riders stepping out of their bus into an infuriated mob had seared itself into my mind. I&amp;#x2019;d told myself that if I&amp;#x2019;d been alive in the &amp;#x2018;60s, I would have been on that bus.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But I was lying to myself. There were plenty of injustices out there &amp;#x2014; rampant poverty, swelling prison populations, a sexual-assault epidemic, an obesity crisis. Not only was I not helping to fix any problems in the world, but I was profiting from them. During the market crash in 2008, I&amp;#x2019;d made a ton of money by shorting the derivatives of risky companies. As the world crumbled, I profited. I&amp;#x2019;d seen the crash coming, but instead of trying to help the people it would hurt the most &amp;#x2014; people who didn&amp;#x2019;t have a million dollars in the bank &amp;#x2014; I&amp;#x2019;d made money off it. I don&amp;#x2019;t like who you&amp;#x2019;ve become, my girlfriend had said years earlier. She was right then, and she was still right. Only now, I didn&amp;#x2019;t like who I&amp;#x2019;d become either.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Wealth addiction was described by the late sociologist and playwright Philip Slater in a 1980 book, but addiction researchers have paid the concept little attention. Like alcoholics driving drunk, wealth addiction imperils everyone. Wealth addicts are, more than anybody, specifically responsible for the ever widening rift that is tearing apart our once great country. Wealth addicts are responsible for the vast and toxic disparity between the rich and the poor and the annihilation of the middle class. Only a wealth addict would feel justified in receiving $14 million in compensation &amp;#x2014; including an $8.5 million bonus &amp;#x2014; as the McDonald&amp;#x2019;s C.E.O., Don Thompson, did in 2012, while his company then published a brochure for its work force on how to survive on their low wages. Only a wealth addict would earn hundreds of millions as a hedge-fund manager, and then lobby to maintain a tax loophole that gave him a lower tax rate than his secretary.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;DESPITE my realizations, it was incredibly difficult to leave. I was terrified of running out of money and of forgoing future bonuses. More than anything, I was afraid that five or 10 years down the road, I&amp;#x2019;d feel like an idiot for walking away from my one chance to be really important. What made it harder was that people thought I was crazy for thinking about leaving. In 2010, in a final paroxysm of my withering addiction, I demanded $8 million instead of $3.6 million. My bosses said they&amp;#x2019;d raise my bonus if I agreed to stay several more years. Instead, I walked away.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The first year was really hard. I went through what I can only describe as withdrawal &amp;#x2014; waking up at nights panicked about running out of money, scouring the headlines to see which of my old co-workers had gotten promoted. Over time it got easier &amp;#x2014; I started to realize that I had enough money, and if I needed to make more, I could. But my wealth addiction still hasn&amp;#x2019;t gone completely away. Sometimes I still buy lottery tickets.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In the three years since I left, I&amp;#x2019;ve married, spoken in jails and juvenile detention centers about getting sober, taught a writing class to girls in the foster system, and started a nonprofit called Groceryships to help poor families struggling with obesity and food addiction. I am much happier. I feel as if I&amp;#x2019;m making a real contribution. And as time passes, the distortion lessens. I see Wall Street&amp;#x2019;s mantra &amp;#x2014; &amp;#x201C;We&amp;#x2019;re smarter and work harder than everyone else, so we deserve all this money&amp;#x201D; &amp;#x2014; for what it is: the rationalization of addicts. From a distance I can see what I couldn&amp;#x2019;t see then &amp;#x2014; that Wall Street is a toxic culture that encourages the grandiosity of people who are desperately trying to feel powerful.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I was lucky. My experience with drugs and alcohol allowed me to recognize my pursuit of wealth as an addiction. The years of work I did with my counselor helped me heal the parts of myself that felt damaged and inadequate, so that I had enough of a core sense of self to walk away.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Dozens of different types of 12-step support groups &amp;#x2014; including Clutterers Anonymous and On-Line Gamers Anonymous &amp;#x2014; exist to help addicts of various types, yet there is no Wealth Addicts Anonymous. Why not? Because our culture supports and even lauds the addiction. Look at the magazine covers in any newsstand, plastered with the faces of celebrities and C.E.O.'s; the superrich are our cultural gods. I hope we all confront our part in enabling wealth addicts to exert so much influence over our country.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I generally think that if one is rich and believes they have &amp;#x201C;enough,&amp;#x201D; they are not a wealth addict. On Wall Street, in my experience, that sense of &amp;#x201C;enough&amp;#x201D; is rare. The money guy doing a job he complains about for yet another year so he can add $2 million to his $20 million bank account seems like an addict.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I recently got an email from a hedge-fund trader who said that though he was making millions every year, he felt trapped and empty, but couldn&amp;#x2019;t summon the courage to leave. I believe there are others out there. Maybe we can form a group and confront our addiction together. And if you identify with what I&amp;#x2019;ve written, but are reticent to leave, then take a small step in the right direction. Let&amp;#x2019;s create a fund, where everyone agrees to put, say, 25 percent of their annual bonuses into it, and we&amp;#x2019;ll use that to help some of the people who actually need the money that we&amp;#x2019;ve been so rabidly chasing. Together, maybe we can make a real contribution to the world.&lt;/p&gt;
-                &lt;footer class=&quot;story-footer story-content&quot;&gt;
-        
-    &lt;/footer&gt;
-&lt;/article&gt;
-&lt;/div&gt;
-</description>
-<title>
-For the Love of Money
-</title>
-</item>
-<item>
-<author>
-Chad Fowler
-</author>
-<link>
-http://chadfowler.com/blog/2014/01/19/empathy/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; - Empathy is the most important skill you can practice. It will lead to greater success personally and professionally and will allow you to become happier the more you practice.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#x2019;ve never considered myself a &lt;em&gt;real&lt;/em&gt; programmer.  I know at this point it&amp;#x2019;s probably silly to say, but I started my scholastic and professional life as a musician, and I&amp;#x2019;ve never quite recovered from the &lt;a href=&quot;http://en.wikipedia.org/wiki/Impostor_syndrome&quot;&gt;Impostor Syndrome&lt;/a&gt; that comes with making such a shift. One of the faux-self-deprecations I use to describe myself is: &amp;#x201C;I&amp;#x201D;m a people person who just &lt;em&gt;happens&lt;/em&gt; to express this tendency through programming and technology projects&amp;#x201D;.&lt;/p&gt;
-
-&lt;p&gt;This seems a bit ironic, because I&amp;#x2019;m also a very strong introvert. I recharge when I&amp;#x2019;m alone or in very small groups of people (no more than 2 including myself is ideal) and I exhaust myself in crowds or in constant discussion.&lt;/p&gt;
-
-&lt;p&gt;But, on reflection this all fits together perfectly.  The reason crowds of people exhaust me is that I am constantly trying to read and understand the feelings and motivations of those around me. If I could just go through life talking and not listening, hearing but not processing, alone time and time in groups wouldn&amp;#x2019;t be so different for me. But I can&amp;#x2019;t, and I obviously don&amp;#x2019;t think I should.&lt;/p&gt;
-
-&lt;p&gt;Coming back to the impostor-syndrome-induced self-identification as a &amp;#x201C;people person&amp;#x201D; rather than a programmer, I guess when I say that I&amp;#x2019;m probably right.  I spend much more time and much more effort learning how to understand the people around me than I do code, systems, architectures, and technologies. I&amp;#x2019;m not an expert or even remarkable at it, but I work on it consciously and consistently. The &lt;em&gt;it&lt;/em&gt; I&amp;#x2019;m describing here is called &amp;#x201C;empathy&amp;#x201D;.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;the action of understanding, being aware of, being sensitive to, and vicariously experiencing the feelings, thoughts, and experience of another of either the past or present without having the feelings, thoughts, and experience fully communicated in an objectively explicit manner&lt;/p&gt;&lt;footer&gt;&lt;strong&gt;Merriam Webster&lt;/strong&gt; &lt;cite&gt;&lt;a href=&quot;http://www.merriam-webster.com/dictionary/empathy&quot;&gt;Empathy&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-
-
-&lt;p&gt;As exhausting as it is for me, this is the primary reason for the success and good fortune I&amp;#x2019;ve enjoyed in my life.&lt;/p&gt;
-
-&lt;h2&gt;Why practice empathy?&lt;/h2&gt;
-
-&lt;p&gt;Why should you explicitly work to enhance your ability to empathize with others?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;You will be more likely to treat the people you care about the way they wish you would treat them.&lt;/li&gt;
-&lt;li&gt;You will better understand the needs of people around you.&lt;/li&gt;
-&lt;li&gt;You will more clearly understand the perception you create in others with your words and actions.&lt;/li&gt;
-&lt;li&gt;You will understand the unspoken parts of your communication with others.&lt;/li&gt;
-&lt;li&gt;You will better understand the needs of your customers at work.&lt;/li&gt;
-&lt;li&gt;You will have less trouble dealing with interpersonal conflict both at home and at work.&lt;/li&gt;
-&lt;li&gt;You will be able to more accurately predict the actions and reactions of people you interact with.&lt;/li&gt;
-&lt;li&gt;You will learn how to motivate the people around you.&lt;/li&gt;
-&lt;li&gt;You will more effectively convince others of your point of view.&lt;/li&gt;
-&lt;li&gt;You will experience the world in higher resolution as you perceive through not only your perspective but the perspectives of those around you.&lt;/li&gt;
-&lt;li&gt;You will find it easier to deal with the negativity of others if you can better understand their motivations and fears. Lately when I find myself personally struggling with someone, I remind myself to empathize and I immediately calm myself and accept the situation for what it is.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;You will be a better leader, a better follower, and most important, a better friend.&lt;/p&gt;
-
-&lt;h2&gt;How to practice&lt;/h2&gt;
-
-&lt;p&gt;Here are a few ideas on how to practice to develop your empathy.&lt;/p&gt;
-
-&lt;h3&gt;Listen&lt;/h3&gt;
-
-&lt;p&gt;Listen intently when people speak to you. Conversations, especially regarding heated topics, often form a rhythm of back and forth speaking, with each party starting a point just before the conversation partner has ended his or her point.  I&amp;#x2019;m sure you will recognize this pattern in yourself if you think about it. Before whoever is speaking has finished, you have already formulated your response, and you can&amp;#x2019;t wait to spit it out.&lt;/p&gt;
-
-&lt;p&gt;Next time you find yourself in a conversation like this, slow down.  Force yourself to listen to the words you&amp;#x2019;re hearing. Consider the speaker&amp;#x2019;s motivation behind saying what he or she is saying. Consider the life and work experience that has led to his or her current world-view.&lt;/p&gt;
-
-&lt;p&gt;Respond visually and with sound (&amp;#x201C;ah&amp;#x201D;, &amp;#x201C;oh&amp;#x201D;, &amp;#x201C;ya?&amp;#x201D;) but allow at least a second to pass before responding verbally.  Ask followup questions to better understand what the speaker intended or how they feel before you respond with your own opinions.&lt;/p&gt;
-
-&lt;p&gt;Hopefully you&amp;#x2019;ll need more time before you speak, because you&amp;#x2019;ve been too focused on the speaker to start preparing your response.&lt;/p&gt;
-
-&lt;h3&gt;Watch and Wonder&lt;/h3&gt;
-
-&lt;p&gt;Put down your cell phone. Instead of checking twitter or reading articles while you wait for the train or are stuck in a traffic jam, look at the people around you and imagine who they might be, what they might be thinking and feeling, and where they are trying to go right now. Are they frustrated? Happy? Singing? Looking at their phones? Do they live here or are they from out of town?&lt;/p&gt;
-
-&lt;p&gt;Have they had a nice day? Try to actually wonder and care.&lt;/p&gt;
-
-&lt;h3&gt;Know Your Enemies&lt;/h3&gt;
-
-&lt;p&gt;Maybe &amp;#x201C;enemies&amp;#x201D; is an exaggeration here, but think about a tense, preferably ongoing dispute you have with someone. Maybe it&amp;#x2019;s a co-worker in a competing faction for how you should do some critical part of your work. Maybe it&amp;#x2019;s a family member you&amp;#x2019;re constantly warring with for some reason. Whoever it is, you&amp;#x2019;re used to them being wrong and you being right.  You tend to even jump to disagreeing with them regardless of what they are arguing for, because you are on opposite sides of the war.&lt;/p&gt;
-
-&lt;p&gt;Now imagine the entire situation from that person&amp;#x2019;s point of view. The person is probably not evil or an idiot. They might not even be &lt;em&gt;wrong&lt;/em&gt; about whatever it is you disagree about. In my own life, the problem is usually more of a fundamental philosophical difference than about the specific conflicts that occur.&lt;/p&gt;
-
-&lt;p&gt;How does this person feel about how you respond to them when you disagree?  What fears cause the other person to be tense and hard to reason with? How do you exacerbate those fears rather than calm them? What &lt;em&gt;valid&lt;/em&gt; arguments could this person make against your views and your handling of the situation? What &lt;em&gt;good&lt;/em&gt; intentions does this person hold? What are the positive motivations behind what you perceive as a negative outcome? Do you agree with the motivations? If so, are they more important than the specific conflict?&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#x2019;re like me, just going through this exercise (maybe a couple of times with the same subject) can greatly reduce your frustration and anxiety over some of the most stressful inter-personal situations. It may sound obvious, but doing it is very different from understanding how it could work.&lt;/p&gt;
-
-&lt;h3&gt;Choose the Other Side&lt;/h3&gt;
-
-&lt;p&gt;While talking with &lt;a href=&quot;http://kellyjeanne.wordpress.com/&quot;&gt;Kelly&lt;/a&gt; about practicing empathy, she had a great idea. It&amp;#x2019;s hard to side with your own &amp;#x201C;enemy&amp;#x201D; as I suggested above. It requires a forced third person perspective, which takes a lot of discipline when you&amp;#x2019;re thinking about your own stress and emotions.&lt;/p&gt;
-
-&lt;p&gt;So to make it easier, try it as an actual third person. We all have friends and loved ones that &lt;em&gt;complain&lt;/em&gt; to us about how they have been treated by other people. It&amp;#x2019;s human nature to complain and it&amp;#x2019;s the duty of a loved one to listen sympathetically.  The assumption is that the listener is on the side of the complainer. A supportive friend or loved one almost always is, instinctually.&lt;/p&gt;
-
-&lt;p&gt;Try practicing (internally) taking the opposing view point. Don&amp;#x2019;t go with your default reaction immediately. Start on the other side and work your way back.&lt;/p&gt;
-
-&lt;p&gt;This reminds me of a cool technique Dave Thomas blogged about several years (almost 11 years ago, wow!) ago called &lt;a href=&quot;http://pragdave.blogspot.de/2003/06/debating-with-knives.html&quot;&gt;debating with knives&lt;/a&gt;.  It&amp;#x2019;s an exercise which forces you onto both sides of a debate to help open your mind to the realities of the topic under discussion.&lt;/p&gt;
-
-
-
-
-&lt;p&gt;This is probably all obvious, but I doubt many people really &lt;em&gt;practice&lt;/em&gt; empathy. I hope you will give it a try, even for a short while, and I hope it improves your life and the lives of those around you even if just a little.&lt;/p&gt;
-&lt;/div&gt;
-
-
-  &lt;/div&gt;
-</description>
-<title>
-Your most important skill: Empathy
-</title>
-</item>
-<item>
-<link>
-http://www.asciiflow.com/
-</link>
-<description>
-&lt;div&gt;
-
-&lt;table&gt;
-	&lt;tr&gt;
-		&lt;td colspan=&quot;3&quot;&gt;
-
-		&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;
-
-
-
-
-		&lt;/td&gt;
-		&lt;td&gt;
-			
-		&lt;/td&gt;
-		&lt;td&gt;
-
-		&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td colspan=&quot;3&quot;&gt;
-
-		&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;
-
-
-
-
-
-
-
-&lt;/div&gt;
-
-</description>
-<title>
-Asciiflow
-</title>
-</item>
-<item>
 <author>
 Nate Hoffelder
 </author>
@@ -290,6 +51,126 @@ http://www.the-digital-reader.com/2014/01/18/feedly-found-new-way-steal-page-vie
 </description>
 <title>
 Feedly Found a New Way to Steal Page Views From Publishers
+</title>
+</item>
+<item>
+<link>
+http://bsd.slashdot.org/story/14/01/19/0124202/openbsd-moving-towards-signed-packages-based-on-d-j-bernstein-crypto
+</link>
+<description>
+&lt;div&gt;&lt;header&gt;
+		
+			
+			&lt;span class=&quot;topic&quot; id=&quot;topic-55654879&quot;&gt;
+				&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=encryption&quot;&gt;
+			
+				&lt;img src=&quot;http://a.fsdn.com/sd/topics/encryption_64.png&quot; width=&quot;64&quot; alt=&quot;Encryption&quot; title=&quot;Encryption&quot;&gt;
+			
+		&lt;/a&gt;
+		
+	
+		
+		
+		
+		
+
+		
+		&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=os&quot;&gt;
+			
+				&lt;img src=&quot;http://a.fsdn.com/sd/topics/os_64.png&quot; width=&quot;64&quot; alt=&quot;Operating Systems&quot; title=&quot;Operating Systems&quot;&gt;
+			
+		&lt;/a&gt;
+		
+	
+		
+		
+
+		
+		&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=bsd&quot;&gt;
+			
+				&lt;img src=&quot;http://a.fsdn.com/sd/topics/bsd_64.png&quot; width=&quot;64&quot; alt=&quot;BSD&quot; title=&quot;BSD&quot;&gt;
+			
+		&lt;/a&gt;
+			&lt;/span&gt;
+			
+		
+		
+		&lt;div class=&quot;details&quot; id=&quot;details-55654879&quot;&gt;
+		
+		Posted
+		by 
+	
+	
+		
+			&lt;a href=&quot;mailto:soulskill@slashdot.org&quot; rel=&quot;nofollow&quot;&gt;Soulskill&lt;/a&gt;
+		
+	
+	
+
+	
+	
+	&lt;time id=&quot;fhtime-55654879&quot; datetime=&quot;on Saturday January 18, 2014 @11:04PM&quot;&gt;on Saturday January 18, 2014 @11:04PM&lt;/time&gt;
+	
+	
+		&lt;br&gt;from the those-signatures-will-be-worth-a-lot-of-money-some-day dept.
+	
+	&lt;/div&gt;
+	&lt;/header&gt;
+
+	&lt;div class=&quot;body&quot; id=&quot;fhbody-55654879&quot;&gt;
+
+		
+
+
+			&lt;div id=&quot;text-55654879&quot; class=&quot;p&quot;&gt;
+			ConstantineM writes &lt;i&gt;&quot;It's official: '&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;m=138992613426488&amp;amp;w=2&quot;&gt;we are moving towards signed packages&lt;/a&gt;,' says Theo de Raadt on the misc@ mailing list.  This is shortly after a new utility, &lt;a href=&quot;http://bxr.su/OpenBSD/usr.bin/signify/signify.c&quot;&gt;signify&lt;/a&gt;, was committed into the base tree.  The &lt;a href=&quot;http://www.tedunangst.com/flak/post/signify&quot;&gt;reason a new utility had to be written in the first place&lt;/a&gt; is that gnupg is too big to fit on the floppy discs, which are still a supported installation medium for OpenBSD.  Signatures are based on the &lt;a href=&quot;http://ed25519.cr.yp.to/&quot;&gt;Ed25519&lt;/a&gt; public-key signature system from D. J. Bernstein and co., and his public domain code once again &lt;a href=&quot;http://bxr.su/OpenBSD/usr.bin/signify/mod_ed25519.c&quot;&gt;appears&lt;/a&gt; in the base tree of OpenBSD, only a few weeks after some other DJB inventions &lt;a href=&quot;http://it.slashdot.org/story/13/12/11/173213/openssh-has-a-new-cipher-chacha20-poly1305-from-dj-bernstein&quot;&gt;made it into the nearby OpenSSH&lt;/a&gt; as well.&quot;&lt;/i&gt;
+
+			&lt;/div&gt;
+
+			
+
+		
+		
+			
+		
+	&lt;/div&gt;
+	&lt;/div&gt;
+</description>
+<title>
+OpenBSD Moving Towards Signed Packages — Based On D. J. Bernstein Crypto
+</title>
+</item>
+<item>
+<link>
+https://plus.google.com/u/0/+CarmsPerez/posts/cDK6ZNpZ6YH
+</link>
+<description>
+
+</description>
+<title>
+&quot;Actually, the movie was largely a lie about me. &quot;
+</title>
+</item>
+<item>
+<link>
+http://www.youtube.com/attribution_link?a=dc5t7_g12ow&amp;u=%2Fwatch%3Fv%3DDmT80OseAGs%26feature%3Dshare
+</link>
+<description>
+
+</description>
+<title>
+Sudoku solving program in APL that blows my mind.
+</title>
+</item>
+<item>
+<link>
+https://plus.google.com/+CarmsPerez/posts/GnVTvQNgvpf
+</link>
+<description>
+
+</description>
+<title>
+Wozniak: “Actually, the movie was largely a lie about me”
 </title>
 </item>
 </channel>
