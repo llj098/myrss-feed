@@ -14,155 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-Nate Hoffelder
-</author>
-<link>
-http://www.the-digital-reader.com/2014/01/18/feedly-found-new-way-steal-page-views-publishers/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
-					&lt;p&gt;&lt;a href=&quot;http://www.the-digital-reader.com/wp-content/uploads/2013/03/logo1.png&quot;&gt;&lt;img class=&quot;alignright size-full wp-image-48205&quot; alt=&quot;feedly&quot; src=&quot;http://www.the-digital-reader.com/wp-content/uploads/2013/03/logo1.png&quot; width=&quot;176&quot;&gt;&lt;/a&gt;Feedly &lt;a href=&quot;http://thenextweb.com/insider/2014/01/17/feedly-launches-url-shortener-rss-reader-service/#!sy8c6&quot;&gt;announced&lt;/a&gt; their new URL shortening service this week, and it turns out that they are much more subtle scoundrels than I expected.&lt;/p&gt;
-&lt;p&gt;Not only is this new service opt-out, it also siphons away page views from mobile visitors.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Feedly announced on the Feedly beta Google+ community (on 21 January) that they are removing the offending Twitter card integration.&lt;/p&gt;
-&lt;p&gt;This URL shortener service is the same one which Feedly was caught using to hijack links and steal page views &lt;a href=&quot;http://www.the-digital-reader.com/2013/12/07/feedlys-sharing-options-now-direct-shared-articles-servers-cuts-original-publishers/&quot;&gt;back in December&lt;/a&gt; (that was during the beta test). Feedly stopped hijacking links after being criticized from all sides, but they didn&amp;#x2019;t change their behavior. Rather than try not to harm publishers, Feedly found a more subtle way to steal page views and make it difficult for publishers to engage with readers.&lt;/p&gt;
-&lt;p&gt;It&amp;#x2019;s so subtle that I missed it, but luckily a reader (Thanks, Alan!) tipped me to a blog post by Martin Hawksey.&lt;/p&gt;
-&lt;p&gt;Martin wrote his post with a focus on how &lt;a href=&quot;http://mashe.hawksey.info/2014/01/thieving-feedly-pulling-off-a-twitter-card-heist/#heist&quot;&gt;Feedly is inserting its own twitter metadata&lt;/a&gt; in place of the metadata that original publishers can include with links shared on Twitter, but he also posted a couple screen shots which make it quite clear that Feedly is harming publishers in more ways than simply messing with the metadata.&lt;/p&gt;
-&lt;p&gt;The 2 screen shots below were taken from the Twitter app on an Android smartphone. They show two different tweets which link to the same content. The screenshot on the left shows a tweet that was shared from the original publisher&amp;#x2019;s website, while the screenshot on the right shows a tweet that was shared from inside Feedly.&lt;/p&gt;
-&lt;p&gt;Can you see the differences?&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.the-digital-reader.com/wp-content/uploads/2014/01/feedly-steal-credit-page-views.jpg&quot;&gt;&lt;img class=&quot;size-full wp-image-62592 aligncenter&quot; alt=&quot;feedly steal credit page views&quot; src=&quot;http://www.the-digital-reader.com/wp-content/uploads/2014/01/feedly-steal-credit-page-views.jpg&quot; width=&quot;603&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I can see a couple key differences, and both are hostile to publishers.&lt;/p&gt;
-&lt;p&gt;One, Feedly is slapping their brand on someone else&amp;#x2019;s content, and two, they&amp;#x2019;re actively discouraging mobile users from visiting the original publisher&amp;#x2019;s website.&lt;/p&gt;
-&lt;p&gt;In the screenshot on the left you can see that the inset text lists the author as Doug Belshaw. In the screenshot on the right, Feedly wants you to think that they are the author. In other words they slapped their brand on work they did not create. They want people to think of them as the source of the content, probably in the hopes that this will boost Feedly&amp;#x2019;s profile and its userbase. And to make matters worse they are pulling this trick both on the Twitter website and in the Twitter apps.&lt;/p&gt;
-&lt;p&gt;Next, look at the button down below the text. In the screenshot on the left you see a button with the words &amp;#x201C;View on web&amp;#x201D;, while on the right you see a prompt to open Feedly&amp;#x2019;s app. (If you don&amp;#x2019;t have the app installed the prompt will suggest that you install it.)&lt;/p&gt;
-&lt;p&gt;The prompt to use/install the Feedly app is not visible when you visit the Twitter website, only when you visit via a mobile app.&lt;/p&gt;
-&lt;p&gt;This might seem like a small issue, but as of &lt;a href=&quot;http://techcrunch.com/2013/10/03/mobile-twitter-161m-access-from-handheld-devices-each-month-65-of-ad-revenues-coming-from-mobile/&quot;&gt;October 2013&lt;/a&gt; Twitter reported that 75% of their 218 million users use the service via a mobile app. That means that Feedly has set itself up to steal most of the page views that a publisher could have gained when an article is shared via Twitter.&lt;/p&gt;
-&lt;p&gt;Feedly is depriving creators of recognition, and they are also stealing page views.&lt;/p&gt;
-&lt;p&gt;And to make matters worse, I have confirmed that this URL shortener is enabled by default. That means that Feedly users need to go to the Preference menu to disable the URL shortener or they will be inadvertent accomplices to Feedly&amp;#x2019;s theft of page views.&lt;/p&gt;
-&lt;p&gt;Feedly is a big fan of opting out. In fact, Feedly CEO&amp;#xA0;Edwin Khodabakchian showed up in the comments for that post last month and defended his company with a justification which is going to sound just as bad to day as it did a month ago:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;As I mentioned in the email I sent to Nate earlier this morning, the goal of this feature is to 1) help content creators increase their readership in feedly (when a user discovers your content and adds it to his feedly, they are converting a one time visitor into a repeat engaged user) and 2) help user consume content faster on mobile device.&lt;/p&gt;
-&lt;p&gt;We are early in the design and implementation of this feature. If you are a publisher and want to work with us on improving this feature (we are working on some interesting features around discovery, call to action, analytics), please email me at (deleted) &lt;strong&gt;If you do not want to benefit form this feature, you can also sent me an email and we will quickly opt you out.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;He thinks it is perfectly okay to expect publishers to opt out of being punched in the wallet.&lt;/p&gt;
-&lt;p&gt;I really don&amp;#x2019;t know what to say to that.&lt;/p&gt;
-
-
-									&lt;/div&gt;
-				&lt;/div&gt;
-</description>
-<title>
-Feedly Found a New Way to Steal Page Views From Publishers
-</title>
-</item>
-<item>
-<link>
-http://bsd.slashdot.org/story/14/01/19/0124202/openbsd-moving-towards-signed-packages-based-on-d-j-bernstein-crypto
-</link>
-<description>
-&lt;div&gt;&lt;header&gt;
-		
-			
-			&lt;span class=&quot;topic&quot; id=&quot;topic-55654879&quot;&gt;
-				&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=encryption&quot;&gt;
-			
-				&lt;img src=&quot;http://a.fsdn.com/sd/topics/encryption_64.png&quot; width=&quot;64&quot; alt=&quot;Encryption&quot; title=&quot;Encryption&quot;&gt;
-			
-		&lt;/a&gt;
-		
-	
-		
-		
-		
-		
-
-		
-		&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=os&quot;&gt;
-			
-				&lt;img src=&quot;http://a.fsdn.com/sd/topics/os_64.png&quot; width=&quot;64&quot; alt=&quot;Operating Systems&quot; title=&quot;Operating Systems&quot;&gt;
-			
-		&lt;/a&gt;
-		
-	
-		
-		
-
-		
-		&lt;a href=&quot;http://bsd.slashdot.org/index2.pl?fhfilter=bsd&quot;&gt;
-			
-				&lt;img src=&quot;http://a.fsdn.com/sd/topics/bsd_64.png&quot; width=&quot;64&quot; alt=&quot;BSD&quot; title=&quot;BSD&quot;&gt;
-			
-		&lt;/a&gt;
-			&lt;/span&gt;
-			
-		
-		
-		&lt;div class=&quot;details&quot; id=&quot;details-55654879&quot;&gt;
-		
-		Posted
-		by 
-	
-	
-		
-			&lt;a href=&quot;mailto:soulskill@slashdot.org&quot; rel=&quot;nofollow&quot;&gt;Soulskill&lt;/a&gt;
-		
-	
-	
-
-	
-	
-	&lt;time id=&quot;fhtime-55654879&quot; datetime=&quot;on Saturday January 18, 2014 @11:04PM&quot;&gt;on Saturday January 18, 2014 @11:04PM&lt;/time&gt;
-	
-	
-		&lt;br&gt;from the those-signatures-will-be-worth-a-lot-of-money-some-day dept.
-	
-	&lt;/div&gt;
-	&lt;/header&gt;
-
-	&lt;div class=&quot;body&quot; id=&quot;fhbody-55654879&quot;&gt;
-
-		
-
-
-			&lt;div id=&quot;text-55654879&quot; class=&quot;p&quot;&gt;
-			ConstantineM writes &lt;i&gt;&quot;It's official: '&lt;a href=&quot;http://marc.info/?l=openbsd-misc&amp;amp;m=138992613426488&amp;amp;w=2&quot;&gt;we are moving towards signed packages&lt;/a&gt;,' says Theo de Raadt on the misc@ mailing list.  This is shortly after a new utility, &lt;a href=&quot;http://bxr.su/OpenBSD/usr.bin/signify/signify.c&quot;&gt;signify&lt;/a&gt;, was committed into the base tree.  The &lt;a href=&quot;http://www.tedunangst.com/flak/post/signify&quot;&gt;reason a new utility had to be written in the first place&lt;/a&gt; is that gnupg is too big to fit on the floppy discs, which are still a supported installation medium for OpenBSD.  Signatures are based on the &lt;a href=&quot;http://ed25519.cr.yp.to/&quot;&gt;Ed25519&lt;/a&gt; public-key signature system from D. J. Bernstein and co., and his public domain code once again &lt;a href=&quot;http://bxr.su/OpenBSD/usr.bin/signify/mod_ed25519.c&quot;&gt;appears&lt;/a&gt; in the base tree of OpenBSD, only a few weeks after some other DJB inventions &lt;a href=&quot;http://it.slashdot.org/story/13/12/11/173213/openssh-has-a-new-cipher-chacha20-poly1305-from-dj-bernstein&quot;&gt;made it into the nearby OpenSSH&lt;/a&gt; as well.&quot;&lt;/i&gt;
-
-			&lt;/div&gt;
-
-			
-
-		
-		
-			
-		
-	&lt;/div&gt;
-	&lt;/div&gt;
-</description>
-<title>
-OpenBSD Moving Towards Signed Packages — Based On D. J. Bernstein Crypto
-</title>
-</item>
-<item>
-<link>
-https://plus.google.com/u/0/+CarmsPerez/posts/cDK6ZNpZ6YH
-</link>
-<description>
-
-</description>
-<title>
-&quot;Actually, the movie was largely a lie about me. &quot;
-</title>
-</item>
-<item>
-<link>
-http://www.youtube.com/attribution_link?a=dc5t7_g12ow&amp;u=%2Fwatch%3Fv%3DDmT80OseAGs%26feature%3Dshare
-</link>
-<description>
-
-</description>
-<title>
-Sudoku solving program in APL that blows my mind.
-</title>
-</item>
-<item>
 <link>
 https://plus.google.com/+CarmsPerez/posts/GnVTvQNgvpf
 </link>
@@ -171,6 +22,375 @@ https://plus.google.com/+CarmsPerez/posts/GnVTvQNgvpf
 </description>
 <title>
 Wozniak: “Actually, the movie was largely a lie about me”
+</title>
+</item>
+<item>
+<author>
+MOISES VELASQUEZ-MANOFF
+</author>
+<link>
+http://opinionator.blogs.nytimes.com/2014/01/18/what-happens-when-the-poor-receive-a-stipend/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;div class=&quot;inlineModule&quot;&gt;
+&lt;div class=&quot;entry categoryDescriptionModule&quot;&gt;
+&lt;div class=&quot;thumb&quot;&gt;&lt;img alt=&quot;The Great Divide&quot; src=&quot;http://graphics8.nytimes.com/images/blogs_v3/opinionator/pogs/greatdivide45.png&quot; width=&quot;50&quot;&gt;&lt;/div&gt;
+&lt;p class=&quot;summary&quot;&gt;&lt;a href=&quot;http://opinionator.blogs.nytimes.com/category/the-great-divide/&quot;&gt;The Great Divide&lt;/a&gt; is a series about inequality.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class=&quot;entry entryTagsModule&quot;&gt;
+&lt;h4&gt;Tags:&lt;/h4&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Growing up poor has long been associated with reduced educational attainment and lower lifetime earnings. Some evidence also suggests a higher risk of depression, substance abuse and other diseases in adulthood. Even for those who manage to overcome humble beginnings, early-life poverty may leave a lasting mark, accelerating aging and increasing the risk of degenerative disease in adulthood.&lt;/p&gt;
+
+&lt;p class=&quot;story-body-text&quot;&gt;Today, more than one in five American children live in poverty. How, if at all, to intervene is almost &lt;a href=&quot;http://www.nytimes.com/2014/01/05/business/50-years-later-war-on-poverty-is-a-mixed-bag.html&quot; target=&quot;_blank&quot;&gt;invariably a politically fraught question&lt;/a&gt;. Scientists interested in the link between poverty and mental health, however, often face a more fundamental problem: a relative dearth of experiments that test and compare potential interventions.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;So when, in 1996, the Eastern Band of Cherokee Indians in North Carolina&amp;#x2019;s Great Smoky Mountains opened a casino, Jane Costello, an epidemiologist at Duke University Medical School, saw an opportunity. The tribe elected to distribute a proportion of the profits equally among its 8,000 members. Professor Costello wondered whether the extra money would change psychiatric outcomes among poor Cherokee families.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;When the casino opened, Professor Costello had already been following 1,420 rural children in the area, a quarter of whom were Cherokee, for four years. That gave her a solid baseline measure. Roughly one-fifth of the rural non-Indians in her study lived in poverty, compared with more than half of the Cherokee. By 2001, when casino profits amounted to $6,000 per person yearly, the number of Cherokee living below the poverty line had declined by half.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;The poorest children tended to have the greatest risk of psychiatric disorders, including emotional and behavioral problems. But just four years after the supplements began, Professor Costello observed marked improvements among those who moved out of poverty. The frequency of behavioral problems declined by 40 percent, nearly reaching the risk of children who had never been poor. Already well-off Cherokee children, on the other hand, showed no improvement. The supplements seemed to benefit the poorest children most dramatically.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;When Professor Costello published her &lt;a href=&quot;http://jama.jamanetwork.com/article.aspx?articleid=197482&quot; target=&quot;_blank&quot;&gt;first study&lt;/a&gt;, in 2003, the field of mental health remained on the fence over whether poverty caused psychiatric problems, or psychiatric problems led to poverty. So she was surprised by the results. Even she hadn&amp;#x2019;t expected the cash to make much difference. &amp;#x201C;The expectation is that social interventions have relatively small effects,&amp;#x201D; she told me. &amp;#x201C;This one had quite large effects.&amp;#x201D;&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;She and her colleagues kept following the children. Minor crimes committed by Cherokee youth declined. On-time high school graduation rates improved. And by 2006, when the supplements had grown to about $9,000 yearly per member, Professor Costello could make &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/20483972&quot; target=&quot;_blank&quot;&gt;another observation&lt;/a&gt;: The earlier the supplements arrived in a child&amp;#x2019;s life, the better that child&amp;#x2019;s mental health in early adulthood.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;She&amp;#x2019;d started her study with three cohorts, ages 9, 11 and 13. When she caught up with them as 19- and 21-year-olds living on their own, she found that those who were youngest when the supplements began had benefited most. They were roughly one-third less likely to develop substance abuse and psychiatric problems in adulthood, compared with the oldest group of Cherokee children and with neighboring rural whites of the same age.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Cherokee children in the older cohorts, who were already 14 or 16 when the supplements began, on the other hand, didn&amp;#x2019;t show any improvements relative to rural whites. The extra cash evidently came too late to alter these older teenagers&amp;#x2019; already-established trajectories.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;What precisely did the income change? Ongoing interviews with both parents and children suggested one variable in particular. The money, which amounted to between one-third and one-quarter of poor families&amp;#x2019; income at one point, seemed to &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2891175/&quot; target=&quot;_blank&quot;&gt;improve parenting quality&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Vickie L. Bradley, a tribe member and tribal health official, recalls the transition. Before the casino opened and supplements began, employment was often sporadic. Many Cherokee worked &amp;#x201C;hard and long&amp;#x201D; during the summer, she told me, and then hunkered down when jobs disappeared in the winter. The supplements eased the strain of that feast-or-famine existence, she said. Some used the money to pay a few months&amp;#x2019; worth of bills in advance. Others bought their children clothes for school, or even Christmas presents. Mostly, though, the energy once spent fretting over such things was freed up. That &amp;#x201C;helps parents be better parents,&amp;#x201D; she said.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;A parallel study at the University of North Carolina at Chapel Hill also highlights the insidious effect of poverty on parenting. &lt;a href=&quot;http://www.fpg.unc.edu/node/6571&quot; target=&quot;_blank&quot;&gt;The Family Life Project&lt;/a&gt;, now in its 11th year, has followed nearly 1,300 mostly poor rural children in North Carolina and Pennsylvania from birth. Scientists quantify maternal education, income and neighborhood safety, among other factors. The stressors work cumulatively, they&amp;#x2019;ve found. The more they bear down as a whole, the more parental nurturing and support, as measured by observers, declines.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;By age 3, measures of vocabulary, working memory and executive function show an inverse relationship with the stressors experienced by parents.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;These skills are thought important for success and well-being in life. Maternal warmth can seemingly protect children from environmental stresses, however; at least in these communities, parenting quality seems to matter more to a child than material circumstances. On the other hand, few parents managed high levels of nurturing while also experiencing great strain. All of which highlights an emerging theme in this science: Early-life poverty may harm, in part, by warping and eroding the bonds between children and caregivers that are important for healthy development.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Evidence is accumulating that these stressful early-life experiences affect brain development. In &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/24165922&quot; target=&quot;_blank&quot;&gt;one recent study&lt;/a&gt;, scientists at the Washington University School of Medicine in St. Louis followed 145 preschoolers between 3 and 6 years of age for up to 10 years, documenting stressful events &amp;#x2014; including deaths in the family, fighting and frequent moves &amp;#x2014; as they occurred. When they took magnetic resonance imaging scans of subjects&amp;#x2019; brains in adolescence, they observed differences that correlated with the sum of stressful events.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Early-life stress and poverty correlated with a shrunken hippocampus and amygdala, brain regions important for memory and emotional well-being, respectively. Again, parental nurturing seemed to protect children somewhat. When it came to hippocampal volume in particular, parental warmth mattered more than material poverty.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;The prospective nature of both studies makes them particularly compelling. But as always with observational studies, we can&amp;#x2019;t assume causality. Maybe the children&amp;#x2019;s pre-existing problems are stressing the parents. Or perhaps less nurturing parents are first depressed, and that depression stems from their genes. That same genetic inheritance then manifests as altered neural architecture in their children.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Numerous animal studies, of course, show that early life stress can have lifelong consequences, and that maternal nurturing can prevent them. Studies on rats, for example, demonstrate that even when pups are periodically stressed, ample maternal grooming prevents unhealthy rewiring of their nervous systems, favorably sculpting the developing brain and making the pups resilient to stress even in adulthood.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Yet in observational human studies, it&amp;#x2019;s difficult to rule out the possibility that the unwell become poor, or that some primary deficiency stresses, impoverishes and sickens. This very uncertainty is one reason, in fact, that Professor Costello&amp;#x2019;s findings are so intriguing, however modest her study size. A naturally occurring intervention ameliorated psychiatric outcomes. A cash infusion in childhood seemed to lower the risk of problems in adulthood. That suggests that poverty makes people unwell, and that meaningful intervention is relatively simple.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Bearing that in mind, Randall Akee, an economist at the University of California, Los Angeles, and a collaborator of Professor Costello&amp;#x2019;s, argues that the supplements actually save money in the long run. He calculates that 5 to 10 years after age 19, the savings incurred by the Cherokee income supplements surpass the initial costs &amp;#x2014; the payments to parents while the children were minors. That&amp;#x2019;s a conservative estimate, he says, based on reduced criminality, a reduced need for psychiatric care and savings gained from not repeating grades. (The full analysis is not yet published.)&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;But contrary &lt;a href=&quot;http://opinionator.blogs.nytimes.com/2013/09/14/lifelines-for-poor-children/?_r=0&quot; target=&quot;_blank&quot;&gt;to the prevailing emphasis&lt;/a&gt; on interventions in infancy, Professor Akee&amp;#x2019;s analysis suggests that even help that comes later &amp;#x2014; at age 12, in this case &amp;#x2014; can pay for itself by early adulthood. &amp;#x201C;The benefits more than outweigh the costs,&amp;#x201D; Emilia Simeonova, a Johns Hopkins Carey Business School economist and one of Professor Akee&amp;#x2019;s co-authors, told me.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Not all changes in the Cherokee&amp;#x2019;s &amp;#x201C;natural experiment&amp;#x201D; were benign, however. For reasons neither Professor Costello nor Professor Akee can explain, children who were the poorest when the supplements began also &lt;a href=&quot;http://www.aeaweb.org/articles.php?doi=10.1257/app.5.2.1&quot; target=&quot;_blank&quot;&gt;gained the most weight&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Another analysis, meanwhile, &lt;a href=&quot;http://ije.oxfordjournals.org/content/40/4/1083.abstract&quot; target=&quot;_blank&quot;&gt;found that more accidental deaths&lt;/a&gt; occurred during those months, once or twice a year, when the tribe disbursed supplements. The authors attributed that, in part, to increased drinking, as well as to buying cars and traveling more.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Then there&amp;#x2019;s the broader context of gaming, an &lt;a href=&quot;http://www.nytimes.com/roomfordebate/2013/10/09/are-casinos-too-much-of-a-gamble&quot; target=&quot;_blank&quot;&gt;often contentious issue&lt;/a&gt; around the country. Opponents often cite the potential for increases in crime, problem gambling and bankruptcies. And some early studies suggest these concerns may have merit.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;But Douglas Walker, an economist at the College of Charleston who has done some consulting for pro-gaming organizations, says many of the studies on gaming have methodological problems. Increased criminal behavior may simply be a function of more visitors to the casino area, he says. If the population increases periodically, it&amp;#x2019;s natural to expect crime to rise proportionally. &amp;#x201C;The economic and social impacts of casinos are not as clear, not as obvious as they seem,&amp;#x201D; he said.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;So Professor Costello&amp;#x2019;s findings are not necessarily a sweeping endorsement of Native American gaming, and casinos generally. Rather, they suggest that a little extra money may confer long-lasting benefits on poor children. And in that respect, the Cherokee experience is unique in several important ways.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;First, this was not a top-down intervention. The income supplements came from a business owned by the beneficiaries. The tribe decided how to help itself. Moreover, the supplements weren&amp;#x2019;t enough for members to stop working entirely, but they were unconditional. Both attributes may avoid perverse incentives not to work.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Also, fluctuations in the casino business aside, the supplements would continue indefinitely. That &amp;#x201C;ad infinitum&amp;#x201D; quality may both change how the money is spent and also protect against the corrosive psychological effects of chronic uncertainty.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;And maybe most important, about half the casino profits went to infrastructure and social services, including free addiction counseling and improved health care. Ann Bullock, a doctor and medical consultant to the Cherokee tribal government, argues that these factors together &amp;#x2014; which she calls the exercising of &amp;#x201C;collective efficacy&amp;#x201D; &amp;#x2014; also may have contributed to the improved outcomes. She describes a &amp;#x201C;sea change&amp;#x201D; in the collective mood when the tribe began to fund its own projects. A group that was historically disenfranchised began making decisions about its own fate.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;&amp;#x201C;You feel controlled by the world when you&amp;#x2019;re poor,&amp;#x201D; she said. &amp;#x201C;That was simply no longer the case.&amp;#x201D;&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;Professor Costello and Professor Akee don&amp;#x2019;t entirely agree. They think cold hard cash made the real difference. For one thing, Professor Akee says, outcomes started improving as soon as the supplements began, before many of the communitywide services went into effect.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;If that&amp;#x2019;s the primary takeaway, then we have some thinking to do. Some people feel that &amp;#x201C;if you&amp;#x2019;re poor, it&amp;#x2019;s because you deserve it,&amp;#x201D; Professor Costello said. &amp;#x201C;If you&amp;#x2019;re sick, it&amp;#x2019;s because you deserve it,&amp;#x201D; she said.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;But if giving poor families with children a little extra cash not only helps them, but also saves society money in the long run, then, says Professor Costello, withholding the help is something other than rational.&lt;/p&gt;
+&lt;p class=&quot;story-body-text&quot;&gt;&amp;#x201C;You&amp;#x2019;re not doing it because it pains you to do it,&amp;#x201D; she said. &amp;#x201C;That&amp;#x2019;s a very valuable lesson for society to learn.&amp;#x201D;&lt;/p&gt;
+
+&lt;p class=&quot;story-body-text&quot;&gt;&lt;em&gt;Moises Velasquez-Manoff is a science writer and the author of &amp;#x201C;An Epidemic of Absence.&amp;#x201D;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+				
+						&lt;/div&gt;
+</description>
+<title>
+ What Happens When the Poor Receive a Stipend?
+</title>
+</item>
+<item>
+<link>
+http://voices.yahoo.com/bitcoin-20-explained-colored-coins-vs-mastercoin-vs-12475857.html
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;article_text_blocks&quot;&gt;&lt;p&gt;  While the entire world is beginning to learn about the power of the Bitcoin payment network, the real innovation behind this protocol is happening behind the scenes. There have been many different Bitcoin enthusiasts who have been talking about the holy grail of decentralized exchanges and using the Bitcoin protocol for more than just payments, and it seems that 2014 is going to be the year when we see these features finally get implemented into some real world applications. There are many different projects that are currently aiming to take Bitcoin to the next level, and it's likely that there won't be one clear winner when everything is said and done. Before we hop into the competition, let's take a closer look at exactly what these projects are trying to accomplish.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Decentralizing the Internet&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  Most people who learned about Bitcoin for the first time in 2013 look at it as nothing more than a currency, but the reality is that it's much more than that. At its core, Bitcoin is a new technology that allows everyone around the world to come to a consensus on who owns what without the use of a centralized third party. There are many different applications that can be built on top of this technology, and Bitcoin is only the first of many apps to come. When you forget about Bitcoin and just look at the technology, there are a large number of new possibilities that jump out at you. For example, if you can have a decentralized ledger that explains who owns which asset, then why do we need centralized stock exchanges? If we can have a global consensus on who owns which domain name or email address, then why do we need centralized versions of these services? If it's possible to create a global marketplace where buyers and sellers can find each other in a decentralized manner, then why do we need to use eBay? These are just a few of the possibilities that people are looking at right now when it comes to taking the technology behind Bitcoin and applying it to more than just payments.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Colored Coins&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  One of the first Bitcoin 2.0 platforms that was put into development was Colored Coins. They recently released the alpha version of their &lt;a target=&quot;_blank&quot; href=&quot;http://chromawallet.com/&quot;&gt;Chromawallet&lt;/a&gt;, and the developers behind this project expect to have a lighter version of the client released in a few weeks. So what will you be able to do with this specialized wallet? The main idea behind the Colored Coins project is that you will be able to apply secondary values to certain bitcoins on the Bitcoin blockchain. Those secondary values can then be used to create completely new digital currencies that are backed by real world assets. For example, let's say you own some gold at your house. You could hypothetically take 5 satoshis (0.00000005 BTC) and say that each one of those satoshis is equal to one gram of the gold that you hold in your home. You could then exchange those 5 satoshis backed by one gram of gold each on the decentralized exchange in the Chromawallet. This means that you could instantly exchange gold to bitcoins, dollars, euros, or any other user currency that is created in the Chromawallet. Another, and perhaps ever more exciting, example is creating stock in a company on the blockchain with Colored Coins. In this situation, you would take 1000 satoshis, or however many shares you want to create in your company, and say that those 1000 satoshis are now equal to one share of your new company. The &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=fmFjmvwPGKU&quot;&gt;Colored Coins&lt;/a&gt; project is a nice introduction to the kinds of features that will are going to see built on top of Bitcoin over the next few years.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Mastercoin&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  &lt;a target=&quot;_blank&quot; href=&quot;http://mastercoin.org&quot;&gt;Mastercoin&lt;/a&gt; is a project that is somewhat similar to Colored Coins, but they are attempting to reach their goals in a different manner. The Mastercoin project was created in August of 2013 as a way to kickstart many of the features that are expected to be included in the Colored Coins project. The first mastercoins were created when early funders sent their bitcoins to a particular Bitcoin address. Their bitcoins were basically then converted to mastercoins and sent back to them. Mastercoin is a new protocol layer built on top of Bitcoin, so mastercoins are basically just small amounts of bitcoins that have certain characteristics. Some of the other exciting features being developed by Mastercoin include a decentralized betting exchange and using &lt;a target=&quot;_blank&quot; href=&quot;http://wiki.mastercoin.org/index.php/Contract_for_difference&quot;&gt;contracts for differences&lt;/a&gt; to create currencies that don't need to rely on a third party for physical backing. One thing that needs to be pointed out about the Mastercoin protocol is the mastercoins on that layer also have their own value separate from bitcoins. This means that Mastercoin is also an alt coin. There are some interesting features that are being added to the Mastercoin protocol, such as the ability to mark certain mastercoins in a savings account where payments can be reversed if they are made without the address holder's permission. The only real problem with Mastercoin is that it is going to be competing with Bitcoin. Although it is often stated that Mastercoin and Bitcoin are not direct competitors, the reality is that users will have to convert some of their bitcoins to mastercoins if they are going to be able to take advantage of many features of the Mastercoin protocol. If many of the features implemented on the Mastercoin protocol layer are also implemented directly on top of Bitcoin, then there really won't be any reason for people to switch from bitcoins over to mastercoins. There will actually still be an incentive to stick with Bitcoin if there are not major advantages of Mastercoin over Bitcoin because the price of bitcoins will likely be less volatile. The entire value of all the bitcoins in the world is currently hovering around $10 billion, while the value of all the mastercoins has dropped below $100 million. Liquidity is a huge factor when it comes to the viability of a currency, so it will be interesting to see if the advanced features of Mastercoin allow it to overcome the liquidity advantage of Bitcoin. Either way, the world is likely to benefit from the advanced features that are currently being implemented in the Mastercoin protocol. Mastercoin, much like Bitcoin, is a technology that is difficult to understand at first. The good news is that there a number of different &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/results?search_query=ron+gross+mastercoin&amp;amp;sm=3&quot;&gt;videos on YouTube&lt;/a&gt; where Mastercoin Executive Director Ron Gross explains most of the important features of the protocol in various interviews and presentations from over the past few months.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Open Transactions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  &lt;a target=&quot;_blank&quot; href=&quot;http://opentransactions.org/wiki/index.php?title=Main_Page&quot;&gt;Open Transactions&lt;/a&gt; is a project that has been in development since before Bitcoin became a big deal. The lead developer behind the project, Chris Odom aka FellowTraveler, originally thought of the main idea behind Open Transactions with gold-backed digital currencies in mind. Once Bitcoin came along, it only made sense to integrate into OT. One of the main aims of the Open Transactions project is to decentralize the entire financial landscape by allowing anyone to issue currencies and various financial assets that are secured with cryptography. Anyone will be able to create digital tokens that represent real value on Open Transactions, but one of the most innovative features of this system is that the people who issue the digital tokens will not be able to alter the ledger for their currency or stock. For example, PayPal can technically go into their servers and change your account balance from $11,873.33 to $4,902.34 if they felt compelled to do that. This kind of action is impossible with assets issued through Open Transactions because of the way that the transactions are handled and signed. Of course, there is still the problem of having to trust that a third party who is backing their currency by gold, silver, dollars, or any other asset actually has the asset in a vault somewhere. The good news is that a solution for this problem has recently been found. In addition to issuing a currency, an issuer can also store collateral for the users of his or her currency in the form of bitcoins. For example, if there was a currency that was backed by one ounce of gold, then the issuer of that currency could send an ounce of gold's worth of bitcoins into an escrow account and agree to distribute those bitcoins to the holders of that particular currency in a situation where there is a &quot;run on the bank&quot;. For more information on Open Transactions, I recommend this &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=HSgpStCTw2g&quot;&gt;interview with Chris Odom&lt;/a&gt; and this &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=hwyZ7ZgCq_o&quot;&gt;panel on decentralized exchanges&lt;/a&gt;. You can also watch &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=vtJcUM5-TeA&quot;&gt;Odom's interview on Let's Talk Bitcoin&lt;/a&gt; where he talks about integrating Bitmessage into Open Transactions for transactions between different servers.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Protoshares&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  Much like Mastercoin, Protoshares is an altcoin that actually gets people excited because it offers something different than a simple clone of the Bitcoin blockchain. The idea behind Protoshares is that anyone who owns Protoshares will also get a stake in the decentralized autonomous corporations that are created by Invictus Innovations. Their first project, &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=5BV55IrZi7g&quot;&gt;Bitshares&lt;/a&gt;, is basically their way of going after the problem of creating a decentralized exchange. Their solution is similar to the contracts for differences idea that Mastercoin is also implementing. Basically, various assets, such as BitUSD and BitGold will derive their value from two parties who own Bitshares and place long and short positions on that particular asset. You can find an &lt;a target=&quot;_blank&quot; href=&quot;https://bitcointalk.org/index.php?topic=313873.msg3373956#msg3373956&quot;&gt;explanation as to where BitAssets will get their value from bytemaster&lt;/a&gt; on the bitcointalk forum. Bytemaster, aka Daniel Larimer, is the CEO of Invictus Innovations. After BitShares is ready, Invictus will then begin to work on DomainShares and a number of other decentralized autonomous corporations that can replace some of the centralized online services that we use today.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;Decentralized Autonomous Corporations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  You may have noticed the term &quot;decentralized autonomous corporation&quot; being thrown around a few times in the section on Protoshares. What exactly is a decentralized autonomous corporation or DAC? A DAC is basically a way to use the blockchain technology behind Bitcoin to created a decentralized service. For example, Bitcoin is technically the first DAC ever created. There is no central authority that controls Bitcoin, and it keeps running without the need for some guys in a corporate office decide on what kinds of moves Bitcoin needs to make as a company. Namecoin is another example of a decentralized autonomous corporation, and it becomes much easier to understand this concept when you take a look at this altcoin. Namecoin is a decentralized service that allows you to register a .bit domain. They are also working on similar services for email and online identities. Namecoins are basically a commodity that allow you to purchase a .bit domain. This setup allows the original developers and early adopters of Namecoin to profit from their work. People who own namecoins also have an incentive to promote and build on top of Namecoin because it will help their namecoins increase in value. Without the profit motive, many of the decentralized services that we are going to see pop up in the coming years may not have been possible or viable over the long term. We will soon see many different DACs come about that will offer decentralized alternatives to services such as Facebook, Twitter, Gmail, online sportsbooks, voting booths, SSL, cloud storage, and much more.&lt;/p&gt;&lt;p&gt;  &lt;b&gt;So Who Will Win the Battle?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;  At the end of the day, the reality is that all of these Bitcoin 2.0 technologies are not really competing against each other. Open Transactions will allow people to trade protoshares, mastercoins, bitcoins, and everything else on their servers. Perhaps you will even be able to trade a protoshares-backed currency on top of Mastercoin for BitMastercoins one day. Humanity wins with the creation of all these new decentralized services and technologies, and we can all thank Satoshi Nakamoto for his, her, or their creation of the blockchain technology. In a few years, we could be talking about a situation where the entire Internet has been replaced with services that use the blockchain technology as the foundation of their development.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+Bitcoin 2.0 explained
+</title>
+</item>
+<item>
+<link>
+http://blog.gosquadron.com/use-tls
+</link>
+<description>
+&lt;div&gt;&lt;article class=&quot;post&quot;&gt;
+            &lt;header&gt;
+              
+              &lt;time datetime=&quot;2014-01-19T10:55:00&quot;&gt;2014-01-19&lt;/time&gt;
+            &lt;/header&gt;
+            &lt;p&gt;Let's say you have two backend services which need to talk to one another. Say a metadata search service and an internal metadata API. The search service needs to query the metadata API, but none of your customers need to access the metadata API directly.&lt;/p&gt;
+&lt;p&gt;How do you authenticate them? You need to make sure that random criminals can't
+manipulate your stuff or steal your data. So what do you do? Maintaining
+whitelists is annoying.&lt;/p&gt;
+&lt;p&gt;So you roll your own authentication, of course! It's simple: all you need to do is hash these three HTTP headers with this partial JSON message and then use SHA-1 in there because MD5 is &quot;broken&quot; so you heard and then roll that in with your shared secret (which is &quot;bro-it-up&quot; of course) and then it's great! Undocumented but newbies can read the code.&lt;/p&gt;
+&lt;p&gt;Don't do this.&lt;/p&gt;
+&lt;h2&gt;Try TLS Instead&lt;/h2&gt;
+&lt;p&gt;Did you know that clients connecting to SSL or TLS servers can have their own certificates? Much like server TLS certificates (known as X.509 certificates), clients can have their certificates signed by a certificate authority.&lt;/p&gt;
+&lt;p&gt;This lets servers authenticate clients. The server checks to make sure clients not only provide a certificate (most don't), but that the certificate is signed by the right authority.&lt;/p&gt;
+&lt;p&gt;A quick note on SSL verses TLS: this article will use TLS as you should not be using SSL v2.0 or SSL v3.0 anymore due to &lt;a href=&quot;http://en.wikipedia.org/wiki/Transport_Layer_Security#Security&quot;&gt;various attacks against them&lt;/a&gt;. The latest and best version of TLS to use as of this writing is TLS v1.2.&lt;/p&gt;
+&lt;h2&gt;Advantages&lt;/h2&gt;
+&lt;p&gt;Free encryption! Don't let the NSA or any other snoopers have access to your private data going over the wire. This is especially important if it's customer data that they would appreciate being kept private.&lt;/p&gt;
+&lt;p&gt;It's secure. More secure than whatever roll-your-own scheme a non-cryptographer could come up with. The client can also verify the server to ensure its DNS hasn't been tampered.&lt;/p&gt;
+&lt;p&gt;There's little to no application logic. You don't have to bake it into your application code at all.&lt;/p&gt;
+&lt;p&gt;You don't have to use HTTP. If your application's backend servers speak through some non-HTTP protocol this will still work.&lt;/p&gt;
+&lt;p&gt;You can use revocation lists. Machine compromised? Revoke its certificate instead of updating every shared secret.&lt;/p&gt;
+&lt;p&gt;It's also easy to use TLS elsewhere once you do this. If you have one service that is public facing, and a version of it that is private, you can easily make the public one use TLS and make the private version use TLS with client cert verification.&lt;/p&gt;
+&lt;h2&gt;Disadvantages&lt;/h2&gt;
+&lt;p&gt;Despite its advantages, there are a few gotchas.&lt;/p&gt;
+&lt;p&gt;There are bugs in OpenSSL, the most commonly used SSL/TLS implementation. And other TLS implementations, too. Your software may be vulnerable if there are new ones discovered.&lt;/p&gt;
+&lt;p&gt;Some languages/stacks make using TLS annoying. However, there's a workaround for this: use stunnel or a load balancer.&lt;/p&gt;
+&lt;p&gt;There is non-zero human overhead for making and signing certificates.&lt;/p&gt;
+&lt;p&gt;You can't reasonably do any authorization (remember: &lt;a href=&quot;http://en.wikipedia.org/wiki/AAA_protocol#Authentication&quot;&gt;authorization is distinct from authentication&lt;/a&gt;) with TLS. You'll have to do that at the application level. However, for many backend services, it's reasonable to have an anything-goes authorization policy after authentication.&lt;/p&gt;
+&lt;p&gt;It's not as fast. Both the TLS handshake and encryption take a non-zero amount of time and resources. This is not an issue for most applications, though. You can also reduce this overhead by reusing the opened TLS connections in pools.&lt;/p&gt;
+&lt;h2&gt;How to use TLS for your service&lt;/h2&gt;
+&lt;p&gt;There are a few things you need for your TLS architecture. For any implementation you'll need: a certificate authority (CA), a server certificate, and a client certificate.&lt;/p&gt;
+&lt;h2&gt;Generating Certificates&lt;/h2&gt;
+&lt;p&gt;Let's generate the top level CA's private key first:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;genrsa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Great. Now we need an X.509 certificate for the CA:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x509&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can adjust how long the CA is valid for with -days. After this amount of time, it's no longer valid. &lt;/p&gt;
+&lt;p&gt;It's important to keep the root CA very secure. The typical way to do this is store it on an &lt;a href=&quot;http://en.wikipedia.org/wiki/Air_gap_%28networking%29&quot;&gt;air gapped&lt;/a&gt; computer, where you need to use your &lt;a href=&quot;http://en.wikipedia.org/wiki/Sneakernet&quot;&gt;sneakernet&lt;/a&gt; to get the certificate signing requests to it.&lt;/p&gt;
+&lt;p&gt;Now let's generate the server and client's certificates. First the private keys:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;genrsa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;genrsa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4096&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we need to generate a certificate signing request (CSR). This can be sent via email, or sent via sneakernet to the machine with the root CA.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csr&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csr&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;All that's left is to sign these CSRs to produce signed X.509 certificates.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x509&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CA&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAkey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAcreateserial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1023&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x509&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CA&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAkey&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAcreateserial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1023&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You no longer need those CSRs, feel free to delete them. For each service, you now need three things: the root CA certificate (root.pem), the service's private key, and the service's certificate.&lt;/p&gt;
+&lt;h2&gt;Using TLS&lt;/h2&gt;
+&lt;p&gt;To use TLS, you have two options. You can either use your programming language's implementation of TLS, or you can use &lt;a href=&quot;https://www.stunnel.org/index.html&quot;&gt;stunnel&lt;/a&gt;. Here at &lt;a href=&quot;http://www.gosquadron.com&quot;&gt;Squadron&lt;/a&gt; we use Python, so we'll go over both stunnel and Python. And we''l also cover configuring your load balancers.&lt;/p&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;After installing &lt;a href=&quot;https://pypi.python.org/pypi/pyOpenSSL&quot;&gt;pyOpenSSL&lt;/a&gt;, you can use something like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;OpenSSL&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;OpenSSL.SSL&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;client_callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error_depth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'client_callback({}, {}, {}, {}, {})'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x509&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error_depth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret_code&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TLSv1_METHOD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use_privatekey_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use_certificate_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_client_ca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_verify_locations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_verify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VERIFY_PEER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VERIFY_FAIL_IF_NO_PEER_CERT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;client_callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The key feature is the &lt;a href=&quot;http://www.openssl.org/docs/ssl/SSL_CTX_set_verify.html&quot;&gt;set_verify method&lt;/a&gt;. VERIFY_PEER for servers asks the client for a client certificate. It isn't required unless you specify VERIFY_FAIL_IF_NO_PEER_CERT. This does what it says: if there's no client certificate, fail the request.&lt;/p&gt;
+&lt;p&gt;Now you can hook this up to a server like CherryPy like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wsgiserver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CherryPyWSGIServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; 
+        &lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ssl_adapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pyOpenSSLAdapter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ssl_adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Call .start() on that server and you're in business!&lt;/p&gt;
+&lt;p&gt;Now, for the client, we're using the excellent &lt;a href=&quot;http://requests.readthedocs.org/en/latest/&quot;&gt;requests&lt;/a&gt; library. We need to use this somewhat nasty TLSAdapter business because requests doesn't support TLSv1 except this way.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do_thing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;resp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://{}/update/{}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                &lt;span class=&quot;n&quot;&gt;cert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/client.crt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'/path/client.key'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/path/root.pem'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dumps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kwargs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Content-Type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'application/json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The tuple &lt;em&gt;cert&lt;/em&gt; specifies your client certificate, and verify is the path to your root CA. If you set verify to true, you use the system's CA file, which is obviously correct for scenarios where you're using a proper CA signed certificate, such as a public API.&lt;/p&gt;
+&lt;h3&gt;Stunnel&lt;/h3&gt;
+&lt;p&gt;Stunnel is easier. You need a stunnel.conf (using stunnel4) like this for your service.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;CAfile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foreground&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8887&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8889&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will accept TLS connections on port 8887, and connect them through to localhost:8889 in plaintext. Your service should listen on localhost:8889 only, and not on 0.0.0.0 or on any specific IP address for security reasons.&lt;/p&gt;
+&lt;p&gt;That's it!&lt;/p&gt;
+&lt;h3&gt;Load balancers&lt;/h3&gt;
+&lt;p&gt;If your services use load balancers (and they almost certainly should unless you're using a DNS solution such as Route53 because you're not on HTTP), you'll need to set this up your load balancer to do either TLS pass through or actually make the load balancer terminate the TLS and do the client certificate verification.&lt;/p&gt;
+&lt;p&gt;The best-in-class solution to this is with HAProxy. HAProxy is the best software load balancer available today and it has great support for TLS in v1.5 and above. If you're stuck with an older HAProxy, you can use TCP mode to pass through TLS, but that's less than ideal. HAProxy configuration is a bit outside the scope of this article, but it's simple enough to configure it how we need to in a simple way:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;global&lt;/span&gt;                                                                                     
+    &lt;span class=&quot;n&quot;&gt;daemon&lt;/span&gt;                                                                                 
+    &lt;span class=&quot;n&quot;&gt;maxconn&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;256&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;                                                                                   
+    &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;                                                                              
+    &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;                                                                 
+    &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;                                                                 
+    &lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;frontend&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ft_www&lt;/span&gt;                                                                            
+    &lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8081&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haproxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ca&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haproxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootCA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sslv3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tlsv10&lt;/span&gt;    
+    &lt;span class=&quot;n&quot;&gt;default_backend&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bk_www&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;backend&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bk_www&lt;/span&gt;                                                                             
+    &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8887&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ca&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haproxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootCA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haproxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maxconn&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In addition to turning off SSLv2, SSLv3 and TLSv1.0, you may also wish to turn off TLSv1.1 if all of your clients support TLSv1.2. You may also want to investigate the ciphers option to restrict further known insecure ciphers such as RC4. In general, it is best to turn off as many options as possible to reduce possible attack vectors.&lt;/p&gt;
+&lt;p&gt;The files you need in /etc/haproxy are the root CA you generated earlier and a combined cert and private key file. This is easy to do:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;haproxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;combined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you want to, you can also log some additional TLS metadata via &lt;a href=&quot;http://blog.exceliance.fr/2013/06/13/ssl-client-certificate-information-in-http-headers-and-logs/&quot;&gt;the http-request set-header directive&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you're unfortunate enough not to use HAProxy, you can also get this going with &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_verify_client&quot;&gt;Nginx&lt;/a&gt; or &lt;a href=&quot;http://httpd.apache.org/docs/2.2/ssl/ssl_howto.html#accesscontrol&quot;&gt;Apache with mod_proxy&lt;/a&gt;, although it's more work.&lt;/p&gt;
+&lt;p&gt;And if you're on Amazon's Elastic Load Balancer, you're &lt;a href=&quot;http://www.villescorner.com/2013/07/two-amazon-aws-elastic-load-balancer.html&quot;&gt;out of luck&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Testing&lt;/h2&gt;
+&lt;p&gt;This is of vital importance, as if you get this wrong, attackers could connect to your service which was supposed to be using TLS and wasn't!&lt;/p&gt;
+&lt;p&gt;It's easy to test, however, so it should integrate into your monitoring solution quite easily. Using OpenSSL:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8887&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This should fail with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Verify return code: 19 (self signed certificate in certificate chain)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And a non-zero exit code. To test that TLS is actually working:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;openssl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CAfile&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8887&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;null&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Which will say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Verify return code: 0 (ok)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Great! It works. One more thing you should check is that client certificates signed with another root CA don't work. Follow the same procedure as before to make another CA, and test this again. You should not be able to hit your service with this other client certificate.&lt;/p&gt;
+&lt;h2&gt;Best practices&lt;/h2&gt;
+&lt;p&gt;It makes sense to have one CA per environment you deploy to. So if you have three environments: development, testing, and production, you should have three CAs. Services shouldn't be able to authenticate to different environments.&lt;/p&gt;
+&lt;p&gt;You should also maintain a certificate revocation list. With stunnel the option is CRLfile, however in Python your best bet is to return 0 from client_callback after checking the thumbprint manually. Load balancers like HAProxy also support CRLs.&lt;/p&gt;
+&lt;p&gt;Storing your CA private key securely is important. Anyone who gets access to it can access your services. It's best to store this on an air gapped computer, and use your sneakernet to make certificates for it.&lt;/p&gt;
+&lt;h2&gt;Secure your services&lt;/h2&gt;
+&lt;p&gt;Security through obscurity isn't enough. You probably haven't done the work to &lt;a href=&quot;http://blog.existentialize.com/so-you-want-to-crypto.html&quot;&gt;learn crypto&lt;/a&gt; so you can't design your own shared secret auth easily. &lt;/p&gt;
+&lt;p&gt;You need to secure and encrypt your services' traffic, though. So use the
+protocol that's more battle-tested than your custom protocol: TLS.&lt;/p&gt;
+          &lt;/article&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+Use TLS for authentication
+</title>
+</item>
+<item>
+<author>
+The Doctor
+</author>
+<link>
+http://blog.chewxy.com/2014/01/20/why-does-a-good-kettle-cost-90
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
+				&lt;p&gt;Yesterday morning I woke up to a house without electricity &amp;#x2013; that meant I woke up in a puddle of sweat because the fan was no longer turned on. It turned out that my housemate, while making coffee, had tripped the mains of the house. The kettle had caused the trip. It was no longer safe to use the kettle and so I had to buy a new kettle.&lt;/p&gt;
+&lt;p&gt;&lt;figure id=&quot;attachment_1790&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3320S.jpg?114f79&quot; alt=&quot;My Dead Kettle&quot; width=&quot;900&quot; class=&quot;size-full wp-image-1790&quot;&gt;&lt;figcaption id=&quot;figcaption_attachment_1790&quot; class=&quot;wp-caption-text&quot;&gt;The Dead Kettle&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Lately, I had coincidentally been considering buying a new kettle to replace the old one, which I have used since 2007.  I was also kinda tired of sticking a thermometer in the water to figure out the temperature of the water before I brew my coffee or tea. However, I never actually had a good reason to do so. The kettle we had was absolutely serviceable, and there wasn&amp;#x2019;t a good reason to change it. Now I do.&lt;/p&gt;
+&lt;p&gt;And so, I took a break from writing &lt;a href=&quot;https://leanpub.com/jsinterviewquestions?utm_source=kettlearticle&amp;amp;utm_medium=blog&amp;amp;utm_term=book&amp;amp;utm_content=book&amp;amp;utm_campaign=product&quot; title=&quot;Javascript Interview Questions&quot; target=&quot;_blank&quot;&gt;my book on Javascript interview questions&lt;/a&gt; (&lt;a href=&quot;https://leanpub.com/underhandedjavascript?utm_source=kettlearticle&amp;amp;utm_medium=blog&amp;amp;utm_term=book&amp;amp;utm_content=book&amp;amp;utm_campaign=product&quot; title=&quot;Underhanded Javascript&quot; target=&quot;_blank&quot;&gt;alternate title: Underhanded Javascript&lt;/a&gt;) and hopped online to find the best variable temperature control kettles I can find. Being the coffee and tea snob that I am, I perused a number of forums, looking for the best recommendations for such a kettle. I narrowed my choices down to the &lt;a href=&quot;http://www.amazon.com/gp/product/B001DYERBK/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B001DYERBK&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Breville BKE820XL&lt;/a&gt;($149), the &lt;a href=&quot;http://www.amazon.com/gp/product/B003KYSLNQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B003KYSLNQ&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Cuisinart CPK-17&lt;/a&gt;($115), or the Sunbeam KE9450($100). The main reason why I shortlisted them was because they had temperature control. There was also another brand that was mentioned &amp;#x2013; Shark, or Belle, or Da Vinci &amp;#x2013; basically Chinese knockoffs of the Cuisinart.&lt;/p&gt;
+&lt;p&gt;The one thing I noticed about these is that they all cost more than $90, which is way more than what I&amp;#x2019;m willing to pay for a kettle. My old kettle had cost me something like $10 from K-Mart. I wasn&amp;#x2019;t very willing to part with so much money for a kettle. So I decided to look for a cheaper version &amp;#x2013; I was willing to forgo the temperature control &amp;#x2013; afterall, I had been using a manual thermometer for years and it didn&amp;#x2019;t affect my making tea or coffee.&lt;/p&gt;
+&lt;p&gt;My housemate had also mentioned earlier that she would not prefer a plastic kettle and would prefer something metal. And so I went to look for normal electrical kettles. To my frustration &amp;#x2013; all the basic kettles cost roughly the same price: $39. The branded ones cost slightly more, and the non-branded ones cost slightly less. Why in the world would it cost so much? A kettle is not something difficult to build. The most difficult part is the grounding of it &amp;#x2013; which metal kettles are in sore need off, lest they give you an electric shock. But it&amp;#x2019;s really not that difficult to build a kettle, nor does it cost that much.&lt;/p&gt;
+&lt;h2&gt;How to Build a Kettle With Temperature Control&lt;/h2&gt;
+&lt;p&gt;I&amp;#x2019;m a big fan of conceptual thinking. I&amp;#x2019;ve once &lt;a href=&quot;http://blog.chewxy.com/2013/07/03/do-not-expect-breakthroughs/&quot; title=&quot;Do Not Expect Breakthroughs&quot; target=&quot;_blank&quot;&gt;complained&lt;/a&gt; about some of my acquaintences&amp;#x2019; inability to even conceptually build something, what more actually building something. In &lt;a href=&quot;http://www.amazon.com/gp/product/0201657880/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201657880&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Programming Pearls&lt;/a&gt;, this was referred to as the skill to do back-of-the-envelope-calculation. I think it&amp;#x2019;s a very good skill to have.&lt;/p&gt;
+&lt;p&gt;So I began to conceptually build a kettle with temperature controls. I chose a top-down approach to building this in my mind. First, I built a mental model of what is needed in a basic kettle: a heating element, a receptacle to store liquid while it boils, some sort of automatic off switch &amp;#x2013; probably heat powered &amp;#x2013; to turn the switch off once it hits boiling point. Then I think about what extra stuff are needed to build the same kettle, except with temperature control. Temperature control indicates that a) a reading of the temperature of the water is required; b) a switch that could understand the reading of the water temperature.&lt;/p&gt;
+&lt;p&gt;This implied only one thing: &lt;a href=&quot;http://en.wikipedia.org/wiki/PID_controller&quot; title=&quot;PID controller&quot; target=&quot;_blank&quot;&gt;a PID&lt;/a&gt;, and a relay of some sort. I know what PIDs cost &amp;#x2013; I own a couple of PID controllers and have built one from scratch. Because of the cost, that also meant that the kettle that I currently have (and that is broken), cannot possibly be digitally controlled &amp;#x2013; it&amp;#x2019;d cost too much.&lt;/p&gt;
+&lt;h2&gt;Dismantling the kettle&lt;/h2&gt;
+&lt;p&gt;So out of curiosity, I began to dismantle my kettle. A kettle is an extremely simple electrical appliance, really. A heating coil heats up water. When it is hot enough, it stops. And I was right &amp;#x2013; it was ridiculously simple. It simply consisted of a switch, a power source and a heating element:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3334S.jpg?114f79&quot; alt=&quot;Power source, switch and heating element&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1794&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I had removed the switch to remove the heating element from the jug. The image above shows a reconstruction of how the power supply connects to the heating element. Inset is the power supply connected to the switch. The red wires are to a LED which tells you that the heating element is turned on.&lt;/p&gt;
+&lt;p&gt;However, I was still puzzled by how the kettle would automatically turn off when the water boiled. And so I looked carefully at the details of everything in the kettle. Suddenly it hit me. I was looking at it all along, and it was staring back at me:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3324S.jpg?114f79&quot; alt=&quot;The back of the heating element, exposing the bimetallic strip&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1796&quot;&gt;&lt;/p&gt;
+&lt;p&gt;OK, paredolia asides, the metal strip in the middle actually plays a very important part in the analog automatic control. I had actually seen one of those before when I was very young. It&amp;#x2019;s actually a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bimetallic_strip&quot; title=&quot;Bimetallic strip&quot; target=&quot;_blank&quot;&gt;bimetallic strip&lt;/a&gt; that curls outwards when heated. It&amp;#x2019;s basically 2 pieces of metal that is pressed into one strip. Because the different metals have different expansion rates when heated, heating a bimetallic strip would cause it to bend one way. &lt;/p&gt;
+&lt;p&gt;To prove that, I took a blowtorch to it and it curled outwards exactly as I thought it would. When it cooled down, it became a flat strip again. The metal strip curved outwards. It must trigger something. Looking at the back of the power source, I found what it triggered &amp;#x2013; a spring loaded switch. Here&amp;#x2019;s how the back of the power supply looks like:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3325S.jpg?114f79&quot;&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3325S.jpg?114f79&quot; alt=&quot;IMG_3325S&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1797&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The way the kettle is constructed, the heating element and the power source are pressed together when the blue switch is pressed down to turn on the kettle. The switch is basically a see-saw. When it&amp;#x2019;s pressed down, the lever will latch on at the top (the silver coloured piece in the picture above), pressing the power source towards the heating element. The copper piece in the picture above comes into contact with the metal base plate of the heating element, and the circuit is complete. The heating element heats up. &lt;/p&gt;
+&lt;p&gt;When the bimetallic strip gets heated up, it curls outwards, pressing on the trigger. The trigger, when pressed, pushes the lever outwards, causing the latch to unlatch. Once the latch is undone, the power source is no longer pressing onto the base plate of the heating element. The circuit is broken, and the water stops heating.&lt;/p&gt;
+&lt;p&gt;There is a certain elegance to these analogue systems that one must be able to appreciate. Using a bimetallic strip to trigger a mechanical trigger is simply quite a brilliantly elegant way of solving a problem. There is no reason to build an expensive kettle with digital controls if perfectly cheap and simple analogue solutions like these exist.&lt;/p&gt;
+&lt;h2&gt;How Much Does A Basic Kettle Cost&lt;/h2&gt;
+&lt;p&gt;Once one knows how something works, &lt;a href=&quot;http://blog.chewxy.com/2012/09/24/magic-lost/&quot; title=&quot;Magic, Lost&quot; target=&quot;_blank&quot;&gt;the magic is lost&lt;/a&gt;. Very quickly I began tabulating how much it would cost to build and market a kettle. My answer came to a little over $7. Even with the fanciest metal designs, I estimate it&amp;#x2019;d cost no more than $12 to make and market a basic kettle with no bells and whistles. Even with the most generous of all estimates &amp;#x2013; which is to say extremely expensive industrial designers were hired to craft the shape of the bottle (let&amp;#x2019;s assume we&amp;#x2019;re talking about something like the &lt;a href=&quot;http://www.casabugatti.com/design-appliances/kettle-X1?id=14-VERACR&quot; title=&quot;Bugatti Vera&quot; target=&quot;_blank&quot;&gt;Bugatti Vera&lt;/a&gt;.), and that the manufacturer uses the most expensive possible manufacturing tools, the price over a mass amount of units (say 100,000 units) would not cost more than $16.&lt;/p&gt;
+&lt;p&gt;So why did the rest of the basic kettles cost $39? Given the almost-same price from all the brands, they all have to function on the same principle essentially. They&amp;#x2019;d also have to have pretty much the same fixed and variable costs. If we assume we see the market in action, then that would mean I was wrong. It didn&amp;#x2019;t cost $16 to manufacture and market those kettles. The problem is, there exist on the market, homebrand kettles that cost $10 or so. If both homebrand and branded kettles use a similar principle, then it would be cause to wonder why the basic kettles of the bigger brands all cost $39.&lt;/p&gt;
+&lt;p&gt;Unless of course, those $39 kettles use a digital solution to stop the water from boiling. But that is just rather silly, given that an analogue solution works better. I do not see how a digital solution is actually a superior solution. It&amp;#x2019;s rather like saying replacing your car&amp;#x2019;s control panel with a touch screen is a better idea &amp;#x2013; oh wait. Tesla actually thought &lt;a href=&quot;http://upload.wikimedia.org/wikipedia/commons/a/a3/Tesla_Model_S_digital_panels.jpg&quot; title=&quot;Tesla Model S digital panel&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; was a good idea. It isn&amp;#x2019;t.&lt;/p&gt;
+&lt;p&gt;Given that a digital control solution is not going to be much superior (and in fact, like the Tesla example, could actually be inferior) &amp;#x2013; water has ONE boiling temperature &amp;#x2013; 100 Celcius, why would a basic kettle cost $39 and up? Yes, I mean, people could be paying for the design (because a red kettle is so going to boil water faster than a white kettle), but really, there is no basis in reality to pay for such an expensive kettle. Especially so if the basic kettle is digitally driven. It&amp;#x2019;s just a waste of time and energy of the designers, trying to cramp so much electronics into a small space.&lt;/p&gt;
+
+&lt;p&gt;No, rather, basic kettles from bigger brands cost $39 as a form of price differentiation. Consumers who can afford to pay more, or do not know better, would pay more for the same basic product. Anything extra is mostly cosmetic and has no say on the functionality (or if it does, like for example, if the shape or material of a kettle would help it retain heat better, it doesn&amp;#x2019;t add much marginal utility).&lt;/p&gt;
+&lt;h2&gt;How to Build a Kettle With Temperature Control &amp;#x2013; pt2&lt;/h2&gt;
+&lt;p&gt;Which brings me to why I actually want a kettle with temperature control. Unlike a basic kettle, I understand why a more advanced kettle with variable temperatures would cost so much more. As previously mentioned, having temperature control means requiring something to read the temperature of the water &amp;#x2013; a temperature probe (I own a couple of PT100 probes myself), and a PID controller. Those things are not cheap, even if one buys them in bulk. A basic PID would set one back about $30 (and that was the best bulk price I could get). With PID controllers also come costs of hiring electronic designers, and micro-controller programmers. Also, a relay is required to turn on and off the kettle, instead of mechanical solutions like the one above. Furthermore, these electronics have to be heatproofed. A kettle is a very hot thing, and the microcontrollers in the kettle must not fail under heated circumstances.&lt;/p&gt;
+&lt;p&gt;All these little things add up. But it&amp;#x2019;s actually useful. Instead of hiring electronic designers, programmers, and using electronics for basic functionality, the main use is for precision boiling. And that&amp;#x2019;s a good use. This is one of the main reasons why I am looking at variable temperature kettles (okay, I admit, it&amp;#x2019;d make my life a lot easier too, if I didn&amp;#x2019;t have to stand and take the temperature of the water every time I make my coffee or tea).&lt;/p&gt;
+&lt;p&gt;The reason is I don&amp;#x2019;t feel ripped off paying for a variable temperature kettle. Knowing how a basic analogue kettle works and especially knowing how much it would cost to build one, I would feel terrible if I had to spend $40 on a kettle that works exactly the same way in principle. And yes, before you ask, the ones I saw, they DO work on the same exact principles. How do I know this? The switch in those kettles are mechanical. A digital kettle wouldn&amp;#x2019;t have a mechanical switch (you can design one that has, but I don&amp;#x2019;t see the point).&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#x2019;s a rough bill of materials/services and estimates I came out with, assuming a unit cost over 100,000 units in a production run:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Estimated Cost&lt;/th&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Manufacture of kettle body (metal, because plastic is so pedestrian)&lt;/td&gt;
+&lt;td&gt;$5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Industrial design of kettle body (assuming 3 high calibre ($100k p/a) industrial designer)&lt;/td&gt;
+&lt;td&gt;$7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PID Controller + other electronics&lt;/td&gt;
+&lt;td&gt;$10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Heating element&lt;/td&gt;
+&lt;td&gt;$3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Electronics engineer (assuming 3 electronics engineer and 2 test technicians)&lt;/td&gt;
+&lt;td&gt;$7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Various manufacturing fixed cost (safety tests, product tests, etc)&lt;/td&gt;
+&lt;td&gt;$5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Marketing, stocking, etc fees&lt;/td&gt;
+&lt;td&gt;$5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;It comes close to $45. And these are on quite generous assumptions. I have no doubt that given the scale of these big branded companies, they would have more economies of scale and scope to reduce these costs even further. Of couse, this being a mental estimate, it could go very wrong. It could be the companies don&amp;#x2019;t manufacture 100,000 units per run. That would change things quite a bit.&lt;/p&gt;
+&lt;p&gt;This means a markup of double. But the main reason why I would rather go for a $90 kettle instead of a $39 kettle is because the $90 kettle does a lot more. There is quite a bit more function per dollar than the $39 one.&lt;/p&gt;
+&lt;h2&gt;But &amp;#x2026;&lt;/h2&gt;
+&lt;p&gt;Of course, then there&amp;#x2019;s the &lt;a href=&quot;http://www.amazon.com/gp/product/B0083I7THI/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B0083I7THI&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Hamilton Beach programmable kettle&lt;/a&gt;, which comes pretty close to the estimated cost price of building a variable temperature kettle I had estimated. I had estimated it costs about $45 to build and market a digital kettle with basic PID functions. I was willing to accept advanced kettles cost about $90 because PID tuning is a variable quality, and I&amp;#x2019;d be willing to accept that companies like Bonavita or Breville actually spend more time and money into tuning these little details. I don&amp;#x2019;t know how Hamilton Beach did it, and I&amp;#x2019;m exceedingly curious as to how. The people at Steepster &lt;a href=&quot;http://steepster.com/discuss/5108-variable-temp-kettle-opinions&quot; title=&quot;Steepster discussion on the Hamilton Beach kettle&quot; target=&quot;_blank&quot;&gt;don&amp;#x2019;t think too highly of it&lt;/a&gt; though, so there&amp;#x2019;s some clues there. &lt;/p&gt;
+&lt;p&gt;As for which kettle I bought, the house is currently kettle-less while I figure out which one to buy. I&amp;#x2019;m leaning heavily on the &lt;a href=&quot;http://www.amazon.com/gp/product/B003KYSLNQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B003KYSLNQ&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Cuisinart CPK-17&lt;/a&gt;. I am also quite partial to just buying a water warmer like the &lt;a href=&quot;http://www.amazon.com/gp/product/B000MAFJRM/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B000MAFJRM&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Zojirushi&lt;/a&gt;, mainly because my mum uses one and I grew up with one, but who knows, I might just go buy another $10 kettle.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TR;DR: &lt;/strong&gt;I seem to have given a lot of thought to buying a kettle (this article is 2250 words long). I come to the conclusion that expensive basic kettles are the same as cheap basic kettles, except for price differentiation. The increase in marginal utility from purchasing a expensive kettle is not big enough compared to buying a baseline cheap kettle to warrant it. It&amp;#x2019;d be better to buy a temperature control kettle, as then the increase in marginal utility would be enough to warrant puchasing it. What do you think?&lt;/p&gt;
+
+					
+					
+			&lt;/div&gt;
+			
+			
+			&lt;/div&gt;
+</description>
+<title>
+Why Does A Good Kettle Cost $90+?
 </title>
 </item>
 </channel>
