@@ -15,286 +15,6 @@ myread
 </description>
 <item>
 <author>
-The Doctor
-</author>
-<link>
-http://blog.chewxy.com/2014/01/20/why-does-a-good-kettle-cost-90
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
-				&lt;p&gt;Yesterday morning I woke up to a house without electricity &amp;#x2013; that meant I woke up in a puddle of sweat because the fan was no longer turned on. It turned out that my housemate, while making coffee, had tripped the mains of the house. The kettle had caused the trip. It was no longer safe to use the kettle and so I had to buy a new kettle.&lt;/p&gt;
-&lt;p&gt;&lt;figure id=&quot;attachment_1790&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3320S.jpg?114f79&quot; alt=&quot;My Dead Kettle&quot; width=&quot;900&quot; class=&quot;size-full wp-image-1790&quot;&gt;&lt;figcaption id=&quot;figcaption_attachment_1790&quot; class=&quot;wp-caption-text&quot;&gt;The Dead Kettle&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;Lately, I had coincidentally been considering buying a new kettle to replace the old one, which I have used since 2007.  I was also kinda tired of sticking a thermometer in the water to figure out the temperature of the water before I brew my coffee or tea. However, I never actually had a good reason to do so. The kettle we had was absolutely serviceable, and there wasn&amp;#x2019;t a good reason to change it. Now I do.&lt;/p&gt;
-&lt;p&gt;And so, I took a break from writing &lt;a href=&quot;https://leanpub.com/jsinterviewquestions?utm_source=kettlearticle&amp;amp;utm_medium=blog&amp;amp;utm_term=book&amp;amp;utm_content=book&amp;amp;utm_campaign=product&quot; title=&quot;Javascript Interview Questions&quot; target=&quot;_blank&quot;&gt;my book on Javascript interview questions&lt;/a&gt; (&lt;a href=&quot;https://leanpub.com/underhandedjavascript?utm_source=kettlearticle&amp;amp;utm_medium=blog&amp;amp;utm_term=book&amp;amp;utm_content=book&amp;amp;utm_campaign=product&quot; title=&quot;Underhanded Javascript&quot; target=&quot;_blank&quot;&gt;alternate title: Underhanded Javascript&lt;/a&gt;) and hopped online to find the best variable temperature control kettles I can find. Being the coffee and tea snob that I am, I perused a number of forums, looking for the best recommendations for such a kettle. I narrowed my choices down to the &lt;a href=&quot;http://www.amazon.com/gp/product/B001DYERBK/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B001DYERBK&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Breville BKE820XL&lt;/a&gt;($149), the &lt;a href=&quot;http://www.amazon.com/gp/product/B003KYSLNQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B003KYSLNQ&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Cuisinart CPK-17&lt;/a&gt;($115), or the Sunbeam KE9450($100). The main reason why I shortlisted them was because they had temperature control. There was also another brand that was mentioned &amp;#x2013; Shark, or Belle, or Da Vinci &amp;#x2013; basically Chinese knockoffs of the Cuisinart.&lt;/p&gt;
-&lt;p&gt;The one thing I noticed about these is that they all cost more than $90, which is way more than what I&amp;#x2019;m willing to pay for a kettle. My old kettle had cost me something like $10 from K-Mart. I wasn&amp;#x2019;t very willing to part with so much money for a kettle. So I decided to look for a cheaper version &amp;#x2013; I was willing to forgo the temperature control &amp;#x2013; afterall, I had been using a manual thermometer for years and it didn&amp;#x2019;t affect my making tea or coffee.&lt;/p&gt;
-&lt;p&gt;My housemate had also mentioned earlier that she would not prefer a plastic kettle and would prefer something metal. And so I went to look for normal electrical kettles. To my frustration &amp;#x2013; all the basic kettles cost roughly the same price: $39. The branded ones cost slightly more, and the non-branded ones cost slightly less. Why in the world would it cost so much? A kettle is not something difficult to build. The most difficult part is the grounding of it &amp;#x2013; which metal kettles are in sore need off, lest they give you an electric shock. But it&amp;#x2019;s really not that difficult to build a kettle, nor does it cost that much.&lt;/p&gt;
-&lt;h2&gt;How to Build a Kettle With Temperature Control&lt;/h2&gt;
-&lt;p&gt;I&amp;#x2019;m a big fan of conceptual thinking. I&amp;#x2019;ve once &lt;a href=&quot;http://blog.chewxy.com/2013/07/03/do-not-expect-breakthroughs/&quot; title=&quot;Do Not Expect Breakthroughs&quot; target=&quot;_blank&quot;&gt;complained&lt;/a&gt; about some of my acquaintences&amp;#x2019; inability to even conceptually build something, what more actually building something. In &lt;a href=&quot;http://www.amazon.com/gp/product/0201657880/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0201657880&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Programming Pearls&lt;/a&gt;, this was referred to as the skill to do back-of-the-envelope-calculation. I think it&amp;#x2019;s a very good skill to have.&lt;/p&gt;
-&lt;p&gt;So I began to conceptually build a kettle with temperature controls. I chose a top-down approach to building this in my mind. First, I built a mental model of what is needed in a basic kettle: a heating element, a receptacle to store liquid while it boils, some sort of automatic off switch &amp;#x2013; probably heat powered &amp;#x2013; to turn the switch off once it hits boiling point. Then I think about what extra stuff are needed to build the same kettle, except with temperature control. Temperature control indicates that a) a reading of the temperature of the water is required; b) a switch that could understand the reading of the water temperature.&lt;/p&gt;
-&lt;p&gt;This implied only one thing: &lt;a href=&quot;http://en.wikipedia.org/wiki/PID_controller&quot; title=&quot;PID controller&quot; target=&quot;_blank&quot;&gt;a PID&lt;/a&gt;, and a relay of some sort. I know what PIDs cost &amp;#x2013; I own a couple of PID controllers and have built one from scratch. Because of the cost, that also meant that the kettle that I currently have (and that is broken), cannot possibly be digitally controlled &amp;#x2013; it&amp;#x2019;d cost too much.&lt;/p&gt;
-&lt;h2&gt;Dismantling the kettle&lt;/h2&gt;
-&lt;p&gt;So out of curiosity, I began to dismantle my kettle. A kettle is an extremely simple electrical appliance, really. A heating coil heats up water. When it is hot enough, it stops. And I was right &amp;#x2013; it was ridiculously simple. It simply consisted of a switch, a power source and a heating element:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3334S.jpg?114f79&quot; alt=&quot;Power source, switch and heating element&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1794&quot;&gt;&lt;/p&gt;
-&lt;p&gt;I had removed the switch to remove the heating element from the jug. The image above shows a reconstruction of how the power supply connects to the heating element. Inset is the power supply connected to the switch. The red wires are to a LED which tells you that the heating element is turned on.&lt;/p&gt;
-&lt;p&gt;However, I was still puzzled by how the kettle would automatically turn off when the water boiled. And so I looked carefully at the details of everything in the kettle. Suddenly it hit me. I was looking at it all along, and it was staring back at me:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3324S.jpg?114f79&quot; alt=&quot;The back of the heating element, exposing the bimetallic strip&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1796&quot;&gt;&lt;/p&gt;
-&lt;p&gt;OK, paredolia asides, the metal strip in the middle actually plays a very important part in the analog automatic control. I had actually seen one of those before when I was very young. It&amp;#x2019;s actually a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bimetallic_strip&quot; title=&quot;Bimetallic strip&quot; target=&quot;_blank&quot;&gt;bimetallic strip&lt;/a&gt; that curls outwards when heated. It&amp;#x2019;s basically 2 pieces of metal that is pressed into one strip. Because the different metals have different expansion rates when heated, heating a bimetallic strip would cause it to bend one way. &lt;/p&gt;
-&lt;p&gt;To prove that, I took a blowtorch to it and it curled outwards exactly as I thought it would. When it cooled down, it became a flat strip again. The metal strip curved outwards. It must trigger something. Looking at the back of the power source, I found what it triggered &amp;#x2013; a spring loaded switch. Here&amp;#x2019;s how the back of the power supply looks like:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3325S.jpg?114f79&quot;&gt;&lt;img src=&quot;http://blog.chewxy.com/wp-content/uploads/2014/01/IMG_3325S.jpg?114f79&quot; alt=&quot;IMG_3325S&quot; width=&quot;900&quot; class=&quot;aligncenter size-full wp-image-1797&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The way the kettle is constructed, the heating element and the power source are pressed together when the blue switch is pressed down to turn on the kettle. The switch is basically a see-saw. When it&amp;#x2019;s pressed down, the lever will latch on at the top (the silver coloured piece in the picture above), pressing the power source towards the heating element. The copper piece in the picture above comes into contact with the metal base plate of the heating element, and the circuit is complete. The heating element heats up. &lt;/p&gt;
-&lt;p&gt;When the bimetallic strip gets heated up, it curls outwards, pressing on the trigger. The trigger, when pressed, pushes the lever outwards, causing the latch to unlatch. Once the latch is undone, the power source is no longer pressing onto the base plate of the heating element. The circuit is broken, and the water stops heating.&lt;/p&gt;
-&lt;p&gt;There is a certain elegance to these analogue systems that one must be able to appreciate. Using a bimetallic strip to trigger a mechanical trigger is simply quite a brilliantly elegant way of solving a problem. There is no reason to build an expensive kettle with digital controls if perfectly cheap and simple analogue solutions like these exist.&lt;/p&gt;
-&lt;h2&gt;How Much Does A Basic Kettle Cost&lt;/h2&gt;
-&lt;p&gt;Once one knows how something works, &lt;a href=&quot;http://blog.chewxy.com/2012/09/24/magic-lost/&quot; title=&quot;Magic, Lost&quot; target=&quot;_blank&quot;&gt;the magic is lost&lt;/a&gt;. Very quickly I began tabulating how much it would cost to build and market a kettle. My answer came to a little over $7. Even with the fanciest metal designs, I estimate it&amp;#x2019;d cost no more than $12 to make and market a basic kettle with no bells and whistles. Even with the most generous of all estimates &amp;#x2013; which is to say extremely expensive industrial designers were hired to craft the shape of the bottle (let&amp;#x2019;s assume we&amp;#x2019;re talking about something like the &lt;a href=&quot;http://www.casabugatti.com/design-appliances/kettle-X1?id=14-VERACR&quot; title=&quot;Bugatti Vera&quot; target=&quot;_blank&quot;&gt;Bugatti Vera&lt;/a&gt;.), and that the manufacturer uses the most expensive possible manufacturing tools, the price over a mass amount of units (say 100,000 units) would not cost more than $16.&lt;/p&gt;
-&lt;p&gt;So why did the rest of the basic kettles cost $39? Given the almost-same price from all the brands, they all have to function on the same principle essentially. They&amp;#x2019;d also have to have pretty much the same fixed and variable costs. If we assume we see the market in action, then that would mean I was wrong. It didn&amp;#x2019;t cost $16 to manufacture and market those kettles. The problem is, there exist on the market, homebrand kettles that cost $10 or so. If both homebrand and branded kettles use a similar principle, then it would be cause to wonder why the basic kettles of the bigger brands all cost $39.&lt;/p&gt;
-&lt;p&gt;Unless of course, those $39 kettles use a digital solution to stop the water from boiling. But that is just rather silly, given that an analogue solution works better. I do not see how a digital solution is actually a superior solution. It&amp;#x2019;s rather like saying replacing your car&amp;#x2019;s control panel with a touch screen is a better idea &amp;#x2013; oh wait. Tesla actually thought &lt;a href=&quot;http://upload.wikimedia.org/wikipedia/commons/a/a3/Tesla_Model_S_digital_panels.jpg&quot; title=&quot;Tesla Model S digital panel&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; was a good idea. It isn&amp;#x2019;t.&lt;/p&gt;
-&lt;p&gt;Given that a digital control solution is not going to be much superior (and in fact, like the Tesla example, could actually be inferior) &amp;#x2013; water has ONE boiling temperature &amp;#x2013; 100 Celcius, why would a basic kettle cost $39 and up? Yes, I mean, people could be paying for the design (because a red kettle is so going to boil water faster than a white kettle), but really, there is no basis in reality to pay for such an expensive kettle. Especially so if the basic kettle is digitally driven. It&amp;#x2019;s just a waste of time and energy of the designers, trying to cramp so much electronics into a small space.&lt;/p&gt;
-
-&lt;p&gt;No, rather, basic kettles from bigger brands cost $39 as a form of price differentiation. Consumers who can afford to pay more, or do not know better, would pay more for the same basic product. Anything extra is mostly cosmetic and has no say on the functionality (or if it does, like for example, if the shape or material of a kettle would help it retain heat better, it doesn&amp;#x2019;t add much marginal utility).&lt;/p&gt;
-&lt;h2&gt;How to Build a Kettle With Temperature Control &amp;#x2013; pt2&lt;/h2&gt;
-&lt;p&gt;Which brings me to why I actually want a kettle with temperature control. Unlike a basic kettle, I understand why a more advanced kettle with variable temperatures would cost so much more. As previously mentioned, having temperature control means requiring something to read the temperature of the water &amp;#x2013; a temperature probe (I own a couple of PT100 probes myself), and a PID controller. Those things are not cheap, even if one buys them in bulk. A basic PID would set one back about $30 (and that was the best bulk price I could get). With PID controllers also come costs of hiring electronic designers, and micro-controller programmers. Also, a relay is required to turn on and off the kettle, instead of mechanical solutions like the one above. Furthermore, these electronics have to be heatproofed. A kettle is a very hot thing, and the microcontrollers in the kettle must not fail under heated circumstances.&lt;/p&gt;
-&lt;p&gt;All these little things add up. But it&amp;#x2019;s actually useful. Instead of hiring electronic designers, programmers, and using electronics for basic functionality, the main use is for precision boiling. And that&amp;#x2019;s a good use. This is one of the main reasons why I am looking at variable temperature kettles (okay, I admit, it&amp;#x2019;d make my life a lot easier too, if I didn&amp;#x2019;t have to stand and take the temperature of the water every time I make my coffee or tea).&lt;/p&gt;
-&lt;p&gt;The reason is I don&amp;#x2019;t feel ripped off paying for a variable temperature kettle. Knowing how a basic analogue kettle works and especially knowing how much it would cost to build one, I would feel terrible if I had to spend $40 on a kettle that works exactly the same way in principle. And yes, before you ask, the ones I saw, they DO work on the same exact principles. How do I know this? The switch in those kettles are mechanical. A digital kettle wouldn&amp;#x2019;t have a mechanical switch (you can design one that has, but I don&amp;#x2019;t see the point).&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#x2019;s a rough bill of materials/services and estimates I came out with, assuming a unit cost over 100,000 units in a production run:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Estimated Cost&lt;/th&gt;
-&lt;/thead&gt;&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Manufacture of kettle body (metal, because plastic is so pedestrian)&lt;/td&gt;
-&lt;td&gt;$5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Industrial design of kettle body (assuming 3 high calibre ($100k p/a) industrial designer)&lt;/td&gt;
-&lt;td&gt;$7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PID Controller + other electronics&lt;/td&gt;
-&lt;td&gt;$10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Heating element&lt;/td&gt;
-&lt;td&gt;$3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Electronics engineer (assuming 3 electronics engineer and 2 test technicians)&lt;/td&gt;
-&lt;td&gt;$7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Various manufacturing fixed cost (safety tests, product tests, etc)&lt;/td&gt;
-&lt;td&gt;$5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Marketing, stocking, etc fees&lt;/td&gt;
-&lt;td&gt;$5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;It comes close to $45. And these are on quite generous assumptions. I have no doubt that given the scale of these big branded companies, they would have more economies of scale and scope to reduce these costs even further. Of couse, this being a mental estimate, it could go very wrong. It could be the companies don&amp;#x2019;t manufacture 100,000 units per run. That would change things quite a bit.&lt;/p&gt;
-&lt;p&gt;This means a markup of double. But the main reason why I would rather go for a $90 kettle instead of a $39 kettle is because the $90 kettle does a lot more. There is quite a bit more function per dollar than the $39 one.&lt;/p&gt;
-&lt;h2&gt;But &amp;#x2026;&lt;/h2&gt;
-&lt;p&gt;Of course, then there&amp;#x2019;s the &lt;a href=&quot;http://www.amazon.com/gp/product/B0083I7THI/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B0083I7THI&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Hamilton Beach programmable kettle&lt;/a&gt;, which comes pretty close to the estimated cost price of building a variable temperature kettle I had estimated. I had estimated it costs about $45 to build and market a digital kettle with basic PID functions. I was willing to accept advanced kettles cost about $90 because PID tuning is a variable quality, and I&amp;#x2019;d be willing to accept that companies like Bonavita or Breville actually spend more time and money into tuning these little details. I don&amp;#x2019;t know how Hamilton Beach did it, and I&amp;#x2019;m exceedingly curious as to how. The people at Steepster &lt;a href=&quot;http://steepster.com/discuss/5108-variable-temp-kettle-opinions&quot; title=&quot;Steepster discussion on the Hamilton Beach kettle&quot; target=&quot;_blank&quot;&gt;don&amp;#x2019;t think too highly of it&lt;/a&gt; though, so there&amp;#x2019;s some clues there. &lt;/p&gt;
-&lt;p&gt;As for which kettle I bought, the house is currently kettle-less while I figure out which one to buy. I&amp;#x2019;m leaning heavily on the &lt;a href=&quot;http://www.amazon.com/gp/product/B003KYSLNQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B003KYSLNQ&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Cuisinart CPK-17&lt;/a&gt;. I am also quite partial to just buying a water warmer like the &lt;a href=&quot;http://www.amazon.com/gp/product/B000MAFJRM/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B000MAFJRM&amp;amp;linkCode=as2&amp;amp;tag=antwzumuniv-20&quot;&gt;Zojirushi&lt;/a&gt;, mainly because my mum uses one and I grew up with one, but who knows, I might just go buy another $10 kettle.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TR;DR: &lt;/strong&gt;I seem to have given a lot of thought to buying a kettle (this article is 2250 words long). I come to the conclusion that expensive basic kettles are the same as cheap basic kettles, except for price differentiation. The increase in marginal utility from purchasing a expensive kettle is not big enough compared to buying a baseline cheap kettle to warrant it. It&amp;#x2019;d be better to buy a temperature control kettle, as then the increase in marginal utility would be enough to warrant puchasing it. What do you think?&lt;/p&gt;
-
-					
-					
-			&lt;/div&gt;
-			
-			
-			&lt;/div&gt;
-</description>
-<title>
-Why Does A Good Kettle Cost $90+?
-</title>
-</item>
-<item>
-<link>
-http://www.latimes.com/nation/nationnow/la-na-nn-officemax-mail-20140119,0,6457094.story#axzz2qubhydAY
-</link>
-<description>
-
-</description>
-<title>
-Dad gets OfficeMax mail addressed 'Daughter Killed in Car Crash'
-</title>
-</item>
-<item>
-<link>
-http://www.thedrinkingrecord.com/2014/01/19/romanian-billionaire-saves-openbsd/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;p&gt;The following link: &lt;a href=&quot;http://www.osnews.com/story/27519/_OpenBSD_will_shut_down_if_we_do_not_have_the_funding_http://&quot;&gt;http://www.osnews.com/story/27519/_OpenBSD_will_shut_down_if_we_do_not_have_the_funding_&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Was dropped in the IRC Channel &lt;a href=&quot;http://log.bitcoin-assets.com/?date=19-01-2014#449580&quot;&gt;#bitcoin-assets&lt;/a&gt; and within hours an announcement was made:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;http://log.bitcoin-assets.com/?date=20-01-2014#449869&quot;&gt;mircea_popescu: and it pleases me to announce openbsd got itself sponsored.&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;It is important to note that not only did this announcing happen on IRC, the important fact finding happened there as well, from the channel #openbsd:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;Jan 19 22:14:04 &amp;lt;mircea_popescu&amp;gt;	soo, who has the authority to make a deal so I can cover the 20k shortfall 
-Jan 19 22:16:24 &amp;lt;woopstar&amp;gt;	mircea_popescu: you need to contact Theo
-Jan 19 22:16:32 &amp;lt;mircea_popescu&amp;gt;	how would i go about that ?
-Jan 19 22:18:27 &amp;lt;woopstar&amp;gt;	mircea_popescu: i believe his email is [redacted because email addresses don't belong in plaintext]
-Jan 19 22:20:32 &amp;lt;mircea_popescu&amp;gt;	woopstar ty.
-Jan 19 22:20:49 &amp;lt;woopstar&amp;gt;	mircea_popescu: anytime. Would be fantastic, if you can set up a deal with Theo&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This episode just goes to show that IRC even in the 2010's continues to be one of the most expressive, influential, and effective communications mediums on the Internet. It also shows for Open Source projects seeking sponsorships to continue their operations that the traditional channels by which they hope the Microsofts, Apples, and Oracles of the world that happily vacuum up their code may not be the there in their time of need, but if they are truly doing something that is both useful and interesting chances are someone out there might have the money and intelligence to appreciate your project enough to buy it at least another year.&lt;/p&gt;
-&lt;p&gt;I for one am happy that for at least another year the Vaxen will have an OS to run.&lt;/p&gt;
-			&lt;/div&gt;
-
-	
-&lt;/div&gt;
-</description>
-<title>
-Romanian saves OpenBSD
-</title>
-</item>
-<item>
-<author>
-James Clear
-</author>
-<link>
-http://www.entrepreneur.com/article/230333
-</link>
-<description>
-&lt;div&gt;
-&lt;div id=&quot;article&quot; class=&quot;nlopt&quot;&gt;
-
-						&lt;div class=&quot;articleimg&quot;&gt;
-				&lt;img src=&quot;http://www.entrepreneur.com/dbimages/article/h1/forget-setting-goals-focus-this-instead.jpg&quot; alt=&quot;Forget Setting Goals. Focus on This Instead.&quot; width=&quot;300&quot;&gt;
-							
-									&lt;p class=&quot;courtesy&quot;&gt;Image credit: Shutterstock&lt;/p&gt;			
-							&lt;/div&gt;
-			    
-		    
-		
-		&lt;p&gt;We all have things that we want to achieve in our lives -- getting into the better shape, building a successful business, raising a wonderful family, writing a best-selling book, winning a championship, and so on.&lt;/p&gt;
-
-&lt;p&gt;And for most of us, the path to those things starts by setting a specific and actionable goal. At least, this is how I approached my life until recently. I would set goals for classes I took, for weights that I wanted to lift in the gym, and for clients I wanted in my business.&lt;/p&gt;
-
-
-			
-
-
-			
-		&lt;p&gt;What I'm starting to realize, however, is that when it comes to actually getting things done and making progress in the areas that are important to you, there is a much better way to do things.&lt;/p&gt;
-
-&lt;p&gt;It all comes down to the difference between goals and systems.&lt;/p&gt;
-
-&lt;p&gt;Let me explain.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The Difference Between Goals and Systems&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;What's the difference between goals and systems?&lt;/p&gt;
-
-&lt;ul&gt;
-	&lt;li&gt;&lt;strong&gt;If you're a coach, &lt;/strong&gt;your goal is to win a championship. Your system is what your team does at practice each day.&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;If you're a writer, &lt;/strong&gt;your goal is to write a book. Your system is the writing schedule that you follow each week.&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;If you're a runner,&lt;/strong&gt; your goal is to run a marathon. Your system is your training schedule for the month.&lt;/li&gt;
-	&lt;li&gt;&lt;strong&gt;If you're an entrepreneur,&lt;/strong&gt; your goal is to build a million dollar business. Your system is your sales and marketing process.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now for the really interesting question:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;If you completely ignored your goals and focused only on your system, would you still get results?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Related: &lt;a href=&quot;http://www.entrepreneur.com/article/230153&quot;&gt;How You Can Form Good Habits and Stick to Them&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;For example, if you were a basketball coach and you ignored your goal to win a championship and focused only on what your team does at practice each day, would you still get results?&lt;/p&gt;
-
-&lt;p&gt;I think you would.&lt;/p&gt;
-
-&lt;p&gt;As an example, I just added up the total word count for the articles I've written this year. (You can see them all &lt;a href=&quot;http://jamesclear.com/archives&quot;&gt;here&lt;/a&gt;.) In the last 12 months, I've written over 115,000 words. The typical book is about 50,000 to 60,000 words, so I have basically written two books this year.&lt;/p&gt;
-
-&lt;p&gt;All of this is such a surprise because I never set a goal for my writing. I didn't measure my progress in relation to some benchmark. I never set a word count goal for any particular article. I never said, &quot;I want to write two books this year.&quot;&lt;/p&gt;
-
-&lt;p&gt;What I did focus on was writing one article every Monday and Thursday. And after sticking to that schedule for 11 months, the result was 115,000 words. I focused on my system and the process of doing the work. In the end, I enjoyed the same (or perhaps better) results.&lt;/p&gt;
-
-&lt;p&gt;Let's talk about three more reasons why you should focus on systems instead of goals.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Goals reduce your current happiness.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;When you're working toward a goal, you are essentially saying, &quot;I'm not good enough yet, but I will be when I reach my goal.&quot;&lt;/p&gt;
-
-&lt;p&gt;The problem with this mindset is that you're teaching yourself to always put happiness and success off until the next milestone is achieved. &quot;Once I reach my goal, then I'll be happy. Once I achieve my goal, then I'll be successful.&quot;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SOLUTION: Commit to a process, not a goal.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Choosing a goal puts a huge burden on your shoulders. Can you imagine if I had made it my goal to write two books this year? Just writing that sentence stresses me out.&lt;/p&gt;
-
-&lt;p&gt;But we do this to ourselves all the time. We place unnecessary stress on ourselves to lose weight or to succeed in business or to write a best-selling novel. Instead, you can keep things simple and reduce stress by focusing on the daily process and sticking to your schedule, rather than worrying about the big, life-changing goals.&lt;/p&gt;
-
-&lt;p&gt;When you focus on the practice instead of the performance, you can enjoy the present moment and improve at the same time.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. Goals are strangely at odds with long-term progress.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You might think your goal will keep you motivated over the long-term, but that's not always true.&lt;/p&gt;
-
-&lt;p&gt;Consider someone training for a half-marathon. Many people will work hard for months, but as soon as they finish the race, they stop training. Their goal was to finish the half-marathon and now that they have completed it, that goal is no longer there to motivate them. When all of your hard work is focused on a particular goal, what is left to push you forward after you achieve it?&lt;/p&gt;
-
-&lt;p&gt;This can create a type of &quot;yo-yo effect&quot; where people go back and forth from working on a goal to not working on one. This type of cycle makes it difficult to build upon your progress for the long-term.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SOLUTION: Release the need for immediate results.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I was training at the gym last week and I was doing my second-to-last set of clean and jerks. When I hit that rep, I felt a small twinge in my leg. It wasn't painful or an injury, just a sign of fatigue near the end of my workout. For a minute or two, I thought about doing my final set. Then, I reminded myself that I plan to do this for the rest of my life and decided to call it a day.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Related: &lt;a href=&quot;http://www.entrepreneur.com/article/230240&quot;&gt;8 Steps to Having Wildly Productive Mornings&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In a situation like the one above, a goal-based mentality will tell you to finish the workout and reach your goal. After all, if you set a goal and you don't reach it, then you feel like a failure.&lt;/p&gt;
-
-&lt;p&gt;But with a systems-based mentality, I had no trouble moving on. Systems-based thinking is never about hitting a particular number, it's about sticking to the process and not missing workouts.&lt;/p&gt;
-
-&lt;p&gt;Of course, I know that if I never miss a workout, then I will lift bigger weights in the long-run. And that's why systems are more valuable than goals. Goals are about the short-term result. Systems are about the long-term process. In the end, process always wins.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. Goals suggest that you can control things that you have no control over.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You can't predict the future. (I know, shocking.)&lt;/p&gt;
-
-&lt;p&gt;But every time we set a goal, we try to do it. We try to plan out where we will be and when we will make it there. We try to predict how quickly we can make progress, even though we have no idea what circumstances or situations will arise along the way.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SOLUTION: Build feedback loops.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Each Friday, I spend 15 minutes filling out a small spreadsheet with the most critical metrics for my business. For example, in one column I calculate the conversion rate (the percentage of website visitors that join &lt;a href=&quot;http://jamesclear.com/newsletter&quot;&gt;my free email newsletter&lt;/a&gt; each week). I rarely think about this number, but checking that column each week provides a feedback loop that tells me if I'm doing things right. When that number drops, I know that I need to send high quality traffic to my site.&lt;/p&gt;
-
-&lt;p&gt;Feedback loops are important for building good systems because they allow you to keep track of many different pieces without feeling the pressure to predict what is going to happen with everything. Forget about predicting the future and build a system that can signal when you need to make adjustments.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Fall In Love With Systems&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;None of this is to say that goals are useless. However, I've found that goals are good for &lt;em&gt;planning &lt;/em&gt;your progress and systems are good for actually &lt;em&gt;making &lt;/em&gt;progress.&lt;/p&gt;
-
-&lt;p&gt;In fact, I think I'm going to officially declare 2014 the &quot;Year of the Sloth&quot; so that everyone will be forced to slow down and make consistent, methodical progress rather than chasing sexy goals for a few weeks and then flaming out.&lt;/p&gt;
-
-&lt;p&gt;Goals can provide direction and even push you forward in the short-term, but eventually a well-designed system will always win. Having a system is what matters. Committing to the process is what makes the difference.&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&quot;http://jamesclear.com/goals-systems&quot; target=&quot;_blank&quot;&gt;version of this article&lt;/a&gt; was first published on JamesClear.com.&lt;/p&gt;           
-	
-	
-	
-		&lt;p class=&quot;h12&quot;&gt;The author is an Entrepreneur contributor. The opinions expressed are those of the writer.&lt;/p&gt;
-			
-		
-		
-	
-		
-    	
-
-    	
-			
-	
-&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-</description>
-<title>
-Forget Setting Goals. Focus on Systems Instead
-</title>
-</item>
-<item>
-<author>
 About
 </author>
 <link>
@@ -323,6 +43,534 @@ Image URL (for hotlinking/embedding): http://imgs.xkcd.com/comics/automation.png
 </description>
 <title>
 xkcd: Automation
+</title>
+</item>
+<item>
+<link>
+http://insideevs.com/nissan-sells-100000-leafs-captures-48-of-worldwide-market-to-date/
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;attachment_59110&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://insideevs.com/wp-content/uploads/2013/11/145.jpg&quot;&gt;&lt;img class=&quot;size-large wp-image-59110&quot; alt=&quot;They Are Everywhere!  Nissan Sells 100,000 LEAFs Worldwide&quot; src=&quot;http://insideevs.com/wp-content/uploads/2013/11/145-600x399.jpg&quot; width=&quot;600&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;They Are Everywhere! Nissan Sells 100,000 LEAFs Worldwide&lt;/p&gt;&lt;/div&gt;
+
+&lt;div id=&quot;attachment_67342&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://insideevs.com/wp-content/uploads/2014/01/99999-leaf.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-67342&quot; alt=&quot;Nissan Says Amy Eichenberger of Charlottesville, Va., is the 99,999 LEAF Owner (which seems like kind of a downer to not be Ms. 100K) &quot; src=&quot;http://insideevs.com/wp-content/uploads/2014/01/99999-leaf-300x200.jpg&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Nissan Says Amy Eichenberger of Charlottesville, Va., is the 99,999 LEAF Owner (which seems like kind of a downer to not be Ms. 100K)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;This past weekend Nissan announced that after just more than 3 years on the market, the LEAF had reached the 100,000 vehicles sold level.&lt;/p&gt;
+&lt;p&gt;More impressive still is that&amp;#xA0;InsideEVs calculated&amp;#xA0;Nissan had only sold &lt;a href=&quot;http://insideevs.com/insideevs-pie-charts-worldwide-nissan-leaf-sales-since-december-2010-launch/&quot; target=&quot;_blank&quot;&gt;about &lt;strong&gt;88,000&lt;/strong&gt;&lt;/a&gt; through the end of November, and&amp;#xA0;the company&amp;#xA0;themselves shortly thereafter announced reaching the &lt;a href=&quot;http://insideevs.com/nissan-passes-92000-sales-worldwide-makes-commercial-video/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;92,000&lt;/strong&gt; LEAF sold mark&lt;/a&gt;&amp;#xA0;in&amp;#xA0;early December&amp;#xA0;- meaning the company has sold about &lt;strong&gt;12,000&lt;/strong&gt; copies in the past two months worldwide.&lt;/p&gt;
+&lt;p&gt;Overall, Nissan has captured&lt;strong&gt; 48%&lt;/strong&gt; of pure electric sales worldwide since 2010 according to the company.&lt;/p&gt;
+&lt;p&gt;Naturally as this is a major milestone (&lt;em&gt;the first all electric car to reach the six figure sales level&lt;/em&gt;), so Nissan has a cute way of celebrating &amp;#x2013; by doing a featurette on the &lt;strong&gt;99,999th&lt;/strong&gt; customer (&lt;em&gt;that press release below&lt;/em&gt;)&lt;/p&gt;
+&lt;div id=&quot;attachment_67371&quot; class=&quot;wp-caption alignleft&quot;&gt;&lt;a href=&quot;http://insideevs.com/wp-content/uploads/2014/01/Nissan-LEAF-100k-special-edition.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-67371&quot; alt=&quot;This Special 100,000th LEAF Sold In The UK Has 50,000 2p and 50,000 Two Cent Euro Coins On It!&quot; src=&quot;http://insideevs.com/wp-content/uploads/2014/01/Nissan-LEAF-100k-special-edition-300x200.jpg&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;This Special 100,000th LEAF Sold In The UK Has 50,000 2p and 50,000 Two Cent Euro Coins On It!&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;As mentioned above this is a pretty big milestone for Nissan;&amp;#xA0; look for the company to celebrate &lt;em&gt;again&lt;/em&gt; with owner 100k internationally shortly&amp;#x2026;&lt;em&gt;which we will cover as well.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;NASHVILLE, Tenn. &amp;#x2013; Amy Eichenberger of Charlottesville, Va., became the 99,999th global Nissan LEAF customer when she purchased her 100 percent electric vehicle (EV) at Colonial Nissan.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Amy, a 47-year-old mother of two, wasn&amp;#x2019;t even in the market for a new car. Then she spotted a University of Virginia colleague&amp;#x2019;s Nissan LEAF and decided she wanted to know more about the &amp;#x201C;modern-looking, futuristic and progressive&amp;#x201D; car.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;#x201C;As an architect, the style first got my attention, and I loved the concept of zero emissions,&amp;#x201D; Amy said. Amy is a project manager overseeing major capital investments for the University of Virginia in Charlottesville.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nissan LEAF was the first car Amy test drove, and she loved the zip it had. A Mercedes driver for 10 years, Amy describes herself as &amp;#x201C;picky.&amp;#x201D; Quality, safety, a &amp;#x201C;glide ride&amp;#x201D; and reliability were at the top of Amy&amp;#x2019;s auto shopping list criteria.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;She said she had a few initial reservations&amp;#x2014;primarily around range&amp;#x2014;so she tested out some gasoline and diesel competitors as well. &amp;#x201C;I&amp;#x2019;d been told once I drove a Mercedes I&amp;#x2019;d never drive anything else again. I don&amp;#x2019;t need fancy, but I do appreciate the solid feel and craftsmanship of a luxury vehicle, and I get that in the LEAF,&amp;#x201D; Amy said.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;#x201C;The general fuel economy out there is unimpressive and many of them felt tin-canny. I didn&amp;#x2019;t even want to look at anything in the 20 MPG range. I considered the VW Jetta TDI, Toyota Prius, Honda CRV and a couple of Subaru wagons, and I always came back to the Nissan LEAF. Everything else seemed stuck in the past,&amp;#x201D; Amy explained.&amp;#xA0;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Amy ultimately chose a LEAF S in Glacier White. Her commute is about 10 miles to the university each day and most of her errand-running is around the city&amp;#x2014;well under the LEAF&amp;#x2019;s estimated range of 84 miles on a full charge.&amp;#xA0;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;#x201C;I have friends I like to visit in Richmond, which I can do in the LEAF with some planning, and in DC, which I&amp;#x2019;ll do in my son&amp;#x2019;s or boyfriend&amp;#x2019;s car. LEAF will meet my needs 98 percent of the time, and I didn&amp;#x2019;t want to let a little range anxiety prevent me from missing out on what I consider a much more progressive and forward-thinking vehicle than any of the alternatives.&amp;#x201D;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Chris Crowley, the dedicated EV salesperson for Colonial Nissan, sold Amy her LEAF. He explained that LEAF buyers are not typical walk-ins. &amp;#x201C;LEAF buyers generally come in well educated about the vehicle, looking for even more information and wanting to see how it feels and drives. We spend a lot of time talking about driving habits to make sure it meets their needs and reviewing how very much it&amp;#x2019;s like any other vehicle in its capabilities with the added benefit of no fuel bill. Folks like to be green, but you can talk to their pocket books as well,&amp;#x201D; Chris said.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Chris has been with Colonial Nissan for two years and has been the lead EV person for most of that time. He&amp;#x2019;s sold nine LEAFs total with three of those coming in the past three weeks. &amp;#x201C;LEAF sales have picked up because once we were selling to engineers who were fans of the car and knew exactly how it worked. Now we&amp;#x2019;re selling to a much broader audience, and I think we&amp;#x2019;ve benefitted from a few folks who resolved to be greener in the new year.&amp;#x201D;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nissan LEAF launched in the United States in December 2010. The United States accounts for nearly half of the sales worldwide. The pace of LEAF sales has continued to accelerate. In 2013, Nissan sold 22,610 of the electric vehicles in the United States, more than twice as many as in 2012 and more than 2012 and 2011 Leaf sales combined.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nissan LEAF traditionally has performed well on the West Coast with notable markets such as San Francisco, Los Angeles and Seattle, but now interest has expanded across the country. New hot markets have emerged such as Atlanta, which has been the No. 1 LEAF market for the past five months.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;#x201C;With LEAF, we see a high level of organic growth and viral sales where LEAF owners become our best evangelists and salespeople. With electric vehicles, many folks presume a 100 percent electric vehicle won&amp;#x2019;t meet their needs until they chat with a neighbor, co-worker or family friend who loves their LEAF and explain its practicality, and then it goes on their consideration list,&amp;#x201D; said Erik Gottfried, Nissan&amp;#x2019;s director of EV Sales and Marketing. &amp;#x201C;In fact, we&amp;#x2019;re seeing similar results with the geographic dispersion of sales. With sales high in Atlanta, we now see other Georgia markets such as Macon and Columbus picking up significant momentum, similar to Eugene, Ore., following on the success of Portland.&amp;#x201D;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nissan LEAF is best-selling EV in history with &lt;strong&gt;48 percent&lt;/strong&gt; market share of the electric vehicle market globally. As of November 2013, Nissan LEAF drivers have completed an estimated 1 billion zero-emission kilometers, resulting in approximately 165 million kilograms of CO2 saved.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nissan LEAF offers powerful acceleration, quiet operation, energy efficiency and low cost of maintenance. Nissan has extended the standard warranty for the battery-power holding capacity with its own additional warranty for customer satisfaction and assurance.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;After leading the era of electrification in passenger vehicles with the LEAF, in 2014 Nissan will become the first to bring a mass-market all-electric light commercial vehicle to market. The e-NV200 will go on sale in Europe and Japan bringing the benefits of quiet, cost-efficient, zero-emissions mobility to businesses.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In June 2014, Nissan will participate in the 24 Hours of Le Mans with the NISSAN ZEOD RC and aims to set a record for the fastest all-electric, zero-emissions lap of the circuit. Nissan is committed to using the EV platform to break new ground in both the commercial-vehicle and motorsports arenas.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+
+
+
+										    	
+	    	
+			&lt;/div&gt;
+</description>
+<title>
+Nissan Sells 100,000 LEAFs, Captures 48% Of Worldwide Electric Vehicle Market
+</title>
+</item>
+<item>
+<link>
+http://kernelnewbies.org/Linux_3.13
+</link>
+<description>
+&lt;div&gt;&lt;div lang=&quot;en&quot; id=&quot;content&quot; dir=&quot;ltr&quot;&gt;
+&lt;a id=&quot;top&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-4&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-5&quot;&gt;&lt;/a&gt;&lt;p&gt;Linux 3.13 &lt;a class=&quot;external&quot; href=&quot;https://lkml.org/lkml/2014/1/19/148&quot;&gt;was released&lt;/a&gt; on Sun, 19 Jan 2014. &lt;a id=&quot;line-6&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-7&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: This release includes nftables, the successor of iptables, a revamp of the block layer designed for high-performance SSDs, a power capping framework to cap power consumption in Intel RAPL devices, improved squashfs performance, AMD Radeon power management enabled by default and automatic Radeon GPU switching, improved NUMA performance, improved performance with hugepage workloads, TCP Fast Open enabled by default, support for NFC payments, support for the High-availability Seamless Redundancy protocol, new drivers and many other small improvements.  &lt;a id=&quot;line-8&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-9&quot;&gt;&lt;/a&gt;
+
+
+
+
+&lt;a id=&quot;line-11&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-12&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-13&quot;&gt;&lt;/a&gt;&lt;p&gt;Traditional hard disks have defined for decades the design that operating systems use to communicate applications with the storage device drivers. With the advent of modern solid-state disks (SSD), past assumptions are no longer valid. Linux had a single coarse lock design for protecting the IO request queue, which can achieve an IO submission rate of around 800.000 IOs per second, regardless of how many cores are used to submit IOs. This was more than enough for traditional magnetic hard disks, whose IO submission rate in random accesses is in the hundreds, but it has become not enough for the most advanced SSD disks, which can achieve a rate close to 1 million, and are improving fast with every new generation. It is also unfit for the modern multicore world. &lt;a id=&quot;line-14&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-15&quot;&gt;&lt;/a&gt;&lt;p&gt;This release includes a new design for the Linux block layer, based on two levels of queues: one level of per-CPU queues for submitting IO, which then funnel down into a second level of hardware submission queues. The mapping between submission queues and hardware queues might be 1:1 or N:M, depending on hardware support and configuration. Experiments shown that this design can achieve many millions of IOs per second, leveraging the new capabilities of NVM-Express or high-end PCI-E devices and multicore CPUs, while still providing the common interface and convenience features of the block layer. &lt;a id=&quot;line-16&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-17&quot;&gt;&lt;/a&gt;&lt;p&gt;Paper: &lt;a class=&quot;external&quot; href=&quot;http://kernel.dk/blk-mq.pdf&quot;&gt;Linux Block IO: Introducing Multi-queue SSD Access on Multi-core Systems&lt;/a&gt; &lt;a id=&quot;line-18&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-19&quot;&gt;&lt;/a&gt;&lt;p&gt;Recommended LWN article: &lt;a class=&quot;external&quot; href=&quot;https://lwn.net/Articles/552904/&quot;&gt;The multiqueue block layer&lt;/a&gt; &lt;a id=&quot;line-20&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-21&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/320ae51feed5c2f13664aa05a76bec198967e04d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-22&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-23&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-24&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-25&quot;&gt;&lt;/a&gt;&lt;p&gt;iptables has a number of limitations both at the functional and code design level, problems with the system update rules and code duplication, which cause problems for code maintenance and for users. nftables is a new packet filtering framework that solves these problems, while providing backwards compatibility for current iptable users. &lt;a id=&quot;line-26&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-27&quot;&gt;&lt;/a&gt;&lt;p&gt;The core of the nftables design is a simple pseudo-virtual machine inspired in BPF. A &lt;a class=&quot;external&quot; href=&quot;http://git.netfilter.org/nftables/&quot;&gt;userspace utility&lt;/a&gt; interprets the rule-set provided by the user, it compiles it to pseudo-bytecode and then it transfers it to the kernel. This approach can replace thousands of lines of code, since the bytecode instruction set can express the packet selectors for all existing protocols. Because the userspace utility parses the protocols to bytecode, it is no longer necessary a specific extension in kernel-space for each match, which means that users are likely not need to upgrade the kernel to obtain new matches and features, userspace upgrades will provide them. There is also &lt;a class=&quot;external&quot; href=&quot;http://git.netfilter.org/libnftables/&quot;&gt;a new library&lt;/a&gt; for utilities that need to interact with the firewall. &lt;a id=&quot;line-28&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-29&quot;&gt;&lt;/a&gt;&lt;p&gt;nftables provides backwards iptables compatibility. There are &lt;a class=&quot;external&quot; href=&quot;http://git.netfilter.org/iptables-nftables/&quot;&gt;new iptables/iptables utilities&lt;/a&gt; that translate iptables rules to nftables bytecode, and it is also possible to use and add new xtable modules. As a bonus, these new utilities provide features that weren't possible with the old iptables design: notification for changes in tables/chains, better incremental rule update support, and the ability to enable/disable the chains per table.  &lt;a id=&quot;line-30&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-31&quot;&gt;&lt;/a&gt;&lt;p&gt;The new nft utility has a improved syntax. A small how-to is available &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/nftables_examples&quot;&gt;here&lt;/a&gt; (other documentation &lt;a class=&quot;external&quot; href=&quot;https://home.regit.org/2014/01/why-you-will-love-nftables/&quot;&gt;should be&lt;/a&gt; available soon) &lt;a id=&quot;line-32&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-33&quot;&gt;&lt;/a&gt;&lt;p&gt;Recommended LWN article: &lt;a class=&quot;external&quot; href=&quot;https://lwn.net/Articles/564095/&quot;&gt;The return of nftables&lt;/a&gt; &lt;a id=&quot;line-34&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-35&quot;&gt;&lt;/a&gt;&lt;p&gt;Video talk about nftables: &lt;a class=&quot;www&quot; href=&quot;http://youtu.be/P58CCi5Hhl4&quot;&gt;http://youtu.be/P58CCi5Hhl4&lt;/a&gt; (&lt;a class=&quot;external&quot; href=&quot;http://www.slideshare.net/ennael/2013-kernel-recipesnftables&quot;&gt;slides&lt;/a&gt;) &lt;a id=&quot;line-36&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-37&quot;&gt;&lt;/a&gt;&lt;p&gt;Project page and utility source code: &lt;a class=&quot;www&quot; href=&quot;http://netfilter.org/projects/nftables/&quot;&gt;http://netfilter.org/projects/nftables/&lt;/a&gt; &lt;a id=&quot;line-38&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-39&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/96518518cc417bb0a8c80b9fb736202e28acdf96&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/20a69341f2d00cd042e81c82289fba8a13c05a25&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-40&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-41&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-42&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;strong&gt;Power management enabled by default&lt;/strong&gt; &lt;a id=&quot;line-43&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-44&quot;&gt;&lt;/a&gt;&lt;p&gt;Linux 3.11 &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/Linux_3.11#head-61f0d4595b25d0f19a5dc7574d07e9107521b397&quot;&gt;added&lt;/a&gt; power management support for many AMD Radeon devices. The power management support provides improved power consumption, which is critical for battery powered devices, but it is also a requirement to provide good high-end performance, as it provides the ability to reclock to GPU to higher power states in GPUs and APUs that default to slower clock speeds. &lt;a id=&quot;line-45&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-46&quot;&gt;&lt;/a&gt;&lt;p&gt;This support had to be enabled with a module parameter. This release enables power management by default for lots of AMD Radeon hardware: BTC asics, SI asics, SUMO/PALM APUs, evergreen asics, r7xx asics, hawaii. Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/56684ec5b050e6a392cb3e5324eda12a13413a57&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/68bc7785a725c66e5fb1b499303e36a02a0586c4&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5a16f7614e33c080bbece39527bde144dcca4ec7&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/59f7a2f2dae51bf9cf1f2dce26b4faa9d705302f&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ab70b1dde73ff4525c3cd51090c233482c50f217&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2d40038d3f99a489fc1ef6c03d5a600de34c552f&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-47&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-48&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;strong&gt;Automatic GPU switching&lt;/strong&gt; &lt;a id=&quot;line-49&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-50&quot;&gt;&lt;/a&gt;&lt;p&gt;Linux 3.12 added infrastructure support for automatic GPU switching in laptops with dual GPUs. This release adds support for this feature in AMD Radeon hardware. Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/10ebc0bc09344ab6310309169efc73dfe6c23d72&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-51&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-52&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;strong&gt;R9 290X Hawaii&lt;/strong&gt; &lt;a id=&quot;line-53&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-54&quot;&gt;&lt;/a&gt;&lt;p&gt;This release adds support for &lt;a class=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/AMD_Radeon_Rx_200_Series#Radeon_R9_290&quot;&gt;R9 290X&lt;/a&gt; &quot;Hawaii&quot; devices. Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/96212fe8c27b39cc713cd8eb8d8e7a55ce3405d5&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-55&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-56&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-57&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-58&quot;&gt;&lt;/a&gt;&lt;p&gt;This release includes a framework that allow to set power consumption limits to devices that support it. It has been designed around the Intel RAPL (Running Average Power Limit) mechanism available in the latest Intel processors (Sandy Bridge and later, many devices will also be added RAPL support in the future). This framework provides a consistent interface between the kernel and user space that allows power capping drivers to expose their settings to user space in a uniform way. You can see the Documentation &lt;a class=&quot;external&quot; href=&quot;https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/Documentation/power/powercap/powercap.txt&quot;&gt;here&lt;/a&gt; &lt;a id=&quot;line-59&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-60&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/75d2364ea0cab3a95be3f8d1f8dabd20ac4b1b2a&quot;&gt;(commit 1&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/e23feb16685a8d1c62aa5bba7ebcddf4ba57ffcb&quot;&gt;2&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2d281d8196e38dd3a4ee9af26621ddde8329f269&quot;&gt;3&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ed93b71492da3464b4798613aa8a99bed914251b&quot;&gt;4)&lt;/a&gt; &lt;a id=&quot;line-61&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-62&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-63&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-64&quot;&gt;&lt;/a&gt;&lt;p&gt;This release adds support for the &lt;a class=&quot;external&quot; href=&quot;http://www.intel.com/content/www/us/en/architecture-and-technology/many-integrated-core/intel-many-integrated-core-architecture.html&quot;&gt;Intel Many Integrated Core Architecture&lt;/a&gt; or MIC, a multiprocessor computer architecture incorporating earlier work on the Larrabee many core architecture, the Teraflops Research Chip multicore chip research project, and the Intel Single-chip Cloud Computer multicore microprocessor. The currently world's fastest supercomputer, the &lt;a class=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Tianhe-2&quot;&gt;Tianhe-2&lt;/a&gt; at the National Supercomputing Center in Guangzhou, China, utilizes this architecture to achieve 33.86 PetaFLOPS. &lt;a id=&quot;line-65&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-66&quot;&gt;&lt;/a&gt;&lt;p&gt;The MIC family of PCIe form factor coprocessor devices run a 64-bit Linux OS. The driver manages card OS state and enables communication between host and card.  More information about the Intel MIC family as well as the Linux OS and tools for MIC to use with this driver are available &lt;a class=&quot;external&quot; href=&quot;http://software.intel.com/en-us/mic-developer&quot;&gt;here&lt;/a&gt;. This release currently supports Intel MIC X100 devices, and includes a sample user space daemon. &lt;a id=&quot;line-67&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-68&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2141c7c5ee677014023cb50c793f91e85f44d2ea&quot;&gt;commit 1&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f69bcbf3b4c4b333dcd7a48eaf868bf0c88edab5&quot;&gt;2&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/a01e28f692088e9789ebb0c374fdac83de59899b&quot;&gt;3&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b170d8ce3f81bd97e85756e9184779a56a5f55a7&quot;&gt;4&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/3a6a9201897c6482573ad07ee880574147761006&quot;&gt;5&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8d49751580db804a02caf6a5b7cebe2ff26c0d7e&quot;&gt;6&lt;/a&gt; &lt;a id=&quot;line-69&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-70&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-71&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-72&quot;&gt;&lt;/a&gt;&lt;p&gt;Modern multiprocessors (for example, x86) usually have non-uniform memory access (&lt;a class=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Non-uniform_memory_access&quot;&gt;NUMA&lt;/a&gt;) memory designs. In these systems, the performance of a process can be different depending on whether the memory range it accesses it's attached to the local CPU or other CPU. Since performance is different depending on the locality of the memory accesses, it's important that the operating system schedules a process to run in the same CPU whose memory controller is connected to the memory it will access. &lt;a id=&quot;line-73&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-74&quot;&gt;&lt;/a&gt;&lt;p&gt;The way Linux handles these situations was deficient; Linux 3.8 &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/Linux_3.8#head-c16d4288b51f0b50fbf615657e81b0db643fa7a0&quot;&gt;included a new NUMA foundation&lt;/a&gt; that would allow to build smarter NUMA policies in future releases. This release includes many of such policies that attempt to put a process near its memory, and can handle cases such as shared pages between processes or transparent huge pages. New sysctls have been added to enable/disable and tune the NUMA scheduling (see documentation &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/10fc05d0e551146ad6feb0ab8902d28a2d3c5624&quot;&gt;here&lt;/a&gt;) &lt;a id=&quot;line-75&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-76&quot;&gt;&lt;/a&gt;&lt;p&gt;Recommended LWN article: &lt;a class=&quot;external&quot; href=&quot;https://lwn.net/Articles/568870/&quot;&gt;NUMA scheduling progress&lt;/a&gt; &lt;a id=&quot;line-77&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-78&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-79&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-80&quot;&gt;&lt;/a&gt;&lt;p&gt;The Linux kernels tracks information about each memory page in a data structure called page table. In workloads that use hugepages, the lock used to protect some parts of the table has become a lock contention. This release uses finer grained locking for these parts, improving the page table access scalability in threaded hugepage workloads. For more details, see the recommended LWN article. &lt;a id=&quot;line-81&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-82&quot;&gt;&lt;/a&gt;&lt;p&gt;Recommended LWN article: &lt;a class=&quot;external&quot; href=&quot;https://lwn.net/Articles/568076/&quot;&gt;Split PMD locks&lt;/a&gt; &lt;a id=&quot;line-83&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-84&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/e009bb30c8df8a52a9622b616b67436b6a03a0cd&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/9491846fca57e9326b6673716c386b76fc13ebca&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-85&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-86&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-87&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-88&quot;&gt;&lt;/a&gt;&lt;p&gt;Squashfs, the read-only filesystem used by most live distributions, installers, and some embedded Linux distributions, has got important improvements that dramatically increase performance in workloads with multiple parallel reads. One of them is the direct decompression of data into the Linux page cache, which avoids a copy of the data and eliminates the single lock used to protect the intermediate buffer. The other one is multithreaded decompression. &lt;a id=&quot;line-89&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-90&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/0d455c12c6428647547bacccaaced3cae0f35570&quot;&gt;(commit 1&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/cd59c2ec5f37a2bc1315c9324aab6c21d43ffa1a&quot;&gt;2&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/d208383d640727b70cd6689bc17e67e9b5ebf4ff&quot;&gt;3)&lt;/a&gt; &lt;a id=&quot;line-91&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-92&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-93&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-94&quot;&gt;&lt;/a&gt;&lt;p&gt;This release adds a new socket option, SO_MAX_PACING_RATE, which offers applications the ability to cap the rate computed by transport layer. It has been designed as a bufferbloat mechanism to avoid buffers getting filled up with packets, but it can also be used to limit the transmission rate in applications. To be effectively paced, a network flow must use FQ packet scheduler. Note that a packet scheduler takes into account the headers for its computations. For more details, see the: &lt;a id=&quot;line-95&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-96&quot;&gt;&lt;/a&gt;&lt;p&gt;Recommended LWN article: &lt;a class=&quot;external&quot; href=&quot;https://lwn.net/Articles/564978/&quot;&gt;TSO sizing and the FQ scheduler&lt;/a&gt; (5th and 6th paragraph) &lt;a id=&quot;line-97&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-98&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/62748f32d501f5d3712a7c372bbb92abc7c62bc7&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-99&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-100&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-101&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-102&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-103&quot;&gt;&lt;/a&gt;&lt;p&gt;TCP Fast Open is an optimization to the process of stablishing a TCP connection that allows the elimination of one round time trip from certain kinds of TCP conversation, which can improve the load speed of web pages. In &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/Linux_3.6#head-ac78950a7b57d92d5835642926f0e147c680b99c&quot;&gt;Linux 3.6&lt;/a&gt; and &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/Linux_3.7#head-cd32b65674184083465d349ad6d772c828fbbd8b&quot;&gt;Linux 3.7&lt;/a&gt;, support was added for this feature, which requires userspace support. This release enables TCP Fast Open by default. &lt;a id=&quot;line-104&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-105&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/0d41cca490c274352211efac50e9598d39a9dc80&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-106&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;a id=&quot;line-107&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-108&quot;&gt;&lt;/a&gt;&lt;p&gt;This release implements support for the &lt;a class=&quot;external&quot; href=&quot;http://www.smartcardalliance.org/pages/publications-nfc-frequently-asked-questions#7&quot;&gt;Secure Element&lt;/a&gt;. A netlink API is available to enable, disable and discover NFC attached (embedded or UICC ones) secure elements. With some userspace help, this allows to support NFC payments, used to implement financial transactions. Only the pn544 driver currently supports this API. &lt;a id=&quot;line-109&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-110&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5ce3f32b5264b337bfd13a780452a17705307725&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-111&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-112&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-113&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-114&quot;&gt;&lt;/a&gt;&lt;p&gt;&lt;a class=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/High-availability_Seamless_Redundancy&quot;&gt;High-availability Seamless Redundancy&lt;/a&gt; (HSR) is a redundancy protocol for Ethernet. It provides instant failover redundancy for such networks. It requires a special network topology where all nodes are connected in a ring (each node having two physical network interfaces). It is suited for applications that demand high availability and very short reaction time.  &lt;a id=&quot;line-115&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-116&quot;&gt;&lt;/a&gt;&lt;p&gt;Code: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f421436a591d34fa5279b54a96ac07d70250cc8d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-117&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-118&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-119&quot;&gt;&lt;/a&gt;&lt;p&gt;All the driver and architecture-specific changes can be found in the &lt;a class=&quot;external&quot; href=&quot;http://kernelnewbies.org/Linux_3.13-DriversArch&quot;&gt;Linux_3.13-DriversArch page&lt;/a&gt; &lt;a id=&quot;line-120&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-121&quot;&gt;&lt;/a&gt;
+
+
+&lt;a id=&quot;line-122&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;epoll: once we get over 10+ cpus, the scalability of SPECjbb falls over due to the contention on the global 'epmutex', which is taken in on EPOLL_CTL_ADD and EPOLL_CTL_DEL operations. This release improves locking to improve performance: on the 16 socket run the performance went from 35k jOPS to 125k jOPS. In addition the benchmark when from scaling well on 10 sockets to scaling well on just over 40 sockets &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ae10b2b4eb01bedc91d29d5c5bb9e416fd806c40&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/67347fe4e6326338ee217d7eb826bedf30b2e155&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-123&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow magic sysrq key functions to be disabled in Kconfig &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8eaede49dfdc1ff1d727f9c913665b8009945191&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-124&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;modules: remove rmmod --wait option. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/3f2b9c9cdf389e303b2273679af08aab5f153517&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-125&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;iommu: Add event tracing feature to iommu &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7f6db1717235bd45d265766dad53c10d30899d41&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-126&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add option to disable kernel compression &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/69f0554ec261fd686ac7fa1c598cc9eb27b83a80&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-127&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;gcov: add support for gcc 4.7 gcov format &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5f41ea0386a53414d688cfcaa321a78310e5f7c1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-128&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;fuse: Implement writepages callback, improving mmaped writeout &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/26d614df1da9d7d255686af5d6d4508f77853c01&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-129&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;seqcount: Add lockdep functionality to seqcount/seqlock structures &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/1ca7d67cf5d5a2aef26a8d9afd789006fa098347&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-130&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provide a per-cpu preempt_count implementation &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/c2daa3bed53a81171cf8c1a36db798e82b91afe8&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-131&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/proc/pid/smaps: show VM_SOFTDIRTY flag in &lt;a class=&quot;nonexistent&quot; href=&quot;http://kernelnewbies.org/VmFlags&quot;&gt;VmFlags&lt;/a&gt; line &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ec8e41aec13005fed0dbee002fb8c99b4e001d50&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-132&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a generic associative array implementation. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/3cb989501c2688cacbb7dc4b0d353faf838f53a1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-133&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;RCU'd vfsmounts &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/48a066e72d970a3e225a9c18690d570c736fc455&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-134&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-135&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-136&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-137&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Changes in the slab have been done to improve the slab memory usage and performance. kmem_caches consisting of objects less than or equal to 128 byte have now one more objects in a slab, and a change to the management of free objects improves the locality of the accesses, which &lt;a class=&quot;external&quot; href=&quot;https://lkml.org/lkml/2013/10/16/155&quot;&gt;improve&lt;/a&gt; performance in some microbenchmarks &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8456a648cf44f14365f1f44de90a3da2526a4776&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b1cb0982bdd6f57fed690f796659733350bb2cae&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-138&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;memcg: support hierarchical memory.numa_stats &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/071aee138410210e3764f3ae8d37ef46dc6d3b42&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-139&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Introduce movable_node boot option to enable the effects of CONFIG_MOVABLE_NODE &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/c5320926e370b4cfb8f10c2169e26f960079cf67&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-140&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;thp: khugepaged: add policy for finding target node &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/9f1b868a13ac36bd207a571f5ea1193d823ab18d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-141&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-142&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-143&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;bcache: Incremental garbage collection. It means that there's less of a latency hit for doing garbage collection, which means bcache can gc more frequently (and do a better job of reclaiming from the cache), and it can coalesce across more btree nodes (improving space efficiency) &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/a1f0358b2bf69be216cb6e4ea40fe7ae4d38b8a6&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-144&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dm cache: add passthrough mode which is intended to be used when the cache contents are not known to be coherent with the origin device &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2ee57d587357f0d752af6c2e3e46434a74b1bee3&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-145&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dm cache: add cache block invalidation support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/65790ff919e2e07ccb4457415c11075b245d643b&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-146&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dm cache: cache shrinking support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f494a9c6b1b6dd9a9f21bbb75d9210d478eeb498&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-147&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;virtio_blk: blk-mq support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/1cf7e9c68fe84248174e998922b39e508375e7c1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-148&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Multi-queue aware null block test driver &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f2298c0403b0dfcaef637eba0c02c4a06d7a25ab&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-149&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-150&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-151&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-152&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Btrfs &lt;a id=&quot;line-153&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add FIEMAP_EXTENT_SHARED fiemap flag: Similar to ocfs2, btrfs also supports that extents can be shared by different inodes, and there are some userspace tools requesting for this kind of 'space shared infomation' &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fe09e16cc8d444ecc52f6f9a651946f16fffa4e1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-154&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add new btrfs mount options: commit, which sets the interval of periodic commit in seconds, 30 by default, and rescan_uuid_tree, which forces check and rebuild procedure of the UUID tree &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/906c176e541f89ed3c04d0e9af1c7cf7b3cc1adb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-155&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;XFS: For v5 filesystems  scale the inode cluster size with the size of the inode so that we keep a constant 32 inodes per cluster ratio for all inode IO &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8f80587bacb6eb893df0ee4e35fefa0dfcfdf9f4&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-156&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;F2FS Introduce CONFIG_F2FS_CHECK_FS to disable BUG_ONs which check the file system consistency in runtime and cost performance &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/3b218e3a21ccec183472015f1d7168400b187a58&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-157&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;HFS+: &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/95e0d7dbb9b28ab0dfad7c7316066b05e1f1d4cd&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/099e9245e04d50bb12ed621b4fa61df0a4c9dba9&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b3b5b0f03cc4ea074ed0ac110d0afd17e0ccdf9e&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-158&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CIFS &lt;a id=&quot;line-159&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;SMB2/SMB3 Copy offload support (refcopy, aka &quot;cp --reflink&quot;) &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/41c1358e9181ab1ebd773905b3fa8039b61aa0e9&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-160&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Query File System alignment, and the preferred (for performance) sector size and whether the underlying disk has no seek penalty (like SSD), make it visible in /proc/fs/cifs/&lt;a class=&quot;nonexistent&quot; href=&quot;http://kernelnewbies.org/DebugData&quot;&gt;DebugData&lt;/a&gt; for debugging purposes &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/af6a12ea8d4bb39a87527835b943bde4215897e5&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-161&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Query network adapter info &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/c481e9feee78c6ce1ba0a1c8c892049f6514f6cf&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-162&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow setting per-file compression &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/c7f508a99bf229963915e79a603e0618d1d2ba76&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/64a5cfa6db94c5abba2cafe77aca077dd1e3283b&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-163&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-164&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-165&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-166&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-167&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add a lightweight Berkley Packet Filter-based traffic classifier that can serve as a flexible alternative to ematch-based tree classification, i.e. now that BPF filter engine can also be JITed in the kernel &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7d1d65cb84e1cfacba3f54c5934194785259e0d8&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-168&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipv6: Add support for IPsec virtual tunnel interfaces, which provide a routable interface for IPsec tunnel endpoints &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ed1efb2aefbbc6f5a3da5b42158bfb753ba6fe82&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-169&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipv4: introduce new IP_MTU_DISCOVER mode IP_PMTUDISC_INTERFACE. Sockets marked with IP_PMTUDISC_INTERFACE won't do path mtu discovery, their sockets won't accept and install new path mtu information and they will always use the interface mtu for outgoing packets. It is guaranteed that the packet is not fragmented locally. The purpose behind this flag is to avoid PMTU attacks, particularly on DNS servers &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/482fc6094afad572a4ea1fd722e7b11ca72022a0&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-170&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipv4: Allow unprivileged users to use network namespaces sysctls &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fd2d5356d90211f98ea3624263e37c4142b41edd&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-171&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create sysfs symlinks for neighbour devices &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5831d66e8097aedfa3bc35941cf265ada2352317&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-172&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipv6: sit: add GSO/TSO support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/61c1db7fae21ed33c614356a43bf6580c5e53118&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-173&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipip: add GSO/TSO support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/cb32f511a70be8967ac9025cf49c44324ced9a39&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-174&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;packet scheduler: htb: support of 64-bit rates &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/df62cdf348c91baac61b4cb19d19ea1ef87b271e&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-175&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;openvswitch: TCP flags matching support. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5eb26b156e29eadcc21f73fb5d14497f0db24b86&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-176&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ipset &lt;a id=&quot;line-177&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add network namespaces &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/1785e8f473082aa60d62c7165856cf6484077b99&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-178&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support comments for ipset entries in the core. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/68b63f08d22f23161c43cd2417104aa213ff877f&quot;&gt;commit&lt;/a&gt;, in bitmap-type ipsets &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b90cb8ba19dac9b98add5e64adb583fccbf63f94&quot;&gt;commit&lt;/a&gt;, in hash-type ipsets &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fda75c6d9e31a901e25b922e86c8fd505c899873&quot;&gt;commit&lt;/a&gt;, and in the list-type ipset. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/81b10bb4bd16ea975c007f9bb2c2676cef6ade10&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-179&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enable ipset port set types to match IPv4 package fragments for protocols that doesn't have ports (or the port information isn't supported by ipset) &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/60b0fe372499f66e0c965dc0594320438a3b711c&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-180&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add hash:net,net set, providing the ability to configure pairs of subnets &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ea53ac5b630e813aec20c7cdcfe511daca70dee4&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-181&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add hash:net,port,net set, providing similar functionality to ip,port,net but permits arbitrary size subnets for both the first and last parameter &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7c3ad056ef79fd10f5f111c807ccbd9fa9068c7f&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-182&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-183&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;gap&quot;&gt;&lt;p&gt;Add NFC digital layer implementation: Most NFC chipsets implement the NFC digital layer in firmware, but others only implement the NFC analog layer and expect the host to implement this layer &lt;a id=&quot;line-184&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add support for NFC-A technology at 106 kbits/s &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2c66daecc4092e6049673c281b2e6f0d5e59a94c&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-185&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for NFC-F technology at 212 kbits/s and 424 kbits/s &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8c0695e4998dd268ff2a05951961247b7e015651&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-186&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add initiator NFC-DEP support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7d0911c02fa2a448a28d7844d2a0c439ff8397b1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-187&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add target NFC-DEP support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/1c7a4c24fbfd99442cc6e14dc80fcb00f118e8b8&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-188&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Implement the mechanism used to send commands to the driver in initiator mode &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/59ee2361c9248f07846f7a6e585768dcce18fb16&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-189&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Digital Protocol stack implementation &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/4b10884eb428c243ae2070a539612e645f3d9b93&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-190&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-191&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;gap&quot;&gt;&lt;p&gt;Bluetooth &lt;a id=&quot;line-192&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Introduce new HCI socket channel that allows user applications to take control over a specific HCI device. The application gains exclusive access to this device and forces the kernel to stay away and not manage it &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/23500189d7e03a071f0746f43f2cce875a62c91c&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/0736cfa8e5bb7ee1d7b7d28aabe634fd3f85cb92&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-193&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support creating virtual AMP controllers &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/23424c0d316941f30cd953fcbff7082044228487&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-194&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for setting Device Under Test mode &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/4b4148e9acc1a51c454f133637e5dc7e298bd5bb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-195&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a new mgmt_set_bredr command for enabling/disabling BR/EDR functionality. This can be convenient when one wants to make a dual-mode controller behave like a single-mode one. The command is only available for dual-mode controllers and requires that Bluetooth LE is enabled before using it &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/0663ca2a032eea12480a8f86fe08bef9d72f8faf&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-196&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add management command for setting static address on dual-mode BR/EDR/LE and LE only controllers where it is possible to configure a random static address &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/d13eafce2c892d57f1eb243e43dfe48b4626006d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-197&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add new management setting for enabling and disabling Bluetooth LE advertising &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/eeca6f891305a80378da978f803821c2a0b648b6&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/4375f1037d52602413142e290608d0d84671ad36&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-198&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-199&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;gap&quot;&gt;&lt;p&gt;bonding &lt;a id=&quot;line-200&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;extend round-robin mode with packets_per_slave, which specifies the number of packets to transmit through a slave before moving to the next one &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/73958329ea1fe0dc149b51e5d8703015f65a03e0&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/12465fb8338fedddc20464fdc5b1fcbc1971bc3a&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-201&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;add Netlink support mode option &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/90af231106c0b8d223c27d35464af95cb3d9cacf&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-202&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;add Netlink support active_slave option &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ec76aa49855f6d6fea5e01de179fb57dd47c619d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-203&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-204&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li class=&quot;gap&quot;&gt;&lt;p&gt;tcp_memcontrol: Remove setting cgroup settings via sysctl, because the code is broken in both design and implementation and does not implement the functionality for which it was written for &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f594d63199688ad568fb69f6a790b11d6d6d1ba5&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-205&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wifi: implement mesh channel switch userspace API &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b8456a14e9d2770846fcf74de18ff95b676149a3&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-206&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wifi: enable channels 52-64 and 100-144 for world roaming &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/131a19bc924c32cecd014be7036686f2186b48ad&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-207&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wifi: enable DFS for IBSS mode &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5336fa88e8ac6b666a3db9902a4797d94d86a702&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/8e8d347da7613d0315295e730f2eecf9fe6f36ba&quot;&gt;commit&lt;/a&gt;, add support for CSA in IBSS mode &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/cd7760e62c2ac8581f050b2d36501d1a60beaf83&quot;&gt;commit&lt;/a&gt;,  &lt;a id=&quot;line-208&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-209&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;gap&quot;&gt;&lt;p&gt;B.A.T.M.A.N.: remove vis functionality (replaced by a userspace program) &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/9f4980e68b4b72e6a4d7caadfacc54260d05ebf6&quot;&gt;commit&lt;/a&gt;, add per VLAN interface attribute framework &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5d2c05b213377694a2aa8ce1ed9b23f7c39b0569&quot;&gt;commit&lt;/a&gt;, add the T(ype) V(ersion) L(ength) V(alue) framework &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/17cf0ea455f1a4a7e8436ef96236999e9c452a93&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/3f4841ffb336075f74b05fe4a205e877bb22848d&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ef26157747d42254453f6b3ac2bd8bd3c53339c3&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/414254e342a0d58144de40c3da777521ebaeeb07&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-210&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-211&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-212&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-213&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;caam: Add platform driver for Job Ring, which are part of Freescale's Cryptographic Accelerator and Assurance Module (CAAM) &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/313ea293e9c4d1eabcaddd2c0800f083b03c2a2e&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-214&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;random: Our mixing functions &lt;a class=&quot;external&quot; href=&quot;http://eprint.iacr.org/2012/251.pdf&quot;&gt;were analyzed&lt;/a&gt;, they suggested a slight change to improve our mixing functions which has been implemented &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/6e9fa2c8a630e6d0882828012431038abce285b9&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-215&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;random32: upgrade taus88 generator to taus113 from errata paper &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/a98814cef87946d2708812ad9f8b1e03b8366b6f&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-216&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-217&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-218&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-219&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;hyperv: fb: add blanking support &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/9b5254b4604d358e64d1798544e242f67a81c106&quot;&gt;commit&lt;/a&gt;, add PCI stub, the hyperv framebuffer driver will bind to the PCI device then, so Linux kernel and userspace know there is a proper kernel driver for the device active &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7ad9684721606efbfb9b347346816e1e6baff8bb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-220&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;kvm: Add VFIO device &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ec53500fae421e07c5d035918ca454a429732ef4&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-221&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;xen-netback: add support for IPv6 checksum offload to guest &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/146c8a77d27bcbd7722120f70f51e3b287205d0a&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-222&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;xen-netback: enable IPv6 TCP GSO to the guest &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/82cada22a0bbec6a7afb573ef5fb6c512aaa2739&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-223&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;xen-netfront: convert to GRO API &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/99d3d587b2b4314ccc8ea066cb327dfb523d598e&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-224&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-225&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-226&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;SELinux: Enable setting security contexts on rootfs (ramfs) inodes. &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5c73fceb8c70466c5876ad94c356922ae75a0820&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-227&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SELinux: Reduce overhead that harmed the high_systime workload of the AIM7 benchmark &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fee7114298cf54bbd221cdb2ab49738be8b94f4c&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-228&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SELinux: Add the always_check_network policy capability which, when enabled, treats SECMARK as enabled, even if there are no netfilter SECMARK rules and treats peer labeling as enabled, even if there is no Netlabel or labeled IPsec configuration.policy capability for always checking packet and peer classes &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/2be4d74f2fd45460d70d4fe65cc1972ef45bf849&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-229&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Smack treats setting a file read lock as the write operation that it is. Unfortunately, many programs assume that setting a read lock is a read operation, and don't work well in the Smack environment. This release implements a new access mode (lock) to address this problem &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/c0ab6e56dcb7ca9903d460247cb464e769ae6e77&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-230&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Smack: When the ptrace security hooks were split the addition of a mode parameter was not taken advantage of in the Smack ptrace access check. This changes the access check from always looking for read and write access to using the passed mode &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b5dfd8075bc26636d11c3d8888940198afbf5112&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-231&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;audit: new feature which only grants processes with CAP_AUDIT_CONTROL the ability to unset their loginuid &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/d040e5af380554c23ffe0a034ae5f3e53da93a1d&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-232&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;audit:  feature which allows userspace to set it such that the loginuid is absolutely immutable, even if you have CAP_AUDIT_CONTROL. CONFIG_AUDIT_LOGINUID_IMMUTABLE has been removed &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/21b85c31d23f2047d47e1f74bfa5caa8b75c1c77&quot;&gt;commit&lt;/a&gt;, &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/83fa6bbe4c4541ae748b550b4ec391f8a0acfe94&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-233&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;keys: Expand the capacity of a keyring &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/b2a4df200d570b2c33a57e1ebfa5896e4bc81b69&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-234&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;keys: Implement a big key type that can save to tmpfs &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/ab3c3587f8cda9083209a61dbe3a4407d3cada10&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-235&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;keys: Add per-user namespace registers for persistent per-UID kerberos caches &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f36f8c75ae2e7d4da34f4c908cebdb4aa42c977e&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-236&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ima: add audit log support for larger hashes &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5278aa52f35003ddafda80b0243b3693f935b134&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-237&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ima: enable support for larger default filedata hash algorithms &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/e7a2ad7eb6f48ad80c70a22dd8167fb34b409466&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-238&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ima: new templates management mechanism &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/adf53a778a0a5a5dc9103509da4a9719046e5310&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-239&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-240&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-241&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-242&quot;&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;perf trace &lt;a id=&quot;line-243&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add &quot;perf trace record&quot; option, a convience alias to include the -e raw_syscalls:* argument to perf-record &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5e2485b1a2813faa6b80007c653f8bbbed9457ee&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-244&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add --time/-T option to show full timestamp &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/4bb09192d38ef08f0619667527cabb26354fff89&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-245&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add option --comm to show process COMM &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/50c95cbd70808aa2e5ba8d79e503456f1da37aeb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-246&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add summary only option &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fd2eabaf16984bc75695e43f4b76e6f20ed4ea41&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-247&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add summary option to dump syscall statistics &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/bf2575c121ca11247ef07fd02b43f7430834f7b1&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-248&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf probe &lt;a id=&quot;line-249&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add --demangle/--no-demangle options &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/35e17b2450e09968f9702d4048c228199af171bc&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-250&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support &quot;$vars&quot; meta argument syntax for local variables &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/7969ec7728ba6340de8000ddb0a8833273629d6a&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-251&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf record: Add option --force-per-cpu to force per-cpu mmaps &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/539e6bb71e350541105e67e3d6c31392d9da25ef&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-252&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf record: Add abort_tx,no_tx,in_tx branch filter options to perf record -j &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/0126d493b62e1306db09e1019c05e0bfe84ae8e7&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-253&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf report: Add --max-stack option to limit callchain stack scan &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/91e95617429cb272fd908b1928a1915b37b9655f&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-254&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf top: Add new option --ignore-vmlinux to explicitly indicate that we do not want to use these kernels and just use what we have (kallsyms &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fc2be6968e99b5314f20e938a547d44dcb1c40eb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-255&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf tools: Add possibility to specify mmap size via -m/--mmap-pages by appending unit size character (B/K/M/G) to the number &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/27050f530dc4fd88dc93d85c177e000efe970d12&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-256&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf top: Add --max-stack option to limit callchain stack scan &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/5dbb6e81d85e55ee2b4cf523c1738e16f63e5400&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-257&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf stat: Add perf stat --transaction to print the basic transactional execution statistics &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/4cabc3d1cb6a46f581a2628d1d11c483d5f300e5&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-258&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf: Add support for recording transaction flags &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/475eeab9f3c1579c8da89667496084db4867bf7c&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-259&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf: Support sorting by in_tx or abort branch flags &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/f5d05bcec409aec2c41727077ad818f7c4db005b&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-260&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ftrace: Add set_graph_notrace filter, analogous to set_ftrace_notrace and can be used for eliminating uninteresting part of function graph trace output &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/29ad23b00474c34e3b5040dda508c78d33a1a3eb&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-261&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf bench sched: Add --threaded option, allow the measurement of thread versus process context switch performance &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/a9faa0cab619fad380c2669825aa84212943d528&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-262&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;perf buildid-cache: Add ability to add kcore to the cache &lt;a class=&quot;external&quot; href=&quot;http://git.kernel.org/linus/fc1b691d7651d9496e912de7e0fc73a5be3294af&quot;&gt;commit&lt;/a&gt; &lt;a id=&quot;line-263&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a id=&quot;line-264&quot;&gt;&lt;/a&gt;&lt;a id=&quot;line-265&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;a id=&quot;line-266&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;bottom&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+Tell others about this page:
+
+
+&lt;/div&gt;
+</description>
+<title>
+Linux 3.13
+</title>
+</item>
+<item>
+<author>
+Graeme Wearden
+</author>
+<link>
+http://www.theguardian.com/business/2014/jan/20/oxfam-85-richest-people-half-of-the-world
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;main-content-picture&quot;&gt;
+							&lt;img src=&quot;http://static.guim.co.uk/sys-images/Business/Pix/pictures/2014/1/20/1390205014982/The-InterContinental-Davo-011.jpg&quot; width=&quot;460&quot; alt=&quot;The InterContinental Davos luxury hotel in the Swiss mountain resort of Davos&quot;&gt;
+										&lt;p class=&quot;caption&quot;&gt;The InterContinental Davos luxury hotel in the Swiss mountain resort of Davos. Oxfam report found people in countries around the world believe that the rich have too much influence over the direction their country is heading. Photograph: Arnd Wiegmann/REUTERS&lt;/p&gt;
+					&lt;/div&gt;
+	
+
+    
+    &lt;div id=&quot;article-body-blocks&quot;&gt;
+	    &lt;p&gt;The world's wealthiest people aren't known for travelling by bus, but if they fancied a change of scene then the richest 85 people on the globe &amp;#x2013; who between them control as much wealth as the poorest half of the global population put together &amp;#x2013; could squeeze onto a single double-decker.&lt;/p&gt;&lt;p&gt;The extent to which so much global wealth has become corralled by a virtual handful of the so-called 'global elite' is exposed in a new report from Oxfam on Monday. It warned that those richest 85 people across the globe share a combined wealth of &amp;#xA3;1tn, as much as the poorest 3.5 billion of the world's population.&lt;/p&gt;    &lt;span class=&quot;inline wide&quot;&gt;
+                &lt;img src=&quot;http://static.guim.co.uk/sys-images/Business/Pix/pictures/2014/1/20/1390210939139/Working-for-the-Few---Oxf-011.jpg&quot; alt=&quot;Working for the Few - Oxfam report&quot; width=&quot;460&quot;&gt;
+                			&lt;span class=&quot;caption&quot;&gt;
+				Source: F. Alvaredo, A. B. Atkinson, T. Piketty and E. Saez, (2013) &amp;#x2018;The World Top Incomes Database&amp;#x2019;, http://topincomes.g-mond.parisschoolofeconomics.eu/ Only includes countries with data in 1980 and later than 2008. Photograph: Oxfam
+			&lt;/span&gt;
+            &lt;/span&gt;
+&lt;p&gt;The wealth of the 1% richest people in the world amounts to $110tn (&amp;#xA3;60.88tn), or 65 times as much as the poorest half of the world, added the development charity, which fears this concentration of economic resources is threatening political stability and driving up social tensions.&lt;/p&gt;&lt;p&gt;It's a chilling reminder of the depths of wealth inequality as political leaders and top business people head to the snowy peaks of &lt;a href=&quot;http://www.theguardian.com/business/davos&quot; title=&quot;More from the Guardian on Davos&quot;&gt;Davos&lt;/a&gt; for this week's World Economic Forum. Few, if any, will be arriving on anything as common as a bus, with private jets and helicopters pressed into service as many of the world's most powerful people &lt;a href=&quot;http://www.theguardian.com/business/2014/jan/19/world-economic-forum-davos-issues-2014&quot; title=&quot;&quot;&gt;convene to discuss the state of the global economy over four hectic days of meetings, seminars and parties in the exclusive ski resort&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Winnie Byanyima, the Oxfam executive director who will attend the Davos meetings, said: &quot;It is staggering that in the 21st Century, half of the world's population &amp;#x2013; that's three and a half billion people &amp;#x2013; own no more than a tiny elite whose numbers could all fit comfortably on a double-decker bus.&quot;&lt;/p&gt;&lt;p&gt;Oxfam also argues that this is no accident either, saying growing inequality has been driven by a &quot;power grab&quot; by wealthy elites, who have co-opted the political process to rig the rules of the economic system in their favour.&lt;/p&gt;&lt;p&gt;In the report, entitled Working For The Few (&lt;a href=&quot;http://www.oxfam.org/sites/www.oxfam.org/files/bp-working-for-few-political-capture-economic-inequality-200114-summ-en.pdf&quot; title=&quot;&quot;&gt;summary here&lt;/a&gt;), Oxfam warned that the fight against poverty cannot be won until wealth inequality has been tackled.&lt;/p&gt;&lt;p&gt;&quot;Widening inequality is creating a vicious circle where wealth and power are increasingly concentrated in the hands of a few, leaving the rest of us to fight over crumbs from the top table,&quot; Byanyima said.&lt;/p&gt;&lt;p&gt;Oxfam called on attendees at &lt;a href=&quot;http://www.theguardian.com/business/economics-blog/2014/jan/19/davos-inequality-world-economic-forum&quot; title=&quot;&quot;&gt;this week's World Economic Forum&lt;/a&gt; to take a personal pledge to tackle the problem by refraining from dodging taxes or using their wealth to seek political favours.&lt;/p&gt;&lt;p&gt;As well as being morally dubious, economic inequality can also exacerbate other social problems such as gender inequality, Oxfam warned. Davos itself is also struggling in this area, with &lt;a href=&quot;http://www.theguardian.com/lifeandstyle/womens-blog/interactive/2014/jan/17/women-davos-numbers-world-economic-forum&quot; title=&quot;&quot;&gt;the number of female delegates actually dropping from 17% in 2013 to 15% this year&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;How richest use their wealth to capture opportunities&lt;/h2&gt;&lt;p&gt;Polling for Oxfam's report found people in countries around the world - including two-thirds of those questioned in Britain - believe that the rich have too much influence over the direction their country is heading.&lt;/p&gt;&lt;p&gt;Byanyima explained:&lt;/p&gt;&lt;p&gt;&quot;In developed and developing countries alike we are increasingly living in a world where the lowest tax rates, the best health and education and the opportunity to influence are being given not just to the rich but also to their children.&lt;/p&gt;&lt;p&gt;&quot;Without a concerted effort to tackle inequality, the cascade of privilege and of disadvantage will continue down the generations. We will soon live in a world where equality of opportunity is just a dream. In too many countries economic growth already amounts to little more than a 'winner takes all' windfall for the richest.&quot;&lt;/p&gt;    &lt;span class=&quot;inline wide&quot;&gt;
+                &lt;img src=&quot;http://static.guim.co.uk/sys-images/Business/Pix/pictures/2014/1/20/1390211106000/Working-for-the-Few---Oxf-009.jpg&quot; alt=&quot;Working for the Few - Oxfam report&quot; width=&quot;460&quot;&gt;
+                			&lt;span class=&quot;caption&quot;&gt;
+				Source: F. Alvaredo, A. B. Atkinson, T. Piketty and E. Saez, (2013) &amp;#x2018;The World Top Incomes Database&amp;#x2019;, http://topincomes.g-mond.parisschoolofeconomics.eu/ Only includes countries with data in 1980 and later than 2008. Photograph: Oxfam
+			&lt;/span&gt;
+            &lt;/span&gt;
+&lt;p&gt;The Oxfam report found that over the past few decades, the rich have successfully wielded political influence to skew policies in their favour on issues ranging from financial deregulation, tax havens, anti-competitive business practices to lower tax rates on high incomes and cuts in public services for the majority. Since the late 1970s, tax rates for the richest have fallen in 29 out of 30 countries for which data are available, said the report.&lt;/p&gt;&lt;p&gt;This &quot;capture of opportunities&quot; by the rich at the expense of the poor and middle classes has led to a situation where 70% of the world's population live in countries where inequality has increased since the 1980s and 1% of families own 46% of global wealth - almost &amp;#xA3;70tn.&lt;/p&gt;&lt;p&gt;Opinion polls in Spain, Brazil, India, South Africa, the US, UK and Netherlands found that a majority in each country believe that wealthy people exert too much influence. Concern was strongest in Spain, followed by Brazil and India and least marked in the Netherlands.&lt;/p&gt;&lt;p&gt;In the UK, some 67% agreed that &quot;the rich have too much influence over where this country is headed&quot; - 37% saying that they agreed &quot;strongly&quot; with the statement - against just 10% who disagreed, 2% of them strongly.&lt;/p&gt;&lt;p&gt;The WEF's own Global Risks report recently identified widening income disparities as one of the biggest threats to the world community.&lt;/p&gt;&lt;p&gt;Oxfam is calling on those gathered at WEF to pledge: to support progressive taxation and not dodge their own taxes; refrain from using their wealth to seek political favours that undermine the democratic will of their fellow citizens; make public all investments in companies and trusts for which they are the ultimate beneficial owners; challenge governments to use tax revenue to provide universal healthcare, education and social protection; demand a living wage in all companies they own or control; and challenge other members of the economic elite to join them in these pledges.&lt;/p&gt;&lt;p&gt;&amp;#x2022; Research Now questioned 1,166 adults in the UK for Oxfam between October 1 and 14 2013.&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+
+						
+	
+		
+            	    
+
+
+
+
+
+		
+										
+
+        
+
+			            						
+					
+					
+                                                                                                                                                                                                                            
+
+                                                                        
+	
+	
+		
+			
+                                                        
+                                                                                                                &lt;/div&gt;
+</description>
+<title>
+Oxfam: 85 richest people as wealthy as half of the world's population
+</title>
+</item>
+<item>
+<author>
+Nicholas Nethercote
+</author>
+<link>
+https://blog.mozilla.org/nnethercote/2014/01/20/a-big-step-towards-generational-and-compacting-gc/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+						&lt;p&gt;People frequently ask me for status updates on generational GC, and I usually say I&amp;#x2019;ll tell them when something notable happens. Well, something notable just happened: &lt;a href=&quot;https://groups.google.com/forum/#!topic/mozilla.dev.platform/pWuGWdZgQL0&quot;&gt;exact rooting landed&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What is exact rooting? In order to support generational and/or compacting GC, you need to be able to move GC-allocated things such as objects around. This means you can&amp;#x2019;t have raw C++ pointers to any objects that might move; instead, you need some kind of indirect pointer that can be updated when necessary.&lt;/p&gt;
+&lt;p&gt;Unfortunately, both the JS engine and Gecko have a &lt;em&gt;lot&lt;/em&gt; of pointers to GC-allocated things. The process of checking and converting them has been the main part of a task called &amp;#x201C;exact rooting&amp;#x201D;, and that&amp;#x2019;s what just finished. This has required an enormous amount of what is essentially very tedious work. Jim Blandy summarized it nicely, as follows.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I&amp;#x2019;ve never heard of a major project escaping from conservative GC once it had entered that state of sin; nor have I heard of anyone implementing a moving collector after starting with a non-moving collector. So, doing *both* is impressive. I hope it pays off big!&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Major kudos to Terrence Cole, Steve Fink, Jon Coppeard, Brian Hackett, and the small army of other helpers who did this. Now that they&amp;#x2019;ve finished eating this gigantic serving of vegetables, they can move onto dessert, i.e. making the GC generational and compacting.&lt;/p&gt;
+											&lt;/div&gt;
+
+					&lt;/div&gt;
+</description>
+<title>
+A big step towards Firefox generational and compacting GC
 </title>
 </item>
 </channel>
