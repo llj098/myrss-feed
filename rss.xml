@@ -15,418 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://blog.mikiobraun.de/2014/01/apache-spark.html
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;content&quot;&gt;
-      &lt;p&gt;&lt;em&gt;Friday, January 17, 2014&lt;/em&gt;&lt;/p&gt;
-      
-      
-
-
-      &lt;h2&gt;&lt;/h2&gt;
-
-
-      
-
-      &lt;p&gt;&lt;a href=&quot;http://spark.incubator.apache.org/&quot;&gt;Apache Spark&lt;/a&gt; is generating quite some buzz right now. &lt;a href=&quot;http://databricks.com/&quot;&gt;Databricks&lt;/a&gt;, the company founded to support Spark &lt;a href=&quot;http://gigaom.com/2013/09/25/databricks-raises-14m-from-andreessen-horowitz-wants-to-take-on-mapreduce-with-spark/&quot;&gt;raised $14M from Andreessen Horowitz&lt;/a&gt;, &lt;a href=&quot;http://blog.cloudera.com/blog/2013/11/putting-spark-to-use-fast-in-memory-computing-for-your-big-data-applications/&quot;&gt;Cloudera&lt;/a&gt; has decided to fully support Spark, and others chime in that it&amp;#x2019;s the next &lt;a href=&quot;http://gigaom.com/2013/10/28/spark-is-a-really-big-deal-for-big-data-and-cloudera-gets-it/&quot;&gt;big&lt;/a&gt; &lt;a href=&quot;http://strata.oreilly.com/2013/02/the-future-of-big-data-with-bdas-the-berkeley-data-analytics-stack.html&quot;&gt;thing&lt;/a&gt;. So I thought it&amp;#x2019;s high time I took a look to get an understanding what the whole buzz is around.&lt;/p&gt;
-
-&lt;p&gt;I played around with the Scala API (Spark is written in Scala), and to be honest, at first I was pretty underwhelmed, because Spark looked, well, so small. The basic abstraction are Resilient Distributed Datasets (RDDs), basically distributed immutable collections, which can be defined based on local files or files stored in on Hadoop via HDFS, and which provide the usual Scala-style collection operations like map, foreach and so on.&lt;/p&gt;
-
-&lt;p&gt;My first reaction was &amp;#x201C;wait, is this basically distributed collections?&amp;#x201D; Hadoop in comparison seemed to be so much more, a distributed filesystem, obviously map reduce, with support for all kinds of data formats, data sources, unit testing, clustering variants, and so on and so on.&lt;/p&gt;
-
-&lt;p&gt;Others quickly pointed out that there&amp;#x2019;s more to it, in fact, Spark also provides more complex operations like joins, group-by, or reduce-by operations so that you can model quite complex data flows (without iterations, though).&lt;/p&gt;
-
-&lt;p&gt;Over time it dawned on me that the perceived simplicity of Spark actually said a lot more about the Java API of Hadoop than Spark. Even simple examples in Hadoop usually come with a lot of boilerplate code. But conceptually speaking, Hadoop is quite simple as it only provides two basic operations, a parallel map, and a reduce operation. If expressed in the same way on something resembling distributed collections, one would in fact have an even smaller interface (some projects like &lt;a href=&quot;https://github.com/twitter/scalding&quot;&gt;Scalding&lt;/a&gt; actually build such things and the code looks pretty similar to that of Spark).&lt;/p&gt;
-
-&lt;p&gt;So after convincing me that Spark actually provides a non-trivial set of operations (really hard to tell just from the ubiqitous word count example), I digged deeper and read this &lt;a href=&quot;http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf&quot;&gt;paper&lt;/a&gt; which describes the general architecture. RDDs are the basic building block of Spark and are actually really something like distributed immutable collections. These define operations like map or foreach which are easily parallelized, but also join operations which take two RDDs and collects entries based on a common key, as well as reduce-by operations which aggregates entries using a user specified function based on a given key. In the word count example, you&amp;#x2019;d map a text to all the words with a count of one, and then reduce them by key using the word and summing up the counts to get the word counts. RDDs can be read from disk but are then held in memory for improved speed where they can also be cached so you don&amp;#x2019;t have to reread them every time. That alone adds a lot of speed compared to Hadoop which is mostly disk based.&lt;/p&gt;
-
-&lt;p&gt;Now what&amp;#x2019;s interesting is Spark&amp;#x2019;s approach to fault tolerance. Instead of persisting or checkpointing intermediate results, Spark remembers the sequence of operations which led to a certain data set. So when a node fails, Spark reconstructs the data set based on the stored information. They argue that this is actually not that bad because the other nodes will help in the reconstruction.&lt;/p&gt;
-
-&lt;p&gt;So in essence, compared to bare Hadoop, Spark has a smaller interface (which might still become similarly bloated in the future), but there are many projects on top of Hadoop (like Twitter&amp;#x2019;s &lt;a href=&quot;https://github.com/twitter/scalding&quot;&gt;Scalding&lt;/a&gt;, for example), which achieve a similar level of expressiveness. The other main difference is that Spark is in-memory by default, which naturally leads to a large improvement in performance, and even allows to run iterative algorithms. Spark has no built- in support for iterations, though, it&amp;#x2019;s just that they claim it&amp;#x2019;s so fast that you can run iterations if you want to.&lt;/p&gt;
-
-&lt;h2 id=&quot;spark_streaming__return_of_the_microbatch&quot;&gt;Spark Streaming - return of the micro-batch&lt;/h2&gt;
-
-&lt;p&gt;Spark also comes with a streaming data processing model, which got me quite interested, of course. There is again a &lt;a href=&quot;http://www.eecs.berkeley.edu/Pubs/TechRpts/2012/EECS-2012-259.pdf&quot;&gt;paper&lt;/a&gt; which summarizes the design quite nicely. Spark follows an interesting and different approach compared to frameworks like Twitter&amp;#x2019;s &lt;a href=&quot;http://storm-project.net/&quot;&gt;Storm&lt;/a&gt;. Storm is basically like a pipeline where you push individual events in which then get processed in a distributed fashion. Instead, Spark follows a model where events are collected and then processed at short time intervals (let&amp;#x2019;s say every 5 seconds) in a batch manner. The collected data become an RDD of their own which is then processed using the usual set of Spark applications.&lt;/p&gt;
-
-&lt;p&gt;The authors claim that this mode is more robust against slow nodes and failures, and also that the 5 second interval are usually fast enough for most applications. I&amp;#x2019;m not so sure about this, as distributed computing is always pretty complex and I don&amp;#x2019;t think you can easily say that something&amp;#x2019;s are generally better than others. This approach also nicely unifies the streaming with the non- streaming parts, which is certainly true.&lt;/p&gt;
-
-&lt;h2 id=&quot;final_thoughts&quot;&gt;Final thoughts&lt;/h2&gt;
-
-&lt;p&gt;What I saw looked pretty promising, and given the support and attention Spark receives, I&amp;#x2019;m pretty sure it will mature and become a strong player in the field. It&amp;#x2019;s not well-suited for everything. As the authors themselves admit, it&amp;#x2019;s not really well suited to operations which require to change only a few entries the data set at the time due to the immutable nature of the RDDs. In principle, you have to make a copy of the whole data set even if you just want to change one entry. This can be nicely paralellized, but is of course costly. More efficient implementations based on copy-on-write schemes might also work here, but are not implement yet if I&amp;#x2019;m not mistaken.&lt;/p&gt;
-
-&lt;p&gt;Stratosphere is research project at the TU Berlin which has similar goals, but takes the approach even further by including more complex operations like iterations and not only storing the sequence of operations for fault tolerance, but to use them for global optimization of the scheduling and paralellization.&lt;/p&gt;
-
-&lt;p&gt;Immutability is pretty on vogue here as it&amp;#x2019;s easier to reason about, but I&amp;#x2019;d like to point you to this excellent &lt;a href=&quot;http://www.xaprb.com/blog/2013/12/28/immutability-mvcc-and-garbage-collection/&quot;&gt;article&lt;/a&gt; by Baron Schwartz on how you&amp;#x2019;ll always end up with mixed strategies (mutable and immutable data) to make it work in the real-world.&lt;/p&gt;
-      
-      &lt;p&gt;Posted by Mikio L. Braun at Fri Jan 17 16:12:00 +0100 2014&lt;/p&gt;
-
-
-      
-
-      
-      
-
-      
-      
-      &lt;a href=&quot;http://disqus.com&quot; class=&quot;dsq-brlink&quot;&gt;blog comments powered by &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-Apache Spark: The Next Big Data Thing?
-</title>
-</item>
-<item>
-<link>
-http://baboom.com/
-</link>
-<description>
-&lt;div class=&quot;phone&quot;&gt;
-        &lt;div id=&quot;page&quot;&gt;
-            
-
-            &lt;div class=&quot;page-wrapper&quot;&gt;
-                &lt;div class=&quot;page-container&quot;&gt;
-                    
-                    &lt;div class=&quot;content&quot;&gt;
-                        
-
-                        &lt;div class=&quot;section&quot;&gt;
-                            &lt;div class=&quot;align-middle-wrapper&quot;&gt;
-                                &lt;div class=&quot;align-middle&quot;&gt;
-                                    
-
-                                    &lt;p class=&quot;cant-wait-title title&quot;&gt;Can't wait to see &lt;br&gt;&lt;span class=&quot;strong&quot;&gt;what we're all about?&lt;/span&gt;&lt;/p&gt;
-                                    &lt;p class=&quot;check-album-subtitle subtitle&quot;&gt;Check the first album ever released on Baboom,&lt;br&gt; &lt;span class=&quot;strong&quot;&gt;Good Times&lt;/span&gt; by Kim Dotcom&lt;/p&gt;
-
-                                    &lt;p class=&quot;check-album-subtitle-compact subtitle&quot;&gt;Check the first album ever released on Baboom&lt;/p&gt;
-                                    
-
-                                    
-
-                                    
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-
-                        
-
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        
-        &lt;a href=&quot;https://plus.google.com/104355472463686127790&quot; rel=&quot;publisher&quot; class=&quot;google-plus-link&quot;&gt;Google+&lt;/a&gt;
-
-        
-        
-    &lt;/div&gt;
-
-</description>
-<title>
-Kim Dotcom's new music streaming service
-</title>
-</item>
-<item>
-<link>
-http://www.agner.org/optimize/blog/read.php?i=49
-</link>
-<description>
-&lt;div&gt;&lt;td class=&quot;message&quot; width=&quot;100%&quot; colspan=&quot;2&quot;&gt;&lt;h2&gt;Will Intel be forced to remove the &quot;cripple AMD&quot; function from
-their compiler?&lt;/h2&gt;
-&lt;p&gt;Many software programmers consider Intel's compiler the best optimizing
-compiler on the market, and it is often the preferred compiler for the most
-critical applications. Likewise, Intel is supplying a lot of highly optimized
-function libraries for many different technical and scientific applications. In
-many cases, there are no good alternatives to Intel's function libraries.&lt;/p&gt;
-&lt;p&gt;Unfortunately, software compiled with the Intel compiler or the Intel
-function libraries has inferior performance on AMD and VIA processors. The
-reason is that the compiler or library can make multiple versions of a piece of
-code, each optimized for a certain processor and instruction set, for example
-SSE2, SSE3, etc. The system includes a function that detects which type of CPU
-it is running on and chooses the optimal code path for that CPU. This is called
-a CPU dispatcher. However, the Intel CPU dispatcher does not only check which
-instruction set is supported by the CPU, it also checks the vendor ID string. If
-the vendor string says &quot;GenuineIntel&quot; then it uses the optimal code
-path. If the CPU is not from Intel then, in most cases, it will run the slowest
-possible version of the code, even if the CPU is fully compatible with a better
-version.&lt;/p&gt;
-&lt;p&gt;I have complained about this behavior for years, and so have many others, but
-Intel have refused to change their CPU dispatcher. If Intel had advertised their
-compiler as compatible with Intel processors only, then there would probably be
-no complaints. The problem is that they are trying to hide what they are doing.
-Many software developers think that the compiler is compatible with AMD
-processors, and in fact it is, but unbeknownst to the programmer it puts in a
-biased CPU dispatcher that chooses an inferior code path whenever it is running
-on a non-Intel processor. If programmers knew this fact they would probably use
-another compiler. Who wants to sell a piece of software that doesn't work well
-on AMD processors? &lt;/p&gt;
-&lt;p&gt;Because of their size, Intel can afford to put more money into their compiler
-than other CPU vendors can. The Intel compiler is relatively cheap, it has superior
-performance, and the support is excellent. Selling such a compiler is certainly
-not a profitable business in itself, but it is obviously intended as a way of
-supporting Intel's microprocessors. There would be no point in adding new
-advanced instructions to the microprocessors if there were no tools to use these
-instructions. AMD is also making a compiler, but the current version supports
-only Linux, not Windows. &lt;/p&gt;
-&lt;p&gt;Various people have raised suspicion that the biased CPU dispatching has made its way into
-common benchmark programs (&lt;a href=&quot;http://www.brightsideofnews.com/print/2009/12/17/why-the-ftc-lawsuit-against-intel-has-substance.aspx&quot;&gt;link&lt;/a&gt;
-&lt;a href=&quot;http://arstechnica.com/hardware/reviews/2008/07/atom-nano-review.ars/6&quot;&gt;link&lt;/a&gt;).
-This is a serious issue indeed. We know that many customers base their buying
-decision on published benchmark results, and a biased benchmark means an unfair
-market advantage worth billions of dollars. &lt;/p&gt;
-
-&lt;h2&gt;The legal battle &lt;/h2&gt;
-&lt;p&gt;AMD have sued Intel for unfair competition at least since 2005, and the case
-has been &lt;a href=&quot;http://download.intel.com/pressroom/legal/AMD_settlement_agreement.pdf&quot;&gt;settled&lt;/a&gt;
-in November 2009. This settlement deals with many issues of unfair competition,
-apparently including the Intel compiler. The settlement says: &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2.3 TECHNICAL PRACTICES&lt;br&gt;
-&lt;br&gt;
-Intel shall not include any Artificial Performance Impairment in any Intel
-product or require any Third Party to include an Artificial Performance
-Impairment in the Third Party&amp;#x92;s product. As used in this Section 2.3, &amp;#x93;&lt;u&gt;Artificial
-Performance Impairment&lt;/u&gt;&amp;#x94; means an affirmative engineering or design action
-by Intel (but not a failure to act) that (i) degrades the performance or
-operation of a Specified AMD product, (ii) is not a consequence of an Intel
-Product Benefit and (iii) is made intentionally to degrade the performance or
-operation of a Specified AMD Product. For purposes of this Section 2.3, &amp;#x93;&lt;u&gt;Product
-Benefit&lt;/u&gt;&amp;#x94; shall mean any benefit, advantage, or improvement in terms of
-performance, operation, price, cost, manufacturability, reliability,
-compatibility, or ability to operate or enhance the operation of another
-product.&lt;br&gt;
-&lt;br&gt;
-In no circumstances shall this Section 2.3 impose or be construed to impose any
-obligation on Intel to (i) take any act that would provide a Product Benefit to
-any AMD or other non-Intel product, either when such AMD or non-Intel product is
-used alone or in combination with any other product, (ii) optimize any products
-for Specified AMD Products, or (iii) provide any technical information,
-documents, or know how to AMD. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This looks like a victory for AMD. If we read &quot;any Intel product&quot;
-as Intel's compilers and function libraries, &quot;any Third Party&quot; as
-programmers using these compilers and libraries, and &quot;Artificial
-Performance Impairment&quot; as the CPU dispatcher checking the vendor ID
-string; then the settlement puts an obligation on Intel to change their CPU
-dispatcher. I will certainly check the next version of Intel's compiler and
-libraries to see if they have done so or they have found a loophole in the
-settlement. &lt;/p&gt;
-&lt;p&gt;Interestingly, this is not the end of the story. Only about one month after
-the AMD/Intel settlement, the US Federal Trade Commission (FTC) filed an &lt;a href=&quot;http://www.ftc.gov/os/adjpro/d9341/091216intelcmpt.pdf&quot;&gt;antitrust
-complaint&lt;/a&gt; against Intel. The accusations in the FTC complaint are unusually
-strong: &lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Intel sought to undercut the performance advantage of
-  non-Intel x86 CPUs relative to Intel x86 CPUs when it redesigned and
-  distributed software products, such as compilers and libraries.&lt;br&gt;
-  [...]&lt;br&gt;
-  To the public, OEMs, ISVs, and benchmarking organizations, the slower
-  performance of non-Intel CPUs on Intel-compiled software applications appeared
-  to be caused by the non-Intel CPUs rather than the Intel software. Intel
-  failed to disclose the effects of the changes it made to its software in or
-  about 2003 and later to its customers or the public. Intel also disseminated
-  false or misleading documentation about its compiler and libraries. Intel
-  represented to ISVs, OEMs, benchmarking organizations, and the public that
-  programs inherently performed better on Intel CPUs than on competing CPUs. In
-  truth and in fact, many differences were due largely or entirely to the Intel
-  software. Intel&amp;#x92;s misleading or false statements and omissions about the
-  performance of its software were material to ISVs, OEMs, benchmarking
-  organizations, and the public in their purchase or use of CPUs. Therefore,
-  Intel&amp;#x92;s representations that programs inherently performed better on Intel
-  CPUs than on competing CPUs were, and are, false or misleading. Intel&amp;#x92;s
-  failure to disclose that the differences were due largely to the Intel
-  software, in light of the representations made, was, and is, a deceptive
-  practice. Moreover, those misrepresentations and omissions were likely to harm
-  the reputation of other x86 CPUs companies, and harmed competition.&lt;br&gt;
-  [...]&lt;br&gt;
-  Some ISVs requested information from Intel concerning the apparent variation
-  in performance of identical software run on Intel and non-Intel CPUs. In
-  response to such requests, on numerous occasions, Intel misrepresented,
-  expressly or by implication, the source of the problem and whether it could be
-  solved.&lt;br&gt;
-  [...]&lt;br&gt;
-  Intel&amp;#x92;s software design changes slowed the performance of non-Intel x86 CPUs
-  and had no sufficiently justifiable technological benefit. Intel&amp;#x92;s deceptive
-  conduct deprived consumers of an informed choice between Intel chips and rival
-  chips, and between Intel software and rival software, and raised rivals&amp;#x92;
-  costs of competing in the relevant CPU markets. The loss of performance caused
-  by the Intel compiler and libraries also directly harmed consumers that used
-  non-Intel x86 CPUs.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The remedy that the FTC asks for is also quite farreaching: &lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Requiring that, with respect to those Intel customers that purchased from
-  Intel a software compiler that had or has the design or effect of impairing
-  the actual or apparent performance of microprocessors not manufactured by
-  Intel (&quot;Defective Compiler&quot;), as described in the Complaint:&lt;/p&gt;
-  &lt;ol type=&quot;a&quot;&gt;
-    &lt;li&gt;Intel provide them, at no additional charge, a substitute compiler that is
-  not a Defective Compiler;&lt;/li&gt;
-    &lt;li&gt;Intel compensate them for the cost of recompiling the software they had
-  compiled on the Defective Compiler and of substituting, and distributing to
-  their own customers, the recompiled software for software compiled on a Defective
-  Compiler; and&lt;/li&gt;
-    &lt;li&gt;Intel give public notice and warning, in a manner likely to be communicated
-  to persons that have purchased software compiled on Defective Compilers
-  purchased from Intel, of the possible need to replace that software.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Maybe the FTC has decided&amp;#xA0;that the AMD/Intel settlement was not a fair
-and sufficient remedy against Intel's monopoly behavior? The settlement
-compensates AMD, but not VIA and other microprocessor vendors, and not the customers who have been harmed by
-insufficient competition and by the &quot;defective&quot; software produced with
-the Intel compiler. &lt;/p&gt;
-
-&lt;h2&gt;My own findings &lt;/h2&gt;
-&lt;p&gt;When I started testing Intel's compiler several years ago, I soon found out
-that it had a biased CPU dispatcher. Back in January 2007 I complained to Intel
-about the unfair CPU dispatcher. I had a long correspondence with Intel
-engineers about the issue, where they kept denying the problem and I kept
-providing more evidence. They said that: &lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The CPU dispatch, coupled with optimizations, is designed to optimize
-  performance across Intel and AMD processors to give the best results. This is
-  clearly our goal and with one exception we believe we are there now. The one
-  exception is that our 9.x compilers do not support SSE3 on AMD processors
-  because of the timing of the release of AMD processors vs. our compiler (our
-  compiler was developed before AMD supported SSE3). The future 10.x compilers,
-  which enter beta this quarter and release around the middle of the year, will
-  address this now that we&amp;#x92;ve had time to tune and adjust to the new AMD
-  processors.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Sounds nice, but the truth is that the CPU dispatcher didn't support SSE or
-SSE2 or any higher SSE in AMD processors and still doesn't today (Intel compiler
-version 11.1.054). I have
-later found out that others have made similar complaints to Intel and got
-similarly useless answers (&lt;a href=&quot;http://yro.slashdot.org/comments.pl?sid=155593&amp;amp;cid=13042922&quot;&gt;link&lt;/a&gt;
-&lt;a href=&quot;http://www.swallowtail.org/naughty-intel.shtml&quot;&gt;link&lt;/a&gt;). &lt;/p&gt;
-&lt;p&gt;The Intel CPU dispatcher does not only check the vendor ID string and the
-instruction sets supported. It also checks for specific processor models. In
-fact, it will fail to recognize future Intel processors with a family number
-different from 6. When I mentioned this to the Intel engineers they replied: &lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;You mentioned we will not support future Intel processors with non-'6'
-  family designations without a compiler update. Yes, that is correct and
-  intentional. Our compiler produces code which we have high confidence will
-  continue to run in the future. This has the effect of not assuming anything
-  about future Intel or AMD or other processors. You have noted we could be more
-  aggressive. We believe that would not be wise for our customers, who want a
-  level of security that their code (built with our compiler) will continue to
-  run far into the future. Your suggested methods, while they may sound
-  reasonable, are not conservative enough for our highly optimizing compiler.
-  Our experience steers us to issue code conservatively, and update the compiler
-  when we have had a chance to verify functionality with new Intel and new AMD
-  processors. That means there is a lag sometime in our production release
-  support for new processors. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In other words, they claim that they are optimizing for specific processor
-models rather than for specific instruction sets. If true, this gives Intel an
-argument for not supporting AMD processors properly. But it also means that all
-software developers who use an Intel compiler have to recompile their code and
-distribute new versions to their customers every time a new Intel processor
-appears on the market. Now, this was three years ago. What happens if I try to
-run a program compiled with an old version of Intel's compiler on the newest
-Intel processors? You guessed it: It still runs the optimal code path. But the
-reason is more difficult to guess: Intel have manipulated the CPUID family numbers on new processors in such a way that they appear as known models to older Intel
-software. I have described the technical details &lt;a href=&quot;http://aceshardware.freeforums.org/cpuid-family-bits-added-because-of-flaw-in-intel-compiler-t428.html&quot;&gt;elsewhere&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;Perhaps the initial design of Intel's CPU dispatcher was indeed intended
-to optimize for known processor models only, without regard for future models.
-If any of my students had made such a solution that was not future-oriented, I
-would consider it a serious flaw. Perhaps the Intel engineers discovered the
-missing support for future processors too late so that they had to design the
-next generation of their processors in such a way that they appeared as known
-models to existing Intel software. &lt;/p&gt;
-&lt;p&gt;After Intel had flatly denied to change their CPU dispatcher, I decided that
-the most efficient way to make them change their minds was to create publicity
-about the problem. I contacted several IT magazines, but nobody wanted to write
-about it. Sad, but not very surprising, considering that they all depend on
-advertising money from Intel. The only publicity was my own &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;optimization
-manual&lt;/a&gt; where I have described the problem in detail and given instructions
-on how to replace the unfair CPU dispatcher. I wonder why AMD didn't create
-public awareness about the problem. Were they obliged to keep quiet about an
-ungoing lawsuit? And what about VIA/Centaur? &lt;/p&gt;
-
-&lt;h2&gt;Workarounds &lt;/h2&gt;
-&lt;p&gt;At present, we don't know if or when Intel will make a new compiler and new
-software libraries that do not check the vendor ID string. In the meantime, here
-is what we can do about the problem. &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use another compiler. In &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;my
-    tests&lt;/a&gt;, the Gnu compiler for Linux has an optimizing performance similar
-    to the Intel compiler, but the Gnu function library (glibc) is inferior. All
-    other compilers gave lower performance in my tests. There is no other Windows
-    compiler with a similar performance, not even the Gnu compiler for Windows.&lt;br&gt;
-    &amp;#xA0;&amp;#xA0;&lt;/li&gt;
-  &lt;li&gt;Use the Intel software and patch the CPU dispatcher. In &lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;my
-    C++ manual&lt;/a&gt;, I have provided the code for alternative CPU dispatchers for
-    Intel's compiler and function libraries and descriptions on how to patch
-    them into your software. This, of course, relies on undocumented details of
-    the Intel software. This dispatcher-patch can improve performance on
-    non-Intel processors considerably in many cases.&lt;br&gt;
-    &amp;#xA0;&amp;#xA0;&lt;/li&gt;
-  &lt;li&gt;Never trust any benchmark unless it is open source and compiled with a
-    neutral compiler, such as Gnu or Microsoft.&lt;br&gt;
-    &amp;#xA0; &amp;#xA0;&lt;/li&gt;
-  &lt;li&gt;It is possible to change the CPUID of AMD processors by using
-    the AMD virtualization instructions. I hope that somebody will volunteer to
-    make a program for this purpose. This will make it easy for anybody to check
-    if their benchmark is fair and to improve the performance of software
-    compiled with the Intel compiler on AMD processors.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Links&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://aceshardware.freeforums.org/cpuid-family-bits-added-because-of-flaw-in-intel-compiler-t428.html&quot;&gt;My
-Discussion in Aceshardware forum 2007&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://forums.amd.com/devforum/messageview.cfm?catid=203&amp;amp;threadid=95754&quot;&gt;Discussion
-in AMD Developer Forums 2008&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.amdzone.com/phpbb3/viewtopic.php?f=52&amp;amp;t=137269&amp;amp;sid=3571329cc7c1238a819d02de4bf906f5&quot;&gt;My
-Discussion in AMDzone 2009&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://groups.google.co.uk/group/comp.arch/browse_frm/thread/4e42f16511cf8640?hl=en&amp;amp;lr=&amp;amp;ie=UTF-8&amp;amp;rnum=1&amp;amp;prev=/groups%3Fq%3Dintel%2Bcompiler%2Btrick%26hl%3Den%26lr%3D%26ie%3DUTF-8%26selm%3Dvlfnf1-8tm.ln1%2540miriam.mikron.de%26rnum%3D1&quot;&gt;Discussion
-in comp.arch 2004&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://yro.slashdot.org/comments.pl?sid=155593&amp;amp;cid=13042922&quot;&gt;Complaint
-to Intel 2004, discussion in slashdot.org&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.swallowtail.org/naughty-intel.shtml&quot;&gt;Mark Mackey,
-complaint to Intel 2005&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://arstechnica.com/hardware/reviews/2008/07/atom-nano-review.ars/6&quot;&gt;PCMark
-2005 benchmark proven unfair. Arstechnica&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.brightsideofnews.com/print/2009/12/17/why-the-ftc-lawsuit-against-intel-has-substance.aspx&quot;&gt;Testimony
-by &lt;span id=&quot;ctl00_ContentPlaceHolder1_NewsXXL1_Label4&quot;&gt;John Oram regarding &lt;span id=&quot;ctl00_ContentPlaceHolder1_NewsXXL1_Label3&quot;&gt;BAPCo&lt;/span&gt;&lt;/span&gt;benchmark organization&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://developer.amd.com/documentation/articles/pages/4292005119.aspx&quot;&gt;Comment
-on AMD Developer Central 2005&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.theregister.co.uk/2005/07/12/amd_vs_intel_code/&quot;&gt;AMD
-files lawsuit 2005&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://techreport.com/discussions/8547&quot;&gt;AMD untitrust complaints
-2005&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://download.intel.com/pressroom/legal/AMD_settlement_agreement.pdf&quot;&gt;Settlement agreement
-between AMD and Intel, 2009&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.ftc.gov/os/adjpro/d9341/091216intelcmpt.pdf&quot;&gt;FTC complaint
-2009&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.agner.org/optimize/#manual_cpp&quot;&gt;Technical details
-in my C++ optimization manual&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;mod&quot;&gt;[Added later:]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.xtremesystems.org/forums/showthread.php?t=242272&quot;&gt;Discussion on XtremeSystems Forum&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.osnews.com/story/22683/Intel_Forced_to_Remove_quot_Cripple_AMD_quot_Function_from_Compiler_&quot;&gt;Discussion on OSnews&lt;/a&gt;.&lt;/p&gt;&lt;/td&gt;&lt;/div&gt;
-</description>
-<title>
-Intel's &quot;cripple AMD&quot; function (2009)
-</title>
-</item>
-<item>
-<link>
-https://github.com/cython/cython/blob/master/CHANGES.rst#020-2014-01-18
-</link>
-<description>
-
-</description>
-<title>
-Cython 0.20
-</title>
-</item>
-<item>
-<link>
 http://www.gamezebo.com/news/2014/01/20/king-has-trademarked-word-candy-and-youre-probably-infringing
 </link>
 <description>
@@ -445,6 +33,868 @@ http://www.gamezebo.com/news/2014/01/20/king-has-trademarked-word-candy-and-your
 </description>
 <title>
 Candy Crush Saga creators have trademarked the word “candy”
+</title>
+</item>
+<item>
+<author>
+Dan Levine
+</author>
+<link>
+http://www.reuters.com/article/2014/01/20/us-google-iv-trial-idUSBREA0J0PC20140120
+</link>
+<description>
+&lt;div&gt;&lt;p&gt;&lt;span class=&quot;articleLocation&quot;&gt;SAN FRANCISCO&lt;/span&gt; (Reuters) - Intellectual Ventures is set to square off this week against Google Inc's Motorola Mobility unit in the first trial that the multibillion-dollar patent-buying firm has undertaken since it was founded.&lt;/p&gt;
+&lt;p&gt;Privately-held Intellectual Ventures sued Motorola in 2011, claiming the mobile phone maker infringed patents covering a variety of smartphone-related technologies, including Google Play. Motorola has denied the allegations and will now go to trial over three of those patents.&lt;/p&gt;&lt;p&gt;Barring any last-minute settlements, jury selection is scheduled to begin on Tuesday at a federal court in Wilmington, Delaware.&lt;/p&gt;&lt;p&gt;The trial takes place amid an unfolding debate in Congress over patent reform, in which Intellectual Ventures and Google are on opposite sides. Google is backing attempts to curb software patents and make it easier to fight lawsuits, while IV has warned that Congress should not act too rashly to weaken patent owners' rights.&lt;/p&gt;&lt;p&gt;IV and other patent aggregators have faced criticism from some in the technology industry, who argue that patent litigation and royalty payments have become a burdensome tax on innovation. They say firms like IV, which do not primarily make products, are exploiting the patent system.&lt;/p&gt;&lt;p&gt;But IV argues that unlike some of the firms denounced as &quot;patent trolls,&quot; it invests only in quality intellectual property and does not file frivolous lawsuits. IV also says it helps inventors get paid for their innovations while helping tech companies protect and manage their intellectual property.&lt;/p&gt;&lt;p&gt;Should the Delaware jury rule against Motorola and uphold IV's patents, it could bolster the firm's argument that it does not buy frivolous patents, said Shubha Ghosh, a University of Wisconsin Law School professor.&lt;/p&gt;&lt;p&gt;Yet a win for Motorola could be held up as evidence that the U.S. government issues too many dubious patents. And even if IV prevails, Google could still argue that patent litigation before a jury of non-expert citizens is akin to a lottery, said Ghosh, who supports patent reform.&lt;/p&gt;&lt;p&gt;&quot;Just because you have a winning ticket doesn't mean it's not still a lottery,&quot; he said.&lt;/p&gt;&lt;p&gt;IV and Google both declined to comment on the upcoming trial.&lt;/p&gt;&lt;p&gt;Since its founding in 2000, IV has raised about $6 billion (3.6 billion pounds) from investors and has bought tens of thousands of intellectual property assets from a variety of sources. Google was an investor in IV's first patent acquisition fund, but did not join later vehicles.&lt;/p&gt;&lt;p&gt;IV filed a barrage of lawsuits in 2010 against companies in various sectors, and most defendants have since settled.&lt;/p&gt;&lt;p&gt;THE INVENTORS&lt;/p&gt;&lt;p&gt;Two of the patents in the upcoming Motorola trial cover inventions by Richard Reisman, U.S. government records show. Through his company, Teleshuttle, Reisman has developed several patent portfolios for various technologies, including an online update service, according to the Teleshuttle website.&lt;/p&gt;&lt;p&gt;IV claims that the two Reisman patents cover several of Motorola's older-generation cellphones that have Google Play, a platform for Android smartphone apps. Motorola argues that IV's patents should never have been issued because the inventions were known in the field already.&lt;/p&gt;&lt;p&gt;Reisman did not respond to requests for comment.&lt;/p&gt;&lt;p&gt;One of the patents in play against Motorola has been in a courtroom before. Teleshuttle and a British partner, BTG, sued Microsoft and Apple in 2004 using one of the same patents now in play against Motorola.&lt;/p&gt;&lt;p&gt;In 2006, Teleshuttle and BTG sold their patent rights to Delaware-based Twintech EU LLC for $35 million up front, plus a percentage of future licensing fees, according to BTG's website. At the same time as the sale, BTG and Teleshuttle abruptly withdrew their cases against Apple and Microsoft.&lt;/p&gt;&lt;p&gt;Microsoft and Apple were both early investors in Intellectual Ventures. IV often uses subsidiary companies to buy patents, and then transfer them at a later date to related corporate entities, though public records do not indicate whether IV had an ownership interest in Twintech.&lt;/p&gt;&lt;p&gt;IV took title on the patents from Twintech in September 2011 and sued Motorola a month later, U.S. records show. In a 2011 blog post, Reisman wrote that his deal with IV provided resources &quot;to let me focus on my work as an inventor.&quot;&lt;/p&gt;&lt;p&gt;Microsoft declined to comment while Apple did not respond to a request for comment.&lt;/p&gt;&lt;p&gt;Another patent being asserted against Motorola was originally issued to Rajendra Kumar in 2006. Kumar's company, Khyber Technologies, transferred it to Balustare Processing NY LLC in July 2011, which passed it over to IV about a month later, patent records show.&lt;/p&gt;&lt;p&gt;Khyber Technologies was founded in 1991 with the goal of creating the next generation of handheld computing products, according to its website. The patent that IV obtained from Khyber covers detachable handset technology, which IV claims Motorola used in its defunct Lapdock product.&lt;/p&gt;&lt;p&gt;Kumar declined to comment on the IV lawsuit.&lt;/p&gt;&lt;p&gt;If IV wins, damages will be decided at a later proceeding. The trial is expected to last about ten days.&lt;/p&gt;&lt;p&gt;The case in U.S. District Court, District of Delaware is Intellectual Ventures I and Intellectual Ventures II, 11-908.&lt;/p&gt;&lt;p&gt;(Reporting by Dan Levine; editing by Jonathan Weber)&lt;/p&gt;&lt;/div&gt;
+</description>
+<title>
+Google set to face Intellectual Ventures in landmark patent trial
+</title>
+</item>
+<item>
+<link>
+http://www.esa.int/Our_Activities/Space_Science/Rosetta/ESA_s_sleeping_beauty_wakes_up_from_deep_space_hibernation
+</link>
+<description>
+&lt;div&gt;&lt;li class=&quot;layout&quot;&gt;
+            
+            
+            &lt;div id=&quot;container&quot;&gt;
+                
+                
+                
+                                
+                
+
+
+
+                    
+
+
+
+
+                        
+                
+
+                
+                                
+                
+                                
+                
+                
+                &lt;div id=&quot;content&quot;&gt;                                             
+
+                                        
+                    
+                    
+                                            
+                        
+                        
+                        
+                                                
+                                                                        
+                        
+                        &lt;div id=&quot;content_box&quot;&gt;                        
+                            
+                            &lt;div id=&quot;col3_c&quot;&gt;
+
+                                
+                                
+                                                                
+                                
+                                                                                               
+                                
+                                                                
+                                
+                                
+                                
+                                                                
+                                                                                                
+                                
+                                
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+       
+
+		                				
+    
+        
+          
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+            
+                                     
+    
+
+
+
+
+    
+        
+
+        
+                
+    
+                                                  
+    
+
+
+
+
+&lt;div id=&quot;article&quot;&gt;
+
+        
+&lt;div class=&quot;article_header&quot;&gt;
+        
+    &lt;div class=&quot;img_obj img_full&quot;&gt;
+                &lt;div class=&quot;img&quot;&gt;
+            &lt;a href=&quot;http://www.esa.int/ESA_Multimedia/Images/2014/01/Rosetta_Wake-up_signal&quot;&gt;                                  &lt;img src=&quot;http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/01/rosetta_wake-up_signal/13492304-2-eng-GB/Rosetta_Wake-up_signal_large.jpg&quot; width=&quot;625&quot; alt=&quot;&quot;&gt;
+                        &lt;/a&gt;
+            &lt;p class=&quot;txt&quot;&gt;Rosetta Wake-up signal&lt;/p&gt;        &lt;/div&gt; 
+            &lt;/div&gt;
+        
+        
+&lt;/div&gt;    
+
+
+
+&lt;div class=&quot;section&quot;&gt;
+&lt;span class=&quot;art_date&quot;&gt;20 January 2014&lt;/span&gt;
+
+
+&lt;p&gt;
+It was a fairy-tale ending to a tense chapter in the story of the Rosetta space mission this evening as ESA heard from its distant spacecraft for the first time in 31 months.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+Rosetta is chasing down Comet 67P/Churyumov-Gerasimenko, where it will become the first space mission to rendezvous with a comet, the first to attempt a landing on a comet&amp;#x2019;s surface, and the first to follow a comet as it swings around the Sun.
+&lt;/p&gt;&lt;p&gt;
+Since its launch in 2004, Rosetta has made three flybys of Earth and one of Mars to help it on course to its rendezvous with 67P/Churyumov-Gerasimenko, encountering asteroids Steins and Lutetia along the way.
+&lt;/p&gt;&lt;p&gt;
+Operating on solar energy alone, Rosetta was placed into a deep space slumber in June 2011 as it cruised out to a distance of nearly 800 million km from the warmth of the Sun, beyond the orbit of Jupiter.
+&lt;/p&gt;&lt;p&gt;
+Now, as Rosetta&amp;#x2019;s orbit has brought it back to within &amp;#x2018;only&amp;#x2019; 673 million km from the Sun, there is enough solar energy to power the spacecraft fully again.
+&lt;/p&gt;&lt;/div&gt;
+ 
+                
+
+    &lt;div class=&quot;section&quot; id=&quot;s_1&quot;&gt;
+        
+        
+                
+                    
+                                                
+                                                            
+        
+       
+        
+                
+                                    
+                        
+            
+                             
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+            
+                                     
+    
+
+
+
+
+            
+                                    
+                                                    
+                                  
+            
+                
+                        
+                                    
+                        
+                        
+               
+                        
+            
+                        
+            
+            
+
+            
+            &lt;div class=&quot;img_obj l_img&quot;&gt;
+                
+                                    &lt;div class=&quot;img&quot;&gt;
+                        &lt;a href=&quot;http://www.esa.int/ESA_Multimedia/Images/2013/01/Rosetta_calls_home&quot;&gt;                        
+                        &lt;img src=&quot;http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/01/rosetta_calls_home/13489284-1-eng-GB/Rosetta_calls_home_medium.jpg&quot; width=&quot;305&quot; alt=&quot;Rosetta calls home&quot;&gt;
+
+                                                &lt;/a&gt;
+                        &lt;p class=&quot;txt&quot;&gt;Rosetta calls home&lt;/p&gt;                    &lt;/div&gt; 
+                            &lt;/div&gt;
+
+                
+        
+        &lt;p&gt;
+Thus today, still about 9 million km from the comet, Rosetta&amp;#x2019;s pre-programmed internal &amp;#x2018;alarm clock&amp;#x2019; woke up the spacecraft. After warming up its key navigation instruments, coming out of a stabilising spin, and aiming its main radio antenna at Earth, Rosetta sent a signal to let mission operators know it had survived the most distant part of its journey.
+&lt;/p&gt;&lt;p&gt;
+The signal was received by both NASA&amp;#x2019;s Goldstone and Canberra ground stations at 18:18 GMT/ 19:18 CET, during the first window of opportunity the spacecraft had to communicate with Earth. It was immediately confirmed in ESA&amp;#x2019;s space operations centre in Darmstadt and the successful wake-up announced via the @ESA_Rosetta twitter account, which tweeted: &amp;#x201C;Hello, World!&amp;#x201D;
+&lt;/p&gt;&lt;p&gt;
+&amp;#x201C;We have our comet-chaser back,&amp;#x201D; says Alvaro Gim&amp;#xE9;nez, ESA&amp;#x2019;s Director of Science and Robotic Exploration. &amp;#x201C;With Rosetta, we will take comet exploration to a new level. This incredible mission continues our history of &amp;#x2018;firsts&amp;#x2019; at comets, building on the technological and scientific achievements of our first deep space mission Giotto, which returned the first close-up images of a comet nucleus as it flew past Halley in 1986.&amp;#x201D;
+&lt;/p&gt;    &lt;/div&gt;                
+
+    &lt;div class=&quot;section&quot; id=&quot;s_2&quot;&gt;
+        
+        
+                
+                    
+                                                
+                                                            
+        
+       
+        
+                
+                                    
+                        
+            
+                             
+            
+
+
+
+
+
+
+
+  
+    
+
+
+
+    
+
+
+    
+
+
+                
+
+
+
+
+            
+                                    
+                                                    
+                                  
+            
+                
+                        
+                                    
+                        
+                        
+               
+             
+                
+                                                                        
+                                        
+            
+                        
+            
+            
+
+            
+            
+
+                
+        
+        &lt;p&gt;
+&amp;#x201C;This was one alarm clock not to hit snooze on, and after a tense day we are absolutely delighted to have our spacecraft awake and back online,&amp;#x201D; adds Fred Jansen, ESA&amp;#x2019;s Rosetta mission manager.
+&lt;/p&gt;&lt;p&gt;
+Comets are considered the primitive building blocks of the Solar System and likely helped to &amp;#x2018;seed&amp;#x2019; Earth with water, perhaps even the ingredients for life. But many fundamental questions about these enigmatic objects remain, and through its comprehensive, in situ study of Comet 67P/Churyumov-Gerasimenko, Rosetta aims to unlock the secrets contained within.
+&lt;/p&gt;&lt;p&gt;
+&amp;#x201C;All other comet missions have been flybys, capturing fleeting moments in the life of these icy treasure chests,&amp;#x201D; says Matt Taylor, ESA&amp;#x2019;s Rosetta project scientist. &amp;#x201C;With Rosetta, we will track the evolution of a comet on a daily basis and for over a year, giving us a unique insight into a comet&amp;#x2019;s behaviour and ultimately helping us to decipher their role in the formation of the Solar System.&amp;#x201D;
+&lt;/p&gt;&lt;p&gt;
+But first, essential health checks on the spacecraft must be completed. Then the eleven instruments on the orbiter and ten on the lander will be turned on and prepared for studying Comet 67P/Churyumov-Gerasimenko.
+&lt;/p&gt;&lt;p&gt;
+&amp;#x201C;We have a busy few months ahead preparing the spacecraft and its instruments for the operational challenges demanded by a lengthy, close-up study of a comet that, until we get there, we know very little about,&amp;#x201D; says Andrea Accomazzo, ESA&amp;#x2019;s Rosetta operations manager.
+&lt;/p&gt;    &lt;/div&gt;                
+
+    &lt;div class=&quot;section&quot; id=&quot;s_3&quot;&gt;
+        
+        
+                
+                    
+                                                
+                                                            
+        
+       
+        
+                
+                                    
+                        
+            
+                             
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+            
+                                     
+    
+
+
+
+
+            
+                                    
+                                                    
+                                  
+            
+                
+                        
+                                    
+                        
+                        
+               
+                        
+            
+                        
+            
+            
+
+            
+            &lt;div class=&quot;img_obj l_img&quot;&gt;
+                
+                                    &lt;div class=&quot;img&quot;&gt;
+                        &lt;a href=&quot;http://www.esa.int/ESA_Multimedia/Images/2013/12/Rosetta_and_Philae_at_comet6&quot;&gt;                        
+                        &lt;img src=&quot;http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/12/rosetta_and_philae_at_comet6/13463574-2-eng-GB/Rosetta_and_Philae_at_comet_medium.jpg&quot; width=&quot;305&quot; alt=&quot;&quot;&gt;
+
+                                                &lt;/a&gt;
+                        &lt;p class=&quot;txt&quot;&gt;Rosetta and Philae at comet &lt;/p&gt;                    &lt;/div&gt; 
+                            &lt;/div&gt;
+
+                
+        
+        &lt;p&gt;
+Rosetta&amp;#x2019;s first images of 67P/Churyumov-Gerasimenko are expected in May, when the spacecraft is still 2 million km from its target. Towards the end of May, the spacecraft will execute a major manoeuvre to line up for its critical rendezvous with the comet in August.
+&lt;/p&gt;&lt;p&gt;
+After rendezvous, Rosetta will start with two months of extensive mapping of the comet&amp;#x2019;s surface, and will also make important measurements of the comet&amp;#x2019;s gravity, mass and shape, and assess its gaseous, dust-laden atmosphere, or coma. The orbiter will also probe the plasma environment and analyse how it interacts with the Sun&amp;#x2019;s outer atmosphere, the solar wind.
+&lt;/p&gt;&lt;p&gt;
+Using these data, scientists will choose a landing site for the mission&amp;#x2019;s 100 kg Philae probe. The landing is currently scheduled for 11 November and will be the first time that a landing on a comet has ever been attempted.
+&lt;/p&gt;&lt;p&gt;
+In fact, given the almost negligible gravity of the comet&amp;#x2019;s 4 km-wide nucleus, Philae will have to use ice screws and harpoons to stop it from rebounding back into space after touchdown.
+&lt;/p&gt;&lt;p&gt;
+Among its wide range of scientific measurements, Philae will send back a panorama of its surroundings, as well as very high-resolution pictures of the surface. It will also perform an on-the-spot analysis of the composition of the ices and organic material, including drilling down to 23 cm below the surface and feeding samples to Philae&amp;#x2019;s on-board laboratory for analysis.
+&lt;/p&gt;&lt;p&gt;
+The focus of the mission will then move to the &amp;#x2018;escort&amp;#x2019; phase, during which Rosetta will stay alongside the comet as it moves closer to the Sun, monitoring the ever-changing conditions on the surface as the comet warms up and its ices sublimate.
+&lt;/p&gt;&lt;p&gt;
+The comet will reach its closest distance to the Sun on 13 August 2015 at about 185 million km, roughly between the orbits of Earth and Mars. Rosetta will follow the comet throughout the remainder of 2015, as it heads away from the Sun and activity begins to subside.
+&lt;/p&gt;&lt;p&gt;
+&amp;#x201C;We will face many challenges this year as we explore the unknown territory of comet 67P/Churyumov-Gerasimenko and I&amp;#x2019;m sure there will be plenty of surprises, but today we are just extremely happy to be back on speaking terms with our spacecraft,&amp;#x201D; adds Matt Taylor.
+&lt;/p&gt;    &lt;/div&gt;    
+ 
+
+                    
+        
+          
+        
+        &lt;br&gt;
+        &lt;div id=&quot;indepth&quot;&gt;
+
+
+        
+                        
+
+    &lt;div class=&quot;section&quot; id=&quot;s_4&quot;&gt;
+        
+        
+                
+                
+        
+       
+                
+        
+        &lt;p&gt;
+In 1964, the Conventions of the European Launcher Development Organisation (ELDO) and the European Space Research Organisation (ESRO) entered into force. A little more than a decade later, the European Space Agency (ESA) was established, taking over from these two organisations.
+&lt;/p&gt;&lt;p&gt;
+2014 will be dedicated to addressing the future in the light of these 50 years of unique achievements in space, which have put ESA among the leading space agencies in the world.
+&lt;/p&gt;&lt;p&gt;
+The motto 'serving European cooperation and innovation' underlines how much ESA, together with the national delegations from its 20 Member States, space industry and the scientific community, has made a difference.
+&lt;/p&gt;&lt;p&gt;
+Fifty years of European cooperation in space is an anniversary for the whole space sector in Europe, which can be proud of its results and achievements. But it is more than that: it is a testimony that the idea of Europe, European identity and progress has been served by ESA, and that continues to be its mission for the future.
+&lt;/p&gt;    &lt;/div&gt;                        
+
+    &lt;div class=&quot;section&quot; id=&quot;s_5&quot;&gt;
+        
+        
+                
+                
+        
+       
+                
+        
+        &lt;p&gt;
+The European Space Agency (ESA) is Europe's gateway to space.
+&lt;/p&gt;&lt;p&gt;
+ESA is an intergovernmental organisation, created in 1975, with the mission to shape the development of Europe's space capability and ensure that investment in space delivers benefits to the citizens of Europe and the world.
+&lt;/p&gt;&lt;p&gt;
+ESA has 20 Member States: Austria, Belgium, the Czech Republic, Denmark, Finland, France, Germany, Greece, Ireland, Italy, Luxembourg, the Netherlands, Norway, Poland, Portugal, Romania, Spain, Sweden, Switzerland and the United Kingdom, of whom 18 are Member States of the EU.
+&lt;/p&gt;&lt;p&gt;
+ESA has Cooperation Agreements with eight other Member States of the EU. Canada takes part in some ESA programmes under a Cooperation Agreement.
+&lt;/p&gt;&lt;p&gt;
+ESA is also working actively with the EU, for the implementation of the programmes Galileo and Copernicus.
+&lt;/p&gt;&lt;p&gt;
+By coordinating the financial and intellectual resources of its members, ESA can undertake programmes and activities far beyond the scope of any single European country.
+&lt;/p&gt;&lt;p&gt;
+ESA develops the launchers, spacecraft and ground facilities needed to keep Europe at the forefront of global space activities.
+&lt;/p&gt;&lt;p&gt;
+Today, it launches satellites for Earth observation, navigation, telecommunications and astronomy, sends probes to the far reaches of the Solar System and cooperates in the human exploration of space.
+&lt;/p&gt;&lt;p&gt;
+Learn more at &lt;a href=&quot;http://www.esa.int/&quot;&gt;www.esa.int&lt;/a&gt;
+&lt;/p&gt;&lt;p&gt;
+
+For further information:&lt;br&gt;
+ESA Media Relations Office&lt;br&gt;
+Email: &lt;a href=&quot;mailto:media@esa.int&quot;&gt;media@esa.int&lt;/a&gt;&lt;br&gt;Tel: +33 1 53 69 72 99
+&lt;/p&gt;    &lt;/div&gt;                        
+                        
+                        
+                        
+                
+        &lt;/div&gt;
+
+     
+    
+    
+
+
+
+&lt;div id=&quot;social&quot;&gt;
+
+
+
+
+
+
+
+
+
+
+    &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;h2&gt;Rate this&lt;/h2&gt;&lt;/th&gt;            &lt;th&gt;&lt;h2&gt;Views&lt;/h2&gt;&lt;/th&gt;
+            &lt;th class=&quot;right&quot;&gt;&lt;h2&gt;Share&lt;/h2&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td valign=&quot;top&quot;&gt;&lt;div class=&quot;attribute-star-rating&quot;&gt;
+&lt;div id=&quot;starrating&quot;&gt;
+&lt;ul id=&quot;ezsr_rating_13487712&quot; class=&quot;ezsr-star-rating&quot;&gt;
+   &lt;li id=&quot;ezsr_rating_percent_13487712&quot; class=&quot;ezsr-current-rating&quot;&gt;Currently &lt;span&gt;5&lt;/span&gt; out of 5 Stars.&lt;/li&gt;
+   
+             &lt;li&gt;&lt;a href=&quot;&quot; id=&quot;ezsr_13487712_5_1&quot; title=&quot;Rate 1 stars out of 5&quot; class=&quot;ezsr-stars-1&quot; rel=&quot;nofollow&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot; id=&quot;ezsr_13487712_5_2&quot; title=&quot;Rate 2 stars out of 5&quot; class=&quot;ezsr-stars-2&quot; rel=&quot;nofollow&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot; id=&quot;ezsr_13487712_5_3&quot; title=&quot;Rate 3 stars out of 5&quot; class=&quot;ezsr-stars-3&quot; rel=&quot;nofollow&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot; id=&quot;ezsr_13487712_5_4&quot; title=&quot;Rate 4 stars out of 5&quot; class=&quot;ezsr-stars-4&quot; rel=&quot;nofollow&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot; id=&quot;ezsr_13487712_5_5&quot; title=&quot;Rate 5 stars out of 5&quot; class=&quot;ezsr-stars-5&quot; rel=&quot;nofollow&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    
+Rating: &lt;span id=&quot;ezsr_average_13487712&quot; class=&quot;ezsr-average-rating&quot;&gt;4.82&lt;/span&gt;/5
+(&lt;span id=&quot;ezsr_total_13487712&quot;&gt;325&lt;/span&gt; votes cast)
+ 
+&lt;p id=&quot;ezsr_just_rated_13487712&quot; class=&quot;ezsr-just-rated hide&quot;&gt;Thank you for rating!&lt;/p&gt;
+&lt;p id=&quot;ezsr_has_rated_13487712&quot; class=&quot;ezsr-has-rated hide&quot;&gt;You have already rated this page, you can only rate it once!&lt;/p&gt;
+&lt;p id=&quot;ezsr_changed_rating_13487712&quot; class=&quot;ezsr-changed-rating hide&quot;&gt;Your rating has been changed, thanks for rating!&lt;/p&gt;
+    
+            
+&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;            &lt;td valign=&quot;top&quot;&gt;&lt;p class=&quot;views&quot;&gt;&lt;span id=&quot;viewcount&quot;&gt;70033&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+            &lt;td valign=&quot;top&quot; class=&quot;right&quot;&gt;
+                
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+
+
+
+    
+    
+    
+    
+
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+                                
+                                
+                                
+                                    
+                                    
+                                    
+                                    
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                                                
+                                
+                                
+                                
+                                  
+                                
+                            &lt;/div&gt;
+                            
+                        &lt;/div&gt;
+                    
+                    
+                                      
+                &lt;/div&gt;
+                  
+
+                
+                
+
+
+
+
+
+
+                
+
+
+                
+                
+                                
+                
+
+
+
+&lt;div id=&quot;sb&quot;&gt;
+    &lt;ul&gt; 
+
+
+        
+    
+            
+                           
+                    
+                        
+                                                
+            
+                        
+                            
+                
+                                                
+                 
+                    
+                    
+                    
+                                                                                
+
+
+
+
+  		
+                                                                 
+                                
+             
+            
+                        
+                &lt;li&gt;
+                &lt;li class=&quot;sb_sep&quot;&gt;                                
+            
+                    
+                        
+                                                
+            
+                        
+                            
+                
+                                                
+                 
+                    
+                    
+                    
+                                                                                
+
+
+
+
+  		
+                                                                 
+                                
+             
+            
+                        
+                &lt;li&gt;
+                &lt;li class=&quot;sb_sep&quot;&gt;                                
+            
+                    
+                        
+                                                
+            
+                        
+                                            
+                
+                                
+
+
+
+
+  		
+                                                    
+             
+            
+                        
+                &lt;li&gt;
+                &lt;li class=&quot;sb_sep&quot;&gt;                                
+            
+                    
+                        
+                                                
+            
+                        
+                                            
+                
+                                
+
+
+
+
+  		
+                                                    
+             
+            
+                        
+                &lt;li&gt;
+                &lt;li class=&quot;sb_sep&quot;&gt;                                
+            
+                    
+                        
+                                                
+            
+                        
+                                            
+                
+                                
+
+
+
+
+  		
+                                                    
+             
+            
+                        
+                &lt;li&gt;
+                &lt;li class=&quot;sb_sep&quot;&gt;                                
+            
+                       
+        
+        &lt;/ul&gt;
+    
+    
+&lt;/div&gt;
+                                
+                
+                                
+                
+                
+                
+                       
+            &lt;/div&gt; 
+            
+        &lt;/li&gt;
+        
+        
+    &lt;/div&gt;
+</description>
+<title>
+Rosetta: ESA’s ‘sleeping beauty’ wakes up from deep space hibernation
+</title>
+</item>
+<item>
+<author>
+Also on The Switch, How candidate Obama would've replied to President Obama's NSA speech
+</author>
+<link>
+http://www.washingtonpost.com/blogs/the-switch/wp/2014/01/17/half-of-taxpayer-funded-research-will-soon-be-available-to-the-public/
+</link>
+<description>
+&lt;article id=&quot;post-14394&quot; class=&quot;post-14394 post type-post status-publish format-standard hentry category-uncategorized&quot; score=&quot;51.25&quot;&gt;
+		&lt;header class=&quot;entry-header&quot;&gt;
+			&lt;/header&gt;
+		
+		&lt;div id=&quot;post-content&quot; class=&quot;cf entry-content&quot; score=&quot;33.75&quot;&gt;
+		
+&lt;div id=&quot;attachment_14417&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;img class=&quot;size-full wp-image-14417&quot; alt=&quot;(Horia Varlan)&quot; src=&quot;http://www.washingtonpost.com/blogs/the-switch/files/2014/01/testtubes.jpg&quot; width=&quot;1024&quot;&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;(&lt;a href=&quot;http://www.flickr.com/photos/10361931@N06/4290846294/in/photolist-7xaH7w-cYAJ7h-cYAJPG-cYACQA-cYADSs-cYAJuy-cYAJEN-cYAG2E-cYAD9U-cYAEYN-cYAFSS-cYAFAf-cYAKxJ-cYACZj-cYAHTu-cYAHrb-cYAErq-cYAH8U-cYAK9Q-cYADpC-cYAHxJ-cYADH7-cYAEH9-cYAKnS-cYAERy-cYAGN9-cYAF89-cYAE37-cYAGXU-cYAFgU-cYAJZS-cYAKXd-cYAHgS-cYAKJ3-cYACuo-cYAEyS-cYACkf-cYAHGb-cYADgy-cYACFb-cYAFqW-cYAFLd-bwWBiK-8BPqqs-dfF1ZQ-8f1j6D-eLjUWp-eLjUKe-eLjV9e-hRKZPe-cQkE4h&quot;&gt;Horia Varlan&lt;/a&gt;)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Proponents of the open access model for academic research notched a huge victory Thursday night when Congress passed a budget that will make about half of taxpayer-funded research available to the public.&lt;/p&gt;
+&lt;p&gt;Deep inside the $1.1 trillion Consolidated Appropriations Act for 2014 is a provision that requires federal agencies under the Labor, Health and Human Services, and Education portion of the bill with research budgets of $100 million or more to provide the public with online access to the research that they fund within 12 months of publication in a peer-reviewed journal.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;According to the &lt;/span&gt;&lt;a href=&quot;http://www.sparc.arl.org/news/omnibus-appropriations-bill-codifies-white-house-directive&quot;&gt;Scholarly Publishing and Academic Resources Coalition&lt;/a&gt;&lt;span&gt; (SPARC), this means approximately $31 billion of the total $60 billion annual U.S. investment in taxpayer-funded research will become openly accessible. “This is an important step toward making federally funded scientific research available for everyone to use online at no cost,” said SPARC Executive Director Heather Joseph in a news  release. The language in the appropriations bill mirrors that in the White House &lt;/span&gt;&lt;a href=&quot;http://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research&quot;&gt;open access memo&lt;/a&gt;&lt;span&gt; from last year, and a National Institutes of Health public access program &lt;/span&gt;&lt;a href=&quot;http://publicaccess.nih.gov/policy.htm&quot;&gt;enacted in 2008&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sen. Tom Harkin (D-Iowa) who was instrumental in getting the NIH program launched told The Post: &quot;Expanding this policy to public health and education research is a step toward a more transparent government and better science.”&lt;/p&gt;
+&lt;p&gt;While the government funds a significant chunk of academic research in the United States, most taxpayers do not have access to the results of that research, which is often kept in pay-walled databases controlled by commercial publishers. As the Internet has made it far easier for academics to share their research results, many have pushed for a more open system that allows public sharing of scholarly research commonly called &quot;open access.&quot; But some publishers have &lt;a href=&quot;http://www.washingtonpost.com/blogs/the-switch/wp/2013/12/19/how-one-publisher-is-stopping-academics-from-sharing-their-research/&quot;&gt;cracked down&lt;/a&gt;, even going after individual professors who post their research on their university Web pages.&lt;/p&gt;
+&lt;p&gt;In recent years, Congress has considered various legislative proposals concerning access to publicly funded research. The Fair Access to Science and Technology Research Act would have mandated that publicly funded research be freed up within six months of publication. Another, the Research Works Act, would have effectively prohibited open access mandates and rolled back the NIH's public access program.&lt;/p&gt;
+	&lt;/div&gt;
+			&lt;div class=&quot;entry-footer&quot; score=&quot;0.0&quot;&gt;
+		
+	&lt;/div&gt;
+	
+		
+&lt;/article&gt;
+
+</description>
+<title>
+Half of taxpayer funded research will soon be available to the public
+</title>
+</item>
+<item>
+<link>
+http://www.gigamonkeys.com/code-reading/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;contents&quot;&gt;
+          
+          &lt;p class=&quot;dateline&quot;&gt;
+          20 January 2014
+          &lt;/p&gt;
+          &lt;p&gt;I have started code reading groups at the last two companies I&amp;#x2019;ve worked at, Etsy and Twitter, and some folks have asked for my advice about code reading and running code reading groups. Tl;dr: don&amp;#x2019;t start a code reading group. What you should start instead I&amp;#x2019;ll get to in a moment but first I need to explain how I arrived at my current opinion.&lt;/p&gt;
+          &lt;p&gt;As a former English major and a sometimes writer, I had always been drawn to the idea that code is like literature and that we ought to learn to write code the way we learn to write English: by reading good examples. And I&amp;#x2019;m certainly not the only one to have taken this point of view&amp;#x2014;Donald Knuth, in addition to his work on &lt;em&gt;The Art of Computer Programming&lt;/em&gt; and TeX, has long been a proponent of what he calls Literate Programming and has published several of his large programs as books.&lt;/p&gt;
+          &lt;p&gt;On the other hand, long before I got to Etsy and started my first code reading group I had in hand several pieces of evidence that should have suggested to me that this was the wrong way to look at things.&lt;/p&gt;
+          &lt;p&gt;First, when I did my book of interviews with programmers, &lt;a href=&quot;http://www.codersatwork.com&quot;&gt;Coders at Work&lt;/a&gt;, I asked pretty much everyone about code reading. And while most of them said it was important and that programmers should do it more, when I asked them about what code they had read recently, very few of them had any great answers. Some of them had done some serious code reading as young hackers but almost no one seemed to have a regular habit of reading code. Knuth, the great synthesizer of computer science, does seem to read a lot of code and Brad Fitzpatrick was able to talk about several pieces of open source code that he had read just for the heck of it. But they were the exceptions.&lt;/p&gt;
+          &lt;p&gt;If that wasn&amp;#x2019;t enough, after I finished &lt;em&gt;Coders&lt;/em&gt; I had a chance to &lt;a href=&quot;http://codequarterly.com/2011/hal-abelson/&quot;&gt;interview Hal Abelson&lt;/a&gt;, the famous MIT professor and co-author of the &lt;em&gt;Structure and Interpretation of Computer Programs&lt;/em&gt;. The first time I talked to him I asked my usual question about reading code and he gave the standard answer&amp;#x2014;that it was important and we should do it more. But he too failed to name any code he had read recently other than code he was obliged to: reviewing co-workers&amp;#x2019; code at Google where he was on sabbatical and grading student code at MIT. Later I asked him about this disconnect:&lt;/p&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Seibel:&lt;/em&gt; I&amp;#x2019;m still curious about this split between what people say and what they actually do. Everyone says, &amp;#x201C;People should read code&amp;#x201D; but few people seem to actually do it. I&amp;#x2019;d be surprised if I interviewed a novelist and asked them what the last novel they had read was, and they said, &amp;#x201C;Oh, I haven&amp;#x2019;t really read a novel since I was in grad school.&amp;#x201D; Writers actually read other writers but it doesn&amp;#x2019;t seem that programmers really do, even though we say we should.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Abelson:&lt;/em&gt; Yeah. You&amp;#x2019;re right. But remember, a lot of times you crud up a program to make it finally work and do all of the things that you need it to do, so there&amp;#x2019;s a lot of extraneous stuff around there that isn&amp;#x2019;t the core idea.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Seibel:&lt;/em&gt; So basically you&amp;#x2019;re saying that in the end, most code isn&amp;#x2019;t worth reading?&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Abelson:&lt;/em&gt; Or it&amp;#x2019;s built from an initial plan or some kind of pseudocode. A lot of the code in books, they have some very cleaned-up version that doesn&amp;#x2019;t do all the stuff it needs to make it work.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Seibel:&lt;/em&gt; I&amp;#x2019;m thinking of the preface to SICP, where it says, &amp;#x201C;programs must be written for people to read and only incidentally for machines to execute.&amp;#x201D; But it seems the reality you just described is that in fact, most programs are written for machines to execute and only incidentally, if at all, for people to read.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Abelson:&lt;/em&gt; Well, I think they start out for people to read, because there&amp;#x2019;s some idea there. You explain stuff. That&amp;#x2019;s a little bit of what we have in the book. There are some fairly significant programs in the book, like the compiler. And that&amp;#x2019;s partly because we think the easiest way to explain what it&amp;#x2019;s doing is to express that in code.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;p&gt;Yet somehow even this explicit acknowledgement that most real code isn&amp;#x2019;t actually in a form that can be simply read wasn&amp;#x2019;t enough to lead me to abandon the literature seminar model when I got to Etsy. For our first meeting I picked Jeremy Ashkenas&amp;#x2019;s backbone.js because many of the Etsy developers would be familiar with Javascript and because I know Jeremy is particularly interested in writing readable code. I still envisioned something like a literature seminar but I figured that a lot of people wouldn&amp;#x2019;t actually have done the reading in advance (well, maybe not so different from a literature seminar) so I decided to start things off by presenting the code myself before the group discussion.&lt;/p&gt;
+          &lt;p&gt;As I prepared my presentation, I found myself falling into my usual pattern when trying to really understand a piece of code&amp;#x2014;in order to grok it I have to essentially rewrite it. I&amp;#x2019;ll start by renaming a few things so they make more sense to me and then I&amp;#x2019;ll move things around to suit my ideas about how to organize code. Pretty soon I&amp;#x2019;ll have gotten deep into the abstractions (or lack thereof) of the code and will start making bigger changes to the structure of the code. Once I&amp;#x2019;ve completely rewritten the thing I usually understand it pretty well and can even go back to the original and understand it too. I have always felt kind of bad about this approach to code reading but it's the only thing that's ever worked for me.&lt;/p&gt;
+          &lt;p&gt;My presentation to the code reading group started with stock backbone.js and then walked through the changes I would make to it to make it, by my lights, more understandable. At one point I asked if people thought we should move on to the group discussion but nobody seemed very interested. Hopefully seeing my refactoring gave people some of the same insights into the underlying structure of the original that I had obtained by doing the refactoring.&lt;/p&gt;
+          &lt;p&gt;The second meeting of the Etsy code reading group featured Avi Bryant demonstrating how to use the code browsing capabilities of Smalltalk to navigate through some code. In that case, because few of the Etsy engineers had any experience with Smalltalk, we had no expectation that folks would read the code in advance. But the presentation was an awesome chance for folks to get exposed to the power of the Smalltalk development environment and for me to heckle Avi about Smalltalk vs Lisp differences.&lt;/p&gt;
+          
+          &lt;p&gt;When I got to Twitter I inexplicably still had the literature seminar model in mind even though neither of the two meetings of the Etsy reading group&amp;#x2014;which folks seemed to like pretty well&amp;#x2014;followed that model at all. When I sent out the email inviting Twitter engineers to join a code reading group the response was pretty enthusiastic. The first meeting was, yet again, a presentation of some code, in this case the internals of the Scala implementation of Future that is used throughout Twitter&amp;#x2019;s many services, presented by Marius Eriksen, who wrote most of it.&lt;/p&gt;
+          &lt;p&gt;It was sometime after that presentation that I finally realized the obvious: code is not literature. We don&amp;#x2019;t read code, we &lt;em&gt;decode&lt;/em&gt; it. We examine it. A piece of code is not literature; it is a specimen. Knuth said something that should have pointed me down this track when I asked him about his own code reading:&lt;/p&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;&lt;em&gt;Knuth:&lt;/em&gt; But it&amp;#x2019;s really worth it for what it builds in your brain. So how do I do it? There was a machine called the Bunker Ramo 300 and somebody told me that the Fortran compiler for this machine was really amazingly fast, but nobody had any idea why it worked. I got a copy of the source-code listing for it. I didn&amp;#x2019;t have a manual for the machine, so I wasn&amp;#x2019;t even sure what the machine language was.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;But I took it as an interesting challenge. I could figure out &lt;code&gt;BEGIN&lt;/code&gt; and then I would start to decode. The operation codes had some two-letter mnemonics and so I could start to figure out &amp;#x201C;This probably was a load instruction, this probably was a branch.&amp;#x201D; And I knew it was a Fortran compiler, so at some point it looked at column seven of a card, and that was where it would tell if it was a comment or not.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;After three hours I had figured out a little bit about the machine. Then I found these big, branching tables. So it was a puzzle and I kept just making little charts like I&amp;#x2019;m working at a security agency trying to decode a secret code. But I knew it worked and I knew it was a Fortran compiler&amp;#x2014;it wasn&amp;#x2019;t encrypted in the sense that it was intentionally obscure; it was only in code because I hadn&amp;#x2019;t gotten the manual for the machine.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;Eventually I was able to figure out why this compiler was so fast. Unfortunately it wasn&amp;#x2019;t because the algorithms were brilliant; it was just because they had used unstructured programming and hand optimized the code to the hilt.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;It was just basically the way you solve some kind of an unknown puzzle&amp;#x2014;make tables and charts and get a little more information here and make a hypothesis. In general when I&amp;#x2019;m reading a technical paper, it&amp;#x2019;s the same challenge. I&amp;#x2019;m trying to get into the author&amp;#x2019;s mind, trying to figure out what the concept is. The more you learn to read other people&amp;#x2019;s stuff, the more able you are to invent your own in the future, it seems to me.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;p&gt;He&amp;#x2019;s not describing reading literature; he&amp;#x2019;s describing a scientific investigation. So now I have a new mode for how people should get together to gain insights from code which I explained to the Twitter code reading group like this:&lt;/p&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;Preparing for the talk I&amp;#x2019;m going to give to the Girls who Code cohort, I started thinking about what to tell them about code reading and code they should read. And once again it struck me that for all the lip service we pay to the idea of reading code, most programmers really don&amp;#x2019;t read that much code, at least not just for the sake of reading it. As a simple proof: name me one piece of code that you&amp;#x2019;ve read and that you can be reasonably sure that most other good programmers will have read or will at least have heard of. Not many, right? Probably none.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;But then it hit me. Code is not literature and we are not readers. Rather, interesting pieces of code are specimens and we are naturalists. So instead of trying to pick out a piece of code and reading it and then discussing it like a bunch of Comp Lit. grad students, I think a better model is for one of us to play the role of a 19th century naturalist returning from a trip to some exotic island to present to the local scientific society a discussion of the crazy beetles they found: &amp;#x201C;Look at the antenna on this monster! They look incredibly ungainly but the male of the species can use these to kill small frogs in whose carcass the females lay their eggs.&amp;#x201D;&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;The point of such a presentation is to take a piece of code that the presenter has understood deeply and for them to help the audience understand the core ideas by pointing them out amidst the layers of evolutionary detritus (a.k.a. kluges) that are also part of almost all code. One reasonable approach might be to show the real code and then to show a stripped down reimplementation of just the key bits, kind of like a biologist staining a specimen to make various features easier to discern.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;blockquote&gt;
+          &lt;p&gt;The ideal presentation should be aimed at an audience of gentleman and lady programmers&amp;#x2014;smart, and generally capable but without, necessarily, any specific knowledge of the domain from which the code comes. Presentations should provide enough context for the audience to to understand what the code is and should explain any details of the implementation language that may be obscure to the average programmer.&lt;/p&gt;
+          &lt;/blockquote&gt;
+          &lt;p&gt;Since I had my epihany we&amp;#x2019;ve had several meetings of the code reading group, now known as the Royal Society of Twitter for Improving Coding Knowledge, along the new lines. We&amp;#x2019;re still learning about the best ways to present code but the model feels very right. Also, I no longer feel bad about my dissection-based approach to reading code.&lt;/p&gt;
+          &lt;p&gt;The biggest lesson so far is that code is very dense. A half hour presentation is just enough time to present maybe a dozen meaty lines of code and one main idea. It is also almost certainly the case that the presenters, who have to actually really dig down into a piece of code, get more out of it than anybody. But it does seem that a good presentation can at least expose people to the main ideas and maybe give them a head start if they do decide to read the code themselves.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+</description>
+<title>
+Code is not Literature
 </title>
 </item>
 </channel>
