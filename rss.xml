@@ -14,119 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-http://www.stormpath.com/blog/so-long-scrum-hello-kanban
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;field-item even&quot;&gt; &lt;p&gt;&lt;img src=&quot;http://www.stormpath.com/sites/default/files/u111/kanban.png&quot; alt=&quot;Stormpath Kanban&quot; title=&quot;Stormpath Kanban&quot; width=&quot;660&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Last year, Stormpath made the big shift from Scrum to Kanban. While we love Agile principles, the Scrum process wasn&amp;#x2019;t working for us. Kanban made our team more efficient, happier, and increased our focus on quality software. More importantly, it has become a core part of our company culture, and is now used by non-technical teams like Marketing and HR.&lt;/p&gt;
-&lt;p&gt;Kanban software development focuses on continuous delivery and drives high efficiency by limiting how much work can be done at once. Invented by Toyota and modified by David J. Anderson for software development, Kanban can have a huge impact on modern teams delivering cloud software in continuous environments.&lt;/p&gt;
-&lt;h3&gt;&lt;a id=&quot;ScrumItsNotYouItsMe&quot;&gt;&lt;/a&gt;Scrum, It&amp;#x2019;s Not You, It&amp;#x2019;s Me&lt;/h3&gt;
-&lt;p&gt;Agile principles have always been important at Stormpath, and we use them on every team from Engineering to Marketing. Standups give our team transparency and eliminate blockers. Breaking work into minimum viable features gives our engineers a sense of progressing successfully. These small-step iterations &amp;#x2013; driven by user stories from our customers &amp;#x2013; help us improve the Stormpath API as we learn more about how people use it.&lt;/p&gt;
-&lt;p&gt;The sprint-based Scrum process, however, wasn&amp;#x2019;t working for us. It was too rigid, created too much overhead, and started to cause burnout on our team.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Overhead&lt;/em&gt;&lt;br&gt; We&amp;#x2019;re a start-up moving extremely fast with a very limited set of resources. Scrum had a lot of overhead: sprint planning was a half day event for our entire engineering team, plus preparation for the meeting for our product team. It made everyone feel involved and helped with coordination but that&amp;#x2019;s not a pain point for us. We&amp;#x2019;re already very collaborative. Sprint planning forced engineers focused on one component to sit through a discussion of unrelated components &amp;#x2014; for hours. Additionally, we would get into long (and often fruitless debates) about issue priority and scope that would drag in the whole team.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Myth of Estimation&lt;/em&gt;&lt;br&gt; At its core, Scrum tries to drive productivity by imposing a time limit on work. A sprint is a bucket of available work hours that gets filled with issues based on time you think it will take to complete them. Like most teams, we have some over-estimators and many under-estimators. I can tell you with absolute certainty that 100% of us are &lt;em&gt;bad&lt;/em&gt; estimators. Time spent trying to divine and debate a feature&amp;#x2019;s size felt like wasted time because we were probably wrong anyway. Moreover, what did it matter? If it&amp;#x2019;s a priority for our customers, it needs to get done regardless of size and, as a rule, we were always breaking it down to its smallest viable scope.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span&gt;Scrum assumes you&amp;#x2019;re good at estimation&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Bad estimation &amp;#x2013; rampant for many Agile engineering teams &amp;#x2013; caused a lot of problems. Issues turn out to be bigger than expected, now the sprint is overloaded. We kept finding ourselves jerry-rigging scope &amp;#x2013; even more planning meetings - to match the artificial construct of a sprint, gaming the process to very little business benefit.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Change Management Soup&lt;/em&gt;&lt;br&gt;Need to move fast and operate in an environment of uncertainty? Scrum complicates that. Once sprint planning is done, making changes to the sprint triggers more planning meetings. Sure, you want changes to work-in-progress to be painful as a deterrent to a meddling business team, but what about changes to work committed to but not yet in progress? What if a big bug is discovered? What if a customer call makes us rethink some part of a feature committed to in the sprint. These common situations created more meetings, frustration, and complexity in our process.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Morale and Burnout&lt;/em&gt;&lt;br&gt;Flawed estimation constantly led to unrealistic expectations and the team would miss their sprint commitments. The retrospectives would then turn into critiques of what we did wrong which often came back to bad estimation, priority changes, and/or feature specs. Business felt engineering missed their targets, Engineering felt business kept moving the ball. Everyone&amp;#x2019;s morale suffered.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.stormpath.com/sites/default/files/u111/kanban_sprints.png&quot; alt=&quot;Scrum Sprints&quot; title=&quot;Scrum Sprints&quot; width=&quot;660&quot;&gt;&lt;/p&gt;
-&lt;p&gt;The two week iterations were great &amp;#x2014; we felt velocity because we were always deploying something. But our productivity quickly became spiky. Crazy hours at the end of the sprint in order to get it all in a release because &amp;#x201C;we committed to it&amp;#x201D; were followed by a productivity crash the next week so people could recover. Shortening the sprint cycles might smooth out productivity, but the planning overhead limited what could meaningfully get done in a shorter sprint. Lengthening sprints reduced overall pressure, but also exposed us to greater change management risk.&lt;/p&gt;
-&lt;p&gt;We started looking for alternatives.&lt;/p&gt;
-&lt;h3&gt;&lt;a id=&quot;EnterKanban&quot;&gt;&lt;/a&gt;Enter Kanban&lt;/h3&gt;
-&lt;p&gt;While in business school at Stanford, I read a lot about Toyota&amp;#x2019;s &amp;#x201C;Just-in-Time&quot; or Kanban manufacturing process. It really is a marvel of simplicity and more importantly, it supports our velocity goals. It&amp;#x2019;s designed to be flexible, so priorities can change pretty quickly. With one quick google search I found LOTS of articles, books, and videos on Kanban for software development. Our Atlasssian Suite even supported it.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;What is Kanban?&lt;/em&gt;&lt;br&gt;Kanban is a continuous flow process: issues enter the queue and then get &amp;#x201C;pulled&quot; through a series of steps in the development process. Kanban is often visualized on a Kanban board and each step is represented by a column. Issues can further be organized in rows, called &amp;#x201C;swim lanes&amp;#x201D;. Here at Stormpath, we chose to use swim lanes to represent issue priority &amp;#x2013; the further down in rows you go, the lower the issue priority. Core to Kanban are Work-in-Progress (WIP) limits that cap the number of items that can be simultaneously worked on within a given stage of development. Workers pull from left to right and can only move work onto the next stage if that column has an open WIP slot.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.stormpath.com/sites/default/files/u111/kanban_swimlanes.png&quot; alt=&quot;Kanban Swimlanes and WIP Limits&quot; title=&quot;Kanban Swimlanes and WIP Limits&quot; width=&quot;660&quot;&gt;&lt;/p&gt;
-&lt;p&gt;While Scrum drives productivity by limiting the work time available in a sprint, Kanban drives productivity and velocity by limiting the number of active, concurrent issues. Time estimation is no longer part of the process.&lt;/p&gt;
-&lt;p&gt;Velocity is still a major focus but now we optimize at an issue level, now called Cycle Time. Items to the right of the board, those furthest along, get higher priority. This creates an important core value on the team. Finish what we&amp;#x2019;re already working on, before you take on more work. Stop multi-tasking. Stop context shifting.&lt;/p&gt;
-&lt;p&gt;And all the churn on priorities and requirements from the business? Gone. With Kanban, the business owns the &quot;To Do&amp;#x201D; column, but Engineering owns all the rest. Business can go hog wild with changes while things are in To Do, but they can&amp;#x2019;t change an issue without a lot of effort once it's moved out into another column. As a result, the engineers now feel insulated from any changes from Business prior to work being picked up.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Happy Team&lt;/em&gt;&lt;br&gt;Kanban made our team very happy. Whereas Scrum felt like a prescriptive, inflexible formula imposed on the engineers by management, Kanban is flexible, process-driven and owned by engineering. Our team implemented and developed how we use Kanban at Stormpath, which gave them ownership over the process and its success. The transition was very smooth: about 2 days worth of discussion and planning.&lt;/p&gt;
-&lt;p&gt;What&amp;#x2019;s more, a continuous flow model means there&amp;#x2019;s no &amp;#x201C;deadline&amp;#x201D; but instead an ever-present pressure for &amp;#x201C;velocity.&amp;#x201D; This significantly reduced the burnout we were seeing. Even better, overall productivity went up. We weren&amp;#x2019;t spending half a day every other week with the entire team planning sprints; we weren&amp;#x2019;t gaming a feature&amp;#x2019;s scope to fit into a sprint; Kanban reduced context switching, which improved both productivity and code quality. Furthermore, the Kanban board itself reduced project management overhead because everyone could see it and know what was being worked on, by who, where it was, what needed to be worked on next, and where the bottlenecks were.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Structural Focus On Quality&lt;/em&gt;&lt;br&gt;A major, unplanned benefit of Kanban, was a focus on software quality. Under Scrum, there was always a temptation to cut corners in order to get things into the Sprint and then shove the missing work into the Tech Debt backlog, like skipping a code review, approving 70% code coverage when our standard is 95%, etc. Tech Debt kept getting bigger, and we missed some elements in designing new features. At Stormpath, we take code quality extremely seriously, so the constant risk made everyone uncomfortable.&lt;/p&gt;
-&lt;p&gt;Under Kanban, steps that ensure code quality are baked into the process. Since we&amp;#x2019;re rarely working against a deadline, there&amp;#x2019;s rarely pressure to skip these steps. In fact, because engineering owns the process, there&amp;#x2019;s a strong pressure to stick to the process. Engineers will fight to make sure we have 100% code review and 95%+ code coverage now.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Near Zero Overhead&lt;/em&gt;&lt;br&gt;Sprint planning? Gone. Project Management? Minimal. Estimation poker? None. Scrum Master? Nope. We still have stand-ups, but those don&amp;#x2019;t take up a lot of time. Engineering spends most of their time building product. Product owners decide what goes in &amp;#x201C;To Do&amp;#x201D; next, and engineering takes it from there.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Kaizen vs Retrospectives&lt;/em&gt;&lt;br&gt;In Kanban, Scrum retrospectives have been replaced with Kaizen meetings (kaizen in Japanese means &amp;#x201C;continuous improvement&amp;#x201D;). The difference is subtle but powerful. Here at Stormpath, we have Kaizen meetings every two weeks; engineers and product owners discuss how the process should be modified to improve velocity and quality, while reducing overhead. Instead of looking back and critiquing what we did, all the energy is forward-looking and focused on process improvement. Defensiveness down, collaboration up! Everything in the process is fair game and any new idea is treated as an experiment to be tested. Most ideas are given a try, and very few are shot down. As a result, kaizen meetings have an upbeat, creative feel and the process runs very smoothly.&lt;/p&gt;
-&lt;h3&gt;&lt;a id=&quot;Kanbanisntperfect&quot;&gt;&lt;/a&gt;Kanban isn&amp;#x2019;t perfect&lt;/h3&gt;
-&lt;p&gt;We&amp;#x2019;ve successfully moved to Kanban and are really happy with it, but it&amp;#x2019;s by no means a perfect solution.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Software Tools For Kanban Are Nascent&lt;/em&gt;&lt;br&gt;We use and love Atlassian Jira and Greenhopper. They have some nice Kanban features, but their Kanban board is relatively new and lacks the flexibility we expected (for example, having WIP limits in swimlanes). As a result, we&amp;#x2019;ve had to conform parts of our process to what was doable in Jira and Greenhopper. This is unfortunate, because to get the most benefits from Kanban, you should be able to model your board to reflect your team's particular needs.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Loss Of A Systematic Focus On Urgency&lt;/em&gt;&lt;br&gt;With Scrum, that sprint clock ticks loudly. Everyone feels the pressure to get their work done before the sprint ends. Urgency is baked in. In Kanban, urgency is more abstract and doesn&amp;#x2019;t have quite the same emotion pressure. We&amp;#x2019;ve had to impose a sense of urgency in our team through culture and management&amp;#x2014;harder but hopefully healthier.&lt;/p&gt;
-&lt;h3&gt;&lt;a id=&quot;KeepCalmandKanban&quot;&gt;&lt;/a&gt;Keep Calm and Kanban&lt;/h3&gt;
-&lt;p&gt;Kanban&amp;#x2019;s power comes from its focus on getting fewer items out faster through work in progress limits. Like anything, it&amp;#x2019;s not perfect and it may not be right for everyone in every situation but ultimately, we ended up with a happy team, higher productivity, less tension between the business and engineering, higher quality software, and A LOT less overhead. Win!&lt;/p&gt;
-&lt;p&gt;Interested in Kanban? Here are a few helpful links:&lt;/p&gt;
- &lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-So Long Scrum, Hello Kanban
-</title>
-</item>
-<item>
-<link>
-https://github.com/blog/1761-new-year-new-ceo-for-github
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;blog-post-body markdown-body&quot;&gt;
-    &lt;p&gt;It's a brand new year, and each year calls for reflection on where we've been, where we're going, and how each of us here at GitHub can best focus our talents and energy. To kick off 2014 I've asked my long-time friend and GitHub cofounder, Chris Wanstrath, to take the role of CEO. In this role, Chris will be responsible for leading the company, defining our vision, and working with our amazing team to establish and execute the strategies necessary to achieve our most ambitious goals.&lt;/p&gt;
-
-&lt;p&gt;I'll continue to work closely with Chris on vision, strategy, and execution in the role of President of GitHub. This shift will allow me to take responsibility for R&amp;amp;D and new growth opportunities within the company. I'll also be thinking deeply about how we can continue to optimize for happiness as we grow, and will remain the company's public champion and primary spokesperson.&lt;/p&gt;
-
-&lt;p&gt;We tend to do things differently here at GitHub, and remaining fluid in how we define our roles is a big part of that. In fact, Chris and I have stepped into these roles over the past few months and today we're simply acknowledging the change publicly. While we don't use titles heavily at GitHub, we think in this case they're useful to communicate areas of responsibility both internally and externally.&lt;/p&gt;
-
-&lt;p&gt;2014 is going to be an exciting year. I, for one, can't wait to see what happens!&lt;/p&gt;
-
-&lt;p&gt;Tom Preston-Werner&lt;br&gt;
-Cofounder &amp;amp; President, GitHub, Inc.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://a248.e.akamai.net/camo.github.com/31944f6d590a0ddca2ee6419e322a6d6d7dc1100/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f626c6f672f323031342f626c6f672f63656f737761702e676966&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://a248.e.akamai.net/camo.github.com/31944f6d590a0ddca2ee6419e322a6d6d7dc1100/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f626c6f672f323031342f626c6f672f63656f737761702e676966&quot; alt=&quot;The CEO is President. Long live the CEO!&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;blog-feedback&quot;&gt;
-    &lt;h2 class=&quot;blog-feedback-header&quot;&gt;
-      Have feedback on this post? Let &lt;a href=&quot;https://twitter.com/intent/tweet?text=@github%20&amp;amp;related=github&amp;amp;url=https://github.com/blog/1761-new-year-new-ceo-for-github&quot; target=&quot;blank&quot;&gt;@github&lt;/a&gt; know on Twitter.
-    &lt;/h2&gt;
-    &lt;p class=&quot;blog-feedback-description&quot;&gt;
-      Need help or found a bug? &lt;a href=&quot;https://github.com/contact&quot;&gt;Contact us&lt;/a&gt;.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-    &lt;/div&gt;
-</description>
-<title>
-New Year, New CEO for GitHub
-</title>
-</item>
-<item>
-<author>
-Y Combinator
-</author>
-<link>
-http://blog.ycombinator.com/announcing-the-female-founders-conference
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body&quot; id=&quot;post_body_644210&quot;&gt;
-&lt;p&gt;Jessica Livingston&lt;/p&gt;&lt;p&gt;I'm delighted to announce that Kat Manalac, Kirsty Nathoo, Carolynn Levy and I are hosting Y Combinator's first &lt;a href=&quot;http://femalefoundersconference.org&quot; target=&quot;_blank&quot;&gt;Female Founders Conference&lt;/a&gt;&amp;#xA0;on Saturday, March 1. We're going to gather together female founders&amp;#xA0;at all stages to share stories, give advice, and make connections.&lt;/p&gt;The original idea was to make this an event where female YC alumni&amp;#xA0;shared their experiences. &amp;#xA0;But once we started&amp;#xA0;planning the event we thought it would be exciting to invite Julia&amp;#xA0;Hartz and Diane Greene to speak as well, so that we'd have speakers&amp;#xA0;who could talk about what happens at even later stages.&lt;div&gt;
-&lt;br&gt;As well as the speakers, many female YC alumni will be attending&amp;#xA0;the event, so this will be an opportunity to get to know them and&amp;#xA0;ask questions.&lt;p&gt;The best source of information about startups is the stories of&amp;#xA0;people who've started them. &amp;#xA0;Our goal with this conference is to&amp;#xA0;inspire women to start (or hang in there with!) a startup through&amp;#xA0;the insights and experiences of those who have done it already. &amp;#xA0;If&amp;#xA0;you're a woman interested in learning more about startups, I encourage&amp;#xA0;you to apply.&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-Announcing the Female Founders Conference (March 1)
-</title>
-</item>
-<item>
-<link>
-http://annualletter.gatesfoundation.org/?cid=bg_fb_po0_012103/#section=home
-</link>
-<description>
-
-</description>
-<title>
-2014 Gates Annual Letter: Myths that block progress for the poor
-</title>
-</item>
-<item>
 <author>
 MARC ANDREESSEN
 </author>
@@ -138,6 +25,220 @@ http://mobile.nytimes.com/blogs/dealbook/2014/01/21/why-bitcoin-matters/
 </description>
 <title>
 Why Bitcoin Matters
+</title>
+</item>
+<item>
+<author>
+Alex Goldman
+</author>
+<link>
+http://www.onthemedia.org/story/yesterday-internet-solved-20-year-old-mystery/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;story-longimage&quot;&gt;
+    
+
+    &lt;img src=&quot;http://www.wnyc.org/i/620/372/l/80/1/metafilter.com.jpg&quot;&gt;
+      
+
+
+
+      &lt;/div&gt;
+
+
+
+    &lt;div class=&quot;article-description&quot;&gt;
+      &lt;p&gt;Back in October, &lt;a href=&quot;http://www.onthemedia.org/story/3-jokestxt/&quot; target=&quot;_blank&quot;&gt;we told a story on the TLDR podcast&lt;/a&gt; about Daniel Drucker. Drucker was looking through his recently deceased dad's computer when he found a document that contained only joke punchlines. He turned to the website &lt;a href=&quot;http://ask.metafilter.com/&quot; target=&quot;_blank&quot;&gt;Ask Metafilter&lt;/a&gt;&amp;#xA0;for help. Within hours, the website's users had reunited the punchlines with their long lost setups.&lt;/p&gt;
+&lt;p&gt;It looks like they've done it again.&lt;/p&gt;
+    &lt;/div&gt;
+
+  
+
+
+  
+
+
+
+
+
+
+
+  
+    &lt;div class=&quot;article-description&quot;&gt;
+      &lt;p&gt;Yesterday afternoon,&amp;#xA0;&lt;a href=&quot;http://ask.metafilter.com/255675/Decoding-cancer-addled-ramblings&quot; target=&quot;_blank&quot;&gt;a user posted a thread asking for help with a decades old family mystery&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;My grandmother passed away in 1996 of a fast-spreading cancer. She was non-communicative her last two weeks, but in that time, she left at least 20 index cards with scribbled letters on them. My cousins and I were between 8-10 years old at the time, and believed she was leaving us a code. We puzzled over them for a few months trying substitution ciphers, and didn't get anywhere.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The index cards appear to just be a random series of letters, and had confounded the poster's family for years. But it only took Metafilter 15 minutes to at least partially decipher. User harperpitt quickly realized she was using the first letters of words, and that she was, in fact, writing prayers:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Was she a religious woman? The last As, as well as the AAA combo, make me think of &quot;Amen, amen, amen.&quot; So extrapolating -- TYAGF = &quot;Thank you Almighty God for...&quot;&lt;/p&gt;&lt;p&gt;It would make sense to end with &quot;Thank you, Almighty God, for everything, Amen - Thank you, Almighty God, for everything, Amen, Amen, Amen.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AGH, YES! Sorry for the double post, but:&lt;/p&gt;&lt;p&gt;OFWAIHHBTNTKCTWBDOEAIIIHFUTDODBAFUOT&lt;br&gt;AWFTWTAUALUNITBDUFEFTITKTPATGFAEA&lt;/p&gt;&lt;p&gt;Our Father who art in Heaven, hallowed be thy name... etc etc etc&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://ask.metafilter.com/255675/Decoding-cancer-addled-ramblings&quot; target=&quot;_blank&quot;&gt;The whole thread is fascinating&lt;/a&gt;. You should take a look at it. You might even be able to contribute. And if you haven't heard our interview with Daniel Drucker, you can listen to it below.&lt;/p&gt;
+
+    &lt;/div&gt;
+
+
+  
+  
+    
+
+
+  
+
+
+
+
+
+
+
+  
+
+  
+    &lt;/div&gt;
+</description>
+<title>
+Yesterday, the Internet Solved a 20-year-old Mystery
+</title>
+</item>
+<item>
+<link>
+http://inessential.com/2014/01/21/network_solutions_auto-enroll_1_850
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;weblogPostBody&quot;&gt;&lt;p&gt;I got an email from Network Solutions &amp;#x2014; where I still have two domains, originally registered in the &amp;#x2019;90s &amp;#x2014; that informed me I have been enrolled in their WebLock Program.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;To help recapture the costs of maintaining this extra level of security for your account, your credit card will be billed $1,850 for the first year of service on the date your program goes live. After that you will be billed $1,350 on every subsequent year from that date. If you wish to opt out of this program you may do so by calling us at 1-888-642-0265.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;(Here&amp;#x2019;s a &lt;a href=&quot;http://inessential.com/images/networkSolutionsAutoEnroll.png&quot;&gt;screenshot of the email&lt;/a&gt;. I&amp;#x2019;ve pasted in the text at the end of this post.)&lt;/p&gt;
+
+&lt;p&gt;I couldn&amp;#x2019;t believe that I&amp;#x2019;d been opted-in, without my permission, to any new product &amp;#x2014; and I was stunned when I saw how much it cost. And further surprised when I saw that I would have to make a phone call to deal with all this.&lt;/p&gt;
+
+&lt;p&gt;I found on Twitter that Network Solutions has an account. So I asked if this was phishing. &lt;a href=&quot;https://twitter.com/brentsimmons/status/425714939005644801&quot;&gt;The reply: it&amp;#x2019;s real&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My next step was, of course, to &lt;a href=&quot;https://twitter.com/brentsimmons/status/425717611947515904&quot;&gt;post a screen shot of the email on Twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;@netsolcares &lt;a href=&quot;https://twitter.com/brentsimmons/status/425720127758155776&quot;&gt;responded by suggesting I call the security team&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;@brentsimmons Give the security team a call and they can explain 1-888-642-0265 Sorry for the inconvenience. ^rr&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;#x2019;m not going to call the security team. (Which I&amp;#x2019;d bet is really a &lt;em&gt;sales&lt;/em&gt; team.) I&amp;#x2019;ve been a customer of Network Solutions since 1997. While their website was always kind of a pain, I&amp;#x2019;ve never had problems with them.&lt;/p&gt;
+
+&lt;p&gt;But this goes &lt;em&gt;way&lt;/em&gt; beyond acceptable behavior for any company I do business with. It&amp;#x2019;s extreme.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;#x2019;ll be transferring those domains elsewhere. (Folks have recommended &lt;a href=&quot;https://www.hover.com/&quot;&gt;Hover&lt;/a&gt; and &lt;a href=&quot;http://www.dynadot.com/&quot;&gt;Dynadot&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h4&gt;Text of the email&lt;/h4&gt;
+
+&lt;p&gt;Dear Brent Simmons,&lt;/p&gt;
+
+&lt;p&gt;Cybercriminals continue to strengthen and evolve the techniques and tools they use to assault our customers' websites and domain names. According to the Symantec Internet Security Annual report the pace and frequency of hacking, phishing and social engineering has increased over 42% in 2013.&lt;/p&gt;
+
+&lt;p&gt;Compromised domain names can lead to substantial brand, reputational and financial damage. Once a domain name is compromised cybercriminals have total control of the content that appears on &quot;your&quot; website. In many cases objectionable content is posted or phishing sites are established whereby your customers' private information can be exploited.&lt;/p&gt;
+
+&lt;p&gt;At Network Solutions we take your security very seriously. We deploy some of the most advanced security monitoring and defense mechanisms in the industry to ensure only authorized users can access your company's domain name and name servers. Given the level of traffic to your website, we are taking another significant step to protect your domain name security.&lt;/p&gt;
+
+&lt;p&gt;Starting 9:00 AM EST on 2/4/2014 all of your domains will be protected via our WebLock Program. Here is how the program works:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In order to make changes to your Domain Name's configuration settings you must be pre-registered as a Certified User.&lt;/li&gt;
+&lt;li&gt;All requests for Domain Name configuration changes must be confirmed by an outbound call we make to a pre-registered authorized phone number you establish. A unique 9 digit PIN will be required when we call.&lt;/li&gt;
+&lt;li&gt;A message alert will be sent to all Certified Users notifying the team which Certified User has made the request.&lt;/li&gt;
+&lt;li&gt;In addition WebLock enrolled customers will have access to a 24/7 NOC and rapid response team in the event of any security issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;To establish Certified Users and pre-register authorized phone numbers and email addresses please call 1-888-642-0265 Monday to Friday between 8:00AM and 5:00PM EST. Please make sure to establish Certified Users with authorized phone numbers and email addresses before launch date. Once established, the unique 9-digit PINs for each certified user will be mailed to you within 45-days.&lt;/p&gt;
+
+&lt;p&gt;To help recapture the costs of maintaining this extra level of security for your account, your credit card will be billed $1,850 for the first year of service on the date your program goes live. After that you will be billed $1,350 on every subsequent year from that date. If you wish to opt out of this program you may do so by calling us at 1-888-642-0265.&lt;/p&gt;
+
+&lt;p&gt;We strongly encourage you to take advantage of this security program and register Certified Users before the program launch date. Thank you for helping us protect you better.&lt;/p&gt;
+
+&lt;p&gt;Regards&lt;br&gt;
+Geof Birchall&lt;/p&gt;
+
+&lt;p&gt;Geof Birchall&lt;br&gt;
+Chief Security Officer&lt;br&gt;
+Network Solutions&lt;/p&gt;
+
+&lt;p&gt;Connect With Us&lt;/p&gt;
+
+&lt;p&gt;Please do not reply to this email. Replying to this email will not secure your services. Please click here to unsubscribe. Please note that unsubscribing from our marketing emails will not affect important transactional correspondence such as administrative and renewal notices related to your account. Please review our Privacy Notice for any questions related thereto and please see our Services Agreement for the terms and conditions governing Network Solutions products and services.&lt;/p&gt;
+
+&lt;p&gt;&amp;#xA9;2014 by Network Solutions, LLC. All rights reserved.&lt;br&gt;
+12808 Gran Bay Parkway, West | Jacksonville, FL 32258&lt;br&gt;
+Network Solutions is a Web.com Group, Inc. company.&lt;/p&gt;&lt;/div&gt;
+	&lt;/div&gt;
+</description>
+<title>
+Network Solutions Auto-Enroll: $1,850
+</title>
+</item>
+<item>
+<link>
+http://chrishateswriting.com/post/74083032842/today-my-startup-failed
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;copy&quot;&gt;
+						
+						&lt;p&gt;No soft landing, no happy ending&amp;#x2014;&lt;a href=&quot;http://techcrunch.com/2014/01/21/when-goods-not-good-enough/&quot; title=&quot;With Traction But Out Of Cash, 4chan Founder Kills Off Canvas/DrawQuest&quot; target=&quot;_blank&quot;&gt;we simply failed&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;#x2019;s been a long four year journey, full of highs and lows. I am simultaneously incredibly proud, and incredibly disappointed.&lt;/p&gt;
+&lt;p&gt;I&amp;#x2019;m incredibly proud of an amazing team and all that they have accomplished. Our most recent product, &lt;a href=&quot;http://drawquest.com&quot; title=&quot;DrawQuest&quot; target=&quot;_blank&quot;&gt;DrawQuest&lt;/a&gt;, is by all accounts a success. In the past year it&amp;#x2019;s been downloaded more than 1.4 million times, and is currently used by about 25,000 people a day, and 400,000 last month alone. Retention and engagement are great. And yet we still failed.&lt;/p&gt;
+&lt;p&gt;It may seem surprising that a seemingly successful product could fail, but it happens all the time. Although we arguably found product/market fit, we couldn&amp;#x2019;t quite crack the business side of things.&lt;/p&gt;
+&lt;p&gt;Building any business is hard, but building a business with a single app offering and half of your runway is especially hard (we created DrawQuest after the failure of our first product, &lt;a href=&quot;http://canv.as&quot; title=&quot;Canvas&quot; target=&quot;_blank&quot;&gt;Canvas&lt;/a&gt;). I&amp;#x2019;ve come away with new found respect for those companies who excel at monetizing mobile applications. As we approached the end of our runway, it became clear to us that DrawQuest didn&amp;#x2019;t represent a venture-backed opportunity, and even with more time that was unlikely to change.&lt;/p&gt;
+&lt;p&gt;I&amp;#x2019;m terribly saddened that this may spell the end for our wonderful community, but it&amp;#x2019;s my goal to use what little money we&amp;#x2019;ll have left after the wind-down to keep the service alive for another few months. However as of today the team has gone their separate ways, and our doors are effectively closed.&lt;/p&gt;
+&lt;p&gt;I&amp;#x2019;m disappointed that I couldn&amp;#x2019;t produce a better outcome for those who supported me the most&amp;#x2014;my investors and employees. Few in business will know the pain of what it means to fail as a venture-backed CEO. Not only do you fail your employees, your customers, and yourself, but you also fail your investors&amp;#x2014;partners who helped you bring your idea to life.&lt;/p&gt;
+&lt;p&gt;In my case, I am extremely lucky and grateful to be partners with people who are simply the best. What separates the best investors is not how they help you when you&amp;#x2019;re a rocketship, but when your ship is on fire and you&amp;#x2019;re venting atmosphere. In this case, our investors have demonstrated what sets them apart from the rest&amp;#x2014;they&amp;#x2019;ve supported me throughout the ups and downs, and &lt;em&gt;especially&lt;/em&gt; the downs.&lt;/p&gt;
+&lt;p&gt;With that said, life goes on, and the best path forward is not a wounded one, but a more learned and motivated one. I&amp;#x2019;m definitely not itching to start another company any time soon&amp;#x2014;it will take time to decompress and reflect on the events of the past four years&amp;#x2014;but I hope that if I do some day decide to pursue a new dream, I&amp;#x2019;ll be in a much better position to. After all, I did just receive a highly selective, four-year education for a &lt;em&gt;mere&lt;/em&gt;&amp;#xA0;$3.6 million dollars! (I find humor helps as well.)&lt;/p&gt;
+&lt;p&gt;As for what&amp;#x2019;s next for me, I honestly have no idea. This is the first time in four years I&amp;#x2019;ve been at a crossroads like this.&lt;/p&gt;
+&lt;p&gt;One thing I&amp;#x2019;ll be doing more of is writing about my experience. Partially because it&amp;#x2019;s therapeutic, but also because if there&amp;#x2019;s a silver lining in all of this (and there is), it&amp;#x2019;s that I can help educate others about a path fraught with hardship, but rewarding nonetheless.&lt;/p&gt;
+&lt;p&gt;I&amp;#x2019;m also particularly inspired by what &lt;a href=&quot;http://www.theverge.com/2013/11/5/5039216/everpix-life-and-death-inside-the-worlds-best-photo-startup&quot; target=&quot;_blank&quot;&gt;Everpix&lt;/a&gt; has done by making so much of their story &lt;a href=&quot;https://github.com/everpix/Everpix-Intelligence&quot; target=&quot;_blank&quot;&gt;public&lt;/a&gt;, and hope many others will follow in their footsteps of radical transparency. I don&amp;#x2019;t wish to glorify my failure, but it&amp;#x2019;s certainly something I&amp;#x2019;d rather embrace than hide behind for the next five years.&lt;/p&gt;
+&lt;p&gt;On that note, if there are any specific topics you&amp;#x2019;d like me to write about, feel free to submit them via my&amp;#xA0;&lt;a href=&quot;http://chrishateswriting.com/ask&quot; target=&quot;_blank&quot;&gt;Ask page&lt;/a&gt;. Or if you&amp;#x2019;d like to say hi in general, please don&amp;#x2019;t hesitate to e-mail me at &lt;a href=&quot;mailto:moot@4chan.org&quot; target=&quot;_blank&quot;&gt;moot@4chan.org&lt;/a&gt;. Believe me&amp;#x2014;I&amp;#x2019;ll have &lt;em&gt;a lot&lt;/em&gt; of free time on my hands these next few weeks.&lt;/p&gt;
+&lt;p&gt;Last but not least, to my team&amp;#x2014;Dave, Eunsan, Alex, Nick, Shaun, and Jim&amp;#x2014;I am eternally grateful. To my investors&amp;#x2014;Union Square Ventures, Andreessen Horowitz, Lerer Ventures, SV Angel, Founder Collective, Chris Dixon, and Joshua Schachter&amp;#x2014;I could not have done this without you.&lt;/p&gt;
+&lt;p&gt;And to everyone who has supported us over the past few years, from the bottom of my heart: &lt;strong&gt;thank you&lt;/strong&gt;.&lt;/p&gt;
+					&lt;/div&gt;
+					
+
+					
+
+						
+
+								
+
+									
+
+										
+
+											
+
+												
+
+													
+
+															
+															
+															
+															
+
+															
+															
+															&lt;/div&gt;
+</description>
+<title>
+Today my startup failed
+</title>
+</item>
+<item>
+<link>
+item?id=7095228
+</link>
+<description>
+
+</description>
+<title>
+86 comments
 </title>
 </item>
 </channel>
