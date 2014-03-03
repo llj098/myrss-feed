@@ -14,223 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-MARC ANDREESSEN
-</author>
-<link>
-http://mobile.nytimes.com/blogs/dealbook/2014/01/21/why-bitcoin-matters/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;article-body&quot;&gt;&lt;p&gt;&lt;em&gt;Editor&amp;#x2019;s note: Marc Andreessen&amp;#x2019;s venture capital firm, Andreessen Horowitz, has invested just under $50 million in Bitcoin-related start-ups. The firm is actively searching for more Bitcoin-based investment opportunities. He does not personally own more than a de minimis amount of Bitcoin.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A mysterious new technology emerges, seemingly out of nowhere, but actually the result of two decades of intense research and development by nearly anonymous researchers.&lt;/p&gt;&lt;p&gt;Political idealists project visions of liberation and revolution onto it; establishment elites heap contempt and scorn on it.&lt;/p&gt;&lt;p&gt;On the other hand, technologists &amp;#x2013; nerds &amp;#x2013; are transfixed by it. They see within it enormous potential and spend their nights and weekends tinkering with it.&lt;/p&gt;&lt;a href=&quot;http://mobile.nytimes.com/video/2013/11/24/business/100000002563247/david-gillen-bitcoin-believers.html?from=dealbook&quot; class=&quot;related-asset type-video&quot;&gt;&lt;div class=&quot;image-container videoholder&quot;&gt;&lt;i class=&quot;btn icon icon-video&quot;&gt;&lt;/i&gt;&lt;div class=&quot;proportion-image&quot;&gt;&lt;img src=&quot;http://graphics8.nytimes.com/images/2013/11/20/business/video-gillen-bitcoins/video-gillen-bitcoins-thumbWide.jpg&quot; class=&quot;video-thumb&quot;&gt;&lt;video src=&quot;http://video1.nytimes.com/video/2013/11/20/23776_1_gillen-bitcoins_wg_16x9_l_3g_mob.mp4&quot;&gt;&lt;img src=&quot;http://graphics8.nytimes.com/images/2013/11/20/business/video-gillen-bitcoins/video-gillen-bitcoins-thumbWide.jpg&quot;&gt;&lt;/video&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;text-container&quot;&gt;&lt;p class=&quot;image-caption&quot;&gt;&lt;span class=&quot;asset-title&quot;&gt;Video | Bitcoin Believers&lt;/span&gt; While regulators debate the pros and cons of bitcoins, the rising real-world value of this digital currency inspires the question: What makes money, money?&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;p&gt;Eventually mainstream products, companies and industries emerge to commercialize it; its effects become profound; and later, many people wonder why its powerful promise wasn&amp;#x2019;t more obvious from the start.&lt;/p&gt;&lt;p&gt;What technology am I talking about? Personal computers in 1975, the Internet in 1993, and &amp;#x2013; I believe &amp;#x2013; Bitcoin in 2014.&lt;/p&gt;&lt;p&gt;One can hardly accuse Bitcoin of being an uncovered topic, yet the gulf between what the press and many regular people believe Bitcoin is, and what a growing critical mass of technologists believe Bitcoin is, remains enormous. In this post, I will explain why Bitcoin has so many Silicon Valley programmers and entrepreneurs all lathered up, and what I think Bitcoin&amp;#x2019;s future potential is.&lt;/p&gt;&lt;p&gt;First, Bitcoin at its most fundamental level is a breakthrough in computer science &amp;#x2013; one that builds on 20 years of research into cryptographic currency, and 40 years of research in cryptography, by thousands of researchers around the world.&lt;/p&gt;&lt;p&gt;Bitcoin is the first practical solution to a longstanding problem in computer science called the Byzantine Generals Problem. To quote from the original paper defining the B.G.P.: &amp;#x201C;[Imagine] a group of generals of the Byzantine army camped with their troops around an enemy city. Communicating only by messenger, the generals must agree upon a common battle plan. However, one or more of them may be traitors who will try to confuse the others. The problem is to find an algorithm to ensure that the loyal generals will reach agreement.&amp;#x201D;&lt;/p&gt;&lt;p&gt;More generally, the B.G.P. poses the question of how to establish trust between otherwise unrelated parties over an untrusted network like the Internet.&lt;/p&gt;&lt;p&gt;The practical consequence of solving this problem is that Bitcoin gives us, for the first time, a way for one Internet user to transfer a unique piece of digital property to another Internet user, such that the transfer is guaranteed to be safe and secure, everyone knows that the transfer has taken place, and nobody can challenge the legitimacy of the transfer. The consequences of this breakthrough are hard to overstate.&lt;/p&gt;&lt;p&gt;What kinds of digital property might be transferred in this way? Think about digital signatures, digital contracts, digital keys (to physical locks, or to online lockers), digital ownership of physical assets such as cars and houses, digital stocks and bonds &amp;#x2026; and digital money.&lt;/p&gt;&lt;p&gt;All these are exchanged through a distributed network of trust that does not require or rely upon a central intermediary like a bank or broker. And all in a way where only the owner of an asset can send it, only the intended recipient can receive it, the asset can only exist in one place at a time, and everyone can validate transactions and ownership of all assets anytime they want.&lt;/p&gt;&lt;p&gt;How does this work?&lt;/p&gt;&lt;p&gt;Bitcoin is an Internet-wide distributed ledger. You buy into the ledger by purchasing one of a fixed number of slots, either with cash or by selling a product and service for Bitcoin. You sell out of the ledger by trading your Bitcoin to someone else who wants to buy into the ledger. Anyone in the world can buy into or sell out of the ledger any time they want &amp;#x2013; with no approval needed, and with no or very low fees. The Bitcoin &amp;#x201C;coins&amp;#x201D; themselves are simply slots in the ledger, analogous in some ways to seats on a stock exchange, except much more broadly applicable to real world transactions.&lt;/p&gt;&lt;p&gt;The Bitcoin ledger is a new kind of payment system. Anyone in the world can pay anyone else in the world any amount of value of Bitcoin by simply transferring ownership of the corresponding slot in the ledger. Put value in, transfer it, the recipient gets value out, no authorization required, and in many cases, no fees.&lt;/p&gt;&lt;p&gt;That last part is enormously important. Bitcoin is the first Internetwide payment system where transactions either happen with no fees or very low fees (down to fractions of pennies). Existing payment systems charge fees of about 2 to 3 percent &amp;#x2013; and that&amp;#x2019;s in the developed world. In lots of other places, there either are no modern payment systems or the rates are significantly higher. We&amp;#x2019;ll come back to that.&lt;/p&gt;&lt;p&gt;Bitcoin is a digital bearer instrument. It is a way to exchange money or assets between parties with no pre-existing trust: A string of numbers is sent over email or text message in the simplest case. The sender doesn&amp;#x2019;t need to know or trust the receiver or vice versa. Related, there are no chargebacks &amp;#x2013; this is the part that is literally like cash &amp;#x2013; if you have the money or the asset, you can pay with it; if you don&amp;#x2019;t, you can&amp;#x2019;t. This is brand new. This has never existed in digital form before.&lt;/p&gt;&lt;p&gt;Bitcoin is a digital currency, whose value is based directly on two things: use of the payment system today &amp;#x2013; volume and velocity of payments running through the ledger &amp;#x2013; and speculation on future use of the payment system. This is one part that is confusing people. It&amp;#x2019;s not as much that the Bitcoin currency has some arbitrary value and then people are trading with it; it&amp;#x2019;s more that people can trade with Bitcoin (anywhere, everywhere, with no fraud and no or very low fees) and as a result it has value.&lt;/p&gt;&lt;p&gt;It is perhaps true right at this moment that the value of Bitcoin currency is based more on speculation than actual payment volume, but it is equally true that that speculation is establishing a sufficiently high price for the currency that payments have become practically possible. The Bitcoin currency had to be worth something before it could bear any amount of real-world payment volume. This is the classic &amp;#x201C;chicken and egg&amp;#x201D; problem with new technology: new technology is not worth much until it&amp;#x2019;s worth a lot. And so the fact that Bitcoin has risen in value in part because of speculation is making the reality of its usefulness arrive much faster than it would have otherwise.&lt;/p&gt;&lt;p&gt;Critics of Bitcoin point to limited usage by ordinary consumers and merchants, but that same criticism was leveled against PCs and the Internet at the same stage. Every day, more and more consumers and merchants are buying, using and selling Bitcoin, all around the world. The overall numbers are still small, but they are growing quickly. And ease of use for all participants is rapidly increasing as Bitcoin tools and technologies are improved. Remember, it used to be technically challenging to even get on the Internet. Now it&amp;#x2019;s not.&lt;/p&gt;&lt;p&gt;The criticism that merchants will not accept Bitcoin because of its volatility is also incorrect. Bitcoin can be used entirely as a payment system; merchants do not need to hold any Bitcoin currency or be exposed to Bitcoin volatility at any time. Any consumer or merchant can trade in and out of Bitcoin and other currencies any time they want.&lt;/p&gt;&lt;p&gt;Why would any merchant &amp;#x2013; online or in the real world &amp;#x2013; want to accept Bitcoin as payment, given the currently small number of consumers who want to pay with it? My partner Chris Dixon recently gave this example:&lt;/p&gt;&lt;p&gt;&amp;#x201C;Let&amp;#x2019;s say you sell electronics online. Profit margins in those businesses are usually under 5 percent, which means conventional 2.5 percent payment fees consume half the margin. That&amp;#x2019;s money that could be reinvested in the business, passed back to consumers or taxed by the government. Of all of those choices, handing 2.5 percent to banks to move bits around the Internet is the worst possible choice. Another challenge merchants have with payments is accepting international payments. If you are wondering why your favorite product or service isn&amp;#x2019;t available in your country, the answer is often payments.&amp;#x201D;&lt;/p&gt;&lt;p&gt;In addition, merchants are highly attracted to Bitcoin because it eliminates the risk of credit card fraud. This is the form of fraud that motivates so many criminals to put so much work into stealing personal customer information and credit card numbers.&lt;/p&gt;&lt;p&gt;Since Bitcoin is a digital bearer instrument, the receiver of a payment does not get any information from the sender that can be used to steal money from the sender in the future, either by that merchant or by a criminal who steals that information from the merchant.&lt;/p&gt;&lt;p&gt;Credit card fraud is such a big deal for merchants, credit card processors and banks that online fraud detection systems are hair-trigger wired to stop transactions that look even slightly suspicious, whether or not they are actually fraudulent. As a result, many online merchants are forced to turn away 5 to 10 percent of incoming orders that they could take without fear if the customers were paying with Bitcoin, where such fraud would not be possible. Since these are orders that were coming in already, they are inherently the highest margin orders a merchant can get, and so being able to take them will drastically increase many merchants&amp;#x2019; profit margins.&lt;/p&gt;&lt;p&gt;Bitcoin&amp;#x2019;s antifraud properties even extend into the physical world of retail stores and shoppers.&lt;/p&gt;&lt;p&gt;For example, with Bitcoin, the huge hack that recently stole 70 million consumers&amp;#x2019; credit card information from the Target department store chain would not have been possible. Here&amp;#x2019;s how that would work:&lt;/p&gt;&lt;p&gt;You fill your cart and go to the checkout station like you do now. But instead of handing over your credit card to pay, you pull out your smartphone and take a snapshot of a QR code displayed by the cash register. The QR code contains all the information required for you to send Bitcoin to Target, including the amount. You click &amp;#x201C;Confirm&amp;#x201D; on your phone and the transaction is done (including converting dollars from your account into Bitcoin, if you did not own any Bitcoin).&lt;/p&gt;&lt;p&gt;Target is happy because it has the money in the form of Bitcoin, which it can immediately turn into dollars if it wants, and it paid no or very low payment processing fees; you are happy because there is no way for hackers to steal any of your personal information; and organized crime is unhappy. (Well, maybe criminals are still happy: They can try to steal money directly from poorly-secured merchant computer systems. But even if they succeed, consumers bear no risk of loss, fraud or identity theft.)&lt;/p&gt;&lt;p&gt;Finally, I&amp;#x2019;d like to address the claim made by some critics that Bitcoin is a haven for bad behavior, for criminals and terrorists to transfer money anonymously with impunity. This is a myth, fostered mostly by sensationalistic press coverage and an incomplete understanding of the technology. Much like email, which is quite traceable, Bitcoin is pseudonymous, not anonymous. Further, every transaction in the Bitcoin network is tracked and logged forever in the Bitcoin blockchain, or permanent record, available for all to see. As a result, Bitcoin is considerably easier for law enforcement to trace than cash, gold or diamonds.&lt;/p&gt;&lt;p&gt;What&amp;#x2019;s the future of Bitcoin?&lt;/p&gt;&lt;p&gt;Bitcoin is a classic network effect, a positive feedback loop. The more people who use Bitcoin, the more valuable Bitcoin is for everyone who uses it, and the higher the incentive for the next user to start using the technology. Bitcoin shares this network effect property with the telephone system, the web, and popular Internet services like eBay and Facebook.&lt;/p&gt;&lt;p&gt;In fact, Bitcoin is a four-sided network effect. There are four constituencies that participate in expanding the value of Bitcoin as a consequence of their own self-interested participation. Those constituencies are (1) consumers who pay with Bitcoin, (2) merchants who accept Bitcoin, (3) &amp;#x201C;miners&amp;#x201D; who run the computers that process and validate all the transactions and enable the distributed trust network to exist, and (4) developers and entrepreneurs who are building new products and services with and on top of Bitcoin.&lt;/p&gt;&lt;p&gt;All four sides of the network effect are playing a valuable part in expanding the value of the overall system, but the fourth is particularly important.&lt;/p&gt;&lt;p&gt;All over Silicon Valley and around the world, many thousands of programmers are using Bitcoin as a building block for a kaleidoscope of new product and service ideas that were not possible before. And at our venture capital firm, Andreessen Horowitz, we are seeing a rapidly increasing number of outstanding entrepreneurs &amp;#x2013; not a few with highly respected track records in the financial industry &amp;#x2013; building companies on top of Bitcoin.&lt;/p&gt;&lt;p&gt;For this reason alone, new challengers to Bitcoin face a hard uphill battle. If something is to displace Bitcoin now, it will have to have sizable improvements and it will have to happen quickly. Otherwise, this network effect will carry Bitcoin to dominance.&lt;/p&gt;&lt;p&gt;One immediately obvious and enormous area for Bitcoin-based innovation is international remittance. Every day, hundreds of millions of low-income people go to work in hard jobs in foreign countries to make money to send back to their families in their home countries &amp;#x2013; over $400 billion in total annually, according to the World Bank. Every day, banks and payment companies extract mind-boggling fees, up to 10 percent and sometimes even higher, to send this money.&lt;/p&gt;&lt;p&gt;Switching to Bitcoin, which charges no or very low fees, for these remittance payments will therefore raise the quality of life of migrant workers and their families significantly. In fact, it is hard to think of any one thing that would have a faster and more positive effect on so many people in the world&amp;#x2019;s poorest countries.&lt;/p&gt;&lt;p&gt;Moreover, Bitcoin generally can be a powerful force to bring a much larger number of people around the world into the modern economic system. Only about 20 countries around the world have what we would consider to be fully modern banking and payment systems; the other roughly 175 have a long way to go. As a result, many people in many countries are excluded from products and services that we in the West take for granted. Even Netflix, a completely virtual service, is only available in about 40 countries. Bitcoin, as a global payment system anyone can use from anywhere at any time, can be a powerful catalyst to extend the benefits of the modern economic system to virtually everyone on the planet.&lt;/p&gt;&lt;p&gt;And even here in the United States, a long-recognized problem is the extremely high fees that the &amp;#x201C;unbanked&amp;#x201D; &amp;#x2014; people without conventional bank accounts &amp;#x2013; pay for even basic financial services. Bitcoin can be used to go straight at that problem, by making it easy to offer extremely low-fee services to people outside of the traditional financial system.&lt;/p&gt;&lt;p&gt;A third fascinating use case for Bitcoin is micropayments, or ultrasmall payments. Micropayments have never been feasible, despite 20 years of attempts, because it is not cost effective to run small payments (think $1 and below, down to pennies or fractions of a penny) through the existing credit/debit and banking systems. The fee structure of those systems makes that nonviable.&lt;/p&gt;&lt;p&gt;All of a sudden, with Bitcoin, that&amp;#x2019;s trivially easy. Bitcoins have the nifty property of infinite divisibility: currently down to eight decimal places after the dot, but more in the future. So you can specify an arbitrarily small amount of money, like a thousandth of a penny, and send it to anyone in the world for free or near-free.&lt;/p&gt;&lt;p&gt;Think about content monetization, for example. One reason media businesses such as newspapers struggle to charge for content is because they need to charge either all (pay the entire subscription fee for all the content) or nothing (which then results in all those terrible banner ads everywhere on the web). All of a sudden, with Bitcoin, there is an economically viable way to charge arbitrarily small amounts of money per article, or per section, or per hour, or per video play, or per archive access, or per news alert.&lt;/p&gt;&lt;p&gt;Another potential use of Bitcoin micropayments is to fight spam. Future email systems and social networks could refuse to accept incoming messages unless they were accompanied with tiny amounts of Bitcoin &amp;#x2013; tiny enough to not matter to the sender, but large enough to deter spammers, who today can send uncounted billions of spam messages for free with impunity.&lt;/p&gt;&lt;p&gt;Finally, a fourth interesting use case is public payments. This idea first came to my attention in a news article a few months ago. A random spectator at a televised sports event held up a placard with a QR code and the text &amp;#x201C;Send me Bitcoin!&amp;#x201D; He received $25,000 in Bitcoin in the first 24 hours, all from people he had never met. This was the first time in history that you could see someone holding up a sign, in person or on TV or in a photo, and then send them money with two clicks on your smartphone: take the photo of the QR code on the sign, and click to send the money.&lt;/p&gt;&lt;p&gt;Think about the implications for protest movements. Today protesters want to get on TV so people learn about their cause. Tomorrow they&amp;#x2019;ll want to get on TV because that&amp;#x2019;s how they&amp;#x2019;ll raise money, by literally holding up signs that let people anywhere in the world who sympathize with them send them money on the spot. Bitcoin is a financial technology dream come true for even the most hardened anticapitalist political organizer.&lt;/p&gt;&lt;p&gt;The coming years will be a period of great drama and excitement revolving around this new technology.&lt;/p&gt;&lt;p&gt;For example, some prominent economists are deeply skeptical of Bitcoin, even though Ben S. Bernanke, formerly Federal Reserve chairman, recently wrote that digital currencies like Bitcoin &amp;#x201C;may hold long-term promise, particularly if they promote a faster, more secure and more efficient payment system.&amp;#x201D; And in 1999, the legendary economist Milton Friedman said: &amp;#x201C;One thing that&amp;#x2019;s missing but will soon be developed is a reliable e-cash, a method whereby on the Internet you can transfer funds from A to B without A knowing B or B knowing A &amp;#x2013; the way I can take a $20 bill and hand it over to you, and you may get that without knowing who I am.&amp;#x201D;&lt;/p&gt;&lt;p&gt;Economists who attack Bitcoin today might be correct, but I&amp;#x2019;m with Ben and Milton.&lt;/p&gt;&lt;p&gt;Further, there is no shortage of regulatory topics and issues that will have to be addressed, since almost no country&amp;#x2019;s regulatory framework for banking and payments anticipated a technology like Bitcoin.&lt;/p&gt;&lt;p&gt;But I hope that I have given you a sense of the enormous promise of Bitcoin. Far from a mere libertarian fairy tale or a simple Silicon Valley exercise in hype, Bitcoin offers a sweeping vista of opportunity to reimagine how the financial system can and should work in the Internet era, and a catalyst to reshape that system in ways that are more powerful for individuals and businesses alike.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-<title>
-Why Bitcoin Matters
-</title>
-</item>
-<item>
-<author>
-Alex Goldman
-</author>
-<link>
-http://www.onthemedia.org/story/yesterday-internet-solved-20-year-old-mystery/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;story-longimage&quot;&gt;
-    
-
-    &lt;img src=&quot;http://www.wnyc.org/i/620/372/l/80/1/metafilter.com.jpg&quot;&gt;
-      
-
-
-
-      &lt;/div&gt;
-
-
-
-    &lt;div class=&quot;article-description&quot;&gt;
-      &lt;p&gt;Back in October, &lt;a href=&quot;http://www.onthemedia.org/story/3-jokestxt/&quot; target=&quot;_blank&quot;&gt;we told a story on the TLDR podcast&lt;/a&gt; about Daniel Drucker. Drucker was looking through his recently deceased dad's computer when he found a document that contained only joke punchlines. He turned to the website &lt;a href=&quot;http://ask.metafilter.com/&quot; target=&quot;_blank&quot;&gt;Ask Metafilter&lt;/a&gt;&amp;#xA0;for help. Within hours, the website's users had reunited the punchlines with their long lost setups.&lt;/p&gt;
-&lt;p&gt;It looks like they've done it again.&lt;/p&gt;
-    &lt;/div&gt;
-
-  
-
-
-  
-
-
-
-
-
-
-
-  
-    &lt;div class=&quot;article-description&quot;&gt;
-      &lt;p&gt;Yesterday afternoon,&amp;#xA0;&lt;a href=&quot;http://ask.metafilter.com/255675/Decoding-cancer-addled-ramblings&quot; target=&quot;_blank&quot;&gt;a user posted a thread asking for help with a decades old family mystery&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;My grandmother passed away in 1996 of a fast-spreading cancer. She was non-communicative her last two weeks, but in that time, she left at least 20 index cards with scribbled letters on them. My cousins and I were between 8-10 years old at the time, and believed she was leaving us a code. We puzzled over them for a few months trying substitution ciphers, and didn't get anywhere.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The index cards appear to just be a random series of letters, and had confounded the poster's family for years. But it only took Metafilter 15 minutes to at least partially decipher. User harperpitt quickly realized she was using the first letters of words, and that she was, in fact, writing prayers:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Was she a religious woman? The last As, as well as the AAA combo, make me think of &quot;Amen, amen, amen.&quot; So extrapolating -- TYAGF = &quot;Thank you Almighty God for...&quot;&lt;/p&gt;&lt;p&gt;It would make sense to end with &quot;Thank you, Almighty God, for everything, Amen - Thank you, Almighty God, for everything, Amen, Amen, Amen.&quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;AGH, YES! Sorry for the double post, but:&lt;/p&gt;&lt;p&gt;OFWAIHHBTNTKCTWBDOEAIIIHFUTDODBAFUOT&lt;br&gt;AWFTWTAUALUNITBDUFEFTITKTPATGFAEA&lt;/p&gt;&lt;p&gt;Our Father who art in Heaven, hallowed be thy name... etc etc etc&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://ask.metafilter.com/255675/Decoding-cancer-addled-ramblings&quot; target=&quot;_blank&quot;&gt;The whole thread is fascinating&lt;/a&gt;. You should take a look at it. You might even be able to contribute. And if you haven't heard our interview with Daniel Drucker, you can listen to it below.&lt;/p&gt;
-
-    &lt;/div&gt;
-
-
-  
-  
-    
-
-
-  
-
-
-
-
-
-
-
-  
-
-  
-    &lt;/div&gt;
-</description>
-<title>
-Yesterday, the Internet Solved a 20-year-old Mystery
-</title>
-</item>
-<item>
-<link>
-http://inessential.com/2014/01/21/network_solutions_auto-enroll_1_850
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;weblogPostBody&quot;&gt;&lt;p&gt;I got an email from Network Solutions &amp;#x2014; where I still have two domains, originally registered in the &amp;#x2019;90s &amp;#x2014; that informed me I have been enrolled in their WebLock Program.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;To help recapture the costs of maintaining this extra level of security for your account, your credit card will be billed $1,850 for the first year of service on the date your program goes live. After that you will be billed $1,350 on every subsequent year from that date. If you wish to opt out of this program you may do so by calling us at 1-888-642-0265.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;(Here&amp;#x2019;s a &lt;a href=&quot;http://inessential.com/images/networkSolutionsAutoEnroll.png&quot;&gt;screenshot of the email&lt;/a&gt;. I&amp;#x2019;ve pasted in the text at the end of this post.)&lt;/p&gt;
-
-&lt;p&gt;I couldn&amp;#x2019;t believe that I&amp;#x2019;d been opted-in, without my permission, to any new product &amp;#x2014; and I was stunned when I saw how much it cost. And further surprised when I saw that I would have to make a phone call to deal with all this.&lt;/p&gt;
-
-&lt;p&gt;I found on Twitter that Network Solutions has an account. So I asked if this was phishing. &lt;a href=&quot;https://twitter.com/brentsimmons/status/425714939005644801&quot;&gt;The reply: it&amp;#x2019;s real&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;My next step was, of course, to &lt;a href=&quot;https://twitter.com/brentsimmons/status/425717611947515904&quot;&gt;post a screen shot of the email on Twitter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;@netsolcares &lt;a href=&quot;https://twitter.com/brentsimmons/status/425720127758155776&quot;&gt;responded by suggesting I call the security team&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;@brentsimmons Give the security team a call and they can explain 1-888-642-0265 Sorry for the inconvenience. ^rr&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;I&amp;#x2019;m not going to call the security team. (Which I&amp;#x2019;d bet is really a &lt;em&gt;sales&lt;/em&gt; team.) I&amp;#x2019;ve been a customer of Network Solutions since 1997. While their website was always kind of a pain, I&amp;#x2019;ve never had problems with them.&lt;/p&gt;
-
-&lt;p&gt;But this goes &lt;em&gt;way&lt;/em&gt; beyond acceptable behavior for any company I do business with. It&amp;#x2019;s extreme.&lt;/p&gt;
-
-&lt;p&gt;So I&amp;#x2019;ll be transferring those domains elsewhere. (Folks have recommended &lt;a href=&quot;https://www.hover.com/&quot;&gt;Hover&lt;/a&gt; and &lt;a href=&quot;http://www.dynadot.com/&quot;&gt;Dynadot&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;h4&gt;Text of the email&lt;/h4&gt;
-
-&lt;p&gt;Dear Brent Simmons,&lt;/p&gt;
-
-&lt;p&gt;Cybercriminals continue to strengthen and evolve the techniques and tools they use to assault our customers' websites and domain names. According to the Symantec Internet Security Annual report the pace and frequency of hacking, phishing and social engineering has increased over 42% in 2013.&lt;/p&gt;
-
-&lt;p&gt;Compromised domain names can lead to substantial brand, reputational and financial damage. Once a domain name is compromised cybercriminals have total control of the content that appears on &quot;your&quot; website. In many cases objectionable content is posted or phishing sites are established whereby your customers' private information can be exploited.&lt;/p&gt;
-
-&lt;p&gt;At Network Solutions we take your security very seriously. We deploy some of the most advanced security monitoring and defense mechanisms in the industry to ensure only authorized users can access your company's domain name and name servers. Given the level of traffic to your website, we are taking another significant step to protect your domain name security.&lt;/p&gt;
-
-&lt;p&gt;Starting 9:00 AM EST on 2/4/2014 all of your domains will be protected via our WebLock Program. Here is how the program works:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In order to make changes to your Domain Name's configuration settings you must be pre-registered as a Certified User.&lt;/li&gt;
-&lt;li&gt;All requests for Domain Name configuration changes must be confirmed by an outbound call we make to a pre-registered authorized phone number you establish. A unique 9 digit PIN will be required when we call.&lt;/li&gt;
-&lt;li&gt;A message alert will be sent to all Certified Users notifying the team which Certified User has made the request.&lt;/li&gt;
-&lt;li&gt;In addition WebLock enrolled customers will have access to a 24/7 NOC and rapid response team in the event of any security issues.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;To establish Certified Users and pre-register authorized phone numbers and email addresses please call 1-888-642-0265 Monday to Friday between 8:00AM and 5:00PM EST. Please make sure to establish Certified Users with authorized phone numbers and email addresses before launch date. Once established, the unique 9-digit PINs for each certified user will be mailed to you within 45-days.&lt;/p&gt;
-
-&lt;p&gt;To help recapture the costs of maintaining this extra level of security for your account, your credit card will be billed $1,850 for the first year of service on the date your program goes live. After that you will be billed $1,350 on every subsequent year from that date. If you wish to opt out of this program you may do so by calling us at 1-888-642-0265.&lt;/p&gt;
-
-&lt;p&gt;We strongly encourage you to take advantage of this security program and register Certified Users before the program launch date. Thank you for helping us protect you better.&lt;/p&gt;
-
-&lt;p&gt;Regards&lt;br&gt;
-Geof Birchall&lt;/p&gt;
-
-&lt;p&gt;Geof Birchall&lt;br&gt;
-Chief Security Officer&lt;br&gt;
-Network Solutions&lt;/p&gt;
-
-&lt;p&gt;Connect With Us&lt;/p&gt;
-
-&lt;p&gt;Please do not reply to this email. Replying to this email will not secure your services. Please click here to unsubscribe. Please note that unsubscribing from our marketing emails will not affect important transactional correspondence such as administrative and renewal notices related to your account. Please review our Privacy Notice for any questions related thereto and please see our Services Agreement for the terms and conditions governing Network Solutions products and services.&lt;/p&gt;
-
-&lt;p&gt;&amp;#xA9;2014 by Network Solutions, LLC. All rights reserved.&lt;br&gt;
-12808 Gran Bay Parkway, West | Jacksonville, FL 32258&lt;br&gt;
-Network Solutions is a Web.com Group, Inc. company.&lt;/p&gt;&lt;/div&gt;
-	&lt;/div&gt;
-</description>
-<title>
-Network Solutions Auto-Enroll: $1,850
-</title>
-</item>
-<item>
-<link>
-http://chrishateswriting.com/post/74083032842/today-my-startup-failed
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;copy&quot;&gt;
-						
-						&lt;p&gt;No soft landing, no happy ending&amp;#x2014;&lt;a href=&quot;http://techcrunch.com/2014/01/21/when-goods-not-good-enough/&quot; title=&quot;With Traction But Out Of Cash, 4chan Founder Kills Off Canvas/DrawQuest&quot; target=&quot;_blank&quot;&gt;we simply failed&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It&amp;#x2019;s been a long four year journey, full of highs and lows. I am simultaneously incredibly proud, and incredibly disappointed.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m incredibly proud of an amazing team and all that they have accomplished. Our most recent product, &lt;a href=&quot;http://drawquest.com&quot; title=&quot;DrawQuest&quot; target=&quot;_blank&quot;&gt;DrawQuest&lt;/a&gt;, is by all accounts a success. In the past year it&amp;#x2019;s been downloaded more than 1.4 million times, and is currently used by about 25,000 people a day, and 400,000 last month alone. Retention and engagement are great. And yet we still failed.&lt;/p&gt;
-&lt;p&gt;It may seem surprising that a seemingly successful product could fail, but it happens all the time. Although we arguably found product/market fit, we couldn&amp;#x2019;t quite crack the business side of things.&lt;/p&gt;
-&lt;p&gt;Building any business is hard, but building a business with a single app offering and half of your runway is especially hard (we created DrawQuest after the failure of our first product, &lt;a href=&quot;http://canv.as&quot; title=&quot;Canvas&quot; target=&quot;_blank&quot;&gt;Canvas&lt;/a&gt;). I&amp;#x2019;ve come away with new found respect for those companies who excel at monetizing mobile applications. As we approached the end of our runway, it became clear to us that DrawQuest didn&amp;#x2019;t represent a venture-backed opportunity, and even with more time that was unlikely to change.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m terribly saddened that this may spell the end for our wonderful community, but it&amp;#x2019;s my goal to use what little money we&amp;#x2019;ll have left after the wind-down to keep the service alive for another few months. However as of today the team has gone their separate ways, and our doors are effectively closed.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m disappointed that I couldn&amp;#x2019;t produce a better outcome for those who supported me the most&amp;#x2014;my investors and employees. Few in business will know the pain of what it means to fail as a venture-backed CEO. Not only do you fail your employees, your customers, and yourself, but you also fail your investors&amp;#x2014;partners who helped you bring your idea to life.&lt;/p&gt;
-&lt;p&gt;In my case, I am extremely lucky and grateful to be partners with people who are simply the best. What separates the best investors is not how they help you when you&amp;#x2019;re a rocketship, but when your ship is on fire and you&amp;#x2019;re venting atmosphere. In this case, our investors have demonstrated what sets them apart from the rest&amp;#x2014;they&amp;#x2019;ve supported me throughout the ups and downs, and &lt;em&gt;especially&lt;/em&gt; the downs.&lt;/p&gt;
-&lt;p&gt;With that said, life goes on, and the best path forward is not a wounded one, but a more learned and motivated one. I&amp;#x2019;m definitely not itching to start another company any time soon&amp;#x2014;it will take time to decompress and reflect on the events of the past four years&amp;#x2014;but I hope that if I do some day decide to pursue a new dream, I&amp;#x2019;ll be in a much better position to. After all, I did just receive a highly selective, four-year education for a &lt;em&gt;mere&lt;/em&gt;&amp;#xA0;$3.6 million dollars! (I find humor helps as well.)&lt;/p&gt;
-&lt;p&gt;As for what&amp;#x2019;s next for me, I honestly have no idea. This is the first time in four years I&amp;#x2019;ve been at a crossroads like this.&lt;/p&gt;
-&lt;p&gt;One thing I&amp;#x2019;ll be doing more of is writing about my experience. Partially because it&amp;#x2019;s therapeutic, but also because if there&amp;#x2019;s a silver lining in all of this (and there is), it&amp;#x2019;s that I can help educate others about a path fraught with hardship, but rewarding nonetheless.&lt;/p&gt;
-&lt;p&gt;I&amp;#x2019;m also particularly inspired by what &lt;a href=&quot;http://www.theverge.com/2013/11/5/5039216/everpix-life-and-death-inside-the-worlds-best-photo-startup&quot; target=&quot;_blank&quot;&gt;Everpix&lt;/a&gt; has done by making so much of their story &lt;a href=&quot;https://github.com/everpix/Everpix-Intelligence&quot; target=&quot;_blank&quot;&gt;public&lt;/a&gt;, and hope many others will follow in their footsteps of radical transparency. I don&amp;#x2019;t wish to glorify my failure, but it&amp;#x2019;s certainly something I&amp;#x2019;d rather embrace than hide behind for the next five years.&lt;/p&gt;
-&lt;p&gt;On that note, if there are any specific topics you&amp;#x2019;d like me to write about, feel free to submit them via my&amp;#xA0;&lt;a href=&quot;http://chrishateswriting.com/ask&quot; target=&quot;_blank&quot;&gt;Ask page&lt;/a&gt;. Or if you&amp;#x2019;d like to say hi in general, please don&amp;#x2019;t hesitate to e-mail me at &lt;a href=&quot;mailto:moot@4chan.org&quot; target=&quot;_blank&quot;&gt;moot@4chan.org&lt;/a&gt;. Believe me&amp;#x2014;I&amp;#x2019;ll have &lt;em&gt;a lot&lt;/em&gt; of free time on my hands these next few weeks.&lt;/p&gt;
-&lt;p&gt;Last but not least, to my team&amp;#x2014;Dave, Eunsan, Alex, Nick, Shaun, and Jim&amp;#x2014;I am eternally grateful. To my investors&amp;#x2014;Union Square Ventures, Andreessen Horowitz, Lerer Ventures, SV Angel, Founder Collective, Chris Dixon, and Joshua Schachter&amp;#x2014;I could not have done this without you.&lt;/p&gt;
-&lt;p&gt;And to everyone who has supported us over the past few years, from the bottom of my heart: &lt;strong&gt;thank you&lt;/strong&gt;.&lt;/p&gt;
-					&lt;/div&gt;
-					
-
-					
-
-						
-
-								
-
-									
-
-										
-
-											
-
-												
-
-													
-
-															
-															
-															
-															
-
-															
-															
-															&lt;/div&gt;
-</description>
-<title>
-Today my startup failed
-</title>
-</item>
-<item>
 <link>
 item?id=7095228
 </link>
@@ -239,6 +22,498 @@ item?id=7095228
 </description>
 <title>
 86 comments
+</title>
+</item>
+<item>
+<author>
+
+</author>
+<link>
+http://www.cs.utah.edu/~elb/folklore/satellit.txt
+</link>
+<description>
+&lt;pre&gt;Path: isy!liuida!sunic!mcsun!unido!fauern!ira.uka.de!sol.ctr.columbia.edu!lll-winken!elroy.jpl.nasa.gov!swrinde!zaphod.mps.ohio-state.edu!ub!uhura.cc.rochester.edu!rochester!pt.cs.cmu.edu!o.gp.cs.cmu.edu!andrew.cmu.edu!jn11+
+From: jn11+@andrew.cmu.edu (Joseph M. Newcomer)
+Newsgroups: alt.folklore.computers
+Subject: more frozen designs
+Message-ID: &amp;lt;Ic3XEqC00Vsa8A_F4V@andrew.cmu.edu&amp;gt;
+Date: 19 Apr 91 00:05:10 GMT
+Organization: Carnegie Mellon, Pittsburgh, PA
+Lines: 60
+
+This is the story as I remember it.  I think Jim Tomayko reads this
+newsgroup and he is certainly more knowledgeable than I (NASA computer
+history is one of his specialties).  So I hope he will correct any
+errors in this story...
+
+When I took the architecture course at CMU we studied any number of
+machines.  One was, as I remember, the Apollo Guidance Computer.
+
+The history of the space program is fascinating.  In terms of logistics,
+many simultaneous research-level projects were attempting to solve
+problems and produce working solutions in time to launch a man-rated
+vehicle.
+
+One project was the guidance computer.  The problem domain was examined,
+and a machine capable of handling this was specified.  It had some
+prime-number bits of words (DoD embedded machines tended to word lengths
+like 19 bits and 29 bits because the cost of core or other memory was
+many dollars per bit, and for DoD ratings these prices were multiplied).
+ So the minimum memory configuration capable of doing the job was
+specified.  The machine had, as I recall, 8 opcodes.  As is typical of
+these projects, the processor was bid to one firm, the software to
+another, and the memory to a third.  The memory was tricky; it was
+mostly ROM (a technology that was unbelievably Rube Goldberg, e.g.,
+plated wire ROM, braided core ROM, transformer ROM, and other even more
+bizarre technologies.  I belive the AGC used braided ROM with multiholed
+cores), some RAM, and had a very distinct power budget, size budget, and
+weight budget.  Like, I mean, these guys worried about *grams* on a
+multiton vehicle...because if they didn&amp;#39;t, it wouldn&amp;#39;t lift off.
+
+So everything is progressing, except that they can&amp;#39;t fit the program
+into the nK bytes available.  &amp;quot;If we only had some more opcodes we could
+eliminate some of these tedious computations and use a single
+instruction&amp;quot; said the software types.  &amp;quot;Fine, we&amp;#39;ll redefine the
+processor&amp;quot; said the processor types. &amp;quot;We can&amp;#39;t give you any more bits&amp;quot;
+said the memory types.  The problem was that the memory just barely had
+a possibility of being buildable as specified; if they had to add one
+more bit per word and the associated circuitry (can you say &amp;quot;SSI&amp;quot;?) they
+couldn&amp;#39;t fit it in the package, it would take more power than was
+specified, and it would be heavier.  
+
+But if they couldn&amp;#39;t get more powerful instructions, they would need
+more words of memory; if they couldn&amp;#39;t even get an extra *bit* they
+certainly couldn&amp;#39;t get another 8K-or-whatever *words*.
+
+The solution was both clever and bletcherous.  The overflow bit became
+part of the opcode.  To get the extra opcodes, the program would
+add-to-memory an accumulator value that would cause an overflow when
+added to the instruction that was in memory.  Since the instructions
+were in ROM they didn&amp;#39;t get modified, but the added bit of the overflow
+gave 8 more opcodes.  
+
+I only presume that these opcodes were powerful enough that the extra
+instructions required to generate them cost less than the instructions
+they replaced.  I have long since lost the article reprint we used. 
+Dave Parnas, who taught the course, had a great time with this
+particular machine...
+
+All I know is: Mel would have *loved* it!
+
+                                       joe
+
+&lt;/pre&gt;
+</description>
+<title>
+&quot;Mel&quot; would have loved it...
+</title>
+</item>
+<item>
+<link>
+http://blog.outboxmail.com/post/74086768959/outbox-is-shutting-down-a-note-of-gratitude
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
+                                &lt;p&gt;Dear loyal customers and Outbox supporters:&amp;#xA0;&lt;/p&gt;&lt;p&gt;We announce&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;today&lt;/span&gt;&amp;#xA0;that we are ending the mail service, shutting down the Outbox brand, and focusing our team and resources on a totally new product. &amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/74086747774/customer-faq-for-outbox-ending-service&quot;&gt;In a related post&lt;/a&gt;&amp;#xA0;we explain what this means for our current, loyal customers. &amp;#xA0;&lt;/p&gt;&lt;p&gt;This is bittersweet for our team, since we have poured so much into creating our product and serving our customers. Yet this announcement marks the end of a chapter for us&amp;#x2014;not the end of the story.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Over the past two years, we have been humbled by the support of our investors and customers, who each took a leap of faith to join us in this exceptionally audacious venture. We have also been humbled by the incredible personal and financial sacrifices our team members have made along the way.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Beginning&lt;/strong&gt;&lt;br&gt;We set out to redefine a long cherished but broken medium of communication: postal mail. We did so during a tumultuous period in the history of the United States Postal Service (USPS), which has experienced declining mail volume and staggering deficits for the past five years.&amp;#xA0;&lt;/p&gt;&lt;p&gt;As former staffers on Capitol Hill, we share a passion for tackling huge public problems, but aim to do so with private solutions. We knew that the USPS would not be able to work out its own problems so, perhaps naively, we hoped to partner with USPS to provide an alternative to the physical delivery of postal mail to a subset of users, hoping this would spur further innovation and cost savings.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Although an early test with the USPS that let users redirect their mail to us showed signs of success and operational simplicity, an interview by CNBC triggered a request from the Postmaster General himself to meet in Washington, DC. In one of the most surreal moments of our lives (listen to it in an&amp;#xA0;&lt;a href=&quot;http://kut.org/post/austin-startup-says-you-ll-never-touch-snail-mail-again?utm_source=Facebook&amp;amp;utm_medium=Social&amp;amp;utm_campaign=FBKUT183&quot; title=&quot;NPR Interview&quot; target=&quot;_blank&quot;&gt;NPR interview&lt;/a&gt;), we had our very own Mr. Smith Goes to Washington encounter where the senior leadership of USPS made it clear that they would never participate in any project that would limit junk mail and that they were immediately shutting down our partnership.&amp;#xA0; This&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;30-minute&lt;/span&gt;&amp;#xA0;meeting was the end of our business model.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Reimagining of Outbox&lt;/strong&gt;&lt;br&gt;After countless hours applying Clay Christensen&amp;#x2019;s business model theories to our situation, we came to view our failed partnership with USPS as a David and Goliath moment: we believed our seeming disadvantage would become our greatest strength. Turning our original vision on its head, we reimagined our service as not merely playing in someone else&amp;#x2019;s value channel, but as a new type of last-mile delivery channel all together: one subsidized by our users in return for collecting and electronically delivering their postal mail. If we could simply break even on the mail business, we would have built a valuable last mile network able to be monetized in many ways.&amp;#xA0;&lt;/p&gt;&lt;p&gt;To pull this off, we built a world-class team of engineers, designers, marketers, and operations specialists in Austin and San Francisco.&amp;#xA0; Funding our efforts were some of the most celebrated investors of our generation: Mike Maples at Floodgate and Peter Thiel and Brian Singerman at Founders Fund, as well as a groundswell of investors via AngelList. Together, we made a product that was as beautiful as it was complex, and overcame nearly every obstacle in our path.&amp;#xA0;&lt;/p&gt;&lt;p&gt;We created our own dynamic logistics software, developed a legal framework to open users&amp;#x2019; mail, built industrial-grade scanning machines for 1/100th of the market price, developed specialized OCR to allow customers to unsubscribe from postal mail, built and attached to our cars 5-foot mailbox flags that withstand 70 mph highway speeds, laser cut wood blocks to build mail slot solutions, and created a novel system of key decoding via photograph that inspired the creation of&amp;#xA0;&lt;a href=&quot;https://www.key.me/&quot; title=&quot;KeyMe&quot;&gt;one startup all on its own&lt;/a&gt;. All this was simply the backend of our service, and our iPhone and other apps won awards for their design and elegance.&lt;/p&gt;&lt;p&gt;In the end, we serviced a little over 2,000 individual customers, had 25,000 people waiting around the country on our waiting list, unsubscribed our customers from over 1 million senders of mail, scanned over&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;1.5&lt;/span&gt;&amp;#xA0;million pages, and delivered over 250,000 requested mail packages. We also recycled approximately 30 tons of paper, enough to cover 86 football fields.&lt;/p&gt;&lt;p&gt;Outbox was buzzing.&amp;#xA0; It seemed as though everyone knew something about our little company, had seen one of our red-flagged mailbox cars, or had stumbled upon a news story about us. &amp;#xA0;&lt;em&gt;CNN&amp;#xA0;&lt;/em&gt;&lt;a href=&quot;http://www.cnn.com/2013/02/26/tech/innovation/outbox-mail-service/index.html&quot;&gt;praised us&lt;/a&gt;, Jay Leno&amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/44708709996/the-unpostman-appears-on-jay-leno&quot;&gt;mocked us&lt;/a&gt;, and Pee Wee Herman&amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/44554223639/this-is-not-a-joke&quot;&gt;called us &amp;#x201C;the future.&amp;#x201D;&lt;/a&gt;&amp;#xA0;We tested our anecdotal suspicions with a nationwide survey, and found that Outbox had an unaided brand awareness of&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;10.1&lt;/span&gt;&amp;#xA0;percent - even though we serviced a mere 2,000 customers in two relatively small markets.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Numbers Don&amp;#x2019;t Lie&lt;/strong&gt;&lt;br&gt;After raising $5m in June of last year, we set out to onboard the 4,000 individuals we had amassed on our central-San Francisco waitlist. We projected converting a large percentage of these individuals, and planned to scale our marketing efforts at a projected cost of $20 per acquisition.&lt;/p&gt;&lt;p&gt;However, after an extensive email marketing campaign to our waitlist, total yield from the waitlist was under 10 percent. And as we started marketing outside of this network, we had difficulty finding a repeatable and scalable acquisition channel. Across all of our efforts, our acquisition numbers were over $50 per lead.&amp;#xA0;&lt;/p&gt;&lt;p&gt;As our marketing efforts lagged behind schedule, our density numbers remained consistently flat, causing us to spend about double our projected cost to service each customer. Even our most dense routes cost us approximately 20 percent more than our break-even target.&lt;/p&gt;&lt;p&gt;After several months of testing and refining, we reasonably concluded that we were executing well and collecting good data&amp;#x2014;it told us that there wasn&amp;#x2019;t enough demand to support the cost model.&amp;#xA0; Our monthly operating deficits were too high, and even though we continued to get better at acquisition, each small success actually saw our cash curve decline further because our density remained flat.&amp;#xA0;For longer than we would be willing to tolerate, we would lose money for each additional customer we gained.&amp;#xA0;Despite the massive interest in our company, we learned that the product we built did not find fit in the market we targeted.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Finding serenity in knowing when to stop&lt;/strong&gt;&amp;#xA0;&lt;br&gt;For startups, it&amp;#x2019;s difficult to know when to throw in the towel. Indeed, the main strategy for most of the life of a startup is overcoming impossible odds, and we built a team that did that over and over again.&amp;#xA0;&lt;/p&gt;&lt;p&gt;This final challenge&amp;#x2014;product market fit&amp;#x2014;is one we ran after with characteristic zeal. Amidst these struggles we were reminded of the serenity prayer written by one of our favorite authors, Reinhold Niebuhr:&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Grant me the serenity to accept the things I cannot change,&lt;/em&gt;&lt;br&gt;&lt;em&gt;The courage to change the things I can,&lt;/em&gt;&lt;br&gt;&lt;em&gt;And wisdom to know the difference.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Facing situation after situation we kept the courage to change them; in these final few months, we were granted the serenity to know this situation is one we cannot change.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Our Unpostmen&lt;/strong&gt;&lt;br&gt;Not least of our accomplishments was the recruitment of an amazing operations team. Their tireless work ethic led to such stellar customer service that our users would, on occasion,&amp;#xA0;&lt;a href=&quot;https://twitter.com/JoshuaBaer/status/276140115385016320&quot;&gt;pee their pants&lt;/a&gt;. The hardest reality in our transition is saying goodbye to our eighteen Unpostmen: they have been the frontlines of challenging logistics and extreme customer service. If you are hiring and looking for loyal, hard working operations experts, please email us here.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Our Future&lt;/strong&gt;&lt;br&gt;There are numerous small pivots we could make as an alternative to our mail service, and we have tested many other applications that could be layered on top of the logistic network we already created. Yet each of these tangential services has a tragic combination of being costly to pull off and, well, not a big idea.&amp;#xA0;&lt;/p&gt;&lt;p&gt;While it saddens us that we are leaving so much behind in terms of what we built and developed for mail, we are equally excited to begin a new chapter in our company&amp;#x2019;s life. Our team has been working on a new product that has already shown signs of success, and we believe it has the opportunity to be massively disruptive.&amp;#xA0; We can&amp;#x2019;t wait to tell you more about it&amp;#x2014;but for now we&amp;#x2019;re in stealth mode.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Our many learnings have led us to tackle a problem in many ways similar:&amp;#xA0; a giant, sleepy industry that serves every American, is generally hated, and is in need of radical new solutions that involve hardware, software, and logistics.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Forefront in our minds are the learnings from the wild adventure of Outbox:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Giant, complex systems appear insurmountable, but aren&amp;#x2019;t&amp;#x2014;they were built by people just like you and me&lt;/li&gt;
+&lt;li&gt;The main asset the government (and big companies) has is time&amp;#x2014;which is the resource of which startups have the least.&amp;#xA0;&lt;/li&gt;
+&lt;li&gt;You may think government organizations are completely, insanely backwards; you are wrong&amp;#x2014;they are worse.&amp;#xA0;&lt;/li&gt;
+&lt;li&gt;If you can&amp;#x2019;t find a hardware solution to your needs, build it&amp;#x2014;it&amp;#x2019;s not that hard.&amp;#xA0;&lt;/li&gt;
+&lt;li&gt;Doing extraordinary things for customers is time consuming and hard&amp;#x2014;but very worthwhile. &amp;#xA0;&amp;#xA0;&lt;/li&gt;
+&lt;li&gt;Life is too short to pursue anything other than what you are most passionate about.&amp;#xA0;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;br&gt;For the last two years, we got out of bed every morning because of the chance to re-imagine a daily activity for every American.&amp;#xA0; We&amp;#x2019;ve had many sleepless nights these last few months, but are excited to be turning our complete attention to a new, equally compelling reason to wake up each morning.&amp;#xA0;&lt;/p&gt;&lt;p&gt;With thanks,&lt;br&gt;Will &amp;amp; Evan, Outbox Cofounders&lt;/p&gt;
+                                
+                                
+                            &lt;/div&gt;
+                            
+                            
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                    
+
+
+                            
+                            
+                            
+                            
+                                                        
+                            
+                            
+                            &lt;/div&gt;
+</description>
+<title>
+Outbox Is Shutting Down
+</title>
+</item>
+<item>
+<author>
+Kevin Poulsen
+</author>
+<link>
+http://www.wired.com/wiredscience/2014/01/how-to-hack-okcupid/
+</link>
+<description>
+&lt;div id=&quot;container&quot; score=&quot;7.5&quot;&gt;
+&lt;div class=&quot;row padding-top&quot; score=&quot;10.0&quot;&gt;
+&lt;div&gt;&lt;img class=&quot;margin-top padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_f.jpg&quot;&gt;&lt;/div&gt;&lt;p class=&quot;caption padding-bottom&quot;&gt;Mathematician Chris McKinlay hacked OKCupid to find the girl of his dreams.   &lt;/p&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt;  Emily Shur
+
+&lt;p&gt;&lt;span class=&quot;brandon medium wired-black&quot;&gt;Chris McKinlay was folded&lt;/span&gt; into a cramped fifth-floor cubicle in UCLA’s math sciences building, lit by a single bulb and the glow from his monitor. It was 3 in the morn­ing, the optimal time to squeeze cycles out of the supercomputer in Colorado that he was using for his PhD dissertation. (The subject: large-scale data processing and parallel numerical methods.) While the computer chugged, he clicked open a second window to check his OkCupid inbox.&lt;/p&gt;
+&lt;p&gt;McKinlay, a lanky 35-year-old with tousled hair, was one of about 40 million Americans looking for romance through websites like Match.com, J-Date, and e-Harmony, and he’d been searching in vain since his last breakup nine months earlier. He’d sent dozens of cutesy introductory messages to women touted as potential matches by OkCupid’s algorithms. Most were ignored; he’d gone on a total of six first dates.&lt;/p&gt;
+&lt;p&gt;On that early morning in June 2012, his compiler crunching out machine code in one window, his forlorn dating profile sitting idle in the other, it dawned on him that he was doing it wrong. He’d been approaching online matchmaking like any other user. Instead, he realized, he should be dating like a mathematician.&lt;/p&gt;
+&lt;p&gt;OkCupid was founded by Harvard math majors in 2004, and it first caught daters’ attention because of its computational approach to matchmaking. Members answer droves of multiple-choice survey questions on everything from politics, religion, and family to love, sex, and smartphones.&lt;/p&gt;
+
+&lt;p&gt;On average, respondents select 350 questions from a pool of thousands—“Which of the following is most likely to draw you to a movie?” or “How important is religion/God in your life?” For each, the user records an answer, specifies which responses they’d find acceptable in a mate, and rates how important the question is to them on a five-point scale from “irrelevant” to “mandatory.” OkCupid’s matching engine uses that data to calculate a couple’s compatibility. The closer to 100 percent—mathematical soul mate—the better.&lt;/p&gt;
+
+&lt;p&gt;But mathematically, McKinlay’s compatibility with women in Los Angeles was abysmal. OkCupid’s algorithms use only the questions that both potential matches decide to answer, and the match questions McKinlay had chosen—more or less at random—had proven unpopular. When he scrolled through his matches, fewer than 100 women would appear above the 90 percent compatibility mark. And that was in a city containing some 2 million women (approximately 80,000 of them on OkCupid). On a site where compatibility equals visibility, he was practically a ghost.&lt;/p&gt;
+&lt;p&gt;He realized he’d have to boost that number. If, through statistical sampling, McKinlay could ascertain which questions mattered to the kind of women he liked, he could construct a new profile that honestly answered those questions and ignored the rest. He could match every woman in LA who might be right for him, and none that weren’t.&lt;/p&gt;
+
+&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_large.jpg&quot;&gt;&lt;/a&gt;&lt;div&gt;&lt;img class=&quot;padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_large.jpg&quot;&gt;&lt;/div&gt;&lt;p class=&quot;caption padding-bottom&quot;&gt; Chris McKinlay used Python scripts to riffle through hundreds of OkCupid survey questions. He then sorted female daters into seven clusters, like “Diverse” and “Mindful,” each with distinct characteristics. &lt;/p&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt;  Maurico Alejo 
+
+&lt;p&gt;&lt;span class=&quot;brandon wired-black medium&quot;&gt;Even for a mathematician,&lt;/span&gt; McKinlay is unusual. Raised in a Boston suburb, he graduated from Middlebury College in 2001 with a degree in Chinese. In August of that year he took a part-time job in New York translating Chinese into English for a company on the 91st floor of the north tower of the World Trade Center. The towers fell five weeks later. (McKinlay wasn’t due at the office until 2 o’clock that day. He was asleep when the first plane hit the north tower at 8:46 am.) “After that I asked myself what I really wanted to be doing,” he says. A friend at Columbia recruited him into an offshoot of MIT’s famed professional blackjack team, and he spent the next few years bouncing between New York and Las Vegas, counting cards and earning up to $60,000 a year.&lt;/p&gt;
+
+&lt;p&gt;The experience kindled his interest in applied math, ultimately inspiring him to earn a master’s and then a PhD in the field. “They were capable of using mathema­tics in lots of different situations,” he says. “They could see some new game—like Three Card Pai Gow Poker—then go home, write some code, and come up with a strategy to beat it.”&lt;/p&gt;
+
+&lt;p&gt;Now he’d do the same for love. First he’d need data. While his dissertation work continued to run on the side, he set up 12 fake OkCupid accounts and wrote a Python script to manage them. The script would search his target demographic (heterosexual and bisexual women between the ages of 25 and 45), visit their pages, and scrape their profiles for every scrap of available information: ethnicity, height, smoker or nonsmoker, astrological sign—“all that crap,” he says.&lt;/p&gt;
+&lt;p&gt;To find the survey answers, he had to do a bit of extra sleuthing. OkCupid lets users see the responses of others, but only to questions they’ve answered themselves. McKinlay set up his bots to simply answer each question randomly—he wasn’t using the dummy profiles to attract any of the women, so the answers didn’t mat­ter—then scooped the women’s answers into a database.&lt;/p&gt;
+&lt;p&gt;McKinlay watched with satisfaction as his bots purred along. Then, after about a thousand profiles were collected, he hit his first roadblock. OkCupid has a system in place to prevent exactly this kind of data harvesting: It can spot rapid-fire use easily. One by one, his bots started getting banned.&lt;/p&gt;
+&lt;p&gt;He would have to train them to act human.&lt;/p&gt;
+&lt;p&gt;He turned to his friend Sam Torrisi, a neuroscientist who’d recently taught McKinlay music theory in exchange for advanced math lessons. Torrisi was also on OkCupid, and he agreed to install spyware on his computer to monitor his use of the site. With the data in hand, McKinlay programmed his bots to simulate Torrisi’s click-rates and typing speed. He brought in a second computer from home and plugged it into the math department’s broadband line so it could run uninterrupted 24 hours a day.&lt;/p&gt;
+&lt;p&gt;After three weeks he’d harvested 6 million questions and answers from 20,000 women all over the country. McKinlay’s dissertation was relegated to a side project as he dove into the data. He was already sleeping in his cubicle most nights. Now he gave up his apartment entirely and moved into the dingy beige cell, laying a thin mattress across his desk when it was time to sleep.&lt;/p&gt;
+&lt;p&gt;For McKinlay’s plan to work, he’d have to find a pattern in the survey data—a way to roughly group the women according to their similarities. The breakthrough came when he coded up a modified Bell Labs algorithm called K-Modes. First used in 1998 to analyze diseased soybean crops, it takes categorical data and clumps it like the colored wax swimming in a Lava Lamp. With some fine-tuning he could adjust the viscosity of the results, thinning it into a slick or coagulating it into a single, solid glob.&lt;/p&gt;
+&lt;p&gt;He played with the dial and found a natural resting point where the 20,000 women clumped into seven statistically distinct clusters based on their questions and answers. “I was ecstatic,” he says. “That was the high point of June.”&lt;/p&gt;
+&lt;p&gt;He retasked his bots to gather another sample: 5,000 women in Los Angeles and San Francisco who’d logged on to OkCupid in the past month. Another pass through K-Modes confirmed that they clustered in a similar way. His statistical sampling had worked.&lt;/p&gt;
+&lt;p&gt;Now he just had to decide which cluster best suited him. He checked out some profiles from each. One cluster was too young, two were too old, another was too Christian. But he lingered over a cluster dominated by women in their mid-twenties who looked like indie types, musicians and artists. This was the golden cluster. The haystack in which he’d find his needle. Somewhere within, he’d find true love.&lt;/p&gt;
+
+&lt;p&gt;Actually, a neighboring cluster looked pretty cool too—slightly older women who held professional creative jobs, like editors and designers. He decided to go for both. He’d set up two profiles and optimize one for the A group and one for the B group.&lt;/p&gt;
+&lt;p&gt;He text-mined the two clusters to learn what interested them; teaching turned out to be a popular topic, so he wrote a bio that emphasized his work as a math professor. The important part, though, would be the survey. He picked out the 500 questions that were most popular with both clusters. He’d already decided he would fill out his answers honestly—he didn’t want to build his future relationship on a foundation of computer-generated lies. But he’d let his computer figure out how much importance to assign each question, using a machine-learning algorithm called adaptive boosting to derive the best weightings.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+&amp;#13;        &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div id=&quot;container&quot; score=&quot;13.75&quot;&gt;
+&lt;div class=&quot;row padding-top&quot; score=&quot;6.25&quot;&gt;
+
+&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_f.jpg&quot; score=&quot;1.25&quot;&gt;&lt;div&gt;&lt;img class=&quot;margin-top padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_f.jpg&quot;&gt;&lt;/div&gt;&lt;/a&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt; Emily Shur (Grooming by Andrea Pezzillo/Artmix Beauty)
+
+&lt;p&gt;With that, he created two profiles, one with a photo of him rock climbing and the other of him playing guitar at a music gig. “Regardless of future plans, what’s more interesting to you right now? Sex or love?” went one question. Answer: Love, obviously. But for the younger A cluster, he followed his computer’s direction and rated the question “very important.” For the B cluster, it was “mandatory.”&lt;/p&gt;
+&lt;p&gt;When the last question was answered and ranked, he ran a search on OkCupid for women in Los Angeles sorted by match percentage. At the top: a page of women matched at 99 percent. He scrolled down … and down … and down. Ten thousand women scrolled by, from all over Los Angeles, and he was still in the 90s.&lt;/p&gt;
+&lt;p&gt;He needed one more step to get noticed. OkCupid members are notified when some­one views their pages, so he wrote a new program to visit the pages of his top-rated matches, cycling by age: a thousand 41-year-old women on Monday, another thousand 40-year-old women on Tuesday, looping back through when he reached 27-year-olds two weeks later. Women reciprocated by visiting his profiles, some 400 a day. And messages began to roll in.&lt;/p&gt;
+&lt;p&gt;“I haven’t until now come across anyone with such winning numbers, AND I find your profile intriguing,” one woman wrote. “Also, something about a rugged man who’s really good with numbers … Thought I’d say hi.”&lt;/p&gt;
+&lt;p&gt;“Hey there—your profile really struck me and I wanted to say hi,” another wrote. “I think we have quite a lot in common, maybe not the math but certainly a lot of other good stuff!”&lt;/p&gt;
+&lt;p&gt;“Can you really translate Chinese?” yet another asked. “I took a class briefly but it didn’t go well.”&lt;/p&gt;
+&lt;p&gt;The math portion of McKinlay’s search was done. Only one thing remained. He’d have to leave his cubicle and take his research into the field. He’d have to go on dates.&lt;/p&gt;
+
+&lt;p class=&quot;padding-top&quot;&gt;&lt;span class=&quot;wired-black brandon medium&quot;&gt;On June 30, McKinlay&lt;/span&gt; showered at the UCLA gym and drove his beat-up Nissan across town for his first data-mined date. Sheila was a web designer from the A cluster of young artist types. They met for lunch at a cafe in Echo Park. “It was scary,” McKinlay says. “Up until this point it had almost been an academic exercise.”&lt;/p&gt;
+&lt;p&gt;By the end of his date with Sheila, it was clear to both that the attraction wasn’t there. He went on his second date the next day—an attractive blog editor from the B cluster. He’d planned a romantic walk around Echo Park Lake but found it was being dredged. She’d been reading Proust and feeling down about her life. “It was kind of depressing,” he says.&lt;/p&gt;
+&lt;p&gt;Date three was also from the B group. He met Alison at a bar in Koreatown. She was a screenwriting student with a tattoo of a Fibonacci spiral on her shoulder. McKinlay got drunk on Korean beer and woke up in his cubicle the next day with a painful hangover. He sent Alison a follow- up message on OkCupid, but she didn’t write back.&lt;/p&gt;
+&lt;p&gt;The rejection stung, but he was still getting 20 messages a day. Dating with his computer-endowed profiles was a completely different game. He could ignore messages consisting of bad one-liners. He responded to the ones that showed a sense of humor or displayed something interesting in their bios. Back when he was the pursuer, he’d swapped three to five messages to get a single date. Now he’d send just one reply. “You seem really cool. Want to meet?”&lt;/p&gt;
+&lt;p&gt;By date 20, he noticed latent variables emerging. In the younger cluster, the women invariably had two or more tattoos and lived on the east side of Los Angeles. In the other, a disproportionate number owned midsize dogs that they adored.&lt;/p&gt;
+
+&lt;p&gt;His earliest dates were carefully planned. But as he worked feverishly through his queue, he resorted to casual afternoon meetups over lunch or coffee, often stacking two dates in a day. He developed a set of personal rules to get through his mara­thon love search. No more drinking, for one. End the date when it’s over, don’t let it trail off. And no concerts or movies. “Nothing where your attention is directed at a third object instead of each other,” he says. “It’s inefficient.”&lt;/p&gt;
+
+&lt;p class=&quot;small-quotes no-margin padding-top&quot;&gt; Love is a Data Field&lt;/p&gt;
+&lt;p class=&quot;caption wired-black&quot;&gt;McKinlay’s code found that the women clustered into statistically identifiable groups who tended to answer their OkCupid survey questions in similar ways. One group, which he dubbed the Greens, were online dating newbies; another, the Samanthas, tended to be older and more adventuresome. Here’s how each cluster answered four of the most popular questions.&lt;/p&gt;
+
+&lt;p class=&quot;caption wired-black no-padding&quot;&gt;The Questions&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot; score=&quot;15.0&quot;&gt;
+&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
+&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(1)&lt;/span&gt; About how long do you want your next relationship to last?&lt;br&gt;
+&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_1s.jpg&quot;&gt;&lt;/div&gt; One night&lt;br&gt; 
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_2s.jpg&quot;&gt;&lt;/div&gt; A few months to a year&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_3s.jpg&quot;&gt;&lt;/div&gt; Several years&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_4s.jpg&quot;&gt;&lt;/div&gt; The rest of my life
+&lt;/div&gt;
+&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
+&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(2)&lt;/span&gt; Say you’ve started seeing someone you really like. As far as you’re concerned, how long will it take before you have sex?&lt;br&gt; 
+&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_5s.jpg&quot;&gt;&lt;/div&gt; 1-2 dates&lt;br&gt; 
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_6s.jpg&quot;&gt;&lt;/div&gt; 3-5 dates&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_7s.jpg&quot;&gt;&lt;/div&gt; 6 or more dates&lt;br&gt; 
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_8s.jpg&quot;&gt;&lt;/div&gt; Only after the wedding
+&lt;/div&gt;
+&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
+&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(3)&lt;/span&gt; Have you ever had a sexual encounter with someone of the same sex?&lt;br&gt;
+&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_9s.jpg&quot;&gt;&lt;/div&gt; Yes, and I enjoyed myself&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_10s.jpg&quot;&gt;&lt;/div&gt; Yes, and I did not enjoy myself&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_11s.jpg&quot;&gt;&lt;/div&gt; No, and I would never&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_12s.jpg&quot;&gt;&lt;/div&gt; No, but I’d like to
+&lt;/div&gt;
+&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
+&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(4)&lt;/span&gt; How important is religion/God in your life?&lt;br&gt;
+&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_13s.jpg&quot;&gt;&lt;/div&gt; Extremely important&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_14s.jpg&quot;&gt;&lt;/div&gt; Somewhat important&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_15s.jpg&quot;&gt;&lt;/div&gt; Not very important&lt;br&gt;
+&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_16s.jpg&quot;&gt;&lt;/div&gt; Not important at all
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot; score=&quot;5.0&quot;&gt;
+&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_large.jpg&quot; score=&quot;1.25&quot;&gt;&lt;div&gt;&lt;img src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_large.jpg&quot;&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row padding-top&quot;&gt;
+&lt;p&gt;After a month of dating equally from both of his profiles, he decided he was spending too much time on the freeway reaching east-side women from the tattoo cluster. He deleted his A-group profile. His efficiency improved, but the results were the same. As summer drew to a close, he’d been on more than 55 dates, each one dutifully logged in a lab notebook. Only three had led to second dates; only one had led to a third.&lt;/p&gt;
+&lt;p&gt;Most unsuccessful daters confront self-esteem issues. For McKinlay it was worse. He had to question his calculations.&lt;/p&gt;
+&lt;p&gt;Then came the message from Christine Tien Wang, a 28-year-old artist and prison abolition activist. McKinlay had popped up in her search for 6-foot guys with blue eyes near UCLA, where she was pursuing her master’s in fine arts. They were a 91 percent match.&lt;/p&gt;
+&lt;p&gt;He met her at the sculpture garden on campus. From there they walked to a college sushi joint. He felt it immediately. They talked about books, art, music. When she confessed that she’d made some tweaks to her profile before messaging him, he responded by telling her all about his love hacking. The whole story.&lt;/p&gt;
+&lt;p&gt;“I thought it was dark and cynical,” she says. “I liked it.”&lt;/p&gt;
+
+&lt;p&gt;It was first date number 88. A second date followed, then a third. After two weeks they both suspended their OkCupid accounts.&lt;/p&gt;
+&lt;p class=&quot;padding-top&quot;&gt;&lt;span class=&quot;brandon wired-black medium&quot;&gt;“I think that what I did&lt;/span&gt; is just a slightly more algorithmic, large-scale, and machine-learning-based version of what everyone does on the site,” McKinlay says. Everyone tries to create an optimal profile—he just had the data to engineer one.&lt;/p&gt;
+&lt;p&gt;It’s one year after their first date, and McKinlay and Tien Wang have met me at the Westwood sushi bar where their relationship began. McKinlay has his PhD; he’s teaching math and is now working on a postgraduate degree in music. Tien Wang was accepted into a one-year art fellowship in Qatar. She’s in California to visit McKinlay. They’ve been staying connected on Skype, and she has returned for a couple of visits.&lt;/p&gt;
+&lt;p&gt;At my request, McKinlay has brought his lab notebook. Tien Wang hasn’t seen it before today. It’s page after page of formulas and equations in McKinlay’s tight handwriting, ending in a neatly ordered list of women and dates, a few terse notes about each. Tien Wang leafs through it, laughing at some of the highlights. On August 24, she notices, he took two women to the same beach on the same day. “That’s horrible,” she says.&lt;/p&gt;
+&lt;p&gt;To Tien Wang, &lt;a href=&quot;http://christophermckinlay.net&quot; target=&quot;_blank&quot;&gt;McKinlay’s OkCupid hacking&lt;/a&gt; is a funny story to tell. But all the math and coding is merely prologue to their story together. The real hacking in a relationship comes after you meet. “People are much more complicated than their profiles,” she says. “So the way we met was kind of superficial, but everything that happened after is not superficial at all. It’s been cultivated through a lot of work.”&lt;/p&gt;
+&lt;p&gt;“It’s not like, we matched and therefore we have a great relationship,” McKinlay agrees. “It was just a mechanism to put us in the same room. I was able to use OkCupid to find someone.”&lt;/p&gt;
+&lt;p&gt;She bristles at that. “You didn’t find me. I found you,” she says, touching his elbow. McKinlay pauses to think, then admits she’s right.&lt;/p&gt;
+&lt;p&gt;A week later Tien Wang is back in Qatar, and the couple is on one of their daily Skype calls when McKinlay pulls out a diamond ring and holds it up to the webcam. She says yes.&lt;/p&gt;
+&lt;p&gt;They’re not entirely sure when they’ll get married. There’s research to be done to determine the optimal wedding day.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+
+
+
+
+        
+</description>
+<title>
+How a Math Genius Hacked OkCupid to Find True Love
+</title>
+</item>
+<item>
+<link>
+https://github.com/ondras/my-mind
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
+          
+
+
+
+
+
+
+
+  &lt;a href=&quot;https://github.com/ondras/my-mind&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
+  &lt;span class=&quot;language-color&quot;&gt;JavaScript&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;CSS&lt;/span&gt;
+  &lt;/a&gt;
+
+
+
+
+
+
+
+&lt;a href=&quot;https://github.com/ondras/my-mind/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
+&lt;div class=&quot;bubble files-bubble&quot;&gt;
+
+
+  
+
+  &lt;table class=&quot;files&quot;&gt;
+
+    
+&lt;tbody class=&quot;&quot;&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/css&quot; class=&quot;js-directory-link&quot; id=&quot;c7a628cba22e28eb17b5f5c6ae2a266a-d4563ab0d3141b6daa464ee04993fc9c72fef4f9&quot; title=&quot;css&quot;&gt;css&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e298f5000d95eb7bc559ee7d56339e4d494ad33d&quot; class=&quot;message&quot; title=&quot;better font&quot;&gt;better font&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-24T04:54:33-08:00&quot; title=&quot;2014-01-24 04:54:33&quot;&gt;January 24, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/examples&quot; class=&quot;js-directory-link&quot; id=&quot;bfebe34154a0dfd9fc7b447fc9ed74e9-a5fddc9823ca2c29fc755d21d7dab6309f25d382&quot; title=&quot;examples&quot;&gt;examples&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/782e656a4220ff94cff2b37aaacbd178f6b68afb&quot; class=&quot;message&quot; title=&quot;fixes, tuning&quot;&gt;fixes, tuning&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-15T03:46:27-08:00&quot; title=&quot;2014-01-15 03:46:27&quot;&gt;January 15, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/logo&quot; class=&quot;js-directory-link&quot; id=&quot;96d6f2e7e1f705ab5e59c84a6dc009b2-d3ae1c87f6a57951f2e01bb62025322870b55c09&quot; title=&quot;logo&quot;&gt;logo&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/5ae9164f86210810cd4b625c57173f460ccef271&quot; class=&quot;message&quot; title=&quot;icons&quot;&gt;icons&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T03:31:45-08:00&quot; title=&quot;2014-01-21 03:31:45&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/src&quot; class=&quot;js-directory-link&quot; id=&quot;25d902c24283ab8cfbac54dfa101ad31-44cbb8753b9ba5bf1f68ae323923f08d8a970fc8&quot; title=&quot;src&quot;&gt;src&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/47215ceec70ba7c529012e2aa63ea5f2acbe321d&quot; class=&quot;message&quot; title=&quot;beforeunload event, fixes #33&quot;&gt;beforeunload event, fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/33&quot; class=&quot;issue-link&quot; title=&quot;Navigating away causes loss of work without warning&quot;&gt;#33&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-23T05:18:42-08:00&quot; title=&quot;2014-01-23 05:18:42&quot;&gt;January 23, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/LICENSE&quot; class=&quot;js-directory-link&quot; id=&quot;9879d6db96fd29134fc802214163b95a-a08eb4848b8bb74c711e81a6e397bc65d6349620&quot; title=&quot;LICENSE&quot;&gt;LICENSE&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/6ed5cda10de737bb59701a449be5b249735b0791&quot; class=&quot;message&quot; title=&quot;Create LICENSE&quot;&gt;Create LICENSE&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-19T11:19:43-08:00&quot; title=&quot;2014-01-19 11:19:43&quot;&gt;January 19, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/Makefile&quot; class=&quot;js-directory-link&quot; id=&quot;b67911656ef5d18c4ae36cb6741b7965-ad7f75c1f02c6e0966eb5272dd1c968ea8358127&quot; title=&quot;Makefile&quot;&gt;Makefile&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/3b344910a869e3cb80b88baf0c50362a207353b4&quot; class=&quot;message&quot; title=&quot;separated mouse control, wheel zoom (fixes #11)&quot;&gt;separated mouse control, wheel zoom (fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/11&quot; class=&quot;issue-link&quot; title=&quot;Mousewheel to zoom&quot;&gt;#11&lt;/a&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/3b344910a869e3cb80b88baf0c50362a207353b4&quot; class=&quot;message&quot; title=&quot;separated mouse control, wheel zoom (fixes #11)&quot;&gt;)&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-16T06:57:56-08:00&quot; title=&quot;2014-01-16 06:57:56&quot;&gt;January 16, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/README.md&quot; class=&quot;js-directory-link&quot; id=&quot;04c6e90faac2675aa89e2176d2eec7d8-50eac3905346efc310eb292c4a69409895b3734c&quot; title=&quot;README.md&quot;&gt;README.md&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/1afd85c99c135f2cdf140e549ac39b5b76489754&quot; class=&quot;message&quot; title=&quot;Update README.md&quot;&gt;Update README.md&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-22T22:52:57-08:00&quot; title=&quot;2014-01-22 22:52:57&quot;&gt;January 22, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/favicon.ico&quot; class=&quot;js-directory-link&quot; id=&quot;8af3a74ede48e250ceb935c026242483-df5920ef3d48392c30046cafe0deb5d7c47519fa&quot; title=&quot;favicon.ico&quot;&gt;favicon.ico&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e4292af93fe21592590f2b68c572fc51876895c6&quot; class=&quot;message&quot; title=&quot;favicon&quot;&gt;favicon&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T04:37:08-08:00&quot; title=&quot;2014-01-21 04:37:08&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/github.png&quot; class=&quot;js-directory-link&quot; id=&quot;25d67ea239ce1c1d4a909d669644546d-8b25551a97921681334176ee143b41510a117d86&quot; title=&quot;github.png&quot;&gt;github.png&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e3aa2d7b9ff89d504669c0707bd7188af2f33ec4&quot; class=&quot;message&quot; title=&quot;dragdrop, github&quot;&gt;dragdrop, github&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-14T06:29:07-08:00&quot; title=&quot;2014-01-14 06:29:07&quot;&gt;January 14, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/index.html&quot; class=&quot;js-directory-link&quot; id=&quot;eacf331f0ffc35d4b482f1d15a887d3b-729c5726afa78af9c85535aaedfefb10f0b10c6e&quot; title=&quot;index.html&quot;&gt;index.html&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/96559d93ca495e7694b226ee10191c2be86185b1&quot; class=&quot;message&quot; title=&quot;styling cleanup&quot;&gt;styling cleanup&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-22T03:57:34-08:00&quot; title=&quot;2014-01-22 03:57:34&quot;&gt;January 22, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/my-mind.js&quot; class=&quot;js-directory-link&quot; id=&quot;638ce29b5cdf4e8ff86c14c995753d6e-940506696e34d34b84b69b41801d7c6ba52806c1&quot; title=&quot;my-mind.js&quot;&gt;my-mind.js&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/47215ceec70ba7c529012e2aa63ea5f2acbe321d&quot; class=&quot;message&quot; title=&quot;beforeunload event, fixes #33&quot;&gt;beforeunload event, fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/33&quot; class=&quot;issue-link&quot; title=&quot;Navigating away causes loss of work without warning&quot;&gt;#33&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-23T05:18:42-08:00&quot; title=&quot;2014-01-23 05:18:42&quot;&gt;January 23, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class=&quot;icon&quot;&gt;
+        
+        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;content&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/screenshot.png&quot; class=&quot;js-directory-link&quot; id=&quot;768cd605bc77a80d4cdc7b3fd552f803-59f8fb31c3b4fb41a0fc926af0d82c8bd710739d&quot; title=&quot;screenshot.png&quot;&gt;screenshot.png&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;message&quot;&gt;
+        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/75c5449969d72df29c57e0209c99849dc2ed63ad&quot; class=&quot;message&quot; title=&quot;test&quot;&gt;test&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T00:48:08-08:00&quot; title=&quot;2014-01-21 00:48:08&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+
+  &lt;/table&gt;
+&lt;/div&gt;
+
+  
+
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+</description>
+<title>
+My Mind: A new web-based mind map editor
 </title>
 </item>
 </channel>
