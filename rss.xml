@@ -15,303 +15,6 @@ myread
 </description>
 <item>
 <link>
-item?id=7095228
-</link>
-<description>
-
-</description>
-<title>
-86 comments
-</title>
-</item>
-<item>
-<author>
-
-</author>
-<link>
-http://www.cs.utah.edu/~elb/folklore/satellit.txt
-</link>
-<description>
-&lt;pre&gt;Path: isy!liuida!sunic!mcsun!unido!fauern!ira.uka.de!sol.ctr.columbia.edu!lll-winken!elroy.jpl.nasa.gov!swrinde!zaphod.mps.ohio-state.edu!ub!uhura.cc.rochester.edu!rochester!pt.cs.cmu.edu!o.gp.cs.cmu.edu!andrew.cmu.edu!jn11+
-From: jn11+@andrew.cmu.edu (Joseph M. Newcomer)
-Newsgroups: alt.folklore.computers
-Subject: more frozen designs
-Message-ID: &amp;lt;Ic3XEqC00Vsa8A_F4V@andrew.cmu.edu&amp;gt;
-Date: 19 Apr 91 00:05:10 GMT
-Organization: Carnegie Mellon, Pittsburgh, PA
-Lines: 60
-
-This is the story as I remember it.  I think Jim Tomayko reads this
-newsgroup and he is certainly more knowledgeable than I (NASA computer
-history is one of his specialties).  So I hope he will correct any
-errors in this story...
-
-When I took the architecture course at CMU we studied any number of
-machines.  One was, as I remember, the Apollo Guidance Computer.
-
-The history of the space program is fascinating.  In terms of logistics,
-many simultaneous research-level projects were attempting to solve
-problems and produce working solutions in time to launch a man-rated
-vehicle.
-
-One project was the guidance computer.  The problem domain was examined,
-and a machine capable of handling this was specified.  It had some
-prime-number bits of words (DoD embedded machines tended to word lengths
-like 19 bits and 29 bits because the cost of core or other memory was
-many dollars per bit, and for DoD ratings these prices were multiplied).
- So the minimum memory configuration capable of doing the job was
-specified.  The machine had, as I recall, 8 opcodes.  As is typical of
-these projects, the processor was bid to one firm, the software to
-another, and the memory to a third.  The memory was tricky; it was
-mostly ROM (a technology that was unbelievably Rube Goldberg, e.g.,
-plated wire ROM, braided core ROM, transformer ROM, and other even more
-bizarre technologies.  I belive the AGC used braided ROM with multiholed
-cores), some RAM, and had a very distinct power budget, size budget, and
-weight budget.  Like, I mean, these guys worried about *grams* on a
-multiton vehicle...because if they didn&amp;#39;t, it wouldn&amp;#39;t lift off.
-
-So everything is progressing, except that they can&amp;#39;t fit the program
-into the nK bytes available.  &amp;quot;If we only had some more opcodes we could
-eliminate some of these tedious computations and use a single
-instruction&amp;quot; said the software types.  &amp;quot;Fine, we&amp;#39;ll redefine the
-processor&amp;quot; said the processor types. &amp;quot;We can&amp;#39;t give you any more bits&amp;quot;
-said the memory types.  The problem was that the memory just barely had
-a possibility of being buildable as specified; if they had to add one
-more bit per word and the associated circuitry (can you say &amp;quot;SSI&amp;quot;?) they
-couldn&amp;#39;t fit it in the package, it would take more power than was
-specified, and it would be heavier.  
-
-But if they couldn&amp;#39;t get more powerful instructions, they would need
-more words of memory; if they couldn&amp;#39;t even get an extra *bit* they
-certainly couldn&amp;#39;t get another 8K-or-whatever *words*.
-
-The solution was both clever and bletcherous.  The overflow bit became
-part of the opcode.  To get the extra opcodes, the program would
-add-to-memory an accumulator value that would cause an overflow when
-added to the instruction that was in memory.  Since the instructions
-were in ROM they didn&amp;#39;t get modified, but the added bit of the overflow
-gave 8 more opcodes.  
-
-I only presume that these opcodes were powerful enough that the extra
-instructions required to generate them cost less than the instructions
-they replaced.  I have long since lost the article reprint we used. 
-Dave Parnas, who taught the course, had a great time with this
-particular machine...
-
-All I know is: Mel would have *loved* it!
-
-                                       joe
-
-&lt;/pre&gt;
-</description>
-<title>
-&quot;Mel&quot; would have loved it...
-</title>
-</item>
-<item>
-<link>
-http://blog.outboxmail.com/post/74086768959/outbox-is-shutting-down-a-note-of-gratitude
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
-                                &lt;p&gt;Dear loyal customers and Outbox supporters:&amp;#xA0;&lt;/p&gt;&lt;p&gt;We announce&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;today&lt;/span&gt;&amp;#xA0;that we are ending the mail service, shutting down the Outbox brand, and focusing our team and resources on a totally new product. &amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/74086747774/customer-faq-for-outbox-ending-service&quot;&gt;In a related post&lt;/a&gt;&amp;#xA0;we explain what this means for our current, loyal customers. &amp;#xA0;&lt;/p&gt;&lt;p&gt;This is bittersweet for our team, since we have poured so much into creating our product and serving our customers. Yet this announcement marks the end of a chapter for us&amp;#x2014;not the end of the story.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Over the past two years, we have been humbled by the support of our investors and customers, who each took a leap of faith to join us in this exceptionally audacious venture. We have also been humbled by the incredible personal and financial sacrifices our team members have made along the way.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Beginning&lt;/strong&gt;&lt;br&gt;We set out to redefine a long cherished but broken medium of communication: postal mail. We did so during a tumultuous period in the history of the United States Postal Service (USPS), which has experienced declining mail volume and staggering deficits for the past five years.&amp;#xA0;&lt;/p&gt;&lt;p&gt;As former staffers on Capitol Hill, we share a passion for tackling huge public problems, but aim to do so with private solutions. We knew that the USPS would not be able to work out its own problems so, perhaps naively, we hoped to partner with USPS to provide an alternative to the physical delivery of postal mail to a subset of users, hoping this would spur further innovation and cost savings.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Although an early test with the USPS that let users redirect their mail to us showed signs of success and operational simplicity, an interview by CNBC triggered a request from the Postmaster General himself to meet in Washington, DC. In one of the most surreal moments of our lives (listen to it in an&amp;#xA0;&lt;a href=&quot;http://kut.org/post/austin-startup-says-you-ll-never-touch-snail-mail-again?utm_source=Facebook&amp;amp;utm_medium=Social&amp;amp;utm_campaign=FBKUT183&quot; title=&quot;NPR Interview&quot; target=&quot;_blank&quot;&gt;NPR interview&lt;/a&gt;), we had our very own Mr. Smith Goes to Washington encounter where the senior leadership of USPS made it clear that they would never participate in any project that would limit junk mail and that they were immediately shutting down our partnership.&amp;#xA0; This&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;30-minute&lt;/span&gt;&amp;#xA0;meeting was the end of our business model.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Reimagining of Outbox&lt;/strong&gt;&lt;br&gt;After countless hours applying Clay Christensen&amp;#x2019;s business model theories to our situation, we came to view our failed partnership with USPS as a David and Goliath moment: we believed our seeming disadvantage would become our greatest strength. Turning our original vision on its head, we reimagined our service as not merely playing in someone else&amp;#x2019;s value channel, but as a new type of last-mile delivery channel all together: one subsidized by our users in return for collecting and electronically delivering their postal mail. If we could simply break even on the mail business, we would have built a valuable last mile network able to be monetized in many ways.&amp;#xA0;&lt;/p&gt;&lt;p&gt;To pull this off, we built a world-class team of engineers, designers, marketers, and operations specialists in Austin and San Francisco.&amp;#xA0; Funding our efforts were some of the most celebrated investors of our generation: Mike Maples at Floodgate and Peter Thiel and Brian Singerman at Founders Fund, as well as a groundswell of investors via AngelList. Together, we made a product that was as beautiful as it was complex, and overcame nearly every obstacle in our path.&amp;#xA0;&lt;/p&gt;&lt;p&gt;We created our own dynamic logistics software, developed a legal framework to open users&amp;#x2019; mail, built industrial-grade scanning machines for 1/100th of the market price, developed specialized OCR to allow customers to unsubscribe from postal mail, built and attached to our cars 5-foot mailbox flags that withstand 70 mph highway speeds, laser cut wood blocks to build mail slot solutions, and created a novel system of key decoding via photograph that inspired the creation of&amp;#xA0;&lt;a href=&quot;https://www.key.me/&quot; title=&quot;KeyMe&quot;&gt;one startup all on its own&lt;/a&gt;. All this was simply the backend of our service, and our iPhone and other apps won awards for their design and elegance.&lt;/p&gt;&lt;p&gt;In the end, we serviced a little over 2,000 individual customers, had 25,000 people waiting around the country on our waiting list, unsubscribed our customers from over 1 million senders of mail, scanned over&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;1.5&lt;/span&gt;&amp;#xA0;million pages, and delivered over 250,000 requested mail packages. We also recycled approximately 30 tons of paper, enough to cover 86 football fields.&lt;/p&gt;&lt;p&gt;Outbox was buzzing.&amp;#xA0; It seemed as though everyone knew something about our little company, had seen one of our red-flagged mailbox cars, or had stumbled upon a news story about us. &amp;#xA0;&lt;em&gt;CNN&amp;#xA0;&lt;/em&gt;&lt;a href=&quot;http://www.cnn.com/2013/02/26/tech/innovation/outbox-mail-service/index.html&quot;&gt;praised us&lt;/a&gt;, Jay Leno&amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/44708709996/the-unpostman-appears-on-jay-leno&quot;&gt;mocked us&lt;/a&gt;, and Pee Wee Herman&amp;#xA0;&lt;a href=&quot;http://blog.outboxmail.com/post/44554223639/this-is-not-a-joke&quot;&gt;called us &amp;#x201C;the future.&amp;#x201D;&lt;/a&gt;&amp;#xA0;We tested our anecdotal suspicions with a nationwide survey, and found that Outbox had an unaided brand awareness of&amp;#xA0;&lt;span class=&quot;__postbox-detected-content __postbox-detected-date&quot;&gt;10.1&lt;/span&gt;&amp;#xA0;percent - even though we serviced a mere 2,000 customers in two relatively small markets.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Numbers Don&amp;#x2019;t Lie&lt;/strong&gt;&lt;br&gt;After raising $5m in June of last year, we set out to onboard the 4,000 individuals we had amassed on our central-San Francisco waitlist. We projected converting a large percentage of these individuals, and planned to scale our marketing efforts at a projected cost of $20 per acquisition.&lt;/p&gt;&lt;p&gt;However, after an extensive email marketing campaign to our waitlist, total yield from the waitlist was under 10 percent. And as we started marketing outside of this network, we had difficulty finding a repeatable and scalable acquisition channel. Across all of our efforts, our acquisition numbers were over $50 per lead.&amp;#xA0;&lt;/p&gt;&lt;p&gt;As our marketing efforts lagged behind schedule, our density numbers remained consistently flat, causing us to spend about double our projected cost to service each customer. Even our most dense routes cost us approximately 20 percent more than our break-even target.&lt;/p&gt;&lt;p&gt;After several months of testing and refining, we reasonably concluded that we were executing well and collecting good data&amp;#x2014;it told us that there wasn&amp;#x2019;t enough demand to support the cost model.&amp;#xA0; Our monthly operating deficits were too high, and even though we continued to get better at acquisition, each small success actually saw our cash curve decline further because our density remained flat.&amp;#xA0;For longer than we would be willing to tolerate, we would lose money for each additional customer we gained.&amp;#xA0;Despite the massive interest in our company, we learned that the product we built did not find fit in the market we targeted.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Finding serenity in knowing when to stop&lt;/strong&gt;&amp;#xA0;&lt;br&gt;For startups, it&amp;#x2019;s difficult to know when to throw in the towel. Indeed, the main strategy for most of the life of a startup is overcoming impossible odds, and we built a team that did that over and over again.&amp;#xA0;&lt;/p&gt;&lt;p&gt;This final challenge&amp;#x2014;product market fit&amp;#x2014;is one we ran after with characteristic zeal. Amidst these struggles we were reminded of the serenity prayer written by one of our favorite authors, Reinhold Niebuhr:&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Grant me the serenity to accept the things I cannot change,&lt;/em&gt;&lt;br&gt;&lt;em&gt;The courage to change the things I can,&lt;/em&gt;&lt;br&gt;&lt;em&gt;And wisdom to know the difference.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Facing situation after situation we kept the courage to change them; in these final few months, we were granted the serenity to know this situation is one we cannot change.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Our Unpostmen&lt;/strong&gt;&lt;br&gt;Not least of our accomplishments was the recruitment of an amazing operations team. Their tireless work ethic led to such stellar customer service that our users would, on occasion,&amp;#xA0;&lt;a href=&quot;https://twitter.com/JoshuaBaer/status/276140115385016320&quot;&gt;pee their pants&lt;/a&gt;. The hardest reality in our transition is saying goodbye to our eighteen Unpostmen: they have been the frontlines of challenging logistics and extreme customer service. If you are hiring and looking for loyal, hard working operations experts, please email us here.&amp;#xA0;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Our Future&lt;/strong&gt;&lt;br&gt;There are numerous small pivots we could make as an alternative to our mail service, and we have tested many other applications that could be layered on top of the logistic network we already created. Yet each of these tangential services has a tragic combination of being costly to pull off and, well, not a big idea.&amp;#xA0;&lt;/p&gt;&lt;p&gt;While it saddens us that we are leaving so much behind in terms of what we built and developed for mail, we are equally excited to begin a new chapter in our company&amp;#x2019;s life. Our team has been working on a new product that has already shown signs of success, and we believe it has the opportunity to be massively disruptive.&amp;#xA0; We can&amp;#x2019;t wait to tell you more about it&amp;#x2014;but for now we&amp;#x2019;re in stealth mode.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Our many learnings have led us to tackle a problem in many ways similar:&amp;#xA0; a giant, sleepy industry that serves every American, is generally hated, and is in need of radical new solutions that involve hardware, software, and logistics.&amp;#xA0;&lt;/p&gt;&lt;p&gt;Forefront in our minds are the learnings from the wild adventure of Outbox:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Giant, complex systems appear insurmountable, but aren&amp;#x2019;t&amp;#x2014;they were built by people just like you and me&lt;/li&gt;
-&lt;li&gt;The main asset the government (and big companies) has is time&amp;#x2014;which is the resource of which startups have the least.&amp;#xA0;&lt;/li&gt;
-&lt;li&gt;You may think government organizations are completely, insanely backwards; you are wrong&amp;#x2014;they are worse.&amp;#xA0;&lt;/li&gt;
-&lt;li&gt;If you can&amp;#x2019;t find a hardware solution to your needs, build it&amp;#x2014;it&amp;#x2019;s not that hard.&amp;#xA0;&lt;/li&gt;
-&lt;li&gt;Doing extraordinary things for customers is time consuming and hard&amp;#x2014;but very worthwhile. &amp;#xA0;&amp;#xA0;&lt;/li&gt;
-&lt;li&gt;Life is too short to pursue anything other than what you are most passionate about.&amp;#xA0;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;br&gt;For the last two years, we got out of bed every morning because of the chance to re-imagine a daily activity for every American.&amp;#xA0; We&amp;#x2019;ve had many sleepless nights these last few months, but are excited to be turning our complete attention to a new, equally compelling reason to wake up each morning.&amp;#xA0;&lt;/p&gt;&lt;p&gt;With thanks,&lt;br&gt;Will &amp;amp; Evan, Outbox Cofounders&lt;/p&gt;
-                                
-                                
-                            &lt;/div&gt;
-                            
-                            
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                    
-
-
-                            
-                            
-                            
-                            
-                                                        
-                            
-                            
-                            &lt;/div&gt;
-</description>
-<title>
-Outbox Is Shutting Down
-</title>
-</item>
-<item>
-<author>
-Kevin Poulsen
-</author>
-<link>
-http://www.wired.com/wiredscience/2014/01/how-to-hack-okcupid/
-</link>
-<description>
-&lt;div id=&quot;container&quot; score=&quot;7.5&quot;&gt;
-&lt;div class=&quot;row padding-top&quot; score=&quot;10.0&quot;&gt;
-&lt;div&gt;&lt;img class=&quot;margin-top padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_f.jpg&quot;&gt;&lt;/div&gt;&lt;p class=&quot;caption padding-bottom&quot;&gt;Mathematician Chris McKinlay hacked OKCupid to find the girl of his dreams.   &lt;/p&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt;  Emily Shur
-
-&lt;p&gt;&lt;span class=&quot;brandon medium wired-black&quot;&gt;Chris McKinlay was folded&lt;/span&gt; into a cramped fifth-floor cubicle in UCLA’s math sciences building, lit by a single bulb and the glow from his monitor. It was 3 in the morn­ing, the optimal time to squeeze cycles out of the supercomputer in Colorado that he was using for his PhD dissertation. (The subject: large-scale data processing and parallel numerical methods.) While the computer chugged, he clicked open a second window to check his OkCupid inbox.&lt;/p&gt;
-&lt;p&gt;McKinlay, a lanky 35-year-old with tousled hair, was one of about 40 million Americans looking for romance through websites like Match.com, J-Date, and e-Harmony, and he’d been searching in vain since his last breakup nine months earlier. He’d sent dozens of cutesy introductory messages to women touted as potential matches by OkCupid’s algorithms. Most were ignored; he’d gone on a total of six first dates.&lt;/p&gt;
-&lt;p&gt;On that early morning in June 2012, his compiler crunching out machine code in one window, his forlorn dating profile sitting idle in the other, it dawned on him that he was doing it wrong. He’d been approaching online matchmaking like any other user. Instead, he realized, he should be dating like a mathematician.&lt;/p&gt;
-&lt;p&gt;OkCupid was founded by Harvard math majors in 2004, and it first caught daters’ attention because of its computational approach to matchmaking. Members answer droves of multiple-choice survey questions on everything from politics, religion, and family to love, sex, and smartphones.&lt;/p&gt;
-
-&lt;p&gt;On average, respondents select 350 questions from a pool of thousands—“Which of the following is most likely to draw you to a movie?” or “How important is religion/God in your life?” For each, the user records an answer, specifies which responses they’d find acceptable in a mate, and rates how important the question is to them on a five-point scale from “irrelevant” to “mandatory.” OkCupid’s matching engine uses that data to calculate a couple’s compatibility. The closer to 100 percent—mathematical soul mate—the better.&lt;/p&gt;
-
-&lt;p&gt;But mathematically, McKinlay’s compatibility with women in Los Angeles was abysmal. OkCupid’s algorithms use only the questions that both potential matches decide to answer, and the match questions McKinlay had chosen—more or less at random—had proven unpopular. When he scrolled through his matches, fewer than 100 women would appear above the 90 percent compatibility mark. And that was in a city containing some 2 million women (approximately 80,000 of them on OkCupid). On a site where compatibility equals visibility, he was practically a ghost.&lt;/p&gt;
-&lt;p&gt;He realized he’d have to boost that number. If, through statistical sampling, McKinlay could ascertain which questions mattered to the kind of women he liked, he could construct a new profile that honestly answered those questions and ignored the rest. He could match every woman in LA who might be right for him, and none that weren’t.&lt;/p&gt;
-
-&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_large.jpg&quot;&gt;&lt;/a&gt;&lt;div&gt;&lt;img class=&quot;padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_large.jpg&quot;&gt;&lt;/div&gt;&lt;p class=&quot;caption padding-bottom&quot;&gt; Chris McKinlay used Python scripts to riffle through hundreds of OkCupid survey questions. He then sorted female daters into seven clusters, like “Diverse” and “Mindful,” each with distinct characteristics. &lt;/p&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt;  Maurico Alejo 
-
-&lt;p&gt;&lt;span class=&quot;brandon wired-black medium&quot;&gt;Even for a mathematician,&lt;/span&gt; McKinlay is unusual. Raised in a Boston suburb, he graduated from Middlebury College in 2001 with a degree in Chinese. In August of that year he took a part-time job in New York translating Chinese into English for a company on the 91st floor of the north tower of the World Trade Center. The towers fell five weeks later. (McKinlay wasn’t due at the office until 2 o’clock that day. He was asleep when the first plane hit the north tower at 8:46 am.) “After that I asked myself what I really wanted to be doing,” he says. A friend at Columbia recruited him into an offshoot of MIT’s famed professional blackjack team, and he spent the next few years bouncing between New York and Las Vegas, counting cards and earning up to $60,000 a year.&lt;/p&gt;
-
-&lt;p&gt;The experience kindled his interest in applied math, ultimately inspiring him to earn a master’s and then a PhD in the field. “They were capable of using mathema­tics in lots of different situations,” he says. “They could see some new game—like Three Card Pai Gow Poker—then go home, write some code, and come up with a strategy to beat it.”&lt;/p&gt;
-
-&lt;p&gt;Now he’d do the same for love. First he’d need data. While his dissertation work continued to run on the side, he set up 12 fake OkCupid accounts and wrote a Python script to manage them. The script would search his target demographic (heterosexual and bisexual women between the ages of 25 and 45), visit their pages, and scrape their profiles for every scrap of available information: ethnicity, height, smoker or nonsmoker, astrological sign—“all that crap,” he says.&lt;/p&gt;
-&lt;p&gt;To find the survey answers, he had to do a bit of extra sleuthing. OkCupid lets users see the responses of others, but only to questions they’ve answered themselves. McKinlay set up his bots to simply answer each question randomly—he wasn’t using the dummy profiles to attract any of the women, so the answers didn’t mat­ter—then scooped the women’s answers into a database.&lt;/p&gt;
-&lt;p&gt;McKinlay watched with satisfaction as his bots purred along. Then, after about a thousand profiles were collected, he hit his first roadblock. OkCupid has a system in place to prevent exactly this kind of data harvesting: It can spot rapid-fire use easily. One by one, his bots started getting banned.&lt;/p&gt;
-&lt;p&gt;He would have to train them to act human.&lt;/p&gt;
-&lt;p&gt;He turned to his friend Sam Torrisi, a neuroscientist who’d recently taught McKinlay music theory in exchange for advanced math lessons. Torrisi was also on OkCupid, and he agreed to install spyware on his computer to monitor his use of the site. With the data in hand, McKinlay programmed his bots to simulate Torrisi’s click-rates and typing speed. He brought in a second computer from home and plugged it into the math department’s broadband line so it could run uninterrupted 24 hours a day.&lt;/p&gt;
-&lt;p&gt;After three weeks he’d harvested 6 million questions and answers from 20,000 women all over the country. McKinlay’s dissertation was relegated to a side project as he dove into the data. He was already sleeping in his cubicle most nights. Now he gave up his apartment entirely and moved into the dingy beige cell, laying a thin mattress across his desk when it was time to sleep.&lt;/p&gt;
-&lt;p&gt;For McKinlay’s plan to work, he’d have to find a pattern in the survey data—a way to roughly group the women according to their similarities. The breakthrough came when he coded up a modified Bell Labs algorithm called K-Modes. First used in 1998 to analyze diseased soybean crops, it takes categorical data and clumps it like the colored wax swimming in a Lava Lamp. With some fine-tuning he could adjust the viscosity of the results, thinning it into a slick or coagulating it into a single, solid glob.&lt;/p&gt;
-&lt;p&gt;He played with the dial and found a natural resting point where the 20,000 women clumped into seven statistically distinct clusters based on their questions and answers. “I was ecstatic,” he says. “That was the high point of June.”&lt;/p&gt;
-&lt;p&gt;He retasked his bots to gather another sample: 5,000 women in Los Angeles and San Francisco who’d logged on to OkCupid in the past month. Another pass through K-Modes confirmed that they clustered in a similar way. His statistical sampling had worked.&lt;/p&gt;
-&lt;p&gt;Now he just had to decide which cluster best suited him. He checked out some profiles from each. One cluster was too young, two were too old, another was too Christian. But he lingered over a cluster dominated by women in their mid-twenties who looked like indie types, musicians and artists. This was the golden cluster. The haystack in which he’d find his needle. Somewhere within, he’d find true love.&lt;/p&gt;
-
-&lt;p&gt;Actually, a neighboring cluster looked pretty cool too—slightly older women who held professional creative jobs, like editors and designers. He decided to go for both. He’d set up two profiles and optimize one for the A group and one for the B group.&lt;/p&gt;
-&lt;p&gt;He text-mined the two clusters to learn what interested them; teaching turned out to be a popular topic, so he wrote a bio that emphasized his work as a math professor. The important part, though, would be the survey. He picked out the 500 questions that were most popular with both clusters. He’d already decided he would fill out his answers honestly—he didn’t want to build his future relationship on a foundation of computer-generated lies. But he’d let his computer figure out how much importance to assign each question, using a machine-learning algorithm called adaptive boosting to derive the best weightings.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-
-
-
-&amp;#13;        &lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div id=&quot;container&quot; score=&quot;13.75&quot;&gt;
-&lt;div class=&quot;row padding-top&quot; score=&quot;6.25&quot;&gt;
-
-&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_f.jpg&quot; score=&quot;1.25&quot;&gt;&lt;div&gt;&lt;img class=&quot;margin-top padding-top&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker2_f.jpg&quot;&gt;&lt;/div&gt;&lt;/a&gt;&lt;div&gt;&lt;img class=&quot;photo-icon&quot; src=&quot;http://www.wired.com/images_blogs/magazine/2013/11/gallery-cam@2x.png&quot;&gt;&lt;/div&gt; Emily Shur (Grooming by Andrea Pezzillo/Artmix Beauty)
-
-&lt;p&gt;With that, he created two profiles, one with a photo of him rock climbing and the other of him playing guitar at a music gig. “Regardless of future plans, what’s more interesting to you right now? Sex or love?” went one question. Answer: Love, obviously. But for the younger A cluster, he followed his computer’s direction and rated the question “very important.” For the B cluster, it was “mandatory.”&lt;/p&gt;
-&lt;p&gt;When the last question was answered and ranked, he ran a search on OkCupid for women in Los Angeles sorted by match percentage. At the top: a page of women matched at 99 percent. He scrolled down … and down … and down. Ten thousand women scrolled by, from all over Los Angeles, and he was still in the 90s.&lt;/p&gt;
-&lt;p&gt;He needed one more step to get noticed. OkCupid members are notified when some­one views their pages, so he wrote a new program to visit the pages of his top-rated matches, cycling by age: a thousand 41-year-old women on Monday, another thousand 40-year-old women on Tuesday, looping back through when he reached 27-year-olds two weeks later. Women reciprocated by visiting his profiles, some 400 a day. And messages began to roll in.&lt;/p&gt;
-&lt;p&gt;“I haven’t until now come across anyone with such winning numbers, AND I find your profile intriguing,” one woman wrote. “Also, something about a rugged man who’s really good with numbers … Thought I’d say hi.”&lt;/p&gt;
-&lt;p&gt;“Hey there—your profile really struck me and I wanted to say hi,” another wrote. “I think we have quite a lot in common, maybe not the math but certainly a lot of other good stuff!”&lt;/p&gt;
-&lt;p&gt;“Can you really translate Chinese?” yet another asked. “I took a class briefly but it didn’t go well.”&lt;/p&gt;
-&lt;p&gt;The math portion of McKinlay’s search was done. Only one thing remained. He’d have to leave his cubicle and take his research into the field. He’d have to go on dates.&lt;/p&gt;
-
-&lt;p class=&quot;padding-top&quot;&gt;&lt;span class=&quot;wired-black brandon medium&quot;&gt;On June 30, McKinlay&lt;/span&gt; showered at the UCLA gym and drove his beat-up Nissan across town for his first data-mined date. Sheila was a web designer from the A cluster of young artist types. They met for lunch at a cafe in Echo Park. “It was scary,” McKinlay says. “Up until this point it had almost been an academic exercise.”&lt;/p&gt;
-&lt;p&gt;By the end of his date with Sheila, it was clear to both that the attraction wasn’t there. He went on his second date the next day—an attractive blog editor from the B cluster. He’d planned a romantic walk around Echo Park Lake but found it was being dredged. She’d been reading Proust and feeling down about her life. “It was kind of depressing,” he says.&lt;/p&gt;
-&lt;p&gt;Date three was also from the B group. He met Alison at a bar in Koreatown. She was a screenwriting student with a tattoo of a Fibonacci spiral on her shoulder. McKinlay got drunk on Korean beer and woke up in his cubicle the next day with a painful hangover. He sent Alison a follow- up message on OkCupid, but she didn’t write back.&lt;/p&gt;
-&lt;p&gt;The rejection stung, but he was still getting 20 messages a day. Dating with his computer-endowed profiles was a completely different game. He could ignore messages consisting of bad one-liners. He responded to the ones that showed a sense of humor or displayed something interesting in their bios. Back when he was the pursuer, he’d swapped three to five messages to get a single date. Now he’d send just one reply. “You seem really cool. Want to meet?”&lt;/p&gt;
-&lt;p&gt;By date 20, he noticed latent variables emerging. In the younger cluster, the women invariably had two or more tattoos and lived on the east side of Los Angeles. In the other, a disproportionate number owned midsize dogs that they adored.&lt;/p&gt;
-
-&lt;p&gt;His earliest dates were carefully planned. But as he worked feverishly through his queue, he resorted to casual afternoon meetups over lunch or coffee, often stacking two dates in a day. He developed a set of personal rules to get through his mara­thon love search. No more drinking, for one. End the date when it’s over, don’t let it trail off. And no concerts or movies. “Nothing where your attention is directed at a third object instead of each other,” he says. “It’s inefficient.”&lt;/p&gt;
-
-&lt;p class=&quot;small-quotes no-margin padding-top&quot;&gt; Love is a Data Field&lt;/p&gt;
-&lt;p class=&quot;caption wired-black&quot;&gt;McKinlay’s code found that the women clustered into statistically identifiable groups who tended to answer their OkCupid survey questions in similar ways. One group, which he dubbed the Greens, were online dating newbies; another, the Samanthas, tended to be older and more adventuresome. Here’s how each cluster answered four of the most popular questions.&lt;/p&gt;
-
-&lt;p class=&quot;caption wired-black no-padding&quot;&gt;The Questions&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot; score=&quot;15.0&quot;&gt;
-&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
-&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(1)&lt;/span&gt; About how long do you want your next relationship to last?&lt;br&gt;
-&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_1s.jpg&quot;&gt;&lt;/div&gt; One night&lt;br&gt; 
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_2s.jpg&quot;&gt;&lt;/div&gt; A few months to a year&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_3s.jpg&quot;&gt;&lt;/div&gt; Several years&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_4s.jpg&quot;&gt;&lt;/div&gt; The rest of my life
-&lt;/div&gt;
-&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
-&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(2)&lt;/span&gt; Say you’ve started seeing someone you really like. As far as you’re concerned, how long will it take before you have sex?&lt;br&gt; 
-&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_5s.jpg&quot;&gt;&lt;/div&gt; 1-2 dates&lt;br&gt; 
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_6s.jpg&quot;&gt;&lt;/div&gt; 3-5 dates&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_7s.jpg&quot;&gt;&lt;/div&gt; 6 or more dates&lt;br&gt; 
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_8s.jpg&quot;&gt;&lt;/div&gt; Only after the wedding
-&lt;/div&gt;
-&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
-&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(3)&lt;/span&gt; Have you ever had a sexual encounter with someone of the same sex?&lt;br&gt;
-&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_9s.jpg&quot;&gt;&lt;/div&gt; Yes, and I enjoyed myself&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_10s.jpg&quot;&gt;&lt;/div&gt; Yes, and I did not enjoy myself&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_11s.jpg&quot;&gt;&lt;/div&gt; No, and I would never&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_12s.jpg&quot;&gt;&lt;/div&gt; No, but I’d like to
-&lt;/div&gt;
-&lt;div class=&quot;col-3&quot; score=&quot;10.0&quot;&gt;
-&lt;p class=&quot;caption padding-bottom-small&quot;&gt;&lt;span class=&quot;wired-black&quot;&gt;(4)&lt;/span&gt; How important is religion/God in your life?&lt;br&gt;
-&lt;/p&gt;&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_13s.jpg&quot;&gt;&lt;/div&gt; Extremely important&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_14s.jpg&quot;&gt;&lt;/div&gt; Somewhat important&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_15s.jpg&quot;&gt;&lt;/div&gt; Not very important&lt;br&gt;
-&lt;div&gt;&lt;img class=&quot;color-boxes&quot; src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_16s.jpg&quot;&gt;&lt;/div&gt; Not important at all
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot; score=&quot;5.0&quot;&gt;
-&lt;a href=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_large.jpg&quot; score=&quot;1.25&quot;&gt;&lt;div&gt;&lt;img src=&quot;http://www.wired.com/images_blogs/wiredscience/2014/01/ff_lovehacker_large.jpg&quot;&gt;&lt;/div&gt;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row padding-top&quot;&gt;
-&lt;p&gt;After a month of dating equally from both of his profiles, he decided he was spending too much time on the freeway reaching east-side women from the tattoo cluster. He deleted his A-group profile. His efficiency improved, but the results were the same. As summer drew to a close, he’d been on more than 55 dates, each one dutifully logged in a lab notebook. Only three had led to second dates; only one had led to a third.&lt;/p&gt;
-&lt;p&gt;Most unsuccessful daters confront self-esteem issues. For McKinlay it was worse. He had to question his calculations.&lt;/p&gt;
-&lt;p&gt;Then came the message from Christine Tien Wang, a 28-year-old artist and prison abolition activist. McKinlay had popped up in her search for 6-foot guys with blue eyes near UCLA, where she was pursuing her master’s in fine arts. They were a 91 percent match.&lt;/p&gt;
-&lt;p&gt;He met her at the sculpture garden on campus. From there they walked to a college sushi joint. He felt it immediately. They talked about books, art, music. When she confessed that she’d made some tweaks to her profile before messaging him, he responded by telling her all about his love hacking. The whole story.&lt;/p&gt;
-&lt;p&gt;“I thought it was dark and cynical,” she says. “I liked it.”&lt;/p&gt;
-
-&lt;p&gt;It was first date number 88. A second date followed, then a third. After two weeks they both suspended their OkCupid accounts.&lt;/p&gt;
-&lt;p class=&quot;padding-top&quot;&gt;&lt;span class=&quot;brandon wired-black medium&quot;&gt;“I think that what I did&lt;/span&gt; is just a slightly more algorithmic, large-scale, and machine-learning-based version of what everyone does on the site,” McKinlay says. Everyone tries to create an optimal profile—he just had the data to engineer one.&lt;/p&gt;
-&lt;p&gt;It’s one year after their first date, and McKinlay and Tien Wang have met me at the Westwood sushi bar where their relationship began. McKinlay has his PhD; he’s teaching math and is now working on a postgraduate degree in music. Tien Wang was accepted into a one-year art fellowship in Qatar. She’s in California to visit McKinlay. They’ve been staying connected on Skype, and she has returned for a couple of visits.&lt;/p&gt;
-&lt;p&gt;At my request, McKinlay has brought his lab notebook. Tien Wang hasn’t seen it before today. It’s page after page of formulas and equations in McKinlay’s tight handwriting, ending in a neatly ordered list of women and dates, a few terse notes about each. Tien Wang leafs through it, laughing at some of the highlights. On August 24, she notices, he took two women to the same beach on the same day. “That’s horrible,” she says.&lt;/p&gt;
-&lt;p&gt;To Tien Wang, &lt;a href=&quot;http://christophermckinlay.net&quot; target=&quot;_blank&quot;&gt;McKinlay’s OkCupid hacking&lt;/a&gt; is a funny story to tell. But all the math and coding is merely prologue to their story together. The real hacking in a relationship comes after you meet. “People are much more complicated than their profiles,” she says. “So the way we met was kind of superficial, but everything that happened after is not superficial at all. It’s been cultivated through a lot of work.”&lt;/p&gt;
-&lt;p&gt;“It’s not like, we matched and therefore we have a great relationship,” McKinlay agrees. “It was just a mechanism to put us in the same room. I was able to use OkCupid to find someone.”&lt;/p&gt;
-&lt;p&gt;She bristles at that. “You didn’t find me. I found you,” she says, touching his elbow. McKinlay pauses to think, then admits she’s right.&lt;/p&gt;
-&lt;p&gt;A week later Tien Wang is back in Qatar, and the couple is on one of their daily Skype calls when McKinlay pulls out a diamond ring and holds it up to the webcam. She says yes.&lt;/p&gt;
-&lt;p&gt;They’re not entirely sure when they’ll get married. There’s research to be done to determine the optimal wedding day.&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-&lt;/div&gt;
-
-
-
-
-
-        
-</description>
-<title>
-How a Math Genius Hacked OkCupid to Find True Love
-</title>
-</item>
-<item>
-<link>
 https://github.com/ondras/my-mind
 </link>
 <description>
@@ -514,6 +217,180 @@ https://github.com/ondras/my-mind
 </description>
 <title>
 My Mind: A new web-based mind map editor
+</title>
+</item>
+<item>
+<link>
+http://www.rescale.com/careers/
+</link>
+<description>
+&lt;div&gt;
+  
+  
+  
+  
+  
+
+  
+  
+  
+&lt;div class=&quot;company-carousel&quot; id=&quot;carouselCareers&quot;&gt;
+  &lt;div class=&quot;bg-black-container&quot;&gt;
+    &lt;div class=&quot;bg-black-80&quot; id=&quot;bgCareers&quot;&gt;
+      &lt;h3&gt;Careers at Rescale&lt;/h3&gt;
+      &lt;div id=&quot;whatWeDo&quot;&gt;
+        &lt;p&gt;At Rescale, you will help the world's leading engineers and scientists develop the next generation of disruptive innovations. Our team members have the unique opportunity to learn and contribute to solving some of the world's most challenging problems, from space flight to genetic engineering and everything in between.&lt;/p&gt;
+        &lt;p&gt;We are computer scientists, domain experts, and industry thought leaders who are eager to work in teams with the brightest minds and most talented engineers. Located in the heart of San Francisco, we offer an exciting and vibrant work environment with competitive compensation and benefits.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flexslider&quot;&gt;
+    &lt;ul class=&quot;slides&quot;&gt;
+      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers01.846fa3dc6e88.jpg&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers02.856d93959ec9.jpg&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers03.667175911837.jpg&quot;&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;main-container&quot;&gt;
+  &lt;div class=&quot;main wrapper clearfix&quot;&gt;
+    &lt;div id=&quot;contentCareers&quot; class=&quot;companyWrapper&quot;&gt;
+      &lt;h3 class=&quot;company-section-title&quot;&gt;Join the Team&lt;/h3&gt;
+      
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;main-container border-bottom clearfix&quot;&gt;
+  &lt;div class=&quot;main wrapper clearfix&quot;&gt;
+    &lt;h3 class=&quot;company-section-title&quot;&gt;Benefits of Working at Rescale&lt;/h3&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+&lt;/div&gt;
+
+</description>
+<title>
+Rescale (YC W12) is hiring for Sales and Engineering positions
+</title>
+</item>
+<item>
+<author>
+Alex Williams
+</author>
+<link>
+http://techcrunch.com/2014/01/21/docker-raises-15m-for-popular-open-source-platform-designed-for-developers-to-build-apps-in-the-cloud/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
+
+
+&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/dockerimage.png?w=400&quot; class=&quot;article-img-feature&quot;&gt;&lt;p&gt;The shift to scale out architectures and an app-centric culture has turned out well for &lt;a target=&quot;_blank&quot; href=&quot;http://www.docker.io/&quot;&gt;Docker&lt;/a&gt; and its lightweight open-source &amp;#x201C;container&amp;#x201D; technology designed for developers to quickly move code to the cloud.&lt;/p&gt;
+&lt;p&gt;That&amp;#x2019;s evident in today&amp;#x2019;s news that the company has raised $15 million in a Series B round led by &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/greylock&quot;&gt;Greylock Partners&lt;/a&gt;, with minority participation from &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/insight-venture-partners&quot;&gt;Insight Venture Partners&lt;/a&gt; and existing investors &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/benchmark-2&quot;&gt;Benchmark Capital&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/benchmark-2&quot;&gt;Trinity Ventures&lt;/a&gt;. Also participating is Yahoo! Co-Founder Jerry Yang, who has participated in previous rounds.&lt;/p&gt;
+&lt;p&gt;Docker will use the funding to push toward the general availability of the Docker environment, develop commercial services that pair with the open-source technology and build a team to support the growing community.&lt;/p&gt;
+&lt;p&gt;The technology path is similar to the one VMware followed in its early days when IT managed their corporate-owned infrastructure. These were state-of-the-art data centers that had to be optimized to run enterprise software. For these IT managers, VMware became a critical part of the equation so multiple virtual machines could run on its hypervisor and server environment. VMware is lauded for the excellent job it did in managing its technology so the end-user was not impacted and the IT manager could manage the infrastructure effectively.&lt;/p&gt;
+&lt;p&gt;The similarity to VMware in its early days and the excitement that Docker has generated made it an attractive investment, said Jerry Chen, a general partner at Greylock who joined the venture capital firm in August. It is Chen&amp;#x2019;s first investment since joining Greylock.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;One of the things we learned at VMware is be as&amp;#xA0;frictionless&amp;#xA0;as&amp;#xA0;possible,&amp;#x201D; Chen&amp;#xA0;said&amp;#xA0;in a phone interview today. &amp;#x201C;Docker has that ability as well.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Docker also can be scaled from scratch. It can grow to multiple apps or be used on public or private servers, Chen said. And it can be scaled out in seconds, moved anywhere and all done without having to re-configure all over again.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&amp;#x201C;Docker is the right tech to fit the rapid updates,&amp;#x201D; Chen said.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Docker faces the challenge of making its technology easy-to-use with features that make it effective for a developer or a DevOps professional. For this new DevOps pro, Docker has to consider the management and orchestration of apps that are continuously updated using the Docker environment. For example, Docker will develop both public and private registries for developers to store their containers. It also plans to build management and orchestration tools that are needed as people and their organizations manage more and more Docker containers.&lt;/p&gt;
+&lt;p&gt;And then there is the community, which continues to grow at scale. Docker is now one of the world&amp;#x2019;s fastest-growing, open-source efforts. There have been more than 9,000 stars given to Docker on &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/dotcloud/docker&quot;&gt;GitHub&lt;/a&gt; as well as more than 1,320 forks. To manage that growing community will take investment that the company will need to manage with product development.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter size-large wp-image-944544&quot; alt=&quot;Contributors_to_dotcloud_docker&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/contributors_to_dotcloud_docker.png?w=640&amp;amp;h=234&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;#x2019;s that community&amp;#xA0;that&amp;#xA0;helped Docker gain acceptance&amp;#xA0;with&amp;#xA0;Red Hat,&amp;#xA0;which&amp;#xA0;is &lt;a href=&quot;http://techcrunch.com/2013/09/19/dotcloud-pivots-and-wins-big-with-docker-the-cloud-service-now-part-of-red-hat-openshift/&quot;&gt;integrating it into OpenShift&lt;/a&gt;, its PaaS&amp;#xA0;environment. It has also been&amp;#xA0;adopted by Google Compute Engine. eBay, Yandex and a host of other companies are using Docker in production&amp;#xA0;environments.&lt;/p&gt;
+&lt;h3&gt;Docker&amp;#x2019;s Background&lt;/h3&gt;
+&lt;p&gt;Docker is the result of a pivot led by Solomon Hykes, who originally launched the company as DotCloud in 2009.&lt;/p&gt;
+&lt;p&gt;Originally designed as a platform as a service (PaaS), Docker showed promise for its flexible capabilities in providing developers with a service that supported multiple programming languages. But the competition from companies like Heroku and VMware&amp;#x2019;s Cloud Foundry made for a challenging market, further exacerbated by the lack of a widespread market acceptance for the benefits that PaaS providers offered.&lt;/p&gt;
+&lt;p&gt;But developers did need a way to move their code to cloud services in a lightweight way without the tax of heavy virtual machines that were difficult to move and required a degree of manual integration. The problem stemmed from the virtualization technology itself, which sits below the operating system. It virtualizes the server, not the app. And because of that, the operating system has to move in order to run the app wherever it might be transported. Once delivered, it has to be booted up and configured to run with the database and the rest of the stack that it depends on.&lt;/p&gt;
+&lt;p&gt;With Docker, the container sits on top of the operating system. The only thing that moves is the code. The developer does not have to boot and config. Instead, the container syncs with the cloud service.&lt;/p&gt;
+&lt;p&gt;Hykes launched the open-source effort last spring and the acceptance has been almost unprecedented.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;I have never seen a&amp;#xA0;technology&amp;#xA0;take off as quickly as Docker and get the type of&amp;#xA0;broad-based adoption that it is getting,&amp;#x201D; said Dan Scholnick of Trinity Ventures in a phone interview last week. &amp;#x201C;If you look at the absolute numbers &amp;#x2014; the number of Docker containers downloaded, the number of docker containers created &amp;#x2014; they are off the charts. What is more interesting, the adoption is not just coming from startup or certain types of companies. The adoption is across&amp;#xA0;companies&amp;#xA0;of all sizes and&amp;#xA0;industry verticals. It is a combination of high-growth and broad-based adoption that is really amazing.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;There really are no equivalents to Docker. There are alternatives to it but as a Linux container it is the most widely used in the market. Its deepest competition will stem from&amp;#xA0;VMware&amp;#xA0;and virtualization providers that&amp;#xA0;market to developers. And that&amp;#x2019;s not it. Cloud Foundry has its own form of a Linux container, which raises a question about how Docker fulfills its promise as a technology platform. The container is one part of the puzzle. It&amp;#x2019;s the foundation, but there are tool developers who can seize the opportunity to develop technologies that compete with Docker while also participating in its ecosystem.&lt;/p&gt;
+
+
+								
+							&lt;/div&gt;
+
+
+&lt;/div&gt;
+</description>
+<title>
+Docker Raises $15M
+</title>
+</item>
+<item>
+<author>
+Josh Constine
+</author>
+<link>
+http://techcrunch.com/2014/01/21/when-goods-not-good-enough/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
+
+
+&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/screen-shot-2014-01-21-at-11-34-53-am.png?w=738&quot; class=&quot;&quot;&gt;&lt;p&gt;&amp;#x201C;There&amp;#x2019;s a lot of glorification of startups and being a founder. People brush the failures under the rug, but that&amp;#x2019;s the worst thing you can do. You kind of have to face it head on,&amp;#x201D; says moot aka Christopher Poole. So rather than raise more money for his remix artist community &lt;a target=&quot;_blank&quot; href=&quot;https://canv.as/&quot;&gt;Canvas&lt;/a&gt; and game &lt;a target=&quot;_blank&quot; href=&quot;http://drawquest.com/&quot;&gt;DrawQuest&lt;/a&gt;, later today he&amp;#x2019;ll announce they&amp;#x2019;re closing. &amp;#x201C;No soft-landing, no aqui-hire, just &amp;#x2018;shutting down&amp;#x2019; shutting down.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;[Update: &lt;a target=&quot;_blank&quot; href=&quot;http://blog.drawquest.com/post/74083057195/sad-news-an-important-message-from-team-drawquest&quot;&gt;DrawQuest&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;http://blog.canv.as/post/74083065642/all-good-things-must-come-to-an-end&quot;&gt;Canvas&lt;/a&gt; have now published blog posts confirming this article and telling their users what's going on. Moot has also &lt;a target=&quot;_blank&quot; href=&quot;http://chrishateswriting.com/post/74083032842/today-my-startup-failed&quot;&gt;penned his own eulogy&lt;/a&gt; for his startup, and will be writing more in the future in hopes of educating other entrepreneurs.&lt;/p&gt;
+&lt;p&gt;In a touching part of his post-mortem, moot opens up saying &quot;Few in business will know the pain of what it means to fail as a venture-backed CEO. Not only do you fail your employees, your customers, and yourself, but you also fail your investors&amp;#x2014;partners who helped you bring your idea to life.&quot;]&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;tumblr_mwobaaiNwM1r613tzo1_r1_1280-1&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/tumblr_mwobaainwm1r613tzo1_r1_1280-1.png?w=557&amp;amp;h=224&quot; width=&quot;557&quot;&gt;&lt;/p&gt;
+&lt;p&gt;What&amp;#x2019;s different about this trip to the deadpool is that DrawQuest was actually doing relatively well. &lt;a href=&quot;http://techcrunch.com/2013/02/08/moots-new-ipad-app-drawquest-challenges-users-to-create-and-share-drawings/&quot;&gt;Launched a year ago&lt;/a&gt; to inspire people to take on daily bouts of creativity through drawing challenges, it reached 1.4 million downloads, 550,000 registered users, 400,000 monthly users, 25,000 daily users, and 8 million drawings.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;We&amp;#x2019;re doing better than 98% of products out there, especially in the mobile space.&amp;#x201D; says moot, but he admits that traction is&amp;#xA0;&amp;#x201D;Shy of that all important million (monthly users). Where we failed basically was one: to crack our growth engine. But importantly, we were never able to crack the business side of things in time.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Perhaps if DrawQuest was the plan all along, it could have survived long enough to grow and monetize, but it was on a short fuse. Moot originally&amp;#xA0;&lt;a href=&quot;http://techcrunch.com/2010/05/14/4chan-founder-moot-raises-625k-for-stealth-startup-canvas-networks/&quot;&gt;raised a $625,000 seed round&lt;/a&gt; led by Lerer Ventures in May 2010 to start DrawQuest&amp;#x2019;s predecesor &lt;a href=&quot;http://techcrunch.com/2011/01/31/4chan-founder-unleases-canvas-networks/&quot;&gt;Canvas, a media-centric forum&lt;/a&gt; where people could post, remix, and discuss visual Internet art. Then he &lt;a href=&quot;http://techcrunch.com/2011/06/13/union-square-ventures-leads-3m-round-in-4chan-founder-moots-new-startup-canvas/&quot;&gt;raised $3 million more in June 2011&lt;/a&gt;&amp;#xA0;in a Series A led by &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/union-square-ventures&quot;&gt;Union Square Ventures&amp;#x2019;&lt;/a&gt;&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/person/fred-wilson&quot;&gt;Fred Wilson&lt;/a&gt;&amp;#xA0;and joined by&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/sv-angel&quot;&gt;SV Angel&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/lerer-ventures&quot;&gt;Lerer Ventures&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/andreessen-horowitz&quot;&gt;Andreessen Horowitz&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/founder-collective&quot;&gt;Founder Collective&lt;/a&gt;, and&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/person/joshua-schachter&quot;&gt;Joshua Schachter.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It wasn&amp;#x2019;t until February 2013 that DrawQuest launched, and that tardy pivot left moot lagging far behind where he needed to be. &amp;#x201C;We built this app with less than half of our runway remaining. You have to do twice as much with half as much time. It&amp;#x2019;s really freaking hard.&amp;#x201D; For seed stage companies it might be easier, but proving you&amp;#x2019;re worth the valuation of a Series B upround requires incredible metrics that are tough to reach if you have audible late in the game.&amp;#xA0;&amp;#x201D;People trivialize pivoting but it&amp;#x2019;s truly a hail mary, and it&amp;#x2019;s rare that people can pull this off.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;drawquest-app-2-533x400&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/drawquest-app-2-533x400.jpg?w=533&amp;amp;h=400&quot; width=&quot;533&quot;&gt;&lt;/p&gt;
+&lt;p&gt;DrawQuest got some traction, but found that selling paint brushes in a drawing app is a lot harder than selling extra lives in Candy Crush. There&amp;#x2019;s just not the same emotional &amp;#x2018;I can&amp;#x2019;t play if I don&amp;#x2019;t pay&amp;#x2019; urgency. &amp;#x201C;I definitely have a new appreciation for game designers,&amp;#x201D; moot tells me.&lt;/p&gt;
+&lt;p&gt;With Canvas/DrawQuest&amp;#x2019;s headcount incurring serious costs, moot searched for someone to acquire his startup. &amp;#x201C;We approached a few companies and no one was buying what we were selling. [We were] never trying to win any awards with our brushstroke algorithms, so from an IP standpoint [there wasn't much to buy]. The nut that was interesting was the community, but it wasn&amp;#x2019;t really clear what exactly this community would do for their business.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;After running &amp;#x201C;Wild West of the Internet&amp;#x201D; image-sharing site 4chan since 2003, moot was actually looking forward to not being the head honcho for once. &amp;#x201C;I thought we were doing great work and we could continue to do great work as part of a bigger organization. I had kind of psyched myself up for that, but then&amp;#x2026;&amp;#x201D; no deal materialized.&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter size-large wp-image-944261&quot; alt=&quot;Chris Poole Photo&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/chris-poole-photo.jpg?w=640&amp;amp;h=427&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Ultimately we decided we wouldn&amp;#x2019;t go try to raise more money &amp;#x2013; it wasn&amp;#x2019;t really on the table because we just hadn&amp;#x2019;t created enough value&amp;#x201D; says moot. That&amp;#x2019;s a rare admission of failure in the success theater startup. Most founders trumpet their funding rounds and growth milestones but slink away when things go pear-shaped. Poole&amp;#x2019;s willingness to be humble and transparent is admirable, and could increase willingness of investors to back his future projects.&lt;/p&gt;
+&lt;p&gt;So today he&amp;#x2019;ll announce that Canvas is shutting down in the next few days, and users will get an email with a link to download all their content.&lt;/p&gt;
+&lt;p&gt;As for DrawQuest, moot says &amp;#x201C;I&amp;#x2019;m going to try to keep the servers up as long as I can. As of today all of the company&amp;#x2019;s employees are going their separate ways&amp;#x2026;but I&amp;#x2019;m hoping that between in-app purchases and whatever money is in the bank we&amp;#x2019;d be able to keep the service alive for a bit longer. We think it makes sense to pay our AWS bill until we&amp;#x2019;re completely out of money which will hopefully be a few months.&amp;#x201D; Perhaps even longer as moot dreams that maybe &amp;#x201C;some white knight comes in and says &amp;#x2018;I want to chip in for the server costs&amp;#x2019;.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;In DrawQuest&amp;#x2019;s goodbye post, moot writes &amp;#x201C;We hope you&amp;#x2019;ll all continue to spread the importance of daily creativity, and inspire those around you to draw more often. While DrawQuest may not be around next year, you all will be, and we hope you&amp;#x2019;ll leave the world a better, more creative place.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;And as for moot himself?:&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span&gt; &amp;#x201C;I&amp;#x2019;m a free agent for the first time in over 4 years because I was in college when I dropped out to start this comapny. I&amp;#x2019;m definitely not trying to start another company anytime soon. I need to decompress and refelect on what I&amp;#x2019;ve learned and take some time to myself because it&amp;#x2019;s been a bit of an emotional rollecoaster. You start to appreciate why the best investors are the best investors. In our final hour everyone was so supportive. It&amp;#x2019;s made the difference between me being an emotional wreck and me being in as good of a place emotionally as you can be when you fail.&amp;#xA0;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Most companies fail, and unfortunately we are one of those companies. Those are the odds.&amp;#x201D;&lt;/p&gt;&lt;/blockquote&gt;
+
+
+								
+							&lt;/div&gt;
+
+
+&lt;/div&gt;
+</description>
+<title>
+With Traction But Out Of Cash, 4chan Founder Kills Off Canvas/DrawQuest
+</title>
+</item>
+<item>
+<link>
+item?id=7100394
+</link>
+<description>
+
+</description>
+<title>
+50 comments
 </title>
 </item>
 </channel>
