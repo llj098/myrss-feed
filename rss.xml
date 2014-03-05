@@ -15,375 +15,6 @@ myread
 </description>
 <item>
 <link>
-https://github.com/ondras/my-mind
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
-          
-
-
-
-
-
-
-
-  &lt;a href=&quot;https://github.com/ondras/my-mind&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
-  &lt;span class=&quot;language-color&quot;&gt;JavaScript&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;CSS&lt;/span&gt;
-  &lt;/a&gt;
-
-
-
-
-
-
-
-&lt;a href=&quot;https://github.com/ondras/my-mind/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
-&lt;div class=&quot;bubble files-bubble&quot;&gt;
-
-
-  
-
-  &lt;table class=&quot;files&quot;&gt;
-
-    
-&lt;tbody class=&quot;&quot;&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/css&quot; class=&quot;js-directory-link&quot; id=&quot;c7a628cba22e28eb17b5f5c6ae2a266a-d4563ab0d3141b6daa464ee04993fc9c72fef4f9&quot; title=&quot;css&quot;&gt;css&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e298f5000d95eb7bc559ee7d56339e4d494ad33d&quot; class=&quot;message&quot; title=&quot;better font&quot;&gt;better font&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-24T04:54:33-08:00&quot; title=&quot;2014-01-24 04:54:33&quot;&gt;January 24, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/examples&quot; class=&quot;js-directory-link&quot; id=&quot;bfebe34154a0dfd9fc7b447fc9ed74e9-a5fddc9823ca2c29fc755d21d7dab6309f25d382&quot; title=&quot;examples&quot;&gt;examples&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/782e656a4220ff94cff2b37aaacbd178f6b68afb&quot; class=&quot;message&quot; title=&quot;fixes, tuning&quot;&gt;fixes, tuning&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-15T03:46:27-08:00&quot; title=&quot;2014-01-15 03:46:27&quot;&gt;January 15, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/logo&quot; class=&quot;js-directory-link&quot; id=&quot;96d6f2e7e1f705ab5e59c84a6dc009b2-d3ae1c87f6a57951f2e01bb62025322870b55c09&quot; title=&quot;logo&quot;&gt;logo&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/5ae9164f86210810cd4b625c57173f460ccef271&quot; class=&quot;message&quot; title=&quot;icons&quot;&gt;icons&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T03:31:45-08:00&quot; title=&quot;2014-01-21 03:31:45&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/tree/master/src&quot; class=&quot;js-directory-link&quot; id=&quot;25d902c24283ab8cfbac54dfa101ad31-44cbb8753b9ba5bf1f68ae323923f08d8a970fc8&quot; title=&quot;src&quot;&gt;src&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/47215ceec70ba7c529012e2aa63ea5f2acbe321d&quot; class=&quot;message&quot; title=&quot;beforeunload event, fixes #33&quot;&gt;beforeunload event, fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/33&quot; class=&quot;issue-link&quot; title=&quot;Navigating away causes loss of work without warning&quot;&gt;#33&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-23T05:18:42-08:00&quot; title=&quot;2014-01-23 05:18:42&quot;&gt;January 23, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/LICENSE&quot; class=&quot;js-directory-link&quot; id=&quot;9879d6db96fd29134fc802214163b95a-a08eb4848b8bb74c711e81a6e397bc65d6349620&quot; title=&quot;LICENSE&quot;&gt;LICENSE&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/6ed5cda10de737bb59701a449be5b249735b0791&quot; class=&quot;message&quot; title=&quot;Create LICENSE&quot;&gt;Create LICENSE&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-19T11:19:43-08:00&quot; title=&quot;2014-01-19 11:19:43&quot;&gt;January 19, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/Makefile&quot; class=&quot;js-directory-link&quot; id=&quot;b67911656ef5d18c4ae36cb6741b7965-ad7f75c1f02c6e0966eb5272dd1c968ea8358127&quot; title=&quot;Makefile&quot;&gt;Makefile&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/3b344910a869e3cb80b88baf0c50362a207353b4&quot; class=&quot;message&quot; title=&quot;separated mouse control, wheel zoom (fixes #11)&quot;&gt;separated mouse control, wheel zoom (fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/11&quot; class=&quot;issue-link&quot; title=&quot;Mousewheel to zoom&quot;&gt;#11&lt;/a&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/3b344910a869e3cb80b88baf0c50362a207353b4&quot; class=&quot;message&quot; title=&quot;separated mouse control, wheel zoom (fixes #11)&quot;&gt;)&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-16T06:57:56-08:00&quot; title=&quot;2014-01-16 06:57:56&quot;&gt;January 16, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/README.md&quot; class=&quot;js-directory-link&quot; id=&quot;04c6e90faac2675aa89e2176d2eec7d8-50eac3905346efc310eb292c4a69409895b3734c&quot; title=&quot;README.md&quot;&gt;README.md&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/1afd85c99c135f2cdf140e549ac39b5b76489754&quot; class=&quot;message&quot; title=&quot;Update README.md&quot;&gt;Update README.md&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-22T22:52:57-08:00&quot; title=&quot;2014-01-22 22:52:57&quot;&gt;January 22, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/favicon.ico&quot; class=&quot;js-directory-link&quot; id=&quot;8af3a74ede48e250ceb935c026242483-df5920ef3d48392c30046cafe0deb5d7c47519fa&quot; title=&quot;favicon.ico&quot;&gt;favicon.ico&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e4292af93fe21592590f2b68c572fc51876895c6&quot; class=&quot;message&quot; title=&quot;favicon&quot;&gt;favicon&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T04:37:08-08:00&quot; title=&quot;2014-01-21 04:37:08&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/github.png&quot; class=&quot;js-directory-link&quot; id=&quot;25d67ea239ce1c1d4a909d669644546d-8b25551a97921681334176ee143b41510a117d86&quot; title=&quot;github.png&quot;&gt;github.png&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/e3aa2d7b9ff89d504669c0707bd7188af2f33ec4&quot; class=&quot;message&quot; title=&quot;dragdrop, github&quot;&gt;dragdrop, github&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-14T06:29:07-08:00&quot; title=&quot;2014-01-14 06:29:07&quot;&gt;January 14, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/index.html&quot; class=&quot;js-directory-link&quot; id=&quot;eacf331f0ffc35d4b482f1d15a887d3b-729c5726afa78af9c85535aaedfefb10f0b10c6e&quot; title=&quot;index.html&quot;&gt;index.html&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/96559d93ca495e7694b226ee10191c2be86185b1&quot; class=&quot;message&quot; title=&quot;styling cleanup&quot;&gt;styling cleanup&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-22T03:57:34-08:00&quot; title=&quot;2014-01-22 03:57:34&quot;&gt;January 22, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/my-mind.js&quot; class=&quot;js-directory-link&quot; id=&quot;638ce29b5cdf4e8ff86c14c995753d6e-940506696e34d34b84b69b41801d7c6ba52806c1&quot; title=&quot;my-mind.js&quot;&gt;my-mind.js&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/47215ceec70ba7c529012e2aa63ea5f2acbe321d&quot; class=&quot;message&quot; title=&quot;beforeunload event, fixes #33&quot;&gt;beforeunload event, fixes&lt;/a&gt; &lt;a href=&quot;https://github.com/ondras/my-mind/issues/33&quot; class=&quot;issue-link&quot; title=&quot;Navigating away causes loss of work without warning&quot;&gt;#33&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-23T05:18:42-08:00&quot; title=&quot;2014-01-23 05:18:42&quot;&gt;January 23, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/blob/master/screenshot.png&quot; class=&quot;js-directory-link&quot; id=&quot;768cd605bc77a80d4cdc7b3fd552f803-59f8fb31c3b4fb41a0fc926af0d82c8bd710739d&quot; title=&quot;screenshot.png&quot;&gt;screenshot.png&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/ondras/my-mind/commit/75c5449969d72df29c57e0209c99849dc2ed63ad&quot; class=&quot;message&quot; title=&quot;test&quot;&gt;test&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-21T00:48:08-08:00&quot; title=&quot;2014-01-21 00:48:08&quot;&gt;January 21, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-
-  &lt;/table&gt;
-&lt;/div&gt;
-
-  
-
-
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-</description>
-<title>
-My Mind: A new web-based mind map editor
-</title>
-</item>
-<item>
-<link>
-http://www.rescale.com/careers/
-</link>
-<description>
-&lt;div&gt;
-  
-  
-  
-  
-  
-
-  
-  
-  
-&lt;div class=&quot;company-carousel&quot; id=&quot;carouselCareers&quot;&gt;
-  &lt;div class=&quot;bg-black-container&quot;&gt;
-    &lt;div class=&quot;bg-black-80&quot; id=&quot;bgCareers&quot;&gt;
-      &lt;h3&gt;Careers at Rescale&lt;/h3&gt;
-      &lt;div id=&quot;whatWeDo&quot;&gt;
-        &lt;p&gt;At Rescale, you will help the world's leading engineers and scientists develop the next generation of disruptive innovations. Our team members have the unique opportunity to learn and contribute to solving some of the world's most challenging problems, from space flight to genetic engineering and everything in between.&lt;/p&gt;
-        &lt;p&gt;We are computer scientists, domain experts, and industry thought leaders who are eager to work in teams with the brightest minds and most talented engineers. Located in the heart of San Francisco, we offer an exciting and vibrant work environment with competitive compensation and benefits.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;flexslider&quot;&gt;
-    &lt;ul class=&quot;slides&quot;&gt;
-      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers01.846fa3dc6e88.jpg&quot;&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers02.856d93959ec9.jpg&quot;&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;img src=&quot;https://prod-rescale-web.s3.amazonaws.com/img/careers/bg-careers03.667175911837.jpg&quot;&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;main-container&quot;&gt;
-  &lt;div class=&quot;main wrapper clearfix&quot;&gt;
-    &lt;div id=&quot;contentCareers&quot; class=&quot;companyWrapper&quot;&gt;
-      &lt;h3 class=&quot;company-section-title&quot;&gt;Join the Team&lt;/h3&gt;
-      
-      
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;main-container border-bottom clearfix&quot;&gt;
-  &lt;div class=&quot;main wrapper clearfix&quot;&gt;
-    &lt;h3 class=&quot;company-section-title&quot;&gt;Benefits of Working at Rescale&lt;/h3&gt;
-    
-  &lt;/div&gt;
-&lt;/div&gt;
-
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-&lt;/div&gt;
-
-</description>
-<title>
-Rescale (YC W12) is hiring for Sales and Engineering positions
-</title>
-</item>
-<item>
-<author>
-Alex Williams
-</author>
-<link>
-http://techcrunch.com/2014/01/21/docker-raises-15m-for-popular-open-source-platform-designed-for-developers-to-build-apps-in-the-cloud/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
-
-
-&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/dockerimage.png?w=400&quot; class=&quot;article-img-feature&quot;&gt;&lt;p&gt;The shift to scale out architectures and an app-centric culture has turned out well for &lt;a target=&quot;_blank&quot; href=&quot;http://www.docker.io/&quot;&gt;Docker&lt;/a&gt; and its lightweight open-source &amp;#x201C;container&amp;#x201D; technology designed for developers to quickly move code to the cloud.&lt;/p&gt;
-&lt;p&gt;That&amp;#x2019;s evident in today&amp;#x2019;s news that the company has raised $15 million in a Series B round led by &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/greylock&quot;&gt;Greylock Partners&lt;/a&gt;, with minority participation from &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/insight-venture-partners&quot;&gt;Insight Venture Partners&lt;/a&gt; and existing investors &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/benchmark-2&quot;&gt;Benchmark Capital&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/benchmark-2&quot;&gt;Trinity Ventures&lt;/a&gt;. Also participating is Yahoo! Co-Founder Jerry Yang, who has participated in previous rounds.&lt;/p&gt;
-&lt;p&gt;Docker will use the funding to push toward the general availability of the Docker environment, develop commercial services that pair with the open-source technology and build a team to support the growing community.&lt;/p&gt;
-&lt;p&gt;The technology path is similar to the one VMware followed in its early days when IT managed their corporate-owned infrastructure. These were state-of-the-art data centers that had to be optimized to run enterprise software. For these IT managers, VMware became a critical part of the equation so multiple virtual machines could run on its hypervisor and server environment. VMware is lauded for the excellent job it did in managing its technology so the end-user was not impacted and the IT manager could manage the infrastructure effectively.&lt;/p&gt;
-&lt;p&gt;The similarity to VMware in its early days and the excitement that Docker has generated made it an attractive investment, said Jerry Chen, a general partner at Greylock who joined the venture capital firm in August. It is Chen&amp;#x2019;s first investment since joining Greylock.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;One of the things we learned at VMware is be as&amp;#xA0;frictionless&amp;#xA0;as&amp;#xA0;possible,&amp;#x201D; Chen&amp;#xA0;said&amp;#xA0;in a phone interview today. &amp;#x201C;Docker has that ability as well.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;Docker also can be scaled from scratch. It can grow to multiple apps or be used on public or private servers, Chen said. And it can be scaled out in seconds, moved anywhere and all done without having to re-configure all over again.&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;&amp;#x201C;Docker is the right tech to fit the rapid updates,&amp;#x201D; Chen said.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Docker faces the challenge of making its technology easy-to-use with features that make it effective for a developer or a DevOps professional. For this new DevOps pro, Docker has to consider the management and orchestration of apps that are continuously updated using the Docker environment. For example, Docker will develop both public and private registries for developers to store their containers. It also plans to build management and orchestration tools that are needed as people and their organizations manage more and more Docker containers.&lt;/p&gt;
-&lt;p&gt;And then there is the community, which continues to grow at scale. Docker is now one of the world&amp;#x2019;s fastest-growing, open-source efforts. There have been more than 9,000 stars given to Docker on &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/dotcloud/docker&quot;&gt;GitHub&lt;/a&gt; as well as more than 1,320 forks. To manage that growing community will take investment that the company will need to manage with product development.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter size-large wp-image-944544&quot; alt=&quot;Contributors_to_dotcloud_docker&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/contributors_to_dotcloud_docker.png?w=640&amp;amp;h=234&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
-&lt;p&gt;It&amp;#x2019;s that community&amp;#xA0;that&amp;#xA0;helped Docker gain acceptance&amp;#xA0;with&amp;#xA0;Red Hat,&amp;#xA0;which&amp;#xA0;is &lt;a href=&quot;http://techcrunch.com/2013/09/19/dotcloud-pivots-and-wins-big-with-docker-the-cloud-service-now-part-of-red-hat-openshift/&quot;&gt;integrating it into OpenShift&lt;/a&gt;, its PaaS&amp;#xA0;environment. It has also been&amp;#xA0;adopted by Google Compute Engine. eBay, Yandex and a host of other companies are using Docker in production&amp;#xA0;environments.&lt;/p&gt;
-&lt;h3&gt;Docker&amp;#x2019;s Background&lt;/h3&gt;
-&lt;p&gt;Docker is the result of a pivot led by Solomon Hykes, who originally launched the company as DotCloud in 2009.&lt;/p&gt;
-&lt;p&gt;Originally designed as a platform as a service (PaaS), Docker showed promise for its flexible capabilities in providing developers with a service that supported multiple programming languages. But the competition from companies like Heroku and VMware&amp;#x2019;s Cloud Foundry made for a challenging market, further exacerbated by the lack of a widespread market acceptance for the benefits that PaaS providers offered.&lt;/p&gt;
-&lt;p&gt;But developers did need a way to move their code to cloud services in a lightweight way without the tax of heavy virtual machines that were difficult to move and required a degree of manual integration. The problem stemmed from the virtualization technology itself, which sits below the operating system. It virtualizes the server, not the app. And because of that, the operating system has to move in order to run the app wherever it might be transported. Once delivered, it has to be booted up and configured to run with the database and the rest of the stack that it depends on.&lt;/p&gt;
-&lt;p&gt;With Docker, the container sits on top of the operating system. The only thing that moves is the code. The developer does not have to boot and config. Instead, the container syncs with the cloud service.&lt;/p&gt;
-&lt;p&gt;Hykes launched the open-source effort last spring and the acceptance has been almost unprecedented.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;I have never seen a&amp;#xA0;technology&amp;#xA0;take off as quickly as Docker and get the type of&amp;#xA0;broad-based adoption that it is getting,&amp;#x201D; said Dan Scholnick of Trinity Ventures in a phone interview last week. &amp;#x201C;If you look at the absolute numbers &amp;#x2014; the number of Docker containers downloaded, the number of docker containers created &amp;#x2014; they are off the charts. What is more interesting, the adoption is not just coming from startup or certain types of companies. The adoption is across&amp;#xA0;companies&amp;#xA0;of all sizes and&amp;#xA0;industry verticals. It is a combination of high-growth and broad-based adoption that is really amazing.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;There really are no equivalents to Docker. There are alternatives to it but as a Linux container it is the most widely used in the market. Its deepest competition will stem from&amp;#xA0;VMware&amp;#xA0;and virtualization providers that&amp;#xA0;market to developers. And that&amp;#x2019;s not it. Cloud Foundry has its own form of a Linux container, which raises a question about how Docker fulfills its promise as a technology platform. The container is one part of the puzzle. It&amp;#x2019;s the foundation, but there are tool developers who can seize the opportunity to develop technologies that compete with Docker while also participating in its ecosystem.&lt;/p&gt;
-
-
-								
-							&lt;/div&gt;
-
-
-&lt;/div&gt;
-</description>
-<title>
-Docker Raises $15M
-</title>
-</item>
-<item>
-<author>
-Josh Constine
-</author>
-<link>
-http://techcrunch.com/2014/01/21/when-goods-not-good-enough/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;article-entry text&quot;&gt;
-
-
-&lt;img src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/screen-shot-2014-01-21-at-11-34-53-am.png?w=738&quot; class=&quot;&quot;&gt;&lt;p&gt;&amp;#x201C;There&amp;#x2019;s a lot of glorification of startups and being a founder. People brush the failures under the rug, but that&amp;#x2019;s the worst thing you can do. You kind of have to face it head on,&amp;#x201D; says moot aka Christopher Poole. So rather than raise more money for his remix artist community &lt;a target=&quot;_blank&quot; href=&quot;https://canv.as/&quot;&gt;Canvas&lt;/a&gt; and game &lt;a target=&quot;_blank&quot; href=&quot;http://drawquest.com/&quot;&gt;DrawQuest&lt;/a&gt;, later today he&amp;#x2019;ll announce they&amp;#x2019;re closing. &amp;#x201C;No soft-landing, no aqui-hire, just &amp;#x2018;shutting down&amp;#x2019; shutting down.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;[Update: &lt;a target=&quot;_blank&quot; href=&quot;http://blog.drawquest.com/post/74083057195/sad-news-an-important-message-from-team-drawquest&quot;&gt;DrawQuest&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;http://blog.canv.as/post/74083065642/all-good-things-must-come-to-an-end&quot;&gt;Canvas&lt;/a&gt; have now published blog posts confirming this article and telling their users what's going on. Moot has also &lt;a target=&quot;_blank&quot; href=&quot;http://chrishateswriting.com/post/74083032842/today-my-startup-failed&quot;&gt;penned his own eulogy&lt;/a&gt; for his startup, and will be writing more in the future in hopes of educating other entrepreneurs.&lt;/p&gt;
-&lt;p&gt;In a touching part of his post-mortem, moot opens up saying &quot;Few in business will know the pain of what it means to fail as a venture-backed CEO. Not only do you fail your employees, your customers, and yourself, but you also fail your investors&amp;#x2014;partners who helped you bring your idea to life.&quot;]&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;tumblr_mwobaaiNwM1r613tzo1_r1_1280-1&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/tumblr_mwobaainwm1r613tzo1_r1_1280-1.png?w=557&amp;amp;h=224&quot; width=&quot;557&quot;&gt;&lt;/p&gt;
-&lt;p&gt;What&amp;#x2019;s different about this trip to the deadpool is that DrawQuest was actually doing relatively well. &lt;a href=&quot;http://techcrunch.com/2013/02/08/moots-new-ipad-app-drawquest-challenges-users-to-create-and-share-drawings/&quot;&gt;Launched a year ago&lt;/a&gt; to inspire people to take on daily bouts of creativity through drawing challenges, it reached 1.4 million downloads, 550,000 registered users, 400,000 monthly users, 25,000 daily users, and 8 million drawings.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;We&amp;#x2019;re doing better than 98% of products out there, especially in the mobile space.&amp;#x201D; says moot, but he admits that traction is&amp;#xA0;&amp;#x201D;Shy of that all important million (monthly users). Where we failed basically was one: to crack our growth engine. But importantly, we were never able to crack the business side of things in time.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;Perhaps if DrawQuest was the plan all along, it could have survived long enough to grow and monetize, but it was on a short fuse. Moot originally&amp;#xA0;&lt;a href=&quot;http://techcrunch.com/2010/05/14/4chan-founder-moot-raises-625k-for-stealth-startup-canvas-networks/&quot;&gt;raised a $625,000 seed round&lt;/a&gt; led by Lerer Ventures in May 2010 to start DrawQuest&amp;#x2019;s predecesor &lt;a href=&quot;http://techcrunch.com/2011/01/31/4chan-founder-unleases-canvas-networks/&quot;&gt;Canvas, a media-centric forum&lt;/a&gt; where people could post, remix, and discuss visual Internet art. Then he &lt;a href=&quot;http://techcrunch.com/2011/06/13/union-square-ventures-leads-3m-round-in-4chan-founder-moots-new-startup-canvas/&quot;&gt;raised $3 million more in June 2011&lt;/a&gt;&amp;#xA0;in a Series A led by &lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/union-square-ventures&quot;&gt;Union Square Ventures&amp;#x2019;&lt;/a&gt;&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/person/fred-wilson&quot;&gt;Fred Wilson&lt;/a&gt;&amp;#xA0;and joined by&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/sv-angel&quot;&gt;SV Angel&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/lerer-ventures&quot;&gt;Lerer Ventures&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/andreessen-horowitz&quot;&gt;Andreessen Horowitz&lt;/a&gt;,&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/financial-organization/founder-collective&quot;&gt;Founder Collective&lt;/a&gt;, and&amp;#xA0;&lt;a target=&quot;_blank&quot; href=&quot;http://www.crunchbase.com/person/joshua-schachter&quot;&gt;Joshua Schachter.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It wasn&amp;#x2019;t until February 2013 that DrawQuest launched, and that tardy pivot left moot lagging far behind where he needed to be. &amp;#x201C;We built this app with less than half of our runway remaining. You have to do twice as much with half as much time. It&amp;#x2019;s really freaking hard.&amp;#x201D; For seed stage companies it might be easier, but proving you&amp;#x2019;re worth the valuation of a Series B upround requires incredible metrics that are tough to reach if you have audible late in the game.&amp;#xA0;&amp;#x201D;People trivialize pivoting but it&amp;#x2019;s truly a hail mary, and it&amp;#x2019;s rare that people can pull this off.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;drawquest-app-2-533x400&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/drawquest-app-2-533x400.jpg?w=533&amp;amp;h=400&quot; width=&quot;533&quot;&gt;&lt;/p&gt;
-&lt;p&gt;DrawQuest got some traction, but found that selling paint brushes in a drawing app is a lot harder than selling extra lives in Candy Crush. There&amp;#x2019;s just not the same emotional &amp;#x2018;I can&amp;#x2019;t play if I don&amp;#x2019;t pay&amp;#x2019; urgency. &amp;#x201C;I definitely have a new appreciation for game designers,&amp;#x201D; moot tells me.&lt;/p&gt;
-&lt;p&gt;With Canvas/DrawQuest&amp;#x2019;s headcount incurring serious costs, moot searched for someone to acquire his startup. &amp;#x201C;We approached a few companies and no one was buying what we were selling. [We were] never trying to win any awards with our brushstroke algorithms, so from an IP standpoint [there wasn't much to buy]. The nut that was interesting was the community, but it wasn&amp;#x2019;t really clear what exactly this community would do for their business.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;After running &amp;#x201C;Wild West of the Internet&amp;#x201D; image-sharing site 4chan since 2003, moot was actually looking forward to not being the head honcho for once. &amp;#x201C;I thought we were doing great work and we could continue to do great work as part of a bigger organization. I had kind of psyched myself up for that, but then&amp;#x2026;&amp;#x201D; no deal materialized.&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter size-large wp-image-944261&quot; alt=&quot;Chris Poole Photo&quot; src=&quot;http://tctechcrunch2011.files.wordpress.com/2014/01/chris-poole-photo.jpg?w=640&amp;amp;h=427&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Ultimately we decided we wouldn&amp;#x2019;t go try to raise more money &amp;#x2013; it wasn&amp;#x2019;t really on the table because we just hadn&amp;#x2019;t created enough value&amp;#x201D; says moot. That&amp;#x2019;s a rare admission of failure in the success theater startup. Most founders trumpet their funding rounds and growth milestones but slink away when things go pear-shaped. Poole&amp;#x2019;s willingness to be humble and transparent is admirable, and could increase willingness of investors to back his future projects.&lt;/p&gt;
-&lt;p&gt;So today he&amp;#x2019;ll announce that Canvas is shutting down in the next few days, and users will get an email with a link to download all their content.&lt;/p&gt;
-&lt;p&gt;As for DrawQuest, moot says &amp;#x201C;I&amp;#x2019;m going to try to keep the servers up as long as I can. As of today all of the company&amp;#x2019;s employees are going their separate ways&amp;#x2026;but I&amp;#x2019;m hoping that between in-app purchases and whatever money is in the bank we&amp;#x2019;d be able to keep the service alive for a bit longer. We think it makes sense to pay our AWS bill until we&amp;#x2019;re completely out of money which will hopefully be a few months.&amp;#x201D; Perhaps even longer as moot dreams that maybe &amp;#x201C;some white knight comes in and says &amp;#x2018;I want to chip in for the server costs&amp;#x2019;.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;In DrawQuest&amp;#x2019;s goodbye post, moot writes &amp;#x201C;We hope you&amp;#x2019;ll all continue to spread the importance of daily creativity, and inspire those around you to draw more often. While DrawQuest may not be around next year, you all will be, and we hope you&amp;#x2019;ll leave the world a better, more creative place.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;And as for moot himself?:&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span&gt; &amp;#x201C;I&amp;#x2019;m a free agent for the first time in over 4 years because I was in college when I dropped out to start this comapny. I&amp;#x2019;m definitely not trying to start another company anytime soon. I need to decompress and refelect on what I&amp;#x2019;ve learned and take some time to myself because it&amp;#x2019;s been a bit of an emotional rollecoaster. You start to appreciate why the best investors are the best investors. In our final hour everyone was so supportive. It&amp;#x2019;s made the difference between me being an emotional wreck and me being in as good of a place emotionally as you can be when you fail.&amp;#xA0;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Most companies fail, and unfortunately we are one of those companies. Those are the odds.&amp;#x201D;&lt;/p&gt;&lt;/blockquote&gt;
-
-
-								
-							&lt;/div&gt;
-
-
-&lt;/div&gt;
-</description>
-<title>
-With Traction But Out Of Cash, 4chan Founder Kills Off Canvas/DrawQuest
-</title>
-</item>
-<item>
-<link>
 item?id=7100394
 </link>
 <description>
@@ -391,6 +22,249 @@ item?id=7100394
 </description>
 <title>
 50 comments
+</title>
+</item>
+<item>
+<author>
+Walter Bright
+</author>
+<link>
+http://www.drdobbs.com/architecture-and-design/so-you-want-to-write-your-own-language/240165488
+</link>
+<description>
+&lt;div&gt;&lt;article&gt;
+	&lt;p&gt;My career has been all about designing programming languages and writing compilers for them. This has been a great joy and source of satisfaction to me, and perhaps I can offer some observations about what you're in for if you decide to design and implement a professional programming language. This is actually a book-length topic, so I'll just hit on a few highlights here and avoid topics well covered elsewhere.&lt;/p&gt;
+&lt;h3&gt;Work&lt;/h3&gt;
+&lt;p&gt;First off, you're in for a lot of work&amp;#x2026;years of work&amp;#x2026;most of which will be wandering in the desert. The odds of success are heavily stacked against you. If you are not strongly self-motivated to do this, it isn't going to happen. If you need validation and encouragement from others, it isn't going to happen.&lt;/p&gt;
+&lt;p&gt;Fortunately, embarking on such a project is not major dollar investment; it won't break you if you fail. Even if you do fail, depending on how far the project got, it can look pretty good on your r&amp;#xE9;sum&amp;#xE9; and be good for your career.&lt;/p&gt;
+&lt;h3&gt;Design&lt;/h3&gt;
+&lt;p&gt;One thing abundantly clear is that syntax matters. It matters an awful lot. It's like the styling on a car &amp;#x97; if the styling is not appealing, it simply doesn't matter how hot the performance is. The syntax needs to be something your target audience will like.&lt;/p&gt;
+&lt;p&gt;Trying to go with something they've not seen before will make language adoption a much tougher sell.&lt;/p&gt;
+&lt;p&gt;I like to go with a mix of familiar syntax and aesthetic beauty. It's got to look good on the screen. After all, you're going to spend plenty of time looking at it. If it looks awkward, clumsy, or ugly, it will  taint the language.&lt;/p&gt;
+&lt;p&gt;There are a few things I (perhaps surprisingly) suggest should not be considerations. These are false gods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Minimizing keystrokes. Maybe this mattered when programmers used paper tape, and it matters for small languages like bash or awk. For larger applications, much more programming time is spent reading than writing, so reducing keystrokes shouldn't be a goal in itself. Of course, I'm not suggesting that large amounts of boilerplate is a good idea.&lt;/li&gt;
+&lt;li&gt;Easy parsing. It isn't hard to write parsers with arbitrary lookahead. The looks of the language shouldn't be compromised to save a few lines of code in the parser. Remember, you'll spend a lot of time staring at the code. That comes first. As mentioned below, it still should be a context-free grammar.&lt;/li&gt;
+&lt;li&gt;Minimizing the number of keywords. This metric is just silly, but I see it cropping up repeatedly. There are a million words in the English language, I don't think there is any looming shortage. Just use your good judgment.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;Things that are true gods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Context-free grammars. What this really means is the code should be parsable without having to look things up in a symbol table. C++ is famously not a context-free grammar. A context-free grammar, besides making things a lot simpler, means that IDEs can do syntax highlighting without integrating most of a compiler front end. As a result, third-party tools become much more likely to exist.&lt;/li&gt;
+&lt;li&gt;Redundancy. Yes, the grammar should be redundant. You've all heard people say that statement terminating &lt;code&gt;;&lt;/code&gt; are not necessary because the compiler can figure it out. That's true &amp;#x97; but such non-redundancy makes for incomprehensible error messages. Consider a syntax with no redundancy: Any random sequence of characters would then be a valid program. No error messages are even possible. A good syntax needs redundancy in order to diagnose errors and give good error messages.&lt;/li&gt;
+&lt;li&gt;Tried and true. Absent a very strong reason, it's best to stick with tried and true grammatical forms for familiar constructs. It really cuts the learning curve for the language and will increase adoption rates. Think of how people will hate the language if it swaps the operator precedence of &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;*&lt;/code&gt;. Save the divergence for features not generally seen before, which also signals the user that this is new.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;As always, these principles should not be taken as dicta. Use good judgment. Any language design principle blindly followed leads to disaster. The principles are rarely orthogonal and frequently conflict. It's a lot like designing a house &amp;#x97; making the master closet bigger means the master bedroom gets smaller. It's all about finding the right balance.&lt;/p&gt;
+&lt;p&gt;Getting past the syntax, the meat of the language will be the semantic processing, which is where meaning is assigned to the syntactical constructs. This is where you'll be spending the vast bulk of design and implementation. It's much like the organs in your body &amp;#x97; they are  unseen and we don't think about them unless they are going wrong. There won't be a lot of glory in the semantic work, but in it will be the whole point of the language.&lt;/p&gt;
+&lt;p&gt;Once through the semantic phase, the compiler does optimizations and then code generation  &amp;#x97; collectively called the &quot;back end.&quot; These two passes are very challenging and complicated. Personally, I love working with this stuff, and grumble that I've got to spend time on other issues. But unless you really like it, and it takes a fairly unhinged programmer to delight in the arcana of such things, I recommend taking the common sense approach and using an existing back end, such as the JVM, CLR, gcc, or LLVM. (Of course, I can always set you up with the glorious Digital Mars back end!)&lt;/p&gt;
+&lt;h3&gt;Implementation&lt;/h3&gt;
+&lt;p&gt;How best to implement it? I hope I can at least set you off in the right direction. The first tool that beginning compiler writers often reach for is regex. Regex is just the wrong tool for lexing and parsing. Rob Pike &lt;a href=&quot;http://commandcenter.blogspot.com/2011/08/regular-expressions-in-lexing-and.html&quot;&gt;explains why&lt;/a&gt; reasonably well. I'll close that with the famous quote from Jamie Zawinski:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&quot;Some people, when confronted with a problem, think 'I know, I'll use regular expressions.' Now they have two problems.&quot;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Somewhat more controversial, I wouldn't bother wasting time with lexer or parser generators and other so-called &quot;compiler compilers.&quot; They're a waste of time. Writing a lexer and parser is a tiny percentage of the job of writing a compiler. Using a generator will take up about as much time as writing one by hand, and it will marry you to the generator (which matters when porting the compiler to a new platform). And generators also have the unfortunate reputation of emitting lousy error messages.&lt;/p&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+So, You Want To Write Your Own Language? (Dr. Dobbs article by Walter Bright)
+</title>
+</item>
+<item>
+<author>
+Marco Arment
+</author>
+<link>
+http://www.marco.org/2014/01/22/sunrise-asks-for-apple-id-password
+</link>
+<description>
+&lt;div&gt;&lt;section id=&quot;posts&quot;&gt;
+
+            
+
+
+                                                &lt;article&gt;
+                        
+                    
+                        &lt;p&gt;Apple&amp;#x2019;s currently featuring the &lt;a href=&quot;http://www.sunrise.am&quot;&gt;Sunrise&lt;/a&gt; app in the App Store.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.marco.org/media/2014/01/sunrise-feature.png&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Upon first launch, Sunrise invites you to create an account, then asks you to add a calendar. The first option, &amp;#x201C;iCloud Calendar&amp;#x201D;, brings you to a screen where the Sunrise app itself, in its native interface and code, solicits your Apple ID (iCloud) email address and password.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.marco.org/media/2014/01/sunrise.png&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;This is apparently OK.&lt;/p&gt;
+
+&lt;p&gt;I first saw &lt;a href=&quot;https://alpha.app.net/mrgan/post/19586859&quot;&gt;Neven Mrgan point this out&lt;/a&gt; (good replies there), with some additional commentary from &lt;a href=&quot;http://mjtsai.com/blog/2014/01/21/calendar-app-asks-for-apple-id-and-password/&quot;&gt;Michael Tsai&lt;/a&gt;. I couldn&amp;#x2019;t believe it, so I downloaded the app myself and took these screenshots.&lt;/p&gt;
+
+&lt;p&gt;Sunrise claims that they&amp;#x2019;re not storing the credentials and are instead just getting a login token of some sort from iCloud. (It&amp;#x2019;s unclear whether they&amp;#x2019;re transmitting your email and password to their servers and getting the login token from there, or doing the exchange from the device.) But that doesn&amp;#x2019;t matter at all.&lt;/p&gt;
+
+&lt;p&gt;No app or website should ever be asking for a high-security username and password directly, especially given &lt;a href=&quot;http://www.wired.com/gadgetlab/2012/08/apple-amazon-mat-honan-hacking/all/&quot;&gt;how much&lt;/a&gt; is tied to your Apple ID. What year is this?&lt;/p&gt;
+
+&lt;p&gt;It&amp;#x2019;s downright dangerous that Apple not only let this through app review, but is &lt;em&gt;promoting&lt;/em&gt; it.&lt;/p&gt;
+
+&lt;p&gt;To my surprise, there&amp;#x2019;s &lt;a href=&quot;https://developer.apple.com/appstore/resources/approval/guidelines.html&quot;&gt;no rule against doing this&lt;/a&gt;. That needs to change &lt;em&gt;immediately&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(&lt;a href=&quot;http://www.marco.org/2014/01/22/sunrise-response&quot;&gt;Update here with a Sunrise response, sort of&lt;/a&gt;.)&lt;/strong&gt;&lt;/p&gt;
+                    &lt;/article&gt;
+                    
+                                        
+			            
+            &lt;footer&gt;
+                &lt;p&gt;
+                    Follow Marco.org posts: &lt;a href=&quot;http://www.marco.org/rss&quot;&gt;RSS feed&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/marco_org&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://alpha.app.net/marco_org&quot; rel=&quot;me&quot;&gt;App.net&lt;/a&gt;,
+                    or the &lt;a href=&quot;http://www.marco.org/rss2&quot;&gt;alternate RSS feed&lt;/a&gt; in which link posts always point here first instead of their targets.
+                    &lt;br&gt;
+                    Follow Marco, the person: &lt;a href=&quot;https://twitter.com/marcoarment&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://alpha.app.net/marco&quot; rel=&quot;me&quot;&gt;App.net&lt;/a&gt;.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &amp;#xA9;&amp;#xA0;2006&amp;#x2013;2014 Marco Arment.
+                &lt;/p&gt;
+            &lt;/footer&gt;
+
+            
+        &lt;/section&gt;
+
+
+
+    &lt;/div&gt;
+</description>
+<title>
+Apparently It’s OK For iOS Apps To Ask For Your Apple ID And Password
+</title>
+</item>
+<item>
+<link>
+http://www.nationofchange.org/utah-ending-homelessness-giving-people-homes-1390056183
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;bodycount&quot;&gt;
+	  
+	  
+	  
+	  
+	  
+&lt;div&gt; &lt;div class=&quot;toolbox&quot;&gt;
+
+
+     
+     
+    
+     
+     
+     &lt;p class=&quot;tool_item&quot;&gt;Resize Text &lt;span class=&quot;increaseFont&quot;&gt;+&lt;/span&gt; | &lt;span class=&quot;decreaseFont&quot;&gt;-&lt;/span&gt; | &lt;span class=&quot;resetFont&quot;&gt;R&lt;/span&gt;&lt;/p&gt;
+     
+     
+     
+     
+     
+     
+     
+     
+      
+
+      &lt;/div&gt; &lt;/div&gt;
+
+	  
+	  
+	  
+	  &lt;p&gt;Earlier this month, Hawaii State representative Tom Bower (D) began walking the streets of his Waikiki district with a sledgehammer, and&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/11/18/tom-brower-hawaii_n_4299256.html&quot;&gt;smashing shopping carts used by homeless people&lt;/a&gt;. &amp;#x201C;Disgusted&amp;#x201D; by the city&amp;#x2019;s chronic homelessness problem, Bower decided to take matters into his own hands&amp;#xA0;&amp;#x2014; literally. He also took to rousing homeless people if he saw them sleeping at bus stops during the day.&lt;/p&gt;&lt;p&gt;Bower&amp;#x2019;s tactics were over the top, and so unpopular that he quickly&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/11/20/tom-brower-sledgehammer_n_4306368.html&quot;&gt;declared &amp;#x201C;Mission accomplished,&amp;#x201D; and retired his sledgehammer&lt;/a&gt;. But Bower&amp;#x2019;s frustration with his city&amp;#x2019;s homelessness problem is just an extreme example of the frustration that has led cities to pass measures that effective deal with the homeless by criminalizing homelessness.&lt;/p&gt;&lt;div&gt;&lt;p&gt;  &lt;label for=&quot;email&quot;&gt;Want more? Enter your email for weekly updates:&lt;/label&gt;&lt;br&gt;     &amp;#xA0;&lt;/p&gt;&lt;/div&gt;
+
+&lt;br&gt;
+&lt;ul&gt;&lt;li&gt;City council members in&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/08/22/columbia-south-carolina-criminalizes-homelessness_n_3795397.html&quot;&gt;Columbia, South Carolina&lt;/a&gt;, concerned that the city was becoming a &amp;#x201C;magnet for homeless people,&amp;#x201D; passed an ordinance giving the homeless the option to either relocate or get arrested. The council later rescinded the ordinance, after backlash from police officers, city workers, and advocates.&lt;/li&gt;&lt;li&gt;Last year,&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/07/25/tampa-bay-criminalizes-homelessness_n_3652701.html&quot;&gt;Tampa, Florida&lt;/a&gt;&amp;#xA0;&amp;#x2014; which had the most homeless people for a mid-sized city &amp;#x2014; passed an &amp;#xA0;ordinance allowing police officers to arrest anyone they saw sleeping in public, or &amp;#x201C;storing personal property in public.&amp;#x201D;&amp;#xA0;&lt;a href=&quot;http://www.tampabay.com/news/localgovernment/tampa-city-council-to-consider-new-ordinances-restricting-panhandling/2132006&quot;&gt;The city followed up with a ban on panhandling downtown&lt;/a&gt;, and other locations around the city.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.huffingtonpost.com/2012/07/10/philadelphia-homeless-feeding-ban_n_1663058.html&quot;&gt;Philadelphia&lt;/a&gt;&amp;#xA0;took a somewhat different approach, with a law banning&amp;#xA0;the feeding of homeless people on city parkland. Religious groups objected to the ban, and announced that they would not obey it.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.npr.org/2013/09/05/218891324/more-cities-sweeping-homeless-into-less-prominent-areas&quot;&gt;Raleigh, North Carolina&lt;/a&gt;&amp;#xA0;took the step of asking religious groups to stop their longstanding practice of feeding the homeless in a downtown park on weekends. Religious leaders announced that they would risk arrest rather than stop.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This trend makes Utah&amp;#x2019;s accomplishment even more noteworthy. In eight years, Utah has quietly reduced homelessness by 78 percent, and is on track to end homelessness by 2015.&lt;/p&gt;&lt;p&gt;How did Utah accomplish this? Simple.&amp;#xA0;&lt;a href=&quot;http://www.nationswell.com/one-state-track-become-first-end-homelessness-2015/&quot;&gt;Utah solved homelessness by giving people homes&lt;/a&gt;. In 2005, Utah figured out that the annual cost of E.R. visits and jail stays for homeless people was about $16,670 per person, compared to $11,000 to provide each homeless person with an apartment and a social worker. So, the state began giving away apartments, with no strings attached. Each participant in Utah&amp;#x2019;s Housing First program also gets a caseworker to help them become self-sufficient, but they keep the apartment even if they fail. The program has been so successful that other states are hoping to achieve similar results with programs modeled on Utah&amp;#x2019;s.&lt;/p&gt;&lt;p&gt;It sounds like Utah borrowed a page from&amp;#xA0;&lt;a href=&quot;http://nationalhomeless.org/publications/crimreport/CrimzReport_2009.pdf&quot;&gt;&lt;span&gt;Homes Not Handcuffs&lt;/span&gt;&lt;/a&gt;, the 2009 report by The National Law Center on Homelessness &amp;amp; Poverty and The National Coalition for the Homeless. Using a 2004 survey and anecdotal evidence from activists, the report concluded that permanent housing for the homeless is cheaper than criminalization. Housing is not only more human, it&amp;#x2019;s economical.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.slate.com/blogs/weigel/2013/12/20/republican_state_gives_free_houses_to_moochers_cuts_homelessness_by_74_percent.html&quot;&gt;This happened in a Republican state&lt;/a&gt;! Republicans in Congress would probably have required the homeless to take a drug test before getting an apartment, denied apartments to homeless people with criminal records, and evicted those who failed to become self-sufficient after five years or so. But Utah&amp;#x2019;s results show that even conservative states can solve problems like homelessness with decidedly progressive solutions.&lt;/p&gt;      
+      
+      
+      
+             
+      
+      
+      
+      
+      &lt;/div&gt;
+      
+      &lt;/div&gt;
+</description>
+<title>
+Utah is Ending Homelessness by Giving People Homes
+</title>
+</item>
+<item>
+<author>
+RJ Nowling
+</author>
+<link>
+http://discretestates.blogspot.com/2014/01/response-to-math-is-not-necessary-for.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-8006763369905331017&quot;&gt;
+Ross Hunter recently wrote a &lt;a href=&quot;http://www.mutuallyhuman.com/blog/2014/01/14/math-is-not-necessary-for-software-development/&quot;&gt;blog entry&lt;/a&gt; on Mutually Human arguing that math is not necessary for being a good software developer. &amp;#xA0;I agree with his thesis -- math isn't necessary. &amp;#xA0;However, Ross shouldn't then jump to the conclusion that math isn't useful for software development. Math may not be necessary but it can certainly be useful.&lt;br&gt;
+&lt;br&gt;
+I'll start by addressing relevant points in his argument and try to clear up perceived misconceptions.&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;&lt;u&gt;First Argument:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;The skills that make a good mathematician are not the same as the skills that make for a good software developer.&lt;/li&gt;
+&lt;li&gt;Math is the process of breaking down complex problems into simpler problems, recognizing patterns, and applying known formulae.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Math is often taught in a way where students learn how to solve problems by identifying patterns. &amp;#xA0;Once the student identifies the pattern, they can solve the problem using the approach they memorized. &amp;#xA0;It's unfortunate that math is taught this way because people like Ross come away with a very incomplete and distorted picture of math. &amp;#xA0;I would call this &quot;computation&quot; rather than math.&lt;/p&gt;
+
+&lt;p&gt;
+The reason we have &quot;known formulae&quot; is precisely because of the practice of actual mathematics. In my mind, mathematics is the process of analyzing a formal system with logic. A mathematician starts by defining the basis of a formal system by specifying an initial set of rules by way of axioms, or statements which are held to be true without proof. &amp;#xA0;Next, the mathematician recursively applies logic to determine what the implications of the axioms are and if any additional rules can be then be defined. &amp;#xA0;As more and more rules are proven, the system becomes more powerful. &amp;#xA0;&lt;/p&gt;
+
+&lt;p&gt;
+Often times, mathematicians will be looking to see if a specific rule can be implied from the initial set of axioms. &amp;#xA0;If they find that this is not the case, the mathematicians may apply creative thinking to look for more specific cases where the rule does hold true or may change the axioms. &amp;#xA0;A good example is the complex number system. &amp;#xA0;When faced with the square roots of negative values, mathematicians had to define a new mathematical object (the imaginary number) to be able to reason about such results. This process can actually be quite creative.&lt;/p&gt;
+
+&lt;p&gt;
+Speaking from personal experience and comments made by others, a good math education can be a significant advantage. &amp;#xA0;Reasoning through complex arguments and formal systems has made me much more detail oriented than I was before. &amp;#xA0;Math has improved my problem solving skills. &amp;#xA0;It's also enabled me to reason formally about software, which can be very important when developing distributed systems, for example.&lt;/p&gt;
+
+&lt;p&gt;
+It's unfortunate that the way math is often taught fails our students. &amp;#xA0;Students are often taught the results found over thousands of years, but not the methodology for discovering the results. &amp;#xA0;Classes like algebra, calculus, and introductory statistics are examples which focus on results rather than methodology. Unfortunately, these are also the most popular math classes since they are required in most high schools and college science majors!&lt;/p&gt;
+
+&lt;p&gt;
+Ross points out that he loved his discrete math class. &amp;#xA0;Discrete math, along with others such as geometry, graph theory, and combinatorics, are much better courses for teaching students the methods rather than results. &amp;#xA0;All of the subject material can be derived from a few simple definitions and axioms, giving students the opportunity to learn the mathematical process. &amp;#xA0;Imagine the benefit for students if they were taught Real Analysis or Modern Algebra instead of calculus? &amp;#xA0;As Ross rightly argues, in many cases, a solid foundation in logical thinking can more broadly applicable than calculus.&lt;/p&gt;
+&lt;p&gt;
+&lt;br&gt;
+(I would also like to correct Ross's description of discrete math. &amp;#xA0;Ross implies that discrete math only consists of logic and boolean algebra. &amp;#xA0;This is, of course, wrong -- discrete math covers a range of topics such as set theory, combinatorics, and graph theory as well.)&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;&lt;u&gt;Second Argument:&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In Math, there is only one right answer, but in software development, there is rarely a singular right answer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Ross assumes that if a student is trained in mathematics, they will not be able to deal with grey situations. &amp;#xA0;Maybe Ross assumes that people are only studying math? &amp;#xA0;Or maybe he assumes that people are not capable of learning new ways of thinking or analyzing situations critically? Either way, this argument doesn't hold water.&lt;/p&gt;
+
+&lt;p&gt;
+Like any skill or way of thinking we have developed, learning where and when to apply it is an important part of gaining experience. &amp;#xA0;Ideally, a student would also be exposed to the humanities or cutting edge problems in the sciences where there are not clear answers. (Science education faces a similar problem -- a focus on results, not methods.) &amp;#xA0;Even if the student only studies math, it would be safe to assume that people can learn and adapt as they gain experience. &amp;#xA0;That is fundamentally part of being human.&lt;/p&gt;
+
+&lt;p&gt;
+There are also cases where math rarely involves a single correct answer. &amp;#xA0;A mathematician may have multiple ways of defining the initial axioms, each with their own trade offs. &amp;#xA0;For example, there are variations on Euclidean geometry that change the initial axioms and end up with very different properties.&lt;/p&gt;
+
+&lt;br&gt;
+&lt;b&gt;&lt;u&gt;Math IS Useful:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
+Although math education is not necessary for software development, it is useful. &amp;#xA0;I've already described how math teaches good problem solving skills and critical thinking. &amp;#xA0;With the shift towards &quot;internet scale&quot; systems and big data, math is even more important than before.&lt;br&gt;
+&lt;br&gt;
+Consider the case of evaluating and tuning a complex software system to squeeze out every last bit of performance. &amp;#xA0;A well-controlled experiment and appropriate use of statistics is necessary to accurately access the response of the system under various conditions. &amp;#xA0;A software developer doesn't want to waste time performance tuning the areas of the system contributing least to the run-time -- they want to know what's eating up all the time so they can use their time efficiently.&lt;br&gt;
+&lt;br&gt;
+A better example would be the rise of machine learning and data mining. &amp;#xA0;Users leak data left and right, which is collected by nearly every internet company. &amp;#xA0;The data is then processed to predict what the user might like to target ads or improve the user experience. &amp;#xA0;Machine learning is also used in the banking apps on our cell phones to read hand-written checks. &amp;#xA0;The popularity of machine learning is exploding as more and more uses are found. &amp;#xA0;I predict that many software developers will need to be proficient in machine learning techniques in the future. &amp;#xA0;Since machine learning is based on math and statistics, there may be a time when most software developers will need to know some linear algebra, statistics, and calculus.&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;&lt;u&gt;All Knowledge is Useful:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
+Every subject offers an opportunity to apply our skills in a new way and train our brains to be even better. &amp;#xA0;One of the benefits of a liberal arts education is that students are expected to take a number of courses outside their major. &amp;#xA0;A programmer who decides to study math, literature, history, or art may find that they have developed a number of skills and tools that traditional Computer Scientists lack.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;&lt;u&gt;So is Experience:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
+Experience is a great teacher, especially in software development. &amp;#xA0;Spending hours debugging code is a great way to learn how a project works and to remember what caused the bug in the first case. &amp;#xA0;The next time you see a similar bug, you won't have to spend nearly as much time hunting its source down.&lt;br&gt;
+&lt;br&gt;
+Experience also offers the benefit of knowing what works best in practice. &amp;#xA0;Ross points out that sometimes clever people will write code that is TOO clever. &amp;#xA0;They have sacrificed readability and effort for laziness or intellectual satisfaction. &amp;#xA0;This is not a problem of mathematicians, though. &amp;#xA0;This is a problem that comes from a lack of experience.&lt;br&gt;
+&lt;br&gt;
+In the end, I agree that math is not necessary for software development&amp;#xA0;(yet)&amp;#xA0;. &amp;#xA0;I also think that we could and should change the required math courses for computer science majors to reflect courses that will focus on logic and reasoning. &amp;#xA0;But, we shouldn't be attacking math or implying that it has no value. &amp;#xA0;For some of us, math education has been a valuable part of our training.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+Response to &quot;Math is Not Necessary for Software Development&quot;
 </title>
 </item>
 </channel>
