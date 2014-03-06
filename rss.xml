@@ -14,177 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-item?id=7100394
-</link>
-<description>
-
-</description>
-<title>
-50 comments
-</title>
-</item>
-<item>
-<author>
-Walter Bright
-</author>
-<link>
-http://www.drdobbs.com/architecture-and-design/so-you-want-to-write-your-own-language/240165488
-</link>
-<description>
-&lt;div&gt;&lt;article&gt;
-	&lt;p&gt;My career has been all about designing programming languages and writing compilers for them. This has been a great joy and source of satisfaction to me, and perhaps I can offer some observations about what you're in for if you decide to design and implement a professional programming language. This is actually a book-length topic, so I'll just hit on a few highlights here and avoid topics well covered elsewhere.&lt;/p&gt;
-&lt;h3&gt;Work&lt;/h3&gt;
-&lt;p&gt;First off, you're in for a lot of work&amp;#x2026;years of work&amp;#x2026;most of which will be wandering in the desert. The odds of success are heavily stacked against you. If you are not strongly self-motivated to do this, it isn't going to happen. If you need validation and encouragement from others, it isn't going to happen.&lt;/p&gt;
-&lt;p&gt;Fortunately, embarking on such a project is not major dollar investment; it won't break you if you fail. Even if you do fail, depending on how far the project got, it can look pretty good on your r&amp;#xE9;sum&amp;#xE9; and be good for your career.&lt;/p&gt;
-&lt;h3&gt;Design&lt;/h3&gt;
-&lt;p&gt;One thing abundantly clear is that syntax matters. It matters an awful lot. It's like the styling on a car &amp;#x97; if the styling is not appealing, it simply doesn't matter how hot the performance is. The syntax needs to be something your target audience will like.&lt;/p&gt;
-&lt;p&gt;Trying to go with something they've not seen before will make language adoption a much tougher sell.&lt;/p&gt;
-&lt;p&gt;I like to go with a mix of familiar syntax and aesthetic beauty. It's got to look good on the screen. After all, you're going to spend plenty of time looking at it. If it looks awkward, clumsy, or ugly, it will  taint the language.&lt;/p&gt;
-&lt;p&gt;There are a few things I (perhaps surprisingly) suggest should not be considerations. These are false gods:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Minimizing keystrokes. Maybe this mattered when programmers used paper tape, and it matters for small languages like bash or awk. For larger applications, much more programming time is spent reading than writing, so reducing keystrokes shouldn't be a goal in itself. Of course, I'm not suggesting that large amounts of boilerplate is a good idea.&lt;/li&gt;
-&lt;li&gt;Easy parsing. It isn't hard to write parsers with arbitrary lookahead. The looks of the language shouldn't be compromised to save a few lines of code in the parser. Remember, you'll spend a lot of time staring at the code. That comes first. As mentioned below, it still should be a context-free grammar.&lt;/li&gt;
-&lt;li&gt;Minimizing the number of keywords. This metric is just silly, but I see it cropping up repeatedly. There are a million words in the English language, I don't think there is any looming shortage. Just use your good judgment.&lt;/li&gt;&lt;/ol&gt;
-&lt;p&gt;Things that are true gods:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Context-free grammars. What this really means is the code should be parsable without having to look things up in a symbol table. C++ is famously not a context-free grammar. A context-free grammar, besides making things a lot simpler, means that IDEs can do syntax highlighting without integrating most of a compiler front end. As a result, third-party tools become much more likely to exist.&lt;/li&gt;
-&lt;li&gt;Redundancy. Yes, the grammar should be redundant. You've all heard people say that statement terminating &lt;code&gt;;&lt;/code&gt; are not necessary because the compiler can figure it out. That's true &amp;#x97; but such non-redundancy makes for incomprehensible error messages. Consider a syntax with no redundancy: Any random sequence of characters would then be a valid program. No error messages are even possible. A good syntax needs redundancy in order to diagnose errors and give good error messages.&lt;/li&gt;
-&lt;li&gt;Tried and true. Absent a very strong reason, it's best to stick with tried and true grammatical forms for familiar constructs. It really cuts the learning curve for the language and will increase adoption rates. Think of how people will hate the language if it swaps the operator precedence of &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;*&lt;/code&gt;. Save the divergence for features not generally seen before, which also signals the user that this is new.&lt;/li&gt;&lt;/ol&gt;
-&lt;p&gt;As always, these principles should not be taken as dicta. Use good judgment. Any language design principle blindly followed leads to disaster. The principles are rarely orthogonal and frequently conflict. It's a lot like designing a house &amp;#x97; making the master closet bigger means the master bedroom gets smaller. It's all about finding the right balance.&lt;/p&gt;
-&lt;p&gt;Getting past the syntax, the meat of the language will be the semantic processing, which is where meaning is assigned to the syntactical constructs. This is where you'll be spending the vast bulk of design and implementation. It's much like the organs in your body &amp;#x97; they are  unseen and we don't think about them unless they are going wrong. There won't be a lot of glory in the semantic work, but in it will be the whole point of the language.&lt;/p&gt;
-&lt;p&gt;Once through the semantic phase, the compiler does optimizations and then code generation  &amp;#x97; collectively called the &quot;back end.&quot; These two passes are very challenging and complicated. Personally, I love working with this stuff, and grumble that I've got to spend time on other issues. But unless you really like it, and it takes a fairly unhinged programmer to delight in the arcana of such things, I recommend taking the common sense approach and using an existing back end, such as the JVM, CLR, gcc, or LLVM. (Of course, I can always set you up with the glorious Digital Mars back end!)&lt;/p&gt;
-&lt;h3&gt;Implementation&lt;/h3&gt;
-&lt;p&gt;How best to implement it? I hope I can at least set you off in the right direction. The first tool that beginning compiler writers often reach for is regex. Regex is just the wrong tool for lexing and parsing. Rob Pike &lt;a href=&quot;http://commandcenter.blogspot.com/2011/08/regular-expressions-in-lexing-and.html&quot;&gt;explains why&lt;/a&gt; reasonably well. I'll close that with the famous quote from Jamie Zawinski:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&quot;Some people, when confronted with a problem, think 'I know, I'll use regular expressions.' Now they have two problems.&quot;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Somewhat more controversial, I wouldn't bother wasting time with lexer or parser generators and other so-called &quot;compiler compilers.&quot; They're a waste of time. Writing a lexer and parser is a tiny percentage of the job of writing a compiler. Using a generator will take up about as much time as writing one by hand, and it will marry you to the generator (which matters when porting the compiler to a new platform). And generators also have the unfortunate reputation of emitting lousy error messages.&lt;/p&gt;
-&lt;/article&gt;
-&lt;/div&gt;
-</description>
-<title>
-So, You Want To Write Your Own Language? (Dr. Dobbs article by Walter Bright)
-</title>
-</item>
-<item>
-<author>
-Marco Arment
-</author>
-<link>
-http://www.marco.org/2014/01/22/sunrise-asks-for-apple-id-password
-</link>
-<description>
-&lt;div&gt;&lt;section id=&quot;posts&quot;&gt;
-
-            
-
-
-                                                &lt;article&gt;
-                        
-                    
-                        &lt;p&gt;Apple&amp;#x2019;s currently featuring the &lt;a href=&quot;http://www.sunrise.am&quot;&gt;Sunrise&lt;/a&gt; app in the App Store.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.marco.org/media/2014/01/sunrise-feature.png&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Upon first launch, Sunrise invites you to create an account, then asks you to add a calendar. The first option, &amp;#x201C;iCloud Calendar&amp;#x201D;, brings you to a screen where the Sunrise app itself, in its native interface and code, solicits your Apple ID (iCloud) email address and password.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.marco.org/media/2014/01/sunrise.png&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;This is apparently OK.&lt;/p&gt;
-
-&lt;p&gt;I first saw &lt;a href=&quot;https://alpha.app.net/mrgan/post/19586859&quot;&gt;Neven Mrgan point this out&lt;/a&gt; (good replies there), with some additional commentary from &lt;a href=&quot;http://mjtsai.com/blog/2014/01/21/calendar-app-asks-for-apple-id-and-password/&quot;&gt;Michael Tsai&lt;/a&gt;. I couldn&amp;#x2019;t believe it, so I downloaded the app myself and took these screenshots.&lt;/p&gt;
-
-&lt;p&gt;Sunrise claims that they&amp;#x2019;re not storing the credentials and are instead just getting a login token of some sort from iCloud. (It&amp;#x2019;s unclear whether they&amp;#x2019;re transmitting your email and password to their servers and getting the login token from there, or doing the exchange from the device.) But that doesn&amp;#x2019;t matter at all.&lt;/p&gt;
-
-&lt;p&gt;No app or website should ever be asking for a high-security username and password directly, especially given &lt;a href=&quot;http://www.wired.com/gadgetlab/2012/08/apple-amazon-mat-honan-hacking/all/&quot;&gt;how much&lt;/a&gt; is tied to your Apple ID. What year is this?&lt;/p&gt;
-
-&lt;p&gt;It&amp;#x2019;s downright dangerous that Apple not only let this through app review, but is &lt;em&gt;promoting&lt;/em&gt; it.&lt;/p&gt;
-
-&lt;p&gt;To my surprise, there&amp;#x2019;s &lt;a href=&quot;https://developer.apple.com/appstore/resources/approval/guidelines.html&quot;&gt;no rule against doing this&lt;/a&gt;. That needs to change &lt;em&gt;immediately&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(&lt;a href=&quot;http://www.marco.org/2014/01/22/sunrise-response&quot;&gt;Update here with a Sunrise response, sort of&lt;/a&gt;.)&lt;/strong&gt;&lt;/p&gt;
-                    &lt;/article&gt;
-                    
-                                        
-			            
-            &lt;footer&gt;
-                &lt;p&gt;
-                    Follow Marco.org posts: &lt;a href=&quot;http://www.marco.org/rss&quot;&gt;RSS feed&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/marco_org&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://alpha.app.net/marco_org&quot; rel=&quot;me&quot;&gt;App.net&lt;/a&gt;,
-                    or the &lt;a href=&quot;http://www.marco.org/rss2&quot;&gt;alternate RSS feed&lt;/a&gt; in which link posts always point here first instead of their targets.
-                    &lt;br&gt;
-                    Follow Marco, the person: &lt;a href=&quot;https://twitter.com/marcoarment&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://alpha.app.net/marco&quot; rel=&quot;me&quot;&gt;App.net&lt;/a&gt;.
-                &lt;/p&gt;
-                &lt;p&gt;
-                    &amp;#xA9;&amp;#xA0;2006&amp;#x2013;2014 Marco Arment.
-                &lt;/p&gt;
-            &lt;/footer&gt;
-
-            
-        &lt;/section&gt;
-
-
-
-    &lt;/div&gt;
-</description>
-<title>
-Apparently It’s OK For iOS Apps To Ask For Your Apple ID And Password
-</title>
-</item>
-<item>
-<link>
-http://www.nationofchange.org/utah-ending-homelessness-giving-people-homes-1390056183
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;bodycount&quot;&gt;
-	  
-	  
-	  
-	  
-	  
-&lt;div&gt; &lt;div class=&quot;toolbox&quot;&gt;
-
-
-     
-     
-    
-     
-     
-     &lt;p class=&quot;tool_item&quot;&gt;Resize Text &lt;span class=&quot;increaseFont&quot;&gt;+&lt;/span&gt; | &lt;span class=&quot;decreaseFont&quot;&gt;-&lt;/span&gt; | &lt;span class=&quot;resetFont&quot;&gt;R&lt;/span&gt;&lt;/p&gt;
-     
-     
-     
-     
-     
-     
-     
-     
-      
-
-      &lt;/div&gt; &lt;/div&gt;
-
-	  
-	  
-	  
-	  &lt;p&gt;Earlier this month, Hawaii State representative Tom Bower (D) began walking the streets of his Waikiki district with a sledgehammer, and&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/11/18/tom-brower-hawaii_n_4299256.html&quot;&gt;smashing shopping carts used by homeless people&lt;/a&gt;. &amp;#x201C;Disgusted&amp;#x201D; by the city&amp;#x2019;s chronic homelessness problem, Bower decided to take matters into his own hands&amp;#xA0;&amp;#x2014; literally. He also took to rousing homeless people if he saw them sleeping at bus stops during the day.&lt;/p&gt;&lt;p&gt;Bower&amp;#x2019;s tactics were over the top, and so unpopular that he quickly&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/11/20/tom-brower-sledgehammer_n_4306368.html&quot;&gt;declared &amp;#x201C;Mission accomplished,&amp;#x201D; and retired his sledgehammer&lt;/a&gt;. But Bower&amp;#x2019;s frustration with his city&amp;#x2019;s homelessness problem is just an extreme example of the frustration that has led cities to pass measures that effective deal with the homeless by criminalizing homelessness.&lt;/p&gt;&lt;div&gt;&lt;p&gt;  &lt;label for=&quot;email&quot;&gt;Want more? Enter your email for weekly updates:&lt;/label&gt;&lt;br&gt;     &amp;#xA0;&lt;/p&gt;&lt;/div&gt;
-
-&lt;br&gt;
-&lt;ul&gt;&lt;li&gt;City council members in&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/08/22/columbia-south-carolina-criminalizes-homelessness_n_3795397.html&quot;&gt;Columbia, South Carolina&lt;/a&gt;, concerned that the city was becoming a &amp;#x201C;magnet for homeless people,&amp;#x201D; passed an ordinance giving the homeless the option to either relocate or get arrested. The council later rescinded the ordinance, after backlash from police officers, city workers, and advocates.&lt;/li&gt;&lt;li&gt;Last year,&amp;#xA0;&lt;a href=&quot;http://www.huffingtonpost.com/2013/07/25/tampa-bay-criminalizes-homelessness_n_3652701.html&quot;&gt;Tampa, Florida&lt;/a&gt;&amp;#xA0;&amp;#x2014; which had the most homeless people for a mid-sized city &amp;#x2014; passed an &amp;#xA0;ordinance allowing police officers to arrest anyone they saw sleeping in public, or &amp;#x201C;storing personal property in public.&amp;#x201D;&amp;#xA0;&lt;a href=&quot;http://www.tampabay.com/news/localgovernment/tampa-city-council-to-consider-new-ordinances-restricting-panhandling/2132006&quot;&gt;The city followed up with a ban on panhandling downtown&lt;/a&gt;, and other locations around the city.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.huffingtonpost.com/2012/07/10/philadelphia-homeless-feeding-ban_n_1663058.html&quot;&gt;Philadelphia&lt;/a&gt;&amp;#xA0;took a somewhat different approach, with a law banning&amp;#xA0;the feeding of homeless people on city parkland. Religious groups objected to the ban, and announced that they would not obey it.&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.npr.org/2013/09/05/218891324/more-cities-sweeping-homeless-into-less-prominent-areas&quot;&gt;Raleigh, North Carolina&lt;/a&gt;&amp;#xA0;took the step of asking religious groups to stop their longstanding practice of feeding the homeless in a downtown park on weekends. Religious leaders announced that they would risk arrest rather than stop.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This trend makes Utah&amp;#x2019;s accomplishment even more noteworthy. In eight years, Utah has quietly reduced homelessness by 78 percent, and is on track to end homelessness by 2015.&lt;/p&gt;&lt;p&gt;How did Utah accomplish this? Simple.&amp;#xA0;&lt;a href=&quot;http://www.nationswell.com/one-state-track-become-first-end-homelessness-2015/&quot;&gt;Utah solved homelessness by giving people homes&lt;/a&gt;. In 2005, Utah figured out that the annual cost of E.R. visits and jail stays for homeless people was about $16,670 per person, compared to $11,000 to provide each homeless person with an apartment and a social worker. So, the state began giving away apartments, with no strings attached. Each participant in Utah&amp;#x2019;s Housing First program also gets a caseworker to help them become self-sufficient, but they keep the apartment even if they fail. The program has been so successful that other states are hoping to achieve similar results with programs modeled on Utah&amp;#x2019;s.&lt;/p&gt;&lt;p&gt;It sounds like Utah borrowed a page from&amp;#xA0;&lt;a href=&quot;http://nationalhomeless.org/publications/crimreport/CrimzReport_2009.pdf&quot;&gt;&lt;span&gt;Homes Not Handcuffs&lt;/span&gt;&lt;/a&gt;, the 2009 report by The National Law Center on Homelessness &amp;amp; Poverty and The National Coalition for the Homeless. Using a 2004 survey and anecdotal evidence from activists, the report concluded that permanent housing for the homeless is cheaper than criminalization. Housing is not only more human, it&amp;#x2019;s economical.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.slate.com/blogs/weigel/2013/12/20/republican_state_gives_free_houses_to_moochers_cuts_homelessness_by_74_percent.html&quot;&gt;This happened in a Republican state&lt;/a&gt;! Republicans in Congress would probably have required the homeless to take a drug test before getting an apartment, denied apartments to homeless people with criminal records, and evicted those who failed to become self-sufficient after five years or so. But Utah&amp;#x2019;s results show that even conservative states can solve problems like homelessness with decidedly progressive solutions.&lt;/p&gt;      
-      
-      
-      
-             
-      
-      
-      
-      
-      &lt;/div&gt;
-      
-      &lt;/div&gt;
-</description>
-<title>
-Utah is Ending Homelessness by Giving People Homes
-</title>
-</item>
-<item>
 <author>
 RJ Nowling
 </author>
@@ -265,6 +94,636 @@ In the end, I agree that math is not necessary for software development&amp;#xA0
 </description>
 <title>
 Response to &quot;Math is Not Necessary for Software Development&quot;
+</title>
+</item>
+<item>
+<link>
+http://motherboard.vice.com/en_ca/blog/maybe-the-most-orwellian-text-message-ever-sent
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;story-content&quot;&gt;
+                                        &lt;img src=&quot;http://lh3.ggpht.com/u5K_Xp_M7NDqPKGrNP3BC9Oxd808bjXyFvygqUcFpBWqLN0_fHlpzV8Ld8eM_531v_YcR0yN9lEPTgH7XqZxywX6FmoyQWL78U0=s630&quot; width=&quot;630&quot; alt=&quot;&quot;&gt;
+                                    
+
+&lt;p&gt;&amp;#x201C;Dear subscriber, you are registered as a participant in a mass disturbance.&amp;#x201D;&lt;/p&gt;
+
+&lt;p&gt;That's a text message that thousands of Ukrainian protesters spontaneously&amp;#xA0;received on their cell phones today, as&amp;#xA0;a new law prohibiting public demonstrations went into effect. It was the regime's police force, sending protesters&amp;#xA0;the perfectly dystopian text message to accompany the newly minted,&amp;#xA0;perfectly dystopian legislation. In fact, it's downright Orwellian (and I hate&amp;#xA0;that adjective, and&amp;#xA0;only use it when absolutely necessary,&amp;#xA0;I swear).&lt;/p&gt;
+
+&lt;p&gt;But that's what this is:&amp;#xA0;it's technology employed to detect noncompliance, to hone in on dissent.&amp;#xA0;The &lt;a href=&quot;http://www.nytimes.com/2014/01/22/world/europe/ukraine-protests.html?_r=0&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;NY Times&lt;/em&gt;&amp;#xA0;reports&lt;/a&gt; that the &quot;Ukrainian government used telephone technology to pinpoint the locations of cell phones in use near clashes between riot police officers and protesters early on Tuesday.&quot;&amp;#xA0;&lt;em&gt;Near&lt;/em&gt;. Using a cell phone near a clash lands you on the regime's hit list.&amp;#xA0;&lt;/p&gt;
+
+&lt;p&gt;See, Kiev is &lt;a href=&quot;http://www.ustream.tv/channel/euromajdan/pop-out&quot; target=&quot;_blank&quot;&gt;tearing itself to shreds right now&lt;/a&gt;, but since we're&amp;#xA0;kind of burned out on protests, riots, and revolutions at the moment, it's being treated as below-the-fold news. Somehow, the fact that &lt;a href=&quot;http://www.businessinsider.com/ukraine-protests-what-you-need-to-know-2013-12&quot; target=&quot;_blank&quot;&gt;over a million&amp;#xA0;people&lt;/a&gt; are marching, camping out, and battling with Ukraine's increasingly authoritarian government is barely making a ripple behind such blockbuster news bits as&amp;#xA0;bridge closures and polar vortexes. Yes, even though protesters are literally building catapaults and wearing medieval armor and manning &lt;a href=&quot;http://www.flickr.com/photos/jordibernabeu/11178528714/&quot; target=&quot;_blank&quot;&gt;flaming dump trucks&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hopefully news of the nascent&amp;#xA0;techno-security state will turn some heads&amp;#x2014;it's right out of &lt;em&gt;1984,&amp;#xA0;&lt;/em&gt;or, more recently,&amp;#xA0;&lt;a href=&quot;http://motherboard.vice.com/blog/elysium-science-fiction-tricked-hollywood-into-making-the-years-most-radical-film&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Elysium&lt;/em&gt;&lt;/a&gt;:&amp;#xA0;technology deployed to &quot;detect&quot; dissent.&amp;#xA0;Again, this tech appears to be highly arbitrary; anyone near the protest is liable to be labeled a &quot;participant,&quot; as if targeting protesters directly and so broadly wasn't bad enough in the first place.&lt;/p&gt;
+
+&lt;p&gt;It's further&amp;#xA0;reminder that authoritarian regimes are exploiting the very technology once celebrated as a vehicle&amp;#xA0;for liberation; last year, in Turkey, you'll recall, the state &lt;a href=&quot;http://motherboard.vice.com/blog/turkish-prime-minister-characterizes-twitter-as-menace-to-society&quot; target=&quot;_blank&quot;&gt;rounded up dissident Twitter users&lt;/a&gt;. Now, Ukraine is&amp;#xA0;tracing the phone signal&amp;#xA0;directly. Dictators have already proved plenty adept at &lt;a href=&quot;http://motherboard.vice.com/blog/are-governments-getting-trigger-happy-with-the-internet-kill-switch&quot; target=&quot;_blank&quot;&gt;pulling the plug on the internet&lt;/a&gt; altogether.&lt;/p&gt;
+
+&lt;p&gt;All of this puts lie to the lately-popular mythology that technology is inherently a liberating force&amp;#x2014;with the right hack, it&amp;#xA0;can oppress just as easily.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;Reach this writer at brian.merchant(at)vice.com and on Twitter, at&amp;#xA0;&lt;a href=&quot;https://twitter.com/bcmerchant&quot; target=&quot;_blank&quot;&gt;@bcmerchant&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;More&amp;#xA0;Dystopian Drift:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/the-1-percent-raked-20-percent-of-americas-cash-last-year-dystopia-looms&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;With Unprecedented Inequality, the US Looks More Like a Dystopia Than Ever&lt;/em&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://motherboard.vice.com/read/motherboard-tv-free-the-network&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;&lt;i&gt;Free the Network&lt;/i&gt;&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/things-are-getting-orwellian-at-exxons-arkansas-oil-spill&quot; target=&quot;_blank&quot;&gt;Things Are Getting Orwellian at Exxon's Arkansas Oil Spill&lt;/a&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/edward-snowden-says-our-world-is-worse-than-1984-in-grim-christmas-message&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;&lt;i&gt;Edward Snowden Says Our World Is Worse than '1984'&lt;/i&gt;&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+            &lt;/div&gt;
+
+            
+            &lt;/div&gt;
+</description>
+<title>
+“Dear subscriber, you are registered as a participant in a mass disturbance.”
+</title>
+</item>
+<item>
+<link>
+item?id=7102282
+</link>
+<description>
+
+</description>
+<title>
+20 comments
+</title>
+</item>
+<item>
+<link>
+item?id=7102161
+</link>
+<description>
+
+</description>
+<title>
+2 comments
+</title>
+</item>
+<item>
+<link>
+http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html
+</link>
+<description>
+&lt;div&gt;&lt;body&gt;
+
+
+
+&lt;p&gt;This is the mail archive of the 
+&lt;tt&gt;gcc@gcc.gnu.org&lt;/tt&gt;
+mailing list for the &lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC project&lt;/a&gt;.
+
+
+
+
+
+
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;From&lt;/em&gt;: esr at thyrsus dot com (Eric S. Raymond)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;To&lt;/em&gt;: rms at gnu dot org, gcc at gcc dot gnu dot org, emacs-devel at gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Tue, 21 Jan 2014 15:19:49 -0500 (EST)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Subject&lt;/em&gt;: clang and FSF's strategy&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authentication-results&lt;/em&gt;: sourceware.org; auth=none&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;pre&gt;David Kastrup's recent question on emacs-devel motivates me to bring
+up a larger related question I've been meaning to open for a while: Are the
+FSF's goals best served by continuing to technically restrict GCC?
+
+This is a question in which I have some positive stake.  Yes, I
+continue to be opposed to the FSF's style of propaganda exactly
+because I think it hinders an end goal - a software ecosystem that is
+open-source and user-controlled - that I agree with and have worked
+hard to achieve. On the other hand, I have always said that the FSF's
+artifacts are its best artillery, and GCC is certainly one of the
+biggest guns in that arsenal.
+
+I want GCC to do what the FSF wants it to do - promote freedom and
+openness, erode proprietary control, prevent vendor lock-in of
+development toolchains. I think it is time to question whether the
+anti-plugins policy is still the best way to accomplish this.
+
+What gives this question point is the very existence of clang.  The
+clang developers aren't shy about saying in public that they regard
+the FSF's anti-plugin policy as obstructive and that this is a major
+motivation for their work.  And they're making excellent progress;
+clang is a production-quality tool today, not yet as mature as GCC but
+with better features in some areas - its error messages, in particular
+are *far* superior.
+
+The clang developers very carefully do *not* say that they aim to make
+GCC obsolete and relegate it to the dustbin of discarded tech.  But I
+believe that is unmistakably among their goals, and I judge that they
+are a credible threat to GCCs's dominance in the 3- to 5-year
+timeframe.
+
+It might be that my goals would actually be advanced if clang were to
+kick GCC off the top of the heap.  That is, there is at least a
+possible world in which a serious hit to FSF's prestige would decrease
+its ability to hinder progress through PR I have made no secret of
+considering ham-handed and counterproductive.
+
+For the present I choose to ignore this possibility. It seems better
+to me to promote as vigorous as possible a competitive race between 
+GCC and clang, so that both will improve and the the aggregate position
+of open-source toolchains will strengthen.
+
+Therefore, I point out that FSF can no longer prevent proprietary
+vendors from plugging into a free compiler to improve their tools.
+That horse has left the barn; the strategic goal of the anti-plugin
+policy has been definitively busted.
+
+I also think it bears noticing that nobody outside of Microsoft seems
+to particularly want to write proprietary compilers any more.  GCC won
+its war; the cost and time-to-market advantages of hooking into
+open-source toolchains are now so widely understood that new processor
+designs support them as a matter of course.
+
+Wouldn't it make sense, then, to entirely drop the factoring
+restrictions from GCC so it can compete for developer attention more
+effectively with clang?
+
+Before clang existed, back when GCC had a near monopoly in its
+competitive space, there might have been a functional case for those
+restrictions. Reasonable people may differ on that; there's no point
+in arguing it retrospectively. Now, I submit, they have become a pointless
+gesture that serves only to hinder GCC development abd increase
+clang's competitive advantage.
+
+GCC has a lot of strengths to play from, most notably the maturity of
+its multiplatform and cross-development support.  I urge the FSF to
+fully free the code - drop the policy restrictions, encourage a
+flourishing ecosystem of surrounding plugins.  Let GCC, clang, and
+other alternatives compete for attention on pure technical merit.
+
+I think the last fifteen years have demonstrated that in this sort of
+competition, the proprietary vendors will eat dust if they try to
+outcompete open-source tools on their own ground. Furthermore, they've
+learned this the hard way, and are quite unlikely to try.  There are
+less risky uses for their NRE.
+
+In some sense I don't really care who wins.  Either GCC or clang
+will serve my needs. I do prefer that both tools be as excellent
+as possible.  And it would be nice if the FSF were to demonstrate that
+it can recognize changed conditions and move with the times.
+-- 
+		&amp;lt;a href=&quot;&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.catb.org/~esr/&amp;amp;quot&quot;&gt;http://www.catb.org/~esr/&amp;amp;quot&lt;/a&gt;;&amp;gt;Eric S. Raymond&amp;lt;/a&amp;gt;
+
+There's a tendency today to absolve individuals of
+moral responsibility and treat them as victims of
+social circumstance.  You buy that, you pay with your
+soul.
+		-Tom Robbins, Still Life with Woodpecker
+
+&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;
+&lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;body&gt;
+
+
+
+&lt;p&gt;This is the mail archive of the 
+&lt;tt&gt;gcc@gcc.gnu.org&lt;/tt&gt;
+mailing list for the &lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC project&lt;/a&gt;.
+
+
+
+
+
+
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;From&lt;/em&gt;: David Kastrup &amp;lt;dak at gnu dot org&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;To&lt;/em&gt;: gcc at gcc dot gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cc&lt;/em&gt;: emacs-devel at gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Wed, 22 Jan 2014 01:07:12 +0100&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Subject&lt;/em&gt;: Re: clang and FSF's strategy&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authentication-results&lt;/em&gt;: sourceware.org; auth=none&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;References&lt;/em&gt;: &amp;lt;20140121201949 dot 21DE1380522 at snark dot thyrsus dot com&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;pre&gt;esr@thyrsus.com (Eric S. Raymond) writes:
+
+&amp;gt; David Kastrup's recent question on emacs-devel motivates me to bring
+&amp;gt; up a larger related question I've been meaning to open for a while:
+&amp;gt; Are the FSF's goals best served by continuing to technically restrict
+&amp;gt; GCC?
+
+I don't think that's even a sensible question.  The point of the GPL is
+to promote expansion of Free Software, and the tool it uses for doing so
+is by covering licensing of &quot;the work as a whole&quot;.  When providing full
+technical capabilities for accessing the functionality of of program
+without creating a larger whole in the process, we are basically down to
+the LGPL.
+
+So most definitely the FSF's goals are best served by continuing to
+technically restrict GCC.  If there is any question, the question is
+rather _what_ restrictions serve its interests more than it impedes
+them.  Since any lifted restrictions cannot easily be reinstated, it
+makes sense to be conservative.
+
+&amp;gt; This is a question in which I have some positive stake.  Yes, I
+&amp;gt; continue to be opposed to the FSF's style of propaganda exactly
+&amp;gt; because I think it hinders an end goal - a software ecosystem that is
+&amp;gt; open-source and user-controlled - that I agree with and have worked
+&amp;gt; hard to achieve.
+
+You are crossposting to two public project lists of the GNU project with
+inflammatory language and mischaracterizations.  You have been involved
+with the GNU project long enough to be well aware that this kind of
+crowbar approach does not lead to much more than headlines about Free
+Software infighting.
+
+&amp;gt; The clang developers very carefully do *not* say that they aim to make
+&amp;gt; GCC obsolete and relegate it to the dustbin of discarded tech.
+
+Like most Free Software, GCC started out in a state where its technical
+competitiveness placed it in the dustbin.  And that's a state the GNU
+project prefers over that of it being an enabling and seminal part of
+proprietary software &quot;ecosystems&quot;.  That's the reason GNU software is
+licensed under copyleft rather than permissive licenses, and the
+criterion of popularity should not render that choice irrelevant.
+
+There is leeway for making and balancing individual decisions according
+to individual tradeoffs.
+
+Your black-and-white and all-or-nothing rhetoric and confrontational
+style is not helpful for that.
+
+&amp;gt; Therefore, I point out that FSF can no longer prevent proprietary
+&amp;gt; vendors from plugging into a free compiler to improve their tools.
+
+And we could not prevent proprietary vendors from plugging into
+proprietary compilers to improve their tools, either.  And things like
+Microsoft Visual C++ and the Intel compilers are quite competitive in
+technical respects.  The only thing we ever have been able to prevent
+people to do is them plugging into _our_ free compiler.
+
+&amp;gt; That horse has left the barn;
+
+Lots of horses have left the barn.  That's irrelevant as long as it is
+not the horse we are sitting on.
+
+&amp;gt; I also think it bears noticing that nobody outside of Microsoft seems
+&amp;gt; to particularly want to write proprietary compilers any more.
+
+Huh?  Intel still writes proprietary compilers, basically every GPU
+vendor boosts his own proprietary compiler.
+
+&amp;gt; In some sense I don't really care who wins.  Either GCC or clang will
+&amp;gt; serve my needs. I do prefer that both tools be as excellent as
+&amp;gt; possible.  And it would be nice if the FSF were to demonstrate that it
+&amp;gt; can recognize changed conditions and move with the times.
+
+The whole point of the FSF was _not_ to &quot;move with the times&quot;.  If you
+would be willing to forego your popularity contest based approach, you
+might have a better chance of getting actual adjustments in the details.
+
+But at the core level, I see a fundamental miscomprehension about the
+contexts in which strong copyleft and the GNU project operate and make
+sense.  As long as you don't come to terms with that, I don't see this
+discussion leading anywhere.  And that's not even taking into account
+that key players tend to be less than amused about such a
+confrontational approach.
+
+-- 
+David Kastrup
+
+&lt;/pre&gt;
+
+
+
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;References&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a name=&quot;00176&quot; href=&quot;http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html&quot;&gt;clang and FSF's strategy&lt;/a&gt;&lt;/strong&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;
+&lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;body&gt;
+
+
+
+&lt;p&gt;This is the mail archive of the 
+&lt;tt&gt;gcc@gcc.gnu.org&lt;/tt&gt;
+mailing list for the &lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC project&lt;/a&gt;.
+
+
+
+
+
+
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;From&lt;/em&gt;: Alexandre Oliva &amp;lt;oliva at gnu dot org&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;To&lt;/em&gt;: esr at thyrsus dot com (Eric S. Raymond)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cc&lt;/em&gt;: rms at gnu dot org, gcc at gcc dot gnu dot org, emacs-devel at gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Tue, 21 Jan 2014 22:50:12 -0200&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Subject&lt;/em&gt;: Re: clang and FSF's strategy&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authentication-results&lt;/em&gt;: sourceware.org; auth=none&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;References&lt;/em&gt;: &amp;lt;20140121201949 dot 21DE1380522 at snark dot thyrsus dot com&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;pre&gt;On Jan 21, 2014, esr@thyrsus.com (Eric S. Raymond) wrote:
+
+&amp;gt; I think it is time to question whether the anti-plugins policy is
+&amp;gt; still the best way to accomplish this.
+
+Err...  Excuse me, but what anti-plugins policy are you talking about?
+
+The runtime license exception designed to make room for GCC plugins
+without endangering its copyleft is almost 5 years old!
+
+Did you feel so aligned with clang's FSF-disparaging propaganda that you
+failed to check the facts, or are you being intentionally specious?
+
+
+That GCC plugin interface is not sufficiently stable for major
+uncoordinated developments by third-parties is just as true as that
+Linux's module interface is constantly changing, and complaints about
+its lack of stability in it are often responded with such phrases as
+&amp;#xE2;contribute your driver and we'll even help you keep it up-to-date&amp;#xE2;.
+
+If you were to applaud one while voicing objections to the other,
+someone might even get the idea you're using double standards ;-)
+
+-- 
+Alexandre Oliva, freedom fighter    &lt;a rel=&quot;nofollow&quot; href=&quot;http://FSFLA.org/~lxoliva/&quot;&gt;http://FSFLA.org/~lxoliva/&lt;/a&gt;
+You must be the change you wish to see in the world. -- Gandhi
+Be Free! -- &lt;a rel=&quot;nofollow&quot; href=&quot;http://FSFLA.org/&quot;&gt;http://FSFLA.org/&lt;/a&gt;   FSF Latin America board member
+Free Software Evangelist     Red Hat Brazil Toolchain Engineer
+
+&lt;/pre&gt;
+
+
+
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;References&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a name=&quot;00176&quot; href=&quot;http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html&quot;&gt;clang and FSF's strategy&lt;/a&gt;&lt;/strong&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;
+&lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;body&gt;
+
+
+
+&lt;p&gt;This is the mail archive of the 
+&lt;tt&gt;gcc@gcc.gnu.org&lt;/tt&gt;
+mailing list for the &lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC project&lt;/a&gt;.
+
+
+
+
+
+
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;From&lt;/em&gt;: Stefan Monnier &amp;lt;monnier at iro dot umontreal dot ca&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;To&lt;/em&gt;: esr at thyrsus dot com (Eric S. Raymond)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cc&lt;/em&gt;: rms at gnu dot org,  gcc at gcc dot gnu dot org,  emacs-devel at gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Tue, 21 Jan 2014 20:31:04 -0500&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Subject&lt;/em&gt;: Re: clang and FSF's strategy&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authentication-results&lt;/em&gt;: sourceware.org; auth=none&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;References&lt;/em&gt;: &amp;lt;20140121201949 dot 21DE1380522 at snark dot thyrsus dot com&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;pre&gt;&amp;gt; up a larger related question I've been meaning to open for a while: Are the
+&amp;gt; FSF's goals best served by continuing to technically restrict GCC?
+
+Let me repeat: please stop discussing such things on this list.
+There are things like gnu.misc.discuss for that.
+
+
+        Stefan
+
+&lt;/pre&gt;
+
+
+
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;References&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a name=&quot;00176&quot; href=&quot;http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html&quot;&gt;clang and FSF's strategy&lt;/a&gt;&lt;/strong&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;
+&lt;/div&gt;&lt;hr class=&quot;rdb-page-break&quot; /&gt;&lt;div&gt;&lt;body&gt;
+
+
+
+&lt;p&gt;This is the mail archive of the 
+&lt;tt&gt;gcc@gcc.gnu.org&lt;/tt&gt;
+mailing list for the &lt;a href=&quot;http://gcc.gnu.org/&quot;&gt;GCC project&lt;/a&gt;.
+
+
+
+
+
+
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;From&lt;/em&gt;: Ian Lance Taylor &amp;lt;iant at google dot com&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;To&lt;/em&gt;: &quot;Eric S. Raymond&quot; &amp;lt;esr at thyrsus dot com&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cc&lt;/em&gt;: rms at gnu dot org, GCC Development &amp;lt;gcc at gcc dot gnu dot org&amp;gt;, emacs-devel at gnu dot org&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Tue, 21 Jan 2014 17:31:43 -0800&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Subject&lt;/em&gt;: Re: clang and FSF's strategy&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Authentication-results&lt;/em&gt;: sourceware.org; auth=none&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;References&lt;/em&gt;: &amp;lt;20140121201949 dot 21DE1380522 at snark dot thyrsus dot com&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;pre&gt;On Tue, Jan 21, 2014 at 12:19 PM, Eric S. Raymond &amp;lt;esr@thyrsus.com&amp;gt; wrote:
+&amp;gt;
+&amp;gt; Wouldn't it make sense, then, to entirely drop the factoring
+&amp;gt; restrictions from GCC so it can compete for developer attention more
+&amp;gt; effectively with clang?
+&amp;gt;
+&amp;gt; Before clang existed, back when GCC had a near monopoly in its
+&amp;gt; competitive space, there might have been a functional case for those
+&amp;gt; restrictions. Reasonable people may differ on that; there's no point
+&amp;gt; in arguing it retrospectively. Now, I submit, they have become a pointless
+&amp;gt; gesture that serves only to hinder GCC development abd increase
+&amp;gt; clang's competitive advantage.
+&amp;gt;
+&amp;gt; GCC has a lot of strengths to play from, most notably the maturity of
+&amp;gt; its multiplatform and cross-development support.  I urge the FSF to
+&amp;gt; fully free the code - drop the policy restrictions, encourage a
+&amp;gt; flourishing ecosystem of surrounding plugins.  Let GCC, clang, and
+&amp;gt; other alternatives compete for attention on pure technical merit.
+
+I'm sympathetic to our comments regarding GCC vs. clang.  But I'm not
+sure I grasp your proposed solution.  GCC does support plugins, and
+has supported them for a few releases now.
+
+GCC plugins have what turns out to be a significant defect: the plugin
+interface simply exposes GCC internals, and as such is not stable
+across releases.  I pushed for plugins in GCC, and I thought this
+unstable interface would be OK, but I was wrong.  For general plugins
+to be useful, we need a more stable interface.
+
+But that is a technical issue, not a licensing issue.  You are talking
+about licensing issues.  Do you think the licensing requirements on
+plugins are too onerous?
+
+Because of the non-standard interface, the most effective way for
+people to write plugins for GCC today is to use something like MELT
+(&lt;a rel=&quot;nofollow&quot; href=&quot;http://gcc-melt.org&quot;&gt;http://gcc-melt.org&lt;/a&gt;) or the GCC Python plugin
+(&lt;a rel=&quot;nofollow&quot; href=&quot;https://fedorahosted.org/gcc-python-plugin/&quot;&gt;https://fedorahosted.org/gcc-python-plugin/&lt;/a&gt;).  These provide a
+somewhat more standard interface across releases.
+
+Ideally we would develop a standard interface for C as well.  There
+have been some efforts along those lines but as far as I know none of
+them have been committed to the tree.
+
+Ian
+
+&lt;/pre&gt;
+
+
+
+
+
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;References&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a name=&quot;00176&quot; href=&quot;http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html&quot;&gt;clang and FSF's strategy&lt;/a&gt;&lt;/strong&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+&lt;/body&gt;
+&lt;/div&gt;
+</description>
+<title>
+Eric S. Raymond - clang and FSF's strategy
 </title>
 </item>
 </channel>
