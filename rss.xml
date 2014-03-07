@@ -14,160 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-RJ Nowling
-</author>
-<link>
-http://discretestates.blogspot.com/2014/01/response-to-math-is-not-necessary-for.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post-body entry-content&quot; id=&quot;post-body-8006763369905331017&quot;&gt;
-Ross Hunter recently wrote a &lt;a href=&quot;http://www.mutuallyhuman.com/blog/2014/01/14/math-is-not-necessary-for-software-development/&quot;&gt;blog entry&lt;/a&gt; on Mutually Human arguing that math is not necessary for being a good software developer. &amp;#xA0;I agree with his thesis -- math isn't necessary. &amp;#xA0;However, Ross shouldn't then jump to the conclusion that math isn't useful for software development. Math may not be necessary but it can certainly be useful.&lt;br&gt;
-&lt;br&gt;
-I'll start by addressing relevant points in his argument and try to clear up perceived misconceptions.&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;&lt;u&gt;First Argument:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;ul&gt;
-&lt;li&gt;The skills that make a good mathematician are not the same as the skills that make for a good software developer.&lt;/li&gt;
-&lt;li&gt;Math is the process of breaking down complex problems into simpler problems, recognizing patterns, and applying known formulae.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-Math is often taught in a way where students learn how to solve problems by identifying patterns. &amp;#xA0;Once the student identifies the pattern, they can solve the problem using the approach they memorized. &amp;#xA0;It's unfortunate that math is taught this way because people like Ross come away with a very incomplete and distorted picture of math. &amp;#xA0;I would call this &quot;computation&quot; rather than math.&lt;/p&gt;
-
-&lt;p&gt;
-The reason we have &quot;known formulae&quot; is precisely because of the practice of actual mathematics. In my mind, mathematics is the process of analyzing a formal system with logic. A mathematician starts by defining the basis of a formal system by specifying an initial set of rules by way of axioms, or statements which are held to be true without proof. &amp;#xA0;Next, the mathematician recursively applies logic to determine what the implications of the axioms are and if any additional rules can be then be defined. &amp;#xA0;As more and more rules are proven, the system becomes more powerful. &amp;#xA0;&lt;/p&gt;
-
-&lt;p&gt;
-Often times, mathematicians will be looking to see if a specific rule can be implied from the initial set of axioms. &amp;#xA0;If they find that this is not the case, the mathematicians may apply creative thinking to look for more specific cases where the rule does hold true or may change the axioms. &amp;#xA0;A good example is the complex number system. &amp;#xA0;When faced with the square roots of negative values, mathematicians had to define a new mathematical object (the imaginary number) to be able to reason about such results. This process can actually be quite creative.&lt;/p&gt;
-
-&lt;p&gt;
-Speaking from personal experience and comments made by others, a good math education can be a significant advantage. &amp;#xA0;Reasoning through complex arguments and formal systems has made me much more detail oriented than I was before. &amp;#xA0;Math has improved my problem solving skills. &amp;#xA0;It's also enabled me to reason formally about software, which can be very important when developing distributed systems, for example.&lt;/p&gt;
-
-&lt;p&gt;
-It's unfortunate that the way math is often taught fails our students. &amp;#xA0;Students are often taught the results found over thousands of years, but not the methodology for discovering the results. &amp;#xA0;Classes like algebra, calculus, and introductory statistics are examples which focus on results rather than methodology. Unfortunately, these are also the most popular math classes since they are required in most high schools and college science majors!&lt;/p&gt;
-
-&lt;p&gt;
-Ross points out that he loved his discrete math class. &amp;#xA0;Discrete math, along with others such as geometry, graph theory, and combinatorics, are much better courses for teaching students the methods rather than results. &amp;#xA0;All of the subject material can be derived from a few simple definitions and axioms, giving students the opportunity to learn the mathematical process. &amp;#xA0;Imagine the benefit for students if they were taught Real Analysis or Modern Algebra instead of calculus? &amp;#xA0;As Ross rightly argues, in many cases, a solid foundation in logical thinking can more broadly applicable than calculus.&lt;/p&gt;
-&lt;p&gt;
-&lt;br&gt;
-(I would also like to correct Ross's description of discrete math. &amp;#xA0;Ross implies that discrete math only consists of logic and boolean algebra. &amp;#xA0;This is, of course, wrong -- discrete math covers a range of topics such as set theory, combinatorics, and graph theory as well.)&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;&lt;u&gt;Second Argument:&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In Math, there is only one right answer, but in software development, there is rarely a singular right answer.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-Ross assumes that if a student is trained in mathematics, they will not be able to deal with grey situations. &amp;#xA0;Maybe Ross assumes that people are only studying math? &amp;#xA0;Or maybe he assumes that people are not capable of learning new ways of thinking or analyzing situations critically? Either way, this argument doesn't hold water.&lt;/p&gt;
-
-&lt;p&gt;
-Like any skill or way of thinking we have developed, learning where and when to apply it is an important part of gaining experience. &amp;#xA0;Ideally, a student would also be exposed to the humanities or cutting edge problems in the sciences where there are not clear answers. (Science education faces a similar problem -- a focus on results, not methods.) &amp;#xA0;Even if the student only studies math, it would be safe to assume that people can learn and adapt as they gain experience. &amp;#xA0;That is fundamentally part of being human.&lt;/p&gt;
-
-&lt;p&gt;
-There are also cases where math rarely involves a single correct answer. &amp;#xA0;A mathematician may have multiple ways of defining the initial axioms, each with their own trade offs. &amp;#xA0;For example, there are variations on Euclidean geometry that change the initial axioms and end up with very different properties.&lt;/p&gt;
-
-&lt;br&gt;
-&lt;b&gt;&lt;u&gt;Math IS Useful:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
-Although math education is not necessary for software development, it is useful. &amp;#xA0;I've already described how math teaches good problem solving skills and critical thinking. &amp;#xA0;With the shift towards &quot;internet scale&quot; systems and big data, math is even more important than before.&lt;br&gt;
-&lt;br&gt;
-Consider the case of evaluating and tuning a complex software system to squeeze out every last bit of performance. &amp;#xA0;A well-controlled experiment and appropriate use of statistics is necessary to accurately access the response of the system under various conditions. &amp;#xA0;A software developer doesn't want to waste time performance tuning the areas of the system contributing least to the run-time -- they want to know what's eating up all the time so they can use their time efficiently.&lt;br&gt;
-&lt;br&gt;
-A better example would be the rise of machine learning and data mining. &amp;#xA0;Users leak data left and right, which is collected by nearly every internet company. &amp;#xA0;The data is then processed to predict what the user might like to target ads or improve the user experience. &amp;#xA0;Machine learning is also used in the banking apps on our cell phones to read hand-written checks. &amp;#xA0;The popularity of machine learning is exploding as more and more uses are found. &amp;#xA0;I predict that many software developers will need to be proficient in machine learning techniques in the future. &amp;#xA0;Since machine learning is based on math and statistics, there may be a time when most software developers will need to know some linear algebra, statistics, and calculus.&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;&lt;u&gt;All Knowledge is Useful:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
-Every subject offers an opportunity to apply our skills in a new way and train our brains to be even better. &amp;#xA0;One of the benefits of a liberal arts education is that students are expected to take a number of courses outside their major. &amp;#xA0;A programmer who decides to study math, literature, history, or art may find that they have developed a number of skills and tools that traditional Computer Scientists lack.&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;&lt;u&gt;So is Experience:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;
-Experience is a great teacher, especially in software development. &amp;#xA0;Spending hours debugging code is a great way to learn how a project works and to remember what caused the bug in the first case. &amp;#xA0;The next time you see a similar bug, you won't have to spend nearly as much time hunting its source down.&lt;br&gt;
-&lt;br&gt;
-Experience also offers the benefit of knowing what works best in practice. &amp;#xA0;Ross points out that sometimes clever people will write code that is TOO clever. &amp;#xA0;They have sacrificed readability and effort for laziness or intellectual satisfaction. &amp;#xA0;This is not a problem of mathematicians, though. &amp;#xA0;This is a problem that comes from a lack of experience.&lt;br&gt;
-&lt;br&gt;
-In the end, I agree that math is not necessary for software development&amp;#xA0;(yet)&amp;#xA0;. &amp;#xA0;I also think that we could and should change the required math courses for computer science majors to reflect courses that will focus on logic and reasoning. &amp;#xA0;But, we shouldn't be attacking math or implying that it has no value. &amp;#xA0;For some of us, math education has been a valuable part of our training.&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-Response to &quot;Math is Not Necessary for Software Development&quot;
-</title>
-</item>
-<item>
-<link>
-http://motherboard.vice.com/en_ca/blog/maybe-the-most-orwellian-text-message-ever-sent
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;story-content&quot;&gt;
-                                        &lt;img src=&quot;http://lh3.ggpht.com/u5K_Xp_M7NDqPKGrNP3BC9Oxd808bjXyFvygqUcFpBWqLN0_fHlpzV8Ld8eM_531v_YcR0yN9lEPTgH7XqZxywX6FmoyQWL78U0=s630&quot; width=&quot;630&quot; alt=&quot;&quot;&gt;
-                                    
-
-&lt;p&gt;&amp;#x201C;Dear subscriber, you are registered as a participant in a mass disturbance.&amp;#x201D;&lt;/p&gt;
-
-&lt;p&gt;That's a text message that thousands of Ukrainian protesters spontaneously&amp;#xA0;received on their cell phones today, as&amp;#xA0;a new law prohibiting public demonstrations went into effect. It was the regime's police force, sending protesters&amp;#xA0;the perfectly dystopian text message to accompany the newly minted,&amp;#xA0;perfectly dystopian legislation. In fact, it's downright Orwellian (and I hate&amp;#xA0;that adjective, and&amp;#xA0;only use it when absolutely necessary,&amp;#xA0;I swear).&lt;/p&gt;
-
-&lt;p&gt;But that's what this is:&amp;#xA0;it's technology employed to detect noncompliance, to hone in on dissent.&amp;#xA0;The &lt;a href=&quot;http://www.nytimes.com/2014/01/22/world/europe/ukraine-protests.html?_r=0&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;NY Times&lt;/em&gt;&amp;#xA0;reports&lt;/a&gt; that the &quot;Ukrainian government used telephone technology to pinpoint the locations of cell phones in use near clashes between riot police officers and protesters early on Tuesday.&quot;&amp;#xA0;&lt;em&gt;Near&lt;/em&gt;. Using a cell phone near a clash lands you on the regime's hit list.&amp;#xA0;&lt;/p&gt;
-
-&lt;p&gt;See, Kiev is &lt;a href=&quot;http://www.ustream.tv/channel/euromajdan/pop-out&quot; target=&quot;_blank&quot;&gt;tearing itself to shreds right now&lt;/a&gt;, but since we're&amp;#xA0;kind of burned out on protests, riots, and revolutions at the moment, it's being treated as below-the-fold news. Somehow, the fact that &lt;a href=&quot;http://www.businessinsider.com/ukraine-protests-what-you-need-to-know-2013-12&quot; target=&quot;_blank&quot;&gt;over a million&amp;#xA0;people&lt;/a&gt; are marching, camping out, and battling with Ukraine's increasingly authoritarian government is barely making a ripple behind such blockbuster news bits as&amp;#xA0;bridge closures and polar vortexes. Yes, even though protesters are literally building catapaults and wearing medieval armor and manning &lt;a href=&quot;http://www.flickr.com/photos/jordibernabeu/11178528714/&quot; target=&quot;_blank&quot;&gt;flaming dump trucks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hopefully news of the nascent&amp;#xA0;techno-security state will turn some heads&amp;#x2014;it's right out of &lt;em&gt;1984,&amp;#xA0;&lt;/em&gt;or, more recently,&amp;#xA0;&lt;a href=&quot;http://motherboard.vice.com/blog/elysium-science-fiction-tricked-hollywood-into-making-the-years-most-radical-film&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Elysium&lt;/em&gt;&lt;/a&gt;:&amp;#xA0;technology deployed to &quot;detect&quot; dissent.&amp;#xA0;Again, this tech appears to be highly arbitrary; anyone near the protest is liable to be labeled a &quot;participant,&quot; as if targeting protesters directly and so broadly wasn't bad enough in the first place.&lt;/p&gt;
-
-&lt;p&gt;It's further&amp;#xA0;reminder that authoritarian regimes are exploiting the very technology once celebrated as a vehicle&amp;#xA0;for liberation; last year, in Turkey, you'll recall, the state &lt;a href=&quot;http://motherboard.vice.com/blog/turkish-prime-minister-characterizes-twitter-as-menace-to-society&quot; target=&quot;_blank&quot;&gt;rounded up dissident Twitter users&lt;/a&gt;. Now, Ukraine is&amp;#xA0;tracing the phone signal&amp;#xA0;directly. Dictators have already proved plenty adept at &lt;a href=&quot;http://motherboard.vice.com/blog/are-governments-getting-trigger-happy-with-the-internet-kill-switch&quot; target=&quot;_blank&quot;&gt;pulling the plug on the internet&lt;/a&gt; altogether.&lt;/p&gt;
-
-&lt;p&gt;All of this puts lie to the lately-popular mythology that technology is inherently a liberating force&amp;#x2014;with the right hack, it&amp;#xA0;can oppress just as easily.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Reach this writer at brian.merchant(at)vice.com and on Twitter, at&amp;#xA0;&lt;a href=&quot;https://twitter.com/bcmerchant&quot; target=&quot;_blank&quot;&gt;@bcmerchant&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;More&amp;#xA0;Dystopian Drift:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/the-1-percent-raked-20-percent-of-americas-cash-last-year-dystopia-looms&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;With Unprecedented Inequality, the US Looks More Like a Dystopia Than Ever&lt;/em&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://motherboard.vice.com/read/motherboard-tv-free-the-network&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;&lt;i&gt;Free the Network&lt;/i&gt;&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/things-are-getting-orwellian-at-exxons-arkansas-oil-spill&quot; target=&quot;_blank&quot;&gt;Things Are Getting Orwellian at Exxon's Arkansas Oil Spill&lt;/a&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://motherboard.vice.com/blog/edward-snowden-says-our-world-is-worse-than-1984-in-grim-christmas-message&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;&lt;i&gt;Edward Snowden Says Our World Is Worse than '1984'&lt;/i&gt;&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
-
-
-            &lt;/div&gt;
-
-            
-            &lt;/div&gt;
-</description>
-<title>
-“Dear subscriber, you are registered as a participant in a mass disturbance.”
-</title>
-</item>
-<item>
-<link>
-item?id=7102282
-</link>
-<description>
-
-</description>
-<title>
-20 comments
-</title>
-</item>
-<item>
-<link>
-item?id=7102161
-</link>
-<description>
-
-</description>
-<title>
-2 comments
-</title>
-</item>
-<item>
 <link>
 http://gcc.gnu.org/ml/gcc/2014-01/msg00176.html
 </link>
@@ -724,6 +570,74 @@ Ian
 </description>
 <title>
 Eric S. Raymond - clang and FSF's strategy
+</title>
+</item>
+<item>
+<link>
+item?id=7102468
+</link>
+<description>
+
+</description>
+<title>
+13 comments
+</title>
+</item>
+<item>
+<link>
+item?id=7103184
+</link>
+<description>
+
+</description>
+<title>
+discuss
+</title>
+</item>
+<item>
+<link>
+item?id=7102301
+</link>
+<description>
+
+</description>
+<title>
+35 comments
+</title>
+</item>
+<item>
+<link>
+http://www.google.com/get/videoqualityreport/
+</link>
+<description>
+&lt;div&gt;
+                  
+                  
+                  &lt;div class=&quot;animation&quot;&gt;
+                    &lt;div class=&quot;light_dots&quot;&gt;
+                      &lt;img alt=&quot;&quot; class=&quot;light_dot&quot; id=&quot;lightdot01&quot; width=&quot;10&quot;&gt; &lt;img alt=&quot;&quot; class=&quot;light_dot&quot; id=&quot;lightdot02&quot; width=&quot;10&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;pistons&quot;&gt;
+                      &lt;img alt=&quot;&quot; class=&quot;piston&quot; id=&quot;piston01&quot; width=&quot;23&quot;&gt; &lt;img alt=&quot;&quot; class=&quot;piston&quot; id=&quot;piston02&quot; width=&quot;23&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;section_text_content&quot;&gt;
+                    
+                    &lt;p class=&quot;section_text_content_title&quot;&gt;
+                      Finally, the video must travel into your home.
+                    &lt;/p&gt;
+                    &lt;p class=&quot;section_text_content_copy&quot;&gt;
+                      In addition to congestion in your ISP&amp;#x2019;s network, your video performance can
+                      also be affected by the size of the ISP&amp;#x2019;s connection into your home, your
+                      wi-fi setup, and other in-home factors such as the number of connected
+                      devices.
+                    &lt;/p&gt;
+                    
+                  &lt;/div&gt;
+                &lt;/div&gt;
+</description>
+<title>
+Google Video Quality Report
 </title>
 </item>
 </channel>
