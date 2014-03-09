@@ -15,526 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://www.google.com/get/videoqualityreport/
-</link>
-<description>
-&lt;div&gt;
-                  
-                  
-                  &lt;div class=&quot;animation&quot;&gt;
-                    &lt;div class=&quot;light_dots&quot;&gt;
-                      &lt;img alt=&quot;&quot; class=&quot;light_dot&quot; id=&quot;lightdot01&quot; width=&quot;10&quot;&gt; &lt;img alt=&quot;&quot; class=&quot;light_dot&quot; id=&quot;lightdot02&quot; width=&quot;10&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;pistons&quot;&gt;
-                      &lt;img alt=&quot;&quot; class=&quot;piston&quot; id=&quot;piston01&quot; width=&quot;23&quot;&gt; &lt;img alt=&quot;&quot; class=&quot;piston&quot; id=&quot;piston02&quot; width=&quot;23&quot;&gt;
-                    &lt;/div&gt;
-                  &lt;/div&gt;
-                  &lt;div class=&quot;section_text_content&quot;&gt;
-                    
-                    &lt;p class=&quot;section_text_content_title&quot;&gt;
-                      Finally, the video must travel into your home.
-                    &lt;/p&gt;
-                    &lt;p class=&quot;section_text_content_copy&quot;&gt;
-                      In addition to congestion in your ISP&amp;#x2019;s network, your video performance can
-                      also be affected by the size of the ISP&amp;#x2019;s connection into your home, your
-                      wi-fi setup, and other in-home factors such as the number of connected
-                      devices.
-                    &lt;/p&gt;
-                    
-                  &lt;/div&gt;
-                &lt;/div&gt;
-</description>
-<title>
-Google Video Quality Report
-</title>
-</item>
-<item>
-<link>
-http://blog.fogcreek.com/we-spent-a-week-making-trello-boards-load-extremely-fast-heres-how-we-did-it/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
-					
-					&lt;p&gt;We made a promise with Trello: you can see your entire project in a single glance. That means we can show you all of your cards so you can easily see things like who is doing what, where a task is in the process, and so forth, just by scrolling.&lt;/p&gt;
-&lt;p&gt;You all make lots of cards. But when the site went to load all of your hundreds and thousands of cards at once, boards were loading pretty slow. Okay, not just &lt;em&gt;pretty&lt;/em&gt; slow, &lt;em&gt;painfully&lt;/em&gt; slow. If you had a thousand or so cards, it would take seven to eight seconds to completely render. In that time, the browser was totally locked up. You couldn&amp;#x2019;t click anything. You couldn&amp;#x2019;t scroll. You just had to sit there.&lt;/p&gt;
-&lt;p&gt;With &lt;a href=&quot;http://blog.trello.com/we-made-getting-around-trello-lots-faster-with-starred-boards-a-new-boards-page-and-more/&quot;&gt;the big redesign&lt;/a&gt;, one of our goals was to make switching boards really easy. We like to think that we achieved that goal. But when the browser locked up every time you switched boards, it was an awfully slow experience. Who cared if the experience was easy? We had to make it fast.&lt;/p&gt;
-&lt;p&gt;So I set out on a mission: using a 906 card board on a 1400&amp;#xD7;1000 pixel window, I wanted to improve board rendering performance by 10% every day for a week. It was bold. It was crazy. Somebody might have said it was impossible. But I proved that theoretical person wrong. We more than achieved that goal. We got perceived rendering time for our big board down to one second.&lt;/p&gt;
-&lt;p&gt;Naturally, I kept track of my daily progress and implementation details in Trello. Here&amp;#x2019;s the log.&lt;/p&gt;
-&lt;h2&gt;Monday (7.2 seconds down to 6.7 seconds. 7% reduction.)&lt;/h2&gt;
-&lt;p&gt;Heavy styles like borders, shadows, and gradients can really slow down a browser. So the first thing we tried was removing things like borders on avatars, card borders, backgrounds and borders on card badges, shadows on lists, and the like. It made a big impact, especially for scrolling. We didn&amp;#x2019;t set out for a flat design. Our primary objective was to make things faster, but the result was a cleaner, simpler look. &lt;/p&gt;
-&lt;h2&gt;Tuesday (6.7 seconds down to 5.9 seconds. 12% reduction.)&lt;/h2&gt;
-&lt;p&gt;On the client, we use &lt;a href=&quot;http://backbonejs.org/&quot;&gt;backbone.js&lt;/a&gt; to structure our app. With backbone, it&amp;#x2019;s really convenient to use views. Really, very convenient. For every card, we gave each member its own view. When you clicked on a member on a card, it came up with a mini-profile and a menu with an option to remove them from the card. All those extra views generated a lot of useless crap for the browser and used up a bunch of time. &lt;/p&gt;
-&lt;p&gt;So instead of using views for members, we now just render the avatars and use a generic click handler that looks for a &lt;code&gt;data-idmem&lt;/code&gt; attribute on the element. That&amp;#x2019;s used to look up the member model to generate the menu view, but only when it&amp;#x2019;s needed. That made a difference.&lt;/p&gt;
-&lt;p&gt;I also gutted more CSS.&lt;/p&gt;
-&lt;h2&gt;Wednesday (5.9 seconds&amp;#x2026; to 5.9 seconds. 0% reduction.)&lt;/h2&gt;
-&lt;p&gt;I tried using the browser&amp;#x2019;s native innerHtml and getElementByClassName API methods instead of jQuery&amp;#x2019;s html and append. I thought native APIs might be easier for the browser to optimize and what I read confirmed that. But for whatever reason, it didn&amp;#x2019;t make much of a difference for Trello.&lt;/p&gt;
-&lt;p&gt;The rest of the day was a waste. I didn&amp;#x2019;t make much progress.&lt;/p&gt;
-&lt;h2&gt;Thursday (5.9 seconds down to 960ms)&lt;/h2&gt;
-&lt;p&gt;Thursday was a breakthrough. I tried two major things: preventing layout thrashing and progressive rendering. They both made a huge difference.&lt;/p&gt;
-&lt;h3&gt;Preventing layout thrashing&lt;/h3&gt;
-&lt;p&gt;First, layout thrashing. The browser does two major things when rendering HTML: &lt;strong&gt;layouts&lt;/strong&gt;, which are calculations to determine the dimensions and position of the element, and &lt;strong&gt;paints&lt;/strong&gt;, which make the pixels show up in the right spot with the correct color. Basically. We cut out some of the paints when we removed the heavy styles. There were fewer borders, backgrounds, and other pixels that the browser had to deal with. But we still had an issue with layouts.&lt;/p&gt;
-&lt;p&gt;Rendering a single card used to work like this. The card basics like the white card frame and card name were inserted into the DOM. Then we inserted the labels, then the members, then the badges, and so on. We did it this way because of another Trello promise: real-time updates. We needed a way to atomically render a section of a card when something changed. For example, when a member was added it triggered the &lt;code&gt;cardView.renderMembers&lt;/code&gt; method so that it only rendered the members and didn&amp;#x2019;t need to re-render the whole card and cause an annoying flash. &lt;/p&gt;
-&lt;p&gt;Instead of building all the HTML upfront, inserting it into the DOM and triggering a layout just once; we built some HTML, inserted it into the DOM, triggered a layout, built more HTML, inserted it into the DOM, triggered a layout, built more HTML, and so on. Multiple insertions for each card. Times a thousand. That&amp;#x2019;s a lot of layouts. Now we render those sections before inserting the card into the DOM, which prevents a bunch of layouts and speeds things up.&lt;/p&gt;
-&lt;p&gt;In the old way, the card view render function looked something like this&amp;#x2026;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;render: -&amp;gt;
-  data = model.toJSON()
-
-  @$.innerHTML = templates.fill(
-    'card_in_list',
-    data
-  ) # add stuff to the DOM, layout
-
-  @renderMembers() # add more stuff to the DOM, layout
-  @renderLabels() # add even more stuff to the DOM, layout
-
-  @
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;With the change, the render function looks something like this&amp;#x2026;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;render: -&amp;gt;
-  data = model.toJSON()
-  data.memberData = []
-
-  for member in members
-    memberData.push member.toJSON()
-
-  data.labelData = []
-  for labels in labels when label.isActive
-    labelData.push label
-
-  partials = 
-    &quot;member&quot;: templates.member
-    &quot;label&quot;: templates.label
-
-  @$.innerHTML = templates.fill(
-    'card_in_list',
-    data,
-    partials
-  ) # only add stuff to the DOM once, only one layout
-
-  @
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We had more layout problems, though. In the past, the width of the list would adjust to your screen size. So if you had three lists, it would try to fill up as much as the screen as possible. It was a subtle effect. The problem was that when the adjustment happened, the layout of every list and every card would need to be changed, causing major layout thrashing. And it triggered often: when you toggled the sidebar, added a list, resized the window, or whatnot. We tried having lists be a fixed width so we didn&amp;#x2019;t have to do all the calculations and layouts. It worked well so we kept it. You don&amp;#x2019;t get the adjustments, but it was a trade-off we were willing to make.&lt;/p&gt;
-&lt;h3&gt;Progressive rendering&lt;/h3&gt;
-&lt;p&gt;Even with all the progress, the browser was still locking up for five seconds. That was unacceptable, even though I technically reached my goal. According to &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/timeline&quot;&gt;Chrome DevTools&amp;#x2019; Timeline&lt;/a&gt;, most of the time was being spent in scripts. Trello developer Brett Kiefer had fixed a previous UI lockup by deferring the initialization of jQuery UI droppables until after the board had been painted using the &lt;a href=&quot;https://github.com/caolan/async#queue&quot;&gt;queue method in the async library&lt;/a&gt;. In that case, &amp;#x201C;click &amp;#x2026; long task &amp;#x2026; paint&amp;#x201D; became &amp;#x201D;click &amp;#x2026; paint &amp;#x2026; long task&amp;#x201C;.&lt;/p&gt;
-&lt;p&gt;I wondered if a similar technique could be used for rendering cards progressively. Instead of spending all of the browser&amp;#x2019;s time generating one huge amount of DOM to insert, we could generate a small amount of DOM, insert it, generate another small amount, insert it, and so forth, so that the browser could free up the UI thread, paint something quickly, and prevent locking up. This really did the trick. Perceived rendering went down to 960ms on my 1,000 card board.&lt;/p&gt;
-&lt;p&gt;That looks something like this&amp;#x2026;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.fogcreek.com/wp-content/uploads/2014/01/Progressive-Rendering.png&quot;&gt;&lt;img src=&quot;http://blog.fogcreek.com/wp-content/uploads/2014/01/Progressive-Rendering.png&quot; alt=&quot;Progressive Rendering&quot; width=&quot;auto&quot; height=&quot;auto&quot; class=&quot;alignnone size-full wp-image-3991&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Here&amp;#x2019;s how the code works. Cards in a list are contained in a backbone collection. That collection has its own view. The card collection view render method with the queueing technique looks like this, roughly&amp;#x2026;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;render: -&amp;gt;
-
-   renderQueue = new async.queue (models, next) =&amp;gt;
-     @appendSubviews(@subview(CardView, model) for model in models)
-     # _.defer, a.k.a. setTimeout(fn, 0), will yield the UI thread 
-     # so the browser can paint.
-     _.defer next
-   , 1
-
-   chunkSize = 30
-   models = @getModels()
-   modelChunks = []
-   while models.length &amp;gt; 0
-     modelChunks.push(models.splice(0, chunkSize))
-
-   for models in modelChunks
-     # async.queue flattens arrays so lets wrap this array 
-     # so it&amp;#x2019;s an array on the other end...
-     renderQueue.push [models]
-
-   @
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We could probably just do a for loop with a setTimeout 0 and get the same effect since we know the size of the array. But it worked, so I was happy. There is still some slowness as the cards finish rendering on really big boards, but compared to total browser lock-up, we&amp;#x2019;ll accept that trade-off.&lt;/p&gt;
-&lt;p&gt;Trello developer Daniel LeCheminant chipped in by queueing event delegation on cards. Every card has a certain number of events for clicking, dragging, and so forth. It&amp;#x2019;s more stuff we can put off until later.&lt;/p&gt;
-&lt;p&gt;We also used the &lt;code&gt;translateZ: 0&lt;/code&gt; hack for a bit of gain. With covers, stickers, and member avatars, cards can have a lot of images. In your CSS, if you apply &lt;code&gt;translateZ: 0&lt;/code&gt; to the image element, you trick the browser into using the GPU to paint it. That frees up the CPU to do one of the many other things it needs to do. This browser behavior could change any day which makes it a hack, but hey, it worked.&lt;/p&gt;
-&lt;h2&gt;Friday&lt;/h2&gt;
-&lt;p&gt;I made a lot of bugs that week, so I fixed them on Friday.&lt;/p&gt;
-&lt;p&gt;That was the whole week. If rendering on your web client is slow, look for excessive paints and layouts. I highly recommend using &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/timeline&quot;&gt;Chrome DevTool&amp;#x2019;s Timeline&lt;/a&gt; to help you find trouble areas. If you&amp;#x2019;re in a situation where you need to render a lot of things at once, look into async.queue or some other progressive rendering.&lt;/p&gt;
-&lt;p&gt;Now that we have &lt;a href=&quot;http://blog.trello.com/we-made-getting-around-trello-lots-faster-with-starred-boards-a-new-boards-page-and-more/&quot;&gt;starred boards&lt;/a&gt; and fast board switching &lt;em&gt;and&lt;/em&gt; rendering, it&amp;#x2019;s easier than ever to using multiple boards for your project. We wrote &lt;a href=&quot;http://blog.trello.com/using-multiple-boards-for-a-super-flexible-workflow/&quot;&gt;&amp;#x201C;Using Multiple Boards for a Super-Flexible Workflow&amp;#x201D;&lt;/a&gt; on the Trello blog to show you how to do it. On the UserVoice blog, there&amp;#x2019;s a &lt;a href=&quot;http://community.uservoice.com/blog/trello-google-docs-product-management/&quot;&gt;great article&lt;/a&gt; about how they structure their workflow into different boards. Check those out.&lt;/p&gt;
-&lt;p&gt;If you&amp;#x2019;ve got questions, I&amp;#x2019;ll try and answer them on &lt;a href=&quot;https://www.twitter.com/bobbygrace&quot;&gt;Twitter&lt;/a&gt;. Go try out the &lt;a href=&quot;http://blog.trello.com/we-made-getting-around-trello-lots-faster-with-starred-boards-a-new-boards-page-and-more/&quot;&gt;the latest updates&lt;/a&gt; on &lt;a href=&quot;https://trello.com&quot;&gt;trello.com&lt;/a&gt;. It&amp;#x2019;s faster, easier, and more beautiful than ever.&lt;/p&gt;
-
-					
-					
-
-				&lt;/div&gt;
-				
-								
-			&lt;/div&gt;
-</description>
-<title>
-We spent a week making Trello boards load fast
-</title>
-</item>
-<item>
-<link>
-http://www.lessmilk.com/5/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;content&quot;&gt;
-    
-    &lt;div id=&quot;intro&quot;&gt; 
-      Hi, I'm Thomas. This is my challenge where I build one game per week. &lt;a href=&quot;http://blog.lessmilk.com/learn-more-about-lessmilk/&quot;&gt;Learn more&lt;/a&gt;.
-    &lt;/div&gt;
-
-
-    &lt;p id=&quot;box&quot;&gt;
-        Want to be notified when one of my new game is out? Or interested in some tutorials or articles about my project? &lt;br&gt;
-        Then register to the newsletter. No spam, and unsubscribe at any time.    
-    &lt;/p&gt;
-
-
-    &lt;h2&gt;Game #5: Fill the Holes&lt;/h2&gt;
-
-    
-    &lt;p class=&quot;info&quot;&gt;You can see how I made this game &lt;a href=&quot;http://blog.lessmilk.com/how-i-made-game-5/&quot;&gt;on my blog&lt;/a&gt;.&lt;/p&gt;
-    
-    
-
-    
-
-    
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-I'm making one game per week in html5/javascript, here's game #5
-</title>
-</item>
-<item>
-<link>
-http://www.joke2k.net/faker/
-</link>
-<description>
-&lt;div&gt;&lt;section&gt;
-        &lt;p&gt;&lt;img src=&quot;https://github.com/joke2k/faker/raw/gh-pages/images/salvador-rosa-allegoria-della-menzogna.jpg&quot; alt=&quot;L'allegoria della menzogna. Salvador Rosa&quot;&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;_|_|_|_|          _|
-_|        _|_|_|  _|  _|      _|_|    _|  _|_|
-_|_|_|  _|    _|  _|_|      _|_|_|_|  _|_|
-_|      _|    _|  _|  _|    _|        _|
-_|        _|_|_|  _|    _|    _|_|_|  _|
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;faker&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#faker&quot;&gt;&lt;/a&gt;Faker&lt;/h2&gt;
-
-&lt;p&gt;Faker is a Python package that generates fake data for you. Whether you need to bootstrap your database,
-create good-looking XML documents, fill-in your persistence to stress test it, or anonymize data taken from a production service,
-Faker is for you.&lt;/p&gt;
-
-&lt;p&gt;Faker is heavily inspired by PHP's &lt;a href=&quot;https://github.com/fzaninotto/Faker&quot; title=&quot;Php faker&quot;&gt;Faker&lt;/a&gt;, Perl's &lt;a href=&quot;http://search.cpan.org/%7Ejasonk/Data-Faker-0.07/&quot; title=&quot;Perl faker&quot;&gt;Data::Faker&lt;/a&gt;, and by ruby's &lt;a href=&quot;http://faker.rubyforge.org/&quot; title=&quot;Ruby faker&quot;&gt;Faker&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;basic-usage&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#basic-usage&quot;&gt;&lt;/a&gt;Basic Usage&lt;/h2&gt;
-
-&lt;p&gt;Install with pip:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pip install fake-factory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Use &lt;code&gt;faker.Factory.create()&lt;/code&gt; to create and initialize a faker generator, which can generate data by accessing properties named after the type of data you want.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;
-    &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;faker&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Factory&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;faker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Factory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;faker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# 'Lucy Cechtelar'&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;faker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# &quot;426 Jordy Lodge&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#  Cartwrightshire, SC 88120-6700&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;faker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Sint velit eveniet. Rerum atque repellat voluptatem quia rerum. Numquam excepturi&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# beatae sint laudantium consequatur. Magni occaecati itaque sint et sit tempore. Nesciunt&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# amet quidem. Iusto deleniti cum autem ad quia aperiam.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# A consectetur quos aliquam. In iste aliquid et aut similique suscipit. Consequatur qui&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# quaerat iste minus hic expedita. Consequuntur error magni et laboriosam. Aut aspernatur&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# voluptatem sit aliquam. Dolores voluptatum est.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Aut molestias et maxime. Fugit autem facilis quos vero. Eius quibusdam possimus est.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Ea quaerat et quisquam. Deleniti sunt quam. Adipisci consequatur id in occaecati.&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Et sint et. Ut ducimus quod nemo ab voluptatum.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Each call to method &lt;code&gt;faker.name()&lt;/code&gt; yealds a different (random) result. This is because faker uses &lt;code&gt;__getattr__&lt;/code&gt; magic, and forwards &lt;code&gt;faker.Genarator.method_name()' calls to&lt;/code&gt;faker.Generator.format(method_name)`.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;faker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;# Adaline Reichel&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Dr. Santa Prosacco DVM&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Noemy Vandervort V&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Lexi O'Conner&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Gracie Weber&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Roscoe Johns&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Emmett Lebsack&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Keegan Thiel&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Wellington Koelpin II&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Ms. Karley Kiehn V&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;formatters&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#formatters&quot;&gt;&lt;/a&gt;Formatters&lt;/h2&gt;
-
-&lt;p&gt;Each of the generator properties (like &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;address&lt;/code&gt;, and &lt;code&gt;lorem&lt;/code&gt;) are called &quot;formatters&quot;.
-A faker generator has many of them, packaged in &quot;providers&quot;. Here is a list of the bundled formatters in the default locale.&lt;/p&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersfile&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersfile&quot;&gt;&lt;/a&gt;faker.providers.File:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.mimeType()                    # video/webm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersuseragent&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersuseragent&quot;&gt;&lt;/a&gt;faker.providers.UserAgent:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.chrome()                      # Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_8_4) AppleWebKit/5341 (KHTML, like Gecko) Chrome/13.0.803.0 Safari/5341
-fake.firefox()                     # Mozilla/5.0 (Windows 95; sl-SI; rv:1.9.1.20) Gecko/2012-01-06 22:35:05 Firefox/3.8
-fake.internetExplorer()            # Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.1)
-fake.linuxPlatformToken()          # X11; Linux x86_64
-fake.linuxProcessor()              # x86_64
-fake.macPlatformToken()            # Macintosh; U; PPC Mac OS X 10_7_6
-fake.macProcessor()                # U; PPC
-fake.opera()                       # Opera/9.41 (Windows CE; it-IT) Presto/2.9.168 Version/12.00
-fake.safari()                      # Mozilla/5.0 (Windows; U; Windows NT 5.1) AppleWebKit/534.34.4 (KHTML, like Gecko) Version/5.0 Safari/534.34.4
-fake.userAgent()                   # Mozilla/5.0 (iPod; U; CPU iPhone OS 3_2 like Mac OS X; en-US) AppleWebKit/531.15.3 (KHTML, like Gecko) Version/4.0.5 Mobile/8B119 Safari/6531.15.3
-fake.windowsPlatformToken()        # Windows 98; Win 9x 4.90
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersphonenumber&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersphonenumber&quot;&gt;&lt;/a&gt;faker.providers.PhoneNumber:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.phoneNumber()                 # (593)652-1880
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersmiscelleneous&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersmiscelleneous&quot;&gt;&lt;/a&gt;faker.providers.Miscelleneous:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.boolean()                     # True
-fake.countryCode()                 # BB
-fake.languageCode()                # fr
-fake.locale()                      # pt_GN
-fake.md5()                         # ab9d3552b5c6e68714c04c35725ba73c
-fake.nullBoolean()                 # True
-fake.sha1()                        # 3fc2ede28f2596050f9a94c15c59b800175409d0
-fake.sha256()                      # f06561a971d6b1306ecef60be336556d6de2540c2d0d2158f4d0ea3f212cd740
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersinternet&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersinternet&quot;&gt;&lt;/a&gt;faker.providers.Internet:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.companyEmail()                # ggreenfelder@ortizmedhurst.com
-fake.domainName()                  # mayer.com
-fake.domainWord()                  # gusikowski
-fake.email()                       # gbrakus@johns.net
-fake.freeEmail()                   # abbey60@yahoo.com
-fake.freeEmailDomain()             # hotmail.com
-fake.ipv4()                        # 81.132.249.71
-fake.ipv6()                        # 4c55:8c8b:54b5:746d:44ed:c7ab:486a:a50e
-fake.safeEmail()                   # amalia49@example.com
-fake.slug()                        # TypeError
-fake.tld()                         # net
-fake.uri()                         # http://www.parker.com/
-fake.uriExtension()                # .asp
-fake.uriPage()                     # terms
-fake.uriPath()                     # explore/list/app
-fake.url()                         # http://dubuque.info/
-fake.userName()                    # goodwin.edwin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerproviderscompany&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerproviderscompany&quot;&gt;&lt;/a&gt;faker.providers.Company:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.bs()                          # maximize end-to-end infrastructures
-fake.catchPhrase()                 # Multi-tiered analyzing instructionset
-fake.company()                     # Stanton-Luettgen
-fake.companySuffix()               # Group
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersdatetime&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersdatetime&quot;&gt;&lt;/a&gt;faker.providers.DateTime:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.amPm()                        # AM
-fake.century()                     # IX
-fake.date()                        # 1985-02-17
-fake.dateTime()                    # 1995-06-08 14:46:50
-fake.dateTimeAD()                  # 1927-12-17 23:08:46
-fake.dateTimeBetween()             # 1999-08-22 22:49:52
-fake.dateTimeThisCentury()         # 1999-07-24 23:35:49
-fake.dateTimeThisDecade()          # 2008-01-27 01:08:37
-fake.dateTimeThisMonth()           # 2012-11-12 14:13:04
-fake.dateTimeThisYear()            # 2012-05-19 00:40:00
-fake.dayOfMonth()                  # 23
-fake.dayOfWeek()                   # Friday
-fake.iso8601()                     # 2009-04-09T21:30:02
-fake.month()                       # 03
-fake.monthName()                   # April
-fake.time()                        # 06:16:50
-fake.timezone()                    # America/Noronha
-fake.unixTime()                    # 275630166
-fake.year()                        # 2002
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersperson&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersperson&quot;&gt;&lt;/a&gt;faker.providers.Person:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.firstName()                   # Elton
-fake.lastName()                    # Schowalter
-fake.name()                        # Susan Pagac III
-fake.prefix()                      # Ms.
-fake.suffix()                      # V
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerprovidersaddress&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerprovidersaddress&quot;&gt;&lt;/a&gt;faker.providers.Address:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.address()                     # 044 Watsica Brooks
-                                     West Cedrickfort, SC 35023-5157
-fake.buildingNumber()              # 319
-fake.city()                        # Kovacekfort
-fake.cityPrefix()                  # New
-fake.citySuffix()                  # ville
-fake.country()                     # Monaco
-fake.geo_coordinate()              # 148.031951
-fake.latitude()                    # 154.248666
-fake.longitude()                   # 109.920335
-fake.postcode()                    # 82402-3206
-fake.secondaryAddress()            # Apt. 230
-fake.state()                       # Nevada
-fake.stateAbbr()                   # NC
-fake.streetAddress()               # 793 Haskell Stravenue
-fake.streetName()                  # Arvilla Valley
-fake.streetSuffix()                # Crescent
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;
-&lt;a name=&quot;fakerproviderslorem&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#fakerproviderslorem&quot;&gt;&lt;/a&gt;faker.providers.Lorem:&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;fake.paragraph()                   # Itaque quia harum est autem inventore quisquam eaque. Facere mollitia repudiandae
-                                     qui et voluptas. Consequatur sunt ullam blanditiis aliquam veniam illum voluptatem.
-fake.paragraphs()                  # ['Alias porro soluta eum voluptate. Iste consequatur qui non nam.',
-                                        'Id eum sint eius earum veniam fugiat ipsum et. Et et occaecati at labore
-                                        amet et. Rem velit inventore consequatur facilis. Eum consequatur consequatur
-                                        quis nobis.', 'Harum autem autem totam ex rerum adipisci magnam adipisci.
-                                        Qui modi eos eum vel quisquam. Tempora quas eos dolorum sint voluptatem
-                                        tenetur cum. Recusandae ducimus deleniti magnam ullam adipisci ipsa.']
-fake.sentence()                    # Eum magni soluta unde minus nobis.
-fake.sentences()                   # ['Ipsam eius aut veritatis iusto.',
-                                        'Occaecati libero a aut debitis sunt quas deserunt aut.',
-                                        'Culpa dolor voluptatum laborum at et enim.']
-fake.text()                        # Dicta quo eius possimus quae eveniet cum nihil. Saepe sint non nostrum.
-                                     Sequi est sit voluptate et eos eum et. Pariatur non sunt distinctio magnam.
-fake.word()                        # voluptas
-fake.words()                       # ['optio', 'et', 'voluptatem']
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;localization&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#localization&quot;&gt;&lt;/a&gt;Localization&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;faker.Factory&lt;/code&gt; can take a locale as an argument, to return localized data.
-If no localized provider is found, the factory fallbacks to the default locale (en_EN).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;from faker import Factory
-fake = Factory.create('it_IT')
-for i in range(0,10):
-    print fake.name()
-
-# Elda Palumbo
-# Pacifico Giordano
-# Sig. Avide Guerra
-# Yago Amato
-# Eustachio Messina
-# Dott. Violante Lombardo
-# Sig. Alighieri Monti
-# Costanzo Costa
-# Nazzareno Barbieri
-# Max Coppola
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can check available Faker locales in the source code, under the providers package.
-The localization of Faker is an ongoing process, for which we need your help.
-Don't hesitate to create localized providers to your own locale and submit a PR!&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;using-from-shell&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#using-from-shell&quot;&gt;&lt;/a&gt;Using from shell&lt;/h2&gt;
-
-&lt;p&gt;In a python environment with faker installed you can use it with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python -m faker [option] [*args]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;[option]:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt; formatter name as &lt;code&gt;text&lt;/code&gt;, &lt;code&gt;address&lt;/code&gt;: display result of fake&lt;/li&gt;
-&lt;li&gt; Provider name as &lt;code&gt;Lorem&lt;/code&gt;: display all Provider's fakes&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;[*args]: pass value to formatter (actually only strings)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ python -m faker address
-968 Bahringer Garden Apt. 722
-Kristinaland, NJ 09890
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;seeding-the-generator&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#seeding-the-generator&quot;&gt;&lt;/a&gt;Seeding the Generator&lt;/h2&gt;
-
-&lt;p&gt;You may want to get always the same generated data - for instance when using Faker for unit testing purposes.
-The generator offers a &lt;code&gt;seed()&lt;/code&gt; method, which seeds the random number generator.
-Calling the same script twice with the same seed produces the same results.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;from faker import Faker
-fake = Faker()
-fake.seed(4321)
-
-print fake.name()   # Margaret Boehm
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;tests&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#tests&quot;&gt;&lt;/a&gt;Tests&lt;/h2&gt;
-
-&lt;p&gt;Run tests:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ python setup.py test
-&lt;/code&gt;&lt;/pre&gt;
-
-
-
-&lt;pre&gt;&lt;code&gt;$ python -m unittest -v faker.tests
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Write documentation for providers:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ python -m faker &amp;gt; docs.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;license&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#license&quot;&gt;&lt;/a&gt;License&lt;/h2&gt;
-
-&lt;p&gt;Faker is released under the MIT Licence. See the bundled LICENSE file for details.&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;credits&quot; class=&quot;anchor&quot; href=&quot;http://www.joke2k.net/faker/#credits&quot;&gt;&lt;/a&gt;Credits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://github.com/fzaninotto&quot; title=&quot;F.Zaninotto&quot;&gt;FZaninotto&lt;/a&gt; / &lt;a href=&quot;https://github.com/fzaninotto/Faker&quot; title=&quot;Php faker&quot;&gt;Faker&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pypi.python.org/pypi/distribute&quot;&gt;Distribute&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.buildout.org/&quot;&gt;Buildout&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pypi.python.org/pypi/modern-package-template&quot;&gt;modern-package-template&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-      &lt;/section&gt;
-      &lt;/div&gt;
-</description>
-<title>
-Faker is a Python package that generates fake data for you
-</title>
-</item>
-<item>
-<link>
 http://i.imgur.com/z44bhed.png
 </link>
 <description>
@@ -542,6 +22,127 @@ http://i.imgur.com/z44bhed.png
 </description>
 <title>
 When cryptographic functions go bad
+</title>
+</item>
+<item>
+<link>
+http://pastebin.com/yCw3eze1
+</link>
+<description>
+
+</description>
+<title>
+A friend wrote this code for a class where we're graded on lines of code. I am horrified.
+</title>
+</item>
+<item>
+<author>
+dbasch
+</author>
+<link>
+http://diegobasch.com/dogecoin-and-the-appeal-of-small-numbers
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+		&lt;p&gt;Dogecoin is a unique phenomenon in the fascinating world of cryptocurrencies. It&amp;#x2019;s barely six weeks old, and as I write this post its network has more computing power than any other cryptocurrency except for Bitcoin. It made headlines this weekend when its community &lt;a href=&quot;http://www.theguardian.com/technology/2014/jan/20/jamaican-bobsled-team-raises-dogecoin-winter-olympics&quot;&gt;raised enough money to send the Jamaican bobsled team to the Sochi Winter Olympics&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;From a technical standpoint, Dogecoin is essentially a branded clone of Litecoin (the second cryptocurrency in terms of total market value). Without a doubt one of the most important factors contributing to Dogecoin&amp;#x2019;s popularity is its community. The &lt;a href=&quot;http://www.reddit.com/r/dogecoin/&quot;&gt;Dogecoin subreddit&lt;/a&gt; has almost 40k users right now. The front page usually has a good mix of humor, good will, finance, and technology. Check it out if you haven&amp;#x2019;t already.&lt;/p&gt;
+&lt;p&gt;There&amp;#x2019;s another more subtle factor that I believe plays in Dogecoin&amp;#x2019;s favor: its tiny value. One DOGE is worth about $0.0015 right now. In other words, one dollar buys you about 600-700 DOGE. Contrast that with Bitcoin: $1 is about 0.001 BTC. This puts Bitcoin and Dogecoin in two completely different mental buckets for most people. One BTC is comparable to an ounce of gold. The press &lt;a href=&quot;https://www.google.com/search?q=bitcoin+gold&amp;amp;tbm=nws&quot;&gt;reinforces this idea&lt;/a&gt;, and many people view Bitcoin as a digital store of value. The daily transaction volume of BTC is about 0.2 percent of the total bitcoins in existence, which means that BTC does not circulate very much yet.&lt;/p&gt;
+&lt;p&gt;Contrast this with Dogecoin, for which the &lt;a href=&quot;http://coinmarketcap.com/&quot;&gt;daily transaction volume is close to 15%&lt;/a&gt;. Where does that money go? Perhaps the most common usage of DOGE is to give online tips. Compare the activity of Reddit&amp;#x2019;s &lt;a href=&quot;http://www.reddit.com/user/bitcointip&quot;&gt;bitcointip&lt;/a&gt;&amp;#xA0;and &lt;a href=&quot;http://en-us.reddit.com/user/dogetipbot&quot;&gt;dogetipbot&lt;/a&gt;, and you&amp;#x2019;ll see the latter is much more active. What would you prefer as a tip, 100 DOGE or 0.000002 BTC? Both are almost meaningless in terms of monetary value, but receiving 100 units of a coin does feel better. It&amp;#x2019;s also easier to give tips; you don&amp;#x2019;t have to think much about tipping someone 10, 25 or 100 DOGE. With BTC you either have to choose a dollar amount, or be very careful with the number of zeroes.&lt;/p&gt;
+&lt;p&gt;The reason a DOGE is worth so little is the total supply of coins. The Bitcoin software has an embedded constant called MAX_MONEY. For Bitcoin it&amp;#x2019;s set to 21 million, which means that if Bitcoin takes over as a world currency it will be impossible for most people to ever own one. Litecoin is only slightly better, at 84 million. For DOGE, it&amp;#x2019;s one hundred billion (perhaps more, &lt;a href=&quot;https://github.com/dogecoin/dogecoin/issues/23&quot;&gt;yet to be decided&lt;/a&gt;). This makes it unlikely that one DOGE will be worth $1 any time soon (or ever). It&amp;#x2019;s easy and fun to exchange $20 for 10k DOGE and give a fraction of them to strangers on the internet. Anyone can still mine hundreds of dogecoins per day with a desktop computer, and not feel very attached to them. Being a &amp;#x201C;slumdoge millionaire&amp;#x201D; is still affordable to many.&lt;/p&gt;
+&lt;p&gt;In a world where people get a kick out of likes or retweets, Dogetips take it up a notch. A Dogetip is an upvote that you can use, internet karma points that are actually worth something. So fun, very value.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://i.imgur.com/NksbGlL.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Image credit: &lt;a href=&quot;http://www.reddit.com/user/binxalot&quot;&gt;/u/binxalot&lt;/a&gt;, this person deserves tips. Of course I accept them too &lt;img src=&quot;http://diegobasch.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot;&gt; &lt;/p&gt;
+&lt;p&gt;DHpZsQCDKq9WbqyqfetMcGq87pFZfkwLBh
+&lt;/p&gt;
+			&lt;/div&gt;
+
+	
+&lt;/div&gt;
+</description>
+<title>
+Dogecoin and the Appeal of Small Numbers
+</title>
+</item>
+<item>
+<link>
+http://www.megalith.co.uk/8086tiny/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;text_area&quot;&gt;
+
+&lt;p class=&quot;title&quot;&gt;About 8086tiny&lt;/p&gt;
+	&lt;p&gt;8086tiny is a free, open source PC XT-compatible emulator/virtual machine written in C. It is, we believe, the smallest of its kind (the fully-commented source is under 25K). Despite its size, 8086tiny provides a highly accurate 8086 CPU emulation, together with support for PC peripherals including XT-style keyboard, floppy/hard disk, clock, and Hercules graphics. 8086tiny is powerful enough to run software like AutoCAD, Windows 3.0, and legacy PC games.&lt;/p&gt;
+	&lt;p&gt;8086tiny is highly portable and runs on practically any little endian machine, from simple 32-bit MCUs upwards. 8086tiny has successfully been deployed on 32-bit/64-bit Intel machines (Windows, Mac OS X and Linux), Nexus 4/ARM (Android), iPad 3 and iPhone 5S (iOS), and &lt;a href=&quot;http://www.raspberrypi.org&quot;&gt;Raspberry Pi&lt;/a&gt; (Linux).&lt;/p&gt;
+  &lt;p&gt;The philosophy of 8086tiny is to keep the code base as small as possible, and through the open source license encourage individual developers to tune and extend it as per their specific requirements, adding support, for example, for more complex instruction sets (e.g. Pentium) or peripherals (e.g. mouse). Any questions, comments or suggestions are very welcome in our &lt;a href=&quot;http://8086tiny.freeforums.net&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;An obfuscated version of 8086tiny (condensed into just 4043 bytes of C code) was a &lt;a href=&quot;http://www.ioccc.org/years-spoiler.html#2013_cable3&quot;&gt;winner of the 2013 IOCCC contest&lt;/a&gt;. Significant interest followed for a documented, commented, maintainable version. The result is the distribution presented here.&lt;/p&gt;
+
+	&lt;div class=&quot;section_box2&quot;&gt;
+	        &lt;p class=&quot;post_title&quot;&gt;Feature Highlights&lt;/p&gt;
+        	&lt;div class=&quot;text_area&quot;&gt;
+			&lt;p&gt;8086tiny's feature highlights include:&lt;/p&gt;
+			&lt;ul&gt;
+			&lt;li&gt;Highly accurate, complete 8086 CPU emulation (including undocumented features and behavior)&lt;/li&gt;
+			&lt;li&gt;Support for all standard PC peripherals: keyboard, 3.5&quot; floppy drive, hard drive, video (Hercules graphics and CGA color text mode, including direct video memory access), real-time clock, timers&lt;/li&gt;
+			&lt;li&gt;Disk images are compatible with standard Windows/Mac/UNIX mount tools for simple interoperability&lt;/li&gt;
+			&lt;li&gt;Complete source code provided (including custom BIOS)&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;p&gt;8086tiny is highly portable, with minimal system requirements:&lt;/p&gt;
+			&lt;ul&gt;
+			&lt;li&gt;Minimal C runtime library support required (uses POSIX file I/O and time functions only - no memory management or string functions)&lt;/li&gt;
+			&lt;li&gt;Uses SDL 1.2 for graphics, but can compile without SDL for text-only applications&lt;/li&gt;
+			&lt;li&gt;Storage requirement: typically around 20KB for compiled binary, 9KB for BIOS image, and 720KB/1.44MB for floppy disk image
+			&lt;/li&gt;&lt;li&gt;System RAM requirement: around 1.5MB&lt;/li&gt;
+        	&lt;/ul&gt;&lt;/div&gt;
+      	&lt;/div&gt;
+
+	&lt;div class=&quot;section_box2&quot;&gt;
+	        &lt;p class=&quot;post_title&quot;&gt;Screenshots&lt;/p&gt;
+        	&lt;div class=&quot;text_area&quot;&gt;
+			&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_dos.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_dos.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_win3.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_win3.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_123.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_123.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MS-DOS 6.22&lt;/td&gt;&lt;td&gt;Windows 3.0&lt;/td&gt;&lt;td&gt;Lotus 1-2-3 R2.4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+        	&lt;/div&gt;
+      	&lt;/div&gt;
+
+	&lt;div class=&quot;section_box2&quot;&gt;
+	        &lt;p class=&quot;post_title&quot;&gt;Applications&lt;/p&gt;
+        	&lt;div class=&quot;text_area&quot;&gt;
+			&lt;p&gt;Some possible applications:&lt;/p&gt;
+			&lt;ul&gt;
+			&lt;li&gt;Run legacy PC software and games on modern hardware&lt;/li&gt;
+			&lt;li&gt;Teach computer architecture and Intel assembly language in a safe, sandboxed environment&lt;/li&gt;
+      &lt;li&gt;Deploy on &lt;a href=&quot;http://www.raspberrypi.org&quot;&gt;Raspberry Pi&lt;/a&gt; to make the world's cheapest ($25) complete IBM-compatible PC&lt;/li&gt;
+			&lt;li&gt;Extend the code base to develop a lean, modern-processor VM&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;p&gt;If you develop an application that makes use of 8086tiny, and would like a link to it here, please get in touch.&lt;/p&gt;
+        	&lt;/div&gt;
+      	&lt;/div&gt;
+        
+	
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+</description>
+<title>
+8086tiny: The world's smallest PC emulator
+</title>
+</item>
+<item>
+<author>
+douglas.macmillan@wsj.com Biography
+</author>
+<link>
+http://online.wsj.com/news/articles/SB10001424052702304632204579337043662898228
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;articleBody&quot;&gt;
+      
+
+ &lt;p&gt;In the crowded field of online payments, venture capitalists are betting Stripe Inc. is a standout worth more than a billion dollars. &lt;/p&gt; &lt;p&gt;The payments startup has raised about $80 million in new funding this week from venture-capital investors including Khosla Ventures, Sequoia Capital, and Founders Fund, said brothers John and Patrick Collison, the company's co-founders, in an interview. Stripe, at just over four years old, is now...
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description>
+<title>
+Payments Startup Stripe (YC S10) Joins the Billion Dollar Club
 </title>
 </item>
 </channel>
