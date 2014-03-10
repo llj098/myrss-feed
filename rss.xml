@@ -14,118 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-http://i.imgur.com/z44bhed.png
-</link>
-<description>
-
-</description>
-<title>
-When cryptographic functions go bad
-</title>
-</item>
-<item>
-<link>
-http://pastebin.com/yCw3eze1
-</link>
-<description>
-
-</description>
-<title>
-A friend wrote this code for a class where we're graded on lines of code. I am horrified.
-</title>
-</item>
-<item>
-<author>
-dbasch
-</author>
-<link>
-http://diegobasch.com/dogecoin-and-the-appeal-of-small-numbers
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;p&gt;Dogecoin is a unique phenomenon in the fascinating world of cryptocurrencies. It&amp;#x2019;s barely six weeks old, and as I write this post its network has more computing power than any other cryptocurrency except for Bitcoin. It made headlines this weekend when its community &lt;a href=&quot;http://www.theguardian.com/technology/2014/jan/20/jamaican-bobsled-team-raises-dogecoin-winter-olympics&quot;&gt;raised enough money to send the Jamaican bobsled team to the Sochi Winter Olympics&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;From a technical standpoint, Dogecoin is essentially a branded clone of Litecoin (the second cryptocurrency in terms of total market value). Without a doubt one of the most important factors contributing to Dogecoin&amp;#x2019;s popularity is its community. The &lt;a href=&quot;http://www.reddit.com/r/dogecoin/&quot;&gt;Dogecoin subreddit&lt;/a&gt; has almost 40k users right now. The front page usually has a good mix of humor, good will, finance, and technology. Check it out if you haven&amp;#x2019;t already.&lt;/p&gt;
-&lt;p&gt;There&amp;#x2019;s another more subtle factor that I believe plays in Dogecoin&amp;#x2019;s favor: its tiny value. One DOGE is worth about $0.0015 right now. In other words, one dollar buys you about 600-700 DOGE. Contrast that with Bitcoin: $1 is about 0.001 BTC. This puts Bitcoin and Dogecoin in two completely different mental buckets for most people. One BTC is comparable to an ounce of gold. The press &lt;a href=&quot;https://www.google.com/search?q=bitcoin+gold&amp;amp;tbm=nws&quot;&gt;reinforces this idea&lt;/a&gt;, and many people view Bitcoin as a digital store of value. The daily transaction volume of BTC is about 0.2 percent of the total bitcoins in existence, which means that BTC does not circulate very much yet.&lt;/p&gt;
-&lt;p&gt;Contrast this with Dogecoin, for which the &lt;a href=&quot;http://coinmarketcap.com/&quot;&gt;daily transaction volume is close to 15%&lt;/a&gt;. Where does that money go? Perhaps the most common usage of DOGE is to give online tips. Compare the activity of Reddit&amp;#x2019;s &lt;a href=&quot;http://www.reddit.com/user/bitcointip&quot;&gt;bitcointip&lt;/a&gt;&amp;#xA0;and &lt;a href=&quot;http://en-us.reddit.com/user/dogetipbot&quot;&gt;dogetipbot&lt;/a&gt;, and you&amp;#x2019;ll see the latter is much more active. What would you prefer as a tip, 100 DOGE or 0.000002 BTC? Both are almost meaningless in terms of monetary value, but receiving 100 units of a coin does feel better. It&amp;#x2019;s also easier to give tips; you don&amp;#x2019;t have to think much about tipping someone 10, 25 or 100 DOGE. With BTC you either have to choose a dollar amount, or be very careful with the number of zeroes.&lt;/p&gt;
-&lt;p&gt;The reason a DOGE is worth so little is the total supply of coins. The Bitcoin software has an embedded constant called MAX_MONEY. For Bitcoin it&amp;#x2019;s set to 21 million, which means that if Bitcoin takes over as a world currency it will be impossible for most people to ever own one. Litecoin is only slightly better, at 84 million. For DOGE, it&amp;#x2019;s one hundred billion (perhaps more, &lt;a href=&quot;https://github.com/dogecoin/dogecoin/issues/23&quot;&gt;yet to be decided&lt;/a&gt;). This makes it unlikely that one DOGE will be worth $1 any time soon (or ever). It&amp;#x2019;s easy and fun to exchange $20 for 10k DOGE and give a fraction of them to strangers on the internet. Anyone can still mine hundreds of dogecoins per day with a desktop computer, and not feel very attached to them. Being a &amp;#x201C;slumdoge millionaire&amp;#x201D; is still affordable to many.&lt;/p&gt;
-&lt;p&gt;In a world where people get a kick out of likes or retweets, Dogetips take it up a notch. A Dogetip is an upvote that you can use, internet karma points that are actually worth something. So fun, very value.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://i.imgur.com/NksbGlL.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Image credit: &lt;a href=&quot;http://www.reddit.com/user/binxalot&quot;&gt;/u/binxalot&lt;/a&gt;, this person deserves tips. Of course I accept them too &lt;img src=&quot;http://diegobasch.com/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot;&gt; &lt;/p&gt;
-&lt;p&gt;DHpZsQCDKq9WbqyqfetMcGq87pFZfkwLBh
-&lt;/p&gt;
-			&lt;/div&gt;
-
-	
-&lt;/div&gt;
-</description>
-<title>
-Dogecoin and the Appeal of Small Numbers
-</title>
-</item>
-<item>
-<link>
-http://www.megalith.co.uk/8086tiny/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;text_area&quot;&gt;
-
-&lt;p class=&quot;title&quot;&gt;About 8086tiny&lt;/p&gt;
-	&lt;p&gt;8086tiny is a free, open source PC XT-compatible emulator/virtual machine written in C. It is, we believe, the smallest of its kind (the fully-commented source is under 25K). Despite its size, 8086tiny provides a highly accurate 8086 CPU emulation, together with support for PC peripherals including XT-style keyboard, floppy/hard disk, clock, and Hercules graphics. 8086tiny is powerful enough to run software like AutoCAD, Windows 3.0, and legacy PC games.&lt;/p&gt;
-	&lt;p&gt;8086tiny is highly portable and runs on practically any little endian machine, from simple 32-bit MCUs upwards. 8086tiny has successfully been deployed on 32-bit/64-bit Intel machines (Windows, Mac OS X and Linux), Nexus 4/ARM (Android), iPad 3 and iPhone 5S (iOS), and &lt;a href=&quot;http://www.raspberrypi.org&quot;&gt;Raspberry Pi&lt;/a&gt; (Linux).&lt;/p&gt;
-  &lt;p&gt;The philosophy of 8086tiny is to keep the code base as small as possible, and through the open source license encourage individual developers to tune and extend it as per their specific requirements, adding support, for example, for more complex instruction sets (e.g. Pentium) or peripherals (e.g. mouse). Any questions, comments or suggestions are very welcome in our &lt;a href=&quot;http://8086tiny.freeforums.net&quot;&gt;forum&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;An obfuscated version of 8086tiny (condensed into just 4043 bytes of C code) was a &lt;a href=&quot;http://www.ioccc.org/years-spoiler.html#2013_cable3&quot;&gt;winner of the 2013 IOCCC contest&lt;/a&gt;. Significant interest followed for a documented, commented, maintainable version. The result is the distribution presented here.&lt;/p&gt;
-
-	&lt;div class=&quot;section_box2&quot;&gt;
-	        &lt;p class=&quot;post_title&quot;&gt;Feature Highlights&lt;/p&gt;
-        	&lt;div class=&quot;text_area&quot;&gt;
-			&lt;p&gt;8086tiny's feature highlights include:&lt;/p&gt;
-			&lt;ul&gt;
-			&lt;li&gt;Highly accurate, complete 8086 CPU emulation (including undocumented features and behavior)&lt;/li&gt;
-			&lt;li&gt;Support for all standard PC peripherals: keyboard, 3.5&quot; floppy drive, hard drive, video (Hercules graphics and CGA color text mode, including direct video memory access), real-time clock, timers&lt;/li&gt;
-			&lt;li&gt;Disk images are compatible with standard Windows/Mac/UNIX mount tools for simple interoperability&lt;/li&gt;
-			&lt;li&gt;Complete source code provided (including custom BIOS)&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;p&gt;8086tiny is highly portable, with minimal system requirements:&lt;/p&gt;
-			&lt;ul&gt;
-			&lt;li&gt;Minimal C runtime library support required (uses POSIX file I/O and time functions only - no memory management or string functions)&lt;/li&gt;
-			&lt;li&gt;Uses SDL 1.2 for graphics, but can compile without SDL for text-only applications&lt;/li&gt;
-			&lt;li&gt;Storage requirement: typically around 20KB for compiled binary, 9KB for BIOS image, and 720KB/1.44MB for floppy disk image
-			&lt;/li&gt;&lt;li&gt;System RAM requirement: around 1.5MB&lt;/li&gt;
-        	&lt;/ul&gt;&lt;/div&gt;
-      	&lt;/div&gt;
-
-	&lt;div class=&quot;section_box2&quot;&gt;
-	        &lt;p class=&quot;post_title&quot;&gt;Screenshots&lt;/p&gt;
-        	&lt;div class=&quot;text_area&quot;&gt;
-			&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_dos.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_dos.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_win3.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_win3.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_123.png&quot;&gt;&lt;img src=&quot;http://www.megalith.co.uk/8086tiny/images/screenshot_123.png&quot; width=&quot;164&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MS-DOS 6.22&lt;/td&gt;&lt;td&gt;Windows 3.0&lt;/td&gt;&lt;td&gt;Lotus 1-2-3 R2.4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-        	&lt;/div&gt;
-      	&lt;/div&gt;
-
-	&lt;div class=&quot;section_box2&quot;&gt;
-	        &lt;p class=&quot;post_title&quot;&gt;Applications&lt;/p&gt;
-        	&lt;div class=&quot;text_area&quot;&gt;
-			&lt;p&gt;Some possible applications:&lt;/p&gt;
-			&lt;ul&gt;
-			&lt;li&gt;Run legacy PC software and games on modern hardware&lt;/li&gt;
-			&lt;li&gt;Teach computer architecture and Intel assembly language in a safe, sandboxed environment&lt;/li&gt;
-      &lt;li&gt;Deploy on &lt;a href=&quot;http://www.raspberrypi.org&quot;&gt;Raspberry Pi&lt;/a&gt; to make the world's cheapest ($25) complete IBM-compatible PC&lt;/li&gt;
-			&lt;li&gt;Extend the code base to develop a lean, modern-processor VM&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;p&gt;If you develop an application that makes use of 8086tiny, and would like a link to it here, please get in touch.&lt;/p&gt;
-        	&lt;/div&gt;
-      	&lt;/div&gt;
-        
-	
-
-        &lt;/div&gt;
-      &lt;/div&gt;
-</description>
-<title>
-8086tiny: The world's smallest PC emulator
-</title>
-</item>
-<item>
 <author>
 douglas.macmillan@wsj.com Biography
 </author>
@@ -143,6 +31,197 @@ http://online.wsj.com/news/articles/SB10001424052702304632204579337043662898228
 </description>
 <title>
 Payments Startup Stripe (YC S10) Joins the Billion Dollar Club
+</title>
+</item>
+<item>
+<author>
+admin
+</author>
+<link>
+http://www.josecasanova.com/blog/how-i-hacked-kayak-and-booked-a-cheaper-flight/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+			&lt;p&gt;Let me start this out by saying I didn&amp;#x2019;t &amp;#x201C;hack&amp;#x201D; something in the black hat&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hackers_(film)&quot;&gt;Hackers&lt;/a&gt;&amp;#xA0;way, but by finding a market inefficiency and leveraging it to my advantage. It must be the day trader in me. No harm was done to any computers or systems in the making of this post.&lt;/p&gt;
+&lt;h2&gt;TL;DR: I booked a flight through Kayak using a VPN and saved ~$100.&lt;/h2&gt;
+&lt;p&gt;Long version: I was looking for flights to New Orleans when I realized that the flight price I checked yesterday was ~$100 cheaper. I started to think why the price went up so much in one day and tried checking the flight again using only Google Incognito but there was no price budge. Maybe my VPN had something to do with it? The night before I was using a &lt;a href=&quot;http://en.wikipedia.org/wiki/Virtual_private_network&quot;&gt;VPN&lt;/a&gt;&amp;#xA0;(I use BTGuard btw) and Kayak thought I was from Toronto, Canada. I guess if you are not from the departure city then flights are cheaper?&lt;/p&gt;
+&lt;h2&gt;So what did I do?&lt;/h2&gt;
+&lt;p&gt;So I had originally went to Kayak today and checked flights from Miami to New Orleans (Mardi Gras, w00t!). This was done without a VPN but using Google&amp;#x2019;s Incognito feature. Take a look at how much the flights were:&lt;/p&gt;
+&lt;div id=&quot;attachment_26&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_us.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-26 &quot; alt=&quot;kayak_us&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_us-300x178.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Flights to New Orleans from Miami (Non-VPN)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Also, check out where my IP was saying that I was from:&lt;/p&gt;
+&lt;div id=&quot;attachment_28&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/us_ip.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-28 &quot; alt=&quot;us_ip&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/us_ip-187x300.png&quot; width=&quot;187&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;This is my &amp;#x201C;real&amp;#x201D; IP, no VPN&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;I thought this was strange since the night before I had checked flights and they were ~$100 cheaper. I realized I was logged into my VPN and thought it might have to do with that (BTW, I use the VPN to mask my internet traffic&amp;#x2026; sorry NSA). So what did I do? Tried checking again while being logged into my VPN!&lt;/p&gt;
+&lt;p&gt;This is me being logged into my VPN:&lt;/p&gt;
+&lt;div id=&quot;attachment_29&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/vpn.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-29&quot; alt=&quot;VPN FTW!&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/vpn-213x300.png&quot; width=&quot;213&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;VPN FTW!&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;And here is where my IP is saying that I am from:&lt;/p&gt;
+&lt;div id=&quot;attachment_22&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/canadian-ip.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-22&quot; alt=&quot;Canada, eh?&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/canadian-ip-216x300.png&quot; width=&quot;216&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Canada, eh?&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;So I tried Kayak again, while being &amp;#x201C;shown&amp;#x201D; as being from Canada and this is what I got:&lt;/p&gt;
+&lt;div id=&quot;attachment_25&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_canadza.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-25&quot; alt=&quot;Check out the Canadian flag at the top right&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_canadza-300x156.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Check out the Canadian flag at the top right&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;That is about a ~$70+ price difference (I don&amp;#x2019;t think that included taxes)! Also, when I had checked earlier, that $345 flight wasn&amp;#x2019;t there&amp;#x2026; so it was a +$100 difference. When I went to book my flight my checkout total was in EUROS! The thing is, it wasn&amp;#x2019;t 380 euros, but 207 euros! &amp;#xA0;That converts to about $280 USD.&lt;/p&gt;
+&lt;div id=&quot;attachment_24&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/eurusd.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-24&quot; alt=&quot;Euros wuddup&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/eurusd-300x136.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Euros wuddup&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Moral of the story? Try booking your flights through a VPN, maybe you&amp;#x2019;ll save a few bucks&amp;#x2026;.. even if you pay in euros.&lt;/p&gt;
+&lt;p&gt;PS: I checked my online bank statement and I paid $281.60 total!&lt;/p&gt;
+&lt;p&gt;PSS: The flight is now over $400 on a non-VPN via Kayak + Google Incognito.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=7105307&quot;&gt;Discuss on Hacker News&lt;/a&gt;&lt;/p&gt;
+					&lt;/div&gt;
+		
+		
+	&lt;/div&gt;
+</description>
+<title>
+How I “hacked” Kayak and booked a cheaper flight
+</title>
+</item>
+<item>
+<link>
+http://insideintercom.io/silicon-valley-outsider-raised-30m-30-months/
+</link>
+<description>
+&lt;div&gt;&lt;section class=&quot;post_body&quot;&gt;
+        &lt;img src=&quot;http://cdn.insideintercom.io/wp-content/uploads/2014/01/Intercom-740.png&quot; class=&quot;post_main_image&quot;&gt;			  &lt;p class=&quot;opening_paragraph&quot;&gt;I&amp;#x2019;m excited to announce today that we&amp;#x2019;ve raised a Series B round of $23M.&lt;/p&gt;
+&lt;p&gt;It was led by &lt;a href=&quot;http://www.bvp.com/&quot;&gt;Bessemer&lt;/a&gt;, investors in iconic tech companies like LinkedIn, Yelp, Skype, Pinterest, Box, Twilio, Shopify, and many more, with participation by our Series A investors &lt;a href=&quot;http://s23p.com/&quot;&gt;The Social+Capital Partnership&lt;/a&gt;. &lt;a href=&quot;https://twitter.com/ethankurz&quot;&gt;Ethan Kurzweil&lt;/a&gt; has joined the board alongside &lt;a href=&quot;https://twitter.com/mamoonha&quot;&gt;Mamoon&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/destraynor&quot;&gt;Des&lt;/a&gt;, and myself.&lt;/p&gt;
+&lt;p&gt;We founded Intercom 30 months ago. Before then, I was living in Ireland and knew very little about raising venture capital. We&amp;#x2019;ve now raised a total of $30M over three rounds. These are the lessons I&amp;#x2019;ve learned.&lt;/p&gt;
+&lt;h2&gt;Aggressively expand your vision&lt;/h2&gt;
+&lt;p&gt;One man&amp;#x2019;s Facebook is another man&amp;#x2019;s &amp;#x201C;online directory for colleges&amp;#x201D;&amp;#x2014;&lt;a href=&quot;http://www.youtube.com/watch?v=--APdD6vejI&quot;&gt;which is how Zuckerberg described his new service initially&lt;/a&gt;. In the defining days of any new category, there are dozens of people who happen upon the same fundamental idea. But very few have the capacity to see the true potential for it beyond the obvious. &lt;/p&gt;
+&lt;p&gt;Your vision is the ceiling for your company&amp;#x2019;s potential. You&amp;#x2019;ll never be a billion dollar business if you&amp;#x2019;re not deliberately working to get there. And in venture capital, it doesn&amp;#x2019;t make sense to invest in anyone who isn&amp;#x2019;t at least trying to build a business that size.&lt;/p&gt;
+&lt;p&gt;Intercom is our contribution to Internet innovation. Internet technologies are still catching up with how humans interact offline. The majority of progress in this space is on the consumer side&amp;#x2014;Facebook, WhatsApp, Snapchat, et al. Intercom is bringing this to business. It&amp;#x2019;s a seamless, lightweight way for the whole company to connect personally with their customers. The incumbents haven&amp;#x2019;t innovated in over a decade. In fact, the separate helpdesks, email marketing tools, feedback products, and CRMs have only become more complex. These disconnected services cannot provide a holistic view of the customer. And as a result, the customer&amp;#x2019;s experience is very disjointed. Our vision is to be at the center of all customer communication for all kinds of Internet business, which increasingly every business is becoming. We&amp;#x2019;re dedicated to going all the way with this.&lt;/p&gt;
+&lt;h2&gt;Focus on engagement quality before engagement quantity&lt;/h2&gt;
+&lt;p&gt;Startups talk a lot about traction as a measure of their potential. When they do, they roll out the biggest number they have&amp;#x2014;like the number of people who&amp;#x2019;ve blinked at their sign-up form. &amp;#x201C;Meaningful traction&amp;#x201D; might be something stronger&amp;#x2014;like an actual sign up. Yet that&amp;#x2019;s still missing the point. A better measure is engagement. How intensely are individuals or companies using your product?&lt;/p&gt;
+&lt;p&gt;Venture investors assess deals on the presumption that the vast majority of the market for the product is untapped, and that it&amp;#x2019;s extremely large. Otherwise it&amp;#x2019;s not a venture-stage opportunity with high growth potential. And so the number of customers or users you have will always be expected to be small in the grand scheme of things. However, you&amp;#x2019;ll need to show that those customers are highly engaged. That they&amp;#x2019;re extracting a lot of value. A small number of such data points&amp;#x2014;which for some companies could be as low as 10 customers&amp;#x2014;will help you demonstrate the potential that your product could have in the broader market.&lt;/p&gt;
+&lt;p&gt;We now have just under 2,000 paying companies&amp;#x2014;small teams like &lt;a href=&quot;https://circleci.com/&quot;&gt;Circle&lt;/a&gt; and &lt;a href=&quot;http://visual.ly/&quot;&gt;Visual.ly&lt;/a&gt;, and larger companies like &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; and &lt;a href=&quot;https://hootsuite.com/&quot;&gt;HootSuite&lt;/a&gt;&amp;#x2014;and annual revenue in the millions. But more importantly, 65% of our monthly active users log in to Intercom every week, and 35% of our weekly active users log in 5 days per week. And while we&amp;#x2019;ve a lot to improve, &lt;a href=&quot;https://twitter.com/intercom/favorites&quot;&gt;customer satisfaction is off the charts&lt;/a&gt;. &lt;/p&gt;
+&lt;h2&gt;Hire out of your league&lt;/h2&gt;
+&lt;p&gt;I&amp;#x2019;ve heard the idea many times that goes something like: &amp;#x201C;angel investors bet on people, seed investors bet on product, Series A investors bet on a business&amp;#x2026;&amp;#x201D; It&amp;#x2019;s true that at a higher valuation and raise amount, and with more time spent on the business, there will be increased expectation of progress. But what shouldn&amp;#x2019;t be drawn from this is any idea that team becomes less important, at any stage. Even public companies&amp;#x2019; stock price is affected by investor confidence in the management&amp;#x2014;study the rise and fall in the price of Yahoo! and Apple since their changes in leadership, respectively.&lt;/p&gt;
+&lt;p&gt;Mamoon once said to me: &amp;#x201C;My hiring philosophy is aim high. Get people you think you can&amp;#x2019;t get. Shock people that you were able to get a certain person.&amp;#x201D; This is the only approach that results in a step-change in average talent amongst a team. The opposite is a plateau in team quality&amp;#x2014;getting bigger, but not better. Great people attract great people and companies who adopt a culture of always stretching to get the very best have been shown time and time again to be the most successful. Furthermore, experienced leaders build significantly bigger businesses&amp;#x2014;&lt;a href=&quot;http://www.forbes.com/sites/krisztinaholly/2014/01/15/why-great-entrepreneurs-are-older-than-you-think/&quot;&gt;&amp;#x201C;the typical successful founder [has] at least 6-10 years of industry experience&amp;#x201D;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We started 2013 with 13 people and finished with 47&amp;#x2014;all uniquely amazing in ways I&amp;#x2019;m surprised by daily. &lt;a href=&quot;http://insideintercom.io/hire-your-heroes-welcoming-paul-adams/&quot;&gt;In May we announced we had hired ex Google and Facebook manager, Paul Adams&lt;/a&gt;, now our VP of Product. And I&amp;#x2019;m delighted to announce today that we&amp;#x2019;ve hired ex PayPal and Yammer exec, &lt;a href=&quot;http://www.linkedin.com/pub/mark-woolway/0/1/833&quot;&gt;Mark Woolway&lt;/a&gt;, as COO. Mark now runs finance, operations, legal, HR, recruiting, and administration, and has had a tremendous impact in only one month. He&amp;#x2019;s certainly out of my league&amp;#x2014;he&amp;#x2019;s worked for three CEOs in his career: Peter Thiel, Elon Musk, and David Sacks. For PayPal he helped raise over $200M in venture capital, led their IPO, and eventual acquisition by eBay for $1.6B. He was Managing Director for Thiel&amp;#x2019;s hedge fund, Clarium Capital, at its peak worth $8B. And as Executive Vice President at Yammer, he raised $127M and led the deal in which Microsoft acquired the company for $1.2B. People like Mark make everyone up their game, and raise the bar for what success looks like. I&amp;#x2019;m thrilled to call him a colleague. And by the way, &lt;a href=&quot;https://www.intercom.io/careers&quot;&gt;we&amp;#x2019;re looking for a whole lot more&lt;/a&gt;. &lt;/p&gt;
+&lt;h2&gt;Know your strategy and find investors who believe in it&lt;/h2&gt;
+&lt;p&gt;There are many things we call &amp;#x201C;technology companies&amp;#x201D; whose unique value is not in fact defined by technology. This does not take from their achievement or worth to the world, but it can be useful to think about in terms of your own business strategy. Groupon, for example, is a very valuable company, yet its innovation is in its business model. It&amp;#x2019;s a promotions company with a web site&amp;#x2014;nobody uses Groupon for their amazing tech. The same can be said for many businesses with incredible sales or marketing.&lt;/p&gt;
+&lt;p&gt;Intercom does not have an interesting business model. We charge money for people to use our product. And we do not have incredible sales or marketing. We have no salespeople and made our first marketing hire one month ago. What we do have is an innovative product. Something that people can&amp;#x2019;t get elsewhere which does unique things for them. All of our value is in this technology. And our double-digit monthly growth comes from people liking it and sharing it with their friends. Our company will become more valuable mostly by investing in product. Making it better for those who use it today, and allowing it to be used on more platforms, in more markets.&lt;/p&gt;
+&lt;p&gt;When you can articulate your general business strategy, it&amp;#x2019;s far easier to know which investors will be most excited by your deal, and to make your partnership with them a long-term success. Mamoon agreed from the start that the bulk of our capital should be spent on product. On a Sunday in late December, the day before I pitched the Bessemer partnership, I met Ethan for a coffee. I suspected since my first interaction with him that we were on the same page, but I really wanted to hear him say it&amp;#x2026; I asked: &amp;#x201C;So if we do this deal, what are the kinds of things you think we should spend the money on?&amp;#x201D; He said quickly: &amp;#x201C;Product! I don&amp;#x2019;t think for the next five years you&amp;#x2019;d want to stop investing aggressively in product.&amp;#x201D; The right investor won&amp;#x2019;t ever want you to be something you&amp;#x2019;re not, because they&amp;#x2019;re investing in you for who you are and what you believe in. That&amp;#x2019;s your strategy. It defines the opportunity and makes you far easier to bet on. I feel so fortunate to have investors who support our passion for simply making an amazing product.&lt;/p&gt;
+&lt;h2&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;It&amp;#x2019;s fair to say that fundraising is a pseudo-achievement. It doesn&amp;#x2019;t in itself create value. That comes from what you spend the money on. Yet it&amp;#x2019;s worth celebrating because of what you really have achieved to be able to convince smart people to back you. Today I&amp;#x2019;m celebrating the hard work of my incredible co-founders and teammates, and the courage of our early seed and Series A investors. But most importantly I&amp;#x2019;m celebrating our customers who&amp;#x2019;ve supported us and paid for our product in its infantile state. Thank you, thank you, thank you. We do this for you.&lt;/p&gt;
+			  
+
+
+
+
+      &lt;/section&gt;
+      
+				
+
+
+
+
+								
+      
+      &lt;/div&gt;
+</description>
+<title>
+Intercom raises a Series B round of $23M
+</title>
+</item>
+<item>
+<link>
+https://stripe-ctf.com
+</link>
+<description>
+&lt;div&gt;&lt;p&gt; &lt;i&gt;At the heart of any distributed system is an undistributed one.&lt;/i&gt; &lt;/p&gt;
+
+&lt;p&gt; You've recently become the Director of Big Data at Large Corpus
+Systems, Inc. It's your first week on the job, and you've just
+received an urgent alert that your data pipeline has ground to a
+halt. After some painstaking debugging, you've managed to track the
+bottleneck to the following &lt;a href=&quot;https://stripe-ctf.com#code&quot;&gt;code&lt;/a&gt;. You're not quite
+sure what the script does, but whatever it's doing, it's doing it very
+slowly. &lt;/p&gt;
+
+&lt;p&gt; Your challenge is to make this code run much faster, without
+altering its output. In particular, you need to get it running at
+least as fast as our reference solution &amp;#x2014; when you submit a revision,
+we'll tell you how our solution compares. &lt;/p&gt;
+
+
+
+&lt;div class=&quot;background&quot;&gt;
+
+&lt;p&gt; If you've ever taken a computer science class (not at all a
+prerequsite for this CTF), you've probably learned that all that
+matters is your program's &lt;a href=&quot;http://www.quora.com/Big-O-Notation/What-is-the-big-O-notation-and-how-do-I-calculate-it&quot;&gt;big-O&lt;/a&gt;
+runtime. However, most of what you do when running a real system is
+tune constant factors &amp;#x2014; it's often much easier to make your
+program omit a few operations here and there than to rather than
+rewrite using a fancy new algorithm. (And if you can make your program
+run twice as fast or use half as much memory, that's a huge win.) &lt;/p&gt;
+
+&lt;p&gt; In this level, the first challenge is to figure out what this code
+even does. It turns out this is an all-too-common challenge in the
+real world :). There are a few ways to approach this. One is trying
+to just read it and hope for divine inspiration. That's probably not
+the easiest way though. &lt;/p&gt;
+
+&lt;p&gt; One nice property of code is that even if you don't understand it,
+you know someone who does &amp;#x2014; your computer. You can try running
+the program with a bunch of different inputs to get a sense of what it
+does, and then with that knowledge figure out what various lines of
+code seem to be doing. (Note: most doctors recommend exercising some
+discretion in running code that you find on the Internet, however.)
+&lt;/p&gt;
+
+&lt;p&gt; Once you've &lt;a href=&quot;https://stripe-ctf.com/signup&quot;&gt;gotten started&lt;/a&gt;, try cloning the level. There's a &lt;code&gt;README.md&lt;/code&gt; file which contains some pointers
+for running the level (you may want to read up on Unix &lt;a href=&quot;http://snap.nlc.dcccd.edu/learn/madden/intro/common/redirect.html&quot;&gt;shell
+redirection&lt;/a&gt;). Try them out. Do you see a pattern in the program's
+output? &lt;/p&gt;
+
+&lt;p&gt; If you get stuck, feel free to hop into the CTF &lt;a href=&quot;https://chat.stripe-ctf.com/#ctf&quot;&gt;IRC channel&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h2&gt; Relevant resources &lt;/h2&gt;
+
+&lt;p&gt; &lt;a href=&quot;http://koans.heroku.com/en&quot;&gt;Ruby Koans Online&lt;/a&gt; and &lt;a href=&quot;https://www.bloc.io/ruby-warrior/#/&quot;&gt;Ruby warrior&lt;/a&gt;: fun, interactive tools for learning Ruby. &lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;http://www.quora.com/Big-O-Notation/Whats-the-best-way-to-explain-big-O-notation-in-laymens-terms&quot;&gt;Big-O in laymen's terms&lt;/a&gt;: a simpler explanation of big-O notation. &lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;http://www.cgl.ucsf.edu/Outreach/bmi219/slides/shell.html&quot;&gt;The Unix shell&lt;/a&gt;: a presentation on shell basics. &lt;/p&gt;
+
+&lt;/div&gt;
+
+
+  &lt;/div&gt;
+</description>
+<title>
+Stripe CTF3: Distributed Systems is live
+</title>
+</item>
+<item>
+<link>
+http://talater.com/chrome-is-listening/
+</link>
+<description>
+&lt;div&gt;&lt;article&gt;
+                            &lt;p&gt;While we&amp;#x2019;ve all grown accustomed to chatting with Siri, talking to our cars, and soon maybe even asking our glasses for directions, talking to our computers still feels weird. But now, Google is putting their full weight behind changing this. There&amp;#x2019;s no clearer evidence to this, than visiting Google.com, and seeing a speech recognition button right there inside Google&amp;#x2019;s most sacred real estate - the search box.&lt;/p&gt;
+                            &lt;p&gt;Yet all this effort may now be compromised by a new exploit which lets malicious sites turn Google Chrome into a listening device, one that can record anything said in your office or your home, as long as Chrome is still running.&lt;/p&gt;
+                            &lt;h2&gt;Check out the video, to see the exploit in action&lt;/h2&gt;
+                            &lt;p&gt;&lt;iframe width=&quot;790&quot; height=&quot;593&quot; src=&quot;http://www.youtube.com/embed/s5D578JmHdU?rel=0&amp;amp;vq=hd720&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+                            &lt;h2&gt;Google&amp;#x2019;s Response&lt;/h2&gt;
+                            &lt;p&gt;I discovered this exploit while working on annyang, a popular &lt;a href=&quot;https://www.talater.com/annyang/&quot;&gt;JavaScript Speech Recognition&lt;/a&gt; library. My work has allowed me the insight to find multiple bugs in Chrome, and to come up with this exploit which combines all of them together.&lt;/p&gt;
+                            &lt;p&gt;Wanting speech recognition to succeed, I of course decided to do the right thing&amp;#x2026;&lt;/p&gt;
+                            &lt;p&gt;I reported this exploit to Google&amp;#x2019;s security team in private on September 13. By September 19, their engineers have identified the bugs and suggested fixes. On September 24, a patch which fixes the exploit was ready, and three days later my find was nominated for Chromium&amp;#x2019;s Reward Panel (where prizes can go as high as $30,000.)&lt;/p&gt;
+                            &lt;p&gt;Google&amp;#x2019;s engineers, who&amp;#x2019;ve proven themselves to be just as talented as I imagined, were able to identify the problem and fix it in less than 2 weeks from my initial report.&lt;/p&gt;
+                            &lt;p&gt;I was ecstatic. The system works.&lt;/p&gt;
+                            &lt;p&gt;But then time passed, and the fix didn&amp;#x2019;t make it to users&amp;#x2019; desktops. A month and a half later, I asked the team why the fix wasn&amp;#x2019;t released. Their answer was that there was an ongoing discussion within the Standards group, to agree on the correct behaviour - &amp;#x201C;Nothing is decided yet.&amp;#x201D;&lt;/p&gt;
+                            &lt;p&gt;As of today, almost four months after learning about this issue, Google is still waiting for the Standards group to agree on the best course of action, and your browser is still vulnerable.&lt;/p&gt;
+                            &lt;p&gt;By the way, the web&amp;#x2019;s standards organization, the W3C, has already defined the correct behaviour which would&amp;#x2019;ve prevented this&amp;#x2026; This was done in their specification for the Web Speech API, back in October 2012.&lt;/p&gt;
+                            &lt;h2&gt;How Does it Work?&lt;/h2&gt;
+                            &lt;p&gt;A user visits a site, that uses speech recognition to offer some cool new functionality. The site asks the user for permission to use his mic, the user accepts, and can now control the site with his voice. Chrome shows a clear indication in the browser that speech recognition is on, and once the user turns it off, or leaves that site, Chrome stops listening. So far, so good.&lt;/p&gt;
+                            &lt;p&gt;But what if that site is run by someone with malicious intentions?&lt;/p&gt;
+                            &lt;p&gt;Most sites using Speech Recognition, choose to use secure HTTPS connections. This doesn&amp;#x2019;t mean the site is safe, just that the owner bought a $5 security certificate. When you grant an HTTPS site permission to use your mic, Chrome will remember your choice, and allow the site to start listening in the future, without asking for permission again. This is perfectly fine, as long as Chrome gives you clear indication that you are being listened to, and that the site can&amp;#x2019;t start listening to you in background windows that are hidden to you.&lt;/p&gt;
+                            &lt;p&gt;When you click the button to start or stop the speech recognition on the site, what you won&amp;#x2019;t notice is that the site may have also opened another hidden popunder window. This window can wait until the main site is closed, and then start listening in without asking for permission. This can be done in a window that you never saw, never interacted with, and probably didn&amp;#x2019;t even know was there.&lt;/p&gt;
+                            &lt;p&gt;To make matters worse, even if you do notice that window (which can be disguised as a common banner), Chrome does not show any visual indication that Speech Recognition is turned on in such windows - only in regular Chrome tabs.&lt;/p&gt;
+                            &lt;p&gt;You can see the full &lt;a href=&quot;https://github.com/TalAter/chrome-is-listening&quot;&gt;source code for this exploit&lt;/a&gt; on GitHub.&lt;/p&gt;
+                            &lt;h2&gt;Speech Recognition's Future&lt;/h2&gt;
+                            &lt;p&gt;Speech recognition has huge potential for launching the web forward. Developers are creating amazing things, making sites better, easier to use, friendlier for people with disabilities, and just plain cool&amp;#x2026;&lt;/p&gt;
+                            &lt;p&gt;As the maintainer of a popular &lt;a href=&quot;https://www.talater.com/annyang/&quot;&gt;speech recognition library&lt;/a&gt;, it may seem that I shot myself in the foot by exposing this. But I have no doubt that by exposing this, we can ensure that these issues will be resolved soon, and we can all go back to feeling very silly talking to our computers&amp;#x2026; A year from now, it will feel as natural as any of the other wonders of this age.&lt;/p&gt;
+                        &lt;/article&gt;
+                    &lt;/div&gt;
+</description>
+<title>
+Chrome Bugs Allow Sites to Listen to Your Private Conversations
 </title>
 </item>
 </channel>
