@@ -14,181 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-douglas.macmillan@wsj.com Biography
-</author>
-<link>
-http://online.wsj.com/news/articles/SB10001424052702304632204579337043662898228
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;articleBody&quot;&gt;
-      
-
- &lt;p&gt;In the crowded field of online payments, venture capitalists are betting Stripe Inc. is a standout worth more than a billion dollars. &lt;/p&gt; &lt;p&gt;The payments startup has raised about $80 million in new funding this week from venture-capital investors including Khosla Ventures, Sequoia Capital, and Founders Fund, said brothers John and Patrick Collison, the company's co-founders, in an interview. Stripe, at just over four years old, is now...
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description>
-<title>
-Payments Startup Stripe (YC S10) Joins the Billion Dollar Club
-</title>
-</item>
-<item>
-<author>
-admin
-</author>
-<link>
-http://www.josecasanova.com/blog/how-i-hacked-kayak-and-booked-a-cheaper-flight/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-			&lt;p&gt;Let me start this out by saying I didn&amp;#x2019;t &amp;#x201C;hack&amp;#x201D; something in the black hat&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hackers_(film)&quot;&gt;Hackers&lt;/a&gt;&amp;#xA0;way, but by finding a market inefficiency and leveraging it to my advantage. It must be the day trader in me. No harm was done to any computers or systems in the making of this post.&lt;/p&gt;
-&lt;h2&gt;TL;DR: I booked a flight through Kayak using a VPN and saved ~$100.&lt;/h2&gt;
-&lt;p&gt;Long version: I was looking for flights to New Orleans when I realized that the flight price I checked yesterday was ~$100 cheaper. I started to think why the price went up so much in one day and tried checking the flight again using only Google Incognito but there was no price budge. Maybe my VPN had something to do with it? The night before I was using a &lt;a href=&quot;http://en.wikipedia.org/wiki/Virtual_private_network&quot;&gt;VPN&lt;/a&gt;&amp;#xA0;(I use BTGuard btw) and Kayak thought I was from Toronto, Canada. I guess if you are not from the departure city then flights are cheaper?&lt;/p&gt;
-&lt;h2&gt;So what did I do?&lt;/h2&gt;
-&lt;p&gt;So I had originally went to Kayak today and checked flights from Miami to New Orleans (Mardi Gras, w00t!). This was done without a VPN but using Google&amp;#x2019;s Incognito feature. Take a look at how much the flights were:&lt;/p&gt;
-&lt;div id=&quot;attachment_26&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_us.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-26 &quot; alt=&quot;kayak_us&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_us-300x178.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Flights to New Orleans from Miami (Non-VPN)&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Also, check out where my IP was saying that I was from:&lt;/p&gt;
-&lt;div id=&quot;attachment_28&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/us_ip.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-28 &quot; alt=&quot;us_ip&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/us_ip-187x300.png&quot; width=&quot;187&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;This is my &amp;#x201C;real&amp;#x201D; IP, no VPN&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;I thought this was strange since the night before I had checked flights and they were ~$100 cheaper. I realized I was logged into my VPN and thought it might have to do with that (BTW, I use the VPN to mask my internet traffic&amp;#x2026; sorry NSA). So what did I do? Tried checking again while being logged into my VPN!&lt;/p&gt;
-&lt;p&gt;This is me being logged into my VPN:&lt;/p&gt;
-&lt;div id=&quot;attachment_29&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/vpn.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-29&quot; alt=&quot;VPN FTW!&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/vpn-213x300.png&quot; width=&quot;213&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;VPN FTW!&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;And here is where my IP is saying that I am from:&lt;/p&gt;
-&lt;div id=&quot;attachment_22&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/canadian-ip.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-22&quot; alt=&quot;Canada, eh?&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/canadian-ip-216x300.png&quot; width=&quot;216&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Canada, eh?&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;So I tried Kayak again, while being &amp;#x201C;shown&amp;#x201D; as being from Canada and this is what I got:&lt;/p&gt;
-&lt;div id=&quot;attachment_25&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_canadza.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-25&quot; alt=&quot;Check out the Canadian flag at the top right&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/kayak_canadza-300x156.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Check out the Canadian flag at the top right&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;That is about a ~$70+ price difference (I don&amp;#x2019;t think that included taxes)! Also, when I had checked earlier, that $345 flight wasn&amp;#x2019;t there&amp;#x2026; so it was a +$100 difference. When I went to book my flight my checkout total was in EUROS! The thing is, it wasn&amp;#x2019;t 380 euros, but 207 euros! &amp;#xA0;That converts to about $280 USD.&lt;/p&gt;
-&lt;div id=&quot;attachment_24&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/eurusd.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-24&quot; alt=&quot;Euros wuddup&quot; src=&quot;http://www.josecasanova.com/blog/wp-content/uploads/2014/01/eurusd-300x136.png&quot; width=&quot;300&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Euros wuddup&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Moral of the story? Try booking your flights through a VPN, maybe you&amp;#x2019;ll save a few bucks&amp;#x2026;.. even if you pay in euros.&lt;/p&gt;
-&lt;p&gt;PS: I checked my online bank statement and I paid $281.60 total!&lt;/p&gt;
-&lt;p&gt;PSS: The flight is now over $400 on a non-VPN via Kayak + Google Incognito.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=7105307&quot;&gt;Discuss on Hacker News&lt;/a&gt;&lt;/p&gt;
-					&lt;/div&gt;
-		
-		
-	&lt;/div&gt;
-</description>
-<title>
-How I “hacked” Kayak and booked a cheaper flight
-</title>
-</item>
-<item>
-<link>
-http://insideintercom.io/silicon-valley-outsider-raised-30m-30-months/
-</link>
-<description>
-&lt;div&gt;&lt;section class=&quot;post_body&quot;&gt;
-        &lt;img src=&quot;http://cdn.insideintercom.io/wp-content/uploads/2014/01/Intercom-740.png&quot; class=&quot;post_main_image&quot;&gt;			  &lt;p class=&quot;opening_paragraph&quot;&gt;I&amp;#x2019;m excited to announce today that we&amp;#x2019;ve raised a Series B round of $23M.&lt;/p&gt;
-&lt;p&gt;It was led by &lt;a href=&quot;http://www.bvp.com/&quot;&gt;Bessemer&lt;/a&gt;, investors in iconic tech companies like LinkedIn, Yelp, Skype, Pinterest, Box, Twilio, Shopify, and many more, with participation by our Series A investors &lt;a href=&quot;http://s23p.com/&quot;&gt;The Social+Capital Partnership&lt;/a&gt;. &lt;a href=&quot;https://twitter.com/ethankurz&quot;&gt;Ethan Kurzweil&lt;/a&gt; has joined the board alongside &lt;a href=&quot;https://twitter.com/mamoonha&quot;&gt;Mamoon&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/destraynor&quot;&gt;Des&lt;/a&gt;, and myself.&lt;/p&gt;
-&lt;p&gt;We founded Intercom 30 months ago. Before then, I was living in Ireland and knew very little about raising venture capital. We&amp;#x2019;ve now raised a total of $30M over three rounds. These are the lessons I&amp;#x2019;ve learned.&lt;/p&gt;
-&lt;h2&gt;Aggressively expand your vision&lt;/h2&gt;
-&lt;p&gt;One man&amp;#x2019;s Facebook is another man&amp;#x2019;s &amp;#x201C;online directory for colleges&amp;#x201D;&amp;#x2014;&lt;a href=&quot;http://www.youtube.com/watch?v=--APdD6vejI&quot;&gt;which is how Zuckerberg described his new service initially&lt;/a&gt;. In the defining days of any new category, there are dozens of people who happen upon the same fundamental idea. But very few have the capacity to see the true potential for it beyond the obvious. &lt;/p&gt;
-&lt;p&gt;Your vision is the ceiling for your company&amp;#x2019;s potential. You&amp;#x2019;ll never be a billion dollar business if you&amp;#x2019;re not deliberately working to get there. And in venture capital, it doesn&amp;#x2019;t make sense to invest in anyone who isn&amp;#x2019;t at least trying to build a business that size.&lt;/p&gt;
-&lt;p&gt;Intercom is our contribution to Internet innovation. Internet technologies are still catching up with how humans interact offline. The majority of progress in this space is on the consumer side&amp;#x2014;Facebook, WhatsApp, Snapchat, et al. Intercom is bringing this to business. It&amp;#x2019;s a seamless, lightweight way for the whole company to connect personally with their customers. The incumbents haven&amp;#x2019;t innovated in over a decade. In fact, the separate helpdesks, email marketing tools, feedback products, and CRMs have only become more complex. These disconnected services cannot provide a holistic view of the customer. And as a result, the customer&amp;#x2019;s experience is very disjointed. Our vision is to be at the center of all customer communication for all kinds of Internet business, which increasingly every business is becoming. We&amp;#x2019;re dedicated to going all the way with this.&lt;/p&gt;
-&lt;h2&gt;Focus on engagement quality before engagement quantity&lt;/h2&gt;
-&lt;p&gt;Startups talk a lot about traction as a measure of their potential. When they do, they roll out the biggest number they have&amp;#x2014;like the number of people who&amp;#x2019;ve blinked at their sign-up form. &amp;#x201C;Meaningful traction&amp;#x201D; might be something stronger&amp;#x2014;like an actual sign up. Yet that&amp;#x2019;s still missing the point. A better measure is engagement. How intensely are individuals or companies using your product?&lt;/p&gt;
-&lt;p&gt;Venture investors assess deals on the presumption that the vast majority of the market for the product is untapped, and that it&amp;#x2019;s extremely large. Otherwise it&amp;#x2019;s not a venture-stage opportunity with high growth potential. And so the number of customers or users you have will always be expected to be small in the grand scheme of things. However, you&amp;#x2019;ll need to show that those customers are highly engaged. That they&amp;#x2019;re extracting a lot of value. A small number of such data points&amp;#x2014;which for some companies could be as low as 10 customers&amp;#x2014;will help you demonstrate the potential that your product could have in the broader market.&lt;/p&gt;
-&lt;p&gt;We now have just under 2,000 paying companies&amp;#x2014;small teams like &lt;a href=&quot;https://circleci.com/&quot;&gt;Circle&lt;/a&gt; and &lt;a href=&quot;http://visual.ly/&quot;&gt;Visual.ly&lt;/a&gt;, and larger companies like &lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; and &lt;a href=&quot;https://hootsuite.com/&quot;&gt;HootSuite&lt;/a&gt;&amp;#x2014;and annual revenue in the millions. But more importantly, 65% of our monthly active users log in to Intercom every week, and 35% of our weekly active users log in 5 days per week. And while we&amp;#x2019;ve a lot to improve, &lt;a href=&quot;https://twitter.com/intercom/favorites&quot;&gt;customer satisfaction is off the charts&lt;/a&gt;. &lt;/p&gt;
-&lt;h2&gt;Hire out of your league&lt;/h2&gt;
-&lt;p&gt;I&amp;#x2019;ve heard the idea many times that goes something like: &amp;#x201C;angel investors bet on people, seed investors bet on product, Series A investors bet on a business&amp;#x2026;&amp;#x201D; It&amp;#x2019;s true that at a higher valuation and raise amount, and with more time spent on the business, there will be increased expectation of progress. But what shouldn&amp;#x2019;t be drawn from this is any idea that team becomes less important, at any stage. Even public companies&amp;#x2019; stock price is affected by investor confidence in the management&amp;#x2014;study the rise and fall in the price of Yahoo! and Apple since their changes in leadership, respectively.&lt;/p&gt;
-&lt;p&gt;Mamoon once said to me: &amp;#x201C;My hiring philosophy is aim high. Get people you think you can&amp;#x2019;t get. Shock people that you were able to get a certain person.&amp;#x201D; This is the only approach that results in a step-change in average talent amongst a team. The opposite is a plateau in team quality&amp;#x2014;getting bigger, but not better. Great people attract great people and companies who adopt a culture of always stretching to get the very best have been shown time and time again to be the most successful. Furthermore, experienced leaders build significantly bigger businesses&amp;#x2014;&lt;a href=&quot;http://www.forbes.com/sites/krisztinaholly/2014/01/15/why-great-entrepreneurs-are-older-than-you-think/&quot;&gt;&amp;#x201C;the typical successful founder [has] at least 6-10 years of industry experience&amp;#x201D;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We started 2013 with 13 people and finished with 47&amp;#x2014;all uniquely amazing in ways I&amp;#x2019;m surprised by daily. &lt;a href=&quot;http://insideintercom.io/hire-your-heroes-welcoming-paul-adams/&quot;&gt;In May we announced we had hired ex Google and Facebook manager, Paul Adams&lt;/a&gt;, now our VP of Product. And I&amp;#x2019;m delighted to announce today that we&amp;#x2019;ve hired ex PayPal and Yammer exec, &lt;a href=&quot;http://www.linkedin.com/pub/mark-woolway/0/1/833&quot;&gt;Mark Woolway&lt;/a&gt;, as COO. Mark now runs finance, operations, legal, HR, recruiting, and administration, and has had a tremendous impact in only one month. He&amp;#x2019;s certainly out of my league&amp;#x2014;he&amp;#x2019;s worked for three CEOs in his career: Peter Thiel, Elon Musk, and David Sacks. For PayPal he helped raise over $200M in venture capital, led their IPO, and eventual acquisition by eBay for $1.6B. He was Managing Director for Thiel&amp;#x2019;s hedge fund, Clarium Capital, at its peak worth $8B. And as Executive Vice President at Yammer, he raised $127M and led the deal in which Microsoft acquired the company for $1.2B. People like Mark make everyone up their game, and raise the bar for what success looks like. I&amp;#x2019;m thrilled to call him a colleague. And by the way, &lt;a href=&quot;https://www.intercom.io/careers&quot;&gt;we&amp;#x2019;re looking for a whole lot more&lt;/a&gt;. &lt;/p&gt;
-&lt;h2&gt;Know your strategy and find investors who believe in it&lt;/h2&gt;
-&lt;p&gt;There are many things we call &amp;#x201C;technology companies&amp;#x201D; whose unique value is not in fact defined by technology. This does not take from their achievement or worth to the world, but it can be useful to think about in terms of your own business strategy. Groupon, for example, is a very valuable company, yet its innovation is in its business model. It&amp;#x2019;s a promotions company with a web site&amp;#x2014;nobody uses Groupon for their amazing tech. The same can be said for many businesses with incredible sales or marketing.&lt;/p&gt;
-&lt;p&gt;Intercom does not have an interesting business model. We charge money for people to use our product. And we do not have incredible sales or marketing. We have no salespeople and made our first marketing hire one month ago. What we do have is an innovative product. Something that people can&amp;#x2019;t get elsewhere which does unique things for them. All of our value is in this technology. And our double-digit monthly growth comes from people liking it and sharing it with their friends. Our company will become more valuable mostly by investing in product. Making it better for those who use it today, and allowing it to be used on more platforms, in more markets.&lt;/p&gt;
-&lt;p&gt;When you can articulate your general business strategy, it&amp;#x2019;s far easier to know which investors will be most excited by your deal, and to make your partnership with them a long-term success. Mamoon agreed from the start that the bulk of our capital should be spent on product. On a Sunday in late December, the day before I pitched the Bessemer partnership, I met Ethan for a coffee. I suspected since my first interaction with him that we were on the same page, but I really wanted to hear him say it&amp;#x2026; I asked: &amp;#x201C;So if we do this deal, what are the kinds of things you think we should spend the money on?&amp;#x201D; He said quickly: &amp;#x201C;Product! I don&amp;#x2019;t think for the next five years you&amp;#x2019;d want to stop investing aggressively in product.&amp;#x201D; The right investor won&amp;#x2019;t ever want you to be something you&amp;#x2019;re not, because they&amp;#x2019;re investing in you for who you are and what you believe in. That&amp;#x2019;s your strategy. It defines the opportunity and makes you far easier to bet on. I feel so fortunate to have investors who support our passion for simply making an amazing product.&lt;/p&gt;
-&lt;h2&gt;Thanks&lt;/h2&gt;
-&lt;p&gt;It&amp;#x2019;s fair to say that fundraising is a pseudo-achievement. It doesn&amp;#x2019;t in itself create value. That comes from what you spend the money on. Yet it&amp;#x2019;s worth celebrating because of what you really have achieved to be able to convince smart people to back you. Today I&amp;#x2019;m celebrating the hard work of my incredible co-founders and teammates, and the courage of our early seed and Series A investors. But most importantly I&amp;#x2019;m celebrating our customers who&amp;#x2019;ve supported us and paid for our product in its infantile state. Thank you, thank you, thank you. We do this for you.&lt;/p&gt;
-			  
-
-
-
-
-      &lt;/section&gt;
-      
-				
-
-
-
-
-								
-      
-      &lt;/div&gt;
-</description>
-<title>
-Intercom raises a Series B round of $23M
-</title>
-</item>
-<item>
-<link>
-https://stripe-ctf.com
-</link>
-<description>
-&lt;div&gt;&lt;p&gt; &lt;i&gt;At the heart of any distributed system is an undistributed one.&lt;/i&gt; &lt;/p&gt;
-
-&lt;p&gt; You've recently become the Director of Big Data at Large Corpus
-Systems, Inc. It's your first week on the job, and you've just
-received an urgent alert that your data pipeline has ground to a
-halt. After some painstaking debugging, you've managed to track the
-bottleneck to the following &lt;a href=&quot;https://stripe-ctf.com#code&quot;&gt;code&lt;/a&gt;. You're not quite
-sure what the script does, but whatever it's doing, it's doing it very
-slowly. &lt;/p&gt;
-
-&lt;p&gt; Your challenge is to make this code run much faster, without
-altering its output. In particular, you need to get it running at
-least as fast as our reference solution &amp;#x2014; when you submit a revision,
-we'll tell you how our solution compares. &lt;/p&gt;
-
-
-
-&lt;div class=&quot;background&quot;&gt;
-
-&lt;p&gt; If you've ever taken a computer science class (not at all a
-prerequsite for this CTF), you've probably learned that all that
-matters is your program's &lt;a href=&quot;http://www.quora.com/Big-O-Notation/What-is-the-big-O-notation-and-how-do-I-calculate-it&quot;&gt;big-O&lt;/a&gt;
-runtime. However, most of what you do when running a real system is
-tune constant factors &amp;#x2014; it's often much easier to make your
-program omit a few operations here and there than to rather than
-rewrite using a fancy new algorithm. (And if you can make your program
-run twice as fast or use half as much memory, that's a huge win.) &lt;/p&gt;
-
-&lt;p&gt; In this level, the first challenge is to figure out what this code
-even does. It turns out this is an all-too-common challenge in the
-real world :). There are a few ways to approach this. One is trying
-to just read it and hope for divine inspiration. That's probably not
-the easiest way though. &lt;/p&gt;
-
-&lt;p&gt; One nice property of code is that even if you don't understand it,
-you know someone who does &amp;#x2014; your computer. You can try running
-the program with a bunch of different inputs to get a sense of what it
-does, and then with that knowledge figure out what various lines of
-code seem to be doing. (Note: most doctors recommend exercising some
-discretion in running code that you find on the Internet, however.)
-&lt;/p&gt;
-
-&lt;p&gt; Once you've &lt;a href=&quot;https://stripe-ctf.com/signup&quot;&gt;gotten started&lt;/a&gt;, try cloning the level. There's a &lt;code&gt;README.md&lt;/code&gt; file which contains some pointers
-for running the level (you may want to read up on Unix &lt;a href=&quot;http://snap.nlc.dcccd.edu/learn/madden/intro/common/redirect.html&quot;&gt;shell
-redirection&lt;/a&gt;). Try them out. Do you see a pattern in the program's
-output? &lt;/p&gt;
-
-&lt;p&gt; If you get stuck, feel free to hop into the CTF &lt;a href=&quot;https://chat.stripe-ctf.com/#ctf&quot;&gt;IRC channel&lt;/a&gt;. &lt;/p&gt;
-
-&lt;h2&gt; Relevant resources &lt;/h2&gt;
-
-&lt;p&gt; &lt;a href=&quot;http://koans.heroku.com/en&quot;&gt;Ruby Koans Online&lt;/a&gt; and &lt;a href=&quot;https://www.bloc.io/ruby-warrior/#/&quot;&gt;Ruby warrior&lt;/a&gt;: fun, interactive tools for learning Ruby. &lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;http://www.quora.com/Big-O-Notation/Whats-the-best-way-to-explain-big-O-notation-in-laymens-terms&quot;&gt;Big-O in laymen's terms&lt;/a&gt;: a simpler explanation of big-O notation. &lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;http://www.cgl.ucsf.edu/Outreach/bmi219/slides/shell.html&quot;&gt;The Unix shell&lt;/a&gt;: a presentation on shell basics. &lt;/p&gt;
-
-&lt;/div&gt;
-
-
-  &lt;/div&gt;
-</description>
-<title>
-Stripe CTF3: Distributed Systems is live
-</title>
-</item>
-<item>
 <link>
 http://talater.com/chrome-is-listening/
 </link>
@@ -222,6 +47,601 @@ http://talater.com/chrome-is-listening/
 </description>
 <title>
 Chrome Bugs Allow Sites to Listen to Your Private Conversations
+</title>
+</item>
+<item>
+<author>
+Juliette Garside
+</author>
+<link>
+http://www.theguardian.com/technology/2014/jan/22/facebook-princeton-researchers-infectious-disease
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;main-content-picture&quot;&gt;
+							&lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/22/1390418861326/Bubonic-plague-bacteria-011.jpg&quot; width=&quot;460&quot; alt=&quot;Bubonic plague bacteria&quot;&gt;
+										&lt;p class=&quot;caption&quot;&gt;Bubonic plague bacteria. Scientists argue that, like bubonic plague, Facebook will eventually die out. Photograph: AFP/Getty Images&lt;/p&gt;
+					&lt;/div&gt;
+	
+
+    
+    &lt;div id=&quot;article-body-blocks&quot;&gt;
+	    &lt;p&gt;Facebook has spread like an infectious disease but we are slowly becoming immune to its attractions, and the platform will  be largely abandoned by 2017, say &lt;a href=&quot;http://arxiv.org/pdf/1401.4208v1.pdf&quot;&gt;researchers at Princeton University&lt;/a&gt; (pdf).&lt;/p&gt;&lt;p&gt;The forecast of Facebook's impending doom was made by comparing the growth curve of epidemics to those of online social networks. Scientists argue that, like bubonic plague, Facebook will eventually die out.&lt;/p&gt;&lt;p&gt;The social network, which celebrates its 10th birthday on 4 February, has survived longer than rivals such as Myspace and Bebo, but the Princeton forecast says it will lose 80% of its peak user base within the next three years.&lt;/p&gt;&lt;p&gt;John Cannarella and Joshua Spechler, from the US university's mechanical and aerospace engineering department, have based their prediction on the number of times Facebook is typed into Google as a search term. The charts produced by the &lt;a href=&quot;http://www.google.co.uk/trends/explore#q=facebook&quot; title=&quot;&quot;&gt;Google Trends&lt;/a&gt; service show Facebook searches peaked in December 2012 and have since begun to trail off.&lt;/p&gt;&lt;p&gt;&quot;Ideas, like diseases, have been shown to spread infectiously between people before eventually dying out, and have been successfully described with epidemiological models,&quot; the authors claim in a paper entitled Epidemiological modelling of online social network dynamics.&lt;/p&gt;&lt;p&gt;&quot;Ideas are spread through communicative contact between different people who share ideas with each other. Idea manifesters ultimately lose interest with the idea and no longer manifest the idea, which can be thought of as the gain of 'immunity' to the idea.&quot;&lt;/p&gt;&lt;p&gt;Facebook reported nearly 1.2 billion monthly active users in October, and is due to update investors on its traffic numbers at the end of the month. While desktop traffic to its websites has indeed been falling, this is at least in part due to the fact that many people now only access the network via their mobile phones.&lt;/p&gt;&lt;p&gt;For their study, Cannarella and Spechler used what is known as the SIR (susceptible, infected, recovered) model of disease, which creates equations to map the spread and recovery of epidemics.&lt;/p&gt;&lt;p&gt;They tested various equations against the lifespan of Myspace, before applying them to Facebook. Myspace was founded in 2003 and reached its peak in 2007 with 300 million registered users, before falling out of use by 2011. Purchased by Rupert Murdoch's News Corp for $580m, Myspace signed a $900m deal with Google in 2006 to sell its advertising space and was at one point valued at $12bn. It was eventually sold by News Corp for just $35m.&lt;/p&gt;&lt;p&gt;The 870 million people using Facebook via their smartphones each month could explain the drop in Google searches &amp;#x2013; those looking to log on are no longer doing so by typing the word Facebook into Google.&lt;/p&gt;&lt;p&gt;But Facebook's chief financial officer David Ebersman admitted on an earnings call with analysts that during the previous three months: &quot;We did see a decrease in daily users, specifically among younger teens.&quot;&lt;/p&gt;&lt;p&gt;Investors do not appear to be heading for the exit just yet. Facebook's share price reached record highs this month, valuing founder Mark Zuckerberg's company at $142bn.&lt;/p&gt;&lt;h2&gt;Facebook billionaire&lt;br&gt;&lt;/h2&gt;&lt;p&gt;When Facebook shares hit their peak in New York this week, it meant Sheryl Sandberg's personal fortune ticked over $1bn (&amp;#xA3;600m), making her one of the youngest female billionaires in the world.&lt;/p&gt;&lt;p&gt;According to Bloomberg, the 44-year-old chief operating officer of the social network owns about 12.3m shares in the company, which closed at $58.51 (&amp;#xA3;35) on Tuesday in New York, although they fell back below $58 on Wednesday. Her stake is valued at about $750m.&lt;/p&gt;&lt;p&gt;Her fortune has risen rapidly since last August, when she sold $91m of shares and was estimated to be worth $400m.&lt;/p&gt;&lt;p&gt;Sandberg has collected more than $300m from selling shares since the company's 2012 initial public offering, and owns about 4.7m stock options that began vesting last May.&lt;/p&gt;&lt;p&gt;&quot;She was brought in to figure out how to make money,&quot; David Kirkpatrick, author of The Facebook Effect, a history of the company, told Bloomberg. &quot;It's proving to be one of the greatest stories in business history.&quot;&lt;/p&gt;&lt;p&gt;Sandberg's rise in wealth mirrors her broadening role on the global stage. The Harvard University graduate and one-time chief of staff for former Treasury secretary Lawrence Summers is a donor to President Barack Obama, sits on the board of Walt Disney Co, and wrote the book Lean In. She will be discussing gender issues with IMF boss Christine Lagarde at Davos on Saturday.&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+
+						
+	
+		
+            	    
+
+
+
+
+
+		
+										
+
+        
+
+			            						
+					
+					
+                                                                                                                                                                                                                            
+
+                                                                        
+	
+	
+		
+			
+                                                        
+                                                                                                                &lt;/div&gt;
+</description>
+<title>
+Facebook may lose 80% of users by 2017, say Princeton researchers
+</title>
+</item>
+<item>
+<link>
+http://blog.quarkslab.com/tcp-backdoor-32764-or-how-we-could-patch-the-internet-or-part-of-it.html
+</link>
+<description>
+&lt;div&gt;&lt;p&gt;Note that despite this backdoor allows a free access to many hosts on the
+Internet, no patch is available as it is not maintained anymore. So we thought
+about some tricks combined with our tools to imagine how to fix that worldwide.&lt;/p&gt;
+&lt;p&gt;This backdoor doesn't have any kind of authentication and allows various remote
+commands, like:&lt;/p&gt;
+&lt;p&gt;Let's see how many routers are still exposed to this vulnerability, and propose
+a way to remove this backdoor.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;looking-for-the-backdoor-on-the-internet&quot;&gt;
+&lt;h2&gt;Looking for the backdoor on the Internet&lt;/h2&gt;
+&lt;p&gt;We first used &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; to look for hosts with TCP port 32764 open. We ended up
+with about 1 million IPv4s &lt;a class=&quot;footnote-reference&quot; href=&quot;http://blog.quarkslab.com/tcp-backdoor-32764-or-how-we-could-patch-the-internet-or-part-of-it.html#id2&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt;. The scan took about 50 hours on a low-end Linux
+virtual server.&lt;/p&gt;
+&lt;p&gt;Then, we had to determine whether this was really the backdoor exposed, or some
+other false positive.&lt;/p&gt;
+&lt;p&gt;Eloi's POC shows a clear way to do this:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Send a packet to the host device&lt;/li&gt;
+&lt;li&gt;Wait for an answer with &lt;tt class=&quot;docutils literal&quot;&gt;0x53634D4D&lt;/tt&gt; (or &lt;tt class=&quot;docutils literal&quot;&gt;0x4D4D6353&lt;/tt&gt;, according to the
+endianness of the device, see below)&lt;/li&gt;
+&lt;li&gt;In such a case, the backdoor is here and accessible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to check the IPs previously discovered, we couldn't use &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; or a
+similar tool (as they don't have any &quot;plugin&quot; feature). Moreover, sequentially
+establishing a connection to each IP to verify that the backdoor is present
+would take ages. For instance, with a 1 second timeout, the worst case scenario is 1
+million seconds (about 12 days) and even if half the hosts would answer
+&quot;directly&quot;, it would still run for 6 days. Quick process-based parallelism
+could help and might divide this time by 10/20. It still remains a lot and is
+not the good way to do this.&lt;/p&gt;
+&lt;p&gt;We thus decided to quickly code a scanner based on asynchronous sockets, that
+will check the availability of the backdoor. The advantage of asynchronous
+sockets are that lots of them (about 30k in our tests) can be managed at the
+same time, thus managing 30k hosts in parallel. This kind of parallelism
+couldn't be achieved with a classical process (or thread)-based parallelism.&lt;/p&gt;
+&lt;p&gt;This asynchronous model is somehow the same used by &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; and &lt;tt class=&quot;docutils literal&quot;&gt;zmap&lt;/tt&gt;, apart
+that they bypass sockets to directly emit packets (and thus manage more hosts
+simultaneously).&lt;/p&gt;
+&lt;p&gt;Using a classical Linux system, a first implementation using the &lt;tt class=&quot;docutils literal&quot;&gt;select&lt;/tt&gt;
+function and a five seconds timeout would perform at best ~1000 tests/second.
+The limitation is mainly due to the fact that the &lt;tt class=&quot;docutils literal&quot;&gt;FD_SETSIZE&lt;/tt&gt; value, on most
+Linux systems, is set by default to 1024. This means that the maximum file
+descriptor identifier that &lt;tt class=&quot;docutils literal&quot;&gt;select&lt;/tt&gt; can handle is 1024 (and thus the number of
+descriptors is inferior or equal to this limit). In the end, this limits the
+number of sockets that can be opened at the same time, thus the overall scan
+performance.&lt;/p&gt;
+&lt;p&gt;Fortunately, other models that do not have this limitation exist. &lt;tt class=&quot;docutils literal&quot;&gt;epoll&lt;/tt&gt; is one
+of them. After adapting our code, our system was able to test about 6k IP/s
+(using 30k sockets simultaneously). That is less than what &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; and/or &lt;tt class=&quot;docutils literal&quot;&gt;zmap&lt;/tt&gt;
+can do (in terms of packets/s), but it gave good enough performance for what
+we needed to do.&lt;/p&gt;
+&lt;p&gt;In the end, we found about 6500 routers running this backdoor.&lt;/p&gt;
+&lt;p&gt;Sources for these scanners are not ready to be published yet (trust me), but
+stay tuned :)&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;note-about-big-vs-little-endian&quot;&gt;
+&lt;h3&gt;Note about big vs. little endian&lt;/h3&gt;
+&lt;p&gt;The people that coded this backdoor didn't care about the endianness of the
+underlying CPU. That's why the signature that is received can have two
+different values.&lt;/p&gt;
+&lt;p&gt;To exploit the backdoor, one has to first determine the endianness of the
+remote router. This is done by checking the received signature: &lt;tt class=&quot;docutils literal&quot;&gt;0x53634D4D&lt;/tt&gt;
+means little-endian, &lt;tt class=&quot;docutils literal&quot;&gt;0x4D4D6353&lt;/tt&gt; big-endian.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;section&quot; id=&quot;reconstructing-a-new-filesystem&quot;&gt;
+&lt;h2&gt;Reconstructing a new filesystem&lt;/h2&gt;
+&lt;p&gt;In order to provide a new clean filesystem, we needed to dump one from
+a router. So, we firstly used the backdoor to retrieve such a
+filesystem.  Moreover, analyzing it makes it easier to understand how
+the router works and is configured.&lt;/p&gt;
+&lt;p&gt;We made our experiments on our Linksys WAG200N. These techniques might
+or might not work on others. On this particular router (and maybe
+others), a telnet daemon executable is available (&lt;tt class=&quot;docutils literal&quot;&gt;/usr/sbin/utelnetd&lt;/tt&gt;).
+It can be launched through the backdoor and directly drops a root
+shell.&lt;/p&gt;
+&lt;p&gt;The backdoor allows us to execute command as a root user and to copy some
+files. Unfortunately, on many routers, there is no SSH daemon that can be
+started or even a netcat utility for easy and quick transfers. Moreover, the
+only partition that is writable is generally a RAMFS mounted on &lt;tt class=&quot;docutils literal&quot;&gt;/tmp&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;So let's see what are our options here.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;option-1-download-through-the-web-server&quot;&gt;
+&lt;h3&gt;Option 1 : download through the web server&lt;/h3&gt;
+&lt;p&gt;Lots of routers have a web server that is used for their configuration. This web
+server (as every process running on the router) is running as the root user.
+This is potentially a good way to download files (and the rootfs) from the
+router.&lt;/p&gt;
+&lt;p&gt;For instance, on the Linksys WAG200N (and others), &lt;tt class=&quot;docutils literal&quot;&gt;/www/ppp_log&lt;/tt&gt; is a symbolic
+link to &lt;tt class=&quot;docutils literal&quot;&gt;/tmp/ppp_log&lt;/tt&gt; (for the web servers to show the PPP log). Thus, the root FS can be download like this:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Get a root shell thanks to the backdoor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# cd /tmp
+# mkdir ppp_log
+# cd ppp_log &amp;amp;&amp;amp; cat /dev/mtdblock/0 &amp;gt;./rootfs
+&lt;/pre&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;When it's done, on your computer: &lt;tt class=&quot;docutils literal&quot;&gt;wget &lt;span class=&quot;pre&quot;&gt;http://IP/ppp_log/rootfs&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The MTD partition to use can be identified thanks to various methods. &lt;tt class=&quot;docutils literal&quot;&gt;/proc/mtd&lt;/tt&gt; is a first try. In our case:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 002d0000 00010000 &quot;mtd0&quot;
+mtd1: 000b0000 00010000 &quot;mtd1&quot;
+mtd2: 00020000 00010000 &quot;mtd2&quot;
+mtd3: 00010000 00010000 &quot;mtd3&quot;
+mtd4: 00010000 00010000 &quot;mtd4&quot;
+mtd5: 00040000 00010000 &quot;mtd5&quot;
+&lt;/pre&gt;
+&lt;p&gt;The name does not give a lot of information. But, from the size of the
+partitions, we can guess that mtd0 is the rootfs (~2.8Mb).
+Moreover, a symlink in /dev validate this assumption:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# ls -la /dev
+[...] root -&amp;gt; mtdblock/0
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;option-2-mips-cross-compilation-netcat-and-upload&quot;&gt;
+&lt;h3&gt;Option 2 : MIPS cross compilation, netcat and upload&lt;/h3&gt;
+&lt;p&gt;Another way to dump the rootfs is to cross compile a tool like netcat for the
+targeted architecture. Remember, we have little and big endian MIPS systems.
+Thus, we potentially need a cross compilation chain for these two systems.&lt;/p&gt;
+&lt;p&gt;By analyzing some binaries on our test router, it appears that the uClibc
+library and tool chains have been used by the manufacturer, with versions from
+2005. Thus, we downloaded one of the version of uClibc that was released this
+year. After some difficulties to find the old versions of binutils, gcc (and
+others) and getting a working GCC 3.x compiler, our MIPSLE cross compiler
+was ready.&lt;/p&gt;
+&lt;p&gt;Then, we grabbed the netcat sources and compiled them. There are multiple ways
+that can be used to upload our freshly compiled binary to the router. The first
+one is to use the write &quot;feature&quot; of the backdoor:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ ./poc.py --ip IP --send_file ./nc --remote-filename nc
+&lt;/pre&gt;
+&lt;p&gt;This has been implemented in Eloi's POC here: &lt;a class=&quot;reference external&quot; href=&quot;https://raw.github.com/elvanderb/TCP-32764/master/poc.py&quot;&gt;https://raw.github.com/elvanderb/TCP-32764/master/poc.py&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;The issue with this feature is that it seems to crash with &quot;big&quot; files.&lt;/p&gt;
+&lt;p&gt;Another technique is to use &lt;tt class=&quot;docutils literal&quot;&gt;echo &lt;span class=&quot;pre&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-e&lt;/span&gt;&lt;/tt&gt; to transfer our binary. It works but
+is a bit slow. Also, the connection is sometimes closed by the router, so we
+have to restart where it stopped. Just do:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ ./poc.py --ip IP --send_file2 ./nc --remote-filename nc
+&lt;/pre&gt;
+&lt;p&gt;The MIPSEL netcat binary can be downloaded here: &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/blob/master/binaries/nc?raw=true&quot;&gt;https://github.com/quarkslab/linksys-wag200N/blob/master/binaries/nc?raw=true&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once netcat has been uploaded, simply launch on the router:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# cat /dev/mtdblock/0 |nc -n -v -l -p 4444
+&lt;/pre&gt;
+&lt;p&gt;And, on your computer:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ nc -n -v IP 4444 &amp;gt;./rootfs.img
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;patch-me-if-you-can-yes-we-can&quot;&gt;
+&lt;h2&gt;Patch me if you can (yes we can)&lt;/h2&gt;
+&lt;p&gt;Please note that everything that is described here is experimental and should
+be done only if you exactly know what you are doing. We can't be held
+responsible for any damage you will do to your beloved routers!&lt;/p&gt;
+&lt;p&gt;Note: the tools mentioned here are available on GitHub:
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N&quot;&gt;https://github.com/quarkslab/linksys-wag200N&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now that we have the original squashfs image, we can extract it. It is a
+well-known SquashFS, so let's grab the latest version (4.0 at the time of
+writing this article) and &quot;unsquash&quot; it:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ unsquashfs original.img
+Parallel unsquashfs: Using 8 processors
+gzip uncompress failed with error code -3
+read_block: failed to read block @0x1c139c
+read_fragment_table: failed to read fragment table block
+FATAL ERROR:failed to read fragment table
+
+$ unsquashfs -s original.img
+Found a valid little endian SQUASHFS 2:0 superblock on ./original.img
+[...]
+Block size 32768
+&lt;/pre&gt;
+&lt;p&gt;This is the same issue that Eloi pointed out in its slides. What he shows is that he
+had to force LZMA to be used for the extraction. With the fixes he provided
+(exercise also left to the reader), we can extract the SquashFS:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# unsquashfs-lzma original.img
+290 inodes (449 blocks) to write
+created 189 files
+created 28 directories
+created 69 symlinks
+created 32 devices
+created 0 fifos
+&lt;/pre&gt;
+&lt;p&gt;What actually happened is that, back in 2005, the developer of this firmware
+modified the SquashFS 2.0 tools to use LZMA (and not gzip). Even if Eloi's
+&quot;chainsaw&quot; solution worked for extraction, it will not allow us to make a new
+image with the 2.0 format.  So, back with the chainsaw, grab the squashfs 2.2
+release from sourceforge, the LZMA 4.65 SDK, and make squashfs use it with this
+patch:
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/blob/master/src/squashfs-lzma.patch&quot;&gt;https://github.com/quarkslab/linksys-wag200N/blob/master/src/squashfs-lzma.patch&lt;/a&gt;.
+The final sources can be downloaded here:
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/tree/master/src/squashfs2.2-r2-lzma&quot;&gt;https://github.com/quarkslab/linksys-wag200N/tree/master/src/squashfs2.2-r2-lzma&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With our new and freshly compiled SquashFS LZMA-enhanced 2.2 version back from
+the dead, we can now reconstruct the Linksys rootfs image. It is important to
+respect the endianness and the block size of the original image (or your router
+won't boot anymore).&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ ./squashfs2.2-r2-lzma/squashfs-tools/mksquashfs rootfs/ rootfs.img -2.0 -b 32768
+Creating little endian 2.0 filesystem on modified-bis.img, block size 32768.
+Little endian filesystem, data block size 32768, compressed data, compressed metadata, compressed fragments
+[...]
+
+$ unsquashfs -s rootfs.img
+Found a valid little endian SQUASHFS 2:0 superblock on rootfs.img.
+Creation or last append time Wed Jan 22 10:38:29 2014
+Filesystem size 1829.09 Kbytes (1.79 Mbytes)
+Block size 32768
+[...]
+&lt;/pre&gt;
+&lt;p&gt;Now, let's begin with the nice part. To test that our image works, we'll upload
+and flash it to the router. This step is critical, because if it fails, you'll
+end up with a router trying to boot from a corrupted root filesystem.&lt;/p&gt;
+&lt;p&gt;First, we use our previously compiled netcat binary to upload the newly created
+image (or use any other method of your choice):&lt;/p&gt;
+&lt;p&gt;On the router side:
+.. code:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+# nc -n -v -l -p 4444 &amp;gt;/tmp/rootfs.img
+&lt;/pre&gt;
+&lt;p&gt;On the computer side:
+.. code:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ cat rootfs.img |nc -n -v IP 4444
+&lt;/pre&gt;
+&lt;p&gt;When it's finished, have a little prayer and, on the router side:
+.. code:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+# cat /tmp/rootfs.img &amp;gt;/dev/mtdblock/0
+&lt;/pre&gt;
+&lt;p&gt;Then, plug off and on your router! If everything went well, your router should
+have rebooted just like before. If not, then you need to reflash your router
+another way, using the serial console or any JTAG port available (this is not
+covered here).&lt;/p&gt;
+&lt;p&gt;Now, we can simply permanently remove the backdoor from the root filesystem:&lt;/p&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# cd /path/to/original/fs
+# rm usr/sbin/scfgmgr
+# Edit usr/etc/rcS and remove the following line
+/usr/sbin/scfgmgr
+&lt;/pre&gt;
+&lt;p&gt;Then, rebuild your image as above, upload it, flash your router and the
+backdoor should be gone forever! It's up to you to build an SSH daemon to keep
+a root access on your router if you still want to play with it.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;linksys-wag200n-patch-procedure&quot;&gt;
+&lt;h3&gt;Linksys WAG200N patch procedure&lt;/h3&gt;
+&lt;p&gt;For those who would just like to patch their routers, here are the steps.
+Please note that this has only been tested on our Linksys WAG200N! It is really
+not recommanded to use it with other hardware. And, we repeat it, we cannot be
+held responsible for any harm on your routers! Use this at your own risk.&lt;/p&gt;
+
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ ./poc.py --ip IP --send_file2 nobackdoor.img --remote-filename rootfs
+&lt;/pre&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Then get a root shell on your router:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+$ ./poc.py --ip IP --shell
+&lt;/pre&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Check that the file sizes are the same:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# ls -l /tmp/rootfs
+# it should be 1875968 bytes
+&lt;/pre&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;To be sure, just redownload the uploaded image thanks to the web server and check that they are the same:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# mkdir /tmp/ppp_log
+# ln -s /tmp/rootfs /tmp/ppp_log
+
+And, on your computer:
+$ wget http://IP/ppp_log/rootfs
+$ diff ./rootfs /path/to/linksysWAG200N.nobackdoor.rootfs
+&lt;/pre&gt;
+
+&lt;pre class=&quot;code literal-block&quot;&gt;
+# cat /tmp/rootfs &amp;gt;/dev/mtdblock/0
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This article showed some statistics about the presence of the backdoor found by
+Eloi Vanderb&amp;#xE9;ken and how to fix one of the hardware affected. Feel free to
+comment any mistakes here, and/or provide similar images and/or fixes for other
+routers :)&lt;/p&gt;
+&lt;p class=&quot;section&quot; id=&quot;acknowledge&quot;&gt;
+&lt;h3&gt;Acknowledge&lt;/h3&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Eloi Vanderb&amp;#xE9;ken for his discovery and original POC&lt;/li&gt;
+&lt;li&gt;Fred Raynal, Fernand Lone-Sang, @pod2g, Serge Guelton and K&amp;#xE9;vin Szkudlaspki for their corrections&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+TCP backdoor 32764 – how we could patch the Internet (or part of it)
+</title>
+</item>
+<item>
+<link>
+http://www.ubercomp.com/posts/2014-01-16_facebook_remote_code_execution
+</link>
+<description>
+&lt;div&gt;&lt;body&gt;
+
+
+&lt;p&gt; Today I want to share a tale about how I found a Remote Code Execution bug
+affecting Facebook. Like all good tales, the beginning was a long time ago
+(actually, just over a year, but I count using Internet Time, so bear with
+  me). If you find this interesting and want to hire me to do a security
+  focused review or penetration testing in your own (or your company's) code,
+  don't hesitate to &lt;a href=&quot;mailto:reginaldo@ubercomp.com&quot;&gt;send me an email&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;September 22nd, 2012 was a very special day for me, because it was the day I
+found
+a &lt;a href=&quot;https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing&quot;&gt;
+XML External Entity&lt;/a&gt; Expansion bug affecting the part of Drupal that handled
+OpenID. XXEs are very nice. They allow you to read any files on the filesystem,
+make arbitrary network connections, and just for the kicks you can also DoS the
+server with the &lt;a href=&quot;https://en.wikipedia.org/wiki/Billion_laughs&quot;&gt;billion
+laughs&lt;/a&gt; attack.&lt;/p&gt;
+
+&lt;p&gt;I was so naive at the time that I didn't even bother to check if anyone else
+was vulnerable. I reported it immediately. I wanted to start putting CVEs on my
+resume as soon as possible, and this would be the first (it eventually got
+&lt;a href=&quot;http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-4554&quot;&gt;CVE-2012-4554&lt;/a&gt;
+assigned to it). Only five days later it occurred to me that OpenID was pretty
+heavily used and so maybe other places were vulnerable as well. I decided to
+check the StackOverflow login form. Indeed, it was vulnerable to the whole thing
+(file reading and all).&lt;/p&gt;
+
+&lt;p&gt;Then I decided to try to find OpenID handling code running inside Google's
+servers. I wasn't able to read files or open network connections, but both App
+Engine and Blogger were vulnerable to DoS. This is how I got my first bounty
+from Google, by the way. It was a US$ 500 bounty.&lt;/p&gt;
+
+&lt;p&gt;After reporting the bug to Google, I ran some more tests and eventually
+noticed that the bug I had in my hands was affecting a lot of implementations. I
+won't enumerate the libraries here, but let me just say that this single bug
+affected, in one way or another, libraries implemented in Java, C#, PHP, Ruby,
+Python, Perl, and then more... The only reason I'm not publishing the PoC here is
+that there are a lot of servers who are still vulnerable out there. Of course,
+the people who know about security will just read OpenID and XXE and then write
+an exploit in about 5 minutes, but I digress.&lt;/p&gt;
+
+&lt;p&gt;So after contacting (or trying to contact) every OpenID library author out
+there, I decided to write to the member-only security list hosted at the OpenID
+foundation an email titled &quot;One bug to rule them all: many implementations of
+OpenID are vulnerable to XXE&quot; to share my findings. I figured most library
+authors would be members of that list and so patches would be released for
+everyone very soon. I was right, but only partially.&lt;/p&gt;
+
+&lt;p&gt;The persistent readers who are still with me by now are thinking: what does a
+Facebook Remote Code Execution bug has to do with all this? Well, I knew
+Facebook allowed OpenID login in the past. However, when I first found the
+OpenID bug in 2012 I couldn't find any endpoint that would allow me to enter an
+arbitrary OpenID URL. From a Google search I knew that in the past you could do
+something like
+https://www.facebook.com/openid/consumer_helper.php?openid.mode=checkid_setup&amp;amp;user_claimed_id=YOUR_CLAIMED_ID_HERE&amp;amp;context=link&amp;amp;request_id=0&amp;amp;no_extensions=false&amp;amp;third_party_login=false,
+but now the consumer_helper.php endpoint is gone. So for more than a year I
+thought Facebook was not vulnerable at all, until one day I was testing
+Facebook's &lt;a href=&quot;https://www.facebook.com/login/identify?ctx=recover&quot;&gt;Forgot
+your password?&lt;/a&gt; functionality and saw a request to
+https://www.facebook.com/openid/receiver.php.&lt;/p&gt;
+
+&lt;p&gt;That's when I began to suspect that Facebook was indeed vulnerable to that
+same XXE I had found out more than a year ago. I had to work a lot to confirm
+this suspicion, though. Long story short, when you forget your password, one of
+the ways you can prove to Facebook that you own an @gmail.com account is to log
+into your Gmail and authorize Facebook to get your basic information (such as
+email and name). The way this works is you're actually logging into Facebook
+using your Gmail account, and this login happens over OpenID. So far, so good,
+but this is where I got stuck. I knew that, for my bug to work, the OpenID
+Relying Party (RP - Facebook) has to make a Yadis discovery request to an OpenID
+Provider (OP) under the attacker's control. Let's say
+http://www.ubercomp.com/. Then my malicious OP will send a response with the
+rogue XML that will then be parsed by the RP, and the XXE attack will work.&lt;/p&gt;
+
+&lt;p&gt;Since the initial OpenID request (a redirect from Facebook to Google) happens
+without my intervention, there was no place for me to actually enter an URL
+under my control that was my OpenID identifier and have Facebook send a Yadis
+Discover request to that URL. So I thought the bug would not be triggered at
+all, unless I could somehow get Google to send Facebook a malicious XML, which
+was very unlikely. Fortunately, I was wrong. After a more careful reading of the
+&lt;a href=&quot;http://openid.net/specs/openid-authentication-2_0.html&quot;&gt;OpenID 2.0
+Specification&lt;/a&gt;, I found this nice gem in session 11.2 - Verifying Discovered
+Information:&lt;/p&gt;
+
+&lt;blockquote cite=&quot;http://openid.net/specs/openid-authentication-2_0.html&quot;&gt;&quot;If
+the Claimed Identifier was not previously discovered by the Relying Party (the
+&quot;openid.identity&quot; in the request was
+&quot;http://specs.openid.net/auth/2.0/identifier_select&quot; or a different Identifier,
+or if the OP is sending an unsolicited positive assertion), the Relying Party
+MUST perform discovery on the Claimed Identifier in the response to make sure
+that the OP is authorized to make assertions about the Claimed
+Identifier&quot;.&lt;/blockquote&gt;
+
+&lt;p&gt;I checked and, indeed, the openid.identity in the request was
+&lt;em&gt;http://specs.openid.net/auth/2.0/identifier_select&lt;/em&gt;. This is a very common
+practice, actually. So indeed after a few minutes I was able to make a request
+to https://www.facebook.com/openid/receiver.php that caused Facebook to perform
+a Yadis discovery on a URL under my control, and the response to that request
+would contain malicious XML. I knew I had a XXE because when I told Facebook's
+server to open /dev/random, the response would never come and eventually a
+request killer would kick in after a few minutes. But I still couldn't read any
+file contents. I tried everything on the XXE back of tricks (including weird
+combinations involving parameter entities, but nothing. I then realized I had a
+subtle bug on my exploit that, fixed that, and then...&lt;/p&gt;
+
+&lt;pre&gt;
+$ bash exploit.sh
+* About to connect() to www.facebook.com port 80 (#0)
+*   Trying 31.13.75.1... connected
+* Connected to www.facebook.com (31.13.75.1) port 80 (#0)
+&amp;gt; GET /openid/receiver.php?provider_id=1010459756371&amp;amp;context=account_recovery&amp;amp;protocol=http&amp;amp;request_id=1&amp;amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;amp;openid.mode=id_res&amp;amp;openid.op_endpoint=...(redacted)... HTTP/1.1
+&amp;gt; Host: www.facebook.com
+&amp;gt; Accept: */*
+&amp;gt; User-Agent: Chrome
+&amp;gt;
+
+
+&lt;p&gt;That's right, the response contained Facebook's /etc/passwd. Now we were
+  going somewhere. By then I knew I had found the keys to the kingdom. After
+  all, having the ability to read (almost) any file and open arbitrary network
+  connections through the point of view of the Facebook server, and which don't
+  go through any kind of proxy was surely something Facebook wanted to avoid at
+  any cost. But I wanted more. I wanted to escalate this to a full Remote
+  Execution.
+&lt;/p&gt;
+
+&lt;p&gt;A lot of bug bounty programs around the web have a rule that I think is very
+sensible: whenever you find a bug, don't linger on messing around. Report the
+bug right away and the security team will consider the worst case scenario and
+pay accordingly. However, I didn't have much experience with the security team
+at Facebook and didn't know if they would consider my bug as a Remote Code
+Execution or not. I Since I didn't want to cause the wrong impressions, I
+decided I would report the bug right away, ask for permission to try to escalate
+it to a RCE and then work on it while it was being fixed. I figured that would
+be ok because most bugs take a long time to be processed, and so I had plenty of
+time to try to escalate to an RCE while still keeping the nice imaginary white
+hat I have on my head. So after writing the bug report I decided to go out and
+have lunch, and the plan was to continue working when I came back.&lt;/p&gt;
+
+&lt;p&gt;However, I was wrong again. Since this was a very critical bug, when I got
+back home from lunch, a quick fix was already in place. Less than two hours
+after the initial report was sent. Needless to say, I was very impressed and
+disappointed at the same time, but since I knew just how I would escalate that
+attack to a Remote Code Execution bug, I decided to tell the security team what
+I'd do to escalate my access and trust them to be honest when they tested to see
+if the attack I had in my mind worked or not. I'm glad I did that. After a few
+back and forth emails, the security team confirmed that my attack was sound and
+that I had indeed found a RCE affecting their servers.&lt;/p&gt;
+
+&lt;p&gt;So this is how the first high impact bug I ever found was the entry point for an attack that probably got one of the highest payouts of any web security bug bounty program. Nice, huh?&lt;/p&gt;
+
+&lt;h2&gt;Timeline&lt;/h2&gt;
+
+&lt;p&gt;All timestamps are in GMT. I omitted a few unimportant interactions about the acknowledgements page and such.&lt;/p&gt;
+
+&lt;/pre&gt;&lt;ul&gt;
+
+&lt;li&gt;2013-11-19 3:51 pm: Initial report&lt;/li&gt;
+
+&lt;li&gt;2013-11-19 5:37 pm: Bug acknowledged by security team member Godot&lt;/li&gt;
+
+&lt;li&gt;2013-11-19 5:46 pm: I replied by sending a PoC to read arbitrary files&lt;/li&gt;
+
+&lt;li&gt;2013-11-19 7:31 pm: Security team member Emrakul informed me that a short
+term fix was already in place and would be live in approximately 30 minutes&lt;/li&gt;
+
+&lt;li&gt;2013-11-19 8:27 pm: I replied confirming that the bug was patched.&lt;/li&gt;
+
+&lt;li&gt;2013-11-21 8:03 pm: Payout set. The security team informed me it was their
+  biggest bounty payout to date.&lt;/li&gt;
+
+&lt;li&gt;2013-11-22 2:13 am: I sent an email asking whether the security team had
+already considered the bug as RCE or just as a file disclosure.&lt;/li&gt;
+
+&lt;li&gt;2013-11-23 1:17 am: Security team replied that they did not considered the
+attack could be escalated to RCE.&lt;/li&gt;
+
+&lt;li&gt;2013-11-23 7:54 pm: I sent an email explaining exactly how the attack could
+be escalated to an RCE (with file paths, example requests and all).&lt;/li&gt;
+
+&lt;li&gt;2013-11-24 9:23 pm: Facebook replied that my attack worked and they'd have
+to work around it.&lt;/li&gt;
+
+&lt;li&gt;2013-12-03 4:45 am: Facebook informed me that the longer term fix was in
+place and that they'd soon have a meeting to discuss a new bounty amount&lt;/li&gt;
+
+&lt;li&gt;2013-12-03 7:14 pm: I thanked them and said I'd cross my fingers&lt;/li&gt;
+
+&lt;li&gt;2013-12-13 1:04 pm: I found
+  a &lt;a href=&quot;http://www.bloomberg.com/news/2012-07-26/facebook-widens-bug-bounty-program-to-combat-internal-breaches.html&quot;&gt;Bloomberg
+  article quoting Ryan McGeehan, who managed Facebook's incident response
+  unit&lt;/a&gt;, saying that &quot;If there's a million dollar bug, we will pay it
+  out&quot; and asked if there was any news.&lt;/li&gt;
+
+&lt;li&gt;2013-12-30 4:45 am: Facebook informed me that, since the bug was now
+  considered to be RCE, the payout would be higher. I won't disclose the amount,
+  but if you have any comments about how much you think this should be worth,
+  please share them. Unfortunately, I didn't get even close to the one-million
+  dollar payout cited above.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/div&gt;
+</description>
+<title>
+How I found a Remote Code Execution bug affecting Facebook's servers
+</title>
+</item>
+<item>
+<link>
+https://m.facebook.com/dsobeski/posts/10153683440480008
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;root&quot; class=&quot;storyStream _2v9s _2v9s&quot;&gt;&lt;div class=&quot;storyStream&quot; id=&quot;m_story_permalink_view&quot;&gt;&lt;div class=&quot;_5d5t feedbackStory permalinkTop noufi _5ev1 _5ezm story acw apl abb&quot; id=&quot;s_d911392e37465b5da24b12d8e6b6f047&quot;&gt;&lt;div class=&quot;msg&quot;&gt;&lt;span&gt;&lt;strong class=&quot;actor&quot;&gt;David Sobeski&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;Trust, Users and The Developer Division &lt;br&gt;      -- A follow up to what went wrong&lt;br&gt; &lt;br&gt; Trust is an important part of any product. If a user can't trust the product and the institution behind it, it is almost inevitable that the product will wither and die. The Apple Newton was a fine product, but it's main point of handwriting recognition wasn't trust worthy and people moved on. They found the Palm Pilot and through its deterministic graffiti system, people found they could trust the recognition and the Palm Pilot became a PDA staple. Even if you look at the Macintosh, it was an excellent product, but, they lost a relationship early on with developers and developers and users moved on to Windows.&lt;br&gt; &lt;br&gt; The Windows trust and value proposition was always compatibility, low-cost devices, and an open architecture (to name a few). From DOS to Windows, your apps would always just work. If you were a Lotus 1-2-3 for DOS or a WordPerfect for DOS user, everything continued working as you went to Windows 3, 3.1, Win95 (etc). This rang true not with just software you ran on Windows but also with the graphics cards or printers that you connected to your machine;  your printers, your modems and other peripherals continued to work. Windows XP did its best with compatibility as a change was made from Windows 9x codebase to the NT codebase. User quickly trusted Windows XP. However, with Windows Vista, a change in the driver model caused a majority of peripherals to simply stop working. Common users lost trust in their operating system for the first time. Windows 7 was better not because of user experience of feature changes, but, two-three years of manufactures fixing their drivers. Windows 7 was simply more compatible and brought back some trust that users lost with Vista. Users became accustomed to that core value proposition of compatibility and low cost. &lt;br&gt; &lt;br&gt; Guess what, developers are just users too. They may have more patience, but once you continue to show a loss of trust, you risk losing the developers forever.&lt;br&gt; &lt;br&gt; This takes us to the Microsoft Developer Division or &quot;DevDiv&quot; (approximately 1993 - 2002) and later know as &quot;DevTools&quot; (2002 - 2013). Developer tools at Microsoft started as a series of tools to support the Microsoft DOS and Windows platforms. We had Programmers Workbench which eventually became QuickC then Visual C++and finally Developer Studio. Windows would ship an SDK that included the Windows Resource Compiler, the CHM (help) compiler, Icon Editor and GUI tools (later on) and all the tools you needed to build amazing Windows applications. It had an API strategy that moved forward with each version of Windows. we had Win16 then a transition to 32-bit computing and Win32s and finally Win32. We even had Win64 but you really never needed to think much about it as your 32-bit code simply worked. Over time helper libraries got created. One such was one that Steven Sinofsky helped create called MFC. Borland even created their own competing C++ wrapper called OWL. A developer who used MFC apps would also always work as version by version was created. The last version I used to build applications was MFC 4.2 and it worked well.  One amazing benefit of MFC was that it was not trying to be a platform or to abstract away the Win32 API. Instead, you would use Win32 as it was with a Document / View abstraction. If MFC was allowed to mature, it would have been able to blend the latest technologies and APIs into it system.As this was happening, another product Microsoft built, Object Basic and eventually Visual Basic was created by adding support for programming visual forms and connecting to client/server databases]. It added even higher levels of semantics on top of the Win32 API. In fact, it started the complexity and that all of Windows would eventually suffer from. Visual Basic Extensions (VBX) led way to OLE Controls. It introduced arcane notions such as type libraries and OLE Automation. What is interesting to note is that some subsets of what was created with OLE Automation worked well, but, so much technology and subsystems where added, that it became arcane even to the most seasoned developer. All of a sudden, your code would break. If you invested in building VBX to extend VB, magically all that work was for nothing and you had to move to OCX (OLE Controls). The type system you new as TCHAR and UINT was replaced by BSTRs and VARIANTS. In fact, the BSTR was so in compatible because it added a count to the beginning of every string that all of your previous string handling code had to change. Developed for the first time lost trust in Microsoft. The world they new broke. It did not stop, Dynamic Data Exchange (DDE) was soon replaced with a more complicated object linking and embedding protocol. OLE Controls were replaced with ActiveX Controls (even though it was just branding, enough changes were made to infuriate control developers).&lt;br&gt; &lt;br&gt; I remember sitting in meetings where DevDiv leaders were tired of wrapping the Win32 API. They did not want to be in the wrapper business. This put the developer division on a very dangerous path. All of a sudden they believed they were the platform team. &lt;br&gt; &lt;br&gt; Something to think about was that it was very much viewed within Microsoft that &quot;wrappers&quot; were not real product development, even with the success of MFC, there was a view that Windows was broken and needed to be fixed. Two things would support such a conclusion: first, the explosion of Windows APIs from about 350 to 1000's; and,  second, the Windows folks were not managing API semantics. Using networking was different than using devices than using 3D graphics v 2D graphics and more. Every group came up with their own semantics, callbacks, type systems, event handlers, parameter mechanisms and more. It became impossible to wrap things because some things just couldn't even be wrapped in a language neutral manner. For example, if you would check out the Windows 3 multimedia APIs, &lt;a href=&quot;http://m.facebook.com/l.php?u=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fwindows%2Fdesktop%2Fdd757331%28v%3Dvs.85%29.aspx&amp;amp;h=TAQEH4et9&amp;amp;s=1&quot; target=&quot;_blank&quot;&gt;&lt;span&gt;http://&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;&lt;span&gt;msdn.microsoft.c&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;&lt;span&gt;om/en-us/&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;&lt;span&gt;library/windows/&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;&lt;span&gt;desktop/&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;&lt;span&gt;dd757331(v=vs.85&lt;/span&gt;&lt;wbr&gt;&lt;/wbr&gt;).aspx&lt;/a&gt; or the APIs for using a modem, you would notice the difference in programming models and calling conventions.&lt;br&gt; &lt;br&gt; This solidified even more as DevDiv went from a mission to being something necessary and money losing to support Windows to a full fledged and highly profitable P&amp;amp;L. Once this happened, DevDiv no longer cared about Windows and moving the platform forward. &lt;br&gt; &lt;br&gt; The tools took the Office strategy of many SKUs and started bundling everything into Visual Studio. We had to rewrite VB to use the VS shell and this fundamentally changed the VB product and it user base forever. They lost trust in how to even write code and deploy. Their toolset radically changed as Microsoft's focus on revenue optimization outweighed platform considerations and developer trust.&lt;br&gt; &lt;br&gt; The trust with developers has been a long deteriorating problem. One day we had MFC and the next we would tell developers to use ATL. We would have a constant mess with data telling developers to us RDS (remote data sets) then DAO (data access objects) then ADO, then ADO.net, then LiNQ. If you used data, you were constantly confused by the ever changing API. It was truly awful. Then, everything went to hell when .NET was released. Changes were being made to the C language, to the Visual Basic language. In one fell swoop, Microsoft told all of its developers that everything they were doing and did was wrong. Stop all that crazy C code or the AddRef / Release or that insane VB or Access code and use the new new thing. If you were an ASP developer stop and new become an ASP.net developer. While Windows and Office were two largest platforms, DevDiv told the world they were irrelevant and getting tools to support Windows and Office were extremely difficult for 3rd party developers and internally as well. Watching Sinofsky and Silverberg and eventually Allchin argue for support became laughable.&lt;br&gt; &lt;br&gt; I remember going to COMDEX and giving an Office demo for F1 racing using Excel + Word and real time data acquisition to show how F1 used it in the pits to make adjustments on their cars. The day the CLR released, the message that was received was move or forever be lost. The problem was DevDiv owned the tools. This means the project system, the wizards to start you out, MSDN, everything stopped being about the Windows platform and instead became all about the .NET platform. They even made it hard to find he Win32 Platform SDK to go download.&lt;br&gt; &lt;br&gt; During the Windows Vista time, there was so much pressure to add the CLR into Windows. The Longhorn team was using it to prototype (or most of Longhorn was a big Flash demo that never really worked). But, part of that was the creation of XAML. Again, we already were in a world of HTML and CSS but the teams were blinded and would use excuses on how they can build a better render tree. XAML was a rewrite of the Window Manager and controls. Even the web browser and the reading experience experience were so heavily influenced by XAML that Microsoft lost time on building a great browser. If the XAML detour did not happen, one could imagine what Microsoft's position could have been with IE and even the popular readers that we see today with Kindle, Nook and iBooks.  But XAML was heavy and slow and CLR based. So, internally the Shell team created DUI (DirectUI) which was data driven based like XAML and HTML and the Windows Media Center team created Splash. Office created their own version of DUI that was based on Windows, but then the Windows team abandoned it and Office was left without tools or a platform to gain developer support. All to get away from XAML and the CLR. But what each of these were doing was breaking the years of User32, Shell32, ComDlg32. Instead of enhancing the platform like Microsoft used to do, it was all about rewriting it over and over again.&lt;br&gt; &lt;br&gt; Even as XAML was being created, an internal group within the XAML team realized it was heavy for &quot;the web&quot; and created a XAML clone and called it Silverlight. This was to compete with Flash. But XAML and Silverlight were not even fully compatible. Developers were livid and frustrated. The Windows Phone team had their own version of a CLR and it wasn't fully compatible with the desktop version. Being a developer for a Microsoft platform was insane. Don't forget Office. One of the largest platforms on the planet. It avoided all this and you still used VBA. Office had to continue to use VBA because there was no guarantee of compatibility between VBA and VB.NET. But now you were an island.&lt;br&gt; &lt;br&gt; The Windows Phone team did something that would seal its fate forever and lose the trust of developers. Windows Phone 7 was released with a new user experience and was the answer to iOS and Android. It actually got developers excited. But, a year later with Windows Phone 8, Microsoft told all the developers that the investments they made in Windows Phone was a waste of time because none of their apps will work on Windows Phone 8. That was it. It was over. If you aren't Facebook, the. The reason to be on Windows Phone was zero. It had no value. Then you heard Windows management kind of talk about MinWin and a unification of Windows. This meant (to developers) that Microsoft is about to change its mind again and Windows Phone 9 will break everything again. So why bother? While I focus on the client here, this also happened to the cloud and server. I watched Mark Lucovsky stand up at PDC and tell the world about Hailstorm and Nat Brown talk about COM 2.0 and both technologies never see the light of day as a full release or even an open source project. I would watch how OWA API would change and every Exchange App would break. &lt;br&gt; &lt;br&gt; A side note, there were actually there are two OWA/Exchange APIs and that's why it is so confusing to try to use Exchange on multiple devices, ActiveSync and Exchange Web Access with one used by Windows Phone and the other used by Apple and other 3rd parties.&lt;br&gt; &lt;br&gt; You only get a few of these breaking moments. The 2000s were all about breaking the platform every years. Developers got fatigue and would give up. It was the decade that changed the trust model for that every developer had with Microsoft. Eventually developers just gave up. You know Hadoop, MongoDB API or Node.js or systems like WordPress or PHP (or whatever open source project) isn't going change and break your code or trust. It was more stable to focus on these platforms as you knew it would run everywhere and not break you.&lt;br&gt; &lt;br&gt; At the end of the day, developers walked away from Microsoft not because they missed a platform paradigm shift. They left because they lost all trust. You wanted to go somewhere to have your code investments work and continue to work.&lt;/div&gt;&lt;div class=&quot;_51t _5evg mfss fcg&quot;&gt;&lt;a class=&quot;sec&quot; href=&quot;https://m.facebook.com/a/feed_menu.php?story_permalink_token=S%3A_I832090007%3A10153683440480008&amp;amp;hideable_token=MTAxNTM2ODM0NDA0ODAwMDh%2BRW50U3RhdHVzQ3JlYXRpb25TdG9yeX5%2BODMyMDkwMDA3&amp;amp;continue=%2Fstories.php%23s_d911392e37465b5da24b12d8e6b6f047&amp;amp;perm&amp;amp;action=h&amp;amp;gfid=AQBOQA9fMxZS6iGd&quot;&gt;Hide story&lt;/a&gt;&lt;span&gt; &amp;#xB7; &lt;/span&gt;&lt;a class=&quot;sec&quot; href=&quot;https://m.facebook.com/edits/?cid=10153683440480008&quot;&gt;View Edit History&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;permalinkBottom&quot;&gt;&lt;div class=&quot;ufi nbb&quot;&gt;&lt;div class=&quot;likes row aclb apl&quot; id=&quot;like_sentence_10153683440480008&quot;&gt;&lt;div class=&quot;ib&quot;&gt;&lt;img src=&quot;https://fbstatic-a.akamaihd.net/rsrc.php/v2/yj/r/frl7jyXL3H9.png&quot; width=&quot;13&quot; class=&quot;l img&quot; alt=&quot;like&quot;&gt;&lt;div class=&quot;c&quot;&gt;&lt;span&gt;&lt;a href=&quot;https://m.facebook.com/dfjacobs55&quot;&gt;Darryl Jacobs&lt;/a&gt; and &lt;a href=&quot;https://m.facebook.com/browse/likes/?id=10153683440480008&quot;&gt;209 others&lt;/a&gt; like this.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+Trust, Users and The Developer Division - What Went Wrong at Microsoft
 </title>
 </item>
 </channel>
