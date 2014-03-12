@@ -15,626 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://talater.com/chrome-is-listening/
-</link>
-<description>
-&lt;div&gt;&lt;article&gt;
-                            &lt;p&gt;While we&amp;#x2019;ve all grown accustomed to chatting with Siri, talking to our cars, and soon maybe even asking our glasses for directions, talking to our computers still feels weird. But now, Google is putting their full weight behind changing this. There&amp;#x2019;s no clearer evidence to this, than visiting Google.com, and seeing a speech recognition button right there inside Google&amp;#x2019;s most sacred real estate - the search box.&lt;/p&gt;
-                            &lt;p&gt;Yet all this effort may now be compromised by a new exploit which lets malicious sites turn Google Chrome into a listening device, one that can record anything said in your office or your home, as long as Chrome is still running.&lt;/p&gt;
-                            &lt;h2&gt;Check out the video, to see the exploit in action&lt;/h2&gt;
-                            &lt;p&gt;&lt;iframe width=&quot;790&quot; height=&quot;593&quot; src=&quot;http://www.youtube.com/embed/s5D578JmHdU?rel=0&amp;amp;vq=hd720&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-                            &lt;h2&gt;Google&amp;#x2019;s Response&lt;/h2&gt;
-                            &lt;p&gt;I discovered this exploit while working on annyang, a popular &lt;a href=&quot;https://www.talater.com/annyang/&quot;&gt;JavaScript Speech Recognition&lt;/a&gt; library. My work has allowed me the insight to find multiple bugs in Chrome, and to come up with this exploit which combines all of them together.&lt;/p&gt;
-                            &lt;p&gt;Wanting speech recognition to succeed, I of course decided to do the right thing&amp;#x2026;&lt;/p&gt;
-                            &lt;p&gt;I reported this exploit to Google&amp;#x2019;s security team in private on September 13. By September 19, their engineers have identified the bugs and suggested fixes. On September 24, a patch which fixes the exploit was ready, and three days later my find was nominated for Chromium&amp;#x2019;s Reward Panel (where prizes can go as high as $30,000.)&lt;/p&gt;
-                            &lt;p&gt;Google&amp;#x2019;s engineers, who&amp;#x2019;ve proven themselves to be just as talented as I imagined, were able to identify the problem and fix it in less than 2 weeks from my initial report.&lt;/p&gt;
-                            &lt;p&gt;I was ecstatic. The system works.&lt;/p&gt;
-                            &lt;p&gt;But then time passed, and the fix didn&amp;#x2019;t make it to users&amp;#x2019; desktops. A month and a half later, I asked the team why the fix wasn&amp;#x2019;t released. Their answer was that there was an ongoing discussion within the Standards group, to agree on the correct behaviour - &amp;#x201C;Nothing is decided yet.&amp;#x201D;&lt;/p&gt;
-                            &lt;p&gt;As of today, almost four months after learning about this issue, Google is still waiting for the Standards group to agree on the best course of action, and your browser is still vulnerable.&lt;/p&gt;
-                            &lt;p&gt;By the way, the web&amp;#x2019;s standards organization, the W3C, has already defined the correct behaviour which would&amp;#x2019;ve prevented this&amp;#x2026; This was done in their specification for the Web Speech API, back in October 2012.&lt;/p&gt;
-                            &lt;h2&gt;How Does it Work?&lt;/h2&gt;
-                            &lt;p&gt;A user visits a site, that uses speech recognition to offer some cool new functionality. The site asks the user for permission to use his mic, the user accepts, and can now control the site with his voice. Chrome shows a clear indication in the browser that speech recognition is on, and once the user turns it off, or leaves that site, Chrome stops listening. So far, so good.&lt;/p&gt;
-                            &lt;p&gt;But what if that site is run by someone with malicious intentions?&lt;/p&gt;
-                            &lt;p&gt;Most sites using Speech Recognition, choose to use secure HTTPS connections. This doesn&amp;#x2019;t mean the site is safe, just that the owner bought a $5 security certificate. When you grant an HTTPS site permission to use your mic, Chrome will remember your choice, and allow the site to start listening in the future, without asking for permission again. This is perfectly fine, as long as Chrome gives you clear indication that you are being listened to, and that the site can&amp;#x2019;t start listening to you in background windows that are hidden to you.&lt;/p&gt;
-                            &lt;p&gt;When you click the button to start or stop the speech recognition on the site, what you won&amp;#x2019;t notice is that the site may have also opened another hidden popunder window. This window can wait until the main site is closed, and then start listening in without asking for permission. This can be done in a window that you never saw, never interacted with, and probably didn&amp;#x2019;t even know was there.&lt;/p&gt;
-                            &lt;p&gt;To make matters worse, even if you do notice that window (which can be disguised as a common banner), Chrome does not show any visual indication that Speech Recognition is turned on in such windows - only in regular Chrome tabs.&lt;/p&gt;
-                            &lt;p&gt;You can see the full &lt;a href=&quot;https://github.com/TalAter/chrome-is-listening&quot;&gt;source code for this exploit&lt;/a&gt; on GitHub.&lt;/p&gt;
-                            &lt;h2&gt;Speech Recognition's Future&lt;/h2&gt;
-                            &lt;p&gt;Speech recognition has huge potential for launching the web forward. Developers are creating amazing things, making sites better, easier to use, friendlier for people with disabilities, and just plain cool&amp;#x2026;&lt;/p&gt;
-                            &lt;p&gt;As the maintainer of a popular &lt;a href=&quot;https://www.talater.com/annyang/&quot;&gt;speech recognition library&lt;/a&gt;, it may seem that I shot myself in the foot by exposing this. But I have no doubt that by exposing this, we can ensure that these issues will be resolved soon, and we can all go back to feeling very silly talking to our computers&amp;#x2026; A year from now, it will feel as natural as any of the other wonders of this age.&lt;/p&gt;
-                        &lt;/article&gt;
-                    &lt;/div&gt;
-</description>
-<title>
-Chrome Bugs Allow Sites to Listen to Your Private Conversations
-</title>
-</item>
-<item>
-<author>
-Juliette Garside
-</author>
-<link>
-http://www.theguardian.com/technology/2014/jan/22/facebook-princeton-researchers-infectious-disease
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;main-content-picture&quot;&gt;
-							&lt;img src=&quot;http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/22/1390418861326/Bubonic-plague-bacteria-011.jpg&quot; width=&quot;460&quot; alt=&quot;Bubonic plague bacteria&quot;&gt;
-										&lt;p class=&quot;caption&quot;&gt;Bubonic plague bacteria. Scientists argue that, like bubonic plague, Facebook will eventually die out. Photograph: AFP/Getty Images&lt;/p&gt;
-					&lt;/div&gt;
-	
-
-    
-    &lt;div id=&quot;article-body-blocks&quot;&gt;
-	    &lt;p&gt;Facebook has spread like an infectious disease but we are slowly becoming immune to its attractions, and the platform will  be largely abandoned by 2017, say &lt;a href=&quot;http://arxiv.org/pdf/1401.4208v1.pdf&quot;&gt;researchers at Princeton University&lt;/a&gt; (pdf).&lt;/p&gt;&lt;p&gt;The forecast of Facebook's impending doom was made by comparing the growth curve of epidemics to those of online social networks. Scientists argue that, like bubonic plague, Facebook will eventually die out.&lt;/p&gt;&lt;p&gt;The social network, which celebrates its 10th birthday on 4 February, has survived longer than rivals such as Myspace and Bebo, but the Princeton forecast says it will lose 80% of its peak user base within the next three years.&lt;/p&gt;&lt;p&gt;John Cannarella and Joshua Spechler, from the US university's mechanical and aerospace engineering department, have based their prediction on the number of times Facebook is typed into Google as a search term. The charts produced by the &lt;a href=&quot;http://www.google.co.uk/trends/explore#q=facebook&quot; title=&quot;&quot;&gt;Google Trends&lt;/a&gt; service show Facebook searches peaked in December 2012 and have since begun to trail off.&lt;/p&gt;&lt;p&gt;&quot;Ideas, like diseases, have been shown to spread infectiously between people before eventually dying out, and have been successfully described with epidemiological models,&quot; the authors claim in a paper entitled Epidemiological modelling of online social network dynamics.&lt;/p&gt;&lt;p&gt;&quot;Ideas are spread through communicative contact between different people who share ideas with each other. Idea manifesters ultimately lose interest with the idea and no longer manifest the idea, which can be thought of as the gain of 'immunity' to the idea.&quot;&lt;/p&gt;&lt;p&gt;Facebook reported nearly 1.2 billion monthly active users in October, and is due to update investors on its traffic numbers at the end of the month. While desktop traffic to its websites has indeed been falling, this is at least in part due to the fact that many people now only access the network via their mobile phones.&lt;/p&gt;&lt;p&gt;For their study, Cannarella and Spechler used what is known as the SIR (susceptible, infected, recovered) model of disease, which creates equations to map the spread and recovery of epidemics.&lt;/p&gt;&lt;p&gt;They tested various equations against the lifespan of Myspace, before applying them to Facebook. Myspace was founded in 2003 and reached its peak in 2007 with 300 million registered users, before falling out of use by 2011. Purchased by Rupert Murdoch's News Corp for $580m, Myspace signed a $900m deal with Google in 2006 to sell its advertising space and was at one point valued at $12bn. It was eventually sold by News Corp for just $35m.&lt;/p&gt;&lt;p&gt;The 870 million people using Facebook via their smartphones each month could explain the drop in Google searches &amp;#x2013; those looking to log on are no longer doing so by typing the word Facebook into Google.&lt;/p&gt;&lt;p&gt;But Facebook's chief financial officer David Ebersman admitted on an earnings call with analysts that during the previous three months: &quot;We did see a decrease in daily users, specifically among younger teens.&quot;&lt;/p&gt;&lt;p&gt;Investors do not appear to be heading for the exit just yet. Facebook's share price reached record highs this month, valuing founder Mark Zuckerberg's company at $142bn.&lt;/p&gt;&lt;h2&gt;Facebook billionaire&lt;br&gt;&lt;/h2&gt;&lt;p&gt;When Facebook shares hit their peak in New York this week, it meant Sheryl Sandberg's personal fortune ticked over $1bn (&amp;#xA3;600m), making her one of the youngest female billionaires in the world.&lt;/p&gt;&lt;p&gt;According to Bloomberg, the 44-year-old chief operating officer of the social network owns about 12.3m shares in the company, which closed at $58.51 (&amp;#xA3;35) on Tuesday in New York, although they fell back below $58 on Wednesday. Her stake is valued at about $750m.&lt;/p&gt;&lt;p&gt;Her fortune has risen rapidly since last August, when she sold $91m of shares and was estimated to be worth $400m.&lt;/p&gt;&lt;p&gt;Sandberg has collected more than $300m from selling shares since the company's 2012 initial public offering, and owns about 4.7m stock options that began vesting last May.&lt;/p&gt;&lt;p&gt;&quot;She was brought in to figure out how to make money,&quot; David Kirkpatrick, author of The Facebook Effect, a history of the company, told Bloomberg. &quot;It's proving to be one of the greatest stories in business history.&quot;&lt;/p&gt;&lt;p&gt;Sandberg's rise in wealth mirrors her broadening role on the global stage. The Harvard University graduate and one-time chief of staff for former Treasury secretary Lawrence Summers is a donor to President Barack Obama, sits on the board of Walt Disney Co, and wrote the book Lean In. She will be discussing gender issues with IMF boss Christine Lagarde at Davos on Saturday.&lt;/p&gt;
-    &lt;/div&gt;
-
-    
-
-						
-	
-		
-            	    
-
-
-
-
-
-		
-										
-
-        
-
-			            						
-					
-					
-                                                                                                                                                                                                                            
-
-                                                                        
-	
-	
-		
-			
-                                                        
-                                                                                                                &lt;/div&gt;
-</description>
-<title>
-Facebook may lose 80% of users by 2017, say Princeton researchers
-</title>
-</item>
-<item>
-<link>
-http://blog.quarkslab.com/tcp-backdoor-32764-or-how-we-could-patch-the-internet-or-part-of-it.html
-</link>
-<description>
-&lt;div&gt;&lt;p&gt;Note that despite this backdoor allows a free access to many hosts on the
-Internet, no patch is available as it is not maintained anymore. So we thought
-about some tricks combined with our tools to imagine how to fix that worldwide.&lt;/p&gt;
-&lt;p&gt;This backdoor doesn't have any kind of authentication and allows various remote
-commands, like:&lt;/p&gt;
-&lt;p&gt;Let's see how many routers are still exposed to this vulnerability, and propose
-a way to remove this backdoor.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;looking-for-the-backdoor-on-the-internet&quot;&gt;
-&lt;h2&gt;Looking for the backdoor on the Internet&lt;/h2&gt;
-&lt;p&gt;We first used &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; to look for hosts with TCP port 32764 open. We ended up
-with about 1 million IPv4s &lt;a class=&quot;footnote-reference&quot; href=&quot;http://blog.quarkslab.com/tcp-backdoor-32764-or-how-we-could-patch-the-internet-or-part-of-it.html#id2&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt;. The scan took about 50 hours on a low-end Linux
-virtual server.&lt;/p&gt;
-&lt;p&gt;Then, we had to determine whether this was really the backdoor exposed, or some
-other false positive.&lt;/p&gt;
-&lt;p&gt;Eloi's POC shows a clear way to do this:&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Send a packet to the host device&lt;/li&gt;
-&lt;li&gt;Wait for an answer with &lt;tt class=&quot;docutils literal&quot;&gt;0x53634D4D&lt;/tt&gt; (or &lt;tt class=&quot;docutils literal&quot;&gt;0x4D4D6353&lt;/tt&gt;, according to the
-endianness of the device, see below)&lt;/li&gt;
-&lt;li&gt;In such a case, the backdoor is here and accessible.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In order to check the IPs previously discovered, we couldn't use &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; or a
-similar tool (as they don't have any &quot;plugin&quot; feature). Moreover, sequentially
-establishing a connection to each IP to verify that the backdoor is present
-would take ages. For instance, with a 1 second timeout, the worst case scenario is 1
-million seconds (about 12 days) and even if half the hosts would answer
-&quot;directly&quot;, it would still run for 6 days. Quick process-based parallelism
-could help and might divide this time by 10/20. It still remains a lot and is
-not the good way to do this.&lt;/p&gt;
-&lt;p&gt;We thus decided to quickly code a scanner based on asynchronous sockets, that
-will check the availability of the backdoor. The advantage of asynchronous
-sockets are that lots of them (about 30k in our tests) can be managed at the
-same time, thus managing 30k hosts in parallel. This kind of parallelism
-couldn't be achieved with a classical process (or thread)-based parallelism.&lt;/p&gt;
-&lt;p&gt;This asynchronous model is somehow the same used by &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; and &lt;tt class=&quot;docutils literal&quot;&gt;zmap&lt;/tt&gt;, apart
-that they bypass sockets to directly emit packets (and thus manage more hosts
-simultaneously).&lt;/p&gt;
-&lt;p&gt;Using a classical Linux system, a first implementation using the &lt;tt class=&quot;docutils literal&quot;&gt;select&lt;/tt&gt;
-function and a five seconds timeout would perform at best ~1000 tests/second.
-The limitation is mainly due to the fact that the &lt;tt class=&quot;docutils literal&quot;&gt;FD_SETSIZE&lt;/tt&gt; value, on most
-Linux systems, is set by default to 1024. This means that the maximum file
-descriptor identifier that &lt;tt class=&quot;docutils literal&quot;&gt;select&lt;/tt&gt; can handle is 1024 (and thus the number of
-descriptors is inferior or equal to this limit). In the end, this limits the
-number of sockets that can be opened at the same time, thus the overall scan
-performance.&lt;/p&gt;
-&lt;p&gt;Fortunately, other models that do not have this limitation exist. &lt;tt class=&quot;docutils literal&quot;&gt;epoll&lt;/tt&gt; is one
-of them. After adapting our code, our system was able to test about 6k IP/s
-(using 30k sockets simultaneously). That is less than what &lt;tt class=&quot;docutils literal&quot;&gt;masscan&lt;/tt&gt; and/or &lt;tt class=&quot;docutils literal&quot;&gt;zmap&lt;/tt&gt;
-can do (in terms of packets/s), but it gave good enough performance for what
-we needed to do.&lt;/p&gt;
-&lt;p&gt;In the end, we found about 6500 routers running this backdoor.&lt;/p&gt;
-&lt;p&gt;Sources for these scanners are not ready to be published yet (trust me), but
-stay tuned :)&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;note-about-big-vs-little-endian&quot;&gt;
-&lt;h3&gt;Note about big vs. little endian&lt;/h3&gt;
-&lt;p&gt;The people that coded this backdoor didn't care about the endianness of the
-underlying CPU. That's why the signature that is received can have two
-different values.&lt;/p&gt;
-&lt;p&gt;To exploit the backdoor, one has to first determine the endianness of the
-remote router. This is done by checking the received signature: &lt;tt class=&quot;docutils literal&quot;&gt;0x53634D4D&lt;/tt&gt;
-means little-endian, &lt;tt class=&quot;docutils literal&quot;&gt;0x4D4D6353&lt;/tt&gt; big-endian.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;section&quot; id=&quot;reconstructing-a-new-filesystem&quot;&gt;
-&lt;h2&gt;Reconstructing a new filesystem&lt;/h2&gt;
-&lt;p&gt;In order to provide a new clean filesystem, we needed to dump one from
-a router. So, we firstly used the backdoor to retrieve such a
-filesystem.  Moreover, analyzing it makes it easier to understand how
-the router works and is configured.&lt;/p&gt;
-&lt;p&gt;We made our experiments on our Linksys WAG200N. These techniques might
-or might not work on others. On this particular router (and maybe
-others), a telnet daemon executable is available (&lt;tt class=&quot;docutils literal&quot;&gt;/usr/sbin/utelnetd&lt;/tt&gt;).
-It can be launched through the backdoor and directly drops a root
-shell.&lt;/p&gt;
-&lt;p&gt;The backdoor allows us to execute command as a root user and to copy some
-files. Unfortunately, on many routers, there is no SSH daemon that can be
-started or even a netcat utility for easy and quick transfers. Moreover, the
-only partition that is writable is generally a RAMFS mounted on &lt;tt class=&quot;docutils literal&quot;&gt;/tmp&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;So let's see what are our options here.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;option-1-download-through-the-web-server&quot;&gt;
-&lt;h3&gt;Option 1 : download through the web server&lt;/h3&gt;
-&lt;p&gt;Lots of routers have a web server that is used for their configuration. This web
-server (as every process running on the router) is running as the root user.
-This is potentially a good way to download files (and the rootfs) from the
-router.&lt;/p&gt;
-&lt;p&gt;For instance, on the Linksys WAG200N (and others), &lt;tt class=&quot;docutils literal&quot;&gt;/www/ppp_log&lt;/tt&gt; is a symbolic
-link to &lt;tt class=&quot;docutils literal&quot;&gt;/tmp/ppp_log&lt;/tt&gt; (for the web servers to show the PPP log). Thus, the root FS can be download like this:&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Get a root shell thanks to the backdoor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# cd /tmp
-# mkdir ppp_log
-# cd ppp_log &amp;amp;&amp;amp; cat /dev/mtdblock/0 &amp;gt;./rootfs
-&lt;/pre&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;When it's done, on your computer: &lt;tt class=&quot;docutils literal&quot;&gt;wget &lt;span class=&quot;pre&quot;&gt;http://IP/ppp_log/rootfs&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The MTD partition to use can be identified thanks to various methods. &lt;tt class=&quot;docutils literal&quot;&gt;/proc/mtd&lt;/tt&gt; is a first try. In our case:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# cat /proc/mtd
-dev:    size   erasesize  name
-mtd0: 002d0000 00010000 &quot;mtd0&quot;
-mtd1: 000b0000 00010000 &quot;mtd1&quot;
-mtd2: 00020000 00010000 &quot;mtd2&quot;
-mtd3: 00010000 00010000 &quot;mtd3&quot;
-mtd4: 00010000 00010000 &quot;mtd4&quot;
-mtd5: 00040000 00010000 &quot;mtd5&quot;
-&lt;/pre&gt;
-&lt;p&gt;The name does not give a lot of information. But, from the size of the
-partitions, we can guess that mtd0 is the rootfs (~2.8Mb).
-Moreover, a symlink in /dev validate this assumption:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# ls -la /dev
-[...] root -&amp;gt; mtdblock/0
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;option-2-mips-cross-compilation-netcat-and-upload&quot;&gt;
-&lt;h3&gt;Option 2 : MIPS cross compilation, netcat and upload&lt;/h3&gt;
-&lt;p&gt;Another way to dump the rootfs is to cross compile a tool like netcat for the
-targeted architecture. Remember, we have little and big endian MIPS systems.
-Thus, we potentially need a cross compilation chain for these two systems.&lt;/p&gt;
-&lt;p&gt;By analyzing some binaries on our test router, it appears that the uClibc
-library and tool chains have been used by the manufacturer, with versions from
-2005. Thus, we downloaded one of the version of uClibc that was released this
-year. After some difficulties to find the old versions of binutils, gcc (and
-others) and getting a working GCC 3.x compiler, our MIPSLE cross compiler
-was ready.&lt;/p&gt;
-&lt;p&gt;Then, we grabbed the netcat sources and compiled them. There are multiple ways
-that can be used to upload our freshly compiled binary to the router. The first
-one is to use the write &quot;feature&quot; of the backdoor:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ ./poc.py --ip IP --send_file ./nc --remote-filename nc
-&lt;/pre&gt;
-&lt;p&gt;This has been implemented in Eloi's POC here: &lt;a class=&quot;reference external&quot; href=&quot;https://raw.github.com/elvanderb/TCP-32764/master/poc.py&quot;&gt;https://raw.github.com/elvanderb/TCP-32764/master/poc.py&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;The issue with this feature is that it seems to crash with &quot;big&quot; files.&lt;/p&gt;
-&lt;p&gt;Another technique is to use &lt;tt class=&quot;docutils literal&quot;&gt;echo &lt;span class=&quot;pre&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-e&lt;/span&gt;&lt;/tt&gt; to transfer our binary. It works but
-is a bit slow. Also, the connection is sometimes closed by the router, so we
-have to restart where it stopped. Just do:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ ./poc.py --ip IP --send_file2 ./nc --remote-filename nc
-&lt;/pre&gt;
-&lt;p&gt;The MIPSEL netcat binary can be downloaded here: &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/blob/master/binaries/nc?raw=true&quot;&gt;https://github.com/quarkslab/linksys-wag200N/blob/master/binaries/nc?raw=true&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Once netcat has been uploaded, simply launch on the router:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# cat /dev/mtdblock/0 |nc -n -v -l -p 4444
-&lt;/pre&gt;
-&lt;p&gt;And, on your computer:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ nc -n -v IP 4444 &amp;gt;./rootfs.img
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;patch-me-if-you-can-yes-we-can&quot;&gt;
-&lt;h2&gt;Patch me if you can (yes we can)&lt;/h2&gt;
-&lt;p&gt;Please note that everything that is described here is experimental and should
-be done only if you exactly know what you are doing. We can't be held
-responsible for any damage you will do to your beloved routers!&lt;/p&gt;
-&lt;p&gt;Note: the tools mentioned here are available on GitHub:
-&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N&quot;&gt;https://github.com/quarkslab/linksys-wag200N&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Now that we have the original squashfs image, we can extract it. It is a
-well-known SquashFS, so let's grab the latest version (4.0 at the time of
-writing this article) and &quot;unsquash&quot; it:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ unsquashfs original.img
-Parallel unsquashfs: Using 8 processors
-gzip uncompress failed with error code -3
-read_block: failed to read block @0x1c139c
-read_fragment_table: failed to read fragment table block
-FATAL ERROR:failed to read fragment table
-
-$ unsquashfs -s original.img
-Found a valid little endian SQUASHFS 2:0 superblock on ./original.img
-[...]
-Block size 32768
-&lt;/pre&gt;
-&lt;p&gt;This is the same issue that Eloi pointed out in its slides. What he shows is that he
-had to force LZMA to be used for the extraction. With the fixes he provided
-(exercise also left to the reader), we can extract the SquashFS:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# unsquashfs-lzma original.img
-290 inodes (449 blocks) to write
-created 189 files
-created 28 directories
-created 69 symlinks
-created 32 devices
-created 0 fifos
-&lt;/pre&gt;
-&lt;p&gt;What actually happened is that, back in 2005, the developer of this firmware
-modified the SquashFS 2.0 tools to use LZMA (and not gzip). Even if Eloi's
-&quot;chainsaw&quot; solution worked for extraction, it will not allow us to make a new
-image with the 2.0 format.  So, back with the chainsaw, grab the squashfs 2.2
-release from sourceforge, the LZMA 4.65 SDK, and make squashfs use it with this
-patch:
-&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/blob/master/src/squashfs-lzma.patch&quot;&gt;https://github.com/quarkslab/linksys-wag200N/blob/master/src/squashfs-lzma.patch&lt;/a&gt;.
-The final sources can be downloaded here:
-&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/quarkslab/linksys-wag200N/tree/master/src/squashfs2.2-r2-lzma&quot;&gt;https://github.com/quarkslab/linksys-wag200N/tree/master/src/squashfs2.2-r2-lzma&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;With our new and freshly compiled SquashFS LZMA-enhanced 2.2 version back from
-the dead, we can now reconstruct the Linksys rootfs image. It is important to
-respect the endianness and the block size of the original image (or your router
-won't boot anymore).&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ ./squashfs2.2-r2-lzma/squashfs-tools/mksquashfs rootfs/ rootfs.img -2.0 -b 32768
-Creating little endian 2.0 filesystem on modified-bis.img, block size 32768.
-Little endian filesystem, data block size 32768, compressed data, compressed metadata, compressed fragments
-[...]
-
-$ unsquashfs -s rootfs.img
-Found a valid little endian SQUASHFS 2:0 superblock on rootfs.img.
-Creation or last append time Wed Jan 22 10:38:29 2014
-Filesystem size 1829.09 Kbytes (1.79 Mbytes)
-Block size 32768
-[...]
-&lt;/pre&gt;
-&lt;p&gt;Now, let's begin with the nice part. To test that our image works, we'll upload
-and flash it to the router. This step is critical, because if it fails, you'll
-end up with a router trying to boot from a corrupted root filesystem.&lt;/p&gt;
-&lt;p&gt;First, we use our previously compiled netcat binary to upload the newly created
-image (or use any other method of your choice):&lt;/p&gt;
-&lt;p&gt;On the router side:
-.. code:&lt;/p&gt;
-&lt;pre class=&quot;literal-block&quot;&gt;
-# nc -n -v -l -p 4444 &amp;gt;/tmp/rootfs.img
-&lt;/pre&gt;
-&lt;p&gt;On the computer side:
-.. code:&lt;/p&gt;
-&lt;pre class=&quot;literal-block&quot;&gt;
-$ cat rootfs.img |nc -n -v IP 4444
-&lt;/pre&gt;
-&lt;p&gt;When it's finished, have a little prayer and, on the router side:
-.. code:&lt;/p&gt;
-&lt;pre class=&quot;literal-block&quot;&gt;
-# cat /tmp/rootfs.img &amp;gt;/dev/mtdblock/0
-&lt;/pre&gt;
-&lt;p&gt;Then, plug off and on your router! If everything went well, your router should
-have rebooted just like before. If not, then you need to reflash your router
-another way, using the serial console or any JTAG port available (this is not
-covered here).&lt;/p&gt;
-&lt;p&gt;Now, we can simply permanently remove the backdoor from the root filesystem:&lt;/p&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# cd /path/to/original/fs
-# rm usr/sbin/scfgmgr
-# Edit usr/etc/rcS and remove the following line
-/usr/sbin/scfgmgr
-&lt;/pre&gt;
-&lt;p&gt;Then, rebuild your image as above, upload it, flash your router and the
-backdoor should be gone forever! It's up to you to build an SSH daemon to keep
-a root access on your router if you still want to play with it.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;linksys-wag200n-patch-procedure&quot;&gt;
-&lt;h3&gt;Linksys WAG200N patch procedure&lt;/h3&gt;
-&lt;p&gt;For those who would just like to patch their routers, here are the steps.
-Please note that this has only been tested on our Linksys WAG200N! It is really
-not recommanded to use it with other hardware. And, we repeat it, we cannot be
-held responsible for any harm on your routers! Use this at your own risk.&lt;/p&gt;
-
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ ./poc.py --ip IP --send_file2 nobackdoor.img --remote-filename rootfs
-&lt;/pre&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Then get a root shell on your router:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-$ ./poc.py --ip IP --shell
-&lt;/pre&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Check that the file sizes are the same:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# ls -l /tmp/rootfs
-# it should be 1875968 bytes
-&lt;/pre&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;To be sure, just redownload the uploaded image thanks to the web server and check that they are the same:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# mkdir /tmp/ppp_log
-# ln -s /tmp/rootfs /tmp/ppp_log
-
-And, on your computer:
-$ wget http://IP/ppp_log/rootfs
-$ diff ./rootfs /path/to/linksysWAG200N.nobackdoor.rootfs
-&lt;/pre&gt;
-
-&lt;pre class=&quot;code literal-block&quot;&gt;
-# cat /tmp/rootfs &amp;gt;/dev/mtdblock/0
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This article showed some statistics about the presence of the backdoor found by
-Eloi Vanderb&amp;#xE9;ken and how to fix one of the hardware affected. Feel free to
-comment any mistakes here, and/or provide similar images and/or fixes for other
-routers :)&lt;/p&gt;
-&lt;p class=&quot;section&quot; id=&quot;acknowledge&quot;&gt;
-&lt;h3&gt;Acknowledge&lt;/h3&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;Eloi Vanderb&amp;#xE9;ken for his discovery and original POC&lt;/li&gt;
-&lt;li&gt;Fred Raynal, Fernand Lone-Sang, @pod2g, Serge Guelton and K&amp;#xE9;vin Szkudlaspki for their corrections&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-</description>
-<title>
-TCP backdoor 32764 – how we could patch the Internet (or part of it)
-</title>
-</item>
-<item>
-<link>
-http://www.ubercomp.com/posts/2014-01-16_facebook_remote_code_execution
-</link>
-<description>
-&lt;div&gt;&lt;body&gt;
-
-
-&lt;p&gt; Today I want to share a tale about how I found a Remote Code Execution bug
-affecting Facebook. Like all good tales, the beginning was a long time ago
-(actually, just over a year, but I count using Internet Time, so bear with
-  me). If you find this interesting and want to hire me to do a security
-  focused review or penetration testing in your own (or your company's) code,
-  don't hesitate to &lt;a href=&quot;mailto:reginaldo@ubercomp.com&quot;&gt;send me an email&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;September 22nd, 2012 was a very special day for me, because it was the day I
-found
-a &lt;a href=&quot;https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing&quot;&gt;
-XML External Entity&lt;/a&gt; Expansion bug affecting the part of Drupal that handled
-OpenID. XXEs are very nice. They allow you to read any files on the filesystem,
-make arbitrary network connections, and just for the kicks you can also DoS the
-server with the &lt;a href=&quot;https://en.wikipedia.org/wiki/Billion_laughs&quot;&gt;billion
-laughs&lt;/a&gt; attack.&lt;/p&gt;
-
-&lt;p&gt;I was so naive at the time that I didn't even bother to check if anyone else
-was vulnerable. I reported it immediately. I wanted to start putting CVEs on my
-resume as soon as possible, and this would be the first (it eventually got
-&lt;a href=&quot;http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-4554&quot;&gt;CVE-2012-4554&lt;/a&gt;
-assigned to it). Only five days later it occurred to me that OpenID was pretty
-heavily used and so maybe other places were vulnerable as well. I decided to
-check the StackOverflow login form. Indeed, it was vulnerable to the whole thing
-(file reading and all).&lt;/p&gt;
-
-&lt;p&gt;Then I decided to try to find OpenID handling code running inside Google's
-servers. I wasn't able to read files or open network connections, but both App
-Engine and Blogger were vulnerable to DoS. This is how I got my first bounty
-from Google, by the way. It was a US$ 500 bounty.&lt;/p&gt;
-
-&lt;p&gt;After reporting the bug to Google, I ran some more tests and eventually
-noticed that the bug I had in my hands was affecting a lot of implementations. I
-won't enumerate the libraries here, but let me just say that this single bug
-affected, in one way or another, libraries implemented in Java, C#, PHP, Ruby,
-Python, Perl, and then more... The only reason I'm not publishing the PoC here is
-that there are a lot of servers who are still vulnerable out there. Of course,
-the people who know about security will just read OpenID and XXE and then write
-an exploit in about 5 minutes, but I digress.&lt;/p&gt;
-
-&lt;p&gt;So after contacting (or trying to contact) every OpenID library author out
-there, I decided to write to the member-only security list hosted at the OpenID
-foundation an email titled &quot;One bug to rule them all: many implementations of
-OpenID are vulnerable to XXE&quot; to share my findings. I figured most library
-authors would be members of that list and so patches would be released for
-everyone very soon. I was right, but only partially.&lt;/p&gt;
-
-&lt;p&gt;The persistent readers who are still with me by now are thinking: what does a
-Facebook Remote Code Execution bug has to do with all this? Well, I knew
-Facebook allowed OpenID login in the past. However, when I first found the
-OpenID bug in 2012 I couldn't find any endpoint that would allow me to enter an
-arbitrary OpenID URL. From a Google search I knew that in the past you could do
-something like
-https://www.facebook.com/openid/consumer_helper.php?openid.mode=checkid_setup&amp;amp;user_claimed_id=YOUR_CLAIMED_ID_HERE&amp;amp;context=link&amp;amp;request_id=0&amp;amp;no_extensions=false&amp;amp;third_party_login=false,
-but now the consumer_helper.php endpoint is gone. So for more than a year I
-thought Facebook was not vulnerable at all, until one day I was testing
-Facebook's &lt;a href=&quot;https://www.facebook.com/login/identify?ctx=recover&quot;&gt;Forgot
-your password?&lt;/a&gt; functionality and saw a request to
-https://www.facebook.com/openid/receiver.php.&lt;/p&gt;
-
-&lt;p&gt;That's when I began to suspect that Facebook was indeed vulnerable to that
-same XXE I had found out more than a year ago. I had to work a lot to confirm
-this suspicion, though. Long story short, when you forget your password, one of
-the ways you can prove to Facebook that you own an @gmail.com account is to log
-into your Gmail and authorize Facebook to get your basic information (such as
-email and name). The way this works is you're actually logging into Facebook
-using your Gmail account, and this login happens over OpenID. So far, so good,
-but this is where I got stuck. I knew that, for my bug to work, the OpenID
-Relying Party (RP - Facebook) has to make a Yadis discovery request to an OpenID
-Provider (OP) under the attacker's control. Let's say
-http://www.ubercomp.com/. Then my malicious OP will send a response with the
-rogue XML that will then be parsed by the RP, and the XXE attack will work.&lt;/p&gt;
-
-&lt;p&gt;Since the initial OpenID request (a redirect from Facebook to Google) happens
-without my intervention, there was no place for me to actually enter an URL
-under my control that was my OpenID identifier and have Facebook send a Yadis
-Discover request to that URL. So I thought the bug would not be triggered at
-all, unless I could somehow get Google to send Facebook a malicious XML, which
-was very unlikely. Fortunately, I was wrong. After a more careful reading of the
-&lt;a href=&quot;http://openid.net/specs/openid-authentication-2_0.html&quot;&gt;OpenID 2.0
-Specification&lt;/a&gt;, I found this nice gem in session 11.2 - Verifying Discovered
-Information:&lt;/p&gt;
-
-&lt;blockquote cite=&quot;http://openid.net/specs/openid-authentication-2_0.html&quot;&gt;&quot;If
-the Claimed Identifier was not previously discovered by the Relying Party (the
-&quot;openid.identity&quot; in the request was
-&quot;http://specs.openid.net/auth/2.0/identifier_select&quot; or a different Identifier,
-or if the OP is sending an unsolicited positive assertion), the Relying Party
-MUST perform discovery on the Claimed Identifier in the response to make sure
-that the OP is authorized to make assertions about the Claimed
-Identifier&quot;.&lt;/blockquote&gt;
-
-&lt;p&gt;I checked and, indeed, the openid.identity in the request was
-&lt;em&gt;http://specs.openid.net/auth/2.0/identifier_select&lt;/em&gt;. This is a very common
-practice, actually. So indeed after a few minutes I was able to make a request
-to https://www.facebook.com/openid/receiver.php that caused Facebook to perform
-a Yadis discovery on a URL under my control, and the response to that request
-would contain malicious XML. I knew I had a XXE because when I told Facebook's
-server to open /dev/random, the response would never come and eventually a
-request killer would kick in after a few minutes. But I still couldn't read any
-file contents. I tried everything on the XXE back of tricks (including weird
-combinations involving parameter entities, but nothing. I then realized I had a
-subtle bug on my exploit that, fixed that, and then...&lt;/p&gt;
-
-&lt;pre&gt;
-$ bash exploit.sh
-* About to connect() to www.facebook.com port 80 (#0)
-*   Trying 31.13.75.1... connected
-* Connected to www.facebook.com (31.13.75.1) port 80 (#0)
-&amp;gt; GET /openid/receiver.php?provider_id=1010459756371&amp;amp;context=account_recovery&amp;amp;protocol=http&amp;amp;request_id=1&amp;amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;amp;openid.mode=id_res&amp;amp;openid.op_endpoint=...(redacted)... HTTP/1.1
-&amp;gt; Host: www.facebook.com
-&amp;gt; Accept: */*
-&amp;gt; User-Agent: Chrome
-&amp;gt;
-
-
-&lt;p&gt;That's right, the response contained Facebook's /etc/passwd. Now we were
-  going somewhere. By then I knew I had found the keys to the kingdom. After
-  all, having the ability to read (almost) any file and open arbitrary network
-  connections through the point of view of the Facebook server, and which don't
-  go through any kind of proxy was surely something Facebook wanted to avoid at
-  any cost. But I wanted more. I wanted to escalate this to a full Remote
-  Execution.
-&lt;/p&gt;
-
-&lt;p&gt;A lot of bug bounty programs around the web have a rule that I think is very
-sensible: whenever you find a bug, don't linger on messing around. Report the
-bug right away and the security team will consider the worst case scenario and
-pay accordingly. However, I didn't have much experience with the security team
-at Facebook and didn't know if they would consider my bug as a Remote Code
-Execution or not. I Since I didn't want to cause the wrong impressions, I
-decided I would report the bug right away, ask for permission to try to escalate
-it to a RCE and then work on it while it was being fixed. I figured that would
-be ok because most bugs take a long time to be processed, and so I had plenty of
-time to try to escalate to an RCE while still keeping the nice imaginary white
-hat I have on my head. So after writing the bug report I decided to go out and
-have lunch, and the plan was to continue working when I came back.&lt;/p&gt;
-
-&lt;p&gt;However, I was wrong again. Since this was a very critical bug, when I got
-back home from lunch, a quick fix was already in place. Less than two hours
-after the initial report was sent. Needless to say, I was very impressed and
-disappointed at the same time, but since I knew just how I would escalate that
-attack to a Remote Code Execution bug, I decided to tell the security team what
-I'd do to escalate my access and trust them to be honest when they tested to see
-if the attack I had in my mind worked or not. I'm glad I did that. After a few
-back and forth emails, the security team confirmed that my attack was sound and
-that I had indeed found a RCE affecting their servers.&lt;/p&gt;
-
-&lt;p&gt;So this is how the first high impact bug I ever found was the entry point for an attack that probably got one of the highest payouts of any web security bug bounty program. Nice, huh?&lt;/p&gt;
-
-&lt;h2&gt;Timeline&lt;/h2&gt;
-
-&lt;p&gt;All timestamps are in GMT. I omitted a few unimportant interactions about the acknowledgements page and such.&lt;/p&gt;
-
-&lt;/pre&gt;&lt;ul&gt;
-
-&lt;li&gt;2013-11-19 3:51 pm: Initial report&lt;/li&gt;
-
-&lt;li&gt;2013-11-19 5:37 pm: Bug acknowledged by security team member Godot&lt;/li&gt;
-
-&lt;li&gt;2013-11-19 5:46 pm: I replied by sending a PoC to read arbitrary files&lt;/li&gt;
-
-&lt;li&gt;2013-11-19 7:31 pm: Security team member Emrakul informed me that a short
-term fix was already in place and would be live in approximately 30 minutes&lt;/li&gt;
-
-&lt;li&gt;2013-11-19 8:27 pm: I replied confirming that the bug was patched.&lt;/li&gt;
-
-&lt;li&gt;2013-11-21 8:03 pm: Payout set. The security team informed me it was their
-  biggest bounty payout to date.&lt;/li&gt;
-
-&lt;li&gt;2013-11-22 2:13 am: I sent an email asking whether the security team had
-already considered the bug as RCE or just as a file disclosure.&lt;/li&gt;
-
-&lt;li&gt;2013-11-23 1:17 am: Security team replied that they did not considered the
-attack could be escalated to RCE.&lt;/li&gt;
-
-&lt;li&gt;2013-11-23 7:54 pm: I sent an email explaining exactly how the attack could
-be escalated to an RCE (with file paths, example requests and all).&lt;/li&gt;
-
-&lt;li&gt;2013-11-24 9:23 pm: Facebook replied that my attack worked and they'd have
-to work around it.&lt;/li&gt;
-
-&lt;li&gt;2013-12-03 4:45 am: Facebook informed me that the longer term fix was in
-place and that they'd soon have a meeting to discuss a new bounty amount&lt;/li&gt;
-
-&lt;li&gt;2013-12-03 7:14 pm: I thanked them and said I'd cross my fingers&lt;/li&gt;
-
-&lt;li&gt;2013-12-13 1:04 pm: I found
-  a &lt;a href=&quot;http://www.bloomberg.com/news/2012-07-26/facebook-widens-bug-bounty-program-to-combat-internal-breaches.html&quot;&gt;Bloomberg
-  article quoting Ryan McGeehan, who managed Facebook's incident response
-  unit&lt;/a&gt;, saying that &quot;If there's a million dollar bug, we will pay it
-  out&quot; and asked if there was any news.&lt;/li&gt;
-
-&lt;li&gt;2013-12-30 4:45 am: Facebook informed me that, since the bug was now
-  considered to be RCE, the payout would be higher. I won't disclose the amount,
-  but if you have any comments about how much you think this should be worth,
-  please share them. Unfortunately, I didn't get even close to the one-million
-  dollar payout cited above.&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;/body&gt;
-&lt;/div&gt;
-</description>
-<title>
-How I found a Remote Code Execution bug affecting Facebook's servers
-</title>
-</item>
-<item>
-<link>
 https://m.facebook.com/dsobeski/posts/10153683440480008
 </link>
 <description>
@@ -642,6 +22,412 @@ https://m.facebook.com/dsobeski/posts/10153683440480008
 </description>
 <title>
 Trust, Users and The Developer Division - What Went Wrong at Microsoft
+</title>
+</item>
+<item>
+<link>
+http://www.youtube.com/watch?v=T8gjVbn8VBk&amp;list=PLUPhVMQuDB_aWSKj7L_-3Ot_nxBze_YMy&amp;index=3
+</link>
+<description>
+&lt;figure class=&quot;video blockFigure&quot;&gt;&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;http://www.youtube.com/embed/T8gjVbn8VBk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;figcaption&gt;This complimentary course, originally presented at the SIGGRAPH 2013 conference, provides an accelerated introduction to programming OpenGL, emphasizing the ...&lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+<title>
+[YouTube] SIGGRAPH University - &quot;An Introduction to OpenGL Programming&quot;
+</title>
+</item>
+<item>
+<author>
+CHARLIE SAVAGE
+</author>
+<link>
+http://www.nytimes.com/2014/01/23/us/politics/watchdog-report-says-nsa-program-is-illegal-and-should-end.html?partner=rss&emc=rss&smid=tw-nytimes
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
+
+    
+
+    
+    
+
+                
+    &lt;p class=&quot;story-body-text story-content&quot;&gt;WASHINGTON &amp;#x2014; An independent federal privacy watchdog has concluded that the &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/organizations/n/national_security_agency/index.html?inline=nyt-org&quot; title=&quot;More articles about National Security Agency, U.S.&quot; class=&quot;meta-org&quot;&gt;National Security Agency&lt;/a&gt;&amp;#x2019;s program to collect bulk phone call records has provided only &amp;#x201C;minimal&amp;#x201D; benefits in counterterrorism efforts, is illegal and should be shut down.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The findings are laid out in a 238-page report,&amp;#xA0;scheduled for release by Thursday and obtained by The New York Times, that represent the first major public statement by the&amp;#xA0;Privacy and Civil Liberties Oversight Board, which Congress made an independent agency in 2007 and only recently became fully operational. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The report is likely to inject a significant new voice into the debate over surveillance, underscoring that the issue was not settled by a &lt;a href=&quot;http://www.nytimes.com/2014/01/18/us/politics/obama-nsa.html&quot;&gt;high-profile speech&lt;/a&gt; &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/people/o/barack_obama/index.html?inline=nyt-per&quot; title=&quot;More articles about Barack Obama&quot; class=&quot;meta-per&quot;&gt;President Obama&lt;/a&gt; gave last week. Mr. Obama consulted with the board, along with &lt;a href=&quot;http://www.nytimes.com/2013/12/19/us/politics/report-on-nsa-surveillance-tactics.html?_r=0&quot;&gt;a separate review group&lt;/a&gt; that last month delivered its own report about surveillance policies. But while he said in his speech that he was tightening access to the data and declared his intention to find a way to end government collection of the bulk records, he said the program&amp;#x2019;s capabilities should be preserved.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The Obama administration has portrayed the bulk collection program as useful and lawful while at the same time acknowledging concerns about privacy and potential abuse. But in its report, the board&amp;#xA0;lays out what may be the most detailed critique of the government&amp;#x2019;s once-secret legal theory behind the program: that a law known as Section 215 of the &lt;a href=&quot;http://topics.nytimes.com/top/reference/timestopics/subjects/u/usa_patriot_act/index.html?inline=nyt-classifier&quot; title=&quot;More articles about the USA Patriot Act.&quot; class=&quot;meta-classifier&quot;&gt;Patriot Act&lt;/a&gt;, which allows the F.B.I. to obtain business records deemed &amp;#x201C;relevant&amp;#x201D; to an investigation, can be legitimately interpreted as authorizing the N.S.A. to collect all calling records in the country.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The program &amp;#x201C;lacks a viable legal foundation under Section 215, implicates constitutional concerns under the First and Fourth Amendments, raises serious threats to privacy and civil liberties as a policy matter, and has shown only limited value,&amp;#x201D; the report said. &amp;#x201C;As a result, the board recommends that the government end the program.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;While a majority of the five-member board embraced that conclusion, two members dissented from the view that the program was illegal. But the panel was united in 10 other recommendations, including deleting raw phone records after three years instead of five and tightening access to search results. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The report also sheds light on the history of the once-secret bulk collection program. It contains the first official acknowledgment that the Foreign Intelligence Surveillance Court produced no judicial opinion detailing its legal rationale for the program &lt;a href=&quot;http://www.nytimes.com/2013/09/18/us/opinion-by-secret-court-calls-collection-of-phone-data-legal.html?_r=0&quot;&gt;until last August&lt;/a&gt;, even though it had been issuing orders to phone companies for the records and to the N.S.A. for how it could handle them &lt;a href=&quot;http://www.dni.gov/files/documents/section/pub_May%2024%202006%20Order%20from%20FISC.pdf&quot;&gt;since May 2006&lt;/a&gt;.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The&lt;a href=&quot;http://www.pclob.gov/about-us/leadership&quot;&gt; privacy board&lt;/a&gt;&amp;#x2019;s legal critique of the program was approved by David Medine, the board&amp;#x2019;s chairman and a former Federal Trade Commission official in the Clinton administration; Patricia M. Wald, a retired federal appeals court judge named to the bench by President Jimmy Carter; and James X. Dempsey, a civil liberties advocate who specializes in technology issues.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the other two members &amp;#x2014; Rachel L. Brand and Elisebeth Collins Cook, both of whom were Justice Department lawyers in the George W. Bush administration &amp;#x2014; rejected the finding that the program was illegal. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;They wrote in separate dissents that the board should have focused exclusively on policy and left legal analysis to the courts. Last month, two Federal District Court judges reached &lt;a href=&quot;http://www.nytimes.com/2013/12/17/us/politics/federal-judge-rules-against-nsa-phone-data-program.html&quot;&gt;opposite&lt;/a&gt; legal &lt;a href=&quot;http://www.nytimes.com/2013/12/28/us/nsa-phone-surveillance-is-lawful-federal-judge-rules.html&quot;&gt;conclusions&lt;/a&gt; in separate lawsuits challenging the program. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Ms. Brand wrote that while the legal question was &amp;#x201C;difficult,&amp;#x201D; the government&amp;#x2019;s legal theory was &amp;#x201C;at least a reasonable reading, made in good faith by numerous officials in two administrations of different parties.&amp;#x201D; She also worried that declaring that counterterrorism officials &amp;#x201C;have been operating this program unlawfully for years&amp;#x201D; could damage morale and make agencies overly cautious in taking steps to protect the country.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the privacy board was unanimous in recommending a series of immediate changes to the program. The three in the majority wanted those changes as part of a brief wind-down period, while the two in dissent wanted them to be structural for a program that would continue.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Some of those recommendations dovetailed with the steps Mr. Obama announced last week, including limiting analysts&amp;#x2019; access to the call records of people no further than two links removed from a suspect, instead of three, and creating a panel of outside lawyers to serve as public advocates in major cases involving secret surveillance programs.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Other recommendations &amp;#x2014; like deleting data faster &amp;#x2014; were not mentioned in the president&amp;#x2019;s speech. And all members of the board expressed privacy concerns about requiring phone companies to retain call records longer than they normally would, which might be necessary to meet Mr. Obama&amp;#x2019;s stated goal of finding a way to preserve the program&amp;#x2019;s ability without having the government collect the bulk data. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The program began in late 2001 based on wartime authority claimed by President Bush. In 2006, the Bush administration persuaded the surveillance court to begin authorizing the program based on the Patriot Act under a theory the Obama administration would later embrace. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the privacy board&amp;#x2019;s report criticized that, saying that the legal theory was a &amp;#x201C;subversion&amp;#x201D; of the law&amp;#x2019;s intent, and that the program also violated the Electronic Communications Privacy Act.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;&amp;#x201C;It may have been a laudable goal for the executive branch to bring this program under the supervision&amp;#x201D; of the court, the report says. &amp;#x201C;Ultimately, however, that effort represents an unsustainable attempt to shoehorn a pre-existing surveillance program into the text of a statute with which it is not compatible.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Defenders of the program have argued that Congress acquiesced to that secret interpretation of the law by twice extending its expiration without changes. But the report rejects that idea as &amp;#x201C;both unsupported by legal precedent and unacceptable as a matter of democratic accountability.&amp;#x201D; &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The report also scrutinizes in detail a handful of investigations in which the program was used, finding &amp;#x201C;no instance in which the program directly contributed to the discovery of a previously unknown terrorist plot or the disruption of a terrorist attack.&amp;#x201D; &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Still, in her dissent, Ms. Cook criticized judging the program&amp;#x2019;s worth based only on whether it had stopped an attack to date. It also has value as a tool that can allow investigators to &amp;#x201C;triage&amp;#x201D; threats and provide &amp;#x201C;peace of mind&amp;#x201D; if it uncovers no domestic links to a newly discovered terrorism suspect, she wrote.&lt;/p&gt;
+                &lt;footer class=&quot;story-footer story-content&quot;&gt;
+        
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+Watchdog Report Says N.S.A. Program Is Illegal and Should End
+</title>
+</item>
+<item>
+<link>
+http://www.toonormal.com/2014/01/10/4k-hdmi-and-deep-color/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
+				&lt;p&gt;As of this writing (January 2014), there are 2 HDMI specifications that support 4K Video (3840&amp;#xD7;2160 16:9). HDMI 1.4 and HDMI 2.0. As far as I know, there are currently no HDMI 2.0 capable TVs available in the market (though many were announced at CES this week).&lt;/p&gt;
+&lt;div id=&quot;attachment_6674&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.hdmi.org/manufacturer/hdmi_2_0/index.aspx&quot;&gt;&lt;img src=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/HDMI2.png&quot; alt=&quot;Comparing HDMI 1.4 (Black text) and 2.0 (Orange). Source: HDMI 2.0 FAQ on HDMI.org&quot; width=&quot;435&quot; class=&quot;size-full wp-image-6674&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Comparing HDMI 1.4 (Black text) and 2.0 (Orange). Source: HDMI 2.0 FAQ&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;A detail that tends to be neglected in all this 4K buzz is the Chroma Subsampling. If you&amp;#x2019;ve ever compared an HDMI signal against something else (DVI, VGA), and the quality looked worse, one of the reasons is because of Chroma Subsampling (for the other reason, see &lt;strong&gt;xvYCC&lt;/strong&gt; at the bottom of this post). &lt;/p&gt;
+&lt;p&gt;Chroma Subsampling is extremely common. Practically every video you&amp;#x2019;ve ever watched on a computer or other digital video player uses it. As does the JPEG file format. That&amp;#x2019;s why we GameDevs prefer formats like PNG that don&amp;#x2019;t subsample. We like our source data raw and pristine. We can ruin it later with subsampling or other forms of texture compression (DXT/S3TC).&lt;/p&gt;
+&lt;p&gt;In the land of Subsampling, a descriptor like &lt;strong&gt;4:4:4&lt;/strong&gt; or &lt;strong&gt;4:2:2&lt;/strong&gt; is used. Images are broken up in to 4&amp;#xD7;2 pixel cells. The descriptor says how much color (chroma) data is lost. &lt;strong&gt;4:4:4&lt;/strong&gt; is the perfect form of Chroma Subsampling. Chroma Subsampling uses the &lt;strong&gt;YCbCr&lt;/strong&gt; color space (sometimes called YCC) as opposed to the standard RGB color space.&lt;/p&gt;
+&lt;div id=&quot;attachment_6676&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/ChromaSubSampling.png&quot;&gt;&lt;img src=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/ChromaSubSampling-640x180.png&quot; alt=&quot;Great subsampling diagram from Wikipedia, showing the different encodings mean&quot; width=&quot;640&quot; class=&quot;size-large wp-image-6676&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Great subsampling diagram from &lt;a href=&quot;http://en.wikipedia.org/wiki/Chroma_subsampling#Sampling_systems_and_ratios&quot;&gt;Wikipedia&lt;/a&gt;, showing the different encodings mean&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Occasionally the term &amp;#x201C;&lt;strong&gt;4:4:4 RGB&lt;/strong&gt;&amp;#x201D; or just &amp;#x201C;&lt;strong&gt;RGB&lt;/strong&gt;&amp;#x201D; is used to describe the standard RGB color space. Also note, Component Video cables, though they are colored red, green, and blue, are actually &lt;u&gt;YPbPr&lt;/u&gt; encoded (the Analog version of YCbCr).&lt;/p&gt;
+&lt;p&gt;Looking at the first diagram again, we can make a little more sense of it.&lt;/p&gt;
+&lt;a href=&quot;http://www.hdmi.org/manufacturer/hdmi_2_0/index.aspx&quot;&gt;&lt;img src=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/HDMI2.png&quot; alt=&quot;Comparing HDMI 1.4 (Black text) and 2.0 (Orange). Source: HDMI 2.0 FAQ on HDMI.org&quot; width=&quot;435&quot; class=&quot;size-full wp-image-6674&quot;&gt;&lt;/a&gt;
+&lt;p&gt;In other words: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HDMI 1.4 supports &lt;strong&gt;8bit RGB&lt;/strong&gt;, &lt;strong&gt;8bit 4:4:4&lt;/strong&gt; YCbCr, and &lt;strong&gt;12bit 4:2:2&lt;/strong&gt; YCbCr, all at 24-30 FPS&lt;/li&gt;
+&lt;li&gt;HDMI 2.0 supports &lt;strong&gt;RGB&lt;/strong&gt; and &lt;strong&gt;4:4:4&lt;/strong&gt; in all color depths (8bit-16bit) at 24-30 FPS&lt;/li&gt;
+&lt;li&gt;HDMI 2.0 only supports &lt;strong&gt;8bit RGB&lt;/strong&gt; and &lt;strong&gt;8bit 4:4:4&lt;/strong&gt; at 60 FPS&lt;/li&gt;
+&lt;li&gt;All other color depths require Chroma Subsampling at 60 FPS in HDMI 2.0&lt;/li&gt;
+&lt;li&gt;Peter Jackson&amp;#x2019;s 48 FPS (The Hobbit&amp;#x2019;s &amp;#x201C;High Frame Rate&amp;#x201D; HFR) is notably absent from the spec&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also worth noting, the most well supported color depths are &lt;strong&gt;8bit&lt;/strong&gt; and &lt;strong&gt;12bit&lt;/strong&gt;. The 12 bit over HDMI is referred to as &lt;strong&gt;Deep Color&lt;/strong&gt; (as opposed to High Color).&lt;/p&gt;
+&lt;p&gt;The HDMI spec has supported only &lt;strong&gt;4:4:4&lt;/strong&gt; and &lt;strong&gt;4:2:2&lt;/strong&gt; since HDMI 1.0. As of HDMI 2.0, it also supports &lt;strong&gt;4:2:0&lt;/strong&gt;, which is available in HDMI 2.0&amp;#x2032;s 60 FPS framerates. Blu-ray movies are encoded in 4:2:0, so I&amp;#x2019;d assume this is why they added this.&lt;/p&gt;
+&lt;p&gt;All this video signal butchering does beg the question: Which is the better trade off? More color range per pixel, or more pixels with color channels?&lt;/p&gt;
+&lt;p&gt;I have no idea.&lt;/p&gt;
+&lt;p&gt;If I was to guess though, because TV&amp;#x2019;s aren&amp;#x2019;t right in front of your face like a Computer Monitor, I&amp;#x2019;d expect 4K 4:2:2 might actually be better. Greater luminance precision, with a bit of chroma fringing.&lt;/p&gt;
+&lt;p&gt;Some Plasma and LCD screens use something called &lt;a href=&quot;http://en.wikipedia.org/wiki/PenTile_matrix_family&quot;&gt;Pentile Matrix&lt;/a&gt; arrangement of their red, green, and blue pixels.&lt;/p&gt;
+&lt;div id=&quot;attachment_6726&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/Pentile.jpg&quot;&gt;&lt;img src=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/Pentile-450x337.jpg&quot; alt=&quot;The AMOLED screen of the Nexus One&quot; width=&quot;450&quot; class=&quot;size-medium wp-image-6726&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;The AMOLED screen of the Nexus One. A green for every pixel, but every other pixel is a blue, switching red/blue order every line. Not all AMOLED screens are Pentile. The Super AMOLED Plus screen found in the PS Vita uses a &lt;a href=&quot;http://www.edepot.com/playstation.html#PSP2_Video&quot;&gt;standard RGB layout&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;So even if we wanted more color fidelity per individual pixel, it may not be physically there.&lt;/p&gt;
+&lt;h2&gt;Deep Color&lt;/h2&gt;
+&lt;p&gt;Me, my latest graphics fascination is &lt;strong&gt;Deep Color&lt;/strong&gt;. Deep Color is the marketing name for more than 8 bits per pixel of a color. It isn&amp;#x2019;t necessarily something we need in asset creation (not me, but some do want full 16bit color channels). But as we start running filters/shaders on our assets, stuff like HDR (but more than that), we end up losing the quality of the original assets as they are re-sampled to fit in to an 8bit RGB color space. &lt;/p&gt;
+&lt;p&gt;This can result in banding, especially in near flat color gradients.&lt;/p&gt;
+&lt;div id=&quot;attachment_6696&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/Banding.jpg&quot;&gt;&lt;img src=&quot;http://www.toonormal.com/wp-content/uploads/2014/01/Banding.jpg&quot; alt=&quot;From Wikipedia&quot; width=&quot;640&quot; class=&quot;size-full wp-image-6696&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;From &lt;a href=&quot;http://en.wikipedia.org/wiki/Color_banding&quot;&gt;Wikipedia&lt;/a&gt;, though it&amp;#x2019;s possible the banding shown may be exaggerated&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Photographers have RAW and HDR file formats for dealing with this stuff. We have Deep Color, in all its &lt;strong&gt;30bit&lt;/strong&gt; (10bpp), &lt;strong&gt;36bit&lt;/strong&gt; (12bpp) and &lt;strong&gt;48bit&lt;/strong&gt; (16bpp) glory. Or really, just &lt;strong&gt;36bit (12bpp)&lt;/strong&gt;, but 48bit can be used as a RAW format if we wanted.&lt;/p&gt;
+&lt;p&gt;So the point of this nerding: An ideal display would be &lt;strong&gt;4K&lt;/strong&gt;, support &lt;strong&gt;12bit RGB&lt;/strong&gt; or &lt;strong&gt;12bit YCbCr&lt;/strong&gt;, at &lt;strong&gt;60 FPS&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The thing is, &lt;strong&gt;HDMI 2.0 doesn&amp;#x2019;t support it&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Perhaps that&amp;#x2019;s fine though. Again, HDMI is a television spec. Most television viewers are watching video, and practically all video is 4:2:0 encoded anyway (which is supported by the HDMI 2.0 spec). The problem is gaming, where our framerates can reach 60FPS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The HDMI 2.0 spec isn&amp;#x2019;t up to spec.&lt;/strong&gt; &lt;img src=&quot;http://www.toonormal.com/wp-includes/images/smilies/icon_wink.gif&quot; alt=&quot;;)&quot; class=&quot;wp-smiley&quot;&gt; &lt;/p&gt;
+&lt;p&gt;Again this is probably fine. The now-current generation of consoles, nobody is really pushing them as 4K machines anyway. Sony may have 4K video playback support, but most high end games are still targeting 1080p and even 720p. 4K is 4x the pixels of 1080p. I suppose it&amp;#x2019;s an advantage that 4K only supports 30FPS right now, meaning you only need to push 2x the data to be a &amp;#x201C;4K game&amp;#x201D;, but still.&lt;/p&gt;
+&lt;p&gt;HDMI Bandwidth is rated in &lt;a href=&quot;http://en.wikipedia.org/wiki/HDMI#Version_comparison&quot;&gt;Gigabits per second&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HDMI 1.0-&amp;gt;1.2: &lt;strong&gt;~4 Gb&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;HDMI 1.3-&amp;gt;1.4: &lt;strong&gt;~8 Gb&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;HDMI 2.0: &lt;strong&gt;~14 Gb&lt;/strong&gt; (NEW)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Not surprisingly, 4K 8bit 60FPS is &lt;strong&gt;~12 Gb&lt;/strong&gt; of data, and 30FPS is &lt;strong&gt;~6 Gb&lt;/strong&gt; of data. Our good friend &lt;strong&gt;4K 12bit 60FPS&lt;/strong&gt; though is &lt;strong&gt;~18 Gb&lt;/strong&gt; of data, well above the limits of HDMI 2.0.&lt;/p&gt;
+&lt;p&gt;To compare, &lt;a href=&quot;http://en.wikipedia.org/wiki/DisplayPort&quot;&gt;Display Port&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DisplayPort 1.0 and 1.1: &lt;strong&gt;~8 Gb&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;DisplayPort 1.2: &lt;strong&gt;~17 Gb&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;DisplayPort 1.3: &lt;strong&gt;~32 Gb&lt;/strong&gt; (NEW)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They&amp;#x2019;re claiming 8K and 4K@120Hz (FPS) support with the latest standard, but 18 doesn&amp;#x2019;t divide that well in to 32, so somebody has to have their numbers wrong (admittedly I did not divide mine by 1024, but 1000). Also since 8k is 4x the resolution of 4K, and the bandwidth only roughly doubled, practically speaking DisplayPort 1.3 can only support &lt;strong&gt;8k 8bit 30FPS&lt;/strong&gt;. Also that 4K@120Hz is &lt;strong&gt;4K 8bit 120FPS&lt;/strong&gt;. Still, if you don&amp;#x2019;t want 120FPS, that leaves room for &lt;strong&gt;4K 16bit 60FPS&lt;/strong&gt;, which should be more than needed (12bit). I wonder if anybody will support &lt;strong&gt;4K 12bit 90FPS&lt;/strong&gt; over DisplayPort?&lt;/p&gt;
+&lt;p&gt;And that&amp;#x2019;s 4K.&lt;/p&gt;
+&lt;h2&gt;1080p and 2K Deep Color&lt;/h2&gt;
+&lt;p&gt;Today 1080p is the dominant high resolution: 1920&amp;#xD7;1080. To the film guys, true 2K is 2048&amp;#xD7;1080, but there are a wide variety of devices in the same range, such as 2560&amp;#xD7;1600 and 2560&amp;#xD7;1440 (4x 720p). These, including 1080p, are often grouped under the label &lt;a href=&quot;http://en.wikipedia.org/wiki/2K_resolution&quot;&gt;2K&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;A second of &lt;strong&gt;1080p 8bit 60FPS&lt;/strong&gt; data requires &lt;strong&gt;~3 Gb&lt;/strong&gt; of bandwidth, well within the range supported by the original HDMI 1.0 spec (though why we even had to deal with 1080i is a good question, probably due to the inability to even meet the HDMI spec).&lt;/p&gt;
+&lt;p&gt;To compare, a second of &lt;strong&gt;1080p 12bit 60FPS&lt;/strong&gt; data requires ~4.5 Gb of bandwidth. Even &lt;strong&gt;1080p 16bit 60FPS&lt;/strong&gt; needed only ~6 Gb, well within the range supported by HDMI 1.3 (where Deep Color was introduced). Plenty of headroom still. Only when we push &lt;strong&gt;2560&amp;#xD7;1440 12bit 60FPS&lt;/strong&gt; (~8 Gb) do we hit the limits of HDMI 1.3.&lt;/p&gt;
+&lt;p&gt;So from a specs perspective, I just wanted to note this because &lt;strong&gt;Deep Color&lt;/strong&gt; and &lt;strong&gt;1080p&lt;/strong&gt; are reasonable to support on now-current generation game consoles. Even the PlayStation 3, by specs, supported this. High end games probably didn&amp;#x2019;t have enough processing to spare for this, but it&amp;#x2019;s something to definitely consider supporting on PlayStation 4 and Xbox One. As for PC, many current GPUs support Deep Color in full-screen resolutions. Again, full-screen, not necessarily on your Desktop (i.e. windowed). From what I briefly read, Deep Color is only supported on the Desktop with specialty cards (FirePro, etc).&lt;/p&gt;
+&lt;h2&gt;One more thing: YCrCb (YCC) and xvYCC&lt;/h2&gt;
+&lt;p&gt;You make have noticed watching a video file that the blacks don&amp;#x2019;t look very black.&lt;/p&gt;
+&lt;p&gt;Due to a horrible legacy thing (CRT displays), data encoded as YCrCb use values from 16-&amp;gt;240 (15-235?) instead of 0-&amp;gt;255. Thats quite the loss, nearly 12% of the available data range, effectively lowering the precision below 8bit. The only reason it&amp;#x2019;s still done is because of old CRT televisions, which can be really tough to find these days. Regrettably, that does mean both of the original DVD and Bluray movies standards were forced to comply to this.&lt;/p&gt;
+&lt;p&gt;Sony proposed &lt;a href=&quot;http://en.wikipedia.org/wiki/XvYCC&quot;&gt;x.v.Color (xvYCC)&lt;/a&gt; as a way of finally forgetting this stupid limitation of old CRT displays, and using the full 0-&amp;gt;255 range. As of HDMI 1.3 (June 2006), &lt;strong&gt;xvYCC&lt;/strong&gt; and &lt;strong&gt;Deep Color&lt;/strong&gt; are part of the HDMI spec.&lt;/p&gt;
+&lt;p&gt;Several months later (November 2006), &lt;strong&gt;The PlayStation 3&lt;/strong&gt; was launched. So as a rule of thumb, only HDMI devices newer than the PlayStation 3 will could potentially support xvYCC. This means televisions, audio receivers, other set top boxes, etc. It&amp;#x2019;s worth noting that some audio receivers may actually clip video signals to the 16-240 range, thus ruining picture quality of an xvYCC source. Also the PS3 was eventually updated to HDMI 1.4 via a software update, but the only 1.4 feature supported is Stereoscopic 3D.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.audioholics.com/home-theater-calibration/hdmi-black-levels-xvycc-rgb&quot;&gt;Source&lt;/a&gt;. &lt;a href=&quot;http://en.wikipedia.org/wiki/XvYCC&quot;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The point of bringing this up is to further emphasize the potential for color banding and terrible color reproduction over HDMI. An 8bit RGB framebuffer is potentially being compressed to fit within the YCbCr 16-240 range before it gets sent over HDMI. The PlayStation 3 has a setting for enabling the full color range (I forget the name used), and other new devices probably do to (unlikely named xvYCC).&lt;/p&gt;
+&lt;p&gt;According to Wikipedia, all of the Deep Color modes supported by HDMI 1.3 are xvYCC, as they should be.&lt;/p&gt;
+
+								
+				
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+</description>
+<title>
+4k, HDMI, and Deep Color
+</title>
+</item>
+<item>
+<link>
+http://fabiensanglard.net/reverse_engineering_strike_commander/index.php
+</link>
+<description>
+&lt;div&gt;&lt;section id=&quot;content&quot;&gt;
+
+
+
+		
+
+
+&lt;p id=&quot;date&quot;&gt;Jan 22th, 2014&lt;/p&gt;
+
+			
+&lt;p id=&quot;paperbox&quot;&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;
+&lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/icon_plane.png&quot;&gt; &lt;p&gt;I love you Hoi-En.&lt;/p&gt;&lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;    
+&lt;/a&gt; 
+    
+    
+
+Back in the early 90s, one company was on the bleeding edge of PC gaming: 
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Origin_Systems&quot;&gt;Origin Systems&lt;/a&gt;.
+Their motto was &quot;We Create Worlds&quot; and boy did they deliver: With the &lt;a href=&quot;http://en.wikipedia.org/wiki/Ultima_(series)&quot;&gt;Ultima&lt;/a&gt; series, Crusader series and
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Wing_Commander_(franchise)&quot;&gt;Wing Commander&lt;/a&gt; series, they consistently took gamer's breath away.&lt;br&gt;
+&lt;br&gt;
+One of them took four years and more than a million man hours to complete: &lt;a href=&quot;http://en.wikipedia.org/wiki/Strike_Commander&quot;&gt;
+Strike Commander&lt;/a&gt;. The famous flight simulator
+had its own 3D engine called &lt;a href=&quot;http://www.wcnews.com/wcpedia/RealSpace&quot;&gt;RealSpace&lt;/a&gt; which pioneered many of what we take 
+for granted today: Texture Mapping, Gouraud Shading, Level of Details and Dithered colors.&lt;br&gt;
+&lt;br&gt;
+
+My old dream was to play the game with a Virtual Reality device. With 
+the &lt;a href=&quot;http://www.oculusvr.com/&quot;&gt;Oculus Rift&lt;/a&gt; that fantasy came one step closer to reality.
+But when it turned out the source code had been lost and would never be released, I decided to reverse engineer it.&lt;br&gt;
+&lt;br&gt;
+As of the publication of this article, the project is not yet completed  but I want to share the techniques that have so far allowed this :&lt;br&gt;
+&lt;br&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_before.png&quot;&gt;&lt;br&gt;
+  &lt;br&gt;
+to become that :&lt;br&gt;
+&lt;br&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_after.png&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+... and maybe inspire some people to join the adventure.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;u&gt;&lt;b&gt;TABLE OF CONTENT :&lt;/b&gt;&lt;/u&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;Part 1:  Introduction&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_architecture.php&quot;&gt;Part 2: Game Architecture&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_assets.php&quot;&gt;Part 3: Reverse Engineer Assets&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_game.php&quot;&gt;Part 4: Play the game again&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_oculus_rift.php&quot;&gt;Part 5: Oculus Rift&lt;/a&gt;&lt;br&gt;
+
+&lt;/p&gt;
+
+&lt;h2&gt;Before Strike Commander
+&lt;/h2&gt;
+&lt;p&gt;
+  Early 90s flight simulators were good but like &lt;a href=&quot;http://en.wikipedia.org/wiki/Falcon_(video_game_series)#Falcon_3.0&quot;&gt;Falcon 3.0&lt;/a&gt; 
+  or &lt;a href=&quot;http://en.wikipedia.org/wiki/History_of_Microsoft_Flight_Simulator#Flight_Simulator_4.0&quot;&gt;Flight simulator 4.0&lt;/a&gt; they focused mostly on accurate flying models than beautiful rendition :&lt;br&gt;
+  &lt;br&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/falcon3_small.jpg&quot;&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/flight_simulator_4_small.gif&quot;&gt;&lt;br&gt;
+  &lt;br&gt;
+ There were many fight simulator on the market and few people noticed the 1990 Origin Systems announcement for a new game. But things
+ changed after Chicago CES 1991 where a demo could be seen in action : 
+  Nobody could believe the game could feature things only seen in military flight simulator so far: Texture Mapping, Gouraud Shading, Haze and more. 
+  Screenshots demonstrated a technology far ahead any competitors :&lt;br&gt;
+  &lt;br&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_small.png&quot;&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_cockpit_small.png&quot;&gt;&lt;br&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_story_small.png&quot;&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_story2_small.png&quot;&gt;&lt;br&gt;
+  &lt;br&gt;
+  After 1991 the game became highly anticipated. Not only the engine was gorgeous and the story captivating, RealSpace also supported exceptional hardware out of the box: The very expensive 
+  and fragile accessories that every flight simulator 
+  enthusiast wanted were the THRUSTMASTER WEAPON CONTROL SYSTEM and the THRUSTMASTER FLIGHT CONTROL SYSTEM:&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_TQS-web.jpg&quot; class=&quot;shadowed&quot;&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_FCS-web.jpg&quot; class=&quot;shadowed&quot;&gt;
+  &lt;br&gt;
+  &lt;br&gt;
+  And you could even connect the THRUSTMASTER RUDDER:&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_rcs-web.jpg&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
+  &lt;br&gt;
+  Still, there was more: The game also supported a Virtual Cockpit. The
+  4-way 'hat switch' on the ThrustMaster allowing to move the pilot's head and follow ground objects/enemy jets without the need for a Virtual Reality HeadSet :&lt;br&gt;
+  &lt;br&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_v_cockpit_small.png&quot; class=&quot;shadowed&quot;&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_v_cockpit2_small.png&quot; class=&quot;shadowed&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;1993: First Contact&lt;/h2&gt;
+&lt;p&gt;
+  The game and its 3D engine were mind blowing but required an impossibly powerful machine :
+  &lt;/p&gt;&lt;ul&gt;
+    &lt;li&gt;IBM PC 486-DX2 66Mhz&lt;/li&gt;
+    &lt;li&gt;4MB RAM&lt;/li&gt;
+    &lt;li&gt;38MB mandatory installation&lt;/li&gt;
+    &lt;li&gt;Game comes on 11 x 1.44MB floppy disks.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;p&gt;
+  Adjusted to today technological inflation the recommended configuration would be : 
+  &lt;/p&gt;&lt;ul&gt;
+      &lt;li&gt;8 Cores CPU with 16 GB of RAM.&lt;/li&gt;
+      &lt;li&gt;Dual Nvidia Titan GPUs.&lt;/li&gt;
+      &lt;li&gt;Mandatory install of 1000 GB.&lt;/li&gt;
+      &lt;li&gt;Game comes on five BluRays.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;
+  And purchasing the game was not enough, you also had to survive the installation ! Upon opening the box you would be faced with 8 floppy disks (
+  +3 for the Speech Pack):&lt;br&gt;
+  &lt;br&gt;
+  
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/Strike-Poster_small.png&quot;&gt;
+  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_disks_small.jpg&quot;&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+   &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; Notice the poster announcing a Christmas 1991 release. The game would not be completed until 1993 after a long process that Chris Robert labeled &quot;The Apocalypse Now of computer games&quot;.&lt;br&gt;
+  &lt;br&gt;
+   Decompressing the game from floppies to hard-drive and swapping the 13 flopping disk took a good 30 minutes. And when you thought you were done,
+   the game proceeded to generate all the maps. The size of the game would blow up from 24MB to 38MB: Four times the size of any game back them.&lt;br&gt;
+    &lt;br&gt;
+  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_mapgenerator.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
+  &lt;br&gt;
+  &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; A map was generated from a single &quot;seed&quot; (an integer number) that was injected in a pseudo-random numbers generation algorithm.
+  This was a clever technique that avoided shipping data by generating the map after installation. If you are curious about this technique, go read &lt;a href=&quot;http://www.amazon.com/The-Backroom-Boys-Secret-British/dp/0571214975&quot;&gt;The Backroom Boys&lt;/a&gt; and the chapter about Frontier Elite game.&lt;br&gt;
+  &lt;br&gt;
+   The maps generation step took ONE hour on a 386 PC. But Origin Systems had the good idea to ship with &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/docs/sudden_death.JPG&quot;&gt;the box&lt;/a&gt; a superb 100 pages magazine set in the dystopian 2012 world of the game. &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/docs/StrikeCommanderManual.pdf&quot;&gt;Sudden Death&lt;/a&gt;  made the entire process less painful ( notice the fake advertisement on page 38 promising the release of Strike Commander for Christmas 2013).
+        
+   &lt;br&gt;
+ &lt;/p&gt;
+
+ &lt;h2&gt;Strike Commander !&lt;/h2&gt;
+&lt;p&gt;
+  Finally after all those steps, players were able to enjoy the game....in April 1993 ! Despite being 2 years late, the game was everything Origin promised and it sold very well. Many spent nights after nights dogfighting even if for most what was supposed to look like this :&lt;br&gt;
+  &lt;br&gt;
+   &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_ingame.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
+   &lt;br&gt;
+   ...ended up looking like that on minimum settings :&lt;br&gt;
+   &lt;br&gt;
+   &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_ingame_low.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+   Overall the game was enough to captivate pilots and generate fond memories.
+&lt;/p&gt;
+
+
+
+
+&lt;h2&gt;The Lost Source Code&lt;/h2&gt;
+&lt;p&gt;
+  With the Oculus Rift release, my interest in Strike Commander peaked again: The hardware was ready. Since
+  it was a 20 years old game, I expected the source code to have been released but I quickly found out the sad story of Origin Systems 
+  decline.&lt;br&gt;
+  &lt;br&gt;
+  Origin Systems was acquired by Electronic Arts in September 1992 and all projects were canceled circa 1999 following poor sales of
+  Ultima 9. The company was to refocus on an other field they pioneered: &lt;a href=&quot;http://en.wikipedia.org/wiki/Ultima_Online&quot;&gt;MMORPG Ultima Online&lt;/a&gt;.
+  Most people assume the source codes and gold versions of all finished games were stored in a Vault somewhere at EA. 
+  But after getting in touch with people at &lt;a href=&quot;http://www.wcnews.com/chatzone/threads/wing-commander-source-code.24840/&quot;&gt;Wing Commander CIC&lt;/a&gt;, 
+  it appeared that all the source code was lost when the company closed.&lt;br&gt;
+  &lt;br&gt;
+  It is something hard to believe today but back then developers and companies were more focused on the next title
+  instead of preserving &quot;old things&quot;, there was not nostalgia factor, no huge fan base and no market like &lt;a href=&quot;http://www.gog.com/&quot;&gt;Good Old Games&lt;/a&gt; today. Many stories could illustrate how &quot;primitive&quot; source control was but the best 
+  is probably the &quot;ZAP SC&quot; story at 15m14s :&lt;br&gt;
+  &lt;br&gt;
+  &lt;/p&gt;&lt;p&gt;
+     &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/K8gj2YyB0Hg#start=922&quot;&gt;&lt;/iframe&gt;
+  &lt;/p&gt;
+  &lt;br&gt;
+  On his first day one developer managed to delete the full 900MB of Strike Commander source tree. The IT team spent 72 hours recovering everything from developers machines. The interview also mention that Wing Commander 1 and 2 code was exchanged via floppy disks: They did not have a network until SC !
+  &lt;br&gt;
+  &lt;br&gt;
+  &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; In a surprising turn of event, some of the source code re-emerged recently via ex-Origin developers: Wing Commander CIC 
+  maintains an off-line archive which features the source codes of &lt;a href=&quot;http://cdn.wcnews.com/newestshots/full/squadronsourcecode.png&quot;&gt;Wing Commander I&lt;/a&gt;
+  &lt;a href=&quot;http://cdn.wcnews.com/newestshots/full/wc3sourcecode.PNG&quot;&gt;Wing Commander  III&lt;/a&gt; and people working on Ultima 8 were offered (but turned down) 
+  the source code of &quot;Ultima 8: Pagan&quot; by &lt;a href=&quot;http://exult.sourceforge.net/forum/read.php?f=1&amp;amp;i=13863&amp;amp;t=13863&quot;&gt;an anonymous source&lt;/a&gt;. As for Strike Commander, I have never heard of someone having it.
+
+
+
+&lt;h2&gt;Reverse Engineering: Can it be done ?&lt;/h2&gt;
+&lt;p&gt;
+  Over the years many teams had done work on Origin Systems game and reached great results:
+  &lt;/p&gt;
+  &lt;p&gt;
+   How long and how hard would it be ? After chatting with Gregory Montoir who did most of the reverse engineer on &lt;a href=&quot;http://fabiensanglard.net/anotherWorld_code_review/index.php&quot;&gt;Another World&lt;/a&gt;
+  I learned that working one hour per evening allowed to reverse 10KB of assembly to C each month. There are many executable in Strike Commander and the initial discouraging time estimate was :&lt;br&gt;
+ &lt;br&gt;
+  &lt;/p&gt;&lt;pre class=&quot;long&quot;&gt;
+
+
+  INSTALL.EXE       7,793 bytes :  2 weeks
+  MKTERR.EXE      203,744 bytes :  1.5 years
+  SC.EXE           20,000 bytes :  1 month
+  MKGAME.EXE      131,696 bytes :  1 year
+  OPTTEST.EXE     870,528 bytes :  7 years
+  STRIKE.EXE      746,304 bytes :  6 years
+  =============================================
+
+                                  15 years, 7 months and 2 weeks. Ouch.
+
+&lt;/pre&gt;
+&lt;p&gt;
+  That was upsetting: If someone had started back in 1993 then he would have finished six years ago and I would just have had to &lt;code&gt;git clone &lt;/code&gt; it :( ! But after starting up &lt;a href=&quot;https://www.hex-rays.com/index.shtml&quot;&gt;IDA&lt;/a&gt; and taking a quick look
+  it turned out that not all of it would have to be reverse engineered: The 3D engine is fully contained within STRIKE.EXE and a small team 
+  could do it in a reasonable amount of time.
+
+  &lt;br&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;Road Map&lt;/h2&gt;
+&lt;p&gt;
+  The road-map I initially drew in order to reverse engineer Strike Commander was as follow :
+  &lt;/p&gt;&lt;ol&gt;
+   &lt;li&gt;Gather as much documentation as possible.&lt;/li&gt;
+   &lt;li&gt;Understand the Global Architecture of Strike Commander.&lt;/li&gt;
+   &lt;li&gt;Reverse-Engineer the Game Assets.&lt;/li&gt;
+   &lt;li&gt;Document step 3 and extrapolate (Visual Surface Determination method, Level Of Detail, ...)&lt;/li&gt;
+   &lt;li&gt;Re-implement the 3D engine and build &lt;code&gt;NEO_STRIKE.EXE&lt;/code&gt;&lt;/li&gt;
+   &lt;li&gt;Add support for VR device Oculus Rift.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;
+    And then I got busy.
+&lt;/p&gt;
+
+
+&lt;h2&gt;Next&lt;/h2&gt;
+&lt;p&gt;
+  &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_architecture.php&quot;&gt;Architecture and Documentation&lt;/a&gt;
+
+  
+&lt;/p&gt;
+
+    
+      
+   
+
+ &lt;br&gt;
+    &lt;h3&gt;Add a comment&lt;/h3&gt; 
+    
+
+    
+
+&lt;h3&gt;Comments (0)&lt;/h3&gt;
+    &lt;br&gt;
+
+    
+    &lt;a name=&quot;c5t_comment&quot;&gt;&lt;/a&gt;
+      
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+  
+    
+    &amp;#13;    
+    
+    
+    
+    
+    
+    
+   
+ 
+    
+  
+    &amp;#13;&lt;h2&gt;&amp;#xA0;&lt;/h2&gt;
+&lt;p&gt;@2014&lt;/p&gt;
+
+		&lt;/section&gt;&lt;/div&gt;
+</description>
+<title>
+Reverse Engineering Strike Commander
 </title>
 </item>
 </channel>
