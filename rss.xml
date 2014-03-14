@@ -14,470 +14,6 @@ myread
 myread
 </description>
 <item>
-<link>
-http://fabiensanglard.net/reverse_engineering_strike_commander/index.php
-</link>
-<description>
-&lt;div&gt;&lt;section id=&quot;content&quot;&gt;
-
-
-
-		
-
-
-&lt;p id=&quot;date&quot;&gt;Jan 22th, 2014&lt;/p&gt;
-
-			
-&lt;p id=&quot;paperbox&quot;&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;
-&lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/icon_plane.png&quot;&gt; &lt;p&gt;I love you Hoi-En.&lt;/p&gt;&lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;    
-&lt;/a&gt; 
-    
-    
-
-Back in the early 90s, one company was on the bleeding edge of PC gaming: 
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Origin_Systems&quot;&gt;Origin Systems&lt;/a&gt;.
-Their motto was &quot;We Create Worlds&quot; and boy did they deliver: With the &lt;a href=&quot;http://en.wikipedia.org/wiki/Ultima_(series)&quot;&gt;Ultima&lt;/a&gt; series, Crusader series and
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Wing_Commander_(franchise)&quot;&gt;Wing Commander&lt;/a&gt; series, they consistently took gamer's breath away.&lt;br&gt;
-&lt;br&gt;
-One of them took four years and more than a million man hours to complete: &lt;a href=&quot;http://en.wikipedia.org/wiki/Strike_Commander&quot;&gt;
-Strike Commander&lt;/a&gt;. The famous flight simulator
-had its own 3D engine called &lt;a href=&quot;http://www.wcnews.com/wcpedia/RealSpace&quot;&gt;RealSpace&lt;/a&gt; which pioneered many of what we take 
-for granted today: Texture Mapping, Gouraud Shading, Level of Details and Dithered colors.&lt;br&gt;
-&lt;br&gt;
-
-My old dream was to play the game with a Virtual Reality device. With 
-the &lt;a href=&quot;http://www.oculusvr.com/&quot;&gt;Oculus Rift&lt;/a&gt; that fantasy came one step closer to reality.
-But when it turned out the source code had been lost and would never be released, I decided to reverse engineer it.&lt;br&gt;
-&lt;br&gt;
-As of the publication of this article, the project is not yet completed  but I want to share the techniques that have so far allowed this :&lt;br&gt;
-&lt;br&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_before.png&quot;&gt;&lt;br&gt;
-  &lt;br&gt;
-to become that :&lt;br&gt;
-&lt;br&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_after.png&quot;&gt;&lt;br&gt;
-&lt;br&gt;
-... and maybe inspire some people to join the adventure.&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;u&gt;&lt;b&gt;TABLE OF CONTENT :&lt;/b&gt;&lt;/u&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/index.php&quot;&gt;Part 1:  Introduction&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_architecture.php&quot;&gt;Part 2: Game Architecture&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_assets.php&quot;&gt;Part 3: Reverse Engineer Assets&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_game.php&quot;&gt;Part 4: Play the game again&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_oculus_rift.php&quot;&gt;Part 5: Oculus Rift&lt;/a&gt;&lt;br&gt;
-
-&lt;/p&gt;
-
-&lt;h2&gt;Before Strike Commander
-&lt;/h2&gt;
-&lt;p&gt;
-  Early 90s flight simulators were good but like &lt;a href=&quot;http://en.wikipedia.org/wiki/Falcon_(video_game_series)#Falcon_3.0&quot;&gt;Falcon 3.0&lt;/a&gt; 
-  or &lt;a href=&quot;http://en.wikipedia.org/wiki/History_of_Microsoft_Flight_Simulator#Flight_Simulator_4.0&quot;&gt;Flight simulator 4.0&lt;/a&gt; they focused mostly on accurate flying models than beautiful rendition :&lt;br&gt;
-  &lt;br&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/falcon3_small.jpg&quot;&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/flight_simulator_4_small.gif&quot;&gt;&lt;br&gt;
-  &lt;br&gt;
- There were many fight simulator on the market and few people noticed the 1990 Origin Systems announcement for a new game. But things
- changed after Chicago CES 1991 where a demo could be seen in action : 
-  Nobody could believe the game could feature things only seen in military flight simulator so far: Texture Mapping, Gouraud Shading, Haze and more. 
-  Screenshots demonstrated a technology far ahead any competitors :&lt;br&gt;
-  &lt;br&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_small.png&quot;&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_cockpit_small.png&quot;&gt;&lt;br&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_story_small.png&quot;&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_story2_small.png&quot;&gt;&lt;br&gt;
-  &lt;br&gt;
-  After 1991 the game became highly anticipated. Not only the engine was gorgeous and the story captivating, RealSpace also supported exceptional hardware out of the box: The very expensive 
-  and fragile accessories that every flight simulator 
-  enthusiast wanted were the THRUSTMASTER WEAPON CONTROL SYSTEM and the THRUSTMASTER FLIGHT CONTROL SYSTEM:&lt;br&gt;
-  &lt;br&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_TQS-web.jpg&quot; class=&quot;shadowed&quot;&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_FCS-web.jpg&quot; class=&quot;shadowed&quot;&gt;
-  &lt;br&gt;
-  &lt;br&gt;
-  And you could even connect the THRUSTMASTER RUDDER:&lt;br&gt;
-  &lt;br&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/tm_rcs-web.jpg&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
-  &lt;br&gt;
-  Still, there was more: The game also supported a Virtual Cockpit. The
-  4-way 'hat switch' on the ThrustMaster allowing to move the pilot's head and follow ground objects/enemy jets without the need for a Virtual Reality HeadSet :&lt;br&gt;
-  &lt;br&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_v_cockpit_small.png&quot; class=&quot;shadowed&quot;&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sick_game_v_cockpit2_small.png&quot; class=&quot;shadowed&quot;&gt;&lt;/p&gt;
-
-&lt;h2&gt;1993: First Contact&lt;/h2&gt;
-&lt;p&gt;
-  The game and its 3D engine were mind blowing but required an impossibly powerful machine :
-  &lt;/p&gt;&lt;ul&gt;
-    &lt;li&gt;IBM PC 486-DX2 66Mhz&lt;/li&gt;
-    &lt;li&gt;4MB RAM&lt;/li&gt;
-    &lt;li&gt;38MB mandatory installation&lt;/li&gt;
-    &lt;li&gt;Game comes on 11 x 1.44MB floppy disks.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;p&gt;
-  Adjusted to today technological inflation the recommended configuration would be : 
-  &lt;/p&gt;&lt;ul&gt;
-      &lt;li&gt;8 Cores CPU with 16 GB of RAM.&lt;/li&gt;
-      &lt;li&gt;Dual Nvidia Titan GPUs.&lt;/li&gt;
-      &lt;li&gt;Mandatory install of 1000 GB.&lt;/li&gt;
-      &lt;li&gt;Game comes on five BluRays.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;
-  And purchasing the game was not enough, you also had to survive the installation ! Upon opening the box you would be faced with 8 floppy disks (
-  +3 for the Speech Pack):&lt;br&gt;
-  &lt;br&gt;
-  
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/Strike-Poster_small.png&quot;&gt;
-  &lt;img class=&quot;shadowed&quot; src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_disks_small.jpg&quot;&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-   &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; Notice the poster announcing a Christmas 1991 release. The game would not be completed until 1993 after a long process that Chris Robert labeled &quot;The Apocalypse Now of computer games&quot;.&lt;br&gt;
-  &lt;br&gt;
-   Decompressing the game from floppies to hard-drive and swapping the 13 flopping disk took a good 30 minutes. And when you thought you were done,
-   the game proceeded to generate all the maps. The size of the game would blow up from 24MB to 38MB: Four times the size of any game back them.&lt;br&gt;
-    &lt;br&gt;
-  &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_mapgenerator.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
-  &lt;br&gt;
-  &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; A map was generated from a single &quot;seed&quot; (an integer number) that was injected in a pseudo-random numbers generation algorithm.
-  This was a clever technique that avoided shipping data by generating the map after installation. If you are curious about this technique, go read &lt;a href=&quot;http://www.amazon.com/The-Backroom-Boys-Secret-British/dp/0571214975&quot;&gt;The Backroom Boys&lt;/a&gt; and the chapter about Frontier Elite game.&lt;br&gt;
-  &lt;br&gt;
-   The maps generation step took ONE hour on a 386 PC. But Origin Systems had the good idea to ship with &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/docs/sudden_death.JPG&quot;&gt;the box&lt;/a&gt; a superb 100 pages magazine set in the dystopian 2012 world of the game. &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/docs/StrikeCommanderManual.pdf&quot;&gt;Sudden Death&lt;/a&gt;  made the entire process less painful ( notice the fake advertisement on page 38 promising the release of Strike Commander for Christmas 2013).
-        
-   &lt;br&gt;
- &lt;/p&gt;
-
- &lt;h2&gt;Strike Commander !&lt;/h2&gt;
-&lt;p&gt;
-  Finally after all those steps, players were able to enjoy the game....in April 1993 ! Despite being 2 years late, the game was everything Origin promised and it sold very well. Many spent nights after nights dogfighting even if for most what was supposed to look like this :&lt;br&gt;
-  &lt;br&gt;
-   &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_ingame.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
-   &lt;br&gt;
-   ...ended up looking like that on minimum settings :&lt;br&gt;
-   &lt;br&gt;
-   &lt;img src=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/sc_ingame_low.png&quot; class=&quot;shadowed&quot;&gt;&lt;br&gt;
-&lt;br&gt;
-   Overall the game was enough to captivate pilots and generate fond memories.
-&lt;/p&gt;
-
-
-
-
-&lt;h2&gt;The Lost Source Code&lt;/h2&gt;
-&lt;p&gt;
-  With the Oculus Rift release, my interest in Strike Commander peaked again: The hardware was ready. Since
-  it was a 20 years old game, I expected the source code to have been released but I quickly found out the sad story of Origin Systems 
-  decline.&lt;br&gt;
-  &lt;br&gt;
-  Origin Systems was acquired by Electronic Arts in September 1992 and all projects were canceled circa 1999 following poor sales of
-  Ultima 9. The company was to refocus on an other field they pioneered: &lt;a href=&quot;http://en.wikipedia.org/wiki/Ultima_Online&quot;&gt;MMORPG Ultima Online&lt;/a&gt;.
-  Most people assume the source codes and gold versions of all finished games were stored in a Vault somewhere at EA. 
-  But after getting in touch with people at &lt;a href=&quot;http://www.wcnews.com/chatzone/threads/wing-commander-source-code.24840/&quot;&gt;Wing Commander CIC&lt;/a&gt;, 
-  it appeared that all the source code was lost when the company closed.&lt;br&gt;
-  &lt;br&gt;
-  It is something hard to believe today but back then developers and companies were more focused on the next title
-  instead of preserving &quot;old things&quot;, there was not nostalgia factor, no huge fan base and no market like &lt;a href=&quot;http://www.gog.com/&quot;&gt;Good Old Games&lt;/a&gt; today. Many stories could illustrate how &quot;primitive&quot; source control was but the best 
-  is probably the &quot;ZAP SC&quot; story at 15m14s :&lt;br&gt;
-  &lt;br&gt;
-  &lt;/p&gt;&lt;p&gt;
-     &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/K8gj2YyB0Hg#start=922&quot;&gt;&lt;/iframe&gt;
-  &lt;/p&gt;
-  &lt;br&gt;
-  On his first day one developer managed to delete the full 900MB of Strike Commander source tree. The IT team spent 72 hours recovering everything from developers machines. The interview also mention that Wing Commander 1 and 2 code was exchanged via floppy disks: They did not have a network until SC !
-  &lt;br&gt;
-  &lt;br&gt;
-  &lt;u&gt;&lt;b&gt;Trivia :&lt;/b&gt;&lt;/u&gt; In a surprising turn of event, some of the source code re-emerged recently via ex-Origin developers: Wing Commander CIC 
-  maintains an off-line archive which features the source codes of &lt;a href=&quot;http://cdn.wcnews.com/newestshots/full/squadronsourcecode.png&quot;&gt;Wing Commander I&lt;/a&gt;
-  &lt;a href=&quot;http://cdn.wcnews.com/newestshots/full/wc3sourcecode.PNG&quot;&gt;Wing Commander  III&lt;/a&gt; and people working on Ultima 8 were offered (but turned down) 
-  the source code of &quot;Ultima 8: Pagan&quot; by &lt;a href=&quot;http://exult.sourceforge.net/forum/read.php?f=1&amp;amp;i=13863&amp;amp;t=13863&quot;&gt;an anonymous source&lt;/a&gt;. As for Strike Commander, I have never heard of someone having it.
-
-
-
-&lt;h2&gt;Reverse Engineering: Can it be done ?&lt;/h2&gt;
-&lt;p&gt;
-  Over the years many teams had done work on Origin Systems game and reached great results:
-  &lt;/p&gt;
-  &lt;p&gt;
-   How long and how hard would it be ? After chatting with Gregory Montoir who did most of the reverse engineer on &lt;a href=&quot;http://fabiensanglard.net/anotherWorld_code_review/index.php&quot;&gt;Another World&lt;/a&gt;
-  I learned that working one hour per evening allowed to reverse 10KB of assembly to C each month. There are many executable in Strike Commander and the initial discouraging time estimate was :&lt;br&gt;
- &lt;br&gt;
-  &lt;/p&gt;&lt;pre class=&quot;long&quot;&gt;
-
-
-  INSTALL.EXE       7,793 bytes :  2 weeks
-  MKTERR.EXE      203,744 bytes :  1.5 years
-  SC.EXE           20,000 bytes :  1 month
-  MKGAME.EXE      131,696 bytes :  1 year
-  OPTTEST.EXE     870,528 bytes :  7 years
-  STRIKE.EXE      746,304 bytes :  6 years
-  =============================================
-
-                                  15 years, 7 months and 2 weeks. Ouch.
-
-&lt;/pre&gt;
-&lt;p&gt;
-  That was upsetting: If someone had started back in 1993 then he would have finished six years ago and I would just have had to &lt;code&gt;git clone &lt;/code&gt; it :( ! But after starting up &lt;a href=&quot;https://www.hex-rays.com/index.shtml&quot;&gt;IDA&lt;/a&gt; and taking a quick look
-  it turned out that not all of it would have to be reverse engineered: The 3D engine is fully contained within STRIKE.EXE and a small team 
-  could do it in a reasonable amount of time.
-
-  &lt;br&gt;
-&lt;/p&gt;
-
-&lt;h2&gt;Road Map&lt;/h2&gt;
-&lt;p&gt;
-  The road-map I initially drew in order to reverse engineer Strike Commander was as follow :
-  &lt;/p&gt;&lt;ol&gt;
-   &lt;li&gt;Gather as much documentation as possible.&lt;/li&gt;
-   &lt;li&gt;Understand the Global Architecture of Strike Commander.&lt;/li&gt;
-   &lt;li&gt;Reverse-Engineer the Game Assets.&lt;/li&gt;
-   &lt;li&gt;Document step 3 and extrapolate (Visual Surface Determination method, Level Of Detail, ...)&lt;/li&gt;
-   &lt;li&gt;Re-implement the 3D engine and build &lt;code&gt;NEO_STRIKE.EXE&lt;/code&gt;&lt;/li&gt;
-   &lt;li&gt;Add support for VR device Oculus Rift.&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;p&gt;
-    And then I got busy.
-&lt;/p&gt;
-
-
-&lt;h2&gt;Next&lt;/h2&gt;
-&lt;p&gt;
-  &lt;a href=&quot;http://fabiensanglard.net/reverse_engineering_strike_commander/strike_commander_architecture.php&quot;&gt;Architecture and Documentation&lt;/a&gt;
-
-  
-&lt;/p&gt;
-
-    
-      
-   
-
- &lt;br&gt;
-    &lt;h3&gt;Add a comment&lt;/h3&gt; 
-    
-
-    
-
-&lt;h3&gt;Comments (0)&lt;/h3&gt;
-    &lt;br&gt;
-
-    
-    &lt;a name=&quot;c5t_comment&quot;&gt;&lt;/a&gt;
-      
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
-    
-    
-    
-  
-    
-    &amp;#13;    
-    
-    
-    
-    
-    
-    
-   
- 
-    
-  
-    &amp;#13;&lt;h2&gt;&amp;#xA0;&lt;/h2&gt;
-&lt;p&gt;@2014&lt;/p&gt;
-
-		&lt;/section&gt;&lt;/div&gt;
-</description>
-<title>
-Reverse Engineering Strike Commander
-</title>
-</item>
-<item>
-<author>
-Violet Blue, Pulp Tech
-</author>
-<link>
-http://www.zdnet.com/google-outed-me-7000025416/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;storyBody&quot;&gt;
-		
-		
-		
-		
-					&lt;p&gt;If you haven't heard about it by now, last Wednesday, ESPN's Grantland website published an article called &lt;a href=&quot;http://grantland.com/features/a-mysterious-physicist-golf-club-dr-v/&quot; target=&quot;_blank&quot;&gt;Dr. V&amp;#x2019;s Magical Putter&lt;/a&gt;&amp;#xA0;by Caleb Hannan. It was supposed to be a profile about a golf club, but instead its purpose - and dramatic climax - was to out the club's inventor as transgender.&lt;/p&gt;
-&lt;figure class=&quot;alignRight&quot;&gt;&lt;img title=&quot;google-plus-icons&quot; alt=&quot;google-plus-icons&quot; src=&quot;http://cdn-static.zdnet.com/i/r/story/70/00/025416/google-plus-icons-200x156.jpg?hash=ZJR4MQH3Zm&amp;amp;upscale=1&quot; width=&quot;200&quot;&gt;&lt;/figure&gt;
-&lt;p&gt;The inventor&amp;#x2019;s name was Dr. Essay Anne Vanderbilt. She had agreed to be the subject of the story reluctantly, and only if Hannan wrote about &quot;the science, not the scientist.&quot;&lt;/p&gt;
-&lt;p&gt;As Hannan investigated Vanderbilt, he found out that her academic background didn't add up, and he also learned that she was transgender.&lt;/p&gt;
-&lt;p&gt;Upon learning this, Hannan told her he was going to break the agreement not to write about her personal life and reveal her transgender status without her consent. He then outed her as transgender to her investors and colleagues, and went forward with an article that was intended to out her online, and to the world.&lt;/p&gt;
-&lt;p&gt;After being outed to her colleagues, and before the article was published, Dr. Essay Anne Vanderbilt killed herself.&lt;/p&gt;
-&lt;p&gt;It reminded me about another transgender woman who was recently outed without her consent - by Google Plus.&lt;/p&gt;
-&lt;p&gt;A woman was using her old (male) name at work, and when her Android phone updated to KitKat - with Google+ integrating chat and SMS into &quot;hangouts&quot; - this is what happened when she texted a coworker:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;(ICYMI earlier: KitKat did indeed out me to a coworker. I am freaking out.)&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/419198281546465280&quot;&gt;January 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;Somehow I didn't think through the potential consequences of Google+ embedding itself ever deeper into stock Android stuff&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/418946496352878593&quot;&gt;January 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;Google's &lt;a href=&quot;http://www.theguardian.com/technology/2014/jan/07/google-hangouts-faces-criticism-after-outing-trans-woman&quot;&gt;response&lt;/a&gt; was that her outing was &quot;user error&quot; - Google blamed her, the user for not understanding the new, confusing integration.&lt;/p&gt;
-&lt;p&gt;ESPN Grantland editor Bill Simmons issued a 2,700-word statement where he &lt;a href=&quot;http://grantland.com/features/the-dr-v-story-a-letter-from-the-editor/&quot;&gt;lamented twice for failing his writer Hanna&lt;/a&gt;n, but never once expressed concern for failing Ms. Vanderbilt.&lt;/p&gt;
-&lt;p&gt;One could argue that ESPN may not have caused Ms. Vanderbilt's suicide, but its actions in outing her have been acknowledged by ESPN itself and the general public as having played an active, key role in her death.&lt;/p&gt;
-&lt;p&gt;(Grantland founder Bill Simmons has since posted a letter to his readers apologizing for outing her saying, &quot;I don&amp;#x2019;t think [Hannan] understood the moral consequences of that decision, and frankly, neither did anyone working for Grantland.&quot;&lt;/p&gt;
-&lt;p&gt;Vanderbilt did not want to be out. She wanted to blend in. And though some have been quick to point out that her world would have crumbled had she not been outed as trans, but simply found out as having made up her credentials - those people aren't familiar with the world of sports entrepreneurialism.&lt;/p&gt;
-&lt;p&gt;Vanderbilt would have merely joined the ranks of &lt;a href=&quot;http://bleacherreport.com/articles/1660198-how-athletes-lie-to-us&quot;&gt;sports entrepreneurs who got caught&lt;/a&gt; changing their background. Michael Vick, Kevin Hart, Tim Johnson, Nick Saban, Miguel Tijada, Manti Te'o, Rosie Ruiz and George O'Leary are &lt;a href=&quot;http://www.businessinsider.com/9-people-who-were-publicly-shamed-for-lying-on-their-resumes-2012-5?op=1&quot;&gt;just a few&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And like the people in that list, Vanderbilt would have been busted but if her product or performance was great on its own merit, she would have recovered.&lt;/p&gt;
-&lt;p&gt;Instead, she was outed as a transgender woman to someone she works with, and before she was to be outed to the world, rather than go through this hell all over again, she took her own life.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;Really pissed right now. Fucking Google. I was NOT ready to tell any of my coworkers yet.&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/419140278486712320&quot;&gt;January 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;I'm just glad I live in a state where it'd be illegal to fire me.&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/419142523940917248&quot;&gt;January 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;Since the release of the latest mobile software Android 4.4, codenamed KitKat, the instant messaging app Hangouts has become the default text-messaging app on phones and tablets running with the newly installed operating system.&lt;/p&gt;
-&lt;p&gt;But Sorenson wasn't the only transgender person made unsafe by Google+ in Google's ruthless objective to use Android for reorganizing peoples' lives to suit Google's bottom line.&lt;/p&gt;
-&lt;p&gt;Four days later on January 7, transgender Android user Zoe &lt;a href=&quot;http://productforums.google.com/forum/#!search/transgender/hangouts/DCa_NkeLXaw/acKNJZ_qhXAJ&quot;&gt;posted to Google Product Forums &amp;gt; Hangouts&lt;/a&gt; that she now needed to change her name and gender display. She did not receive a response.&lt;/p&gt;
-&lt;p&gt;The same day (and While Ms. Sorensen was waiting fretfully for her employer's HR person to return to work) Android user Nora posted &quot;&lt;a href=&quot;http://productforums.google.com/forum/#!search/outed/chat/WCurXt3PQX8/sXJlSjDul80J&quot;&gt;Legal name instead of actual desired/registered name shows up in Hangout History&lt;/a&gt;&quot; to Google Product Forums &amp;gt; Google Chat:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I'm transgender... this account was registered using my preferred name, Nora, but when I look at hangout histories, certain locations on my android phone, and a few other places, I see my legal name popping up instead.&lt;/p&gt;
-&lt;p&gt;I don't remember actually giving this detail to Google, nor can I find anywhere within the settings where anything other than &quot;Nora&quot; is listed... I don't know how many other people can see me listed as such, but it's really kind of unpleasant and outing, and a bit triggering really...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;There're trans ppl for whom this tech flaw would get them fired, w/cascading consequences. There're trans youth who'd be outed to parents.&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/421383623648894976&quot;&gt;January 9, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;Many trans ppl lose everything or nearly so when they come out. This could've been utterly disastrous.&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/421382479270780928&quot;&gt;January 9, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;The issue with identity and Google+ Hangouts overwriting people's Gmail and SMS contacts has been trans-unfriendly since its rollout. One woman &lt;a href=&quot;http://productforums.google.com/forum/#!search/transgender/gmail/Ydcnp5ukolQ/xoS51ixVIvkJ&quot;&gt;worried about the privacy of her transgender sister's identity&lt;/a&gt;&amp;#xA0;wrote in Google's Forums (Gmail),&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;My sister is transgendered and has yet to legally switch to female, and because of this has yet to change her name on her Google+ since she has professional contacts on her page.&lt;/p&gt;
-&lt;p&gt;(...) Now that I have used the video chat option on Hangouts, everything is reverting back to her old name.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;She did not receive a response.&lt;/p&gt;
-&lt;p&gt;After Google called Erika Sorensen's outing &quot;user error&quot; writer &lt;a href=&quot;http://lexiecannes.com/2014/01/08/google-says-user-error-caused-outing-of-transgender-googleandroid-user/&quot;&gt;Lexi Cannes commented on the matter&lt;/a&gt;&amp;#xA0;January 8, saying &quot;Google is facing increased complaints that they are dismissive of privacy errors triggered by upgrades and other changes. Transgender issues with Google began the day Google+ was launched.&quot;&lt;/p&gt;
-&lt;p&gt;In my eyes, finding &lt;a href=&quot;http://productforums.google.com/forum/#!search/transgender/youtube/49Ffi0-6DPk/NXrGOtSF604J&quot;&gt;this distraught post from a Google+ user one month after Plus launched&lt;/a&gt; brought Cannes' comments and Ms. Vanderbilt's suicide full circle:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I am FTM transgender, and outside of this channel (which is meant to be detached from my personal, real-life acquaintances) I have not come out yet.&lt;/p&gt;
-&lt;p&gt;[the way FTM people are treated when they come out] sickens me and has pushed me farther and farther into the closet to the point where I fear I will not be able to get out before I end up killing myself out of stress.&lt;/p&gt;
-&lt;p&gt;When I opened up my youtube page today, I was greeted by my birth name, the one that people know and call me by in my outside life, attached to the google+ connection bar just under my profile picture.&lt;/p&gt;
-&lt;p&gt;(...) I frantically searched through the google+ page and the youtube settings and found no option to remove connections. Eventually, I was forced to delete my entire google+ account, hoping that would at least remove my legal name from my home page... But it DIDN'T.&lt;/p&gt;
-&lt;p&gt;My youtube home page still displays that information loud and clear, even though I DE-ACTIVATED MY ACCOUNT.&lt;/p&gt;
-&lt;p&gt;This does not make me feel safe. I feel like my personal privacy as a human being has been stolen from me. So please, if anyone can tell me how to permanently remove google+ and facebook connections from the new page, it would mean so much to me.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;I want to be a part of a safe community.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This, Ms. Vanderbilt might have said. What he said.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p&gt;Still. Ever-shrinking privacy, &quot;real name&quot; policies, etc. aren't just abstract civil liberties issues. Trans ppl disproportionately harmed.&lt;/p&gt;
-&amp;#x2014; Erika Sorensen (@eiridescent) &lt;a href=&quot;https://twitter.com/eiridescent/statuses/418947527010836480&quot;&gt;January 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;On some level, I want to imagine that Google will fix this.&lt;/p&gt;
-&lt;p&gt;I don't want to think that controlling our own identities doesn't matter to Google; or it's as if to Google we are the faulty parts of its machine. Or we are Google Plus with a body vaguely attached. Or to Google, the problems are our own faults, and any calls for respect or privacy in a painful world are just annoying to Google, which has better things to do, like terrify us with the privacy nightmare of Google Glass and making bulk data consolidators' jobs of cataloging our personally identifying information easier.&lt;/p&gt;
-&lt;p&gt;Commenting on Dr. V&amp;#x2019;s Magical Putter, writer &lt;a href=&quot;http://www.niemanstoryboard.org/2014/01/19/the-journalist-and-dr-v/&quot;&gt;Max Potter was quoted on Nieman Storyboard saying&lt;/a&gt;,&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I think that piece is emblematic of so much of what I think is wrong with what&amp;#x2019;s happening in journalism today. We&amp;#x2019;ve got journalism and journalists struggling more than ever before to make a name and a living, and thereby more and more pressure on landing an amazing story.&lt;/p&gt;
-&lt;p&gt;We&amp;#x2019;ve got less and less staff and experience, fewer and fewer &amp;#x201C;adults&amp;#x201D; around, more and more talented kids desperate to make a name and very little mentoring. And, seems to me, we still have this (white) male dominated journalism elite, with their myopic, pseudo-macho ideas of what truth and the pursuit of it means.&lt;/p&gt;
-&lt;p&gt;And &amp;#x2026; this is what we get.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;If this is what we get, then Google's little Plus project is a loaded gun pointed right at anyone whose privacy is what keeps them alive.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;ZDNet has emailed Google for comment and will update this article if it responds.&lt;/em&gt;&lt;/p&gt;
-		
-	
-	
-&lt;/div&gt;
-	
-
-							&lt;/div&gt;
-</description>
-<title>
-Google outed me
-</title>
-</item>
-<item>
-<author>
-Dan Colman
-</author>
-<link>
-http://www.openculture.com/2010/07/tarkovksy.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
-	&lt;p&gt;&lt;a href=&quot;http://cdn.openculture.com/wp-content/uploads/2010/07/tarkovsky.jpg&quot;&gt;&lt;img class=&quot;alignleft size-full wp-image-25930&quot; title=&quot;tarkovsky&quot; alt=&quot;&quot; src=&quot;http://cdn.openculture.com/wp-content/uploads/2010/07/tarkovsky-e1327177995907.jpg&quot; width=&quot;480&quot;&gt;&lt;/a&gt;Andrei Tarkovsky (1932-1986) firmly positioned himself as the finest Soviet director of the post-War period. But his influence extended well beyond the Soviet Union. &amp;#xA0;The &lt;em&gt;Cahiers du cin&amp;#xE9;ma&lt;/em&gt; consistently ranked his films on &lt;a href=&quot;http://alumnus.caltech.edu/~ejohnson/critics/cahiers.html&quot;&gt;their top ten annual lists&lt;/a&gt;. Ingmar Bergman went so far as to say, &amp;#x201C;Tarkovsky for me is the greatest [director], the one who invented a new language, true to the nature of film, as it captures life as a reflection, life as a dream.&amp;#x201D; And Akira Kurosawa&amp;#xA0;&lt;a href=&quot;http://people.ucalgary.ca/~tstronds/nostalghia.com/TheTopics/Kurosawa_on_AT_obit.html&quot;&gt;acknowledged his influence&lt;/a&gt; too, adding, &amp;#x201C;I love all of Tarkovsky&amp;#x2019;s films. I love his personality and all his works. Every cut from his films is a marvelous image in itself.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;Shot between 1962 and 1986,&amp;#xA0;Tarkovsky&amp;#x2019;s seven feature films often grapple with&amp;#xA0;metaphysical and spiritual themes, using a distinctive cinematic style. Long takes, slow pacing and metaphorical imagery &amp;#x2013; they all figure into the archetypical Tarkovsky film. (Watch the scene from &lt;em&gt;Stalker&lt;/em&gt; above.)&lt;/p&gt;
-
-
-&lt;p&gt;You can now watch Tarkovsky&amp;#x2019;s films online &amp;#x2013; for free. Each film is listed in our collection of&amp;#xA0;&lt;a href=&quot;http://www.openculture.com/freemoviesonline&quot;&gt;Free Online Movies&lt;/a&gt;, but here you can access each major film in the order in which they were made. Most all of the films below were placed online by Mosfilm, the largest and oldest studion in Russia.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NOTE: if you access the films via YouTube, be sure to click &amp;#x201C;CC&amp;#x201D; at the bottom of the videos to access the subtitles.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Don&amp;#x2019;t forget to follow us on &lt;a href=&quot;http://twitter.com/openculture&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://www.facebook.com/openculture&quot;&gt;Facebook&lt;/a&gt; and now &lt;a href=&quot;https://plus.google.com/108579751001953501160/posts&quot;&gt;Google+&lt;/a&gt;, and add a pinch of culture to your daily social media diet.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Related Content:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.openculture.com/2013/08/the-masterful-polaroid-pictures-taken-by-filmmaker-andrei-tarkovsky.html&quot;&gt;The Masterful Polaroid Pictures Taken by Filmmaker Andrei Tarkovsky&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.openculture.com/2013/01/tarkovskys_advice_to_young_filmmakers.html&quot;&gt;Tarkovsky&amp;#x2019;s Advice to Young Filmmakers: Sacrifice Yourself for Cinema&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.openculture.com/2013/08/a-poet-in-cinema-andrei-tarkovsky.html&quot;&gt;&lt;i&gt;A Poet in Cinema: Andrei Tarkovsky&lt;/i&gt; Reveals the Director&amp;#x2019;s Deep Thoughts on Filmmaking and Life&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
-
-	
-
-	&lt;/div&gt;
-
-	
-				&lt;div class=&quot;mr_social_sharing_wrapper&quot;&gt;
-				&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&amp;amp;t=Tarkovsky+Films+Now+Free+Online&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn5.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/facebook.png&quot; class=&quot;nopin&quot; alt=&quot;Share on Facebook&quot; title=&quot;Share on Facebook&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;https://twitter.com/share?url=http%3A%2F%2Fcultr.me%2Fam2mpf&amp;amp;text=Tarkovsky+Films+Now+Free+Online&amp;amp;counturl=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn5.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/twitter.png&quot; class=&quot;nopin&quot; alt=&quot;Share on Twitter&quot; title=&quot;Share on Twitter&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;mailto:?subject=Tarkovsky%20Films%20Now%20Free%20Online&amp;amp;body=http://www.openculture.com/2010/07/tarkovksy.html&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://cdn.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/email.png&quot; class=&quot;nopin&quot; alt=&quot;Share via email&quot; title=&quot;Share via email&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://www.linkedin.com/shareArticle?mini=true&amp;amp;url=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&amp;amp;title=Tarkovsky+Films+Now+Free+Online&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn4.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/linkedin.png&quot; class=&quot;nopin&quot; alt=&quot;Share on LinkedIn&quot; title=&quot;Share on LinkedIn&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://www.tumblr.com/share/link?url=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&amp;amp;name=Tarkovsky+Films+Now+Free+Online&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn4.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/tumblr.png&quot; class=&quot;nopin&quot; alt=&quot;Share on Tumblr&quot; title=&quot;Share on Tumblr&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn3.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/stumbleupon.png&quot; class=&quot;nopin&quot; alt=&quot;Submit to StumbleUpon&quot; title=&quot;Submit to StumbleUpon&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://www.reddit.com/submit?url=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&quot; class=&quot;mr_social_sharing_popup_link&quot;&gt;&lt;img src=&quot;http://cdn4.openculture.com/wp-content/plugins/social-sharing-toolkit/images/icons_small/reddit.png&quot; class=&quot;nopin&quot; alt=&quot;Submit to reddit&quot; title=&quot;Submit to reddit&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;mr_social_sharing&quot;&gt;&lt;a href=&quot;http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.openculture.com%2F2010%2F07%2Ftarkovksy.html&amp;amp;media=&amp;amp;description=Tarkovsky+Films+Now+Free+Online&quot; class=&quot;pin-it-button&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;http://assets.pinterest.com/images/PinExt.png&quot; title=&quot;Pin It&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;	
- 		
-	
-	&lt;/div&gt;
-</description>
-<title>
-Tarkovsky Films Free Online (2010)
-</title>
-</item>
-<item>
-<author>
-NEIL GOUGH and DAVID GELLES
-</author>
-<link>
-http://dealbook.nytimes.com/2014/01/23/lenovo-buys-ibm-server-business-for-2-3-billion/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-	&lt;div class=&quot;w592&quot;&gt;&lt;img src=&quot;http://graphics8.nytimes.com/images/2014/01/23/business/dealbook/dbpix-lenovo/dbpix-lenovo-tmagArticle.jpg&quot; id=&quot;100000002666497&quot; width=&quot;592&quot; alt=&quot;A Lenovo outlet in Hefei, China. The company has agreed to acquire IBM's low-end server unit.&quot;&gt; &lt;/div&gt;
-
-
-&lt;p class=&quot;story-body-text&quot;&gt;Lenovo said on Thursday that it would pay $2.3  billion for IBM&amp;#x2019;s low-end server business, successfully concluding a deal that had fizzled a year earlier after the two parties failed to agree on a price. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;Lenovo said it would settle the transaction with $2 billion in cash and the balance in its own Hong Kong-listed shares. About 7,500 IBM employees in locations including Raleigh, N.C., Shanghai and Shenzhen in China, and Taipei, Taiwan, were expected to be offered employment by Lenovo, the Chinese company said in a statement. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;&amp;#x201C;With the right strategy, great execution, continued innovation and a clear commitment to the x86 industry, we are confident that we can grow this business successfully for the long-term, just  as we have done with our worldwide PC business,&amp;#x201D; Yang Yuanqing, Lenovo&amp;#x2019;s chairman and chief executive, said in a statement, referring to the server industry. &lt;/p&gt;
-&lt;div class=&quot;entry entry-related&quot;&gt;&lt;h4&gt;Related Links&lt;/h4&gt;	&lt;div class=&quot;entry-related&quot;&gt;
-		&lt;ul&gt;
-					&lt;li&gt;&lt;a href=&quot;http://dealbook.nytimes.com/2014/01/23/lenovo-sees-server-deal-as-part-of-pc-plus-strategy/&quot;&gt;Lenovo Sees Server Deal as Part of &amp;#x2018;PC Plus&amp;#x2019; Strategy&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-	&lt;/div&gt;
-	&lt;/div&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;Early last year, Lenovo and IBM were in negotiations about the unit, which includes IBM&amp;#x2019;s x86 server business. At  the time, Lenovo valued the unit at about $2.5 billion, while IBM wanted at least $4 billion. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;IBM restarted talks with interested  parties recently.&lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;Dell and Fujitsu were among the other bidders. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;But because Lenovo had already taken a close look at the business last year, it was able to quickly make an offer that IBM was comfortable with. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;Lenovo bought IBM&amp;#x2019;s ThinkPad personal computer business in 2005 for $1.75 billion.&lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;In the years since then, the Chinese company has overtaken HP and Dell to become the world&amp;#x2019;s biggest manufacturer of PCs. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;The server unit being sold has estimated revenues of about $5 billion a year, but IBM does not break out sales for the division, which has lower margins than its software and services businesses.&lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;With a sale of the division, IBM continues its transformation from primarily a hardware producer to a provider of services and software for businesses and governments. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;&amp;#x201C;This divestiture allows IBM to focus on system and software innovations that bring new kinds of value to strategic areas of our business, such as cognitive computing, Big Data and cloud,&amp;#x201D; Steven A. Mills, senior vice president at IBM Software and Systems, said in a statement. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;For Lenovo, based in China, acquiring the server business is expected to help it weather the slow decline in its core personal computer business. Lenovo is also expanding into tablets and smartphones as it tries to tap into rising consumer demand for mobile devices.&lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;In China, Lenovo is already the second-largest smartphone brand, after Samsung, and it has announced plans  for a push into the United States smartphone market this year. &lt;/p&gt;
-&lt;p class=&quot;story-body-text&quot;&gt;&lt;em&gt;Neil Gough reported from Hong Kong and David Gelles from New York.&lt;/em&gt;&lt;/p&gt;
-	&lt;/div&gt;
-			&lt;/div&gt;
-</description>
-<title>
-Lenovo Agrees to Buy IBM Server Business for $2.3 Billion
-</title>
-</item>
-<item>
 <author>
 Terence Eden
 </author>
@@ -528,6 +64,376 @@ On 22nd January, they responded by saying they &lt;em&gt;didn't&lt;/em&gt; consi
 </description>
 <title>
 Google Calendar Unexpectedly Leaks Private Information
+</title>
+</item>
+<item>
+<link>
+http://bzg.fr/emacs-strip-tease.html
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;outline-text-2&quot; id=&quot;text-6&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;A small minor mode to use a big fringe&lt;/span&gt;
+(&lt;span&gt;defvar&lt;/span&gt; &lt;span&gt;bzg-big-fringe-mode&lt;/span&gt; nil)
+(&lt;span&gt;define-minor-mode&lt;/span&gt; &lt;span&gt;bzg-big-fringe-mode&lt;/span&gt;
+  &lt;span&gt;&quot;Minor mode to hide the mode-line in the current buffer.&quot;&lt;/span&gt;
+  &lt;span&gt;:init-value&lt;/span&gt; nil
+  &lt;span&gt;:global&lt;/span&gt; t
+  &lt;span&gt;:variable&lt;/span&gt; bzg-big-fringe-mode
+  &lt;span&gt;:group&lt;/span&gt; 'editing-basics
+  (&lt;span&gt;if&lt;/span&gt; (not bzg-big-fringe-mode)
+      (set-fringe-style nil)
+    (set-fringe-mode
+     (/ (- (frame-pixel-width)
+           (* 100 (frame-char-width)))
+        2))))
+
+&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;Now activate this global minor mode&lt;/span&gt;
+(bzg-big-fringe-mode 1)
+
+&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;Use a minimal cursor&lt;/span&gt;
+&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;(setq cursor-type 'hbar)&lt;/span&gt;
+
+&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;Get rid of the indicators in the fringe&lt;/span&gt;
+(mapcar (&lt;span&gt;lambda&lt;/span&gt;(fb) (set-fringe-bitmap-face fb 'org-hide))
+        fringe-bitmaps)
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://bzg.fr/u/emacs-big-fringe.png&quot; alt=&quot;emacs-big-fringe.png&quot; width=&quot;90%&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Oh, but you don't want the grey fringe?
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span&gt;;; &lt;/span&gt;&lt;span&gt;Set the color of the fringe&lt;/span&gt;
+(custom-set-faces
+ '(fringe ((t (&lt;span&gt;:background&lt;/span&gt; &lt;span&gt;&quot;white&quot;&lt;/span&gt;)))))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;figure&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;http://bzg.fr/u/emacs-big-white-fringe.png&quot; alt=&quot;emacs-big-white-fringe.png&quot; width=&quot;90%&quot;&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+<title>
+Emacs, naked
+</title>
+</item>
+<item>
+<author>
+Greg Anderson, January 23, 2014, Leave a Comment
+</author>
+<link>
+http://arcticstartup.com/2014/01/23/linda-liukas-programming-book-for-children-has-huge-first-day-on-kickstarter
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;post&quot;&gt;
+  &lt;header&gt;
+    
+    &lt;span class=&quot;byline&quot;&gt;
+    By Greg Anderson, January 23, 2014,
+    &lt;a href=&quot;http://arcticstartup.com/2014/01/23/linda-liukas-programming-book-for-children-has-huge-first-day-on-kickstarter#comments&quot;&gt;Leave a Comment&lt;/a&gt;
+    &lt;/span&gt;
+  &lt;/header&gt;
+
+  &lt;p&gt;&lt;img src=&quot;http://wp.arcticstartup.com/wp-content/uploads/2014/01/Screen-Shot-2014-01-23-at-15.32.08-e1390484018248.png&quot; alt=&quot;&quot; title=&quot;Screen Shot 2014-01-23 at 15.32.08&quot; width=&quot;580&quot; class=&quot;alignleft size-full wp-image-46559&quot;&gt;
+&lt;br&gt;It's been amazing so far,&quot; says Linda Liukas of the &lt;a href=&quot;http://www.kickstarter.com/projects/lindaliukas/hello-ruby&quot;&gt;new programming book for children, Hello Ruby&lt;/a&gt;, which was put on &lt;a href=&quot;http://www.kickstarter.com/projects/lindaliukas/hello-ruby&quot;&gt;Kickstarter&lt;/a&gt; this morning. &quot;In 3.5 hours it reached its [$10,000] goal. Let's see what happens next.&quot; 
+&lt;br&gt;
+&lt;br&gt;The topic of coding education isn't new to her - on top of her early involvement in the Aalto entrepreneurship society, Liukas is a cofounder in &lt;a href=&quot;http://railsgirls.org&quot;&gt;Railsgirls&lt;/a&gt;, a global non-profit that has taught programming to tens of thousands of women in over 160 cities. Additionally she was one of the early &lt;a href=&quot;http://codeacademy.com&quot;&gt;Codeacademy&lt;/a&gt; employees where she worked as a community manager. &lt;/p&gt;
+
+&lt;p&gt;Liukas tells us that the Hello Ruby project got its roots three years ago when Railsgirls got started and they needed some illustrations for the web and their events. &quot;I found when I had problems thinking about garbage collection, for example, I would draw Ruby. And then last September I decided I need to be a little more systematic and someone said, 'oh, you should do a Kickstarter.'&quot;&lt;/p&gt;
+
+&lt;p&gt;At time of publishing, the book has now raised $16,283 with 29 days left to go. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://wp.arcticstartup.com/wp-content/uploads/2014/01/9796daaa34b2501bbcf10a4e9c44e5e0_large.jpg&quot; alt=&quot;&quot; title=&quot;9796daaa34b2501bbcf10a4e9c44e5e0_large&quot; width=&quot;576&quot; class=&quot;aligncenter size-full wp-image-46563&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The Hello Ruby book will be a 32 page hardcover that covers the traditional story of friendship, being different, and technology. Rather than an artsy how-to, the book will tell the story of Ruby, a small girl who visits castles and solves problems with wise penguins. &lt;/p&gt;
+
+&lt;p&gt;&quot;We instinctively thick in narrative,&quot; says Liukas. &quot;Instead of just giving kids iPad applications that react once, I think theres longer term value in this style.&quot; &lt;/p&gt;
+
+&lt;p&gt;Additionally the bundle will come with a workbook for parents to sit down with their kids and think about solving problems with general programming concepts like loops, lists conditionals, sequences, and variables. Rather than punishing kids for forgetting that semicolon, the book and workbook is more focused on getting kids thinking about solving problems and teaching basic programming concepts so that later they can apply them.&lt;/p&gt;
+
+&lt;p&gt;She promises on the Kickstarter that Hello Ruby will be shipped by August, but Liukas tells us that she recognizes everyone wants the book sooner than that. This is her first dive into the publishing world, so she promises to keep backers updated with how her progress is going. As you can see in the video below, she's kind a of a delightful person, so you might as well throw in the minimum $5 commitment just to hear how the publishing progress goes. &lt;/p&gt;
+
+&lt;p&gt;Based on the big initial response, Liukas tells us she might put up some milestone rewards for her backers. And perhaps later an iPad app later wouldn't be out of the question, but right now she's focused in Ruby's hardcover world. &lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;http://www.kickstarter.com/projects/lindaliukas/hello-ruby&quot;&gt;find the project on Kickstarter&lt;/a&gt;. &lt;/p&gt;
+
+
+
+
+  
+
+
+
+
+  &lt;div id=&quot;topics&quot;&gt;
+    &lt;span&gt;TOPICS&lt;/span&gt;
+      &lt;a href=&quot;http://arcticstartup.com/tag/book&quot;&gt;book&lt;/a&gt;
+      &lt;a href=&quot;http://arcticstartup.com/tag/children&quot;&gt;children&lt;/a&gt;
+      &lt;a href=&quot;http://arcticstartup.com/tag/hello-ruby&quot;&gt;hello ruby&lt;/a&gt;
+      &lt;a href=&quot;http://arcticstartup.com/tag/kickstarter&quot;&gt;kickstarter&lt;/a&gt;
+      &lt;a href=&quot;http://arcticstartup.com/tag/programming&quot;&gt;programming&lt;/a&gt;
+  &lt;/div&gt;
+
+  
+
+
+
+  
+
+        
+        
+
+
+        &lt;/article&gt;&lt;/div&gt;
+</description>
+<title>
+Linda Liukas' Programming book for Children has Huge First Day on Kickstarter
+</title>
+</item>
+<item>
+<link>
+http://venturebeat.com/2014/01/23/startup-developing-hivaids-vaccine-is-2nd-nonprofit-accepted-into-y-combinator/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+					&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;A vaccine for HIV/AIDS has been the holy grail of the medical community for decades, and these guys may have found it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.immunityproject.org&quot; target=&quot;_blank&quot;&gt;Immunity Project&lt;/a&gt; is developing a free HIV/AIDS vaccine through a radical new approach that involves data analysis and machine learning. &lt;a href=&quot;http://ycombinator.com/np.html&quot; target=&quot;_blank&quot;&gt;It is one of seven nonprofits in elite accelerator program Y Combinator&amp;#x2019;s latest batch.&lt;/a&gt;&amp;#xA0;YC &lt;a href=&quot;http://venturebeat.com/2013/07/25/watsi-raises-first-ever-philanthropic-seed-round-from-silicon-valley-investors/&quot; title=&quot;Watsi raises first-ever &amp;#x2018;philanthropic seed round&amp;#x2019; from Silicon Valley&amp;#xA0;investors&quot;&gt;accepted its first nonprofit Watsi last year.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://pledge.immunityproject.org&quot; target=&quot;_blank&quot;&gt;Immunity Project also launched a crowdfunding campaign using Crowdhoster&lt;/a&gt; today with the goal of raising $482,000. This money will help Immunity fund its final experiment using human blood before it begins the first phase of clinical trials.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;This is the ultimate application of informatics to medicine,&amp;#x201D; cofounder and CEO Dr. Reid Rubsamen said in an interview. &amp;#x201C;So much vaccine design since 1953 has been based on neutralizing antibodies, but that legacy approach doesn&amp;#x2019;t work for HIV. The virus is too smart and can mutate so quickly. We are doing something very different.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;When cells are infected by HIV, they send pieces of HIV protein, or &amp;#x201C;flags,&amp;#x201D; to their surface for the immune system to identify and attack. However there are hundreds of signals coming from cells, and most people&amp;#x2019;s bodies don&amp;#x2019;t have the ability to pick out the HIV cells from all the other noise, except for a small group of people known as &amp;#x201C;controllers.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;One out of every 300 people living with HIV is a &amp;#x201C;controller,&amp;#x201D; meaning they carry low levels of the virus in a dormant state that never turns into AIDS. Their &amp;#x201C;immunity&amp;#x201D; to the virus is due to a unique targeting capability in their immune system that enables it to neutralize HIV&amp;#xA0;molecules by hitting them in weak spots.&lt;/p&gt;
+&lt;p&gt;Immunity&amp;#x2019;s algorithm sorts through the enormous amount of combinations of HIV genome and human immune system genetic data to figure out how controllers are able to keep HIV dormant.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;All the information from the immune system and the HIV genome generates this really, really big dataset,&amp;#x201D; Rubsamen said. &amp;#x201C;We use machine learning to understand what is happening with this dataset and reverse engineer this biological process. Hitting that tiny target is the output of a giant computer science effort.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;The goal of the vaccine is basically to turn everyone into a controller by training the immune system to attack the right targets.&lt;/p&gt;
+&lt;p&gt;The algorithm Immunity uses was written by Dr. David Heckerman and his colleagues at Microsoft e-Science Research. It is actually based on similar principles to spam filtering software because both spam and HIV &amp;#x201C;spread rapidly, mutate relentlessly, and have multitude of variations.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Dr. Heckerman designed algorithms to find the part on HIV that absolutely cannot mutate &amp;#x2014; the place where if it changes, the virus stops functioning,&amp;#x201D; Immunity said on its site. &amp;#x201C;In both cases, researches are using machine learning to create statistical ways of dealing with large data sets in order to find the needle in the haystack.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Rubsamen said this is the first vaccine in history developed in this matter and is viewed as a rogue project by the immunology community. That said, early tests on mice have shown &amp;#x201C;overwhelmingly positive results.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Rubsamen and Heckerman are both medical doctors and computer scientists. The two went to Stanford Medical School together and have known each other for decades. Rubsamen previously founded &lt;a href=&quot;http://www.aradigm.com&quot; target=&quot;_blank&quot;&gt;Aradigm&lt;/a&gt;, a public pharmaceutical company that develops inhalation drug products. He has more than 60 patents for drug delivery technologies and said he is leveraging this expertise to create a nasal spray, rather than an injectable vaccine, which will make it easier to administer in the developing world.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amfar.org/about-hiv-and-aids/facts-and-stats/statistics--worldwide/&quot; target=&quot;_blank&quot;&gt;Over 35 million people are currently living with HIV/AIDS&lt;/a&gt;, and 6,300 new people are infected everyday. Over 4,000 people die a day from AIDS, and nearly 36 million people&amp;#xA0; have died of HIV-related causes.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amfar.org/about-hiv-and-aids/facts-and-stats/statistics--worldwide/&quot; target=&quot;_blank&quot;&gt;70 percent of all people living with HIV live in sub-Saharan Africa.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rubsamen said that, unlike retrovrial treatments, Immunity wouldn&amp;#x2019;t require a lifetime of medication &amp;#x2014; you could take the vaccine and be done. It also has potential to act preventatively. Plus Immunity plans to make the vaccine free.&lt;/p&gt;
+&lt;p&gt;However there are still years of work, experimenting, clinical trials, and federal approvals to get through and millions of dollars to be raised. The vaccine has not officially entered Phase 1 yet and hopes to begin clinical trials in December 2014. The third and final phase of clinical trials, and widespread vaccination efforts, wouldn&amp;#x2019;t happen before 2016.&lt;/p&gt;
+&lt;p&gt;If it works, this will be a huge victory in the fight against HIV/AIDS and a watershed moment in immunology.&lt;/p&gt;
+&lt;p&gt;The Immunity Project is a partnership between biotech firm Flow Pharma and digital agency SparkArt.&amp;#xA0;Rubsamen is the CEO of Flow Pharma, and cofounder Naveen Jain is the cofounder of SparkArt. Microsoft Research contributed $1 million to the project in 2011.&lt;/p&gt;
+&lt;div class=&quot;post-boilerplate boilerplate-after&quot;&gt;
+
+VentureBeat is&amp;#xA0;creating an index of the&amp;#xA0;&lt;a href=&quot;http://venturebeat.com/2013/10/23/the-top-online-health-services-for-consumers/&quot; target=&quot;_blank&quot;&gt;top online health services for&amp;#xA0;consumers&lt;/a&gt;.&amp;#xA0;Take a look at our initial suggestions and&amp;#xA0;&lt;a href=&quot;http://venturebeat3.polldaddy.com/s/the-top-online-health-tools&quot; target=&quot;_blank&quot;&gt;complete the survey&lt;/a&gt;&amp;#xA0;to help us build a definitive index. We&amp;#x2019;ll publish the official index in the weeks to come, and for those who fill out they survey, we&amp;#x2019;ll send you an expanded report free of charge.
+
+Speak with the analyst who put this survey together to get more in-depth information,&amp;#xA0;&lt;a href=&quot;mailto:research@venturebeat.com&quot; target=&quot;_blank&quot;&gt;inquire within&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;					&lt;/div&gt;
+
+					
+				&lt;/div&gt;
+</description>
+<title>
+Startup developing HIV/AIDS vaccine is 2nd nonprofit accepted into Y Combinator
+</title>
+</item>
+<item>
+<link>
+http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
+	  
+
+  
+         &lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://ibuildings.nl/sites/default/files/blog/298px-Internet1.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;What started as a dream for a worldwide library of sorts, has transformed into not only a global repository of knowledge but also the most popular and widely deployed Application Platform: the World Wide Web.&lt;br&gt;
+	The poster child for Agile, it was not developed as a whole by a single entity, but rather grew as servers and clients expanded it's capabilities. Standards grew along with them.&lt;/p&gt;
+&lt;p&gt;While growing a solution works very well for discovering what works and what doesn't, it hardly leads to a consistent and easy to apply programming model. This is especially true for security: where ideally&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Secure_by_default&quot; title=&quot;Secure by default (Security Principle) on Wikipedia&quot;&gt;the simplest thing that works is also the most secure&lt;/a&gt;, it is far too easy to introduce vulnerabilities like&amp;#xA0;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;XSS&lt;/a&gt;,&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cross-site_request_forgery&quot;&gt;CSRF&lt;/a&gt;&amp;#xA0;or&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Clickjacking&quot;&gt;Clickjacking&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Because HTTP is an extensible protocol browsers have pioneered some useful headers to prevent or increase the difficulty of exploiting these vulnerabilities.&amp;#xA0;&lt;strong&gt;Knowing what they are and when to apply them can help you increase the security of your system&lt;/strong&gt;. &amp;#xA0;&lt;/p&gt;
+
+&lt;h2&gt;
+	1. Content-Security-Policy&lt;/h2&gt;
+&lt;h3&gt;
+	What's so good about it?&lt;/h3&gt;
+&lt;p&gt;How would you like to be largely&amp;#xA0;&lt;strong&gt;invulnerable to XSS&lt;/strong&gt;? No matter if someone managed to trick your server into writing &amp;lt;script&amp;gt;alert(1);&amp;lt;/script&amp;gt;, &lt;strong&gt;have the browser straight up refuse it&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;That's the promise of Content-Security-Policy.&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;Adding the Content-Security-Policy header with the appropriate value allows you to restrict the&amp;#xA0;&lt;strong&gt;origin&lt;/strong&gt; of the following:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		&lt;strong&gt;script-src&lt;/strong&gt;:&amp;#xA0;JavaScript code (biggest reason to use this header)&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;connect-src&lt;/strong&gt;:&amp;#xA0;XMLHttpRequest, WebSockets, and EventSource.&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;font-src&lt;/strong&gt;:&amp;#xA0;fonts&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;frame-src&lt;/strong&gt;:&amp;#xA0;frame ulrs&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;img-src&lt;/strong&gt;: images&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;media-src&lt;/strong&gt;:&amp;#xA0;audio &amp;amp; video&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;object-src&lt;/strong&gt;:&amp;#xA0;Flash (and other plugins)&lt;/li&gt;
+&lt;li&gt;
+		&lt;strong&gt;style-src&lt;/strong&gt;:&amp;#xA0;CSS&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;So specifying the following:&lt;/p&gt;
+&lt;pre&gt;
+Content-Security-Policy: script-src 'self' https://apis.google.com&lt;/pre&gt;&lt;p&gt;Means that script files may only come from the current domain or from apis.google.com (the Google JavaScript CDN).&lt;/p&gt;
+&lt;p&gt;Another helpful feature is that you can automatically enable &lt;strong&gt;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/&quot;&gt;sandbox mode&lt;/a&gt;&lt;/strong&gt; for all iframes on your site.&lt;/p&gt;
+&lt;p&gt;And if you want to test the waters, you can use use the '&lt;strong&gt;Content-Security-Policy-Report-Only&lt;/strong&gt;' header to do a dry run of your policy and have the browser post the results to a URL of your choosing.&lt;/p&gt;
+&lt;p&gt;It is definitely worth the time to read the&amp;#xA0;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/content-security-policy/&quot;&gt;excellent HTML5Rocks introduction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;
+	What's the catch&lt;/h3&gt;
+&lt;p&gt;Unfortunately Internet Explorer (IE) only supports the sandbox mode, and with a 'X-' prefix no less. Also Android support is pretty new (4.4).&lt;/p&gt;
+&lt;p&gt;And of course it can't protect against all XSS, if you generate your JavaScript dynamically (a bad idea, but not uncommon in practice) someone may still trick your server into generating bad JS.&lt;/p&gt;
+&lt;p&gt;But, including it does no harm and will protect users on Chrome, Firefox and iOS.&lt;br&gt;
+	&amp;#xA0;&lt;/p&gt;
+&lt;h3&gt;
+	Where does it work?&lt;/h3&gt;
+
+
+&lt;h3&gt;
+	Where do I learn more about it?&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/content-security-policy/&quot;&gt;HTML5Rocks has an awesome introduction&lt;/a&gt;.&amp;#xA0;Other than that, the &lt;a href=&quot;http://www.w3.org/TR/CSP/&quot;&gt;W3C spec&lt;/a&gt; is quite readable.&lt;/p&gt;
+
+&lt;h2&gt;
+	2. X-Frame-Options&lt;/h2&gt;
+&lt;h3&gt;
+	What's so good about it?&lt;/h3&gt;
+&lt;p&gt;Stop Clickjacking with one simple header:&lt;/p&gt;
+&lt;pre&gt;
+X-Frame-Options: DENY&lt;/pre&gt;&lt;p&gt;This will cause browsers to refuse requests for framing in that page.&lt;/p&gt;
+&lt;p&gt;Supplying the value '&lt;strong&gt;SAMEORIGIN&lt;/strong&gt;' will allow framing only from the same origin and '&lt;strong&gt;ALLOW FROM &lt;a href=&quot;http://url-here.example.com&quot;&gt;http://url-here.example.com&lt;/a&gt;&lt;/strong&gt;' will allow you to specify an origin (unsupported by IE).&lt;/p&gt;
+
+&lt;h3&gt;
+	What's the catch?&lt;/h3&gt;
+&lt;p&gt;This header will be deprecated and it's functionality will be moved to Content-Security-Policy 1.1 (which does not have the same level of support yet).&lt;br&gt;
+	But until that has wider support, there is no reason not to use this header.&lt;/p&gt;
+
+&lt;h3&gt;
+	Where does it work?&lt;/h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;
+				IE&lt;/th&gt;
+&lt;th&gt;
+				Firefox&lt;/th&gt;
+&lt;th&gt;
+				Chrome&lt;/th&gt;
+&lt;th&gt;
+				iOS Safari&lt;/th&gt;
+&lt;th&gt;
+				Android Browser&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+				8+&lt;/td&gt;
+&lt;td&gt;
+				3.6.9+&lt;/td&gt;
+&lt;td&gt;
+				4.1.249+&lt;/td&gt;
+&lt;td&gt;
+				?&lt;/td&gt;
+&lt;td&gt;
+				?&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;(data from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options&quot;&gt;Mozilla Developer Network&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3&gt;
+	Where do I learn more about it?&lt;/h3&gt;
+&lt;p&gt;Not much more to learn, but if you want some more information you can check out the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options&quot;&gt;Mozilla Developer Network article on the topic&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also&amp;#xA0;Coding Horror has an old (2009) but good article on Clickjacking / framing: &lt;a href=&quot;http://www.codinghorror.com/blog/2009/06/we-done-been-framed.html&quot;&gt;We done been framed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;
+	3. X-Content-Type-Options&lt;/h2&gt;
+&lt;h3&gt;
+	What's so good about it?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.owasp.org/index.php/Unrestricted_File_Upload&quot;&gt;Letting your users upload files is inherently dangerous&lt;/a&gt;&lt;/strong&gt;, serving up files uploaded by users is even more dangerous and difficult to get right. &amp;#xA0;&lt;/p&gt;
+&lt;p&gt;This isn't made any easier by browsers second-guessing the Content-Type of what you're serving by doing &lt;a href=&quot;http://mimesniff.spec.whatwg.org/#introduction&quot;&gt;Mime Sniffing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The X-Content-Type-Options allows you to, in effect, say to browsers that yes, you know what you're doing, the Content-Type is correct with it's only allowed value:&amp;#xA0;'&lt;strong&gt;nosniff&lt;/strong&gt;'.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/blog/1482-heads-up-nosniff-header-support-coming-to-chrome-and-firefox&quot;&gt;GitHub uses it&lt;/a&gt;, you can too.&lt;/p&gt;
+
+&lt;h3&gt;
+	What's the catch?&lt;/h3&gt;
+&lt;p&gt;Only works for IE and Chrome, though depending on your audience that could be 65% of your visitors that you're protecting.&lt;/p&gt;
+
+&lt;h3&gt;
+	Where does it work?&lt;/h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;
+				IE&lt;/th&gt;
+&lt;th&gt;
+				Firefox&lt;/th&gt;
+&lt;th&gt;
+				Chrome&lt;/th&gt;
+&lt;th&gt;
+				iOS Safari&lt;/th&gt;
+&lt;th&gt;
+				Android Browser&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
+				8+&lt;/td&gt;
+&lt;td&gt;
+				- (&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=471020&quot;&gt;bug 471020&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;
+				1+&lt;/td&gt;
+&lt;td&gt;
+				-&lt;/td&gt;
+&lt;td&gt;
+				-&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3&gt;
+	Where do I learn more about it?&lt;/h3&gt;
+&lt;p&gt;FOX IT has an excellent article on MIME sniffing:&amp;#xA0;&lt;a href=&quot;http://blog.fox-it.com/2012/05/08/mime-sniffing-feature-or-vulnerability/&quot;&gt;MIME Sniffing: feature or vulnerability?&lt;/a&gt; and the IT Security Stackexchange has a dedicated question on this topic:&amp;#xA0;&lt;a href=&quot;http://security.stackexchange.com/questions/12896/does-x-content-type-options-really-prevent-content-sniffing-attacks&quot;&gt;Does X-Content-Type-Options really prevent content sniffing attacks?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;
+	4. Strict-Transport-Security&lt;/h2&gt;
+&lt;h3&gt;
+	What's so good about it?&lt;/h3&gt;
+&lt;p&gt;My online banking system uses HTTPS, providing authenticity (that yes, I really am connecting to my bank) and transport security (anybody snooping in would only see the encrypted traffic).&lt;/p&gt;
+&lt;p&gt;However, there is a problem with it...&lt;br&gt;
+	When I type &quot;onlinebanking.example.com&quot; into the address bar of my browser, &lt;strong&gt;it will connect to plain old HTTP by default&lt;/strong&gt;. It's only if the server then redirects the user to HTTPS (which is a&amp;#xA0;&lt;a href=&quot;http://stackoverflow.com/questions/4365294/is-redirecting-http-to-https-a-bad-idea&quot;&gt;bad idea in theory, but a good one in practice&lt;/a&gt;) that I get my secure connection. Unfortunately &lt;strong&gt;this redirecting gives an attacker a window to play man-in-the-middle&lt;/strong&gt;. To solve this the Strict-Transport-Security header was added.&lt;/p&gt;
+&lt;p&gt;The HTTP Strict-Transport-Security (HSTS) header instructs the browser to (for a given time)&amp;#xA0;&lt;strong&gt;only use https&lt;/strong&gt;. If for instance, you go to &lt;a href=&quot;https://hsts.example.com&quot;&gt;https://hsts.example.com&lt;/a&gt; and (among others) it returns the following header:&lt;/p&gt;
+&lt;pre&gt;
+Strict-Transport-Security: max-age=31536000; includeSubDomains&lt;/pre&gt;&lt;p&gt;Then even typing in &lt;strong&gt;http&lt;/strong&gt;://hsts.example.com will make the browser connect to &lt;strong&gt;https&lt;/strong&gt;://hsts.example.com.&lt;/p&gt;
+&lt;p&gt;It will do this for as long as the HSTS header is valid, which in the case of the example is 1 year&amp;#xA0;&lt;strong&gt;since the last response that sent the HSTS header&lt;/strong&gt;. So if I visit the site once on January 1st 2013, it will be valid until January 1st 2014. But if I visit again on December 31st 2013 it will not only still be valid, it will reset the validity to be valid until December 31st 2014.&lt;/p&gt;
+
+&lt;h3&gt;
+	&lt;span&gt;What's the catch?&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;It only works on Chrome and Firefox for now. Your Internet Explorer users are still vulnerable. Never the less, it's worth implementing as &lt;strong&gt;it's an official IETF standard&lt;/strong&gt; and the next IE should implement it real soon now...&lt;/p&gt;
+&lt;p&gt;Also &lt;strong&gt;you don't want to implement this unless you're using HTTPS&lt;/strong&gt;, but why wouldn't you be using HTTPS? Remember that HTTPS not only guarantees that your content (and the users content) will be encrypted and therefore uninterceptable, it also provides authenticity. Promising your users that yes, this content really came from you.&lt;/p&gt;
+&lt;p&gt;Why you should always use HTTPS is &lt;a href=&quot;http://mashable.com/2011/05/31/https-web-security/&quot;&gt;a different discussion&lt;/a&gt;&amp;#xA0;and as evindenced by the fact that both that blog post and this one are not on HTTPS, still an uphill battle. But &lt;strong&gt;if you're using HTTPS you should probably use HSTS too&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3&gt;
+	Where does it work?&lt;/h3&gt;
+
+&lt;h3&gt;
+	Where do I learn more about it?&lt;/h3&gt;
+&lt;p&gt;The Mozilla Developer Network has a good article on it:&amp;#xA0;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;. &amp;#xA0;&lt;/p&gt;
+
+&lt;h2&gt;
+	If you're doing Symfony2 or Drupal&lt;/h2&gt;
+&lt;p&gt;For &lt;strong&gt;Symfony2&lt;/strong&gt; take a look at the &lt;strong&gt;&lt;a href=&quot;https://github.com/nelmio/NelmioSecurityBundle/blob/master/README.md&quot;&gt;NelmioSecurityBundle&lt;/a&gt;&lt;/strong&gt;&amp;#xA0;and for &lt;strong&gt;Drupal&lt;/strong&gt; check out the &lt;strong&gt;&lt;a href=&quot;https://drupal.org/project/seckit&quot;&gt;Security Kit module&lt;/a&gt;&lt;/strong&gt;&amp;#xA0;which allow you to specify all the aforementioned headers!&lt;/p&gt;
+
+&lt;h2&gt;
+	Hall of Shame: X-Requested-With&lt;/h2&gt;
+
+&lt;p&gt;By default jQuery sends the X-Requested-With header. It was thought that the mere presence of this header could be used as a way to defeat Cross-Site Request Forgery. Surely no request with this header and a users session could be initiated by a third party as in a browser only XMLHttpRequest is allowed to set custom headers.&lt;/p&gt;
+&lt;p&gt;Unfortunately as &lt;a href=&quot;http://jasoncodes.com/posts/rails-csrf-vulnerability&quot;&gt;the Ruby On Rails Ruby framework&lt;/a&gt; and &lt;a href=&quot;https://www.djangoproject.com/weblog/2011/feb/08/security/&quot;&gt;the Django Python framework&lt;/a&gt; soon found out, &lt;strong&gt;while this is a good measure for defence in depth, it can not be fully relied on in the face of other third party plugins like Java or Adobe Flash&lt;/strong&gt;.&lt;/p&gt;
+
+
+&lt;p&gt;Using the HTTP headers discussed above allows you to &lt;strong&gt;quickly and easily protect your users from XSS, Clickjacking, Mime sniffing vulnerabilities and Man-In-The-Middle attacks&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you aren't using these headers yet, now might be a good time to introduce them to your application or webserver configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep your users safe out there.&lt;/strong&gt;&lt;/p&gt;
+    
+
+	&lt;/div&gt;
+	
+	
+	
+			
+	&lt;/div&gt;
+</description>
+<title>
+4 HTTP Security headers you should always be using
 </title>
 </item>
 </channel>
