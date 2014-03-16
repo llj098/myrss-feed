@@ -15,477 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;
-	  
-
-  
-         &lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://ibuildings.nl/sites/default/files/blog/298px-Internet1.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;What started as a dream for a worldwide library of sorts, has transformed into not only a global repository of knowledge but also the most popular and widely deployed Application Platform: the World Wide Web.&lt;br&gt;
-	The poster child for Agile, it was not developed as a whole by a single entity, but rather grew as servers and clients expanded it's capabilities. Standards grew along with them.&lt;/p&gt;
-&lt;p&gt;While growing a solution works very well for discovering what works and what doesn't, it hardly leads to a consistent and easy to apply programming model. This is especially true for security: where ideally&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Secure_by_default&quot; title=&quot;Secure by default (Security Principle) on Wikipedia&quot;&gt;the simplest thing that works is also the most secure&lt;/a&gt;, it is far too easy to introduce vulnerabilities like&amp;#xA0;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;XSS&lt;/a&gt;,&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Cross-site_request_forgery&quot;&gt;CSRF&lt;/a&gt;&amp;#xA0;or&amp;#xA0;&lt;a href=&quot;http://en.wikipedia.org/wiki/Clickjacking&quot;&gt;Clickjacking&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Because HTTP is an extensible protocol browsers have pioneered some useful headers to prevent or increase the difficulty of exploiting these vulnerabilities.&amp;#xA0;&lt;strong&gt;Knowing what they are and when to apply them can help you increase the security of your system&lt;/strong&gt;. &amp;#xA0;&lt;/p&gt;
-
-&lt;h2&gt;
-	1. Content-Security-Policy&lt;/h2&gt;
-&lt;h3&gt;
-	What's so good about it?&lt;/h3&gt;
-&lt;p&gt;How would you like to be largely&amp;#xA0;&lt;strong&gt;invulnerable to XSS&lt;/strong&gt;? No matter if someone managed to trick your server into writing &amp;lt;script&amp;gt;alert(1);&amp;lt;/script&amp;gt;, &lt;strong&gt;have the browser straight up refuse it&lt;/strong&gt;?&lt;/p&gt;
-&lt;p&gt;That's the promise of Content-Security-Policy.&amp;#xA0;&lt;/p&gt;
-&lt;p&gt;Adding the Content-Security-Policy header with the appropriate value allows you to restrict the&amp;#xA0;&lt;strong&gt;origin&lt;/strong&gt; of the following:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
-		&lt;strong&gt;script-src&lt;/strong&gt;:&amp;#xA0;JavaScript code (biggest reason to use this header)&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;connect-src&lt;/strong&gt;:&amp;#xA0;XMLHttpRequest, WebSockets, and EventSource.&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;font-src&lt;/strong&gt;:&amp;#xA0;fonts&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;frame-src&lt;/strong&gt;:&amp;#xA0;frame ulrs&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;img-src&lt;/strong&gt;: images&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;media-src&lt;/strong&gt;:&amp;#xA0;audio &amp;amp; video&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;object-src&lt;/strong&gt;:&amp;#xA0;Flash (and other plugins)&lt;/li&gt;
-&lt;li&gt;
-		&lt;strong&gt;style-src&lt;/strong&gt;:&amp;#xA0;CSS&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;So specifying the following:&lt;/p&gt;
-&lt;pre&gt;
-Content-Security-Policy: script-src 'self' https://apis.google.com&lt;/pre&gt;&lt;p&gt;Means that script files may only come from the current domain or from apis.google.com (the Google JavaScript CDN).&lt;/p&gt;
-&lt;p&gt;Another helpful feature is that you can automatically enable &lt;strong&gt;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/sandboxed-iframes/&quot;&gt;sandbox mode&lt;/a&gt;&lt;/strong&gt; for all iframes on your site.&lt;/p&gt;
-&lt;p&gt;And if you want to test the waters, you can use use the '&lt;strong&gt;Content-Security-Policy-Report-Only&lt;/strong&gt;' header to do a dry run of your policy and have the browser post the results to a URL of your choosing.&lt;/p&gt;
-&lt;p&gt;It is definitely worth the time to read the&amp;#xA0;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/content-security-policy/&quot;&gt;excellent HTML5Rocks introduction&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;
-	What's the catch&lt;/h3&gt;
-&lt;p&gt;Unfortunately Internet Explorer (IE) only supports the sandbox mode, and with a 'X-' prefix no less. Also Android support is pretty new (4.4).&lt;/p&gt;
-&lt;p&gt;And of course it can't protect against all XSS, if you generate your JavaScript dynamically (a bad idea, but not uncommon in practice) someone may still trick your server into generating bad JS.&lt;/p&gt;
-&lt;p&gt;But, including it does no harm and will protect users on Chrome, Firefox and iOS.&lt;br&gt;
-	&amp;#xA0;&lt;/p&gt;
-&lt;h3&gt;
-	Where does it work?&lt;/h3&gt;
-
-
-&lt;h3&gt;
-	Where do I learn more about it?&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.html5rocks.com/en/tutorials/security/content-security-policy/&quot;&gt;HTML5Rocks has an awesome introduction&lt;/a&gt;.&amp;#xA0;Other than that, the &lt;a href=&quot;http://www.w3.org/TR/CSP/&quot;&gt;W3C spec&lt;/a&gt; is quite readable.&lt;/p&gt;
-
-&lt;h2&gt;
-	2. X-Frame-Options&lt;/h2&gt;
-&lt;h3&gt;
-	What's so good about it?&lt;/h3&gt;
-&lt;p&gt;Stop Clickjacking with one simple header:&lt;/p&gt;
-&lt;pre&gt;
-X-Frame-Options: DENY&lt;/pre&gt;&lt;p&gt;This will cause browsers to refuse requests for framing in that page.&lt;/p&gt;
-&lt;p&gt;Supplying the value '&lt;strong&gt;SAMEORIGIN&lt;/strong&gt;' will allow framing only from the same origin and '&lt;strong&gt;ALLOW FROM &lt;a href=&quot;http://url-here.example.com&quot;&gt;http://url-here.example.com&lt;/a&gt;&lt;/strong&gt;' will allow you to specify an origin (unsupported by IE).&lt;/p&gt;
-
-&lt;h3&gt;
-	What's the catch?&lt;/h3&gt;
-&lt;p&gt;This header will be deprecated and it's functionality will be moved to Content-Security-Policy 1.1 (which does not have the same level of support yet).&lt;br&gt;
-	But until that has wider support, there is no reason not to use this header.&lt;/p&gt;
-
-&lt;h3&gt;
-	Where does it work?&lt;/h3&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;
-				IE&lt;/th&gt;
-&lt;th&gt;
-				Firefox&lt;/th&gt;
-&lt;th&gt;
-				Chrome&lt;/th&gt;
-&lt;th&gt;
-				iOS Safari&lt;/th&gt;
-&lt;th&gt;
-				Android Browser&lt;/th&gt;
-&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
-				8+&lt;/td&gt;
-&lt;td&gt;
-				3.6.9+&lt;/td&gt;
-&lt;td&gt;
-				4.1.249+&lt;/td&gt;
-&lt;td&gt;
-				?&lt;/td&gt;
-&lt;td&gt;
-				?&lt;/td&gt;
-&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;(data from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options&quot;&gt;Mozilla Developer Network&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h3&gt;
-	Where do I learn more about it?&lt;/h3&gt;
-&lt;p&gt;Not much more to learn, but if you want some more information you can check out the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options&quot;&gt;Mozilla Developer Network article on the topic&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Also&amp;#xA0;Coding Horror has an old (2009) but good article on Clickjacking / framing: &lt;a href=&quot;http://www.codinghorror.com/blog/2009/06/we-done-been-framed.html&quot;&gt;We done been framed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2&gt;
-	3. X-Content-Type-Options&lt;/h2&gt;
-&lt;h3&gt;
-	What's so good about it?&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.owasp.org/index.php/Unrestricted_File_Upload&quot;&gt;Letting your users upload files is inherently dangerous&lt;/a&gt;&lt;/strong&gt;, serving up files uploaded by users is even more dangerous and difficult to get right. &amp;#xA0;&lt;/p&gt;
-&lt;p&gt;This isn't made any easier by browsers second-guessing the Content-Type of what you're serving by doing &lt;a href=&quot;http://mimesniff.spec.whatwg.org/#introduction&quot;&gt;Mime Sniffing&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The X-Content-Type-Options allows you to, in effect, say to browsers that yes, you know what you're doing, the Content-Type is correct with it's only allowed value:&amp;#xA0;'&lt;strong&gt;nosniff&lt;/strong&gt;'.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/blog/1482-heads-up-nosniff-header-support-coming-to-chrome-and-firefox&quot;&gt;GitHub uses it&lt;/a&gt;, you can too.&lt;/p&gt;
-
-&lt;h3&gt;
-	What's the catch?&lt;/h3&gt;
-&lt;p&gt;Only works for IE and Chrome, though depending on your audience that could be 65% of your visitors that you're protecting.&lt;/p&gt;
-
-&lt;h3&gt;
-	Where does it work?&lt;/h3&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;
-				IE&lt;/th&gt;
-&lt;th&gt;
-				Firefox&lt;/th&gt;
-&lt;th&gt;
-				Chrome&lt;/th&gt;
-&lt;th&gt;
-				iOS Safari&lt;/th&gt;
-&lt;th&gt;
-				Android Browser&lt;/th&gt;
-&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;
-				8+&lt;/td&gt;
-&lt;td&gt;
-				- (&lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=471020&quot;&gt;bug 471020&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;
-				1+&lt;/td&gt;
-&lt;td&gt;
-				-&lt;/td&gt;
-&lt;td&gt;
-				-&lt;/td&gt;
-&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;h3&gt;
-	Where do I learn more about it?&lt;/h3&gt;
-&lt;p&gt;FOX IT has an excellent article on MIME sniffing:&amp;#xA0;&lt;a href=&quot;http://blog.fox-it.com/2012/05/08/mime-sniffing-feature-or-vulnerability/&quot;&gt;MIME Sniffing: feature or vulnerability?&lt;/a&gt; and the IT Security Stackexchange has a dedicated question on this topic:&amp;#xA0;&lt;a href=&quot;http://security.stackexchange.com/questions/12896/does-x-content-type-options-really-prevent-content-sniffing-attacks&quot;&gt;Does X-Content-Type-Options really prevent content sniffing attacks?&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;
-	4. Strict-Transport-Security&lt;/h2&gt;
-&lt;h3&gt;
-	What's so good about it?&lt;/h3&gt;
-&lt;p&gt;My online banking system uses HTTPS, providing authenticity (that yes, I really am connecting to my bank) and transport security (anybody snooping in would only see the encrypted traffic).&lt;/p&gt;
-&lt;p&gt;However, there is a problem with it...&lt;br&gt;
-	When I type &quot;onlinebanking.example.com&quot; into the address bar of my browser, &lt;strong&gt;it will connect to plain old HTTP by default&lt;/strong&gt;. It's only if the server then redirects the user to HTTPS (which is a&amp;#xA0;&lt;a href=&quot;http://stackoverflow.com/questions/4365294/is-redirecting-http-to-https-a-bad-idea&quot;&gt;bad idea in theory, but a good one in practice&lt;/a&gt;) that I get my secure connection. Unfortunately &lt;strong&gt;this redirecting gives an attacker a window to play man-in-the-middle&lt;/strong&gt;. To solve this the Strict-Transport-Security header was added.&lt;/p&gt;
-&lt;p&gt;The HTTP Strict-Transport-Security (HSTS) header instructs the browser to (for a given time)&amp;#xA0;&lt;strong&gt;only use https&lt;/strong&gt;. If for instance, you go to &lt;a href=&quot;https://hsts.example.com&quot;&gt;https://hsts.example.com&lt;/a&gt; and (among others) it returns the following header:&lt;/p&gt;
-&lt;pre&gt;
-Strict-Transport-Security: max-age=31536000; includeSubDomains&lt;/pre&gt;&lt;p&gt;Then even typing in &lt;strong&gt;http&lt;/strong&gt;://hsts.example.com will make the browser connect to &lt;strong&gt;https&lt;/strong&gt;://hsts.example.com.&lt;/p&gt;
-&lt;p&gt;It will do this for as long as the HSTS header is valid, which in the case of the example is 1 year&amp;#xA0;&lt;strong&gt;since the last response that sent the HSTS header&lt;/strong&gt;. So if I visit the site once on January 1st 2013, it will be valid until January 1st 2014. But if I visit again on December 31st 2013 it will not only still be valid, it will reset the validity to be valid until December 31st 2014.&lt;/p&gt;
-
-&lt;h3&gt;
-	&lt;span&gt;What's the catch?&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;It only works on Chrome and Firefox for now. Your Internet Explorer users are still vulnerable. Never the less, it's worth implementing as &lt;strong&gt;it's an official IETF standard&lt;/strong&gt; and the next IE should implement it real soon now...&lt;/p&gt;
-&lt;p&gt;Also &lt;strong&gt;you don't want to implement this unless you're using HTTPS&lt;/strong&gt;, but why wouldn't you be using HTTPS? Remember that HTTPS not only guarantees that your content (and the users content) will be encrypted and therefore uninterceptable, it also provides authenticity. Promising your users that yes, this content really came from you.&lt;/p&gt;
-&lt;p&gt;Why you should always use HTTPS is &lt;a href=&quot;http://mashable.com/2011/05/31/https-web-security/&quot;&gt;a different discussion&lt;/a&gt;&amp;#xA0;and as evindenced by the fact that both that blog post and this one are not on HTTPS, still an uphill battle. But &lt;strong&gt;if you're using HTTPS you should probably use HSTS too&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3&gt;
-	Where does it work?&lt;/h3&gt;
-
-&lt;h3&gt;
-	Where do I learn more about it?&lt;/h3&gt;
-&lt;p&gt;The Mozilla Developer Network has a good article on it:&amp;#xA0;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security&quot;&gt;HTTP Strict Transport Security&lt;/a&gt;. &amp;#xA0;&lt;/p&gt;
-
-&lt;h2&gt;
-	If you're doing Symfony2 or Drupal&lt;/h2&gt;
-&lt;p&gt;For &lt;strong&gt;Symfony2&lt;/strong&gt; take a look at the &lt;strong&gt;&lt;a href=&quot;https://github.com/nelmio/NelmioSecurityBundle/blob/master/README.md&quot;&gt;NelmioSecurityBundle&lt;/a&gt;&lt;/strong&gt;&amp;#xA0;and for &lt;strong&gt;Drupal&lt;/strong&gt; check out the &lt;strong&gt;&lt;a href=&quot;https://drupal.org/project/seckit&quot;&gt;Security Kit module&lt;/a&gt;&lt;/strong&gt;&amp;#xA0;which allow you to specify all the aforementioned headers!&lt;/p&gt;
-
-&lt;h2&gt;
-	Hall of Shame: X-Requested-With&lt;/h2&gt;
-
-&lt;p&gt;By default jQuery sends the X-Requested-With header. It was thought that the mere presence of this header could be used as a way to defeat Cross-Site Request Forgery. Surely no request with this header and a users session could be initiated by a third party as in a browser only XMLHttpRequest is allowed to set custom headers.&lt;/p&gt;
-&lt;p&gt;Unfortunately as &lt;a href=&quot;http://jasoncodes.com/posts/rails-csrf-vulnerability&quot;&gt;the Ruby On Rails Ruby framework&lt;/a&gt; and &lt;a href=&quot;https://www.djangoproject.com/weblog/2011/feb/08/security/&quot;&gt;the Django Python framework&lt;/a&gt; soon found out, &lt;strong&gt;while this is a good measure for defence in depth, it can not be fully relied on in the face of other third party plugins like Java or Adobe Flash&lt;/strong&gt;.&lt;/p&gt;
-
-
-&lt;p&gt;Using the HTTP headers discussed above allows you to &lt;strong&gt;quickly and easily protect your users from XSS, Clickjacking, Mime sniffing vulnerabilities and Man-In-The-Middle attacks&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;If you aren't using these headers yet, now might be a good time to introduce them to your application or webserver configuration.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Keep your users safe out there.&lt;/strong&gt;&lt;/p&gt;
-    
-
-	&lt;/div&gt;
-	
-	
-	
-			
-	&lt;/div&gt;
-</description>
-<title>
-4 HTTP Security headers you should always be using
-</title>
-</item>
-<item>
-<link>
-http://www.evanmiller.org/why-im-betting-on-julia.html
-</link>
-<description>
-&lt;div&gt;&lt;div&gt;
-
-
-&lt;p&gt;By &lt;a href=&quot;http://www.evanmiller.org/&quot;&gt;Evan Miller&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;January 23, 2014&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The problem with most programming languages is they're designed by language geeks, who tend to worry about things that I don't much care for. Safety, type systems, homoiconicity, and so forth. I'm sure these things are great, but when I'm messing around with a new project for fun, my two concerns are 1) making it work and 2) making it fast. For me, code is like a car. It's a means to an end. The &quot;expressiveness&quot; of a piece of code is about as important to me as the &quot;expressiveness&quot; of a catalytic converter.&lt;/p&gt;
-
-&lt;p&gt;This approach to programming is often (derisively) called cowboy coding. I don't think a cowboy is quite the right image, because a cowboy must take frequent breaks due to the physical limitations of his horse. A better aspirational image is an obsessed scientist who spends weeks in the laboratory and emerges, bleary-eyed, exhausted, and wan, with an ingenious new contraption that possibly causes a fire on first use.&lt;/p&gt;
-
-&lt;p&gt;Enough about me. Normally I use one language to make something work, and a second language to make it fast, and a third language to make it scream. This pattern is fairly common. For many programmers, the prototyping language is often Python, Ruby, or R. Once the code works, you rewrite the slow parts in C or C++. If you are truly insane, you then rewrite the inner C loops using assembler, CUDA, or OpenCL.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, there's a big wall in between the prototyping language and C, and another big wall between C and assembler. Besides having to learn three different languages to get the job done, you have to mentally switch between the layers of abstraction. At a more quotidian level, you have to write a significant amount of glue code, and often find yourself switching between different source files, different code editors, and disparate debuggers.&lt;/p&gt;
-
-&lt;p&gt;I read about &lt;strong&gt;&lt;a href=&quot;http://www.julialang.org/&quot;&gt;Julia&lt;/a&gt;&lt;/strong&gt; a while back, and thought it sounded cool, but not like something I urgently needed. Julia is a dynamic language with great performance. That's nice, I thought, but I've already invested a lot of time putting a Ferrari engine into my VW Beetle &amp;#x2014; why would I buy a new car? Besides, nowadays a number of platforms &amp;#x2014; Java HotSpot, PyPy, and asm.js, to name a few &amp;#x2014; claim to offer &quot;C performance&quot; from a language other than C.&lt;/p&gt;
-
-&lt;p&gt;Only later did I realize what makes Julia different from all the others. &lt;em&gt;Julia breaks down the second wall &amp;#x2014; the wall between your high-level code and native assembly.&lt;/em&gt; Not only can you write code with the performance of C in Julia, you can take a peek behind the curtain of any function into its LLVM Intermediate Representation as well as its generated assembly code &amp;#x2014; all within the REPL. Check it out.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-emiller ~/Code/julia (master) ./julia
-               _
-   _       _ _(_)_     |  A fresh approach to technical computing
-  (_)     | (_) (_)    |  Documentation: http://docs.julialang.org
-   _ _   _| |_  __ _   |  Type &quot;help()&quot; to list help topics
-  | | | | | | |/ _` |  |
-  | | |_| | | | (_| |  |  Version 0.3.0-prerelease+261 (2013-11-30 12:55 UTC)
- _/ |\__'_|_|_|\__'_|  |  Commit 97b5983 (0 days old master)
-|__/                   |  x86_64-apple-darwin12.5.0
-
-julia&amp;gt; &lt;strong&gt;f(x) = x * x&lt;/strong&gt;
-f (generic function with 1 method)
-
-julia&amp;gt; &lt;strong&gt;f(2.0)&lt;/strong&gt;
-4.0
-
-julia&amp;gt; &lt;strong&gt;code_llvm(f, (Float64,))&lt;/strong&gt;
-
-define double @julia_f662(double) {
-top:
-  %1 = fmul double %0, %0, !dbg !3553
-  ret double %1, !dbg !3553
-}
-
-
-julia&amp;gt; &lt;strong&gt;code_native(f, (Float64,))&lt;/strong&gt;
-     .section        __TEXT,__text,regular,pure_instructions
-Filename: none
-Source line: 1
-        push    RBP
-        mov     RBP, RSP
-Source line: 1
-        vmulsd  XMM0, XMM0, XMM0
-        pop     RBP
-        ret
-&lt;/code&gt;&lt;/pre&gt;
-
-
-&lt;p&gt;Bam &amp;#x2014; you can go from writing a one-line function to inspecting its LLVM-optimized X86 assembler code in about 20 seconds.&lt;/p&gt;
-
-&lt;p&gt;So forget the stuff you may have read about Julia's &lt;a href=&quot;http://docs.julialang.org/en/release-0.2/manual/types/&quot;&gt;type system&lt;/a&gt;, &lt;a href=&quot;http://docs.julialang.org/en/release-0.2/manual/methods/&quot;&gt;multiple dispatch&lt;/a&gt; and &lt;a href=&quot;http://docs.julialang.org/en/release-0.2/manual/metaprogramming/&quot;&gt;homoiconi-whatever&lt;/a&gt;. That stuff is cool (I guess), but if you're like me, the real benefit is being able to go from the first prototype all the way to balls-to-the-wall multi-core SIMD performance optimizations without ever leaving the Julia environment.&lt;/p&gt;
-
-&lt;p&gt;That, in a nutshell, is why I'm betting on Julia. I hesitate to make the comparison, but it's poised to do for technical computing what Node.js is doing for web development &amp;#x2014; &lt;em&gt;getting disparate groups of programmers to code in the same language&lt;/em&gt;. With Node.js, it was the front-end designers and the back-end developers. With Julia, it's the domain experts and the speed freaks. That is a major accomplishment.&lt;/p&gt;
-
-&lt;p&gt;Julia's only drawback at this point is the relative dearth of &lt;a href=&quot;http://docs.julialang.org/en/release-0.2/packages/packagelist/&quot;&gt;libraries&lt;/a&gt; &amp;#x2014; but the language makes it &lt;a href=&quot;http://docs.julialang.org/en/release-0.2/manual/calling-c-and-fortran-code/&quot;&gt;unusually easy&lt;/a&gt; to interface with existing C libraries. Unlike with native interfaces in other languages, you can call C code without writing a single line of C, and so I anticipate that Julia's libraries will catch up quickly. From personal experience, I was able to access &lt;a href=&quot;https://github.com/WizardMac/ReadStat&quot;&gt;5K lines of C code&lt;/a&gt; using about &lt;a href=&quot;https://github.com/WizardMac/DataRead.jl&quot;&gt;150 lines of Julia&lt;/a&gt; &amp;#x2014; and no extra glue code in C.&lt;/p&gt;
-
-&lt;p&gt;If you work in a technical group that's in charge of a dizzying mix of Python, C, C++, Fortran, and R code &amp;#x2014; or if you're just a performance-obsessed gunslinging cowboy shoot-from-the-hip Lone Ranger like me &amp;#x2014; I encourage you to &lt;a href=&quot;http://julialang.org/downloads/&quot;&gt;download Julia&lt;/a&gt; and take it for a spin. If you're hesitant to complicate your professional life with Yet Another Programming Language, think of Julia as a tool that will eventually help you &lt;em&gt;reduce&lt;/em&gt; the number of languages that your project depends on.&lt;/p&gt;
-
-&lt;p&gt;I almost neglected to mention: Julia is actually quite a nice language, even ignoring its excellent performance characteristics. I'm no language aesthete, but learning it entailed remarkably few head-scratching moments. At present Julia is in my top 3 favorite programming languages.&lt;/p&gt;
-
-&lt;p&gt;Finally, you'll find an active and supportive &lt;a href=&quot;http://julialang.org/community/&quot;&gt;Julia community&lt;/a&gt;. My favorite part about the community is that it is full of math-and-science types who tend to be very smart and very friendly. That's because Julia was &lt;em&gt;not&lt;/em&gt; designed by language geeks &amp;#x2014; it came from math, science, and engineering MIT students who wanted a fast, practical language to replace C and Fortran. So it's not designed to be beautiful (though it is); it's designed to give you answers quickly. That, for me, is what computing is all about.&lt;/p&gt;
-
-&lt;p&gt;(By the way, if you're in the Chicago area, Leah Hanson is hosting a &lt;a href=&quot;http://www.meetup.com/JuliaChicago/events/160572632/&quot;&gt;free workshop at the University of Chicago&lt;/a&gt; on Feb. 1. Join us!)&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Want to learn more from your data? My desktop statistics software &lt;strong&gt;&lt;a href=&quot;http://www.wizardmac.com/&quot;&gt;Wizard&lt;/a&gt;&lt;/strong&gt; can help you &lt;strong&gt;apply statistics&lt;/strong&gt; and &lt;strong&gt;communicate discoveries visually&lt;/strong&gt; without spending days struggling with pointless command syntax. Check it out!&lt;/em&gt;&lt;/p&gt;
-&lt;div&gt;
-&lt;a href=&quot;http://www.wizardmac.com/&quot;&gt;&lt;img width=&quot;128&quot; src=&quot;http://www.evanmiller.org/images/wizard-nonpro.png&quot;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;strong&gt;&lt;a href=&quot;http://www.wizardmac.com/&quot;&gt;Wizard&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;span&gt;Statistical analyzer&lt;/span&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;&lt;a href=&quot;http://www.evanmiller.org/&quot;&gt;Back to Evan Miller's home page&lt;/a&gt; &amp;#x2013; &lt;a href=&quot;http://twitter.com/EvMill&quot;&gt;Follow on Twitter&lt;/a&gt; &amp;#x2013; &lt;a href=&quot;http://www.evanmiller.org/news.xml&quot;&gt;Subscribe to RSS&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-Why I'm Betting On Julia
-</title>
-</item>
-<item>
-<link>
-http://www.tigerdirect.com/bitcoin/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;mainContent&quot; id=&quot;mainC&quot;&gt;
-
-
-&lt;div id=&quot;cmp_wrapper&quot;&gt;
-	
-    
-    
-    &lt;div id=&quot;bc_getStarted&quot; class=&quot;bc_section&quot;&gt;
-    	&lt;a id=&quot;GetStarted&quot; name=&quot;GetStarted&quot;&gt;&lt;/a&gt;
-    	&lt;p class=&quot;bc_titleBar&quot;&gt;
-            &lt;h2&gt;Get Started With Bitcoin Today!&lt;/h2&gt;
-        &lt;/p&gt;
-    	&lt;div class=&quot;cmp_inner&quot;&gt;
-        	&lt;dl&gt;
-            	&lt;dt&gt;1. Get A Wallet&lt;/dt&gt;
-                &lt;dd&gt;
-                	&lt;p&gt;Before you can begin to get bitcoins, you first need a wallet.&lt;/p&gt;
-                    &lt;p&gt;A Bitcoin wallet is a digital wallet which stores your Bitcoin balance and allows you to transact with other users online and offline. All wallets can communicate with each other similar to emails, so you can send and recieve bitcoins to anyone regardless of the type of wallet they use.&lt;/p&gt;
-                    &lt;p&gt;You can get one free &lt;a href=&quot;https://blockchain.info/wallet/new&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-                    &lt;dl&gt;
-                    	&lt;dt&gt;There are several ways to get bitcoins:&lt;/dt&gt;
-                        &lt;dd&gt;
-                        	&lt;ul&gt;
-                            	&lt;li&gt;As payment for goods or services.&lt;/li&gt;
-                                &lt;li&gt;Purchase bitcoins at a Bitcoin exchange.&lt;/li&gt;
-                                &lt;li&gt;Exchange bitcoins with someone.&lt;/li&gt;
-                                &lt;li&gt;Earn bitcoins through competitive mining.&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/dd&gt;
-                    &lt;/dl&gt;
-                &lt;/dd&gt;
-                &lt;dt&gt;2. Shop TigerDirect.com&lt;/dt&gt;
-                &lt;dd&gt;
-                	&lt;p&gt;Once you have your wallet setup and ready to go, you can begin shopping over 200,000 products available from TigerDirect.com!&lt;/p&gt;
-                    &lt;p&gt;Not sure where to start? See our &lt;a href=&quot;http://www.tigerdirect.com&quot;&gt;latest deals&lt;/a&gt; or start shopping &lt;a href=&quot;http://www.TigerDirect.com/applications/campaigns/deals.asp?campaignid=2829&quot;&gt;AMD Bitcoin miner parts&lt;/a&gt;.&lt;/p&gt;
-                &lt;/dd&gt;
-                &lt;dt&gt;3. Checkout&lt;/dt&gt;
-                &lt;dd&gt;
-                	&lt;p&gt;After selecting your products, simply hit checkout and select Bitcoin as your payment method! For a complete guide on purchasing with Bitcoin on TigerDirect.com, visit our &lt;a href=&quot;http://www.TigerDirect.com/bitcoin/help.asp&quot;&gt;Bitcoin help&lt;/a&gt; page.&lt;/p&gt;
-                &lt;/dd&gt;
-            &lt;/dl&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id=&quot;bc_mining&quot; class=&quot;bc_section&quot;&gt;
-    	&lt;a id=&quot;MiningBitcoins&quot; name=&quot;MiningBitcoins&quot;&gt;&lt;/a&gt;
-    	&lt;p class=&quot;bc_titleBar&quot;&gt;
-            &lt;h2&gt;What Is Bitcoin Mining?&lt;/h2&gt;
-        &lt;/p&gt;
-    	&lt;div class=&quot;cmp_inner&quot;&gt;
-        	&lt;p&gt;Bitcoin miners run specific software on their computers to help collectively solve very large and complex problems. Much like &quot;SETI at Home&quot; or &quot;Folding at Home&quot;.&lt;/p&gt;
-            &lt;p&gt;Every transaction that takes place using bitcoins is recorded in a public ledger called the blockchain. Basically, the block chain is a history of all confirmed transactions and a record of how much each bitcoin wallet has. Think of it like an army of accountants constantly writing who has how much and who paid whom in a huge piece of paper for all to verify (the blockchain). The process called bitcoin mining confirms each of these transactions before it is saved into the blockchain. On a few occasions, a transaction is really a reward of several bitcoins. This reward is what gives bitcoin miners the incentive to mine. Because the process of searching for bitcoin takes a lot of effort for computers, it is has come to be called &quot;mining&quot;.&lt;/p&gt;
-            &lt;h3&gt;So, how do I get started on this mining gig?&lt;/h3&gt;
-            &lt;p&gt;Like many things, mining for bitcoins can be quite easy or very hard. Today, we have custom solutions for your needs.&lt;/p&gt;
-            &lt;h3&gt;Hardware:&lt;/h3&gt;
-            &lt;div class=&quot;bc_left&quot;&gt;
-            	&lt;a href=&quot;http://www.TigerDirect.com/applications/campaigns/deals.asp?campaignid=2829&quot;&gt;&lt;img class=&quot;bt_logo&quot; src=&quot;http://images.highspeedbackbone.net/bitcoin/logo_radeonR9-lrg.png&quot; alt=&quot;AMD Radeon R9&quot;&gt;&lt;/a&gt;
-            	&lt;p&gt;AMD offers the ability to build your own custom mining PC. Optimize your machine to run the way you want on the budget you want.&lt;/p&gt;
-            	&lt;p&gt;Start here for &lt;a href=&quot;http://www.TigerDirect.com/applications/campaigns/deals.asp?campaignid=2829&quot;&gt;AMD  hardware&lt;/a&gt;.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;bc_right&quot;&gt;
-            	&lt;a href=&quot;http://www.TigerDirect.com/bitcoin/&quot;&gt;&lt;img class=&quot;bt_logo&quot; src=&quot;http://images.highspeedbackbone.net/bitcoin/logo_butterflyLabs.jpg&quot; alt=&quot;ButterflyLabs&quot;&gt;&lt;/a&gt;
-            	&lt;p&gt;Butterfly labs provides a complete solution to get started easily. They provide the hardware and software you need to get started mining!&lt;/p&gt;
-                &lt;p&gt;&lt;strong&gt;Coming Soon!&lt;/strong&gt;&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;h3&gt;Software:&lt;/h3&gt;
-            &lt;p&gt;You'll need a wallet to begin collecting and storing your Bitcoins. For info regarding a wallet, read our &lt;a class=&quot;scrollBtn&quot; href=&quot;http://www.TigerDirect.com/bitcoin/indexus.asp#GetStarted&quot;&gt;Get Started&lt;/a&gt; section or sign up now for a &lt;a href=&quot;https://blockchain.info/wallet/new&quot; target=&quot;_blank&quot;&gt;free wallet&lt;/a&gt;.&lt;/p&gt;
-            &lt;p&gt;Once you have your wallet and hardware ready to go, all that's left is getting your own mining application and you're ready to start mining!&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
-
-&lt;/div&gt;   &lt;/div&gt;
-</description>
-<title>
-TigerDirect.com Now Accepts Bitcoin Payments
-</title>
-</item>
-<item>
-<author>
-Eric Schlosser
-</author>
-<link>
-http://www.newyorker.com/online/blogs/newsdesk/2014/01/strangelove-for-real.html
-</link>
-<description>
-&lt;div&gt;&lt;p&gt;
-This month marks the fiftieth anniversary of Stanley Kubrick&amp;#x2019;s black comedy about nuclear weapons, &amp;#x201C;Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb.&amp;#x201D; Released on January 29, 1964, the film caused a good deal of controversy. Its plot suggested that a mentally deranged American general could order a nuclear attack on the Soviet Union, without consulting the President. One reviewer described the film as &amp;#x201C;dangerous &amp;#x2026; an evil thing about an evil thing.&amp;#x201D; Another compared it to Soviet propaganda. Although &amp;#x201C;Strangelove&amp;#x201D; was clearly a farce, with the comedian Peter Sellers playing three roles, it was criticized for being implausible. An expert at the Institute for Strategic Studies called the events in the film &amp;#x201C;impossible on a dozen counts.&amp;#x201D; A former Deputy Secretary of Defense dismissed the idea that someone could authorize the use of a nuclear weapon without the President&amp;#x2019;s approval: &amp;#x201C;Nothing, in fact, could be further from the truth.&amp;#x201D; (&lt;a href=&quot;http://www.newyorker.com/online/blogs/newsdesk/2014/01/deconstructing-dr-strangelove.html&quot;&gt;See a compendium of clips from the film.&lt;/a&gt;) When &amp;#x201C;Fail-Safe&amp;#x201D;&amp;#x2014;a Hollywood thriller with a similar plot, directed by Sidney Lumet&amp;#x2014;opened, later that year, it was criticized in much the same way. &amp;#x201C;The incidents in &amp;#x2018;Fail-Safe&amp;#x2019; are deliberate lies!&amp;#x201D; General Curtis LeMay, the Air Force chief of staff, said. &amp;#x201C;Nothing like that could happen.&amp;#x201D; The first casualty of every war is the truth&amp;#x2014;and the Cold War was no exception to that dictum. Half a century after Kubrick&amp;#x2019;s mad general, Jack D. Ripper, launched a nuclear strike on the Soviets to defend the purity of &amp;#x201C;our precious bodily fluids&amp;#x201D; from Communist subversion, we now know that American officers did indeed have the ability to start a Third World War on their own. And despite the introduction of rigorous safeguards in the years since then, the risk of an accidental or unauthorized nuclear detonation hasn&amp;#x2019;t been completely eliminated.
-&lt;/p&gt;
- 
-
-
- &lt;div id=&quot;entry-more&quot;&gt;&lt;p&gt;
-The command and control of nuclear weapons has &lt;a href=&quot;http://www.newyorker.com/online/blogs/newsdesk/2014/01/primary-sources-permissive-action-links-and-the-threat-of-nuclear-war.html&quot;&gt;long been plagued&lt;/a&gt; by an &amp;#x201C;always/never&amp;#x201D; dilemma. The administrative and technological systems that are necessary to insure that nuclear weapons are always available for use in wartime may be quite different from those necessary to guarantee that such weapons can never be used, without proper authorization, in peacetime. During the nineteen-fifties and sixties, the &amp;#x201C;always&amp;#x201D; in American war planning was given far greater precedence than the &amp;#x201C;never.&amp;#x201D; Through two terms in office, beginning in 1953, President Dwight D. Eisenhower struggled with this dilemma.  He wanted to retain Presidential control of nuclear weapons while defending America and its allies from attack. But, in a crisis, those two goals might prove contradictory, raising all sorts of difficult questions. What if Soviet bombers were en route to the United States but the President somehow couldn&amp;#x2019;t be reached? What if Soviet tanks were rolling into West Germany but a communications breakdown prevented &lt;small&gt;NATO&lt;/small&gt; officers from contacting the White House? What if the President were killed during a surprise attack on Washington, D.C., along with the rest of the nation&amp;#x2019;s civilian leadership? Who would order a nuclear retaliation then? 
-&lt;/p&gt;
-
-&lt;p&gt;
-With great reluctance, Eisenhower agreed to let American officers use their nuclear weapons, in an emergency, if there were no time or no means to contact the President.  Air Force pilots were allowed to fire their nuclear anti-aircraft rockets to shoot down Soviet bombers heading toward the United States.  And about half a dozen high-level American commanders were allowed to use far more powerful nuclear weapons, without contacting the White House first, when their forces were under attack and &amp;#x201C;the urgency of time and circumstances clearly does not permit a specific decision by the President, or other person empowered to act in his stead.&amp;#x201D;  Eisenhower worried that providing that sort of authorization in advance could make it possible for someone to do &amp;#x201C;something foolish down the chain of command&amp;#x201D; and start an all-out nuclear war. But the alternative&amp;#x2014;allowing an attack on the United States to go unanswered or &lt;small&gt;NATO&lt;/small&gt; forces to be overrun&amp;#x2014;seemed a lot worse. Aware that his decision might create public unease about who really controlled America&amp;#x2019;s nuclear arsenal, Eisenhower insisted that his delegation of Presidential authority be kept secret. At a meeting with the Joint Chiefs of Staff, he confessed to being &amp;#x201C;very fearful of having written papers on this matter.&amp;#x201D;
-&lt;/p&gt;
-
-&lt;p&gt;
-President John F. Kennedy was surprised to learn, just a few weeks after taking office, about this secret delegation of power. &amp;#x201C;A subordinate commander faced with a substantial military action,&amp;#x201D; Kennedy was told in a top-secret memo, &amp;#x201C;could start the thermonuclear holocaust on his own initiative if he could not reach you.&amp;#x201D; Kennedy and his national-security advisers were shocked not only by the wide latitude given to American officers but also by the loose custody of the roughly three thousand American nuclear weapons stored in Europe. Few of the weapons had locks on them. Anyone who got hold of them could detonate them. And there was little to prevent &lt;small&gt;NATO&lt;/small&gt; officers from Turkey, Holland, Italy, Great Britain, and Germany from using them without the approval of the United States. 
-&lt;/p&gt;
-
-&lt;p&gt;
-In December, 1960, fifteen members of Congress serving on the Joint Committee on Atomic Energy had toured &lt;small&gt;NATO&lt;/small&gt; bases to investigate how American nuclear weapons were being deployed. They found that the weapons&amp;#x2014;some of them about a hundred times more powerful than the bomb that destroyed Hiroshima&amp;#x2014;were routinely guarded, transported, and handled by foreign military personnel. American control of the weapons was practically nonexistent. Harold Agnew, a Los Alamos physicist who accompanied the group, was especially concerned to see German pilots sitting in German planes that were decorated with Iron Crosses&amp;#x2014;and carrying American atomic bombs. Agnew, in his own words, &amp;#x201C;nearly wet his pants&amp;#x201D; when he realized that a lone American sentry with a rifle was all that prevented someone from taking off in one of those planes and bombing the Soviet Union.
-&lt;/p&gt;
-
-* * *
-
-&lt;p&gt;
-The Kennedy Administration soon decided to put locking devices inside &lt;small&gt;NATO&lt;/small&gt;&amp;#x2019;s nuclear weapons. The coded electromechanical switches, known as &amp;#x201C;permissive action links&amp;#x201D; (&lt;small&gt;PAL&lt;/small&gt;s), would be placed on the arming lines. The weapons would be inoperable without the proper code&amp;#x2014;and that code would  be shared with &lt;small&gt;NATO&lt;/small&gt; allies only when the White House was prepared to fight the Soviets. The American military didn&amp;#x2019;t like the idea of these coded switches, fearing that mechanical devices installed to improve weapon safety would diminish weapon reliability. A top-secret State Department memo summarized the view of the Joint Chiefs of Staff in 1961: &amp;#x201C;all is well with the atomic stockpile program and there is no need for any changes.&amp;#x201D;
-&lt;/p&gt;
-
-&lt;p&gt;
-After a crash program to develop the new control technology, during the mid-nineteen-sixties, permissive action links were finally placed inside most of the nuclear weapons deployed by &lt;small&gt;NATO&lt;/small&gt; forces. But Kennedy&amp;#x2019;s directive applied only to the &lt;small&gt;NATO&lt;/small&gt; arsenal.  For years, the Air Force and the Navy blocked attempts to add coded switches to the weapons solely in their custody. During a national emergency, they argued, the consequences of not receiving the proper code from the White House might be disastrous. And locked weapons might play into the hands of Communist saboteurs. &amp;#x201C;The very existence of the lock capability,&amp;#x201D; a top Air Force general claimed, &amp;#x201C;would create a fail-disable potential for knowledgeable agents to &amp;#x2018;dud&amp;#x2019; the entire Minuteman [missile] force.&amp;#x201D; The Joint Chiefs thought that strict military discipline was the best safeguard against an unauthorized nuclear strike. A two-man rule was instituted to make it more difficult for someone to use a nuclear weapon without permission. And a new screening program, the Human Reliability Program, was created to stop people with emotional, psychological, and substance-abuse problems from gaining access to nuclear weapons.
-&lt;/p&gt;
-
-&lt;p&gt;
-Despite public assurances that everything was fully under control, in the winter of 1964, while &amp;#x201C;Dr. Strangelove&amp;#x201D; was playing in theatres and being condemned as Soviet propaganda, there was nothing to prevent an American bomber crew or missile launch crew from using their weapons against the Soviets. Kubrick had researched the subject for years, consulted experts, and worked closely with a former R.A.F. pilot, Peter George, on the screenplay of the film. George&amp;#x2019;s novel about the risk of accidental nuclear war, &amp;#x201C;Red Alert,&amp;#x201D; was the source for most of &amp;#x201C;Strangelove&amp;#x201D; &amp;#x2019;s plot. Unbeknownst to both Kubrick and George, a top official at the Department of Defense had already sent a copy of &amp;#x201C;Red Alert&amp;#x201D; to every member of the Pentagon&amp;#x2019;s Scientific Advisory Committee for Ballistic Missiles. At the Pentagon, the book was taken seriously as a cautionary tale about what might go wrong. Even Secretary of Defense Robert S. McNamara privately worried that an accident, a mistake, or a rogue American officer could start a nuclear war. 
-&lt;/p&gt;
-
-&lt;p&gt;
-Coded switches to prevent the unauthorized use of nuclear weapons were finally added to the control systems of American missiles and bombers in the early nineteen-seventies. The Air Force was not pleased, and considered the new security measures to be an insult, a lack of confidence in its personnel. Although the Air Force now &lt;a href=&quot;http://complex.foreignpolicy.com/posts/2014/01/20/exclusive_air_force_insists_it_never_used_painfully_simple_nuke_code&quot;&gt;denies&lt;/a&gt; this claim, according to more than one source I contacted, the code necessary to launch a missile was set to be the same at every Minuteman site: 00000000. &lt;/p&gt;
-
-* * *
-
-&lt;p&gt;
-The early permissive action links were rudimentary. Placed in &lt;small&gt;NATO&lt;/small&gt; weapons during the nineteen-sixties and known as Category A &lt;small&gt;PAL&lt;/small&gt;s, the switches relied on a split four-digit code, with ten thousand possible combinations. If the United States went to war, two people would be necessary to unlock a nuclear weapon, each of them provided with half the code. Category A &lt;small&gt;PAL&lt;/small&gt;s were useful mainly to delay unauthorized use, to buy time after a weapon had been taken or to thwart an individual psychotic hoping to cause a large explosion. A skilled technician could open a stolen weapon and unlock it within a few hours. Today&amp;#x2019;s Category D &lt;small&gt;PAL&lt;/small&gt;s, installed in the Air Force&amp;#x2019;s hydrogen bombs, are more sophisticated. They require a six-digit code, with a million possible combinations, and have a limited-try feature that disables a weapon when the wrong code is repeatedly entered.
-&lt;/p&gt;
-
-&lt;p&gt;
-The Air Force&amp;#x2019;s land-based Minuteman III missiles and the Navy&amp;#x2019;s submarine-based Trident II missiles now require an eight-digit code&amp;#x2014;which is no longer 00000000&amp;#x2014;in order to be launched. The Minuteman crews receive the code via underground cables or an aboveground radio antenna. Sending the launch code to submarines deep underwater presents a greater challenge. Trident submarines contain two safes. One holds the keys necessary to launch a missile; the other holds the combination to the safe with the keys; and the combination to the safe holding the combination must be transmitted to the sub by very-low-frequency or extremely-low-frequency radio. In a pinch, if Washington, D.C., has been destroyed and the launch code doesn&amp;#x2019;t arrive, the sub&amp;#x2019;s crew can open the safes with a blowtorch. 
-&lt;/p&gt;
-
-&lt;p&gt;
-The security measures now used to control America&amp;#x2019;s nuclear weapons are a vast improvement over those of 1964. But, like all human endeavors, they are inherently flawed.  The Department of Defense&amp;#x2019;s Personnel Reliability Program is supposed to keep people with serious emotional or psychological issues away from nuclear weapons&amp;#x2014;and yet two of the nation&amp;#x2019;s top nuclear commanders were recently removed from their posts. Neither appears to be the sort of calm, stable person you want with a finger on the button. In fact, their misbehavior seems straight out of &amp;#x201C;Strangelove.&amp;#x201D; 
-&lt;/p&gt;
-
-&lt;p&gt;
-Vice Admiral Tim Giardina, the second-highest-ranking officer at the U.S. Strategic Command&amp;#x2014;the organization responsible for all of America&amp;#x2019;s nuclear forces&amp;#x2014;-was investigated last summer for allegedly using counterfeit gambling chips at the Horseshoe Casino in Council Bluffs, Iowa. According to the Iowa Division of Criminal Investigation, &amp;#x201C;a significant monetary amount&amp;#x201D; of counterfeit chips was involved. Giardina was &lt;a href=&quot;http://abcnews.go.com/Politics/vice-adm-tim-giardina-fired-nuclear-commander/story?id=20524735&quot;&gt;relieved of his command&lt;/a&gt; on October 3, 2013. A few days later, Major General Michael Carey, the Air Force commander in charge of America&amp;#x2019;s intercontinental ballistic missiles, was fired for conduct &amp;#x201C;unbecoming an officer and a gentleman.&amp;#x201D; &lt;a href=&quot;http://www.foia.af.mil/shared/media/document/AFD-131219-045.pdf&quot;&gt;According to a report&lt;/a&gt; by the Inspector General of the Air Force, Carey had consumed too much alcohol during an official trip to Russia, behaved rudely toward Russian officers, spent time with &amp;#x201C;suspect&amp;#x201D; young foreign women in Moscow, loudly discussed sensitive information in a public hotel lounge there, and drunkenly pleaded to get onstage and sing with a Beatles cover band at La Cantina, a Mexican restaurant near Red Square. Despite his requests, the band wouldn&amp;#x2019;t let Carey onstage to sing or to play the guitar.
-&lt;/p&gt;
-
-&lt;p&gt;
-While drinking beer in the executive lounge at Moscow&amp;#x2019;s Marriott Aurora during that visit, General Carey made an admission with serious public-policy implications.  He off-handedly told a delegation of U.S. national-security officials that his missile-launch officers have the &amp;#x201C;worst morale in the Air Force.&amp;#x201D;  Recent events suggest that may be true. In the spring of 2013, nineteen launch officers at Minot Air Force base in North Dakota were decertified for violating safety rules and poor discipline.  In August, 2013, the entire missile wing at Malmstrom Air Force base in Montana failed its safety inspection.  Last week, the Air Force revealed that thirty-four launch officers at Malmstrom had been decertified for cheating on proficiency exams&amp;#x2014;and that at least three launch officers are being investigated for illegal drug use. The findings of a report by the RAND Corporation, leaked to the A.P., were equally disturbing. The study found that the rates of spousal abuse and court martials among Air Force personnel with nuclear responsibilities are much higher than those among people with other jobs in the Air Force. &amp;#x201C;We don&amp;#x2019;t care if things go properly,&amp;#x201D; a launch officer told RAND. &amp;#x201C;We just don&amp;#x2019;t want to get in trouble.&amp;#x201D;
-&lt;/p&gt;
-
-&lt;p&gt;
-The most unlikely and absurd plot element in &amp;#x201C;Strangelove&amp;#x201D; is the existence of a Soviet &amp;#x201C;Doomsday Machine.&amp;#x201D; The device would trigger itself, automatically, if the Soviet Union were attacked with nuclear weapons. It was meant to be the ultimate deterrent, a threat to destroy the world in order to prevent an American nuclear strike. But the failure of the Soviets to tell the United States about the contraption defeats its purpose and, at the end of the film, inadvertently causes a nuclear Armageddon. &amp;#x201C;The whole point of the Doomsday Machine is lost,&amp;#x201D; Dr. Strangelove, the President&amp;#x2019;s science adviser, explains to the Soviet Ambassador, &lt;em&gt;&amp;#x201C;if you keep it a secret!&amp;#x201D;&lt;/em&gt; 
-&lt;/p&gt;
-
-&lt;p&gt;
-A decade after the release of &amp;#x201C;Strangelove,&amp;#x201D; the Soviet Union began work on the Perimeter system&amp;#x2014;-a network of sensors and computers that could allow junior military officials to launch missiles without oversight from the Soviet leadership. Perhaps nobody at the Kremlin had seen the film. Completed in 1985, the system was known as &lt;a href=&quot;http://www.wired.com/politics/security/magazine/17-10/mf_deadhand?currentPage=all&quot;&gt;the Dead Hand&lt;/a&gt;. Once it was activated, Perimeter would order the launch of long-range missiles at the United States if it detected nuclear detonations on Soviet soil and Soviet leaders couldn&amp;#x2019;t be reached. Like the Doomsday Machine in &amp;#x201C;Strangelove,&amp;#x201D; Perimeter was kept secret from the United States; its existence was not revealed until years after the Cold War ended. 
-&lt;/p&gt;
-
-&lt;p&gt;
-In retrospect, Kubrick&amp;#x2019;s black comedy provided a far more accurate description of the dangers inherent in nuclear command-and-control systems than the ones that the American people got from the White House, the Pentagon, and the mainstream media. 
-&lt;/p&gt;
-
-&lt;p&gt;
-&amp;#x201C;This is absolute madness, Ambassador,&amp;#x201D; President Merkin Muffley says in the film, after being told about the Soviets&amp;#x2019; automated retaliatory system. &amp;#x201C;Why should you build such a thing?&amp;#x201D; Fifty years later, that question remains unanswered, and &amp;#x201C;Strangelove&amp;#x201D; seems all the more brilliant, bleak, and terrifyingly on the mark. 
-&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;You can read Eric Schlosser&amp;#x2019;s &lt;a href=&quot;http://www.newyorker.com/online/blogs/newsdesk/2014/01/primary-sources-permissive-action-links-and-the-threat-of-nuclear-war.html&quot;&gt;guide to the long-secret documents&lt;/a&gt; that help explain the risks America took with its nuclear arsenal, and watch and read his &lt;a href=&quot;http://www.newyorker.com/online/blogs/newsdesk/2014/01/deconstructing-dr-strangelove.html&quot;&gt;deconstruction of clips from &amp;#x201C;Dr. Strangelove&amp;#x201D;&lt;/a&gt; and &lt;a href=&quot;http://www.newyorker.com/online/blogs/newsdesk/2014/01/always-never-nuclear-command-and-control.html&quot;&gt;from a little-seen film&lt;/a&gt; about permissive action links.&lt;/em&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Eric Schlosser is the author of &amp;#x201C;Command and Control.&amp;#x201D;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-</description>
-<title>
-Almost Everything in &quot;Dr. Strangelove&quot; Was True
-</title>
-</item>
-<item>
-<link>
 https://www.facebook.com/notes/mike-develin/debunking-princeton/10151947421191849
 </link>
 <description>
@@ -493,6 +22,225 @@ https://www.facebook.com/notes/mike-develin/debunking-princeton/1015194742119184
 </description>
 <title>
 Debunking Princeton
+</title>
+</item>
+<item>
+<author>
+Hanni Fakhoury
+</author>
+<link>
+http://www.wired.com/opinion/2014/01/using-computer-drug-war-decade-dangerous-excessive-punishment-consequences/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
+        &lt;div id=&quot;attachment_175171&quot; class=&quot;wp-caption alignnone&quot;&gt;&lt;a href=&quot;http://www.wired.com/opinion/wp-content/uploads/2014/01/167283295.jpg&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Matthew Keys, charged with violating the CFAA in federal court in Sacramento, April 2013. &lt;em&gt;Image: Max Whittaker/Getty&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Before Edward Snowden showed up, 2013 was shaping up as the year of reckoning for the much criticized federal anti-hacking statute, the Computer Fraud and Abuse Act (&amp;#x201C;CFAA&amp;#x201D;). The suicide of &lt;a href=&quot;http://www.wired.com/opinion/tag/aaron-swartz/&quot; target=&quot;_blank&quot;&gt;Aaron Swartz&lt;/a&gt; in January 2013 brought the CFAA into mainstream consciousness, so Congress held hearings about the case, and legislative fixes &lt;a href=&quot;http://www.wired.com/opinion/2013/06/aarons-law-is-finally-here/&quot;&gt;were introduced&lt;/a&gt; to change the law.&lt;/p&gt;
+&lt;p class=&quot;pullquote-right&quot;&gt;Recognizing the powerful capabilities of modern computing and networking has resulted in &amp;#x2018;cyber panic&amp;#x2019; in legislatures and prosecutor offices across the country.&lt;/p&gt;
+&lt;p&gt;Finally, there seemed to be a newfound scrutiny of CFAA prosecutions and punishment for accessing computer data without or in excess of &amp;#x201C;authorization&amp;#x201D; &amp;#x2014; which affected everyone from &lt;a href=&quot;http://www.wired.com/threatlevel/2013/08/bradley-manning-sentenced/&quot; target=&quot;_blank&quot;&gt;Chelsea Manning&lt;/a&gt; to &lt;a href=&quot;http://www.wired.com/threatlevel/2013/11/hammond-sentence/&quot; target=&quot;_blank&quot;&gt;Jeremy Hammond&lt;/a&gt;&amp;#xA0;to&amp;#xA0;&lt;a href=&quot;http://www.wired.com/opinion/2013/07/dont-hate-the-crime-hate-the-person-how-weevs-appeal-affects-all-of-us/&quot; target=&quot;_blank&quot;&gt;Andrew &amp;#x201C;Weev&amp;#x201D; Auernheimer&lt;/a&gt;&amp;#xA0;(disclosure: I&amp;#x2019;m one of his lawyers on appeal). Not to mention less illustrious personalities and everyday users, such as people who &lt;a href=&quot;http://www.wired.com/opinion/2013/07/the-catch-22-of-internet-commerce-and-privacy-could-mean-youre-the-bad-guy/&quot; target=&quot;_blank&quot;&gt;delete cookies&lt;/a&gt; from their browsers.&lt;/p&gt;
+&lt;p&gt;But unfortunately, not much has changed; if anything, the growing recognition of the powerful capabilities of modern computing and networking has resulted in a &amp;#x201C;cyber panic&amp;#x201D; in legislatures and prosecutor offices across the country. Instead of reexamination, we&amp;#x2019;ve seen aggressive charges and excessive punishment.&lt;/p&gt;
+&lt;p&gt;This cyber panic isn&amp;#x2019;t just a CFAA problem. In the zeal to crack down on cyberbullying, legislatures have passed overbroad laws criminalizing speech clearly protected by the First Amendment. This comes after one effort to use the CFAA to criminalize cyberbullying &amp;#x2014; built on the premise that &lt;i&gt;violating a website&amp;#x2019;s terms of service &lt;/i&gt;was unauthorized access, or the equivalent of hacking&amp;#xA0;&amp;#x2013; was &lt;a href=&quot;http://www.wired.com/threatlevel/2009/07/drew_court/&quot;&gt;thrown out&lt;/a&gt; as unconstitutionally vague.&lt;/p&gt;
+&lt;p&gt;The panic has even spread to how crime is investigated. To prevent digital contraband from coming into the United States, border officials can now &lt;a href=&quot;http://www.wired.com/threatlevel/2013/12/gadget-border-searches-2/&quot; target=&quot;_blank&quot;&gt;search&lt;/a&gt; electronic devices without any suspicion of wrongdoing. To get to illicit files on a seized computer, the government can force you to &lt;a href=&quot;http://www.wired.com/threatlevel/2013/08/forced-decryption-legal-battle/&quot; target=&quot;_blank&quot;&gt;decrypt&lt;/a&gt; your computer and threaten you with jail for noncompliance. To get information about one customer, the FBI can demand a service provider turn over the &lt;a href=&quot;http://www.wired.com/threatlevel/2013/11/lavabit-doj/&quot; target=&quot;_blank&quot;&gt;key&lt;/a&gt; that unlocks communications from all of the service&amp;#x2019;s customers. And let&amp;#x2019;s not even get started on what the NSA has been up to.&lt;/p&gt;
+&lt;h2&gt;The Problem of Excessive Punishment&lt;/h2&gt;
+&lt;p&gt;There&amp;#x2019;s no doubt that there are good intentions here: to catch bad guys, keep people safe, and preserve some order in a chaotic and changing world. But this &amp;#x201C;cyber panic,&amp;#x201D; particularly with the excessive and aggressive use of the CFAA, comes with a real consequence: locking up people in prison for years.&lt;/p&gt;
+
+&lt;p&gt;Take the case of &lt;a href=&quot;http://www.wired.com/threatlevel/2013/03/reuters-employee-indicted/&quot; target=&quot;_blank&quot;&gt;Matthew Keys&lt;/a&gt;, a former social media editor at Reuters, charged with violating the CFAA in federal court in Sacramento. He allegedly turned over the username and password of a server belonging to the Tribune Company to members of Anonymous, who made changes to the article of a headline in a &lt;em&gt;Los Angeles Times&lt;/em&gt; story online. Among other changes, the headline was changed from &amp;#x201C;Pressure builds in House to pass tax-cut package&amp;#x201D; to &amp;#x201C;Pressure builds in House to elect CHIPPY 1337.&amp;#x201D; It seems like a clear-cut case of vandalism, a prank that caused some damage but little other harm.&lt;/p&gt;
+&lt;p&gt;Under California law, physical &lt;a href=&quot;http://codes.lp.findlaw.com/cacode/PEN/3/1/14/s594&quot; target=&quot;_blank&quot;&gt;vandalism&lt;/a&gt;&amp;#xA0;&amp;#x2013; like spray painting graffiti on a building &amp;#x2014; can be punished as either a misdemeanor or a felony, with probation available for both types of charges. If probation is granted, the longest sentence a defendant can serve as a condition of &lt;a href=&quot;http://codes.lp.findlaw.com/cacode/PEN/3/2/8/1/s1203.1&quot; target=&quot;_blank&quot;&gt;probation&lt;/a&gt; is one year in county jail.&lt;/p&gt;
+&lt;p&gt;But look at the punishment awaiting Keys. He didn&amp;#x2019;t get charged with a misdemeanor; he got &lt;a href=&quot;https://ia601702.us.archive.org/34/items/gov.uscourts.caed.251237/gov.uscourts.caed.251237.1.0.pdf&quot; target=&quot;_blank&quot;&gt;indicted&lt;/a&gt; on three felony charges, for which he faces a harsh prison sentence. No, he won&amp;#x2019;t get anything close to the 10-year maximum. But a cursory calculation of his potential sentence under the federal sentencing guidelines suggest he&amp;#x2019;s looking at a sentence between 21 and 27 months &amp;#x2014; about three years of his life &amp;#x2014; if he decides to go to trial and loses.&lt;/p&gt;
+&lt;p&gt;Here are more details on how such sentencing works:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&amp;#x2026;Federal sentencing is based on two things: the seriousness of a crime and the person&amp;#x2019;s criminal history.&amp;#xA0;The two factors are plotted on a &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/5a_SenTab.htm&quot; target=&quot;_blank&quot;&gt;table&lt;/a&gt;, with the y-axis a scale of 1 to 43 &amp;#x201C;levels&amp;#x201D; that determines the seriousness of a crime, and the x-axis a scale of I to VI that measures criminal history. At sentencing, the judge must determine both scores, plot them on the table, and determine the sentencing range in months, which the court can follow or disregard at its own discretion.&lt;/p&gt;
+&lt;p&gt;&amp;#x2026;Someone like Keys, who has no criminal history, is in criminal history category I. The &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/2b1_1.htm&quot; target=&quot;_blank&quot;&gt;starting&lt;/a&gt; point for most CFAA crimes is level 6, which is low on the scale but can quickly increase.&lt;/p&gt;
+&lt;p&gt;&amp;#x2026;Assuming the allegations in Key&amp;#x2019;s &lt;a href=&quot;https://ia601600.us.archive.org/35/items/gov.uscourts.caed.251236/gov.uscourts.caed.251236.23.1.pdf&quot; target=&quot;_blank&quot;&gt;search warrant&lt;/a&gt; are correct, the Tribune company spent $17,650.40 to fix the damage, resulting in an increase of 4 levels for causing more than $10,000 and less than $30,000 in damage. Because Keys is charged with causing damage to a computer, he receives another 4 level increase. And because he likely abused a &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/3b1_3.htm&quot; target=&quot;_blank&quot;&gt;position of trust&lt;/a&gt;, he receives another 2 level increase, for a total offense level of 16 &amp;#x2014; which has a sentencing range between 21 and 27 months for a person in criminal history category I. (That places Keys in &amp;#x201C;Zone C&amp;#x201D; of the Sentencing Table, which means the Guidelines don&amp;#x2019;t authorize a grant of &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/5b1_1.htm&quot; target=&quot;_blank&quot;&gt;probation&lt;/a&gt;, though the judge could impose probation if she wanted to.)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;As a country and a criminal justice system, we&amp;#x2019;ve been down this road of excessive punishment before: with drugs. Prosecutors and lawmakers need to take a step back and think long and hard about whether we&amp;#x2019;re going down the same road with their zeal towards computer crimes.&lt;/p&gt;
+&lt;div&gt;
+
+
+&lt;div&gt;
+&lt;p&gt;Hanni Fakhoury is a former federal public defender and a current Staff Attorney at the Electronic Frontier Foundation (EFF) who focuses on criminal law, privacy, and free speech litigation and advocacy. Follow him on Twitter &lt;a href=&quot;https://twitter.com/HanniFakhoury&quot; target=&quot;_blank&quot;&gt;@hannifakhoury&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;p&gt;For many years, there was a radical disparity in how federal law treated crack and powder cocaine. A person who possessed 5 grams of crack cocaine could be charged with a felony. But it took 500 grams of powder cocaine to get the same felony punishment. This 100-to-1 ratio was born in the 1980s, when Congress was concerned that crack &amp;#x2014; predominantly used in urban areas by people of color &amp;#x2014; was becoming an epidemic and a violent one at that.&lt;/p&gt;
+&lt;p&gt;This extreme disparity only ensured that a disproportionate amount of people of color ended up in prison. Receiving little rehabilitation while incarcerated and struggling to find work or otherwise reintegrate into society once released, convicts would return to crime, get caught, and be sentenced as a recidivist. That meant a longer jail sentence and the continuation of a destructive cycle.&lt;/p&gt;
+&lt;p&gt;But over the last few years, there has been significant progress towards narrowing this gap. In 2010, Congress passed &amp;#x2014; and President Obama &lt;a href=&quot;http://thecaucus.blogs.nytimes.com/2010/08/03/obama-signs-law-narrowing-cocaine-sentencing-disparities/?_r=0&quot; target=&quot;_blank&quot;&gt;signed&lt;/a&gt; &amp;#x2014; legislation that reduced the 100-to-1 ratio down to 18-to-1. Attorney General Eric Holder upped the ante this past summer, &lt;a href=&quot;http://www.huffingtonpost.com/2013/08/12/eric-holder-drug-sentences_n_3744717.html&quot; target=&quot;_blank&quot;&gt;announcing&lt;/a&gt; a series of broader policy reforms that would work to reduce harsh drug sentences by giving prosecutors flexibility to avoid charging a defendant with crimes that carry mandatory minimum prison sentences. And at the end of last year, President Obama &lt;a href=&quot;http://www.bloomberg.com/news/2013-12-19/obama-cites-cocaine-law-disparity-in-commuting-sentences.html&quot; target=&quot;_blank&quot;&gt;pardoned&lt;/a&gt; thirteen people and commuted the sentences of eight prisoners who were sentenced under the old ratio and were therefore&amp;#xA0;serving long sentences for crack cocaine convictions.&lt;/p&gt;
+&lt;p&gt;These reforms took over 20 years.&amp;#xA0;But as technology marches faster than the slow pace of legal change, we don&amp;#x2019;t have that kind of time to apply the lessons learned from the failed &amp;#x201C;war on drugs&amp;#x201D; experiment to the growing wave of computer crime prosecutions.&lt;/p&gt;
+&lt;h2&gt;And It Doesn&amp;#x2019;t Even Work&lt;/h2&gt;
+&lt;p&gt;The government&amp;#x2019;s mindset is that technology and the internet can wreak havoc. Disseminating the login credentials of a powerful media company to vandalize a few websites, for example, has the potential to cause more damage than spray-painting graffiti on a highway sign.&lt;/p&gt;
+&lt;p&gt;That is undoubtedly true.&amp;#xA0;But will aggressive, excessive punishment really deter others here? This country&amp;#x2019;s experience with the war on drugs suggests the answer is a resounding no.&lt;/p&gt;
+&lt;p class=&quot;pullquote-left&quot;&gt;We shouldn&amp;#x2019;t let the government&amp;#x2019;s fear of computers justify disproportionate punishment.&lt;/p&gt;
+&lt;p&gt;The problem is pronounced with much of the politically motivated online crime that has splashed the headlines. As a generation of people who grew up plugged in and online realized there is no way to voice their complaints within the mainstream political establishment, they decided to take their protests to the medium they know best.&amp;#xA0;Harsh punishment is only going to reinforce and harden that generation&amp;#x2019;s pessimism towards the government.&lt;/p&gt;
+&lt;p&gt;This is not to say that &amp;#x201C;anything goes&amp;#x201D; online or that crimes should go unpunished. But we need to question whether locking people up for long periods of time &amp;#x2014; without addressing the root concerns about concentrated political power, civil liberties abuses, and transparency &amp;#x2014; will have the effect of deterrence or worse yet, a hardened cynicism that perpetuates the endless cycle of punishment. That&amp;#x2019;s true of even non-politically motivated cybercrime, or really, all crime &amp;#x2026; whether it involves a computer or not.&lt;/p&gt;
+&lt;p&gt;* * *&lt;/p&gt;
+&lt;p&gt;There may be hope yet.&lt;/p&gt;
+&lt;p&gt;Recently, 11 members of the &amp;#x201C;PayPal 14,&amp;#x201D; a &lt;a href=&quot;http://www.wired.com/threatlevel/2011/07/paypal-hack-arrests/&quot; target=&quot;_blank&quot;&gt;group&lt;/a&gt; of individuals affiliated with Anonymous who DDoS&amp;#x2019;d PayPal in 2010 to protest its refusal to process donations to Wikileaks, &lt;a href=&quot;http://www.huffingtonpost.com/2013/12/05/paypal-14-plea-deal_n_4392521.html&quot; target=&quot;_blank&quot;&gt;pleaded&lt;/a&gt; guilty to felony CFAA charges in federal court. But their sentences were put off for one year (rather than receiving tough prison sentences). If the defendants stay out of trouble during that time, the felony convictions will be dropped when they come back to court, and they&amp;#x2019;ll be sentenced to misdemeanors instead. Most of the defendants will avoid jail time, and will have to pay $5,600 to PayPal in restitution.&lt;/p&gt;
+&lt;p&gt;But for most of these defendants, the experience of going through a federal criminal prosecution is going to be enough to deter them from doing something similar again. Not to mention the financial penalties and misdemeanor convictions. And for those who aren&amp;#x2019;t deterred? The punishment will appropriately increase the next time. There&amp;#x2019;s just no need to excessively punish all wrongdoers.&lt;/p&gt;
+&lt;p&gt;We shouldn&amp;#x2019;t let the government&amp;#x2019;s fear of computers justify disproportionate punishment. The type of graduated punishment in the Paypal 14 case is routine in low-level, physical-world criminal cases brought in state courts throughout the country; it can work with computer crime too.&lt;/p&gt;
+&lt;p&gt;It&amp;#x2019;s time for the government to learn from its failed 20th century experiment over-punishing drugs and start making sensible decisions about high-tech punishment in the 21st century. It can&amp;#x2019;t afford to be behind when it comes to tech, especially as the impacts of &amp;#x201C;cyber-panic&amp;#x201D; on users &amp;#x2014; beyond hackers &amp;#x2014; are very real.&lt;/p&gt;
+            &lt;/div&gt;
+
+    
+&lt;/div&gt;
+</description>
+<title>
+The U.S. Crackdown on Hackers Is Our New War on Drugs
+</title>
+</item>
+<item>
+<link>
+http://www.fastcompany.com/3025372/if-the-immunity-project-crowdfunds-this-synthetic-aids-vaccine-theyll-offer-it-free-to-every
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;body prose twelve columns&quot;&gt;
+      &lt;p&gt;What happens when you combine Microsoft e-Science machine learning, Harvard thinking, and a new medical device to tackle HIV-AIDS? &lt;a href=&quot;http://www.immunityproject.org/&quot; target=&quot;_blank&quot;&gt; The Immunity Project&lt;/a&gt;, a not-for-profit company developing the first ever synthetic HIV vaccine.&lt;/p&gt;
+
+&lt;p&gt;The Immunity project&amp;#x2019;s work is based on the discovery that there are people born with a natural immunity to HIV. After identifying these &quot;HIV controllers&quot; in the population, the team &lt;a href=&quot;http://www.fastcompany.com/1842447/microsoft-virus-fighter-spam-may-be-more-difficult-stop-hiv&quot; target=&quot;_self&quot;&gt;applied machine learning&lt;/a&gt; to reverse-engineer the biological processes HIV controllers use to defeat the virus, mimicking natural immunity.&lt;/p&gt;
+
+&lt;figure class=&quot;inline-large inline&quot;&gt;
+&lt;img src=&quot;http://f.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2014/01/3025372-inline-i-2-the-worlds-first-free-synthetic-aids-vaccine-crowdfunding-starts-today.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;They&amp;#x2019;ve developed a vaccine prototype and completed preliminary laboratory testing. And today, they went live with a &lt;a href=&quot;https://pledge.immunityproject.org/the-free-hiv-aids-vaccine&quot; target=&quot;_blank&quot;&gt;crowdfunding campaign&lt;/a&gt; to support a demonstration aimed to prove the vaccine can successfully immunize human blood. It's the last step before they begin Phase 1 human clinical trials with the FDA. Their goal is to give the vaccine away to the world, for free.&lt;/p&gt;
+
+&lt;p&gt;In order to complete this experiment by the end of March of this year, they need to raise $482,000 in the next 30 days. If successful, this will help solve a global problem that is still epidemic. AIDS kills nearly 5,000 people a day. While there are several contenders in the race to create a successful HIV vaccine, this one has an excellent shot at working. It's also safer for candidates than vaccines made with killed viruses or live viruses. It requires no refrigeration and is designed to be delivered via nasal inhaler, solving distribution challenges in the countries with the highest HIV infection rates.&lt;/p&gt;
+
+&lt;figure class=&quot;inline-large inline&quot;&gt;
+&lt;img src=&quot;http://e.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2014/01/3025372-inline-i-1-the-worlds-first-free-synthetic-aids-vaccine-crowdfunding-starts-today.jpg&quot; alt=&quot;&quot;&gt;&lt;figcaption&gt;Dr. Reid Rubsamen alongside other Immunity Project team members.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The vaccine was originally developed in a partnership between Dr. Bruce Walker from Harvard, Dr. David Heckerman, inventor of the spam filter and AAAI fellow and machine learning/artificial intelligence scientist at Microsoft e-Science Research, and Dr. Reid Rubsamen, drug delivery system expert and founder of Flow Pharma. The project was billed as a great example of multi-disciplinary innovation. Apparently, Silicon Valley accelerator &lt;a href=&quot;http://www.fastcompany.com/company/y-combinator&quot; target=&quot;_self&quot;&gt;Y Combinator&lt;/a&gt; agreed--on January 6, Immunity Project became part of the  Winter 2014 Y Combinator class. According to partner Sam Altman, &quot;This is certainly a new sort of company for us, but it's the kind of crazy idea we like.&amp;#x201D;&lt;/p&gt;
+
+&lt;p&gt;&amp;#x201C;Imagine a world where vaccines are developed for a tiny fraction of the big pharma cost and given away for free to everyone who needs them,&amp;#x201D; says Altman. &amp;#x201C;We thought that work done by Microsoft Research that underlies this was really interesting, and we're always interested in areas where software can change how things are done. Technology means doing more with less; this is an extreme example. I spent a fair amount of time with this group during their application process and am personally donating both money and blood.&quot;&lt;/p&gt;
+    &lt;/div&gt;
+
+    
+      
+        &lt;p class=&quot;twelve columns poster-credit&quot;&gt;
+          &lt;span&gt;[Photos courtesy of Immunity]&lt;/span&gt;
+        &lt;/p&gt;
+      
+    
+
+    
+
+  &lt;/div&gt;
+</description>
+<title>
+If Immunity Project (YC W14) succeeds, they'll offer AIDS vaccine for free
+</title>
+</item>
+<item>
+<author>
+Xavier Snelgrove
+</author>
+<link>
+http://minuum.com/model-your-users-algorithms-behind-the-minuum-keyboard/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+		&lt;p&gt;When you&amp;#x2019;re creating a new keyboard technology, there&amp;#x2019;s a ton of work that goes into both the interaction design, and into the algorithms behind the scenes. While the design of our keyboard is best understood simply by using it, the real &amp;#x201C;magic&amp;#x201D; that makes our one-dimensional keyboard possible lies in the statistical algorithms that make it tick.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;#x2019;t already &lt;a href=&quot;http://www.youtube.com/watch?v=niV2KCkKmRw&quot;&gt;seen&lt;/a&gt; or &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.whirlscape.minuumkeyboard&amp;amp;utm_source=blog&amp;amp;utm_medium=post&amp;amp;utm_campaign=techpost&quot;&gt;used&lt;/a&gt; the Minuum keyboard, the brief summary is that we let you compress the conventional keyboard down to just one row of keys, opening up the possibility of typing anywhere where you can measure one dimension of input.&lt;/p&gt;
+&lt;p&gt;&amp;#xA0;&lt;br&gt;
+&lt;img class=&quot;alignnone size-large wp-image-356&quot; alt=&quot;keyboard_for_blog_post&quot; src=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_for_blog_post-1024x581.png&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
+&lt;p&gt;By shrinking the keyboard in this way we soon had to grapple with a basic fact: &lt;strong&gt;human input is imprecise&lt;/strong&gt;, and the faster you type &lt;a href=&quot;http://en.wikipedia.org/wiki/Fitts's_law&quot;&gt;the more imprecise it gets&lt;/a&gt;. Rather than trying to improve user precision, we instead embrace sloppy typing.&lt;/p&gt;
+&lt;p&gt;This only works because we use &lt;strong&gt;disambiguation&lt;/strong&gt; in addition to &lt;strong&gt;auto-correction&lt;/strong&gt;. While &amp;#x201C;auto-correction&amp;#x201D; implies that you made a mistake that needed correcting, &amp;#x201C;disambiguation&amp;#x201D; accepts the fundamental ambiguity of human interaction, and uses an understanding of language to narrow things down. Think of it like speech recognition: in a noisy bar, the problem isn&amp;#x2019;t that your friends are speaking incorrectly; &lt;a href=&quot;http://en.wikipedia.org/wiki/Mondegreen&quot;&gt;human speech is ambiguous&lt;/a&gt;, and the noisiness of the environment sure doesn&amp;#x2019;t help. You can only understand them because you have prior knowledge of the sorts of things they are likely to say.&lt;/p&gt;
+&lt;p&gt;Which leads us into the wonderful world of&amp;#x2026;&lt;/p&gt;
+&lt;h2&gt;Bayesian statistics!&lt;/h2&gt;
+&lt;p&gt;Minuum combines two factors to evaluate a word, a &lt;strong&gt;spatial model&lt;/strong&gt; which understands how precise you are when you tap on the keyboard (we perform user studies to measure this), and a &lt;strong&gt;language model&lt;/strong&gt; which understands what words you&amp;#x2019;re likely to use (we build this from huge bodies of real-world text). If you tap on the keyboard five times, and those taps somewhat resemble the word &amp;#x201C;hello&amp;#x201D;, we use the following &lt;a href=&quot;http://en.wikipedia.org/wiki/Bayes_theorem&quot;&gt;Bayesian&lt;/a&gt; equation to test how likely it is that you wanted the word &amp;#x201C;hello&amp;#x201D;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://minuum.com/wp-content/uploads/2014/01/eq1-1024x98.png&quot; alt=&quot;eq&quot; width=&quot;640&quot; class=&quot;alignnone size-large wp-image-362&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;#x2019;s break that equation down: the probability that you wanted the word &amp;#x201C;hello&amp;#x201D; given those taps, is proportional to the product of the spatial and language terms. The spatial term gives the likelihood that wanting to type the word &amp;#x201C;hello&amp;#x201D; could have led you to input that sequence of taps; the language term gives the probability that you would ever type the word &amp;#x201C;hello&amp;#x201D;.&lt;/p&gt;
+&lt;p&gt;Minuum&amp;#x2019;s job is to find the word that maximizes &lt;strong&gt;p(word|taps)&lt;/strong&gt;. In the example above, Minuum is generating a score for the word &amp;#x201C;hello&amp;#x201D;. To find the best word, Minuum would compare this score to the scores for other words, calculated the same way. The closer your taps are to the correct locations for a given word, the greater the spatial term for that word; the more common a word in English (or French, German, Italian or Spanish if you have one of those languages enabled) the greater the language term.&lt;/p&gt;
+&lt;h3&gt;A simple spatial model&lt;/h3&gt;
+&lt;p&gt;Minuum uses a fairly complicated spatial model (remember the spatial model represents how people tend to &lt;em&gt;actually&lt;/em&gt; type on the keyboard). This model can handle many kinds of imprecision, such as extra and omitted characters. A simple model that works surprisingly well, however, is to treat the probability density of a tap as a &lt;a href=&quot;http://en.wikipedia.org/wiki/Normal_distribution&quot;&gt;Gaussian&lt;/a&gt; centered at the target character.&lt;/p&gt;
+
+&lt;p&gt;This shows that if you mean to type a &amp;#x201C;t&amp;#x201D;, the most likely point you tap on the keyboard is right on the &amp;#x201C;t&amp;#x201D;, but there is still a significant probability that you tap on a nearby location closer to the &amp;#x201C;v&amp;#x201D; or the &amp;#x201C;g&amp;#x201D;.&lt;/p&gt;
+&lt;h3&gt;A simple language model&lt;/h3&gt;
+&lt;p&gt;The simplest language model is just a count of word frequencies. Take a large body of text (a &lt;em&gt;corpus&lt;/em&gt;), and count how many times each word shows up.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Word&lt;/th&gt;
+&lt;th&gt;Frequency&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;if&lt;/td&gt;
+&lt;td&gt;1,115,786&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IV&lt;/td&gt;
+&lt;td&gt;5335&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To compare two potential words, say &amp;#x201C;if&amp;#x201D; and &amp;#x201C;IV&amp;#x201D;, according to the above table &amp;#x201C;if&amp;#x201D; is around 200 times more likely to be typed than &amp;#x201C;IV&amp;#x201D;.&lt;/p&gt;
+&lt;p&gt;This simple model, like the simple spatial model, works quite well in practice. Further improvements can come from using context such as the word immediately before the current entry.&lt;/p&gt;
+&lt;div dir=&quot;ltr&quot;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Word(s)&lt;/th&gt;
+&lt;th&gt;Frequency&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;what if&lt;/td&gt;
+&lt;td&gt;13,207&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;what of&lt;/td&gt;
+&lt;td&gt;1,380&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;The phrase &amp;#x201C;what if&amp;#x201D; is about ten times more common than &amp;#x201C;what of&amp;#x201D;, so even though &amp;#x201C;if&amp;#x201D; and &amp;#x201C;of&amp;#x201D; are both very common words, given the context &amp;#x201C;what&amp;#x201D;, we can confidently guess that &amp;#x201C;if&amp;#x201D; is the intended word.&lt;/p&gt;
+&lt;h2&gt;Words are high-dimensional points&lt;/h2&gt;
+&lt;p&gt;I understand problems best when I can picture them geometrically. My intuitive understanding of the disambiguation problem finally clicked when we had an insight: words are points in high-dimensional space, and typing is a search for those words! Skeptical? Let me explain.&lt;br&gt;
+Minuum is a single line, so tapping your finger on Minuum can be represented by one number, In the figure below, for instance, a tap on &amp;#x201C;q&amp;#x201D; could clock in between 0 and 0.04, and a tap on &amp;#x201C;p&amp;#x201D; at 0.98 to 1.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_line.png&quot;&gt;&lt;img alt=&quot;keyboard_line&quot; src=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_line.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A continuum of letters from 0.0 from 1.0&lt;/p&gt;
+&lt;p&gt;A two-letter word, consists of two taps, and so can be represented as a pair of numbers. The word &amp;#x201C;an&amp;#x201D;, typed perfectly, is represented as {0.06, 0.67}, and the word &amp;#x201C;if&amp;#x201D; as {0.83, 0.40}. The figure belows shows the positions of some common 2-letter words in this &amp;#x201C;word space&amp;#x201D;.&lt;/p&gt;
+
+&lt;p&gt;The exact same logic applies to longer words: &amp;#x201C;and&amp;#x201D; is {0.06, 0.67, 0.29}, &amp;#x201C;minuum&amp;#x201D; is {0.79, 0.83, 0.67, 0.71, 0.71, 0.79}. Above three dimensions, unfortunately, it&amp;#x2019;s much harder to visualize.&lt;/p&gt;
+&lt;p&gt;A user&amp;#x2019;s sequence of taps is also a point in this word space, which we can call the input point. The &amp;#x201C;closer&amp;#x201D; a word&amp;#x2019;s point is to the input point, the higher that word will score in the spatial term of the Bayesian equation above. Odds are, whatever you meant to type is &amp;#x201C;nearby&amp;#x201D; to what you actually typed in this space.&lt;/p&gt;
+&lt;h2&gt;So let&amp;#x2019;s visualize some words!&lt;/h2&gt;
+&lt;p&gt;We can generate a full map of the top two-letter words recommended by Minuum, based on any possible pair of input taps; here, more common words tend to end up with larger areas. By hovering over the graph, you can see what other words would be recommended as alternative candidates.&lt;/p&gt;
+&lt;div id=&quot;voronoiA&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Two-letter predictions with no context&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;voronoiB&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Two-letter word predictions with previous word &amp;#x201C;what&amp;#x201D;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;
+Toggle the context button above to see what happens when we use a better language model to account for the user having previously typed the word &amp;#x201C;what&amp;#x201D;. Clearly, &amp;#x201C;if&amp;#x201D; is more likely and &amp;#x201C;in&amp;#x201D; is less likely to be recommended when we account for context, because &amp;#x201C;what if&amp;#x201D; is more common than &amp;#x201C;what of&amp;#x201D;, while &amp;#x201C;what in&amp;#x201D; is less common than &amp;#x201C;what I&amp;#x2019;m&amp;#x201D;.&lt;sup&gt;&lt;a id=&quot;#foot-techpost-1-src&quot; href=&quot;http://minuum.com/model-your-users-algorithms-behind-the-minuum-keyboard/#foot-techpost-1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Of course, Minuum uses more context than just the previous word, and also learns your personal typing tendencies over time, so this picture is different for each user.&lt;/p&gt;
+&lt;h2&gt;Statistical modelling for better interfaces&lt;/h2&gt;
+&lt;p&gt;All this complexity allows Minuum to shed some constraints of conventional keyboards (working even as a one-row keyboard on a 1&amp;#x201D; screen!)&lt;/p&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/lA6ey1SzHdM&quot; height=&quot;270&quot; width=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;What does this show? That interfaces are better when they understand the user! Google Instant is awesome because it knows what you&amp;#x2019;re looking for after a couple keystrokes. Siri would be impossible without complex language modeling. Minuum can simplify keyboards only by combining strong spatial and language models of real human input. If you&amp;#x2019;re dealing with a complex interface, consider how you can statistically model user behaviour to simplify the interaction required.&lt;/p&gt;
+&lt;div&gt;Want to try it out? &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.whirlscape.minuumkeyboard&amp;amp;utm_source=blog&amp;amp;utm_medium=post&amp;amp;utm_campaign=techpost&quot;&gt;Download Minuum for Android&lt;/a&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+			&lt;/div&gt;
+
+	&lt;/div&gt;
+</description>
+<title>
+Model Your Users: Algorithms Behind the Minuum Keyboard
+</title>
+</item>
+<item>
+<link>
+http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY14/Q2/default.aspx
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;main-content&quot;&gt;                         &lt;div id=&quot;con_Main_BG&quot; class=&quot;con_main_bg&quot;&gt;&lt;div id=&quot;maincon_tab_content&quot; class=&quot;maincon_tab_content&quot;&gt;&lt;table class=&quot;tc_middle_con&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;mcon_left_panel&quot;&gt;&lt;div class=&quot;mcon_left_top&quot;&gt;&lt;div class=&quot;lt_content&quot;&gt;&lt;div class=&quot;lefttopPanel&quot;&gt;&lt;div id=&quot;divErLinks&quot;&gt;&lt;div class=&quot;divIRERFilterList &quot;&gt;&lt;div class=&quot;head&quot;&gt;&lt;p class=&quot;title&quot;&gt;Browse Earnings Releases&lt;/p&gt;&lt;/div&gt;&lt;div id=&quot;ctl00_IRERFilterList1_filterListPlaceholder&quot; class=&quot;listItems&quot;&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY14/Q2/default.aspx&quot;&gt;Fiscal Year 2014 Q2&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY14/Q1/default.aspx&quot;&gt;Fiscal Year 2014 Q1&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY13/Q4/default.aspx&quot;&gt;Fiscal Year 2013 Q4&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY13/Q3/default.aspx&quot;&gt;Fiscal Year 2013 Q3&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;a href=&quot;http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY13/Q2/default.aspx&quot;&gt;Fiscal Year 2013 Q2&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;divErFilter&quot;&gt;&lt;div&gt;&lt;img src=&quot;http://www.microsoft.com/shared/templates/components/IRERComboxFilter/ButtonGoMouseHover.png&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/shared/templates/components/IRERComboxFilter/DropDownMouseHover.png&quot;&gt;&lt;/div&gt;&lt;div class=&quot;FYFilter&quot;&gt;&lt;div&gt;&lt;label&gt;          Fiscal Year:        &lt;/label&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;label&gt;            Quarter:          &lt;/label&gt;&lt;div&gt;&lt;/div&gt;&lt;div class=&quot;filter_buttons&quot;&gt;&lt;div id=&quot;btnResetFilter&quot;&gt;&lt;a href=&quot;&quot;&gt;Reset Filter&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;                &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;lb_top_bg&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div id=&quot;divStock&quot;&gt;&lt;div class=&quot;MicrosoftCorp&quot;&gt;&lt;div class=&quot;MicrosoftCorp_body&quot;&gt;&lt;p class=&quot;MicrosoftCorp_timespan&quot;&gt;&lt;span&gt;10am&lt;/span&gt;&lt;span&gt;12pm&lt;/span&gt;&lt;span&gt;2pm&lt;/span&gt;&lt;span&gt;4pm&lt;/span&gt;&lt;/p&gt;&lt;div class=&quot;MicrosoftCorp_stockblock&quot;&gt;&lt;a href=&quot;http://investing.money.msn.com/investments/stock-price?Symbol=msft&quot; target=&quot;_blank&quot; title=&quot;Intraday Chart of the MSFT Stock Price&quot;&gt;&lt;img id=&quot;MicrosoftCorp_stockimage&quot; src=&quot;http://charts.money.msn.com/chart/generateChart.ashx?ticker=126.1.MSFT&amp;amp;chart=oneday&amp;amp;interval=5&amp;amp;cfg=LineC:5f5f5f%7CFilled:1%7CBGColor:FFFFFF%7CFillC:5f5f5f%7CShowLg:0%7CshowPreC:1%7CGF:7&amp;amp;W=152&amp;amp;H=86&quot; alt=&quot;Intraday Chart of the MSFT Stock Price&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;a href=&quot;http://investing.money.msn.com/investments/stock-price?Symbol=msft&quot; target=&quot;_blank&quot; title=&quot;Go to detailed stock page&quot;&gt;&lt;div class=&quot;MicrosoftCorp_values&quot;&gt;&lt;p class=&quot;MicrosoftCorp_left&quot;&gt;Volume&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;MicrosoftCorp_values&quot;&gt;&lt;p class=&quot;MicrosoftCorp_left&quot;&gt;Market Cap&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;MicrosoftCorp_values&quot;&gt;&lt;p class=&quot;MicrosoftCorp_left&quot;&gt;52 Week High&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;MicrosoftCorp_values&quot;&gt;&lt;p class=&quot;MicrosoftCorp_left&quot;&gt;52 Week Low&amp;#xA0;&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;&lt;div class=&quot;MicrosoftCorp_footer&quot;&gt;&lt;/div&gt;&lt;div class=&quot;MicrosoftCorp_providor&quot;&gt;          Supplied by &lt;a href=&quot;http://www.morningstar.com/&quot; target=&quot;_blank&quot; title=&quot;Go to Morningstar Inc data site&quot;&gt;Morningstar Inc&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;divReport&quot;&gt;&lt;div&gt;&lt;a title=&quot;2013 Annual Report&quot; target=&quot;_blank&quot; href=&quot;http://www.microsoft.com/investor/reports/ar13/index.html&quot;&gt;&lt;img alt=&quot;2013 Annual Report&quot; src=&quot;http://www.microsoft.com/global/investor/PublishingImages/AnnualReports/annual_report2013.png&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;a href=&quot;&quot; id=&quot;fbpgbt&quot; class=&quot;hlig&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/Global/bubble.png&quot; alt=&quot;Feedback&quot;&gt;Feedback      &lt;/a&gt;&lt;div class=&quot;hlig&quot; id=&quot;fbpgdg&quot;&gt;&lt;a title=&quot;Close&quot; class=&quot;hlig&quot; id=&quot;fbpgdgcl&quot; href=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;mcon_middle_bg&quot;&gt;&lt;/td&gt;&lt;td class=&quot;mcon_right_panel&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;div class=&quot;rtl_content&quot; id=&quot;div_rtl_content&quot;&gt;&lt;div id=&quot;divMainContent&quot;&gt;&lt;div&gt;&lt;div class=&quot;divEventPresentation&quot;&gt;&lt;p class=&quot;Title global_CenterHeader&quot;&gt;Earnings Release FY14 Q2&lt;/p&gt;&lt;div class=&quot;ReportDetails&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;rtr_content&quot;&gt;&lt;div class=&quot;rtr_con_top&quot; id=&quot;div_rtr_con_top&quot;&gt;&lt;div id=&quot;divSocial&quot;&gt;&lt;div class=&quot;IRSocialContainer&quot;&gt;&lt;div class=&quot;IRSocialMini&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://m.microsoft.com/investor&quot; target=&quot;_self&quot; title=&quot;Mobile&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Mobile.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.microsoft.com/investor/Events/upcoming.aspx&quot; target=&quot;_self&quot; title=&quot;Upcoming Events&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Calender.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.microsoft.com/investor/InvestorServices/RSS/default.aspx&quot; target=&quot;_self&quot; title=&quot;Investor Relations feeds&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Feed.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://investor.shareholder.com/msft/alerts/alerts.cfm&quot; target=&quot;_blank&quot; title=&quot;Email Alerts&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Email.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://www.facebook.com/Microsoft#!/Microsoft?v=wall&quot; target=&quot;_blank&quot; title=&quot;Follow us on Facebook&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Facebook.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://twitter.com/Microsoft&quot; target=&quot;_blank&quot; title=&quot;Follow us on Twitter&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/global/investor/PublishingImages/IRSocialLinkImages/ICON_Twitter.png&quot; width=&quot;20&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a id=&quot;eventContainer&quot; href=&quot;&quot; title=&quot;Share&quot;&gt;&lt;/a&gt;&lt;div id=&quot;sharePopupDiv&quot;&gt;&lt;div class=&quot;shareArrow&quot;&gt;&lt;img src=&quot;http://www.microsoft.com/shared/templates/components/IRSocial/images/Share_UpArrow.png&quot; alt=&quot;Share&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;rtr_con_bottom&quot; id=&quot;div_rtr_con_bottom&quot;&gt;&lt;div class=&quot;rtr_bottom&quot;&gt;&lt;div id=&quot;divSpeaker&quot;&gt;&lt;div class=&quot;divIRList &quot;&gt;&lt;div class=&quot;head&quot;&gt;&lt;p class=&quot;title&quot;&gt;Download Files&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;listItems&quot;&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-ppt&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/SlidesFY14Q2.pptx&quot; target=&quot;_self&quot;&gt;Earnings Call Slides&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-word&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/Microsoft_Q2_2014_PreparedRemarks.docx&quot; target=&quot;_self&quot;&gt;Earnings Call Transcript&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-excel&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/FinancialStatementFY14Q2.xlsx&quot; target=&quot;_self&quot;&gt;Financial Statements&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-ppt&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/OutlookFY14Q2.pptx&quot; target=&quot;_self&quot;&gt;Outlook&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-word&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/PressReleaseFY14Q2.docx&quot; target=&quot;_self&quot;&gt;Press Release&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-word&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/global/Investor/RenderingAssets/Downloads/FY14/Q2/MSFT_FY14Q2_10Q.docx&quot; target=&quot;_self&quot;&gt;10Q&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;divRelInfo&quot;&gt;&lt;div class=&quot;divIRList RelatedInfo&quot;&gt;&lt;div class=&quot;head&quot;&gt;&lt;p class=&quot;title&quot;&gt;Related Information&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;listItems&quot;&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-square&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://sites.media-server.com/mmc-custom-portals/microsoft/2014-01-23_earnings/index.php?p=qgcdfzck&quot; target=&quot;_blank&quot;&gt;Webcast&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-square&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/investor/SEC/default.aspx&quot; target=&quot;_self&quot;&gt;SEC Filings&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;item&quot;&gt;&lt;div class=&quot;itemLink itemlink-square&quot;&gt;&lt;a name=&quot;shareholder&quot; href=&quot;http://www.microsoft.com/investor/SEC/default.aspx?year=2014&amp;amp;filing=xbrl&quot; target=&quot;_self&quot;&gt;XBRL&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;divErSchedule&quot;&gt;&lt;div class=&quot;divIRList ERSchedule&quot;&gt;&lt;div class=&quot;head&quot;&gt;&lt;p class=&quot;title&quot;&gt;FY14 Earnings Release Schedule&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;listItems&quot;&gt;&lt;div class=&quot;item text&quot;&gt;&lt;p class=&quot;itemLink&quot;&gt;Q3-Thursday, April 24&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;rb_content&quot;&gt;&lt;div&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;rb_notice&quot;&gt;&lt;div id=&quot;footNotice&quot; class=&quot;noticeStyle&quot;&gt;&lt;em&gt;IMPORTANT NOTICE TO USERS (summary only, &lt;/em&gt;&lt;em&gt;&lt;a href=&quot;http://www.microsoft.com/global/investor/RenderingAssets/Resources/LongDisclaimer.html&quot;&gt;click here&lt;/a&gt;&amp;#xA0;&lt;/em&gt;&lt;em&gt;for full text of notice); &lt;/em&gt;All information is unaudited unless otherwise noted or accompanied by an audit opinion and is subject to the more comprehensive information contained in our SEC reports and filings. We do not endorse third-party information. All information speaks as of the last fiscal quarter or year for which we have filed a Form 10-K or 10-Q, or for historical information&amp;#xA0;the date or period expressly indicated in or with such information. We undertake no duty to update the information. Forward-looking statements are subject to&amp;#xA0;risks and uncertainties&amp;#xA0;described in our &lt;a href=&quot;http://www.microsoft.com/investor/SEC/default.aspx?startdate=7/1/2013&amp;amp;enddate=6/30/2014&amp;amp;filing=xbrl&quot;&gt;Forms 10-Q and 10-K&lt;/a&gt;.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;                &lt;/div&gt;                &lt;/div&gt;
+</description>
+<title>
+Microsoft Reports Record Revenue of $24.52 Billion in Second Quarter
 </title>
 </item>
 </channel>
