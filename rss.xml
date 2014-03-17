@@ -15,225 +15,6 @@ myread
 </description>
 <item>
 <link>
-https://www.facebook.com/notes/mike-develin/debunking-princeton/10151947421191849
-</link>
-<description>
-
-</description>
-<title>
-Debunking Princeton
-</title>
-</item>
-<item>
-<author>
-Hanni Fakhoury
-</author>
-<link>
-http://www.wired.com/opinion/2014/01/using-computer-drug-war-decade-dangerous-excessive-punishment-consequences/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry&quot;&gt;
-        &lt;div id=&quot;attachment_175171&quot; class=&quot;wp-caption alignnone&quot;&gt;&lt;a href=&quot;http://www.wired.com/opinion/wp-content/uploads/2014/01/167283295.jpg&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Matthew Keys, charged with violating the CFAA in federal court in Sacramento, April 2013. &lt;em&gt;Image: Max Whittaker/Getty&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Before Edward Snowden showed up, 2013 was shaping up as the year of reckoning for the much criticized federal anti-hacking statute, the Computer Fraud and Abuse Act (&amp;#x201C;CFAA&amp;#x201D;). The suicide of &lt;a href=&quot;http://www.wired.com/opinion/tag/aaron-swartz/&quot; target=&quot;_blank&quot;&gt;Aaron Swartz&lt;/a&gt; in January 2013 brought the CFAA into mainstream consciousness, so Congress held hearings about the case, and legislative fixes &lt;a href=&quot;http://www.wired.com/opinion/2013/06/aarons-law-is-finally-here/&quot;&gt;were introduced&lt;/a&gt; to change the law.&lt;/p&gt;
-&lt;p class=&quot;pullquote-right&quot;&gt;Recognizing the powerful capabilities of modern computing and networking has resulted in &amp;#x2018;cyber panic&amp;#x2019; in legislatures and prosecutor offices across the country.&lt;/p&gt;
-&lt;p&gt;Finally, there seemed to be a newfound scrutiny of CFAA prosecutions and punishment for accessing computer data without or in excess of &amp;#x201C;authorization&amp;#x201D; &amp;#x2014; which affected everyone from &lt;a href=&quot;http://www.wired.com/threatlevel/2013/08/bradley-manning-sentenced/&quot; target=&quot;_blank&quot;&gt;Chelsea Manning&lt;/a&gt; to &lt;a href=&quot;http://www.wired.com/threatlevel/2013/11/hammond-sentence/&quot; target=&quot;_blank&quot;&gt;Jeremy Hammond&lt;/a&gt;&amp;#xA0;to&amp;#xA0;&lt;a href=&quot;http://www.wired.com/opinion/2013/07/dont-hate-the-crime-hate-the-person-how-weevs-appeal-affects-all-of-us/&quot; target=&quot;_blank&quot;&gt;Andrew &amp;#x201C;Weev&amp;#x201D; Auernheimer&lt;/a&gt;&amp;#xA0;(disclosure: I&amp;#x2019;m one of his lawyers on appeal). Not to mention less illustrious personalities and everyday users, such as people who &lt;a href=&quot;http://www.wired.com/opinion/2013/07/the-catch-22-of-internet-commerce-and-privacy-could-mean-youre-the-bad-guy/&quot; target=&quot;_blank&quot;&gt;delete cookies&lt;/a&gt; from their browsers.&lt;/p&gt;
-&lt;p&gt;But unfortunately, not much has changed; if anything, the growing recognition of the powerful capabilities of modern computing and networking has resulted in a &amp;#x201C;cyber panic&amp;#x201D; in legislatures and prosecutor offices across the country. Instead of reexamination, we&amp;#x2019;ve seen aggressive charges and excessive punishment.&lt;/p&gt;
-&lt;p&gt;This cyber panic isn&amp;#x2019;t just a CFAA problem. In the zeal to crack down on cyberbullying, legislatures have passed overbroad laws criminalizing speech clearly protected by the First Amendment. This comes after one effort to use the CFAA to criminalize cyberbullying &amp;#x2014; built on the premise that &lt;i&gt;violating a website&amp;#x2019;s terms of service &lt;/i&gt;was unauthorized access, or the equivalent of hacking&amp;#xA0;&amp;#x2013; was &lt;a href=&quot;http://www.wired.com/threatlevel/2009/07/drew_court/&quot;&gt;thrown out&lt;/a&gt; as unconstitutionally vague.&lt;/p&gt;
-&lt;p&gt;The panic has even spread to how crime is investigated. To prevent digital contraband from coming into the United States, border officials can now &lt;a href=&quot;http://www.wired.com/threatlevel/2013/12/gadget-border-searches-2/&quot; target=&quot;_blank&quot;&gt;search&lt;/a&gt; electronic devices without any suspicion of wrongdoing. To get to illicit files on a seized computer, the government can force you to &lt;a href=&quot;http://www.wired.com/threatlevel/2013/08/forced-decryption-legal-battle/&quot; target=&quot;_blank&quot;&gt;decrypt&lt;/a&gt; your computer and threaten you with jail for noncompliance. To get information about one customer, the FBI can demand a service provider turn over the &lt;a href=&quot;http://www.wired.com/threatlevel/2013/11/lavabit-doj/&quot; target=&quot;_blank&quot;&gt;key&lt;/a&gt; that unlocks communications from all of the service&amp;#x2019;s customers. And let&amp;#x2019;s not even get started on what the NSA has been up to.&lt;/p&gt;
-&lt;h2&gt;The Problem of Excessive Punishment&lt;/h2&gt;
-&lt;p&gt;There&amp;#x2019;s no doubt that there are good intentions here: to catch bad guys, keep people safe, and preserve some order in a chaotic and changing world. But this &amp;#x201C;cyber panic,&amp;#x201D; particularly with the excessive and aggressive use of the CFAA, comes with a real consequence: locking up people in prison for years.&lt;/p&gt;
-
-&lt;p&gt;Take the case of &lt;a href=&quot;http://www.wired.com/threatlevel/2013/03/reuters-employee-indicted/&quot; target=&quot;_blank&quot;&gt;Matthew Keys&lt;/a&gt;, a former social media editor at Reuters, charged with violating the CFAA in federal court in Sacramento. He allegedly turned over the username and password of a server belonging to the Tribune Company to members of Anonymous, who made changes to the article of a headline in a &lt;em&gt;Los Angeles Times&lt;/em&gt; story online. Among other changes, the headline was changed from &amp;#x201C;Pressure builds in House to pass tax-cut package&amp;#x201D; to &amp;#x201C;Pressure builds in House to elect CHIPPY 1337.&amp;#x201D; It seems like a clear-cut case of vandalism, a prank that caused some damage but little other harm.&lt;/p&gt;
-&lt;p&gt;Under California law, physical &lt;a href=&quot;http://codes.lp.findlaw.com/cacode/PEN/3/1/14/s594&quot; target=&quot;_blank&quot;&gt;vandalism&lt;/a&gt;&amp;#xA0;&amp;#x2013; like spray painting graffiti on a building &amp;#x2014; can be punished as either a misdemeanor or a felony, with probation available for both types of charges. If probation is granted, the longest sentence a defendant can serve as a condition of &lt;a href=&quot;http://codes.lp.findlaw.com/cacode/PEN/3/2/8/1/s1203.1&quot; target=&quot;_blank&quot;&gt;probation&lt;/a&gt; is one year in county jail.&lt;/p&gt;
-&lt;p&gt;But look at the punishment awaiting Keys. He didn&amp;#x2019;t get charged with a misdemeanor; he got &lt;a href=&quot;https://ia601702.us.archive.org/34/items/gov.uscourts.caed.251237/gov.uscourts.caed.251237.1.0.pdf&quot; target=&quot;_blank&quot;&gt;indicted&lt;/a&gt; on three felony charges, for which he faces a harsh prison sentence. No, he won&amp;#x2019;t get anything close to the 10-year maximum. But a cursory calculation of his potential sentence under the federal sentencing guidelines suggest he&amp;#x2019;s looking at a sentence between 21 and 27 months &amp;#x2014; about three years of his life &amp;#x2014; if he decides to go to trial and loses.&lt;/p&gt;
-&lt;p&gt;Here are more details on how such sentencing works:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&amp;#x2026;Federal sentencing is based on two things: the seriousness of a crime and the person&amp;#x2019;s criminal history.&amp;#xA0;The two factors are plotted on a &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/5a_SenTab.htm&quot; target=&quot;_blank&quot;&gt;table&lt;/a&gt;, with the y-axis a scale of 1 to 43 &amp;#x201C;levels&amp;#x201D; that determines the seriousness of a crime, and the x-axis a scale of I to VI that measures criminal history. At sentencing, the judge must determine both scores, plot them on the table, and determine the sentencing range in months, which the court can follow or disregard at its own discretion.&lt;/p&gt;
-&lt;p&gt;&amp;#x2026;Someone like Keys, who has no criminal history, is in criminal history category I. The &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/2b1_1.htm&quot; target=&quot;_blank&quot;&gt;starting&lt;/a&gt; point for most CFAA crimes is level 6, which is low on the scale but can quickly increase.&lt;/p&gt;
-&lt;p&gt;&amp;#x2026;Assuming the allegations in Key&amp;#x2019;s &lt;a href=&quot;https://ia601600.us.archive.org/35/items/gov.uscourts.caed.251236/gov.uscourts.caed.251236.23.1.pdf&quot; target=&quot;_blank&quot;&gt;search warrant&lt;/a&gt; are correct, the Tribune company spent $17,650.40 to fix the damage, resulting in an increase of 4 levels for causing more than $10,000 and less than $30,000 in damage. Because Keys is charged with causing damage to a computer, he receives another 4 level increase. And because he likely abused a &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/3b1_3.htm&quot; target=&quot;_blank&quot;&gt;position of trust&lt;/a&gt;, he receives another 2 level increase, for a total offense level of 16 &amp;#x2014; which has a sentencing range between 21 and 27 months for a person in criminal history category I. (That places Keys in &amp;#x201C;Zone C&amp;#x201D; of the Sentencing Table, which means the Guidelines don&amp;#x2019;t authorize a grant of &lt;a href=&quot;http://www.ussc.gov/Guidelines/2013_Guidelines/Manual_HTML/5b1_1.htm&quot; target=&quot;_blank&quot;&gt;probation&lt;/a&gt;, though the judge could impose probation if she wanted to.)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;As a country and a criminal justice system, we&amp;#x2019;ve been down this road of excessive punishment before: with drugs. Prosecutors and lawmakers need to take a step back and think long and hard about whether we&amp;#x2019;re going down the same road with their zeal towards computer crimes.&lt;/p&gt;
-&lt;div&gt;
-
-
-&lt;div&gt;
-&lt;p&gt;Hanni Fakhoury is a former federal public defender and a current Staff Attorney at the Electronic Frontier Foundation (EFF) who focuses on criminal law, privacy, and free speech litigation and advocacy. Follow him on Twitter &lt;a href=&quot;https://twitter.com/HanniFakhoury&quot; target=&quot;_blank&quot;&gt;@hannifakhoury&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;p&gt;For many years, there was a radical disparity in how federal law treated crack and powder cocaine. A person who possessed 5 grams of crack cocaine could be charged with a felony. But it took 500 grams of powder cocaine to get the same felony punishment. This 100-to-1 ratio was born in the 1980s, when Congress was concerned that crack &amp;#x2014; predominantly used in urban areas by people of color &amp;#x2014; was becoming an epidemic and a violent one at that.&lt;/p&gt;
-&lt;p&gt;This extreme disparity only ensured that a disproportionate amount of people of color ended up in prison. Receiving little rehabilitation while incarcerated and struggling to find work or otherwise reintegrate into society once released, convicts would return to crime, get caught, and be sentenced as a recidivist. That meant a longer jail sentence and the continuation of a destructive cycle.&lt;/p&gt;
-&lt;p&gt;But over the last few years, there has been significant progress towards narrowing this gap. In 2010, Congress passed &amp;#x2014; and President Obama &lt;a href=&quot;http://thecaucus.blogs.nytimes.com/2010/08/03/obama-signs-law-narrowing-cocaine-sentencing-disparities/?_r=0&quot; target=&quot;_blank&quot;&gt;signed&lt;/a&gt; &amp;#x2014; legislation that reduced the 100-to-1 ratio down to 18-to-1. Attorney General Eric Holder upped the ante this past summer, &lt;a href=&quot;http://www.huffingtonpost.com/2013/08/12/eric-holder-drug-sentences_n_3744717.html&quot; target=&quot;_blank&quot;&gt;announcing&lt;/a&gt; a series of broader policy reforms that would work to reduce harsh drug sentences by giving prosecutors flexibility to avoid charging a defendant with crimes that carry mandatory minimum prison sentences. And at the end of last year, President Obama &lt;a href=&quot;http://www.bloomberg.com/news/2013-12-19/obama-cites-cocaine-law-disparity-in-commuting-sentences.html&quot; target=&quot;_blank&quot;&gt;pardoned&lt;/a&gt; thirteen people and commuted the sentences of eight prisoners who were sentenced under the old ratio and were therefore&amp;#xA0;serving long sentences for crack cocaine convictions.&lt;/p&gt;
-&lt;p&gt;These reforms took over 20 years.&amp;#xA0;But as technology marches faster than the slow pace of legal change, we don&amp;#x2019;t have that kind of time to apply the lessons learned from the failed &amp;#x201C;war on drugs&amp;#x201D; experiment to the growing wave of computer crime prosecutions.&lt;/p&gt;
-&lt;h2&gt;And It Doesn&amp;#x2019;t Even Work&lt;/h2&gt;
-&lt;p&gt;The government&amp;#x2019;s mindset is that technology and the internet can wreak havoc. Disseminating the login credentials of a powerful media company to vandalize a few websites, for example, has the potential to cause more damage than spray-painting graffiti on a highway sign.&lt;/p&gt;
-&lt;p&gt;That is undoubtedly true.&amp;#xA0;But will aggressive, excessive punishment really deter others here? This country&amp;#x2019;s experience with the war on drugs suggests the answer is a resounding no.&lt;/p&gt;
-&lt;p class=&quot;pullquote-left&quot;&gt;We shouldn&amp;#x2019;t let the government&amp;#x2019;s fear of computers justify disproportionate punishment.&lt;/p&gt;
-&lt;p&gt;The problem is pronounced with much of the politically motivated online crime that has splashed the headlines. As a generation of people who grew up plugged in and online realized there is no way to voice their complaints within the mainstream political establishment, they decided to take their protests to the medium they know best.&amp;#xA0;Harsh punishment is only going to reinforce and harden that generation&amp;#x2019;s pessimism towards the government.&lt;/p&gt;
-&lt;p&gt;This is not to say that &amp;#x201C;anything goes&amp;#x201D; online or that crimes should go unpunished. But we need to question whether locking people up for long periods of time &amp;#x2014; without addressing the root concerns about concentrated political power, civil liberties abuses, and transparency &amp;#x2014; will have the effect of deterrence or worse yet, a hardened cynicism that perpetuates the endless cycle of punishment. That&amp;#x2019;s true of even non-politically motivated cybercrime, or really, all crime &amp;#x2026; whether it involves a computer or not.&lt;/p&gt;
-&lt;p&gt;* * *&lt;/p&gt;
-&lt;p&gt;There may be hope yet.&lt;/p&gt;
-&lt;p&gt;Recently, 11 members of the &amp;#x201C;PayPal 14,&amp;#x201D; a &lt;a href=&quot;http://www.wired.com/threatlevel/2011/07/paypal-hack-arrests/&quot; target=&quot;_blank&quot;&gt;group&lt;/a&gt; of individuals affiliated with Anonymous who DDoS&amp;#x2019;d PayPal in 2010 to protest its refusal to process donations to Wikileaks, &lt;a href=&quot;http://www.huffingtonpost.com/2013/12/05/paypal-14-plea-deal_n_4392521.html&quot; target=&quot;_blank&quot;&gt;pleaded&lt;/a&gt; guilty to felony CFAA charges in federal court. But their sentences were put off for one year (rather than receiving tough prison sentences). If the defendants stay out of trouble during that time, the felony convictions will be dropped when they come back to court, and they&amp;#x2019;ll be sentenced to misdemeanors instead. Most of the defendants will avoid jail time, and will have to pay $5,600 to PayPal in restitution.&lt;/p&gt;
-&lt;p&gt;But for most of these defendants, the experience of going through a federal criminal prosecution is going to be enough to deter them from doing something similar again. Not to mention the financial penalties and misdemeanor convictions. And for those who aren&amp;#x2019;t deterred? The punishment will appropriately increase the next time. There&amp;#x2019;s just no need to excessively punish all wrongdoers.&lt;/p&gt;
-&lt;p&gt;We shouldn&amp;#x2019;t let the government&amp;#x2019;s fear of computers justify disproportionate punishment. The type of graduated punishment in the Paypal 14 case is routine in low-level, physical-world criminal cases brought in state courts throughout the country; it can work with computer crime too.&lt;/p&gt;
-&lt;p&gt;It&amp;#x2019;s time for the government to learn from its failed 20th century experiment over-punishing drugs and start making sensible decisions about high-tech punishment in the 21st century. It can&amp;#x2019;t afford to be behind when it comes to tech, especially as the impacts of &amp;#x201C;cyber-panic&amp;#x201D; on users &amp;#x2014; beyond hackers &amp;#x2014; are very real.&lt;/p&gt;
-            &lt;/div&gt;
-
-    
-&lt;/div&gt;
-</description>
-<title>
-The U.S. Crackdown on Hackers Is Our New War on Drugs
-</title>
-</item>
-<item>
-<link>
-http://www.fastcompany.com/3025372/if-the-immunity-project-crowdfunds-this-synthetic-aids-vaccine-theyll-offer-it-free-to-every
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;body prose twelve columns&quot;&gt;
-      &lt;p&gt;What happens when you combine Microsoft e-Science machine learning, Harvard thinking, and a new medical device to tackle HIV-AIDS? &lt;a href=&quot;http://www.immunityproject.org/&quot; target=&quot;_blank&quot;&gt; The Immunity Project&lt;/a&gt;, a not-for-profit company developing the first ever synthetic HIV vaccine.&lt;/p&gt;
-
-&lt;p&gt;The Immunity project&amp;#x2019;s work is based on the discovery that there are people born with a natural immunity to HIV. After identifying these &quot;HIV controllers&quot; in the population, the team &lt;a href=&quot;http://www.fastcompany.com/1842447/microsoft-virus-fighter-spam-may-be-more-difficult-stop-hiv&quot; target=&quot;_self&quot;&gt;applied machine learning&lt;/a&gt; to reverse-engineer the biological processes HIV controllers use to defeat the virus, mimicking natural immunity.&lt;/p&gt;
-
-&lt;figure class=&quot;inline-large inline&quot;&gt;
-&lt;img src=&quot;http://f.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2014/01/3025372-inline-i-2-the-worlds-first-free-synthetic-aids-vaccine-crowdfunding-starts-today.jpg&quot; alt=&quot;&quot;&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;They&amp;#x2019;ve developed a vaccine prototype and completed preliminary laboratory testing. And today, they went live with a &lt;a href=&quot;https://pledge.immunityproject.org/the-free-hiv-aids-vaccine&quot; target=&quot;_blank&quot;&gt;crowdfunding campaign&lt;/a&gt; to support a demonstration aimed to prove the vaccine can successfully immunize human blood. It's the last step before they begin Phase 1 human clinical trials with the FDA. Their goal is to give the vaccine away to the world, for free.&lt;/p&gt;
-
-&lt;p&gt;In order to complete this experiment by the end of March of this year, they need to raise $482,000 in the next 30 days. If successful, this will help solve a global problem that is still epidemic. AIDS kills nearly 5,000 people a day. While there are several contenders in the race to create a successful HIV vaccine, this one has an excellent shot at working. It's also safer for candidates than vaccines made with killed viruses or live viruses. It requires no refrigeration and is designed to be delivered via nasal inhaler, solving distribution challenges in the countries with the highest HIV infection rates.&lt;/p&gt;
-
-&lt;figure class=&quot;inline-large inline&quot;&gt;
-&lt;img src=&quot;http://e.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2014/01/3025372-inline-i-1-the-worlds-first-free-synthetic-aids-vaccine-crowdfunding-starts-today.jpg&quot; alt=&quot;&quot;&gt;&lt;figcaption&gt;Dr. Reid Rubsamen alongside other Immunity Project team members.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The vaccine was originally developed in a partnership between Dr. Bruce Walker from Harvard, Dr. David Heckerman, inventor of the spam filter and AAAI fellow and machine learning/artificial intelligence scientist at Microsoft e-Science Research, and Dr. Reid Rubsamen, drug delivery system expert and founder of Flow Pharma. The project was billed as a great example of multi-disciplinary innovation. Apparently, Silicon Valley accelerator &lt;a href=&quot;http://www.fastcompany.com/company/y-combinator&quot; target=&quot;_self&quot;&gt;Y Combinator&lt;/a&gt; agreed--on January 6, Immunity Project became part of the  Winter 2014 Y Combinator class. According to partner Sam Altman, &quot;This is certainly a new sort of company for us, but it's the kind of crazy idea we like.&amp;#x201D;&lt;/p&gt;
-
-&lt;p&gt;&amp;#x201C;Imagine a world where vaccines are developed for a tiny fraction of the big pharma cost and given away for free to everyone who needs them,&amp;#x201D; says Altman. &amp;#x201C;We thought that work done by Microsoft Research that underlies this was really interesting, and we're always interested in areas where software can change how things are done. Technology means doing more with less; this is an extreme example. I spent a fair amount of time with this group during their application process and am personally donating both money and blood.&quot;&lt;/p&gt;
-    &lt;/div&gt;
-
-    
-      
-        &lt;p class=&quot;twelve columns poster-credit&quot;&gt;
-          &lt;span&gt;[Photos courtesy of Immunity]&lt;/span&gt;
-        &lt;/p&gt;
-      
-    
-
-    
-
-  &lt;/div&gt;
-</description>
-<title>
-If Immunity Project (YC W14) succeeds, they'll offer AIDS vaccine for free
-</title>
-</item>
-<item>
-<author>
-Xavier Snelgrove
-</author>
-<link>
-http://minuum.com/model-your-users-algorithms-behind-the-minuum-keyboard/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-		&lt;p&gt;When you&amp;#x2019;re creating a new keyboard technology, there&amp;#x2019;s a ton of work that goes into both the interaction design, and into the algorithms behind the scenes. While the design of our keyboard is best understood simply by using it, the real &amp;#x201C;magic&amp;#x201D; that makes our one-dimensional keyboard possible lies in the statistical algorithms that make it tick.&lt;/p&gt;
-&lt;p&gt;If you haven&amp;#x2019;t already &lt;a href=&quot;http://www.youtube.com/watch?v=niV2KCkKmRw&quot;&gt;seen&lt;/a&gt; or &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.whirlscape.minuumkeyboard&amp;amp;utm_source=blog&amp;amp;utm_medium=post&amp;amp;utm_campaign=techpost&quot;&gt;used&lt;/a&gt; the Minuum keyboard, the brief summary is that we let you compress the conventional keyboard down to just one row of keys, opening up the possibility of typing anywhere where you can measure one dimension of input.&lt;/p&gt;
-&lt;p&gt;&amp;#xA0;&lt;br&gt;
-&lt;img class=&quot;alignnone size-large wp-image-356&quot; alt=&quot;keyboard_for_blog_post&quot; src=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_for_blog_post-1024x581.png&quot; width=&quot;640&quot;&gt;&lt;/p&gt;
-&lt;p&gt;By shrinking the keyboard in this way we soon had to grapple with a basic fact: &lt;strong&gt;human input is imprecise&lt;/strong&gt;, and the faster you type &lt;a href=&quot;http://en.wikipedia.org/wiki/Fitts's_law&quot;&gt;the more imprecise it gets&lt;/a&gt;. Rather than trying to improve user precision, we instead embrace sloppy typing.&lt;/p&gt;
-&lt;p&gt;This only works because we use &lt;strong&gt;disambiguation&lt;/strong&gt; in addition to &lt;strong&gt;auto-correction&lt;/strong&gt;. While &amp;#x201C;auto-correction&amp;#x201D; implies that you made a mistake that needed correcting, &amp;#x201C;disambiguation&amp;#x201D; accepts the fundamental ambiguity of human interaction, and uses an understanding of language to narrow things down. Think of it like speech recognition: in a noisy bar, the problem isn&amp;#x2019;t that your friends are speaking incorrectly; &lt;a href=&quot;http://en.wikipedia.org/wiki/Mondegreen&quot;&gt;human speech is ambiguous&lt;/a&gt;, and the noisiness of the environment sure doesn&amp;#x2019;t help. You can only understand them because you have prior knowledge of the sorts of things they are likely to say.&lt;/p&gt;
-&lt;p&gt;Which leads us into the wonderful world of&amp;#x2026;&lt;/p&gt;
-&lt;h2&gt;Bayesian statistics!&lt;/h2&gt;
-&lt;p&gt;Minuum combines two factors to evaluate a word, a &lt;strong&gt;spatial model&lt;/strong&gt; which understands how precise you are when you tap on the keyboard (we perform user studies to measure this), and a &lt;strong&gt;language model&lt;/strong&gt; which understands what words you&amp;#x2019;re likely to use (we build this from huge bodies of real-world text). If you tap on the keyboard five times, and those taps somewhat resemble the word &amp;#x201C;hello&amp;#x201D;, we use the following &lt;a href=&quot;http://en.wikipedia.org/wiki/Bayes_theorem&quot;&gt;Bayesian&lt;/a&gt; equation to test how likely it is that you wanted the word &amp;#x201C;hello&amp;#x201D;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://minuum.com/wp-content/uploads/2014/01/eq1-1024x98.png&quot; alt=&quot;eq&quot; width=&quot;640&quot; class=&quot;alignnone size-large wp-image-362&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Let&amp;#x2019;s break that equation down: the probability that you wanted the word &amp;#x201C;hello&amp;#x201D; given those taps, is proportional to the product of the spatial and language terms. The spatial term gives the likelihood that wanting to type the word &amp;#x201C;hello&amp;#x201D; could have led you to input that sequence of taps; the language term gives the probability that you would ever type the word &amp;#x201C;hello&amp;#x201D;.&lt;/p&gt;
-&lt;p&gt;Minuum&amp;#x2019;s job is to find the word that maximizes &lt;strong&gt;p(word|taps)&lt;/strong&gt;. In the example above, Minuum is generating a score for the word &amp;#x201C;hello&amp;#x201D;. To find the best word, Minuum would compare this score to the scores for other words, calculated the same way. The closer your taps are to the correct locations for a given word, the greater the spatial term for that word; the more common a word in English (or French, German, Italian or Spanish if you have one of those languages enabled) the greater the language term.&lt;/p&gt;
-&lt;h3&gt;A simple spatial model&lt;/h3&gt;
-&lt;p&gt;Minuum uses a fairly complicated spatial model (remember the spatial model represents how people tend to &lt;em&gt;actually&lt;/em&gt; type on the keyboard). This model can handle many kinds of imprecision, such as extra and omitted characters. A simple model that works surprisingly well, however, is to treat the probability density of a tap as a &lt;a href=&quot;http://en.wikipedia.org/wiki/Normal_distribution&quot;&gt;Gaussian&lt;/a&gt; centered at the target character.&lt;/p&gt;
-
-&lt;p&gt;This shows that if you mean to type a &amp;#x201C;t&amp;#x201D;, the most likely point you tap on the keyboard is right on the &amp;#x201C;t&amp;#x201D;, but there is still a significant probability that you tap on a nearby location closer to the &amp;#x201C;v&amp;#x201D; or the &amp;#x201C;g&amp;#x201D;.&lt;/p&gt;
-&lt;h3&gt;A simple language model&lt;/h3&gt;
-&lt;p&gt;The simplest language model is just a count of word frequencies. Take a large body of text (a &lt;em&gt;corpus&lt;/em&gt;), and count how many times each word shows up.&lt;/p&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;Word&lt;/th&gt;
-&lt;th&gt;Frequency&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;if&lt;/td&gt;
-&lt;td&gt;1,115,786&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;IV&lt;/td&gt;
-&lt;td&gt;5335&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;To compare two potential words, say &amp;#x201C;if&amp;#x201D; and &amp;#x201C;IV&amp;#x201D;, according to the above table &amp;#x201C;if&amp;#x201D; is around 200 times more likely to be typed than &amp;#x201C;IV&amp;#x201D;.&lt;/p&gt;
-&lt;p&gt;This simple model, like the simple spatial model, works quite well in practice. Further improvements can come from using context such as the word immediately before the current entry.&lt;/p&gt;
-&lt;div dir=&quot;ltr&quot;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th&gt;Word(s)&lt;/th&gt;
-&lt;th&gt;Frequency&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;what if&lt;/td&gt;
-&lt;td&gt;13,207&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;what of&lt;/td&gt;
-&lt;td&gt;1,380&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;p&gt;The phrase &amp;#x201C;what if&amp;#x201D; is about ten times more common than &amp;#x201C;what of&amp;#x201D;, so even though &amp;#x201C;if&amp;#x201D; and &amp;#x201C;of&amp;#x201D; are both very common words, given the context &amp;#x201C;what&amp;#x201D;, we can confidently guess that &amp;#x201C;if&amp;#x201D; is the intended word.&lt;/p&gt;
-&lt;h2&gt;Words are high-dimensional points&lt;/h2&gt;
-&lt;p&gt;I understand problems best when I can picture them geometrically. My intuitive understanding of the disambiguation problem finally clicked when we had an insight: words are points in high-dimensional space, and typing is a search for those words! Skeptical? Let me explain.&lt;br&gt;
-Minuum is a single line, so tapping your finger on Minuum can be represented by one number, In the figure below, for instance, a tap on &amp;#x201C;q&amp;#x201D; could clock in between 0 and 0.04, and a tap on &amp;#x201C;p&amp;#x201D; at 0.98 to 1.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_line.png&quot;&gt;&lt;img alt=&quot;keyboard_line&quot; src=&quot;http://minuum.com/wp-content/uploads/2014/01/keyboard_line.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A continuum of letters from 0.0 from 1.0&lt;/p&gt;
-&lt;p&gt;A two-letter word, consists of two taps, and so can be represented as a pair of numbers. The word &amp;#x201C;an&amp;#x201D;, typed perfectly, is represented as {0.06, 0.67}, and the word &amp;#x201C;if&amp;#x201D; as {0.83, 0.40}. The figure belows shows the positions of some common 2-letter words in this &amp;#x201C;word space&amp;#x201D;.&lt;/p&gt;
-
-&lt;p&gt;The exact same logic applies to longer words: &amp;#x201C;and&amp;#x201D; is {0.06, 0.67, 0.29}, &amp;#x201C;minuum&amp;#x201D; is {0.79, 0.83, 0.67, 0.71, 0.71, 0.79}. Above three dimensions, unfortunately, it&amp;#x2019;s much harder to visualize.&lt;/p&gt;
-&lt;p&gt;A user&amp;#x2019;s sequence of taps is also a point in this word space, which we can call the input point. The &amp;#x201C;closer&amp;#x201D; a word&amp;#x2019;s point is to the input point, the higher that word will score in the spatial term of the Bayesian equation above. Odds are, whatever you meant to type is &amp;#x201C;nearby&amp;#x201D; to what you actually typed in this space.&lt;/p&gt;
-&lt;h2&gt;So let&amp;#x2019;s visualize some words!&lt;/h2&gt;
-&lt;p&gt;We can generate a full map of the top two-letter words recommended by Minuum, based on any possible pair of input taps; here, more common words tend to end up with larger areas. By hovering over the graph, you can see what other words would be recommended as alternative candidates.&lt;/p&gt;
-&lt;div id=&quot;voronoiA&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Two-letter predictions with no context&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&quot;voronoiB&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Two-letter word predictions with previous word &amp;#x201C;what&amp;#x201D;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br&gt;
-Toggle the context button above to see what happens when we use a better language model to account for the user having previously typed the word &amp;#x201C;what&amp;#x201D;. Clearly, &amp;#x201C;if&amp;#x201D; is more likely and &amp;#x201C;in&amp;#x201D; is less likely to be recommended when we account for context, because &amp;#x201C;what if&amp;#x201D; is more common than &amp;#x201C;what of&amp;#x201D;, while &amp;#x201C;what in&amp;#x201D; is less common than &amp;#x201C;what I&amp;#x2019;m&amp;#x201D;.&lt;sup&gt;&lt;a id=&quot;#foot-techpost-1-src&quot; href=&quot;http://minuum.com/model-your-users-algorithms-behind-the-minuum-keyboard/#foot-techpost-1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Of course, Minuum uses more context than just the previous word, and also learns your personal typing tendencies over time, so this picture is different for each user.&lt;/p&gt;
-&lt;h2&gt;Statistical modelling for better interfaces&lt;/h2&gt;
-&lt;p&gt;All this complexity allows Minuum to shed some constraints of conventional keyboards (working even as a one-row keyboard on a 1&amp;#x201D; screen!)&lt;/p&gt;
-&lt;p&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/lA6ey1SzHdM&quot; height=&quot;270&quot; width=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;What does this show? That interfaces are better when they understand the user! Google Instant is awesome because it knows what you&amp;#x2019;re looking for after a couple keystrokes. Siri would be impossible without complex language modeling. Minuum can simplify keyboards only by combining strong spatial and language models of real human input. If you&amp;#x2019;re dealing with a complex interface, consider how you can statistically model user behaviour to simplify the interaction required.&lt;/p&gt;
-&lt;div&gt;Want to try it out? &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.whirlscape.minuumkeyboard&amp;amp;utm_source=blog&amp;amp;utm_medium=post&amp;amp;utm_campaign=techpost&quot;&gt;Download Minuum for Android&lt;/a&gt;&lt;/div&gt;
-
-
-
-
-
-
-
-
-			&lt;/div&gt;
-
-	&lt;/div&gt;
-</description>
-<title>
-Model Your Users: Algorithms Behind the Minuum Keyboard
-</title>
-</item>
-<item>
-<link>
 http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAndWebcast/FY14/Q2/default.aspx
 </link>
 <description>
@@ -241,6 +22,833 @@ http://www.microsoft.com/investor/EarningsAndFinancials/Earnings/PressReleaseAnd
 </description>
 <title>
 Microsoft Reports Record Revenue of $24.52 Billion in Second Quarter
+</title>
+</item>
+<item>
+<link>
+http://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;post-content&quot;&gt;
+		&lt;p class=&quot;byline&quot;&gt;
+		
+		
+		By &lt;a href=&quot;http://pando.com/author/markamespando/&quot; title=&quot;Posts by Mark Ames&quot; rel=&quot;author&quot;&gt;Mark Ames&lt;/a&gt; &lt;br&gt;
+				On January 23, 2014&lt;/p&gt;
+
+		&lt;p&gt;&lt;img class=&quot;aligncenter size-full wp-image-124117&quot; alt=&quot;techtopus&quot; src=&quot;http://pandodaily.files.wordpress.com/2014/01/techtopus.jpg?w=900&amp;amp;h=675&quot; width=&quot;900&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In early 2005, as demand for Silicon Valley engineers began &lt;a href=&quot;http://www.sfgate.com/bayarea/article/Google-blamed-for-jump-in-high-tech-pay-Rivals-2587880.php&quot;&gt;booming&lt;/a&gt;, Apple&amp;#x2019;s Steve Jobs sealed a secret and illegal pact with Google&amp;#x2019;s Eric Schmidt to artificially push their workers wages lower by agreeing not to recruit each other&amp;#x2019;s employees, sharing wage scale information, and punishing violators. On February 27, 2005, Bill Campbell, a member of Apple&amp;#x2019;s board of directors and &lt;a href=&quot;http://www.cbsnews.com/news/media-zelig-men-bill-campbell-and-vivi-nevo/&quot;&gt;senior advisor&lt;/a&gt; to Google, emailed Jobs to confirm that Eric Schmidt &amp;#x201C;got directly involved and firmly stopped all efforts to recruit anyone from Apple.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Later that year, Schmidt instructed his Sr VP for Business Operation Shona Brown to keep the pact a secret and only share information &amp;#x201C;verbally, since I don&amp;#x2019;t want to create a paper trail over which we can be sued later?&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;These secret conversations and agreements between some of the biggest names in Silicon Valley were first exposed in a Department of Justice antitrust &lt;a href=&quot;http://www.justice.gov/opa/pr/2010/September/10-at-1076.html&quot;&gt;investigation&lt;/a&gt; launched by the Obama Administration in 2010. That DOJ suit became the basis of a &lt;a href=&quot;http://www.mercurynews.com/business/ci_24916714/silicon-valley-poaching-case-draws-closer-trial&quot;&gt;class action lawsuit&lt;/a&gt; filed on behalf of over 100,000 tech employees whose wages were artificially lowered &amp;#x2014; an &lt;a href=&quot;http://thevarguy.com/computer-technology-hardware-solutions-and-news/011614/silicon-valley-workers-ok-d-class-action-lawsuit-aga&quot;&gt;estimated $9 billion&lt;/a&gt; effectively stolen by the high-flying companies from their workers to pad company earnings &amp;#x2014; in the second half of the 2000s. Last week, the 9th Circuit Court of Appeals denied attempts by Apple, Google, Intel, and Adobe to have the lawsuit tossed, and gave final approval for the class action suit to go forward. A jury trial date has been set for May 27 in San Jose, before US District Court judge Lucy Koh, who presided over the Samsung-Apple patent suit.&lt;/p&gt;
+&lt;p&gt;In a related but separate investigation and ongoing suit, eBay and its former CEO Meg Whitman, now CEO of HP, are being sued by both the &lt;a href=&quot;http://www.justice.gov/opa/pr/2012/November/12-at-1376.html&quot;&gt;federal government &lt;/a&gt;and the &lt;a href=&quot;http://www.courthousenews.com/2013/12/09/63583.htm&quot;&gt;state of California&lt;/a&gt; for arranging a similar, secret wage-theft agreement with Intuit (and possibly Google as well) during the same period.&lt;/p&gt;
+&lt;p&gt;The secret wage-theft agreements between Apple, Google, Intel, Adobe, Intuit, and Pixar (now owned by Disney) are described in court papers obtained by PandoDaily as &amp;#x201C;an overarching conspiracy&amp;#x201D; in violation of the Sherman Antitrust Act and the Clayton Antitrust Act, and at times it reads like something lifted straight out of the robber baron era that produced those laws. Today&amp;#x2019;s inequality crisis is America&amp;#x2019;s &lt;a href=&quot;http://economix.blogs.nytimes.com/2013/09/10/the-rich-get-richer-through-the-recovery/?_r=0&quot;&gt;worst on record&lt;/a&gt; since statistics were first recorded a hundred years ago &amp;#x2014; the only comparison would be to the era of the railroad tycoons in the late 19th century.&lt;/p&gt;
+&lt;p&gt;Shortly after sealing the pact with Google, Jobs strong-armed Adobe into joining after he complained to CEO Bruce Chizen that Adobe was recruiting Apple&amp;#x2019;s employees. Chizen sheepishly responded that he thought only a small class of employees were off-limits:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I thought we agreed not to recruit any senior level employees&amp;#x2026;. I would propose we keep it that way. Open to discuss. It would be good to agree.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Jobs responded by threatening war:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;OK, I&amp;#x2019;ll tell our recruiters they are free to approach any Adobe employee who is not a Sr. Director or VP. Am I understanding your position correctly?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Adobe&amp;#x2019;s Chizen immediately backed down:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I&amp;#x2019;d rather agree NOT to actively solicit any employee from either company&amp;#x2026;..If you are in agreement, I will let my folks know.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The next day, Chizen let his folks &amp;#x2014; Adobe&amp;#x2019;s VP of Human Resources &amp;#x2014; know that &amp;#x201C;we are not to solicit ANY Apple employees, and visa versa.&amp;#x201D; Chizen was worried that if he didn&amp;#x2019;t agree, Jobs would make Adobe pay:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;if I tell Steve [Jobs] it&amp;#x2019;s open season (other than senior managers), he will deliberately poach Adobe just to prove a point. Knowing Steve, he will go after some of our top Mac talent&amp;#x2026;and he will do it in a way in which they will be enticed to come (extraordinary packages and Steve wooing).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Indeed Jobs even threatened war against Google early 2005 before their &amp;#x201C;gentlemen&amp;#x2019;s agreement,&amp;#x201D; telling Sergey Brin to back off recruiting Apple&amp;#x2019;s Safari team:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;if you [Brin] hire a single one of these people that means war.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Brin immediately advised Google&amp;#x2019;s Executive Management Team to halt all recruiting of Apple employees until an agreement was discussed.&lt;/p&gt;
+&lt;p&gt;In the geopolitics of &lt;a href=&quot;http://www.dailymail.co.uk/home/moslive/article-1386409/Worlds-richest-dinner-party--including-guests-Obama-Mark-Zuckerberg.html&quot;&gt;Silicon Valley tech power&lt;/a&gt;, Adobe was no match for a corporate superpower like Apple. Inequality of the sort we&amp;#x2019;re experiencing today affects everyone in ways we haven&amp;#x2019;t even thought of &amp;#x2014; whether it&amp;#x2019;s Jobs bullying slightly lesser executives into joining an illegal wage-theft pact, or the tens of thousands of workers whose wages were artificially lowered, transferred into higher corporate earnings, and &lt;a href=&quot;http://www.mercurynews.com/business/ci_24106474/bay-areas-richest-residents-silicon-valley-billionaires-forbes&quot;&gt;higher compensations&lt;/a&gt; for those already richest and most powerful to begin with.&lt;/p&gt;
+&lt;p&gt;Over the next two years, as the tech industry entered another frothing bubble, the secret wage-theft pact which began with Apple, Google and Pixar expanded to include Intuit and Intel. The secret agreements were based on relationships, and those relationships were forged in Silicon Valley&amp;#x2019;s &lt;a href=&quot;http://dealbook.nytimes.com/2012/07/04/in-silicon-valley-chieftains-rule-with-few-checks-and-balances/?_php=true&amp;amp;_type=blogs&amp;amp;_r=0&quot;&gt;incestuous boards of directors&lt;/a&gt;, which in the past has been recognized mostly as a problem for shareholders and corporate governance advocates, rather than for the tens of thousands of employees whose wages and lives are viscerally affected by their clubby backroom deals. Intel CEO Paul Otellini &lt;a href=&quot;http://www.siliconbeat.com/2007/11/28/part-time-google-gig-for-intels-otellini-worth-about-464000-per-shift/&quot;&gt;joined&lt;/a&gt; Google&amp;#x2019;s board of directors in 2004, a part-time gig that netted Otellini &lt;a href=&quot;http://www.siliconbeat.com/2007/11/28/part-time-google-gig-for-intels-otellini-worth-about-464000-per-shift/&quot;&gt;$23 million in 2007&lt;/a&gt;, with tens of millions more in Google stock options still in his name &amp;#x2014; which worked out to $464,000 per Google board event if you only counted the stock options Otellini cashed out &amp;#x2014; dwarfing what Otellini made off his Intel stock options, despite spending most of his career with the company.&lt;/p&gt;
+&lt;p&gt;Meanwhile, Eric Schmidt served on Apple&amp;#x2019;s board of directors until 2009, when a &lt;a href=&quot;http://www.theguardian.com/technology/2009/aug/03/google-chief-schmidt-resigns-apple-board&quot;&gt;DoJ antitrust investigation&lt;/a&gt; pushed him to resign. Intuit&amp;#x2019;s chairman at the time, Bill Campbell, also served on Apple&amp;#x2019;s board of directors, and as official advisor &amp;#x2014;&amp;#xA0;&lt;a href=&quot;http://money.cnn.com/2008/07/21/technology/reingold_coach.fortune/&quot;&gt;&amp;#x201C;consigliere&amp;#x201D;&lt;/a&gt;&amp;#xA0;&amp;#x2014; to Google chief Eric Schmidt, until he &lt;a href=&quot;http://appleinsider.com/articles/10/11/08/apple_board_member_bill_campbell_cut_ties_to_google_over_rivalry&quot;&gt;resigned&lt;/a&gt; from Google in 2010. Campbell, a celebrated figure (&lt;a&gt;&amp;#x201C;a quasi-religious force for good in Silicon Valley&amp;#x201D;&lt;/a&gt;) played a key behind-the-scenes role connecting the various CEOs into the wage-theft pact. Steve Jobs, who took regular Sunday walks with Campbell near their Palo Alto homes, valued Campbell for his ability &amp;#x201C;to get A and B work out of people,&amp;#x201D; gushing that the conduit at the center of the $9 billion wage theft suit, &lt;a href=&quot;http://money.cnn.com/2008/07/21/technology/reingold_coach.fortune/&quot;&gt;&amp;#x201C;loves people, and he loves growing people.&amp;#x201D;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Indeed. Eric Schmidt has been, if anything, even more profuse in his praise of Campbell. Schmidt credits Campbell for structuring Google when Schmidt was brought on board in 2001:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;His contribution to Google &amp;#x2014; it is literally not possible to overstate. He essentially architected the organizational structure.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Court documents show it was Campbell who first brought together Jobs and Schmidt to form the core of the Silicon Valley wage-theft pact. And Campbell&amp;#x2019;s name appears as the early conduit bringing Intel into the pact with Google:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Bill Campbell (Chairman of Intuit Board of Directors, Co-Lead Director of Apple, and advisor to Google) was also involved in the Google-Intel agreement, as reflected in an email exchange from 2006 in which Bill Campbell agreed with Jonathan Rosenberg (Google Advisor to the Office of CEO and former Senior Vice President of Product Management) that Google should call [Intel CEO] Paul Otellini before making an offer to an Intel employee, regardless of whether the Intel employee first approached Google.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Getting Google on board with the wage-theft pact was the key for Apple from the start &amp;#x2014;&amp;#xA0;&lt;a href=&quot;http://www.sfgate.com/bayarea/article/Google-blamed-for-jump-in-high-tech-pay-Rivals-2587880.php&quot;&gt;articles&lt;/a&gt; in the tech press in 2005 pointed at Google&amp;#x2019;s recruitment drive and incentives were the key reason why tech wages soared that year, at the highest rate in well over a decade.&lt;/p&gt;
+&lt;p&gt;Campbell helped bring in Google, Intel, and, in 2006, Campbell saw to it that Intuit &amp;#x2014; the company he &lt;a href=&quot;http://about.intuit.com/about_intuit/executives/bill_campbell.jsp&quot;&gt;chaired&lt;/a&gt;&amp;#xA0;&amp;#x2014; also joined the pact.&lt;/p&gt;
+&lt;p&gt;From the peaks of Silicon Valley, Campbell&amp;#x2019;s interpersonal skills were &lt;a href=&quot;http://www.usatoday.com/story/tech/2013/12/24/executive-coach-bill-campbell/4189333/&quot;&gt;magical&lt;/a&gt; and awe-inspiring, a crucial factor in creating so much unimaginable wealth for their companies and themselves. Jobs &lt;a href=&quot;http://money.cnn.com/2008/07/21/technology/reingold_coach.fortune/&quot;&gt;said&lt;/a&gt; of Campbell:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;There is something deeply human about him.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;And Schmidt &lt;a href=&quot;http://money.cnn.com/2008/07/21/technology/reingold_coach.fortune/&quot;&gt;swooned&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;He is my closest confidant&amp;#x2026;because he is the definition of trust.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Things &amp;#x2014; and people &amp;#x2014; look very different when you&amp;#x2019;re down in the Valley. In the nearly 100-page court opinion issued last October by Judge Koh granting class status to the lawsuit, Campbell comes off as anything but mystical and &amp;#x201C;deeply human.&amp;#x201D; He comes off as a scheming consigliere carrying out some of the drearier tasks that the oligarchs he served were constitutionally not so capable of arranging without him.&lt;/p&gt;
+&lt;p&gt;But the realities of inequality and capitalism invariably lead to mysticism of this sort, a natural human response to the dreary realities of concentrating so much wealth and power in the hands of a dozen interlocking board members at the expense of 100,000 employees, and so many other negative knock-off effects on the politics and culture of the world they dominate.&lt;/p&gt;
+&lt;p&gt;One of the more telling elements to this lawsuit is the role played by &amp;#x201C;Star Wars&amp;#x201D; creator George Lucas, who emerges as the Obi-Wan Kenobi of the wage-theft scheme. It&amp;#x2019;s almost too perfectly symbolic that Lucas &amp;#x2014; the symbiosis of Baby Boomer New Age mysticism, Left Coast power, political infantilism, and dreary 19th century labor exploitation &amp;#x2014; should be responsible for dreaming up the wage theft scheme back in the mid-1980s, when Lucas sold the computer animation division of Lucasfilm, Pixar, to Steve Jobs.&lt;/p&gt;
+&lt;p&gt;As Pixar went independent in 1986, Lucas explained his philosophy about how competition for computer engineers violated his sense of normalcy &amp;#x2014; and profit margins. According to court documents:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;George Lucas believed that companies should not compete against each other for employees, because &amp;#x2018;[i]t&amp;#x2019;s not normal industrial competitive situation.&amp;#x2019; As George Lucas explained, &amp;#x2018;I always &amp;#x2014; the rule we had, or the rule that I put down for everybody,&amp;#x2019; was that &amp;#x2018;we cannot get into a bidding war with other companies because we don&amp;#x2019;t have the margins for that sort of thing.&amp;#x2019;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Translated, Lucas&amp;#x2019; wage-reduction agreement meant that Lucasfilm and Pixar agreed to a) never cold call each other&amp;#x2019;s employees; b) notify each other if making an offer to an employee of the other company, even if that employee applied for the job on his or her own without being recruited; c) any offer made would be &amp;#x201C;final&amp;#x201D; so as to avoid a costly bidding war that would drive up not just the employee&amp;#x2019;s salary, but also drive up the pay scale of every other employee in the firm.&lt;/p&gt;
+&lt;p&gt;Jobs held to this agreement, and used it as the basis two decades later to suppress employee costs just as fierce competition was driving up tech engineers&amp;#x2019; wages.&lt;/p&gt;
+&lt;p&gt;The companies argued that the non-recruitment agreements had nothing to do with driving down wages. But the court ruled that there was &amp;#x201C;extensive documentary evidence&amp;#x201D; that the pacts were designed specifically to push down wages, and that they succeeded in doing so. The evidence includes software tools used by the companies to keep tabs on pay scales to ensure that within job &amp;#x201C;families&amp;#x201D; or titles, pay remained equitable within a margin of variation, and that as competition and recruitment boiled over in 2005, emails between executives and human resources departments complained about the pressure on wages caused by recruiters cold calling their employees, and bidding wars for key engineers.&lt;/p&gt;
+&lt;p&gt;Google, like the others, used a &amp;#x201C;salary algorithm&amp;#x201D; to ensure salaries remained within a tight band across like jobs. Although tech companies like to claim that talent and hard work are rewarded, in private, Google&amp;#x2019;s &amp;#x201C;People Ops&amp;#x201D; department kept overall compensation essentially equitable by making sure that lower-paid employees who performed well got higher salary increases than higher-paid employees who also performed well.&lt;/p&gt;
+&lt;p&gt;As Intel&amp;#x2019;s director of Compensation and Benefits bluntly summed up the Silicon Valley culture&amp;#x2019;s official cant versus its actual practices,&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;While we pay lip service to meritocracy, we really believe more in treating everyone the same within broad bands.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The companies in the pact shared their salary data with each other in order to coordinate and keep down wages &amp;#x2014; something unimaginable had the firms not agreed to not compete for each other&amp;#x2019;s employees. And they fired their own recruiters on just a phone call from a pact member CEO.&lt;/p&gt;
+&lt;p&gt;In 2007, when Jobs learned that Google tried recruiting one of Apple&amp;#x2019;s employees, he forwarded the message to Eric Schmidt with a personal comment attached: &amp;#x201C;I would be very pleased if your recruiting department would stop doing this.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Within an hour, Google made a &amp;#x201C;public example&amp;#x201D; by &amp;#x201C;terminating&amp;#x201D; the recruiter in such a manner as to &amp;#x201C;(hopefully) prevent future occurrences.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;Likewise, when Intel CEO Paul Otellini heard that Google was recruiting their tech staff, he sent a message to Eric Schmidt: &amp;#x201C;Eric, can you pls help here???&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;The next day, Schmidt wrote back to Otellini: &amp;#x201C;If we find that a recruiter called into Intel, we will terminate the recruiter.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;One of the reasons why non-recruitment works so well in artificially lowering workers&amp;#x2019; wages is that it deprives employees of information about the job market, particularly one as competitive and overheating as Silicon Valley&amp;#x2019;s in the mid-2000s. As the companies&amp;#x2019; own internal documents and statements showed, they generally considered cold-calling recruitment of &amp;#x201C;passive&amp;#x201D; talent &amp;#x2014; workers not necessarily looking for a job until enticed by a recruiter &amp;#x2014; to be the most important means of hiring the best employees.&lt;/p&gt;
+&lt;p&gt;Just before joining the wage-theft pact with Apple, Google&amp;#x2019;s human resources executives are quoted sounding the alarm that they needed to &amp;#x201C;dramatically increase the engineering hiring rate&amp;#x201D; and that would require &amp;#x201C;drain[ing] competitors to accomplish this rate of hiring.&amp;#x201D; One CEO who noticed Google&amp;#x2019;s hiring spree was eBay CEO Meg Whitman, who in early 2005 called Eric Schmidt to complain, &amp;#x201C;Google is the talk of the Valley because [you] are driving up salaries across the board.&amp;#x201D; Around this time, eBay entered an illegal wage-theft non-solicitation scheme of its own with Bill Campbell&amp;#x2019;s Intuit, which is still being tried in ongoing federal and California state suits.&lt;/p&gt;
+&lt;p&gt;Google placed the highest premium on &amp;#x201C;passive&amp;#x201D; talent that they cold-called because &amp;#x201C;passively sourced candidates offer[ed] the highest yield,&amp;#x201D; according to court documents. The reason is like the old Groucho Marx joke about not wanting to belong to a club that would let you join it &amp;#x2014; workers actively seeking a new employer were assumed to have something wrong with them; workers who weren&amp;#x2019;t looking were assumed to be the kind of good happy talented workers that company poachers would want on their team.&lt;/p&gt;
+&lt;p&gt;For all of the high-minded talk of post-industrial technotopia and Silicon Valley as worker&amp;#x2019;s paradise, what we see here in stark ugly detail is how the same old world scams and rules are still operative.&lt;/p&gt;
+&lt;p&gt;Court documents below&amp;#x2026;&lt;/p&gt;
+&lt;p&gt;&lt;a title=&quot;View October 24, 2013 Class Cert Order on Scribd&quot; href=&quot;http://www.scribd.com/doc/201651711/October-24-2013-Class-Cert-Order&quot;&gt;October 24, 2013 Class Cert Order&lt;/a&gt;&lt;/p&gt;
+
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+					
+		
+		
+		&lt;br&gt;
+&lt;em&gt;[Illustration by Brad Jonas for Pando]&lt;br&gt;
+&lt;/em&gt;
+
+		
+		
+
+		
+		
+
+				
+	&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+How Silicon Valley CEOs conspired to drive down tech engineer wages
+</title>
+</item>
+<item>
+<link>
+http://eflorenzano.com/blog/2013/01/23/react-finally-server-client/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;document&quot;&gt;
+&lt;p&gt;We started with static websites, simple pages that could link between each
+other.  Then we started constructing those pages on demand, customizing the
+contents of the page for each individual user.  Next we started using
+Javascript to add more interactivity, and these pages started to become more
+like applications.  But now we have XMLHttpRequest, and most new projects are
+moving towards building their pages entirely in the browser.&lt;/p&gt;
+&lt;p&gt;But when we do it purely in the browser, we have to make quite a few
+concessions: search engines have a hard time indexing that content, for
+example. It also takes longer for users to see the rendered content (not in
+every case, but in many, many cases.)  Also if you're using a lot of plugins
+for your favorite library, or a heavyweight MVC framework, sometimes it can
+slow down interactivity.&lt;/p&gt;
+&lt;p&gt;I've thought for a long time (&lt;a class=&quot;reference external&quot; href=&quot;http://eflorenzano.com/blog/2010/09/27/why-node-disappoints-me/&quot;&gt;and blogged about it previously&lt;/a&gt;) that the
+ideal solution would fully render the markup on the server, deliver it to the
+client so that it can be shown to the user instantly.  Then it would
+asynchronously load some Javascript that would attach to the rendered markup,
+and invisibly promote the page into a full app that can render its own markup.
+This code would also have to be fast enough to meet or exceed the performance
+of other modern solutions, or it won't be worth it.&lt;/p&gt;
+&lt;p&gt;What I've discovered is that enough of the pieces have come together, that this
+futuristic-sounding web environment is actually surprisingly easy to do now
+with &lt;a class=&quot;reference external&quot; href=&quot;http://facebook.github.io/react/&quot;&gt;React.js&lt;/a&gt;.  React isn't a full-fledged framework, it's a library, so
+you'll have to build your own foundation and write some glue code.  I've been
+rewriting an existing website in React (usually a terrible idea, we'll see
+about this time), and now that the code is settling down a little bit, I'd like
+to share how it works.  This post will just be an overview, but up next I'll
+share some of my glue code and lessons learned etc.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;react-js&quot;&gt;
+&lt;h4&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://facebook.github.io/react/&quot;&gt;React.js&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;First, a bit about React.  It was released by Facebook and was apparently a
+collaboration between the Instagram and Facebook web engineers.  It looks
+similar in shape but not in size to Angular.js, but even though it looks
+similar, it has a very different philosophy underneath.  React has a few key
+ideas: a virtual DOM, a component framework, and a Javascript syntax extension.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;virtual-dom&quot;&gt;
+&lt;h2&gt;Virtual DOM&lt;/h2&gt;
+&lt;p&gt;The key innovation of React is that it has a pure-Javascript reimplementation
+of the browser's DOM.  It builds the DOM tree in Javascript and then has two
+options for output: a root browser element, or a string.  How can it output
+to a root browser element without having horrible performance?  Core to React
+is a tree diffing algorithm that can look at the in-memory virtual DOM, and the
+real browser DOM, and build the optimal diff.  Then it applies that diff to the
+browser's DOM.&lt;/p&gt;
+&lt;p&gt;The second option for output is equally interesting to me though.  If you can
+walk this virtual DOM tree and render to a string, then you can do that all
+on the server and then send it down to the client.  And since it's a tree,
+React simply stores a checksum in a data attribute on the root node, and if
+those checksums match, then React will simply attach its event handlers and do
+nothing more.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;component-framework&quot;&gt;
+&lt;h2&gt;Component Framework&lt;/h2&gt;
+&lt;p&gt;React's component framework is how you construct that virtual DOM.  Each
+component has a &lt;tt class=&quot;docutils literal&quot;&gt;render()&lt;/tt&gt; function which returns a virtual DOM node with any
+number of children and event handlers attached.  So at its core, React
+components are widgets that can render themselves and react to user input.  At
+render time, components should only access two instance objects: &lt;tt class=&quot;docutils literal&quot;&gt;props&lt;/tt&gt;, and
+&lt;tt class=&quot;docutils literal&quot;&gt;state&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Props are passed-in and are immutable, whereas state is assigned and updated
+entirely by the component itself.  Callback functions can be passed from parent
+node to child node, as &lt;tt class=&quot;docutils literal&quot;&gt;props&lt;/tt&gt;, and attached directly to the virtual DOM
+nodes in the &lt;tt class=&quot;docutils literal&quot;&gt;render()&lt;/tt&gt; function.  In fact, that's the primary way that
+components communicate with each other.&lt;/p&gt;
+&lt;p&gt;These components have a lifecycle, and ways to hook into state and prop
+changes.  They also support mixins, which can hook into the component lifecycle
+and take care of things easily, like canceling timers when a component is
+removed from the DOM, for example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;jsx-a-javascript-syntax-extension&quot;&gt;
+&lt;h2&gt;JSX (A Javascript syntax extension)&lt;/h2&gt;
+&lt;p&gt;JSX lets you write components without pulling your hair out.  Instead of
+writing tedious code like this:&lt;/p&gt;
+&lt;pre class=&quot;code js literal-block&quot;&gt;
+&lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/about'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'About this site'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;It allows you to just write this right alongside your javascript:&lt;/p&gt;
+&lt;pre class=&quot;code html literal-block&quot;&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/about&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;About this site&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;The transformer is smart enough to not need any special indicators about where
+the markup blocks are, but it also allows you to drop into Javascript, like
+so:&lt;/p&gt;
+&lt;pre class=&quot;code html literal-block&quot;&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{this.props.aboutUrl}&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;About this site&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;You can choose to use this, but after getting over my initial distaste for it
+(&quot;Ack! Who got markup in my code!&quot;), I could never go back to not using it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;next&quot;&gt;
+&lt;h2&gt;Next&lt;/h2&gt;
+&lt;p&gt;In a future post, I'll talk about all the other parts you'll need to pull in to
+build a fuller framework for your site.&lt;/p&gt;
+
+&lt;p&gt;Also, I'm not sure if this is interesting for anyone else other than myself, so
+let me know if I should post that stuff, or any other feedback.  I'm always
+yapping on Twitter, so &lt;a class=&quot;reference external&quot; href=&quot;https://twitter.com/ericflo&quot;&gt;catch me over there&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+React: Finally, a great server/client web stack
+</title>
+</item>
+<item>
+<link>
+http://www.a1k0n.net/2011/07/20/donut-math.html
+</link>
+<description>
+&lt;div&gt;&lt;body&gt;
+&lt;div&gt;&lt;a href=&quot;http://www.a1k0n.net/&quot;&gt;a1k0n : Andy Sloane's weblog&lt;/a&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There has been a sudden resurgence of interest in my &lt;a href=&quot;http://www.a1k0n.net/2006/09/15/obfuscated-c-donut.html&quot;&gt;&quot;donut&quot; code from 2006&lt;/a&gt;, and I&amp;#x2019;ve had a couple requests to explain this one. It&amp;#x2019;s been five years now, so it&amp;#x2019;s not exactly fresh in my memory, so I will reconstruct it from scratch, in great detail, and hopefully get approximately the same result.&lt;/p&gt;
+
+&lt;p&gt;This is the code and the output, animated in Javascript:  &lt;/p&gt;&lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tr&gt;
+&lt;td&gt;
+&lt;pre&gt;
+             k;double sin()
+         ,cos();main(){float A=
+       0,B=0,i,j,z[1760];char b[
+     1760];printf(&quot;\x1b[2J&quot;);for(;;
+  ){memset(b,32,1760);memset(z,0,7040)
+  ;for(j=0;6.28&amp;gt;j;j+=0.07)for(i=0;6.28
+ &amp;gt;i;i+=0.02){float c=sin(i),d=cos(j),e=
+ sin(A),f=sin(j),g=cos(A),h=d+2,D=1/(c*
+ h*e+f*g+5),l=cos      (i),m=cos(B),n=s\
+in(B),t=c*h*g-f*        e;int x=40+30*D*
+(l*h*m-t*n),y=            12+15*D*(l*h*n
++t*m),o=x+80*y,          N=8*((f*e-c*d*g
+ )*m-c*d*e-f*g-l        *d*n);if(22&amp;gt;y&amp;amp;&amp;amp;
+ y&amp;gt;0&amp;amp;&amp;amp;x&amp;gt;0&amp;amp;&amp;amp;80&amp;gt;x&amp;amp;&amp;amp;D&amp;gt;z[o]){z[o]=D;;;b[o]=
+ &quot;.,-~:;=!*#$@&quot;[N&amp;gt;0?N:0];}}/*#****!!-*/
+  printf(&quot;\x1b[H&quot;);for(k=0;1761&amp;gt;k;k++)
+   putchar(k%80?b[k]:10);A+=0.04;B+=
+     0.02;}}/*****####*******!!=;:~
+       ~::==!!!**********!!!==::-
+         .,~~;;;========;;;:~-.
+             ..,--------,*/
+&lt;/pre&gt;
+&lt;/td&gt;
+&lt;td&gt;
+
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;At its core, it&amp;#x2019;s a framebuffer and a Z-buffer into which I render pixels. Since it&amp;#x2019;s just rendering relatively low-resolution ASCII art, I massively cheat. All it does is plot pixels along the surface of the torus at fixed-angle increments, and does it densely enough that the final result looks solid. The &amp;#x201C;pixels&amp;#x201D; it plots are ASCII characters corresponding to the illumination value of the surface at each point: &lt;code&gt;.,-~:;=!*#$@&lt;/code&gt; from dimmest to brightest. No raytracing required.&lt;/p&gt;
+
+&lt;p&gt;So how do we do that? Well, let&amp;#x2019;s start with the basic math behind 3D perspective rendering. The following diagram is a side view of a person sitting in front of a screen, viewing a 3D object behind it.&lt;/p&gt;
+&lt;img src=&quot;http://www.a1k0n.net/img/perspective.png&quot;&gt;
+&lt;p&gt;To render a 3D object onto a 2D screen, we project each point (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;) in 3D-space onto a plane located &lt;em&gt;z&amp;#x2019;&lt;/em&gt; units away from the viewer, so that the corresponding 2D position is (&lt;em&gt;x&amp;#x2019;&lt;/em&gt;,&lt;em&gt;y&amp;#x2019;&lt;/em&gt;). Since we&amp;#x2019;re looking from the side, we can only see the &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; axes, but the math works the same for the &lt;em&gt;x&lt;/em&gt; axis (just pretend this is a top view instead). This projection is really easy to obtain: notice that the origin, the &lt;em&gt;y&lt;/em&gt;-axis, and point (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;) form a right triangle, and a similar right triangle is formed with (&lt;em&gt;x&amp;#x2019;&lt;/em&gt;,&lt;em&gt;y&amp;#x2019;&lt;/em&gt;,&lt;em&gt;z&amp;#x2019;&lt;/em&gt;). Thus the relative proportions are maintained:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/1b710772b17843b980f2e9ca46732e92.png&quot; alt=&quot;$\begin{aligned}
+\frac{y'}{z'} &amp;amp;= \frac{y}{z}
+\\
+y' &amp;amp;= \frac{y z'}{z}.
+\end{aligned}$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\begin{aligned}
+\frac{y'}{z'} &amp;amp;= \frac{y}{z}
+\\
+y' &amp;amp;= \frac{y z'}{z}.
+\end{aligned}&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;So to project a 3D coordinate to 2D, we scale a coordinate by the screen distance &lt;em&gt;z&amp;#x2019;&lt;/em&gt;. Since &lt;em&gt;z&amp;#x2019;&lt;/em&gt; is a fixed constant, and not functionally a coordinate, let&amp;#x2019;s rename it to &lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;, so our projection equation becomes &lt;span class=&quot;maruku-inline&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/177962348550aa653ef29eec5f04b1d6.png&quot; alt=&quot;$(x',y') = (\frac{K_1 x}{z}, \frac{K_1 y}{z})$&quot;&gt;&lt;/span&gt;. We can choose &lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; arbitrarily based on the field of view we want to show in our 2D window. For example, if we have a 100x100 window of pixels, then the view is centered at (50,50); and if we want to see an object which is 10 units wide in our 3D space, set back 5 units from the viewer, then &lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; should be chosen so that the projection of the point &lt;em&gt;x&lt;/em&gt;=10, &lt;em&gt;z&lt;/em&gt;=5 is still on the screen with &lt;em&gt;x&amp;#x2019;&lt;/em&gt; &amp;lt; 50: 10&lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;/5 &amp;lt; 50, or &lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; &amp;lt; 25.&lt;/p&gt;
+
+&lt;p&gt;When we&amp;#x2019;re plotting a bunch of points, we might end up plotting different points at the same (&lt;em&gt;x&amp;#x2019;&lt;/em&gt;,&lt;em&gt;y&amp;#x2019;&lt;/em&gt;) location but at different depths, so we maintain a &lt;a href=&quot;http://en.wikipedia.org/wiki/Z-buffering&quot;&gt;z-buffer&lt;/a&gt; which stores the &lt;em&gt;z&lt;/em&gt; coordinate of everything we draw. If we need to plot a location, we first check to see whether we&amp;#x2019;re plotting in front of what&amp;#x2019;s there already. It also helps to compute &lt;em&gt;z&lt;/em&gt;&lt;sup&gt;-1&lt;/sup&gt; &lt;span class=&quot;maruku-inline&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/ed0a093882a4dfd48f6e83aea38313e7.png&quot; alt=&quot;$= \frac{1}{z}$&quot;&gt;&lt;/span&gt; and use that when depth buffering because:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;z&lt;/em&gt;&lt;sup&gt;-1&lt;/sup&gt; = 0 corresponds to infinite depth, so we can pre-initialize our z-buffer to 0 and have the background be infinitely far away&lt;/li&gt;
+
+&lt;li&gt;we can re-use &lt;em&gt;z&lt;/em&gt;&lt;sup&gt;-1&lt;/sup&gt; when computing &lt;em&gt;x&amp;#x2019;&lt;/em&gt; and &lt;em&gt;y&amp;#x2019;&lt;/em&gt;: Dividing once and multiplying by &lt;em&gt;z&lt;/em&gt;&lt;sup&gt;-1&lt;/sup&gt; twice is cheaper than dividing by &lt;em&gt;z&lt;/em&gt; twice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, how do we draw a donut, AKA &lt;a href=&quot;http://en.wikipedia.org/wiki/Torus&quot;&gt;torus&lt;/a&gt;? Well, a torus is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Solid_of_revolution&quot;&gt;solid of
+revolution&lt;/a&gt;, so one way to do it is to draw a 2D circle around some point in 3D space, and then rotate it around the central axis of the torus. Here is a cross-section through the center of a torus:&lt;/p&gt;
+&lt;img src=&quot;http://www.a1k0n.net/img/torusxsec.png&quot;&gt;
+&lt;p&gt;So we have a circle of radius &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; centered at point (&lt;em&gt;R&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;,0,0), drawn on the &lt;em&gt;xy&lt;/em&gt;-plane. We can draw this by sweeping an angle &amp;#x2014; let&amp;#x2019;s call it &lt;em&gt;&amp;#x3B8;&lt;/em&gt; &amp;#x2014; from 0 to 2&amp;#x3C0;:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/aca3f080178e9a3fe979c5f594e0beab.png&quot; alt=&quot;$(x,y,z) = (R_2,0,0) + (R_1 \cos \theta, R_1 \sin \theta, 0)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;(x,y,z) = (R_2,0,0) + (R_1 \cos \theta, R_1 \sin \theta, 0)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Now we take that circle and rotate it around the &lt;em&gt;y&lt;/em&gt;-axis by another angle &amp;#x2014; let&amp;#x2019;s call it &amp;#x3C6;. To rotate an arbitrary 3D point around one of the cardinal axes, the standard technique is to multiply by a &lt;a href=&quot;http://en.wikipedia.org/wiki/Rotation_matrix&quot;&gt;rotation matrix&lt;/a&gt;. So if we take the previous points and rotate about the &lt;em&gt;y&lt;/em&gt;-axis we get:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/0efcfa79c88e4aaf636d09cc932908b1.png&quot; alt=&quot;$\left( \begin{matrix}
+R_2 + R_1 \cos \theta, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+=
+\left( \begin{matrix}
+(R_2 + R_1 \cos \theta)\cos \phi, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+-(R_2 + R_1 \cos \theta)\sin \phi \end{matrix} \right)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\left( \begin{matrix}
+R_2 + R_1 \cos \theta, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+=
+\left( \begin{matrix}
+(R_2 + R_1 \cos \theta)\cos \phi, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+-(R_2 + R_1 \cos \theta)\sin \phi \end{matrix} \right)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;But wait: we also want the whole donut to spin around on at least two more axes for the animation. They were called &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; in the original code: it was a rotation about the &lt;em&gt;x&lt;/em&gt;-axis by &lt;em&gt;A&lt;/em&gt; and a rotation about the &lt;em&gt;z&lt;/em&gt;-axis by &lt;em&gt;B&lt;/em&gt;. This is a bit hairier, so I&amp;#x2019;m not even going write the result yet, but it&amp;#x2019;s a bunch of matrix multiplies.&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/6c1370bb4d444fc1de289c06204d384c.png&quot; alt=&quot;$\left( \begin{matrix}
+R_2 + R_1 \cos \theta, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; \cos A &amp;amp; \sin A \\
+0 &amp;amp; -\sin A &amp;amp; \cos A \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos B &amp;amp; \sin B &amp;amp; 0 \\
+-\sin B &amp;amp; \cos B &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1 \end{matrix} \right)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\left( \begin{matrix}
+R_2 + R_1 \cos \theta, &amp;amp;
+R_1 \sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; \cos A &amp;amp; \sin A \\
+0 &amp;amp; -\sin A &amp;amp; \cos A \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos B &amp;amp; \sin B &amp;amp; 0 \\
+-\sin B &amp;amp; \cos B &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1 \end{matrix} \right)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Churning through the above gets us an (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;) point on the surface of our torus, rotated around two axes, centered at the origin. To actually get screen coordinates, we need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Move the torus somewhere in front of the viewer (the viewer is at the origin) &amp;#x2014; so we just add some constant to &lt;em&gt;z&lt;/em&gt; to move it backward.&lt;/li&gt;
+
+&lt;li&gt;Project from 3D onto our 2D screen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So we have another constant to pick, call it &lt;em&gt;K&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;, for the distance of the donut from the viewer, and our projection now looks like:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/2919c373ab68c31e37685cab52fad45a.png&quot; alt=&quot;$\left( x', y' \right)
+=
+\left( \frac{K_1 x}{K_2 + z} , \frac{K_1 y}{K_2 + z} \right)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\left( x', y' \right)
+=
+\left( \frac{K_1 x}{K_2 + z} , \frac{K_1 y}{K_2 + z} \right)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;K&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; and &lt;em&gt;K&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt; can be tweaked together to change the field of view and flatten or exaggerate the depth of the object.&lt;/p&gt;
+
+&lt;p&gt;Now, we could implement a 3x3 matrix multiplication routine in our code and implement the above in a straightforward way. But if our goal is to shrink the code as much as possible, then every 0 in the matrices above is an opportunity for simplification. So let&amp;#x2019;s multiply it out. Churning through a bunch of algebra (thanks Mathematica!), the full result is:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/30543268e7326534b0a18a1c84e24510.png&quot; alt=&quot;$\left( \begin{matrix} x \\ y \\ z \end{matrix} \right) =
+\left( \begin{matrix}
+ (R_2 + R_1 \cos \theta) (\cos B \cos \phi + \sin A \sin B \sin \phi) - 
+   R_1 \cos A \sin B \sin \theta \\
+
+ (R_2 + R_1 \cos \theta) (\cos \phi \sin B - \cos B \sin A \sin \phi) + 
+   R_1 \cos A \cos B \sin \theta \\
+ \cos A (R_2 + R_1 \cos \theta) \sin \phi + R_1 \sin A \sin \theta
+\end{matrix} \right)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\left( \begin{matrix} x \\ y \\ z \end{matrix} \right) =
+\left( \begin{matrix}
+ (R_2 + R_1 \cos \theta) (\cos B \cos \phi + \sin A \sin B \sin \phi) - 
+   R_1 \cos A \sin B \sin \theta \\
+
+ (R_2 + R_1 \cos \theta) (\cos \phi \sin B - \cos B \sin A \sin \phi) + 
+   R_1 \cos A \cos B \sin \theta \\
+ \cos A (R_2 + R_1 \cos \theta) \sin \phi + R_1 \sin A \sin \theta
+\end{matrix} \right)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Well, that looks pretty hideous, but we we can precompute some common subexpressions (e.g. all the sines and cosines, and &lt;span class=&quot;maruku-inline&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/54482053911d43204d56b95e4b58ed4b.png&quot; alt=&quot;$R_2 + R_1 \cos \theta$&quot;&gt;&lt;/span&gt;) and reuse them in the code. In fact I came up with a completely different factoring in the original code but that&amp;#x2019;s left as an exercise for the reader. (The original code also swaps the sines and cosines of A, effectively rotating by 90 degrees, so I guess my initial derivation was a bit different but that&amp;#x2019;s OK.)&lt;/p&gt;
+
+&lt;p&gt;Now we know where to put the pixel, but we still haven&amp;#x2019;t even considered which shade to plot. To calculate illumination, we need to know the &lt;a href=&quot;http://en.wikipedia.org/wiki/Surface_normal&quot;&gt;surface normal&lt;/a&gt; &amp;#x2014; the direction perpendicular to the surface at each point. If we have that, then we can take the &lt;a href=&quot;http://en.wikipedia.org/wiki/Dot_product&quot;&gt;dot
+product&lt;/a&gt; of the surface normal with the light direction, which we can choose arbitrarily. That gives us the cosine of the angle between the light direction and the surface direction: If the dot product is &amp;gt;0, the surface is facing the light and if it&amp;#x2019;s &amp;lt;0, it faces away from the light. The higher the value, the more light falls on the surface.&lt;/p&gt;
+
+&lt;p&gt;The derivation of the surface normal direction turns out to be pretty much the same as our derivation of the point in space. We start with a point on a circle, rotate it around the torus&amp;#x2019;s central axis, and then make two more rotations. The surface normal of the point on the circle is fairly obvious: it&amp;#x2019;s the same as the point on a unit (radius=1) circle centered at the origin.&lt;/p&gt;
+
+&lt;p&gt;So our surface normal (&lt;em&gt;N&lt;sub&gt;x&lt;/sub&gt;&lt;/em&gt;, &lt;em&gt;N&lt;sub&gt;y&lt;/sub&gt;&lt;/em&gt;, &lt;em&gt;N&lt;sub&gt;z&lt;/sub&gt;&lt;/em&gt;) is derived the same as above, except the point we start with is just (cos &lt;em&gt;&amp;#x3B8;&lt;/em&gt;, sin &lt;em&gt;&amp;#x3B8;&lt;/em&gt;, 0). Then we apply the same rotations:&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/b75b5020836f6ba6428f2ec6373d5566.png&quot; alt=&quot;$\left( \begin{matrix}
+N_x, &amp;amp;
+N_y, &amp;amp;
+N_z \end{matrix} \right)
+=
+\left( \begin{matrix}
+\cos \theta, &amp;amp;
+\sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; \cos A &amp;amp; \sin A \\
+0 &amp;amp; -\sin A &amp;amp; \cos A \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos B &amp;amp; \sin B &amp;amp; 0 \\
+-\sin B &amp;amp; \cos B &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1 \end{matrix} \right)$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\left( \begin{matrix}
+N_x, &amp;amp;
+N_y, &amp;amp;
+N_z \end{matrix} \right)
+=
+\left( \begin{matrix}
+\cos \theta, &amp;amp;
+\sin \theta, &amp;amp;
+0 \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos \phi &amp;amp; 0 &amp;amp; \sin \phi \\
+0 &amp;amp; 1 &amp;amp; 0 \\
+-\sin \phi &amp;amp; 0 &amp;amp; \cos \phi \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \\
+0 &amp;amp; \cos A &amp;amp; \sin A \\
+0 &amp;amp; -\sin A &amp;amp; \cos A \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+\cos B &amp;amp; \sin B &amp;amp; 0 \\
+-\sin B &amp;amp; \cos B &amp;amp; 0 \\
+0 &amp;amp; 0 &amp;amp; 1 \end{matrix} \right)&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;So which lighting direction should we choose? How about we light up surfaces facing behind and above the viewer: &lt;span class=&quot;maruku-inline&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/a630fbf79f8ae344d7f88ee29868f7b7.png&quot; alt=&quot;$(0,1,-1)$&quot;&gt;&lt;/span&gt;. Technically this should be a normalized unit vector, and this vector has a magnitude of &amp;#x221A;2. That&amp;#x2019;s okay &amp;#x2013; we will compensate later. Therefore we compute the above (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;), throw away the &lt;em&gt;x&lt;/em&gt; and get our luminance &lt;em&gt;L&lt;/em&gt; = &lt;em&gt;y&lt;/em&gt;-&lt;em&gt;z&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&quot;maruku-equation&quot;&gt;&lt;img class=&quot;maruku-png&quot; src=&quot;http://www.a1k0n.net/img/latex/d2a3805a6edac7e522c8956b00ebf10f.png&quot; alt=&quot;$\begin{aligned}
+L &amp;amp;=
+\left( \begin{matrix}
+N_x, &amp;amp;
+N_y, &amp;amp;
+N_z \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+0, &amp;amp;
+1, &amp;amp;
+-1 \end{matrix} \right)
+\\
+&amp;amp;= 
+\cos \phi \cos \theta \sin B - \cos A \cos \theta \sin \phi - \sin A \sin \theta + 
+ \cos B ( \cos A \sin \theta - \cos \theta \sin A \sin \phi)
+\end{aligned}$&quot;&gt;&lt;span class=&quot;maruku-eq-tex&quot;&gt;&lt;code&gt;\begin{aligned}
+L &amp;amp;=
+\left( \begin{matrix}
+N_x, &amp;amp;
+N_y, &amp;amp;
+N_z \end{matrix} \right)
+\cdot
+\left( \begin{matrix}
+0, &amp;amp;
+1, &amp;amp;
+-1 \end{matrix} \right)
+\\
+&amp;amp;= 
+\cos \phi \cos \theta \sin B - \cos A \cos \theta \sin \phi - \sin A \sin \theta + 
+ \cos B ( \cos A \sin \theta - \cos \theta \sin A \sin \phi)
+\end{aligned}&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;Again, not too pretty, but not terrible once we&amp;#x2019;ve precomputed all the sines and cosines.&lt;/p&gt;
+
+&lt;p&gt;So now all that&amp;#x2019;s left to do is to pick some values for &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;, &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;, &lt;em&gt;K&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;, and &lt;em&gt;K&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. In the original donut code I chose &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;=1 and &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;=2, so it has the same geometry as my cross-section diagram above. &lt;em&gt;K&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; controls the scale, which depends on our pixel resolution and is in fact different for &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt; in the ASCII animation. &lt;em&gt;K&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;, the distance from the viewer to the donut, was chosen to be 5.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#x2019;ve taken the above equations and written a quick and dirty canvas implementation here, just plotting the pixels and the lighting values from the equations above. The result is not exactly the same as the original as some of my rotations are in opposite directions or off by 90 degrees, but it is qualitatively doing the same thing.&lt;/p&gt;
+
+&lt;p&gt;Here it is: &lt;/p&gt;
+&lt;canvas width=&quot;300&quot; id=&quot;canvasdonut&quot; height=&quot;240&quot;&gt;
+&lt;/canvas&gt;
+&lt;p&gt;It&amp;#x2019;s slightly mind-bending because you can see right through the torus, but the math does work! Convert that to an ASCII rendering with &lt;em&gt;z&lt;/em&gt;-buffering, and you&amp;#x2019;ve got yourself a clever little program.&lt;/p&gt;
+
+&lt;p&gt;Now, we have all the pieces, but how do we write the code? Roughly like this (some pseudocode liberties have been taken with 2D arrays):&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;
+const float theta_spacing = 0.07;
+const float phi_spacing   = 0.02;
+
+const float R1 = 1;
+const float R2 = 2;
+const float K2 = 5;
+// Calculate K1 based on screen size: the maximum x-distance occurs roughly at
+// the edge of the torus, which is at x=R1+R2, z=0.  we want that to be
+// displaced 3/8ths of the width of the screen, which is 3/4th of the way from
+// the center to the side of the screen.
+// screen_width*3/8 = K1*(R1+R2)/(K2+0)
+// screen_width*K2*3/(8*(R1+R2)) = K1
+const float K1 = screen_width*K2*3/(8*(R1+R2));
+
+render_frame(float A, float B) {
+  // precompute sines and cosines of A and B
+  float cosA = cos(A), sinA = sin(A);
+  float cosB = cos(B), sinB = sin(B);
+
+  char output[0..screen_width, 0..screen_height] = ' ';
+  float zbuffer[0..screen_width, 0..screen_height] = 0;
+
+  // theta goes around the cross-sectional circle of a torus
+  for(float theta=0; theta &amp;lt; 2*pi; theta += theta_spacing) {
+    // precompute sines and cosines of theta
+    float costheta = cos(theta), sintheta = sin(theta);
+
+    // phi goes around the center of revolution of a torus
+    for(float phi=0; phi &amp;lt; 2*pi; phi += phi_spacing) {
+      // precompute sines and cosines of phi
+      float cosphi = cos(phi), sinphi = sin(phi);
+    
+      // the x,y coordinate of the circle, before revolving (factored out of the above equations)
+      float circlex = R2 + R1*costheta;
+      float circley = R1*sintheta;
+
+      // final 3D (x,y,z) coordinate after rotations, directly from our math above
+      float x = circlex*(cosB*cosphi + sinA*sinB*sinphi) - circley*cosA*sinB; 
+      float y = circlex*(sinB*cosphi - sinA*cosB*sinphi) + circley*cosA*cosB;
+      float z = K2 + cosA*circlex*sinphi + circley*sinA;
+      float ooz = 1/z;  // &quot;one over z&quot;
+      
+      // x and y projection.  note that y is negated here, because y goes up in
+      // 3D space but down on 2D displays.
+      int xp = (int) (screen_width/2 + K1*ooz*x);
+      int yp = (int) (screen_height/2 - K1*ooz*y);
+      
+      // calculate luminance.  ugly, but correct.
+      float L = cosphi*costheta*sinB - cosA*costheta*sinphi - sinA*sintheta + 
+                cosB*(cosA*sintheta - costheta*sinA*sinphi);
+      // L ranges from -sqrt(2) to +sqrt(2).  If it's &amp;lt; 0, the surface is
+      // pointing away from us, so we won't bother trying to plot it.
+      if(L&amp;gt;0) {
+        // test against the z-buffer.  larger 1/z means the pixel is closer to
+        // the viewer than what's already plotted.
+        if(ooz &amp;gt; zbuffer[xp,yp]) {
+          zbuffer[xp,yp] = ooz;
+          int luminance_index = L*8; // this brings L into the range 0..11 (8*sqrt(2) = 11.3)
+          // now we lookup the character corresponding to the luminance and plot it in our output:
+          output[xp,yp] = &quot;.,-~:;=!*#$@&quot;[luminance_index];
+        }
+      }
+    }
+  }
+
+  // now, dump output[] to the screen.
+  // bring cursor to &quot;home&quot; location, in just about any currently-used terminal
+  // emulation mode
+  printf(&quot;\x1b[H&quot;);
+  for(int j=0;j&amp;lt;screen_height;j++) {
+    for(int i=0;i&amp;lt;screen_width;i++) {
+      putchar(output[i,j]);
+    }
+    putchar('\n');
+  }
+  
+}
+&lt;/pre&gt;
+&lt;p&gt;The Javascript source for both the ASCII and canvas rendering is &lt;a href=&quot;http://www.a1k0n.net/js/donut.js&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;a href=&quot;http://www.a1k0n.net/2011/07/20/donut-math.html&quot;&gt;permalink&lt;/a&gt; | 
+&lt;a href=&quot;http://www.a1k0n.net/atom.xml&quot; class=&quot;feed&quot;&gt;&lt;img src=&quot;http://www.a1k0n.net/img/feed-icon-14x14.png&quot; alt=&quot;RSS&quot;&gt;&lt;/a&gt; | &lt;a href=&quot;http://www.a1k0n.net/&quot;&gt;a1k0n.net&lt;/a&gt;&lt;br&gt;
+
+&lt;/body&gt;
+
+&lt;/div&gt;
+</description>
+<title>
+Donut math: how donut.c works (2011)
+</title>
+</item>
+<item>
+<link>
+https://pledge.immunityproject.org/the-free-hiv-aids-vaccine
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;main_content narrow&quot;&gt;
+             &lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;What is Immunity Project?&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Immunity Project is a Y Combinator-backed non profit organization. &amp;#xA0;We are proud to be partners with Until There&amp;#x2019;s A Cure, a registered 501(c)3 organization.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;strong&gt;This campaign will fund our final experiment, using human blood, before we begin our Phase I Clinical Trials.&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/038/content.jpg&quot;&gt;&lt;/p&gt;
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/039/content.png&quot;&gt;&lt;em&gt;&quot;This is certainly a new sort of company for us, but it's the kind of crazy idea we like...&amp;#xA0;I spent a fair amount of time with this group during their application process, and am personally donating both money and blood.&quot;&lt;/em&gt; &amp;#xA0;--&lt;/span&gt;&lt;span class=&quot;il&quot;&gt;Sam&lt;/span&gt;&lt;span&gt;&amp;#xA0;Altman, Partner, &lt;a href=&quot;http://ycombinator.com&quot;&gt;Y Combinator&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;What are we doing?&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Like the best comic book heroes, controllers are born with an incredibly rare super power. They won the genetic lottery. Although controllers carry low levels of HIV, the virus is in a dormant state and they do not contract AIDS. Only 1 out of every 300 people who are living with HIV has this incredible power.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;The essence of controllers&amp;#x2019; immunity is the unique targeting capability contained within their immune systems. Like the finely tuned laser scope on a sniper rifle, the immune systems of controllers have the ability to target the biological markers on the HIV virus that are its achilles heel. When a controller&amp;#x2019;s immune system attacks these biological markers it forces the virus into a dormant state. Non controllers have sniper rifles, but they are missing this critical targeting ability.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Immunity Project is a team of Stanford, Harvard, and MIT scientists and entrepreneurs based in the San Francisco Bay Area who are developing a revolutionary vaccine platform using an entirely novel approach: to adopt the unique targeting capability inherent in controllers to give everyone that same immunity to the targeted disease. The first vaccine being developed using this platform is a vaccine for HIV. It is designed to turn everyone who receives it into an HIV controller. &amp;#xA0;&lt;/span&gt;&lt;span&gt;Immunity Project will offer our HIV vaccine to the world for free. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;Why HIV/AIDS?&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Over 35 million people are currently living with HIV. Each day an additional 7,000 become infected with the virus. Each day over 4,000 people die from AIDS. - the equivalent to ten 747s falling out of the sky every single day. HIV has taken nearly 30 million lives since 1983.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;Current responses to the pandemic are insufficient to match the challenge posed by HIV. For example, for every person who gains access to antiretroviral drugs today, two are newly infected by the virus. This is especially true in sub-Saharan Africa where the need for an HIV vaccine is of the utmost urgency.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/030/content.png&quot;&gt;&lt;/p&gt;
+
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;Timeline&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/035/content.png&quot;&gt;&lt;/p&gt;
+
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;span&gt;What is this campaign funding?&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;strong&gt;We are raising $482,000 to fund the final experiment before we begin our Phase I clinical study. &lt;/strong&gt;Positive data from this experiment will help us provide further validation. &amp;#xA0;&lt;/span&gt;&lt;span&gt;These experiments will help us show that we can successfully immunize human blood against HIV in a controlled external environment&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;Experiment Outline&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Vaccinate humanized mice with (i) an Immunity Project HIV epitope (treatment group) or (ii) tetanus epitope &amp;#xA0;(control group) (Transgenic NOG grafted with an Immunity Project-relevant HLA type). &amp;#xA0;Harvest spleens 14 days post immunization, confirm presentation to killer T cells via Flurospot. &amp;#xA0;Create &lt;/span&gt;&lt;span&gt;in-vitro&lt;/span&gt;&lt;span&gt; cell culture prep with separated CD4 and CD8 T-Cells wherein the CD4 cells have been inoculated with live HIV virus. &amp;#xA0;Expected result: p24 HIV core antigen lower and CD4 counts greater with HIV-epitope immunized mice.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;Budget&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;For the Mouse Experiment&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Animals = $40K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Animal handling (dosing, housing, spleen harvest) = $150K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Reagents (including HIV virus, media, antibodies, magnetic sep,&amp;#xA0;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;p24 assay, MPLA, CpG, etc) = $100K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;FLUOROSPOT plates = $55K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;For the Lab&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;40 HLA Type determinations = $30K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;HLA Subtyping determinations = $20K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Flow Cytometer = $60K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Larger capacity Clinical centrifuge = $6K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Larger capacity CO2 incubator = $6K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Biosafety cabinet = $8K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Lab Refrigerator = $2K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Lab Freezer = $2K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;Rent = $3K&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/032/content.png&quot;&gt;&lt;/p&gt;
+
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;Media Coverage&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/010/content.png&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&quot;The Y Combinator-backed project discovered how to mimic natural immunity to HIV&quot; - &lt;a href=&quot;http://www.fastcompany.com/3025372/if-the-immunity-project-crowdfunds-this-synthetic-aids-vaccine-theyll-offer-it-free-to-every&quot;&gt;Fast Company&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/040/content.png&quot;&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&quot;But Y Combinator is now doing something it has never done before&amp;#x2013;backing a young pharmaceutical company, one that is working on a vaccine for HIV.&quot; - &lt;a href=&quot;http://blogs.wsj.com/venturecapital/2014/01/23/y-combinator-backs-hiv-vaccine-maker-that-wants-crowdfunding/&quot;&gt;The Wall Street Journal&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/041/content.png&quot;&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&quot;A vaccine for HIV/AIDS has been the holy grail of the medical community for decades, and these guys may have found it.&quot; - &lt;a href=&quot;http://venturebeat.com/2014/01/23/startup-developing-hivaids-vaccine-is-2nd-nonprofit-accepted-into-y-combinator/&quot;&gt;Venture Beat&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/042/content.png&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;em&gt;&quot;A vaccine for HIV/AIDS has been the holy grail of the medical community for decades, and these guys may have found it.&quot; - &lt;a href=&quot;http://www.theverge.com/2014/1/23/5338676/the-immunity-project-hopes-to-build-a-better-hiv-vaccine-through-crowdfunding&quot;&gt;The Verge&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/011/content.png&quot;&gt;&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;em&gt;&quot;Heckerman... made a splash recently with a software advance that eases large-scale searches within genetic databases&quot; - &lt;a href=&quot;http://cdn.sparkart.net/immunityproject/Content/misc/Science-2013-Service-186-9.pdf&quot;&gt;Science&lt;/a&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/012/content.png&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;&quot;...an effective vaccine... that strengthen&amp;#xA0;a patient's immune system, as opposed to just attacking the virus with drugs&quot; - &lt;a href=&quot;http://rubsamen.com/images/Walker_2012-Scientific_American.pdf&quot;&gt;Scientific American&lt;/a&gt;&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/013/content.png&quot;&gt;&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;&lt;em&gt;&lt;span&gt;&quot;...the key to fighting spam and HIV is the same: Find the part that absolutely can't mutate -- what he calls the Achilles' heel -- and attack there&quot; - &lt;/span&gt;&lt;span&gt;&lt;a href=&quot;http://lat.ms/18nBHyx&quot;&gt;LATimes&lt;/a&gt;&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;span&gt;&lt;span id=&quot;docs-internal-guid-33d7b3fa-ad81-c1b6-bdb6-910528b19446&quot;&gt;&lt;span&gt;Meet the Team&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Dr. Reid Rubsamen - Chief Executive Officer and Co-Founder&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/001/content.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;Stanford MD and MA in Computer Science. 60+ patents for novel drug delivery technologies. Founder of Aradigm.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Naveen Jain - Chief Marketing Officer and Co-Founder&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/005/content.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;Entrepreneur and CEO of Sparkart.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Dr. Charles Herst - Chief Science Officer&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/003/content.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;UC Berkeley MA in Bacteriology and Northwestern PhD in Tumor Cell Biology.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Dr. Salim Abdool Karim - Clinical Investigator&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;&lt;b&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/004/content.jpg&quot;&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;MD and PhD. Professor of Clinical Epedmiology at Columbia. Director of CAPRISA.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Ian Cinnamon - Director of Strategy&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/006/content.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;BS from MIT in Cognitive Science. Entrepreneur, Author.&lt;/span&gt;&lt;/p&gt;
+
+
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;b&gt;Howie Diamond - Director of Strategy &amp;amp; Marketing&lt;/b&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://s3.amazonaws.com/crowdhoster/immunityproject/uploads/ckeditor/pictures/data/000/000/007/content.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;span&gt;Entrepreneur and Director of Business Development at Sparkart&lt;/span&gt;&lt;/p&gt;
+
+
+
+      &lt;/div&gt;
+
+        
+    &lt;/div&gt;
+</description>
+<title>
+The Free HIV/AIDS Vaccine
 </title>
 </item>
 </channel>
