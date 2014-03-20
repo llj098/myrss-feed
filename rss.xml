@@ -15,358 +15,6 @@ myread
 </description>
 <item>
 <link>
-https://periscope.io/blog/use-subqueries-to-count-distinct-50x-faster.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;post&quot;&gt;
-  &lt;a href=&quot;https://periscope.io/blog/use-subqueries-to-count-distinct-50x-faster.html&quot; class=&quot;post-title-link&quot;&gt;Use Subqueries to Count Distinct 50X Faster&lt;/a&gt;
-  &lt;p class=&quot;date&quot;&gt;22 Jan 2014&lt;/p&gt;
-  &lt;p&gt;&lt;em&gt;NB: These techniques are universal, but for syntax we chose Postgres. Thanks to the inimitable &lt;a href=&quot;http://www.pgadmin.org/&quot;&gt;pgAdminIII&lt;/a&gt; for the Explain graphics.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3&gt;So Useful, Yet So Slow&lt;/h3&gt;
-
-&lt;p&gt;Count distinct is the bane of SQL analysts, so it was an obvious choice for our first blog post.&lt;/p&gt;
-
-&lt;p&gt;First things first: If you have a huge dataset and can tolerate some imprecision, a probabilistic counter like &lt;a href=&quot;http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf&quot;&gt;HyperLogLog&lt;/a&gt; can be your best bet. (We'll return to HyperLogLog in a future blog post.) But for a quick, precise answer, some simple subqueries can save you a lot of time.&lt;/p&gt;
-
-&lt;p&gt;Let's start with a simple query we run all the time: Which dashboards do most users visit?&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; 
-  &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_on_site_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_on_site_logs&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_on_site_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;desc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;For starters, let's assume the handy indices on user_id and dashboard_id are in place, and there are lots more log lines than dashboards and users.&lt;/p&gt;
-
-&lt;p&gt;On just 10 million rows, this query takes &lt;strong&gt;48 seconds&lt;/strong&gt;. To understand why, let's consult our handy SQL explain:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20slow.png&quot;&gt;&lt;img src=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20slow.png&quot; alt=&quot;Explain Slow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It's slow because the database is iterating over all the logs and all the dashboards, then joining them, then sorting them, all before getting down to real work of grouping and aggregating.&lt;/p&gt;
-
-&lt;h3&gt;Aggregate, Then Join&lt;/h3&gt;
-
-&lt;p&gt;Anything after the group-and-aggregate is going to be a lot cheaper because the data size is much smaller. Since we don't need dashboards.name in the group-and-aggregate, we can have the database do the aggregation first, before the join:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_on_site_logs&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;desc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This query runs in &lt;strong&gt;20 seconds&lt;/strong&gt;, a &lt;strong&gt;2.4X&lt;/strong&gt; improvement! Once again, our trusty explain will show us why:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20faster.png&quot;&gt;&lt;img src=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20faster.png&quot; alt=&quot;Explain Faster&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;As promised, our group-and-aggregate comes before the join. And, as a bonus, we can take advantage of the index on the time_on_site_logs table.&lt;/p&gt;
-
-&lt;h3&gt;First, Reduce The Data Set&lt;/h3&gt;
-
-&lt;p&gt;We can do better. By doing the group-and-aggregate over the whole logs table, we made our database process a lot of data unnecessarily. Count distinct builds a hash set for each group &amp;#x2014; in this case, each dashboard_id &amp;#x2014; to keep track of which values have been seen in which buckets.&lt;/p&gt;
-
-&lt;p&gt;Instead of doing all that work, we can compute the distincts in advance, which only needs one hash set. Then we do a simple aggregation over all of them.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distinct_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_id&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_on_site_logs&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distinct_logs&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distinct_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dashboard_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dashboards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ct&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;desc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;We've taken the inner count-distinct-and-group and broken it up into two pieces. The inner piece computes distinct (dashboard_id, user_id) pairs. The second piece runs a simple, speedy group-and-count over them. As always, the join is last.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20fastest.png&quot;&gt;&lt;img src=&quot;https://s3.amazonaws.com/periscope-blog-assets/explain%20fastest.png&quot; alt=&quot;Explain Fastest&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And now for the big reveal: This sucker takes &lt;strong&gt;0.7 seconds&lt;/strong&gt;! That's a &lt;strong&gt;28X&lt;/strong&gt; increase over the previous query, and a &lt;strong&gt;68X&lt;/strong&gt; increase over the original query.&lt;/p&gt;
-
-&lt;p&gt;As always, data size and shape matters a lot. These examples benefit a lot from a relatively low cardinality. There are a small number of distinct (user_id, dashboard_id) pairs compared to the total amount of data. The more unique pairs there are &amp;#x2014; the more data rows are unique snowflakes that must be grouped and counted &amp;#x2014; the less free lunch there will be.&lt;/p&gt;
-
-&lt;p&gt;Next time count distinct is taking all day, try a few subqueries to lighten the load.&lt;/p&gt;
-
-&lt;h3&gt;Who Are You Guys, Anyway?&lt;/h3&gt;
-
-&lt;p&gt;We make &lt;a href=&quot;https://periscope.io&quot;&gt;Periscope&lt;/a&gt;, a tool that makes SQL data analysis really fast. We'll be using this space to share the algorithms and techniques we've baked into our product.&lt;/p&gt;
-
-&lt;p&gt;You can &lt;a href=&quot;https://periscope.io&quot;&gt;sign up on our homepage&lt;/a&gt; to be notified as we take on new customers.&lt;/p&gt;
-
-&lt;h3&gt;Update: More Data!&lt;/h3&gt;
-
-&lt;p&gt;See our follow-up post, &lt;a href=&quot;https://periscope.io/blog/count-distinct-in-mysql-postgres-sql-server-and-oracle.html&quot;&gt;Count Distinct Compared on Top 4 SQL Databases&lt;/a&gt; to see how these improvements hold up on MySQL, Oracle and SQL Server.&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-
-
-&lt;/div&gt;
-</description>
-<title>
-SQL: Using Subqueries to Count Distinct 50x Faster
-</title>
-</item>
-<item>
-<link>
-https://github.com/Katee/quietnet
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
-          
-
-
-
-
-
-
-
-  &lt;a href=&quot;https://github.com/Katee/quietnet&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
-  &lt;span class=&quot;language-color&quot;&gt;Python&lt;/span&gt;
-  &lt;/a&gt;
-
-
-
-
-
-
-
-&lt;a href=&quot;https://github.com/Katee/quietnet/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
-&lt;div class=&quot;bubble files-bubble&quot;&gt;
-
-
-  
-
-  &lt;table class=&quot;files&quot;&gt;
-
-    
-&lt;tbody class=&quot;&quot;&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/tree/master/notebooks&quot; class=&quot;js-directory-link&quot; id=&quot;c2365e874ecb861a659e5215ff17c338-ccdb59fcf6724d362ce6a264dab94aa6d0ec3c23&quot; title=&quot;notebooks&quot;&gt;notebooks&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/58091c079d0593b61aa456eb309b9fd2f24f4af0&quot; class=&quot;message&quot; title=&quot;Actually we do need capture_audio.py, but only for the notebooks.&quot;&gt;Actually we do need capture_audio.py, but only for the notebooks.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-09T10:49:21-08:00&quot; title=&quot;2014-01-09 10:49:21&quot;&gt;January 09, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/LICENSE&quot; class=&quot;js-directory-link&quot; id=&quot;9879d6db96fd29134fc802214163b95a-8000b439fb907c2315bca26bf079b7eb63157125&quot; title=&quot;LICENSE&quot;&gt;LICENSE&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/6a839a6658ca7e8439ed57c538ec32a9de3163a3&quot; class=&quot;message&quot; title=&quot;Adds MIT License.&quot;&gt;Adds MIT License.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-08T17:42:49-08:00&quot; title=&quot;2014-01-08 17:42:49&quot;&gt;January 08, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/Readme.md&quot; class=&quot;js-directory-link&quot; id=&quot;1e290ac8433d555bce009b162cb869d0-0a84e263f4d94ed793d495ea8e4dcc3b0b1f5219&quot; title=&quot;Readme.md&quot;&gt;Readme.md&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/88bd42fd26031d4a79136781a7d3e15dc24a3019&quot; class=&quot;message&quot; title=&quot;Adds note about also being annoying to some humans.&quot;&gt;Adds note about also being annoying to some humans.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-11T14:54:56-08:00&quot; title=&quot;2014-01-11 14:54:56&quot;&gt;January 11, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/listen.py&quot; class=&quot;js-directory-link&quot; id=&quot;da61963ae4594f517beb0b899d0174fb-c0d73dfc1ed41413de45989cc167a1a75e8614cb&quot; title=&quot;listen.py&quot;&gt;listen.py&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/467fd22ca94998897ac5ff93e68795e6059adb47&quot; class=&quot;message&quot; title=&quot;Comments and messages.&quot;&gt;Comments and messages.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2013-11-08T10:42:40-08:00&quot; title=&quot;2013-11-08 10:42:40&quot;&gt;November 08, 2013&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/options.py&quot; class=&quot;js-directory-link&quot; id=&quot;98b301f0b8fb7544703dc522bfea0c01-6f237dffd2618816863d318d41e1790ea39e0ac0&quot; title=&quot;options.py&quot;&gt;options.py&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/d5c99be8022ffa830534e5e8a537cdc86a506867&quot; class=&quot;message&quot; title=&quot;Updates options use a chunk size of 256 and a frame_length of 3. This ma...
-
-...kes things a bit faster and still seemed to work well.&quot;&gt;Updates options use a chunk size of 256 and a frame_length of 3. This&amp;#x2026;&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-11T13:17:05-08:00&quot; title=&quot;2014-01-11 13:17:05&quot;&gt;January 11, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/psk.py&quot; class=&quot;js-directory-link&quot; id=&quot;72c6681f04fac29140a33185b831ba20-e7d69e39dcedb6c7f033bbfd44fa8ccf5c70c2a5&quot; title=&quot;psk.py&quot;&gt;psk.py&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/665612b0f89271d1d7911959528f1b7a460843ce&quot; class=&quot;message&quot; title=&quot;Adds message when trying to send non printable ASCII characters.&quot;&gt;Adds message when trying to send non printable ASCII characters.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-09T08:23:03-08:00&quot; title=&quot;2014-01-09 08:23:03&quot;&gt;January 09, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/quietnet.py&quot; class=&quot;js-directory-link&quot; id=&quot;3b7a5470a17ec5a80b7597e415b5e96a-efdc6f6e182fab5f66c7b39078e1b463192429df&quot; title=&quot;quietnet.py&quot;&gt;quietnet.py&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/a8ca7b1eeb1d9546b77d0db8c52dac6daa49a13f&quot; class=&quot;message&quot; title=&quot;Fixes Issue #12, where checking around a frequency that is very close to...
-
-... the edge of the fft would cause an index out of bounds. Also makes checking around around a frequency a little more robust.&quot;&gt;Fixes Issue&lt;/a&gt; &lt;a href=&quot;https://github.com/Katee/quietnet/issues/12&quot; class=&quot;issue-link&quot; title='High frequency cause &quot;index out of bounds&quot;'&gt;#12&lt;/a&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/a8ca7b1eeb1d9546b77d0db8c52dac6daa49a13f&quot; class=&quot;message&quot; title=&quot;Fixes Issue #12, where checking around a frequency that is very close to...
-
-... the edge of the fft would cause an index out of bounds. Also makes checking around around a frequency a little more robust.&quot;&gt;, where checking around a frequency that is very close&amp;#x2026;&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-11T13:14:47-08:00&quot; title=&quot;2014-01-11 13:14:47&quot;&gt;January 11, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/requirements.txt&quot; class=&quot;js-directory-link&quot; id=&quot;b4ef698db8ca845e5845c4618278f29a-790f0766504acbd25f8a4a21a8d0c29bdc16c87a&quot; title=&quot;requirements.txt&quot;&gt;requirements.txt&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/6a8e4e0c55cb21f83dddcabda4939852edef7ce9&quot; class=&quot;message&quot; title=&quot;Adds requirements.txt&quot;&gt;Adds requirements.txt&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-08T18:20:03-08:00&quot; title=&quot;2014-01-08 18:20:03&quot;&gt;January 08, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/screenshot.png&quot; class=&quot;js-directory-link&quot; id=&quot;768cd605bc77a80d4cdc7b3fd552f803-4bc8b2f8ab24d48a17047f7c6ff67be8c63aa8e7&quot; title=&quot;screenshot.png&quot;&gt;screenshot.png&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/972befe31a5a8b94261dee4a6b692fee57447839&quot; class=&quot;message&quot; title=&quot;Adds screenshot and displays it in readme.&quot;&gt;Adds screenshot and displays it in readme.&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-09T10:39:41-08:00&quot; title=&quot;2014-01-09 10:39:41&quot;&gt;January 09, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/blob/master/send.py&quot; class=&quot;js-directory-link&quot; id=&quot;082b8067c1dc1dc9fcc7c3b93af53ca5-3f4000b91f24d3493137f8e49a044eede567e24f&quot; title=&quot;send.py&quot;&gt;send.py&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/Katee/quietnet/commit/2acabf9e57e402e2aec9b3b8a3c488cb81867e1f&quot; class=&quot;message&quot; title=&quot;Fixes audible squawking by not having any jumps in phase. Also cleans up...
-
-... envelope function.&quot;&gt;Fixes audible squawking by not having any jumps in phase. Also cleans&amp;#x2026;&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-09T15:45:19-08:00&quot; title=&quot;2014-01-09 15:45:19&quot;&gt;January 09, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-
-  &lt;/table&gt;
-&lt;/div&gt;
-
-  &lt;div id=&quot;readme&quot; class=&quot;clearfix announce instapaper_body md&quot;&gt;
-    &lt;span class=&quot;name&quot;&gt;
-      
-      Readme.md
-    &lt;/span&gt;
-
-    &lt;article class=&quot;markdown-body entry-content&quot;&gt;
-
-&lt;p&gt;Simple chat program using near ultrasonic frequencies. Works without Wifi or Bluetooth and won't show up in a pcap.&lt;/p&gt;
-
-&lt;p&gt;Note: If you can clearly hear the send script working then your speakers may not be high quality enough to produce sounds in the near ultrasonic range.&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;usage&quot; class=&quot;anchor&quot; href=&quot;https://github.com/Katee/quietnet#usage&quot;&gt;&lt;/a&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;run &lt;code&gt;python send.py&lt;/code&gt; in one terminal window and &lt;code&gt;python listen.py&lt;/code&gt; in another. Text you input into the send.py window should appear (after a delay) in the listen.py window.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; May annoy some animals and humans.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/Katee/quietnet/master/screenshot.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://raw.github.com/Katee/quietnet/master/screenshot.png&quot; alt=&quot;Screenshot&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;installation&quot; class=&quot;anchor&quot; href=&quot;https://github.com/Katee/quietnet#installation&quot;&gt;&lt;/a&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;Quietnet is dependant on &lt;a href=&quot;http://people.csail.mit.edu/hubert/pyaudio/&quot;&gt;pyaudio&lt;/a&gt; and &lt;a href=&quot;http://www.numpy.org/&quot;&gt;Numpy&lt;/a&gt;.&lt;/p&gt;&lt;/article&gt;
-  &lt;/div&gt;
-
-
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-</description>
-<title>
-Simple chat program using inaudible sounds and a computer's microphone and speaker
-</title>
-</item>
-<item>
-<link>
-http://webcache.googleusercontent.com/search?q=cache:E6OJcLJ10WQJ:politicalticker.blogs.cnn.com/2014/01/23/breaking-china-dumps-all-bonds-declares-south-china-sea-closed-zone/+&cd=1&hl=en&ct=clnk&gl=us
-</link>
-<description>
-
-</description>
-<title>
-CNN website hacked: &quot;China dumps all bonds&quot;
-</title>
-</item>
-<item>
-<link>
-http://money.cnn.com/2014/01/24/technology/social/uber-gett/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;storytext&quot;&gt; &lt;div id=&quot;ie_dottop&quot;&gt; &lt;img src=&quot;http://i2.cdn.turner.com/money/dam/assets/140124073922-gett-620xa.jpg&quot; width=&quot;620&quot; alt=&quot;gett&quot; border=&quot;0&quot;&gt; &lt;p&gt;Gett, an Uber rival, is accusing Uber of questionable tactics regarding its competition.&lt;/p&gt; &lt;/div&gt;   &lt;p class=&quot;cnnStorySource&quot;&gt; NEW YORK (CNNMoney) &lt;/p&gt; &lt;h2&gt;A rival car service says Uber has been using questionable tactics to recruit its drivers.&lt;/h2&gt; &lt;p&gt; &lt;a href=&quot;http://www.getgcar.com/gett.html&quot; target=&quot;_blank&quot;&gt;Gett&lt;/a&gt;, which allows users to order cars with a smartphone app, claims that Uber employees in New York ordered and canceled over a hundred of its cars during a span of three days last week. &lt;/p&gt;  &lt;p&gt; The Uber employees received the Gett drivers' cell phone numbers from the order. On Tuesday, an Uber employee texted the drivers in an attempt to recruit them. In screenshots of the texts provided to CNNMoney, Uber offered Gett drivers money to come work for their company. &lt;/p&gt; &lt;p&gt; Uber acknowledged the tactics went overboard. &lt;/p&gt; &lt;p&gt; &quot;Our local teams can be pretty determined when spreading the word about Uber and how our platform opens up new economic opportunities for drivers,&quot; Uber said in a statement. &quot;In this instance, the New York City team was a bit too ambitious and we'll make sure they tone down their sales tactics.&quot; &lt;/p&gt; &lt;p&gt; &lt;a href=&quot;http://money.cnn.com/2013/12/17/technology/mobile/uber-price/index.html&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;inStoryHeading&quot;&gt;Related: Uber 'price gouging' complaints are silly&lt;/span&gt;&lt;/a&gt; &lt;/p&gt; &lt;p&gt; Gett CEO Jing Herman likened the incident to a &quot;denial of service&quot; attack, saying the cancellations disrupted the company's business. &lt;/p&gt; &lt;p&gt; &quot;During a very short period of time when we had a hundred cancellations that took up a hundred drivers, those hundred drivers could have served a hundred of our legitimate customers who weren't able to get a car or had to wait much longer to get a car,&quot; Herman told CNNMoney. &lt;/p&gt; &lt;p&gt; In some cases, Herman said the Uber employees waited until the cars had showed up to cancel the order. Uber said the orders were all canceled immediately. &lt;/p&gt; &lt;p&gt; Order forms provided to CNNMoney show that more than a dozen Uber employees were involved, including community managers, operations managers, Uber's general manager, and the company's social media strategist. Some booked and canceled as many as twelve rides over the two-day period. A couple Uber employees canceled rides in December as well. &lt;/p&gt; &lt;p&gt; &lt;a href=&quot;http://money.cnn.com/2013/12/12/technology/uber-delivery/index.html&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;inStoryHeading&quot;&gt;Related: Uber starts on-demand deliveries&lt;/span&gt;&lt;/a&gt; &lt;/p&gt; &lt;p&gt; Herman said Uber's tactics didn't end there: Many of Gett's employees are blocked from using Uber. &lt;/p&gt; &lt;p&gt; &quot;Personally, I've been blocked for the last few months,&quot; she says. &lt;/p&gt; &lt;p&gt; Uber may be a fast-growing company competing with several players for business, but San Francisco-based attorney Drexel Bradshaw says the company could face legal problems for these type of practices. &lt;/p&gt; &lt;p&gt; &quot;If Uber employees intentionally diverted Gett drivers from legitimate business by making phony calls, that is an unfair business practice, illegal under California law,&quot; he said. &quot;It is also an intentional interference with Gett's business which makes them liable for money damages.&quot; &lt;/p&gt; &lt;p&gt; Gett declined comment on whether it will pursue legal action against Uber. &lt;/p&gt; &lt;p&gt; Uber spokesman Andrew Noyes said Uber ultimately paid cancellation fees for the rides its employees ordered on Gett. For its part, Gett says many of those charges are still pending. &lt;/p&gt; &lt;p&gt; Herman says Gett, which is known as GetTaxi in several countries, will continue to expand in New York. &lt;/p&gt; &lt;p&gt; &quot;We believe that in a very short amount of time, we've proven that we are, for the first time, real competition for Uber at least in New York City,&quot; she says. &lt;a href=&quot;http://money.cnn.com/2014/01/24/technology/social/uber-gett/#TOP&quot;&gt;  &lt;/a&gt; &lt;/p&gt;  &lt;p class=&quot;storytimestamp&quot;&gt; First Published: January 24, 2014: 9:55 AM ET &lt;/p&gt; &lt;/div&gt;   &lt;/div&gt;
-</description>
-<title>
-Uber rival accuses car service of dirty tactics
-</title>
-</item>
-<item>
-<link>
 http://www.bbc.co.uk/news/technology-25872322
 </link>
 <description>
@@ -415,6 +63,1216 @@ http://www.bbc.co.uk/news/technology-25872322
 </description>
 <title>
 'Revenge porn' website former owner Hunter Moore arrested 
+</title>
+</item>
+<item>
+<link>
+http://mondrian.io/contributing
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;hero&quot;&gt;
+      &lt;a href=&quot;http://mondrian.io/&quot;&gt;
+        &lt;img src=&quot;http://mondrian.io/build/img/screenshot.png&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;page&quot;&gt;
+      &lt;div id=&quot;content&quot;&gt;
+        &lt;h3&gt;
+          Mondrian
+        &lt;/h3&gt;
+        &lt;p&gt;
+          Mondrian is a free vector graphics web app like Adobe Illustrator or Inkscape, available at
+          &lt;a href=&quot;http://mondrian.io/&quot;&gt;&lt;/a&gt;.
+          &lt;br&gt;
+          Today I'm open-sourcing it.
+        &lt;/p&gt;
+        &lt;h3&gt;
+            Why?
+          &lt;/h3&gt;
+          I want to make something simpler, smarter, and more accessible than what's available.
+          I think a lot of people want software like this, and I think there are developers who want to work on it.
+          &lt;br&gt;
+          &lt;br&gt;
+          I've spent the last year building Mondrian in private. It's at a pretty solid level of usability.
+          It has been the most fun and interesting thing I have ever worked on, but I'm getting frustrated
+          with the slow rate of progress I can muster by myself on weekends.
+        
+        &lt;h3&gt;
+            Come Help Build It
+          &lt;/h3&gt;
+          I'm calling those who love math, geometry, art, and the web. A group of us could
+          make Mondrian really amazing. Email me directly or just
+          fork the repo and open a pull request at
+          &lt;a href=&quot;http://github.com/artursapek/mondrian&quot;&gt;&lt;/a&gt;.
+          I'd love to meet you if you live in New York and are interested in getting involved.
+          Please get in touch.
+          &lt;br&gt;
+          &lt;br&gt;
+          &lt;br&gt;
+          Artur Sapek
+          &lt;br&gt;
+          &lt;a href=&quot;mailto:me@artur.co&quot;&gt;&lt;/a&gt;
+          &lt;br&gt;
+          &lt;br&gt;
+          New York City
+          &lt;br&gt;
+          January 24, 2014
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+</description>
+<title>
+Show HN: I open-sourced my web app alternative to Illustrator
+</title>
+</item>
+<item>
+<author>
+Hawking, S. W.
+</author>
+<link>
+http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583
+</link>
+<description>
+&lt;article&gt;
+	&lt;div id=&quot;article&quot;&gt;
+		
+				
+	
+	&lt;header&gt;
+							&lt;div class=&quot;top-row&quot;&gt;
+				&lt;p class=&quot;type-heading&quot;&gt;
+					&lt;span class=&quot;journal-title&quot;&gt;Nature&lt;/span&gt;
+					&lt;span class=&quot;divider&quot;&gt;|&lt;/span&gt;
+					&lt;span class=&quot;type&quot;&gt;News&lt;/span&gt;
+				&lt;/p&gt;
+
+				&lt;div class=&quot;article-tools sharing&quot;&gt;
+	&lt;h3 class=&quot;visually-hidden&quot;&gt;Sharing&lt;/h3&gt;
+	&lt;ul&gt;
+		&lt;li class=&quot;article-tool js-only&quot;&gt;
+			&lt;a class=&quot;icon print&quot; href=&quot;&quot;&gt;
+				
+				&lt;img alt=&quot;Print&quot; src=&quot;&quot; class=&quot;inline-icon&quot;&gt;
+				
+				
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class=&quot;article-tool&quot;&gt;
+			&lt;a class=&quot;icon email&quot; href=&quot;http://www.nature.com/news/foxtrot/svc/mailform?doi=10.1038/nature.2014.14583&amp;amp;file=/news/stephen-hawking-there-are-no-black-holes-1.14583&quot;&gt;
+				
+				&lt;img alt=&quot;Email&quot; src=&quot;&quot; class=&quot;inline-icon&quot;&gt;
+				
+				
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class=&quot;article-tool social-tool popup-parent&quot;&gt;
+			
+			
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+			&lt;/div&gt;
+
+			
+			
+												&lt;div class=&quot;standfirst&quot;&gt;
+						&lt;p&gt;Notion of an 'event horizon', from which nothing can escape, is incompatible with quantum theory, physicist claims.&lt;/p&gt;
+					&lt;/div&gt;
+				
+				
+
+	    	    	    	
+    	    				    				    				    				    				    						
+		
+	
+
+
+	
+	
+										
+				
+				
+				&lt;div class=&quot;cleared article-tools extra&quot;&gt;
+	&lt;h2 class=&quot;visually-hidden&quot;&gt;Article tools&lt;/h2&gt;
+		&lt;a class=&quot;box icon rights&quot; href=&quot;https://s100.copyright.com/AppDispatchServlet?author=Zeeya+Merali&amp;amp;title=Stephen+Hawking%3A+%27There+are+no+black+holes%27&amp;amp;publisherName=NPG&amp;amp;contentID=10.1038%2Fnature.2014.14583&amp;amp;publicationDate=01%2F24%2F2014&amp;amp;publication=Nature+News&quot;&gt;Rights &amp;amp; Permissions&lt;/a&gt;
+	&lt;/div&gt;
+						&lt;/header&gt;
+
+	&lt;section id=&quot;article-body&quot;&gt;
+		&lt;div class=&quot;section&quot;&gt;
+			&lt;div class=&quot;content no-heading cleared main-content&quot;&gt;
+
+																						
+
+
+
+
+
+
+
+
+				
+
+
+
+		
+	&lt;div class=&quot;img img-middle&quot;&gt; 		&lt;div class=&quot;img-content cleared&quot;&gt;
+		&lt;a href=&quot;http://www.nature.com/news/dummy-jpg-7.15143?article=1.14583&quot;&gt;&lt;img src=&quot;http://www.nature.com/polopoly_fs/7.15143.1390524921!/image/1.14583.jpg_gen/derivatives/landscape_630/1.14583.jpg&quot; alt=&quot;&quot; class=&quot;lightbox&quot;&gt;&lt;/a&gt;		&lt;p class=&quot;credit&quot;&gt;Artist's impression VICTOR HABBICK VISIONS/SPL/Getty&lt;/p&gt;		&lt;p class=&quot;caption&quot;&gt;The defining characteristic of a black hole may have to give, if the two pillars of modern physics — general relativity and quantum theory — are both correct.&lt;/p&gt;		&lt;/div&gt;
+	&lt;/div&gt;
+
+																										&lt;p&gt;Most physicists foolhardy enough to write a paper claiming that “there are no black holes” — at least not in the sense we usually imagine — would probably be dismissed as cranks. But when the call to redefine these cosmic crunchers comes from Stephen Hawking, it’s worth taking notice. In a paper posted online, the physicist, based at the University of Cambridge, UK, and one of the creators of modern black-hole theory, does away with the notion of an event horizon, the invisible boundary thought to shroud every black hole, beyond which nothing, not even light, can escape.&lt;/p&gt;																														
+			
+	&lt;div class=&quot;pullquote pullquote-right pullquote-img&quot;&gt;
+		&lt;div class=&quot;pullquote-sleeve&quot;&gt;
+							
+
+
+
+
+
+
+				
+
+
+
+
+	&lt;div class=&quot;img img-left&quot;&gt; 		&lt;div class=&quot;img-content cleared&quot;&gt;
+		&lt;img src=&quot;http://www.nature.com/polopoly_fs/1.14585.1390530057!/image/web.PHOTOSHOT-ZB2801_225344_0007.jpg_gen/derivatives/box_100/web.PHOTOSHOT-ZB2801_225344_0007.jpg&quot; alt=&quot;&quot;&gt;		&lt;p class=&quot;credit&quot;&gt;Peter van den Berg/Photoshot&lt;/p&gt;				&lt;/div&gt;
+	&lt;/div&gt;
+
+						&lt;blockquote&gt;
+				&lt;p&gt;“There is no escape from a black hole in classical theory, but quantum theory enables energy and information to escape.”&lt;/p&gt;
+			&lt;/blockquote&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+																										&lt;p&gt;In its stead, Hawking’s radical proposal is a much more benign “apparent horizon”, which only temporarily holds matter and energy prisoner before eventually releasing them, albeit in a more garbled form.&lt;/p&gt;																				&lt;p&gt;“There is no escape from a black hole in classical theory,” Hawking told &lt;i&gt;Nature&lt;/i&gt;. Quantum theory, however, “enables energy and information to escape from a black hole”. A full explanation of the process, the physicist admits, would require a theory that successfully merges gravity with the other fundamental forces of nature. But that is a goal that has eluded physicists for nearly a century. “The correct treatment,” Hawking says, “remains a mystery.”&lt;/p&gt;																				&lt;p&gt;Hawking &lt;a href=&quot;http://arxiv.org/abs/1401.5761&quot;&gt;posted his paper on the arXiv&lt;/a&gt; preprint server on 22 January&lt;sup&gt;&lt;a href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583#b1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. He titled it, whimsically, 'Information preservation and weather forecasting for black holes', and it has yet to pass peer review. The paper was based on a talk he gave via Skype at a meeting at the Kavli Institute for Theoretical Physics in Santa Barbara, California, in August 2013 (&lt;a href=&quot;http://online.kitp.ucsb.edu/online/fuzzorfire_m13/hawking/&quot;&gt;watch video of the talk&lt;/a&gt;).&lt;/p&gt;																				&lt;h2&gt;Fire fighting&lt;/h2&gt;																				&lt;p&gt;Hawking's new work is an attempt to solve what is known as the black-hole firewall paradox, which has been vexing physicists for almost two years, after it was discovered by theoretical physicist Joseph Polchinski of the Kavli Institute and his colleagues (see '&lt;a href=&quot;http://www.nature.com/news/astrophysics-fire-in-the-hole-1.12726&quot;&gt;Astrophysics: Fire in the hole!&lt;/a&gt;').&lt;/p&gt;																				&lt;p&gt;In a thought experiment, the researchers asked what would happen to an astronaut unlucky enough to fall into a black hole. Event horizons are mathematically simple consequences of Einstein's general theory of relativity that were first pointed out by the German astronomer Karl Schwarzschild &lt;a href=&quot;http://alberteinstein.info/vufind1/Record/EAR000006266&quot;&gt;in a letter he wrote to Einstein&lt;/a&gt; in late 1915, less than a month after the publication of the theory. In that picture, physicists had long assumed, the astronaut would happily pass through the event horizon, unaware of his or her impending doom, before gradually being pulled inwards — stretched out along the way, like spaghetti — and eventually crushed at the 'singularity', the black hole’s hypothetical infinitely dense core.&lt;/p&gt;																				&lt;p&gt;But on analysing the situation in detail, Polchinski’s team came to the startling realization that the laws of quantum mechanics, which govern particles on small scales, change the situation completely. Quantum theory, they said, dictates that the event horizon must actually be transformed into a highly energetic region, or 'firewall', that would burn the astronaut to a crisp.&lt;/p&gt;																				&lt;p&gt;This was alarming because, although the firewall obeyed quantum rules, it flouted Einstein’s general theory of relativity. According to that theory, someone in free fall should perceive the laws of physics as being identical everywhere in the Universe — whether they are falling into a black hole or floating in empty intergalactic space. As far as Einstein is concerned, the event horizon should be an unremarkable place.&lt;/p&gt;																				&lt;h2&gt;Beyond the horizon&lt;/h2&gt;																				&lt;p&gt;Now Hawking proposes a third, tantalizingly simple, option. Quantum mechanics and general relativity remain intact, but black holes simply do not have an event horizon to catch fire. The key to his claim is that quantum effects around the black hole cause space-time to fluctuate too wildly for a sharp boundary surface to exist.&lt;/p&gt;																				&lt;p&gt;In place of the event horizon, Hawking invokes an “apparent horizon”, a surface along which light rays attempting to rush away from the black hole’s core will be suspended. In general relativity, for an unchanging black hole, these two horizons are identical, because light trying to escape from inside a black hole can reach only as far as the event horizon and will be held there, as though stuck on a treadmill. However, the two horizons can, in principle, be distinguished. If more matter gets swallowed by the black hole, its event horizon will swell and grow larger than the apparent horizon.&lt;/p&gt;																				&lt;p&gt;Conversely, in the 1970s, Hawking also showed that black holes can slowly shrink, spewing out 'Hawking radiation'. In that case, the event horizon would, in theory, become smaller than the apparent horizon. Hawking’s new suggestion is that the apparent horizon is the real boundary. “The absence of event horizons means that there are no black holes — in the sense of regimes from which light can't escape to infinity,” Hawking writes.&lt;/p&gt;																				&lt;p&gt;“The picture Hawking gives sounds reasonable,” says Don Page, a physicist and expert on black holes at the University of Alberta in Edmonton, Canada, who collaborated with Hawking in the 1970s. “You could say that it is radical to propose there’s no event horizon. But these are highly quantum conditions, and there’s ambiguity about what space-time even is, let alone whether there is a definite region that can be marked as an event horizon.”&lt;/p&gt;																				&lt;p&gt;Although Page accepts Hawking’s proposal that a black hole could exist without an event horizon, he questions whether that alone is enough to get past the firewall paradox. The presence of even an ephemeral apparent horizon, he cautions, could well cause the same problems as does an event horizon.&lt;/p&gt;																				&lt;p&gt;Unlike the event horizon, the apparent horizon can eventually dissolve. Page notes that Hawking is opening the door to a scenario so extreme “that anything in principle can get out of a black hole”. Although Hawking does not specify in his paper exactly how an apparent horizon would disappear, Page speculates that when it has shrunk to a certain size, at which the effects of both quantum mechanics and gravity combine, it is plausible that it could vanish. At that point, whatever was once trapped within the black hole would be released (although not in good shape).&lt;/p&gt;																				&lt;p&gt;If Hawking is correct, there could even be no singularity at the core of the black hole. Instead, matter would be only temporarily held behind the apparent horizon, which would gradually move inward owing to the pull of the black hole, but would never quite crunch down to the centre. Information about this matter would not destroyed, but would be highly scrambled so that, as it is released through Hawking radiation, it would be in a vastly different form, making it almost impossible to work out what the swallowed objects once were.&lt;/p&gt;																				&lt;p&gt;“It would be worse than trying to reconstruct a book that you burned from its ashes,” says Page. In his paper, Hawking compares it to trying to forecast the weather ahead of time: in theory it is possible, but in practice it is too difficult to do with much accuracy.&lt;/p&gt;																				&lt;p&gt;Polchinski, however, is sceptical that black holes without an event horizon could exist in nature. The kind of violent fluctuations needed to erase it are too rare in the Universe, he says. “In Einstein’s gravity, the black-hole horizon is not so different from any other part of space,” says Polchinski. “We never see space-time fluctuate in our own neighbourhood: it is just too rare on large scales.”&lt;/p&gt;																				&lt;p&gt;Raphael Bousso, a theoretical physicist at the University of California, Berkeley, and a former student of Hawking's, says that this latest contribution highlights how “abhorrent” physicists find the potential existence of firewalls. However, he is also cautious about Hawking’s solution. “The idea that there are no points from which you cannot escape a black hole is in some ways an even more radical and problematic suggestion than the existence of firewalls,” he says. &quot;But the fact that we’re still discussing such questions 40 years after Hawking’s first papers on black holes and information is testament to their enormous significance.&quot;&lt;/p&gt;												
+			&lt;/div&gt;
+			
+			&lt;dl class=&quot;citation&quot;&gt;
+				&lt;dt&gt;Journal name:&lt;/dt&gt;
+				&lt;dd class=&quot;journal-title&quot;&gt;Nature&lt;/dd&gt;
+																				&lt;dt&gt;DOI:&lt;/dt&gt;
+				&lt;dd class=&quot;doi&quot;&gt;&lt;abbr title=&quot;Digital Object Identifier&quot;&gt;doi&lt;/abbr&gt;:10.1038/nature.2014.14583&lt;/dd&gt;
+							&lt;/dl&gt;
+			
+					&lt;/div&gt;
+	&lt;/section&gt;
+	
+		
+			&lt;section id=&quot;references&quot;&gt;		
+			&lt;div id=&quot;references&quot; class=&quot;section expanded&quot;&gt;
+				
+				&lt;div class=&quot;content&quot;&gt;
+					&lt;ol class=&quot;references&quot;&gt;
+											&lt;li id=&quot;b1&quot;&gt;
+							&lt;p&gt;&lt;span class=&quot;vcard author&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Hawking, S. W.&lt;/span&gt;&lt;/span&gt; Preprint at &lt;a href=&quot;http://arxiv.org/abs/1401.5761&quot;&gt;http://arxiv.org/abs/1401.5761&lt;/a&gt; &lt;span class=&quot;year&quot;&gt;(2014)&lt;/span&gt;.&lt;/p&gt;
+																																																&lt;/li&gt;
+										&lt;/ol&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+		
+																																																																																																																						&lt;section id=&quot;related-links&quot;&gt;
+			
+		&lt;/section&gt;
+		
+		
+	
+
+		
+					
+
+
+		
+			
+
+
+   &lt;p class=&quot;not-logged-in&quot;&gt;For the best commenting experience, &lt;a href=&quot;http://www.nature.com/foxtrot/svc/login?type=commenting&quot;&gt;please login or register as a user&lt;/a&gt; and agree to our &lt;a href=&quot;http://www.nature.com/info/community-guidelines.html&quot;&gt;Community Guidelines&lt;/a&gt;. You will be re-directed back to this page where you will see comments updating in real-time and have the ability to recommend comments to other users.&lt;/p&gt;
+
+	
+
+
+
+
+
+
+	
+&lt;a id=&quot;comments&quot; name=&quot;comments&quot;&gt;Comments&lt;/a&gt;
+	
+
+			
+	
+	&lt;ol class=&quot;comments-post-grapevine ugc&quot;&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218209923&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Edward Schaefer&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T04:21+00:00&quot;&gt;2014-01-27 04:21 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;I must admit to being disappointed as I read this.  I do not believe that black holes exist, but this is more about semantics than fundamental physics.
+
+A true rejections of black holes means a rejection of the Einstein Field Equations (but not necessarily a rejection of the other fundamentals of general relativity such as the strong equivalence principle or gravitation being governed by an action and the related metrics).  That is not present here.
+
+I won't go into details about my own ideas. I am beyond treating a forum like this as a place for them, and I have not found an action for my ideas at this time anyway.  What I will say is that is will be interesting when we can get a detailed look at the monster in center of the Milky Way to determine if it really looks/acts like a black hole in all respects, and/or we can probe the second order post-Newtonian attributes of a gravitational field.  (My own research indicates the differences on the order of m^2/r^2 will from the expectations of general relativity will exist if black holes cannot exist.)&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=I+must+admit+to+being+disappointed+as+I+read+this.++I+do+not+believe+that+black+holes+exist%2C+but+this+is+more+about+semantics+than+fundamental+physics.%0A%0AA+true+rejections+of+black+holes+means+a+rejection+of+the+Einstein+Field+Equations+%28but+not+necessarily+a+rejection+of+the+other+fundamentals+of+general+relativity+such+as+the+strong+equivalence+principle+or+gravitation+being+governed+by+an+action+and+the+related+metrics%29.++That+is+not+present+here.%0A%0AI+won%27t+go+into+details+about+my+own+ideas.+I+am+beyond+treating+a+forum+like+this+as+a+place+for+them%2C+and+I+have+not+found+an+action+for+my+ideas+at+this+time+anyway.++What+I+will+say+is+that+is+will+be+interesting+when+we+can+get+a+detailed+look+at+the+monster+in+center+of+the+Milky+Way+to+determine+if+it+really+looks%2Facts+like+a+black+hole+in+all+respects%2C+and%2For+we+can+probe+the+second+order+post-Newtonian+attributes+of+a+gravitational+field.++%28My+own+research+indicates+the+differences+on+the+order+of+m%5E2%2Fr%5E2+will+from+the+expectations+of+general+relativity+will+exist+if+black+holes+cannot+exist.%29&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218209923&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218209923&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218209923&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218172064&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+															&lt;a class=&quot;link-to-parent&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583?wafflebotContextId=1218172064&quot;&gt;Show parent comment&lt;/a&gt;
+										&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T03:57+00:00&quot;&gt;2014-01-27 03:57 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;That is a challenge Ben, and yes I do think there is a need for a forum where the non-professional but sincerely interested can seek to get questions answered. 
+
+
+The problem is that for every one of those in this forum, there are a hundred who are filling the forum with dross - either total pseudo-science that is fundamentally flawed, religious and spiritualist tracts, or denialist campaigning.  These are becoming so prevalent that they make the whole forum unusable for everyone.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=That+is+a+challenge+Ben%2C+and+yes+I+do+think+there+is+a+need+for+a+forum+where+the+non-professional+but+sincerely+interested+can+seek+to+get+questions+answered.+%0A%0A%0AThe+problem+is+that+for+every+one+of+those+in+this+forum%2C+there+are+a+hundred+who+are+filling+the+forum+with+dross+-+either+total+pseudo-science+that+is+fundamentally+flawed%2C+religious+and+spiritualist+tracts%2C+or+denialist+campaigning.++These+are+becoming+so+prevalent+that+they+make+the+whole+forum+unusable+for+everyone.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218172064&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218172064&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218172064&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218017785&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218017070&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218015894&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218014393&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218013889&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218012917&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+															&lt;a class=&quot;link-to-parent&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583?wafflebotContextId=1218012917&quot;&gt;Show parent comment&lt;/a&gt;
+										&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T00:57+00:00&quot;&gt;2014-01-27 12:57 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;We have never directly observed a black hole, and those we think exist are in areas with lots of violent events so we couldn't tell whether these are truly black or if information is truly lost - the effects described in all variations of black-hole theory are too small to be detectable to our current capabilities.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=We+have+never+directly+observed+a+black+hole%2C+and+those+we+think+exist+are+in+areas+with+lots+of+violent+events+so+we+couldn%27t+tell+whether+these+are+truly+black+or+if+information+is+truly+lost+-+the+effects+described+in+all+variations+of+black-hole+theory+are+too+small+to+be+detectable+to+our+current+capabilities.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218012917&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218012917&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218012917&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1218011310&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+															&lt;a class=&quot;link-to-parent&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583?wafflebotContextId=1218011310&quot;&gt;Show parent comment&lt;/a&gt;
+										&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T00:55+00:00&quot;&gt;2014-01-27 12:55 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;That was my first thought, but no, it is something quite different.  hawking radiation was basically a quantum effect &quot;skipping over&quot; the well defined event horizon, whereas this new idea is that the event horizon doesn't actually exist, there is just a turbulent space-time zone.  It would actually invalidate Hawking radiation, as the size of that zone would be too large for the quantum effect necessary for Hawking radiation to cover.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=That+was+my+first+thought%2C+but+no%2C+it+is+something+quite+different.++hawking+radiation+was+basically+a+quantum+effect+%22skipping+over%22+the+well+defined+event+horizon%2C+whereas+this+new+idea+is+that+the+event+horizon+doesn%27t+actually+exist%2C+there+is+just+a+turbulent+space-time+zone.++It+would+actually+invalidate+Hawking+radiation%2C+as+the+size+of+that+zone+would+be+too+large+for+the+quantum+effect+necessary+for+Hawking+radiation+to+cover.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218011310&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218011310&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218011310&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217810008&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Robert Green&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T21:02+00:00&quot;&gt;2014-01-26 09:02 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Black Holes exist as is evidence
+by observation of objects being affected by a massive object that is
+non-radiating. It is clear that an object of such mass is not
+allowing light to escape. It is also clear that any object of such
+mass must have a conversion of it's mass within it into radiation.
+Conversion must take place from fusion of that mass by the enormous
+gravitational force seen from Black Holes. This is also supported by
+the math that shows that light can not escape from objects the mass
+size of a Black Hole.  It is therefore clear that light may enter a
+Black Hole and not be allowed to leave. This is not the case with
+mass objects. Just as fusion takes place when mass objects are forced
+together, such as may be seen in the sun. The same thing happens to
+mass objects as they enter the influence of a Black Hole. The result
+is that a Black Hole is Black to light but radiates when mass objects
+try to enter the Black Hole. Just as in any fusion process the
+radiation comes from both mass objects, the small mass is completely
+converted and an equal amount is converted from the Black Hole. Some
+of the radiation that results is able to be seen and some is captured
+by the Black Hole. This is the dual nature of a Black Hole.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Black+Holes+exist+as+is+evidence%0Aby+observation+of+objects+being+affected+by+a+massive+object+that+is%0Anon-radiating.+It+is+clear+that+an+object+of+such+mass+is+not%0Aallowing+light+to+escape.+It+is+also+clear+that+any+object+of+such%0Amass+must+have+a+conversion+of+it%27s+mass+within+it+into+radiation.%0AConversion+must+take+place+from+fusion+of+that+mass+by+the+enormous%0Agravitational+force+seen+from+Black+Holes.+This+is+also+supported+by%0Athe+math+that+shows+that+light+can+not+escape+from+objects+the+mass%0Asize+of+a+Black+Hole.++It+is+therefore+clear+that+light+may+enter+a%0ABlack+Hole+and+not+be+allowed+to+leave.+This+is+not+the+case+with%0Amass+objects.+Just+as+fusion+takes+place+when+mass+objects+are+forced%0Atogether%2C+such+as+may+be+seen+in+the+sun.+The+same+thing+happens+to%0Amass+objects+as+they+enter+the+influence+of+a+Black+Hole.+The+result%0Ais+that+a+Black+Hole+is+Black+to+light+but+radiates+when+mass+objects%0Atry+to+enter+the+Black+Hole.+Just+as+in+any+fusion+process+the%0Aradiation+comes+from+both+mass+objects%2C+the+small+mass+is+completely%0Aconverted+and+an+equal+amount+is+converted+from+the+Black+Hole.+Some%0Aof+the+radiation+that+results+is+able+to+be+seen+and+some+is+captured%0Aby+the+Black+Hole.+This+is+the+dual+nature+of+a+Black+Hole.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217810008&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217810008&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217810008&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217999645&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T00:39+00:00&quot;&gt;2014-01-27 12:39 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Sorry, no. We have yet to directly observe a black hole or whatever occupies such a location.  We have observed matter in the region of a massive gravitational body that is very &quot;dark&quot;, to the extent that it is not visible to our current capabilities, but that is orders of magnitude away from being totally &quot;black&quot;.
+
+
+The maths cannot &quot;show&quot; anything about a body of this kind - all the maths can do is deliver the answers to calculations, and what those calculations are is based on our best theory. If we just use the classical theory then yes you are correct, but we already know from other observations that the classical theory breaks down in many extreme circumstances. The competing theories do not provide simple calculations that can just be solved - there are still too many unknowns.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Sorry%2C+no.+We+have+yet+to+directly+observe+a+black+hole+or+whatever+occupies+such+a+location.++We+have+observed+matter+in+the+region+of+a+massive+gravitational+body+that+is+very+%22dark%22%2C+to+the+extent+that+it+is+not+visible+to+our+current+capabilities%2C+but+that+is+orders+of+magnitude+away+from+being+totally+%22black%22.%0A%0A%0AThe+maths+cannot+%22show%22+anything+about+a+body+of+this+kind+-+all+the+maths+can+do+is+deliver+the+answers+to+calculations%2C+and+what+those+calculations+are+is+based+on+our+best+theory.+If+we+just+use+the+classical+theory+then+yes+you+are+correct%2C+but+we+already+know+from+other+observations+that+the+classical+theory+breaks+down+in+many+extreme+circumstances.+The+competing+theories+do+not+provide+simple+calculations+that+can+just+be+solved+-+there+are+still+too+many+unknowns.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217999645&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217999645&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217999645&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217744968&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218000600&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217677812&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218001033&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217625715&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Valentin Velchev&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T18:10+00:00&quot;&gt;2014-01-26 06:10 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;My name is Valentin Velchev, I live in Bulgaria, and I have a master degree in
+theology. I suggest an article, in which I review the possibility for an
+empirical verification of the model of the Creation, described in the Bible. 
+The reviewer of the article is Alexey Snytnikov, PhD in physical and mathematics sciences (Institute of Computational Mathematics and Mathematical Geophysics, Siberian Branch of the Russian Academy of Sciences).
+
+The lady that is doing the translation is not a specialist in the area of physics. Therefore, I ask you for understanding if some scientific term is not used in the correct way.
+
+http://kosmos-21.blogspot.com/search?updated-min=2014-01-01T00:00:00-08:00&amp;amp;updated-max=2015-01-01T00:00:00-08:00&amp;amp;max-results=1&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=My+name+is+Valentin+Velchev%2C+I+live+in+Bulgaria%2C+and+I+have+a+master+degree+in%0Atheology.+I+suggest+an+article%2C+in+which+I+review+the+possibility+for+an%0Aempirical+verification+of+the+model+of+the+Creation%2C+described+in+the+Bible.+%0AThe+reviewer+of+the+article+is+Alexey+Snytnikov%2C+PhD+in+physical+and+mathematics+sciences+%28Institute+of+Computational+Mathematics+and+Mathematical+Geophysics%2C+Siberian+Branch+of+the+Russian+Academy+of+Sciences%29.%0A%0AThe+lady+that+is+doing+the+translation+is+not+a+specialist+in+the+area+of+physics.+Therefore%2C+I+ask+you+for+understanding+if+some+scientific+term+is+not+used+in+the+correct+way.%0A%0Ahttp%3A%2F%2Fkosmos-21.blogspot.com%2Fsearch%3Fupdated-min%3D2014-01-01T00%3A00%3A00-08%3A00%26updated-max%3D2015-01-01T00%3A00%3A00-08%3A00%26max-results%3D1&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217625715&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217625715&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217625715&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217654461&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Brad Watson&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T18:37+00:00&quot;&gt;2014-01-26 06:37 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Valentin,
+I have produced the &quot;book/scroll sealed with 7 seals&quot; ('beyond Einstein theories') prophesied in The Revelation 5:1-10:10. As you should know, only the 2nd Coming of the Christ can produce this work. Check out the seals/theories at http://7seals.blogspot.com . If you do, you'll notice that 'Seal #1: The Conglomerate of Nonparallel-Universes Theory (Universe Creation Theory)' deals with supermassive black-holes Big Banging into new universes and sharing the same boundary/event horizons (&quot;apparent horizons&quot;) that Hawking and many others are exploring.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Valentin%2C%0AI+have+produced+the+%22book%2Fscroll+sealed+with+7+seals%22+%28%27beyond+Einstein+theories%27%29+prophesied+in+The+Revelation+5%3A1-10%3A10.+As+you+should+know%2C+only+the+2nd+Coming+of+the+Christ+can+produce+this+work.+Check+out+the+seals%2Ftheories+at+http%3A%2F%2F7seals.blogspot.com+.+If+you+do%2C+you%27ll+notice+that+%27Seal+%231%3A+The+Conglomerate+of+Nonparallel-Universes+Theory+%28Universe+Creation+Theory%29%27+deals+with+supermassive+black-holes+Big+Banging+into+new+universes+and+sharing+the+same+boundary%2Fevent+horizons+%28%22apparent+horizons%22%29+that+Hawking+and+many+others+are+exploring.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217654461&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217654461&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217654461&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217620807&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Brad Watson&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T18:05+00:00&quot;&gt;2014-01-26 06:05 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Hawking has been wrong before, i.e. his claim that there is no afterlife. Science has proven and documented reincarnation, i.e. Dr. Ian Stevenson and Dr. Jim B. Tucker at Univ. of Virginia, Dr. Brian Weiss, book 'Soul Survivor', Carol Bowman, 'Reincarnation Theory &amp;amp; its 23 Principles/Theory of Luck (ex. Einstein returned as Watson)', etc.
+.
+This universe was created by the Big Bang (a supermassive white-hole) 13.82 billion-years ago which was the direct result of a supermassive black-hole in another universe within The Conglomerate of Nonparallel-Universes (multiverse). This 'simple' cause-and-effect hypothesis using the duality of these two singularities is accepted by the majority of astrophysicists; it neatly explains infinite space and infinite time/eternity. This universe and that SBH share the same boundary. Now whether that boundary is correctly described as an 'event horizon' or as Hawking recommends an 'apparent horizon' is the question! Since there is an energy and information transfer in the process of SBH Big Banging into a new universe, possibly 'apparent horizon' is the best term. However, event horizon redefined as permitting energy and information to (eventually) escape from it would also work dictionary-wise.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Hawking+has+been+wrong+before%2C+i.e.+his+claim+that+there+is+no+afterlife.+Science+has+proven+and+documented+reincarnation%2C+i.e.+Dr.+Ian+Stevenson+and+Dr.+Jim+B.+Tucker+at+Univ.+of+Virginia%2C+Dr.+Brian+Weiss%2C+book+%27Soul+Survivor%27%2C+Carol+Bowman%2C+%27Reincarnation+Theory+%26+its+23+Principles%2FTheory+of+Luck+%28ex.+Einstein+returned+as+Watson%29%27%2C+etc.%0A.%0AThis+universe+was+created+by+the+Big+Bang+%28a+supermassive+white-hole%29+13.82+billion-years+ago+which+was+the+direct+result+of+a+supermassive+black-hole+in+another+universe+within+The+Conglomerate+of+Nonparallel-Universes+%28multiverse%29.+This+%27simple%27+cause-and-effect+hypothesis+using+the+duality+of+these+two+singularities+is+accepted+by+the+majority+of+astrophysicists%3B+it+neatly+explains+infinite+space+and+infinite+time%2Feternity.+This+universe+and+that+SBH+share+the+same+boundary.+Now+whether+that+boundary+is+correctly+described+as+an+%27event+horizon%27+or+as+Hawking+recommends+an+%27apparent+horizon%27+is+the+question%21+Since+there+is+an+energy+and+information+transfer+in+the+process+of+SBH+Big+Banging+into+a+new+universe%2C+possibly+%27apparent+horizon%27+is+the+best+term.+However%2C+event+horizon+redefined+as+permitting+energy+and+information+to+%28eventually%29+escape+from+it+would+also+work+dictionary-wise.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217620807&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217620807&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217620807&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218003978&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T00:45+00:00&quot;&gt;2014-01-27 12:45 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Yes, Hawking has been wrong before, in fact he has completely changed his mind on black holes before. That is what good scientists do - they never claim they are right, just that they have a theory, and if new evidence or a better theory comes along they accept it.
+
+
+That is where they differ from pseudo-scientists such as those that produced junk papers like that reincarnation one. They base these on no credible evidence, and refuse to change even when their ideas are demonstrably junk.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Yes%2C+Hawking+has+been+wrong+before%2C+in+fact+he+has+completely+changed+his+mind+on+black+holes+before.+That+is+what+good+scientists+do+-+they+never+claim+they+are+right%2C+just+that+they+have+a+theory%2C+and+if+new+evidence+or+a+better+theory+comes+along+they+accept+it.%0A%0A%0AThat+is+where+they+differ+from+pseudo-scientists+such+as+those+that+produced+junk+papers+like+that+reincarnation+one.+They+base+these+on+no+credible+evidence%2C+and+refuse+to+change+even+when+their+ideas+are+demonstrably+junk.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218003978&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218003978&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218003978&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217486608&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Wardell Lindsay&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:53+00:00&quot;&gt;2014-01-26 03:53 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Hawking giving up the Black Hole may be the first step in giving up General Relativity.Matter does not curve space.
+
+
+ The way to unite gravity and other fundamental forces rests in a fuller defintion of Gravitational energy:
+
+
+ Space in the vicinity of matter, M, has a velocity field.  That velocity field creates on mass m, Momentum , mV AND energy cmV=cP, the &quot;Dark Energy&quot;. 
+
+
+
+The Total Energy is:
+
+ W = -mGM/r + cmV = -vh'/r + cP = [vh'/r, cP]
+
+This is the general law of Energy consisting of a scalar/Boson energy (-vh'/r) and vector energy (cP).  This is Quaternion Energy and the vector enrgy cP is the so-called &quot;Dark Energy&quot;.
+
+There are five fundamental forces:
+
+F = XW = [d/dr,DEL]= [vp/r - cDEL.P, cdP/dr - DEL vh'/r + cDELxP]
+
+The divergence of the vector energy ,cDEL.P = -cp/r cos(P) is the &quot;anti-gravity force&quot;, the centrifugal force that prevents the earth from flling into the sun and the electrons from falling into the nucleus of the atom..
+
+When the centripetal force vp/r is balanced by the centrifugal force cp/r cos(P), we have the redshift situation or the Continuity Condition v/c=cos(P) and the force is a Fermion, F= cp/r[0, -1P + v/c 1R + sin(P)1RxP].
+
+Gravity  and Quantum Energy are Quaternion Energies, 
+
+W = -vh'/r + cP = -vp + cP = [-vh'/r, cP].
+
+Mass creates a vector field due to gravity v=squareroot(GM/r), for Quantum charge creates veclocity v= Z Alpha c where Z is atomic n
+
+umber and Alpha is the fine Structure constant 7.2E-3.   At boundary condition v=c thus :
+
+Gravity v=c, c^2 = GM/r 
+
+Quantum v=c , Z Alpha =1 thus Z &amp;lt; 1/Alpha = 1/7.2E-3 , thus no Z greater than 138.
+
+In summary, General  Relativity needs to go with Black Holes.  Sp[ace in the vicinity of matter has a velocity field.  That velocity field creates Momentum on matter, mV and energy cmV=cP, the &quot;Dark Energy&quot;.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Hawking+giving+up+the+Black+Hole+may+be+the+first+step+in+giving+up+General+Relativity.Matter+does+not+curve+space.%0A%0A%0A+The+way+to+unite+gravity+and+other+fundamental+forces+rests+in+a+fuller+defintion+of+Gravitational+energy%3A%0A%0A%0A+Space+in+the+vicinity+of+matter%2C+M%2C+has+a+velocity+field.++That+velocity+field+creates+on+mass+m%2C+Momentum+%2C+mV+AND+energy+cmV%3DcP%2C+the+%22Dark+Energy%22.+%0A%0A%0A%0AThe+Total+Energy+is%3A%0A%0A+W+%3D+-mGM%2Fr+%2B+cmV+%3D+-vh%27%2Fr+%2B+cP+%3D+%5Bvh%27%2Fr%2C+cP%5D%0A%0AThis+is+the+general+law+of+Energy+consisting+of+a+scalar%2FBoson+energy+%28-vh%27%2Fr%29+and+vector+energy+%28cP%29.++This+is+Quaternion+Energy+and+the+vector+enrgy+cP+is+the+so-called+%22Dark+Energy%22.%0A%0AThere+are+five+fundamental+forces%3A%0A%0AF+%3D+XW+%3D+%5Bd%2Fdr%2CDEL%5D%3D+%5Bvp%2Fr+-+cDEL.P%2C+cdP%2Fdr+-+DEL+vh%27%2Fr+%2B+cDELxP%5D%0A%0AThe+divergence+of+the+vector+energy+%2CcDEL.P+%3D+-cp%2Fr+cos%28P%29+is+the+%22anti-gravity+force%22%2C+the+centrifugal+force+that+prevents+the+earth+from+flling+into+the+sun+and+the+electrons+from+falling+into+the+nucleus+of+the+atom..%0A%0AWhen+the+centripetal+force+vp%2Fr+is+balanced+by+the+centrifugal+force+cp%2Fr+cos%28P%29%2C+we+have+the+redshift+situation+or+the+Continuity+Condition+v%2Fc%3Dcos%28P%29+and+the+force+is+a+Fermion%2C+F%3D+cp%2Fr%5B0%2C+-1P+%2B+v%2Fc+1R+%2B+sin%28P%291RxP%5D.%0A%0AGravity++and+Quantum+Energy+are+Quaternion+Energies%2C+%0A%0AW+%3D+-vh%27%2Fr+%2B+cP+%3D+-vp+%2B+cP+%3D+%5B-vh%27%2Fr%2C+cP%5D.%0A%0AMass+creates+a+vector+field+due+to+gravity+v%3Dsquareroot%28GM%2Fr%29%2C+for+Quantum+charge+creates+veclocity+v%3D+Z+Alpha+c+where+Z+is+atomic+n%0A%0Aumber+and+Alpha+is+the+fine+Structure+constant+7.2E-3.+++At+boundary+condition+v%3Dc+thus+%3A%0A%0AGravity+v%3Dc%2C+c%5E2+%3D+GM%2Fr+%0A%0AQuantum+v%3Dc+%2C+Z+Alpha+%3D1+thus+Z+%26lt%3B+1%2FAlpha+%3D+1%2F7.2E-3+%2C+thus+no+Z+greater+than+138.%0A%0AIn+summary%2C+General++Relativity+needs+to+go+with+Black+Holes.++Sp%5Bace+in+the+vicinity+of+matter+has+a+velocity+field.++That+velocity+field+creates+Momentum+on+matter%2C+mV+and+energy+cmV%3DcP%2C+the+%22Dark+Energy%22.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217486608&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217486608&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217486608&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218004754&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217688347&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Brad Watson&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T19:04+00:00&quot;&gt;2014-01-26 07:04 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;&quot;Giving up General Relativity&quot;? &quot;Matter does not curve space&quot;? Is there proof of that? Sources/links? Einstein's theory has held up very well for 100 years. 
+I've taken M-theory and its 6/7 higher dimensions + the 4 common dimensions and added an analysis of time to produce Unified Strings (U21 S19) Theory...
+6/7 higher dimensions (hyperspace) + 3D + 6/7 aspects of 'regular time' + 4 aspects of 'hypertime' = 19/21 dimensions/aspects of spacetime
+I've collected an extensive amount of indirect evidence of this and have used it to make the BIG prediction that &quot;All true 'Earth-like Planets' are built on 7_4 like Earth or 6_4 like the Plan-it Nestor'&quot;. Please see my tweaked NASA conference presentation of 4/21/09 at http://PlanetNestor.blogspot.com .&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=%22Giving+up+General+Relativity%22%3F+%22Matter+does+not+curve+space%22%3F+Is+there+proof+of+that%3F+Sources%2Flinks%3F+Einstein%27s+theory+has+held+up+very+well+for+100+years.+%0AI%27ve+taken+M-theory+and+its+6%2F7+higher+dimensions+%2B+the+4+common+dimensions+and+added+an+analysis+of+time+to+produce+Unified+Strings+%28U21+S19%29+Theory...%0A6%2F7+higher+dimensions+%28hyperspace%29+%2B+3D+%2B+6%2F7+aspects+of+%27regular+time%27+%2B+4+aspects+of+%27hypertime%27+%3D+19%2F21+dimensions%2Faspects+of+spacetime%0AI%27ve+collected+an+extensive+amount+of+indirect+evidence+of+this+and+have+used+it+to+make+the+BIG+prediction+that+%22All+true+%27Earth-like+Planets%27+are+built+on+7_4+like+Earth+or+6_4+like+the+Plan-it+Nestor%27%22.+Please+see+my+tweaked+NASA+conference+presentation+of+4%2F21%2F09+at+http%3A%2F%2FPlanetNestor.blogspot.com+.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217688347&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217688347&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217688347&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217470077&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:35+00:00&quot;&gt;2014-01-26 03:35 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;ABHAS MITRA and NORMAN K. GLENDENNING (2008) BLACK HOLES OR ETERNALLY COLLAPSING OBJECTS?. The Eleventh Marcel Grossmann Meeting: pp. 1526-1528.
+
+PARALLEL SESSIONS: Alternative Black Hole Models
+
+BLACK HOLES OR ETERNALLY COLLAPSING OBJECTS?
+
+ABHAS MITRA
+
+Theoretical Astrophysics, Bhabha Atomic Research Centre, Mumbai -400085, IndiaNORMAN K. GLENDENNING
+
+Nuclear Science Division &amp;amp; Institute for Nuclear and Particle Astrophysics Lawrence Berkeley Laboratory, Berkeley, CA. 94720,U.S.A.
+
+Formation of a Black Hole (BH) demands that the surface gravitational redshift of the collapsing object, z → ∞. We point out that as the collapse generated radiation quanta would move in almost closed circular orbits for z ≫ 1, they would get almost trapped by the strong self-gravity. As the outward flux of the trapped radiation would attain its Eddington value, by definition, catastrophic collapse would degenerate into a radiation supported quasistatic state though, theoretically, the collapsing object would asymptotically approach the z = ∞ exact BH state.
+
+Keywords: Black Holes; Eternally Collapsing Objects
+
+http://www.worldscientific.com/doi/abs/10.1142/9789812834300_0186&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=ABHAS+MITRA+and+NORMAN+K.+GLENDENNING+%282008%29+BLACK+HOLES+OR+ETERNALLY+COLLAPSING+OBJECTS%3F.+The+Eleventh+Marcel+Grossmann+Meeting%3A+pp.+1526-1528.%0A%0APARALLEL+SESSIONS%3A+Alternative+Black+Hole+Models%0A%0ABLACK+HOLES+OR+ETERNALLY+COLLAPSING+OBJECTS%3F%0A%0AABHAS+MITRA%0A%0ATheoretical+Astrophysics%2C+Bhabha+Atomic+Research+Centre%2C+Mumbai+-400085%2C+IndiaNORMAN+K.+GLENDENNING%0A%0ANuclear+Science+Division+%26+Institute+for+Nuclear+and+Particle+Astrophysics+Lawrence+Berkeley+Laboratory%2C+Berkeley%2C+CA.+94720%2CU.S.A.%0A%0AFormation+of+a+Black+Hole+%28BH%29+demands+that+the+surface+gravitational+redshift+of+the+collapsing+object%2C+z+%E2%86%92+%E2%88%9E.+We+point+out+that+as+the+collapse+generated+radiation+quanta+would+move+in+almost+closed+circular+orbits+for+z+%E2%89%AB+1%2C+they+would+get+almost+trapped+by+the+strong+self-gravity.+As+the+outward+flux+of+the+trapped+radiation+would+attain+its+Eddington+value%2C+by+definition%2C+catastrophic+collapse+would+degenerate+into+a+radiation+supported+quasistatic+state+though%2C+theoretically%2C+the+collapsing+object+would+asymptotically+approach+the+z+%3D+%E2%88%9E+exact+BH+state.%0A%0AKeywords%3A+Black+Holes%3B+Eternally+Collapsing+Objects%0A%0Ahttp%3A%2F%2Fwww.worldscientific.com%2Fdoi%2Fabs%2F10.1142%2F9789812834300_0186&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217470077&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217470077&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217470077&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217696513&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Brad Watson&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T19:12+00:00&quot;&gt;2014-01-26 07:12 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;&quot;Eternally collapsing objects&quot;? You've used the term 'eternally' wrong. Eternal: all of time including 'regular time': beginning, end, past, present, future, void(?), constant/speed of light and 'hypertime': before the beginning and after the end, fast forward/time dilation, reverse/superluminal, stop-time/traveling at SOL. 
+You mean to use 'perpetually'. People often confuse eternal and perpetual. Christian fundamentalists do it all the time when they speak of &quot;Eternal life begins at death and lasts forever&quot;; that's perpetual when you pick a point in time and then continue in one direction forever.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=%22Eternally+collapsing+objects%22%3F+You%27ve+used+the+term+%27eternally%27+wrong.+Eternal%3A+all+of+time+including+%27regular+time%27%3A+beginning%2C+end%2C+past%2C+present%2C+future%2C+void%28%3F%29%2C+constant%2Fspeed+of+light+and+%27hypertime%27%3A+before+the+beginning+and+after+the+end%2C+fast+forward%2Ftime+dilation%2C+reverse%2Fsuperluminal%2C+stop-time%2Ftraveling+at+SOL.+%0AYou+mean+to+use+%27perpetually%27.+People+often+confuse+eternal+and+perpetual.+Christian+fundamentalists+do+it+all+the+time+when+they+speak+of+%22Eternal+life+begins+at+death+and+lasts+forever%22%3B+that%27s+perpetual+when+you+pick+a+point+in+time+and+then+continue+in+one+direction+forever.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217696513&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217696513&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217696513&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217457799&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:21+00:00&quot;&gt;2014-01-26 03:21 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Black Holes or Eternally Collapsing Objects: A Review of 90 Years of MisconceptionsAuthors:
+Mitra, AbhasPublication:
+Focus on Black Hole Research, edited by Paul V. Kreitler. ISBN 1-59454-460-3. Published by Nova Science Publishers, Inc., New York, NY USA, 2006, p.1-94Publication Date:
+00/2006
+
+http://books.google.co.in/books?id=Dy_6gr76QmkC&amp;amp;pg=PA1&amp;amp;lpg=PA1&amp;amp;dq=Black+Holes+or+Eternally+Collapsing+Objects:+A+Review+of+90+Years+of+Misconceptions&amp;amp;source=bl&amp;amp;ots=8OZxyJJvhp&amp;amp;sig=zME40dYJhQzN4VMSLr0FkUMr16M&amp;amp;hl=en&amp;amp;sa=X&amp;amp;ei=3iflUrLJJY-IrAftwIGYBw&amp;amp;ved=0CCcQ6AEwAA#v=onepage&amp;amp;q=Black%20Holes%20or%20Eternally%20Collapsing%20Objects%3A%20A%20Review%20of%2090%20Years%20of%20Misconceptions&amp;amp;f=false&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Black+Holes+or+Eternally+Collapsing+Objects%3A+A+Review+of+90+Years+of+MisconceptionsAuthors%3A%0AMitra%2C+AbhasPublication%3A%0AFocus+on+Black+Hole+Research%2C+edited+by+Paul+V.+Kreitler.+ISBN+1-59454-460-3.+Published+by+Nova+Science+Publishers%2C+Inc.%2C+New+York%2C+NY+USA%2C+2006%2C+p.1-94Publication+Date%3A%0A00%2F2006%0A%0Ahttp%3A%2F%2Fbooks.google.co.in%2Fbooks%3Fid%3DDy_6gr76QmkC%26pg%3DPA1%26lpg%3DPA1%26dq%3DBlack%2BHoles%2Bor%2BEternally%2BCollapsing%2BObjects%3A%2BA%2BReview%2Bof%2B90%2BYears%2Bof%2BMisconceptions%26source%3Dbl%26ots%3D8OZxyJJvhp%26sig%3DzME40dYJhQzN4VMSLr0FkUMr16M%26hl%3Den%26sa%3DX%26ei%3D3iflUrLJJY-IrAftwIGYBw%26ved%3D0CCcQ6AEwAA%23v%3Donepage%26q%3DBlack%2520Holes%2520or%2520Eternally%2520Collapsing%2520Objects%253A%2520A%2520Review%2520of%252090%2520Years%2520of%2520Misconceptions%26f%3Dfalse&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217457799&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217457799&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217457799&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217454252&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:17+00:00&quot;&gt;2014-01-26 03:17 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;The fallacy of Oppenheimer Snyder collapse: no general relativistic collapse at all, no black hole, no physical singularity
+
+Mitra, Abhas
+
+AA(Theoretical Astrophysics Section, Bhabha Atomic Research Centre)
+
+
+Astrophysics and Space Science, Volume 332, Issue 1, pp.43-48(2011)
+
+http://link.springer.com/article/10.1007%2Fs10509-010-0578-5&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=The+fallacy+of+Oppenheimer+Snyder+collapse%3A+no+general+relativistic+collapse+at+all%2C+no+black+hole%2C+no+physical+singularity%0A%0AMitra%2C+Abhas%0A%0AAA%28Theoretical+Astrophysics+Section%2C+Bhabha+Atomic+Research+Centre%29%0A%0A%0AAstrophysics+and+Space+Science%2C+Volume+332%2C+Issue+1%2C+pp.43-48%282011%29%0A%0Ahttp%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%252Fs10509-010-0578-5&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217454252&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217454252&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217454252&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217450488&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:12+00:00&quot;&gt;2014-01-26 03:12 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;The Mass of the Oppenheimer-Snyder Hole: Only Finite Mass Quasi-Black Holes 
+
+Mitra, Abhas; Singh, K. K.Affiliation:
+AA(Astrophysical Sciences Division, Bhabha Atomic Research Centre, Mumbai, India), AB(Astrophysical Sciences Division, Bhabha Atomic Research Centre, Mumbai, India)
+
+International Journal of Modern Physics D, Volume 22, Issue 9, id. 1350054 (2013)
+
+ http://www.worldscientific.com/doi/abs/10.1142/S0218271813500545&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=The+Mass+of+the+Oppenheimer-Snyder+Hole%3A+Only+Finite+Mass+Quasi-Black+Holes+%0A%0AMitra%2C+Abhas%3B+Singh%2C+K.+K.Affiliation%3A%0AAA%28Astrophysical+Sciences+Division%2C+Bhabha+Atomic+Research+Centre%2C+Mumbai%2C+India%29%2C+AB%28Astrophysical+Sciences+Division%2C+Bhabha+Atomic+Research+Centre%2C+Mumbai%2C+India%29%0A%0AInternational+Journal+of+Modern+Physics+D%2C+Volume+22%2C+Issue+9%2C+id.+1350054+%282013%29%0A%0A+http%3A%2F%2Fwww.worldscientific.com%2Fdoi%2Fabs%2F10.1142%2FS0218271813500545&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217450488&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217450488&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217450488&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217357630&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T13:11+00:00&quot;&gt;2014-01-26 01:11 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;In 2000, my peer reviewed paper first claimed that, General Relativistic Gravitational Collapse actually does not allow formation of Apparent Horizon (Trapped Surface), Event Horizon or Finite mass black holes, and collapse process can at best asymptotically approach a M=0 BH state. When my paper got published a Nature India journalist made a Science News on it -- the discussion there started with the adjective ``controversial''. Later i asked the journalist why he added this word when there is no published literature/preprint challenging it. He conceded that Nature London office editor had inserted it. 
+
+
+: https://www.academia.edu/1747624/No_Black_Hole_According_To_General_Relativity_Nature_India_&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=In+2000%2C+my+peer+reviewed+paper+first+claimed+that%2C+General+Relativistic+Gravitational+Collapse+actually+does+not+allow+formation+of+Apparent+Horizon+%28Trapped+Surface%29%2C+Event+Horizon+or+Finite+mass+black+holes%2C+and+collapse+process+can+at+best+asymptotically+approach+a+M%3D0+BH+state.+When+my+paper+got+published+a+Nature+India+journalist+made+a+Science+News+on+it+--+the+discussion+there+started+with+the+adjective+%60%60controversial%27%27.+Later+i+asked+the+journalist+why+he+added+this+word+when+there+is+no+published+literature%2Fpreprint+challenging+it.+He+conceded+that+Nature+London+office+editor+had+inserted+it.+%0A%0A%0A%3A+https%3A%2F%2Fwww.academia.edu%2F1747624%2FNo_Black_Hole_According_To_General_Relativity_Nature_India_&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217357630&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217357630&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217357630&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217442010&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Mark Bridger&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T15:02+00:00&quot;&gt;2014-01-26 03:02 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Thank you for the link to that article which I read with great interest Abhas.
+It seems we are in agreement (see my comment below).... though if we agree this will surely be controversial, turning the whole field of black hole theory, ergo cosmology, upside down (or inside out).&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Thank+you+for+the+link+to+that+article+which+I+read+with+great+interest+Abhas.%0AIt+seems+we+are+in+agreement+%28see+my+comment+below%29....+though+if+we+agree+this+will+surely+be+controversial%2C+turning+the+whole+field+of+black+hole+theory%2C+ergo+cosmology%2C+upside+down+%28or+inside+out%29.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217442010&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217442010&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217442010&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217326475&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;gopal srinivasan&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T12:29+00:00&quot;&gt;2014-01-26 12:29 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;The concept of black hole etc is a direct outcome of the premise space is empty or is not populated with real components. That is wrong assumption , axiomatically, logically, mathematically and experimentally. The real components forming a sea of interactive states combine into resonant harmonic states to display manifest phenomena as holograms. The carrier frequency per cycle that sustains these holograms to form particles to galaxies oscillate harmonically and permanently at 2.965  E +8 cycles per cycle of 10 interaction (C)  form the base or 10^2/0.236= 8.4721 as the log of 2.965  E +8. Cycles higher than C get absorbed, and thos that are harmonics increase in density to sustain holograms. Proton / electron/ neutron/ neutrino are three dimensional harmonics and can derived from the file PHO.pdf in and Sankhya /ppt on website Kapillavastu dot com. All prime number oscillations form fixed radii to sustain &quot;solid&quot; states etd. The maximum radius is 5.99 E+25 as thespecific ratio that log (C) +1 harmonically divides into the ultimate stable cycle where component density is just it reciprocal. See all work out on PHO.PDF. Its perfect and flawless and satisfies General Relativity, Quantum mechanics and three dimensional geometry of holographic states&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=The+concept+of+black+hole+etc+is+a+direct+outcome+of+the+premise+space+is+empty+or+is+not+populated+with+real+components.+That+is+wrong+assumption+%2C+axiomatically%2C+logically%2C+mathematically+and+experimentally.+The+real+components+forming+a+sea+of+interactive+states+combine+into+resonant+harmonic+states+to+display+manifest+phenomena+as+holograms.+The+carrier+frequency+per+cycle+that+sustains+these+holograms+to+form+particles+to+galaxies+oscillate+harmonically+and+permanently+at+2.965++E+%2B8+cycles+per+cycle+of+10+interaction+%28C%29++form+the+base+or+10%5E2%2F0.236%3D+8.4721+as+the+log+of+2.965++E+%2B8.+Cycles+higher+than+C+get+absorbed%2C+and+thos+that+are+harmonics+increase+in+density+to+sustain+holograms.+Proton+%2F+electron%2F+neutron%2F+neutrino+are+three+dimensional+harmonics+and+can+derived+from+the+file+PHO.pdf+in+and+Sankhya+%2Fppt+on+website+Kapillavastu+dot+com.+All+prime+number+oscillations+form+fixed+radii+to+sustain+%22solid%22+states+etd.+The+maximum+radius+is+5.99+E%2B25+as+thespecific+ratio+that+log+%28C%29+%2B1+harmonically+divides+into+the+ultimate+stable+cycle+where+component+density+is+just+it+reciprocal.+See+all+work+out+on+PHO.PDF.+Its+perfect+and+flawless+and+satisfies+General+Relativity%2C+Quantum+mechanics+and+three+dimensional+geometry+of+holographic+states&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217326475&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217326475&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217326475&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218006144&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217308898&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Mark Bridger&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T11:56+00:00&quot;&gt;2014-01-26 11:56 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;For a few years I have been commenting on the New Scientist website pointing out the inconsistencies in the Hawking theory of black hole radiation. Unfortunately I cannot link to those comments from here as NS has closed down the online option to comment on the articles as well as access to previous comments... (Is that a freedom of speech issue or what?).
+Anyway, it now looks like Professor Hawking is moving in the direction of possibly abandoning his original idea. 
+I say Hawking radiation is unnecessary because if you can twist the laws of physics enough to accept that then it is less of a stretch to accept that 'black holes' may directly radiate. According to Einstein's equation for gravitational redshift radiation from an 'unblack hole' (or light emerging from within the Schwarzchild radius)  would have frequency values that are the square root of negative numbers. 
+Does that mean no radiation at all or a paradoxical form of radiation? 
+I would suggest that quasars may be directly radiating black holes, whilst the 'supermassive black holes' we see at the centre of galaxies are actually dark matter hubs.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=For+a+few+years+I+have+been+commenting+on+the+New+Scientist+website+pointing+out+the+inconsistencies+in+the+Hawking+theory+of+black+hole+radiation.+Unfortunately+I+cannot+link+to+those+comments+from+here+as+NS+has+closed+down+the+online+option+to+comment+on+the+articles+as+well+as+access+to+previous+comments...+%28Is+that+a+freedom+of+speech+issue+or+what%3F%29.%0AAnyway%2C+it+now+looks+like+Professor+Hawking+is+moving+in+the+direction+of+possibly+abandoning+his+original+idea.+%0AI+say+Hawking+radiation+is+unnecessary+because+if+you+can+twist+the+laws+of+physics+enough+to+accept+that+then+it+is+less+of+a+stretch+to+accept+that+%27black+holes%27+may+directly+radiate.+According+to+Einstein%27s+equation+for+gravitational+redshift+radiation+from+an+%27unblack+hole%27+%28or+light+emerging+from+within+the+Schwarzchild+radius%29++would+have+frequency+values+that+are+the+square+root+of+negative+numbers.+%0ADoes+that+mean+no+radiation+at+all+or+a+paradoxical+form+of+radiation%3F+%0AI+would+suggest+that+quasars+may+be+directly+radiating+black+holes%2C+whilst+the+%27supermassive+black+holes%27+we+see+at+the+centre+of+galaxies+are+actually+dark+matter+hubs.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217308898&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217308898&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217308898&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217316295&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Mark Bridger&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T12:10+00:00&quot;&gt;2014-01-26 12:10 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Further to that I'd say that Gamma ray bursts are what happens when the 'unblack hole' finally collapses. The calculable frequency of the radiation speeds up to gamma (as if time inside the radius were going backwards faster and faster relatively - though its not really Time going backwards) as most of the mass of the object turns into radiation.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Further+to+that+I%27d+say+that+Gamma+ray+bursts+are+what+happens+when+the+%27unblack+hole%27+finally+collapses.+The+calculable+frequency+of+the+radiation+speeds+up+to+gamma+%28as+if+time+inside+the+radius+were+going+backwards+faster+and+faster+relatively+-+though+its+not+really+Time+going+backwards%29+as+most+of+the+mass+of+the+object+turns+into+radiation.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217316295&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217316295&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217316295&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217289255&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+															&lt;a class=&quot;link-to-parent&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583?wafflebotContextId=1217289255&quot;&gt;Show parent comment&lt;/a&gt;
+										&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;John Duffield&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T11:18+00:00&quot;&gt;2014-01-26 11:18 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;My pleasure Peter. Kevin Brown has some good stuff, but I have to say I think the &quot;frozen star&quot; interpretation is the one that's correct. If you look at MTW figure 32.1 (a), the infalling observer goes to the end of time and back and is in two places at once. And KS coordinates are like putting a stopped observer in front of a stopped clock then claiming he sees it ticking as normal. When actually he sees nothing. Ever.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=My+pleasure+Peter.+Kevin+Brown+has+some+good+stuff%2C+but+I+have+to+say+I+think+the+%22frozen+star%22+interpretation+is+the+one+that%27s+correct.+If+you+look+at+MTW+figure+32.1+%28a%29%2C+the+infalling+observer+goes+to+the+end+of+time+and+back+and+is+in+two+places+at+once.+And+KS+coordinates+are+like+putting+a+stopped+observer+in+front+of+a+stopped+clock+then+claiming+he+sees+it+ticking+as+normal.+When+actually+he+sees+nothing.+Ever.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217289255&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217289255&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217289255&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217229760&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;MURALI MENON&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T09:27+00:00&quot;&gt;2014-01-26 09:27 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;this new revelation brings to mind my earlier theory that &quot;black holes&quot; have the same structure as a balloon tethered to its circular opening - sucking in all energy and then once it reaches a state of saturation, throws back the energy and data captured back to the plane from where it sucked in the energy, the force resulting in an inverted balloon  which then goes on to suck energy from the plane where it was earlier ballooning. would like your comments...&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=this+new+revelation+brings+to+mind+my+earlier+theory+that+%22black+holes%22+have+the+same+structure+as+a+balloon+tethered+to+its+circular+opening+-+sucking+in+all+energy+and+then+once+it+reaches+a+state+of+saturation%2C+throws+back+the+energy+and+data+captured+back+to+the+plane+from+where+it+sucked+in+the+energy%2C+the+force+resulting+in+an+inverted+balloon++which+then+goes+on+to+suck+energy+from+the+plane+where+it+was+earlier+ballooning.+would+like+your+comments...&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217229760&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217229760&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217229760&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217220491&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218007707&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Bernard Gore&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-27T00:50+00:00&quot;&gt;2014-01-27 12:50 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;It has always been acceptable to question that - science always allows you to question current settled theory.
+
+
+However as we've actually observed it happening in many observations, you'd need a very convincing case to make any effective challenge, including explaining what else was bending gravity by exactly the amount we expect gravity to....&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=It+has+always+been+acceptable+to+question+that+-+science+always+allows+you+to+question+current+settled+theory.%0A%0A%0AHowever+as+we%27ve+actually+observed+it+happening+in+many+observations%2C+you%27d+need+a+very+convincing+case+to+make+any+effective+challenge%2C+including+explaining+what+else+was+bending+gravity+by+exactly+the+amount+we+expect+gravity+to....&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218007707&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1218007707&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1218007707&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217166488&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Abhas Mitra&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T07:03+00:00&quot;&gt;2014-01-26 07:03 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;Stephen Hawking is right when he says that the only way to resolve the BH Firewell Paradox is to realize that there are no true  BHs. And continued gravitational collapse can at most approach the mathematical state. Much before this I asserted this NY Times: 
+
+ http://www.nytimes.com/2013/08/13/science/space/a-black-hole-mystery-wrapped-in-a-firewall-paradox.html?pagewanted=all&amp;amp;_r=0#commentsContainer
+
+My precise comment was:
+
+``Einstein’s intuition was CORRECT contrary to what is believed.
+This is so because it has been shown that though the BH solutions are exact
+they involve integration constants whose values are zero. Precisely, it has
+been shown that the Schwarzschild BHs correspond to unique gravitational mass
+M=0 (Mitra, J Mat Phys, 50, I 042502 2009). Similarly Kerr BHs too correspond
+to M=0 and rotation parameter a=0 (Mitra astro-ph/0409049, 0407501). This means
+that the static BH solutions correspond to the asymptotic final states of
+physical gravitational collapse where entire mass-energy and angular momentum
+are radiated away. Thus so-called BH Candidates must be Quasi- BHs rather than
+true BHs. Further it has been shown that the natural form of the quasi-BHs are
+quasi-static hot balls of plasma /fire (Eternally Collapsing Objects) where
+outward radiation pressure balances the inward pull of gravity: i.e., ECOs
+radiate at their GR Eddington Luminosity. (Mitra , MNRASL ,404, L50, 2010;
+MNRAS 367, L66, 2006; 369, 492, 2006). Since there is no true BH, there is no
+``Information Paradox’’, no need to inconsistently picture the VACUUM Event
+Horizon as a FIREBALL or Brick Wall or Membrane. But ECO is being ball of
+Fire/Plasma, ECO surface is indeed a FIREWALL. So BH Information paradox is
+already solved without resorting to self-contradictory pictures: 
+
+http://www.ias.ac.in/pramana/v73/p615/p615.pdf
+
+
+Hawking’s paper contains no mathematics, no theory except
+the conjecture that QM or rather Quantum Gravity (QG) must inhibit formation of
+true BHs. Despite almost 90 years of struggle, no real QG has been formulated
+and one wonders there can ever be such a theory. While Hawking seeks a
+resolution from QM considerations little introspection would show that for
+massive astrophysical BHs too must  be  only quasi-BHs. Look since the
+dynamics of atoms are governed by QM, all large systems made of atoms too are
+governed by the same QM. Yet for explaining the dynamics of large objects, one
+need not introduce QM explicitly. Hence non-formation of EHs during the
+collapse of massive stars must be explained by the classical General Theory of
+Relativity founded by Einstein in 1916. 
+
+The leading QG theory is called String Theory and which is replete with exact BH solutions. How to reconcile this string theory BHs with Hawking’s latest idea? This can be done by taking a cue from my result obtained in 2009 (Journal of Mathematical Physics) that though BH solutions are correct they are an illusion because they all tacitly correspond to zero mass BHs. The formation time of such zero mass BHs is infinite implying they actually never form. In other words, continued gravitational collapse must be eternal and accordingly I termed such BH candidates (quasi-BHs) as Eternally Collapsing Objects’’ which never have exact EHs. Similarly if string theory BHs too have zero mass, Hawking’s idea of ``approach’’ to BH state can be realized.
+
+Hawking's conjecture that though Event Horizons do not form, Apparent Horizons may form is not based on any physics. Once apparent horizon would be formed, effectively it would require infinite acceleration to stay put there, and nothing would stop collapse to the singularity. If QM may somehow stop EH why not apparent horizon too? Way back in 2000, my peer reviewed paper ``Nonoccurrence of BHs and EHs in gravitational collapse..'' (Foundation of Physics Letter) first showed that neither Apparent nor Event Horizon nor exact BHs are allowed. A more refined peer reviewed proof is here 
+http://www.ias.ac.in/pramana/v73/p615/p615.pdf
+
+Thus his comment that classically formation of EHs is inevitable is incorrect.
+
+Hawking's preprint is very confusing and has no real clue about the physical nature of BH candidates. In contrast in series of papers in MNRAS, MNRASL, New Astronomy, IJMPD, PRD, my research has clearly shown that the so-called BH candidates are likely to be ultracompact ultrahot balls of plasma which are radiating at the Eddington  rate which means that they are quasi-stable states where the outward radiation pressure is counter balancing the inward pull of gravity. For a BHC of few solar masses, the mean local temp &amp;gt; 200 MeV implying they are balls of Quark Gluon Plasma. Yet these balls are always contracting at infinitesimal rate (ECO) any asymptotically attempting to attain the true BH state with M=0. 
+
+In 2000, I also predicted that ECOs must be ultramagnetized too (Magnetospheric ECOs, MECOs). Some of my American colleagues namely Stanley Robertson (Univ. South Okalohoma) and Darryl Leiter (Univ. Virginia) published several papers in Astrophysical J. Astrophyscal J.L. and MNRAS showing that much of the activities in the X-ray binaries could be explained by considering that the compact objects in them are MECOs rather than BHs.
+
+  in 2006, Harvard University issued a press release entitled ``New Picture of Quasar Emerges’’ which discussed how the BH candidate within the heart of the well -known quasar Q0957+561 is expected to contain a horizon less ECO. This was a pioneering and landmark research by Rudy Schild (Harvard), Darryl Leiter and Stan Robertson.
+
+http://www.cv.nrao.edu/tuna/past/2006/NEW_QSO_STRUCTURE_FOUND.pdf
+
+Thus while Hawking's conjecture may be only partially correct, the entire conundrum of BHs were solved by me and my colleagues earlier.
+
+For more technical discussion, see my recent plenary talk:
+
+http://www.scribd.com/doc/178941246/Plenary-Talk-Einsteinian-Revolution-s-Misinterpretation-No-True-Black-Holes-No-Information-Paradox-Just-Quasi-static-Balls-of-Quark-Gluon-Plasm
+
+
+Dr Abhas Mitra
+
+Head, Theoretical Astrophysics Section, APSD, BARC, Mumbai, India
+ Adjunct Prof. Homi Bhabha National Institute, Mumbai, India.
+http://en.wikipedia.org/wiki/Abhas_Mitra&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=Stephen+Hawking+is+right+when+he+says+that+the+only+way+to+resolve+the+BH+Firewell+Paradox+is+to+realize+that+there+are+no+true++BHs.+And+continued+gravitational+collapse+can+at+most+approach+the+mathematical+state.+Much+before+this+I+asserted+this+NY+Times%3A+%0A%0A+http%3A%2F%2Fwww.nytimes.com%2F2013%2F08%2F13%2Fscience%2Fspace%2Fa-black-hole-mystery-wrapped-in-a-firewall-paradox.html%3Fpagewanted%3Dall%26_r%3D0%23commentsContainer%0A%0AMy+precise+comment+was%3A%0A%0A%60%60Einstein%E2%80%99s+intuition+was+CORRECT+contrary+to+what+is+believed.%0AThis+is+so+because+it+has+been+shown+that+though+the+BH+solutions+are+exact%0Athey+involve+integration+constants+whose+values+are+zero.+Precisely%2C+it+has%0Abeen+shown+that+the+Schwarzschild+BHs+correspond+to+unique+gravitational+mass%0AM%3D0+%28Mitra%2C+J+Mat+Phys%2C+50%2C+I+042502+2009%29.+Similarly+Kerr+BHs+too+correspond%0Ato+M%3D0+and+rotation+parameter+a%3D0+%28Mitra+astro-ph%2F0409049%2C+0407501%29.+This+means%0Athat+the+static+BH+solutions+correspond+to+the+asymptotic+final+states+of%0Aphysical+gravitational+collapse+where+entire+mass-energy+and+angular+momentum%0Aare+radiated+away.+Thus+so-called+BH+Candidates+must+be+Quasi-+BHs+rather+than%0Atrue+BHs.+Further+it+has+been+shown+that+the+natural+form+of+the+quasi-BHs+are%0Aquasi-static+hot+balls+of+plasma+%2Ffire+%28Eternally+Collapsing+Objects%29+where%0Aoutward+radiation+pressure+balances+the+inward+pull+of+gravity%3A+i.e.%2C+ECOs%0Aradiate+at+their+GR+Eddington+Luminosity.+%28Mitra+%2C+MNRASL+%2C404%2C+L50%2C+2010%3B%0AMNRAS+367%2C+L66%2C+2006%3B+369%2C+492%2C+2006%29.+Since+there+is+no+true+BH%2C+there+is+no%0A%60%60Information+Paradox%E2%80%99%E2%80%99%2C+no+need+to+inconsistently+picture+the+VACUUM+Event%0AHorizon+as+a+FIREBALL+or+Brick+Wall+or+Membrane.+But+ECO+is+being+ball+of%0AFire%2FPlasma%2C+ECO+surface+is+indeed+a+FIREWALL.+So+BH+Information+paradox+is%0Aalready+solved+without+resorting+to+self-contradictory+pictures%3A+%0A%0Ahttp%3A%2F%2Fwww.ias.ac.in%2Fpramana%2Fv73%2Fp615%2Fp615.pdf%0A%0A%0AHawking%E2%80%99s+paper+contains+no+mathematics%2C+no+theory+except%0Athe+conjecture+that+QM+or+rather+Quantum+Gravity+%28QG%29+must+inhibit+formation+of%0Atrue+BHs.+Despite+almost+90+years+of+struggle%2C+no+real+QG+has+been+formulated%0Aand+one+wonders+there+can+ever+be+such+a+theory.+While+Hawking+seeks+a%0Aresolution+from+QM+considerations+little+introspection+would+show+that+for%0Amassive+astrophysical+BHs+too+must++be++only+quasi-BHs.+Look+since+the%0Adynamics+of+atoms+are+governed+by+QM%2C+all+large+systems+made+of+atoms+too+are%0Agoverned+by+the+same+QM.+Yet+for+explaining+the+dynamics+of+large+objects%2C+one%0Aneed+not+introduce+QM+explicitly.+Hence+non-formation+of+EHs+during+the%0Acollapse+of+massive+stars+must+be+explained+by+the+classical+General+Theory+of%0ARelativity+founded+by+Einstein+in+1916.+%0A%0AThe+leading+QG+theory+is+called+String+Theory+and+which+is+replete+with+exact+BH+solutions.+How+to+reconcile+this+string+theory+BHs+with+Hawking%E2%80%99s+latest+idea%3F+This+can+be+done+by+taking+a+cue+from+my+result+obtained+in+2009+%28Journal+of+Mathematical+Physics%29+that+though+BH+solutions+are+correct+they+are+an+illusion+because+they+all+tacitly+correspond+to+zero+mass+BHs.+The+formation+time+of+such+zero+mass+BHs+is+infinite+implying+they+actually+never+form.+In+other+words%2C+continued+gravitational+collapse+must+be+eternal+and+accordingly+I+termed+such+BH+candidates+%28quasi-BHs%29+as+Eternally+Collapsing+Objects%E2%80%99%E2%80%99+which+never+have+exact+EHs.+Similarly+if+string+theory+BHs+too+have+zero+mass%2C+Hawking%E2%80%99s+idea+of+%60%60approach%E2%80%99%E2%80%99+to+BH+state+can+be+realized.%0A%0AHawking%27s+conjecture+that+though+Event+Horizons+do+not+form%2C+Apparent+Horizons+may+form+is+not+based+on+any+physics.+Once+apparent+horizon+would+be+formed%2C+effectively+it+would+require+infinite+acceleration+to+stay+put+there%2C+and+nothing+would+stop+collapse+to+the+singularity.+If+QM+may+somehow+stop+EH+why+not+apparent+horizon+too%3F+Way+back+in+2000%2C+my+peer+reviewed+paper+%60%60Nonoccurrence+of+BHs+and+EHs+in+gravitational+collapse..%27%27+%28Foundation+of+Physics+Letter%29+first+showed+that+neither+Apparent+nor+Event+Horizon+nor+exact+BHs+are+allowed.+A+more+refined+peer+reviewed+proof+is+here+%0Ahttp%3A%2F%2Fwww.ias.ac.in%2Fpramana%2Fv73%2Fp615%2Fp615.pdf%0A%0AThus+his+comment+that+classically+formation+of+EHs+is+inevitable+is+incorrect.%0A%0AHawking%27s+preprint+is+very+confusing+and+has+no+real+clue+about+the+physical+nature+of+BH+candidates.+In+contrast+in+series+of+papers+in+MNRAS%2C+MNRASL%2C+New+Astronomy%2C+IJMPD%2C+PRD%2C+my+research+has+clearly+shown+that+the+so-called+BH+candidates+are+likely+to+be+ultracompact+ultrahot+balls+of+plasma+which+are+radiating+at+the+Eddington++rate+which+means+that+they+are+quasi-stable+states+where+the+outward+radiation+pressure+is+counter+balancing+the+inward+pull+of+gravity.+For+a+BHC+of+few+solar+masses%2C+the+mean+local+temp+%26gt%3B+200+MeV+implying+they+are+balls+of+Quark+Gluon+Plasma.+Yet+these+balls+are+always+contracting+at+infinitesimal+rate+%28ECO%29+any+asymptotically+attempting+to+attain+the+true+BH+state+with+M%3D0.+%0A%0AIn+2000%2C+I+also+predicted+that+ECOs+must+be+ultramagnetized+too+%28Magnetospheric+ECOs%2C+MECOs%29.+Some+of+my+American+colleagues+namely+Stanley+Robertson+%28Univ.+South+Okalohoma%29+and+Darryl+Leiter+%28Univ.+Virginia%29+published+several+papers+in+Astrophysical+J.+Astrophyscal+J.L.+and+MNRAS+showing+that+much+of+the+activities+in+the+X-ray+binaries+could+be+explained+by+considering+that+the+compact+objects+in+them+are+MECOs+rather+than+BHs.%0A%0A++in+2006%2C+Harvard+University+issued+a+press+release+entitled+%60%60New+Picture+of+Quasar+Emerges%E2%80%99%E2%80%99+which+discussed+how+the+BH+candidate+within+the+heart+of+the+well+-known+quasar+Q0957%2B561+is+expected+to+contain+a+horizon+less+ECO.+This+was+a+pioneering+and+landmark+research+by+Rudy+Schild+%28Harvard%29%2C+Darryl+Leiter+and+Stan+Robertson.%0A%0Ahttp%3A%2F%2Fwww.cv.nrao.edu%2Ftuna%2Fpast%2F2006%2FNEW_QSO_STRUCTURE_FOUND.pdf%0A%0AThus+while+Hawking%27s+conjecture+may+be+only+partially+correct%2C+the+entire+conundrum+of+BHs+were+solved+by+me+and+my+colleagues+earlier.%0A%0AFor+more+technical+discussion%2C+see+my+recent+plenary+talk%3A%0A%0Ahttp%3A%2F%2Fwww.scribd.com%2Fdoc%2F178941246%2FPlenary-Talk-Einsteinian-Revolution-s-Misinterpretation-No-True-Black-Holes-No-Information-Paradox-Just-Quasi-static-Balls-of-Quark-Gluon-Plasm%0A%0A%0ADr+Abhas+Mitra%0A%0AHead%2C+Theoretical+Astrophysics+Section%2C+APSD%2C+BARC%2C+Mumbai%2C+India%0A+Adjunct+Prof.+Homi+Bhabha+National+Institute%2C+Mumbai%2C+India.%0Ahttp%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAbhas_Mitra&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217166488&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1217166488&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1217166488&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1217042230&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216994735&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Adam Dorfman&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-26T02:27+00:00&quot;&gt;2014-01-26 02:27 AM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;This title is extremely misleading and dishonest. “There is no escape from a black hole in classical theory, but quantum theory enables energy and information to escape.” he said. This simply means that black holes are different then previously described. He did not say, black holes do not exist at all. (how do you even infer this?) Further he suggests that gravity should be consider into the formula before re-defining the characteristics of black holes... This is the important information and yet you give it no value in your article.?! Second, the line that &quot;Most physicists foolhardy enough to write a paper claiming that “there are no black holes” — at least not in the sense we usually imagine — would probably be dismissed as cranks.&quot; shows just how unscientific nature magazine has become. (and even perhaps how much they have significantly contributed to slowing down global scientific progress and diluted the quality of dialogue) Instead of looking at the solutions provided, this dangerously ignorant author, only cares about the name of the scientist and for no reason, other than brand name, violently opposes any other. Authority is respected for the wrong reasons. Why does it matter who’s opinion it is? Consider the language from start to finish and give merit from a reasonable perspective. Do the work yourself, instead of overly relying on any site and authors.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=This+title+is+extremely+misleading+and+dishonest.+%E2%80%9CThere+is+no+escape+from+a+black+hole+in+classical+theory%2C+but+quantum+theory+enables+energy+and+information+to+escape.%E2%80%9D+he+said.+This+simply+means+that+black+holes+are+different+then+previously+described.+He+did+not+say%2C+black+holes+do+not+exist+at+all.+%28how+do+you+even+infer+this%3F%29+Further+he+suggests+that+gravity+should+be+consider+into+the+formula+before+re-defining+the+characteristics+of+black+holes...+This+is+the+important+information+and+yet+you+give+it+no+value+in+your+article.%3F%21+Second%2C+the+line+that+%22Most+physicists+foolhardy+enough+to+write+a+paper+claiming+that+%E2%80%9Cthere+are+no+black+holes%E2%80%9D+%E2%80%94+at+least+not+in+the+sense+we+usually+imagine+%E2%80%94+would+probably+be+dismissed+as+cranks.%22+shows+just+how+unscientific+nature+magazine+has+become.+%28and+even+perhaps+how+much+they+have+significantly+contributed+to+slowing+down+global+scientific+progress+and+diluted+the+quality+of+dialogue%29+Instead+of+looking+at+the+solutions+provided%2C+this+dangerously+ignorant+author%2C+only+cares+about+the+name+of+the+scientist+and+for+no+reason%2C+other+than+brand+name%2C+violently+opposes+any+other.+Authority+is+respected+for+the+wrong+reasons.+Why+does+it+matter+who%E2%80%99s+opinion+it+is%3F+Consider+the+language+from+start+to+finish+and+give+merit+from+a+reasonable+perspective.+Do+the+work+yourself%2C+instead+of+overly+relying+on+any+site+and+authors.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216994735&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216994735&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1216994735&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216802301&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216611169&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Adrian Arvin&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-25T20:40+00:00&quot;&gt;2014-01-25 08:40 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;My wife and I have a theory that the center of galaxies
+should not be called “black holes” but twin particle accelerators. We are both
+scientists that have helped build and run linear accelerators in New Mexico and
+Tennessee so we know what it takes to start the acceleration of particles and
+that is, vacuum, extreme cold, strong magnetic fields and huge RF energy. All
+of these natural conditions are at the center of galaxies where the swirling, super-heated,compact stars form unimaginably enormous magnetic fields and RF energy to the point that twin accelerators are compelled to form. Proof of this are the back
+streaming gamma rays that are jetting both above and below the center of the
+galaxies. The twin accelerators would have to be accelerating particles toward
+each other at the center. Our theory is that this tremendous acceleration goes
+beyond the speed of light which means that the particles are transitioning back
+in time. In other words – a lot of the universe is always transitioning back in
+time which would explain away the need for theories such as dark matter and
+energy. Theories that are needed to prop up the big bang theory. 
+
+
+
+The universe has always replenished itself this way through galaxies that form then
+gradually initiate accelerators that stream particles back in time to start the
+process over again. How far back in time? Who knows?
+
+As for those unexplainable Gamma Ray Bursts – this is caused
+by the twin accelerators momentarily touching one another. More at
+LifeConscious.com.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=My+wife+and+I+have+a+theory+that+the+center+of+galaxies%0Ashould+not+be+called+%E2%80%9Cblack+holes%E2%80%9D+but+twin+particle+accelerators.+We+are+both%0Ascientists+that+have+helped+build+and+run+linear+accelerators+in+New+Mexico+and%0ATennessee+so+we+know+what+it+takes+to+start+the+acceleration+of+particles+and%0Athat+is%2C+vacuum%2C+extreme+cold%2C+strong+magnetic+fields+and+huge+RF+energy.+All%0Aof+these+natural+conditions+are+at+the+center+of+galaxies+where+the+swirling%2C+super-heated%2Ccompact+stars+form+unimaginably+enormous+magnetic+fields+and+RF+energy+to+the+point+that+twin+accelerators+are+compelled+to+form.+Proof+of+this+are+the+back%0Astreaming+gamma+rays+that+are+jetting+both+above+and+below+the+center+of+the%0Agalaxies.+The+twin+accelerators+would+have+to+be+accelerating+particles+toward%0Aeach+other+at+the+center.+Our+theory+is+that+this+tremendous+acceleration+goes%0Abeyond+the+speed+of+light+which+means+that+the+particles+are+transitioning+back%0Ain+time.+In+other+words+%E2%80%93+a+lot+of+the+universe+is+always+transitioning+back+in%0Atime+which+would+explain+away+the+need+for+theories+such+as+dark+matter+and%0Aenergy.+Theories+that+are+needed+to+prop+up+the+big+bang+theory.+%0A%0A%0A%0AThe+universe+has+always+replenished+itself+this+way+through+galaxies+that+form+then%0Agradually+initiate+accelerators+that+stream+particles+back+in+time+to+start+the%0Aprocess+over+again.+How+far+back+in+time%3F+Who+knows%3F%0A%0AAs+for+those+unexplainable+Gamma+Ray+Bursts+%E2%80%93+this+is+caused%0Aby+the+twin+accelerators+momentarily+touching+one+another.+More+at%0ALifeConscious.com.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216611169&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216611169&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1216611169&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1217034770&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216570797&quot;&gt;
+			
+			&lt;div class=&quot;comment-body&quot;&gt;
+														&lt;section&gt;
+						&lt;cite class=&quot;vcard&quot;&gt;&lt;span class=&quot;fn&quot;&gt;Yoni Tzvi&lt;/span&gt;&lt;/cite&gt;
+						&lt;span class=&quot;bullet&quot;&gt;•&lt;/span&gt;
+						&lt;time datetime=&quot;2014-01-25T20:05+00:00&quot;&gt;2014-01-25 08:05 PM&lt;/time&gt;
+						&lt;dl&gt;
+							&lt;dd&gt;God probably sent him to the chair on purpose, silly hawking thinking that there is no need for God in the explanation of everything, the answer to existence is in the book of Genesis, it is in plain sight, a small hint: it is the exact opposite of everything.&lt;/dd&gt;
+						&lt;/dl&gt;
+											&lt;/section&gt;
+					&lt;section&gt;
+						&lt;ul class=&quot;moderation&quot;&gt;
+																					&lt;li class=&quot;sharing last&quot;&gt;
+								&lt;a class=&quot;twitter&quot; href=&quot;https://twitter.com/intent/tweet?text=God+probably+sent+him+to+the+chair+on+purpose%2C+silly+hawking+thinking+that+there+is+no+need+for+God+in+the+explanation+of+everything%2C+the+answer+to+existence+is+in+the+book+of+Genesis%2C+it+is+in+plain+sight%2C+a+small+hint%3A+it+is+the+exact+opposite+of+everything.&amp;amp;url=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216570797&quot; target=&quot;_blank&quot;&gt;Share to Twitter&lt;/a&gt;
+								&lt;a class=&quot;facebook&quot; href=&quot;http://www.facebook.com/sharer/sharer.php?u=http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583%23comment-1216570797&quot; target=&quot;_blank&quot;&gt;Share to Facebook&lt;/a&gt;
+								&lt;a class=&quot;permalink&quot; href=&quot;http://www.nature.com/news/stephen-hawking-there-are-no-black-holes-1.14583/#comment-1216570797&quot;&gt;Share link to this comment&lt;/a&gt;
+							&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/section&gt;
+							&lt;/div&gt;
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent indent-level1&quot; id=&quot;comment-1218009076&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216272363&quot;&gt;
+			
+			
+		&lt;/li&gt;
+			&lt;li class=&quot;box cleared indent-level0&quot; id=&quot;comment-1216265836&quot;&gt;
+			
+			
+		&lt;/li&gt;
+		&lt;/ol&gt;
+
+			
+		
+
+	 	
+	&lt;/div&gt;
+&lt;/article&gt;
+						
+        
+	
+										
+</description>
+<title>
+Stephen Hawking: 'There are no black holes'
+</title>
+</item>
+<item>
+<link>
+https://stackoverflow.com/questions/20977741/stdvector-performance-regression-when-enabling-c11?noredirect=1#20977741
+</link>
+<description>
+
+</description>
+<title>
+std::vector performance regression when enabling C++11 - Stack Overflow
+</title>
+</item>
+<item>
+<link>
+http://www.google.com/appsstatus#hl=en&v=status&ts=1390590318542
+</link>
+<description>
+
+</description>
+<title>
+Gmail was down
 </title>
 </item>
 </channel>
