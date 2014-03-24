@@ -14,1046 +14,6 @@ myread
 myread
 </description>
 <item>
-<author>
-dmethvin
-</author>
-<link>
-http://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;content&quot;&gt;
-		
-				&lt;div class=&quot;entry-posted&quot;&gt;
-			&lt;span class=&quot;sep&quot;&gt;Posted on &lt;/span&gt;&lt;a href=&quot;http://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/&quot; title=&quot;9:57 am&quot; rel=&quot;bookmark&quot;&gt;&lt;time class=&quot;entry-date&quot; datetime=&quot;2014-01-24T09:57:51+00:00&quot;&gt;January 24, 2014&lt;/time&gt;&lt;/a&gt;&lt;span class=&quot;by-author&quot;&gt; &lt;span class=&quot;sep&quot;&gt; by &lt;/span&gt; &lt;span class=&quot;author vcard&quot;&gt;&lt;a class=&quot;url fn n&quot; href=&quot;http://blog.jquery.com/author/dmethvin/&quot; title=&quot;View all posts by dmethvin&quot; rel=&quot;author&quot;&gt;dmethvin&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;		&lt;/div&gt;
-				
-
-		
-&lt;p&gt;Here in the eastern part of the United States, we&amp;#x2019;re huddling in subzero temperatures and dealing with the aftermath of a snowstorm. Still, there&amp;#x2019;s nothing to brighten our moods like the pristine beauty of a freshly fallen release&amp;#x2013;no, make that TWO releases. jQuery 1.11.0 and 2.1.0 are ready to keep you warm on these dark winter nights.&lt;/p&gt;
-&lt;p&gt;You can get the files off our CDN as always, and either use them directly or download them to your own server. Our &lt;a href=&quot;http://jquery.com/download/&quot;&gt;download page&lt;/a&gt; has all the files and information you need, including pointers to the other CDNs that carry the files. Just give those folks a few days to update!&lt;/p&gt;
-&lt;p&gt;For those of you not following along for a while, both the 1.x and 2.x branches of jQuery support all recent modern browsers and have the same API. The 1.x branch, this time 1.11.0, adds support for the older versions of Internet Explorer (IE6, 7, and 8). The 2.x branch, today played by 2.1.0, adds support for non-traditional web environments like node.js and browser plugins for Chrome and Firefox.&lt;/p&gt;
-&lt;p&gt;jQuery went through a major house-cleaning with the 1.9 release that removed some features. If you haven&amp;#x2019;t yet moved from an earlier version, see the &lt;a href=&quot;http://jquery.com/upgrade-guide/1.9/&quot;&gt;jQuery 1.9 Upgrade Guide&lt;/a&gt; and let the &lt;a href=&quot;http://github.com/jquery/jquery-migrate/#readme&quot;&gt;jQuery Migrate plugin&lt;/a&gt; do all the heavy lifting for you.&lt;/p&gt;
-&lt;h2&gt;What&amp;#x2019;s New?&lt;/h2&gt;
-&lt;p&gt;You may be wondering what great new things await you in these releases. Perhaps you&amp;#x2019;re fearing that they hold a bunch of breaking changes. You just know the project lead will suggest updating things right now. There goes your whole damn week and that trip to Florida. Well fear not! We&amp;#x2019;ve fixed quite a few bugs, but the other features and changes are mainly organizational ones that don&amp;#x2019;t affect the behavior of APIs. Your code shouldn&amp;#x2019;t break, it should just run a little faster. Here are the highlights:&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Fewer forced layouts:&lt;/b&gt; In this release we declared war on places where we might inadvertently force the browser to do a time-consuming layout. We found a few and eliminated one in particular that could occur when changing class names. This can result in a big performance boost for some pages.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Granular custom builds:&lt;/b&gt; Our modularity is now defined by &lt;a href=&quot;http://en.wikipedia.org/wiki/Asynchronous_module_definition&quot;&gt;AMD&lt;/a&gt;, and it is easier to build small subsets of the library when space is at a premium. If you want to know more, we&amp;#x2019;ve hidden the details in the &lt;a href=&quot;https://github.com/jquery/jquery#readme&quot;&gt;README file&lt;/a&gt; where nobody ever looks.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Lower startup overhead:&lt;/b&gt; The new modularity and avoidance of forced layouts led us to refactor our feature detects so that they run the first time they&amp;#x2019;re needed. If you never call the API needing that feature detect, you never run that code. Previously we ran all feature detects when the page loaded, that led to delays that were generally small, but added up&amp;#x2013;especially on mobile platforms.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Published on npm:&lt;/b&gt; Our releases will now be &lt;a href=&quot;https://npmjs.org/package/jquery/&quot;&gt;published on npm&lt;/a&gt; so that you can use them with node or browserify. Both the 1.x and 2.x branches are available on npm, but remember that only the 2.x branch is supported to run in node.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Published on Bower:&lt;/b&gt; We&amp;#x2019;re now using &lt;a href=&quot;http://bower.io/&quot;&gt;Bower&lt;/a&gt; for our internal dependency management including Sizzle, so you&amp;#x2019;ll see jQuery releases on Bower as soon as they&amp;#x2019;re available. &lt;/p&gt;
-&lt;p&gt;Some people have asked about supporting other package managers inside the jQuery library, but we&amp;#x2019;ve decided to only support the two that we use internally at the moment. There are more than a dozen package/dependency managers, it would be handy if they all could agree on a single format for projects to publish information. We don&amp;#x2019;t want the package manager&amp;#x2019;s overhead to be pushed off to individual projects like jQuery.&lt;/p&gt;
-&lt;p&gt;Although the glamor always seems to be in the new stuff, we don&amp;#x2019;t like to ignore the bugs and inconveniences that people have run across while using the last version. We worked hard to knock down our bug list and tackled quite a few of them. We even fixed a bug that only occurs in IE6, better late than never!&lt;/p&gt;
-&lt;h2&gt;Sourcemap changes&lt;/h2&gt;
-&lt;p&gt;This release does not contain the sourcemap comment in the minified file. Sourcemaps have proven to be a very problematic and puzzling thing to developers, spawning &lt;a href=&quot;http://stackoverflow.com/questions/18365315/jquerys-jquery-1-10-2-min-map-is-triggering-a-404-not-found&quot;&gt;hundreds of confused developers&lt;/a&gt; on forums like StackOverflow and causing some to think jQuery itself was broken.&lt;/p&gt;
-&lt;p&gt;We&amp;#x2019;ll still be generating and distributing sourcemaps, but you will need to add the appropriate sourcemap comment at the end of the minified file if the browser does not support manually associating map files (currently, none do). If you generate your own jQuery file using the custom build process, the sourcemap comment will be present in the minified file and the map is generated; you can either leave it in and use sourcemaps or edit it out and ignore the map file entirely.&lt;/p&gt;
-&lt;p&gt;We hope to bring back and improve sourcemap support in the future, but at the moment neither the design nor the implementation seem suited for situations like jQuery&amp;#x2019;s, where there are widely distributed files on CDNs. We&amp;#x2019;d like sourcemaps (and browsers supporting them) to gracefully handle situations like file renaming or missing files. See our &lt;a href=&quot;http://bugs.jquery.com/ticket/14415&quot;&gt;bug ticket&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;h2&gt;Acknowledgements&lt;/h2&gt;
-&lt;p&gt;This release would not have happened without the hard work of many people. Thanks to everyone who reported bugs, tried out the prerelease files, or provided constructive criticism. Particular thanks are due to Alex Robbin, Amey Sakhadeo, Anthony Ryan, Aurelio DeRosa, Chris Antaki, Chris Price, Christopher Jones, Corey Frang, Daniel Herman, Domenic Denicola, Dominik D. Geyer, Forbes Lindesay, George Kats, Guy Bedford, Ilya Kantor, Jakob Stoeck, Jeremy Dunck, John Paul, Julian Aubourg, J&amp;#xF6;rn Zaefferer, Lihan Li, Marian Sollmann, Markus Staab, Marlon Landaverde, Micha&amp;#x142; Go&amp;#x142;&amp;#x119;biowski, Mike Sidorov, Oleg Gaidarenko, Richard Gibson, Rick Waldron, Ronny Springer, Scott Gonz&amp;#xE1;lez, Sindre Sorhus, T.J. Crowder, Terry Jones, Timmy Willison, and Timo Tijhof. Colin Snover&amp;#x2019;s commentary in #jquery-dev is also a source of rare humor for the team.&lt;/p&gt;
-&lt;h2&gt;Changelog&lt;/h2&gt;
-&lt;h3&gt;jQuery 1.11 and 2.1 (common to both)&lt;/h3&gt;
-&lt;h3&gt;Ajax&lt;/h3&gt;
-
-&lt;h3&gt;Attributes&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14250&quot;&gt;#14250: addClass and removeClass needlessly assign to className.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Build&lt;/h3&gt;
-
-&lt;h3&gt;Core&lt;/h3&gt;
-
-&lt;h3&gt;Css&lt;/h3&gt;
-
-&lt;h3&gt;Data&lt;/h3&gt;
-
-&lt;h3&gt;Effects&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14344&quot;&gt;#14344: Putting different effects in callbacks uses only the first effect.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Event&lt;/h3&gt;
-
-&lt;h3&gt;Manipulation&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14716&quot;&gt;#14716: Textarea isn&amp;#x2019;t cloned properly in IE11&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Misc&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14040&quot;&gt;#14040: Tests: Replace QUnit.reset usage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Selector&lt;/h3&gt;
-
-&lt;h3&gt;Support&lt;/h3&gt;
-
-&lt;h3&gt;jQuery 1.11&lt;/h3&gt;
-&lt;h3&gt;Ajax&lt;/h3&gt;
-
-&lt;h3&gt;Attributes&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/2252&quot;&gt;#2252: Setting select value via val() shows error in IE6&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Build&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14663&quot;&gt;#14663: jQuery 1.11.0-beta3 on npm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Core&lt;/h3&gt;
-
-&lt;h3&gt;Effects&lt;/h3&gt;
-
-&lt;h3&gt;Support&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14422&quot;&gt;#14422: CSP violation including jquery in a blank page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;jQuery 2.1&lt;/h3&gt;
-&lt;h3&gt;Ajax&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14207&quot;&gt;#14207: Ajax error defaults to status 404&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Build&lt;/h3&gt;
-
-&lt;h3&gt;Core&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14313&quot;&gt;#14313: Optimize jQuery.merge for size&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Event&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://bugs.jquery.com/ticket/14544&quot;&gt;#14544: Remove elem reference from event handler&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-			
-	&lt;/div&gt;
-	
-&lt;/div&gt;
-</description>
-<title>
-JQuery 1.11 and 2.1 Released
-</title>
-</item>
-<item>
-<author>
-Zulko
-</author>
-<link>
-http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;&lt;p&gt;&lt;em&gt;Sometimes producing a good animated GIF requires a few advanced tweaks, for which scripting can help. So I added a GIF export feature to MoviePy, a Python package originally written for video editing.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;For this demo we will make a few GIFs out of this trailer:&lt;/p&gt;
-
-&lt;p class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/2Jw-AeaU5WI&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;In what follows we import &lt;a href=&quot;http://zulko.github.io/moviepy/&quot;&gt;MoviePy&lt;/a&gt;, we open the video file, we select the part between 1&amp;#x2019;22.65 (1 minute 22.65 seconds) and 1&amp;#x2019;23.2, reduce its size (to 30% of the original) and save it as a GIF:&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;moviepy.editor&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;22.65&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;23.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;use_your_head.gif&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/F1oOtnP.gif&quot; title=&quot;'Use Your Head - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;cropping-the-image&quot;&gt;Cropping the image&lt;/h2&gt;
-
-&lt;p&gt;For my next GIF I will only keep the center of the screen. If you intend to use MoviePy, note that you can preview a clip with &lt;code&gt;clip.preview()&lt;/code&gt;. During the preview clicking on a pixel will print its position, which is convenient for cropping with precision.&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;kris_sven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                   &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;13.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;13.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                   &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                   &lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;145&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\ &lt;span class=&quot;c&quot;&gt;# remove left-right borders&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                   &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;kris_sven.gif&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/CFFYEpd.gif&quot; title=&quot;'Kris and Sven - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;freezing-a-region&quot;&gt;Freezing a region&lt;/h2&gt;
-
-&lt;p&gt;Many GIF makers like to &lt;em&gt;freeze&lt;/em&gt; some parts of the GIF to reduce the file size and/or focus the attention on one part of the animation.&lt;/p&gt;
-
-&lt;p&gt;In the next GIF we freeze the left part of the clip. To do so we  take a snapshot of
-the clip at t=0.2 seconds, we crop this snapshot to only keep the left half, then we make a composite clip which superimposes the cropped snapshot on the original clip:&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;anna_olaf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;87.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;88.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;speedx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\ &lt;span class=&quot;c&quot;&gt;# Play at half speed&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anna_olaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anna_olaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\ &lt;span class=&quot;c&quot;&gt;# remove right half&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;to_ImageClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\ &lt;span class=&quot;c&quot;&gt;# snapshot of the clip at t=0.2s&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;set_duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anna_olaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;CompositeVideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anna_olaf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'anna_olaf.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/Fc9Qc5f.gif&quot; title=&quot;'Anna and Olaf - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;freezing-a-more-complicated-region&quot;&gt;Freezing a more complicated region&lt;/h2&gt;
-
-&lt;p&gt;This time we will apply a custom mask to the snapshot to specify where it will be transparent (and let the animated part appear)
-.
-&lt;img class=&quot;center&quot; src=&quot;http://zulko.github.io/images/gifs/mask.jpeg&quot; title=&quot;'That's what a mask is for.'&quot;&gt;&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;13&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;14&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;15&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;16&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;17&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;18&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;19&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;moviepy.video.tools.drawing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dw&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;anna_kris&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;38.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;38.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# coordinates p1,p2 define the edges of the mask&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color_split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anna_kris&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                      &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;445&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;275&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                      &lt;span class=&quot;n&quot;&gt;grad_width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# blur the mask's edges&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anna_kris&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_ImageClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;span class=&quot;n&quot;&gt;set_duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anna_kris&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;span class=&quot;n&quot;&gt;set_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ImageClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ismask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;CompositeVideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anna_kris&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;speedx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'anna_kris.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# fuzz= GIF compression&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/SBHkNqt.gif&quot; title=&quot;'Anna and Olaf - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;time-symetrization&quot;&gt;Time-symetrization&lt;/h2&gt;
-
-&lt;p&gt;Surely you have noticed that in the previous GIFs, the end did not always look like the beginning. As a consequence, you could see a disruption every time the animation was restarted. A way to avoid this is to time-symetrize the clip, i.e. to make the clip play once forwards, then once backwards. This way the &lt;em&gt;end&lt;/em&gt; of the clip really &lt;em&gt;is&lt;/em&gt; the beginning of the clip. This creates a GIF that can loop fluidly, without a real beginning or end.&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;time_symetrize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;sd&quot;&gt;&quot;&quot;&quot; Returns the clip played forwards then backwards. In case&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;sd&quot;&gt;    you are wondering, vfx (short for Video FX) is loaded by&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;sd&quot;&gt;    &amp;gt;&amp;gt;&amp;gt; from moviepy.editor import * &quot;&quot;&quot;&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concatenate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vfx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time_mirror&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;36.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;36.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;189&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;433&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_symetrize&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sven.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/fuqLsRG.gif&quot; title=&quot;'Sven - hosted on Imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Ok, this might be a bad example of time symetrization,it makes the snow flakes go upwards in the second half of the animation.&lt;/p&gt;
-
-&lt;h2 id=&quot;adding-some-text&quot;&gt;Adding some text&lt;/h2&gt;
-
-&lt;p&gt;In the next GIF there will be a text clip superimposed on the video clip.&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;13&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;14&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;15&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;olaf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;21.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;22.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;speedx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_symetrize&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Many options are available for the text (requires ImageMagick)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TextClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;In my nightmares&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;I see rabbits.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;n&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'white'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Amiri-Bold'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;n&quot;&gt;set_pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;190&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;n&quot;&gt;set_duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;olaf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;CompositeVideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;olaf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'olaf.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/ZQzgNo6.gif&quot; title=&quot;'Olaf - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;making-the-gif-loopable&quot;&gt;Making the gif loopable&lt;/h2&gt;
-
-&lt;p&gt;The following GIF features a lot of snow falling. Therefore it cannot be made loopable using time-symetrization (or you will snow floating upwards !). So we will make this animation loopable by having the beginning of the animation appear progressively (&lt;em&gt;fade in&lt;/em&gt;) just before the end of the clip. The montage here is a little complicated, I cannot explain it better than with this picture:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://zulko.github.io/images/gifs/castle_loopable.jpeg&quot; title=&quot;'I hope it's clear !' 400&quot;&gt;&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;13&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./frozen_trailer.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;22.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;23.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;speedx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crossfadein&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;CompositeVideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;n&quot;&gt;castle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'castle.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/VnoRpdq.gif&quot; title=&quot;'Disney Castle - Hosted by Imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;another-example-of-a-gif-made-loopable&quot;&gt;Another example of a GIF made loopable&lt;/h2&gt;
-
-&lt;p&gt;The next clip (from the movie &lt;em&gt;Charade&lt;/em&gt;) was almost loopable: you can see Carry Grant smiling, then making a funny face, then coming back to normal. The problem is that at the end of the excerpt Cary is not exactly in the same position, and he is not smiling as he was at the beginning. To correct this, we take a snapshot of the first frame and we make it appear progressively at the end. This seems to do the trick.&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;carry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;../videos/charade.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;18.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;20.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;102&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;297&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;202&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;carry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_ImageClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;n&quot;&gt;set_duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;n&quot;&gt;crossfadein&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                  &lt;span class=&quot;n&quot;&gt;set_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;CompositeVideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'carry.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;carry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/k1sz49h.gif&quot; title=&quot;'Carry Grant in Charade - Hosted by Imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;big-finish-removing-the-background&quot;&gt;Big finish: removing the background&lt;/h2&gt;
-
-&lt;p&gt;Let us dive further into the scripting madness: we consider this video around 2&amp;#x2019;16:&lt;/p&gt;
-
-&lt;p class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/_wZjCDXDNLI&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;And we will remove the background to make this gif (with transparent background):&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;center&quot; src=&quot;http://i.imgur.com/Fo2BxBK.gif&quot; title=&quot;'PigsPolka - Hosted by imgur'&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;The main difficulty was to find what the background of the scene is. To do so, the script gathers a few images in which the little pigs are are different positions (so that every part part of the background is visible on at least several (actually most) of the slides, then it takes the pixel-per-pixel median of these pictures, which gives the background.&lt;/p&gt;
-
-&lt;div class=&quot;bogus-wrapper&quot;&gt;&lt;notextile&gt;&lt;figure class=&quot;code&quot;&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&quot;line-number&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;11&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;13&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;14&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;15&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;16&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;17&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;18&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;19&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;20&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;21&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;22&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;23&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;24&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;25&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;26&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;27&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;28&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;29&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;31&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;32&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;33&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;34&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;36&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;37&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;38&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;39&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;40&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;41&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;42&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;43&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;44&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;45&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;46&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;47&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;48&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;49&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;50&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;51&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;52&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;53&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;54&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;55&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;56&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;57&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;58&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;59&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;60&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;61&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;62&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;63&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;64&lt;/span&gt;
-&lt;span class=&quot;line-number&quot;&gt;65&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Requires Scikit Images installed&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;skimage.morphology&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;skm&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;skimage.filter&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;skf&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;moviepy.editor&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;### LOAD THE CLIP&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;pigsPolka&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;VideoFileClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pigs_in_a_polka.mp4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;16.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;                 &lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;140&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;41&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;454&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;314&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;### COMPUTE THE BACKGROUND&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# There is no single frame showing the background only (there&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# is always a little pig in the screen) so we use the median of&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# several carefully chosen frames to reconstitute the background.&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;# I must have spent half an hour to find the right set of frames.&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;4.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;6.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;7.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;6.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;frames_bg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pigsPolka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percentile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frames_bg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;### MASK GENERATION&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_mask_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;sd&quot;&gt;&quot;&quot;&quot; Computes the mask for the frame at time t &quot;&quot;&quot;&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# THRESHOLD THE PIXEL-TO-PIXEL DIFFERENCE&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# BETWEEN THE FRAME AND THE BACKGROUND&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;im&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pigsPolka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;im&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1500&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# REMOVE SMALL OBJECTS&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove_small_objects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# REMOVE SMALL HOLES (BY DILATIATION/EROSION)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;selem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_dilation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;binary_erosion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;c&quot;&gt;# BLUR THE MASK A LITTLE&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;skf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gaussian_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;astype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VideoClip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ismask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;set_get_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_mask_frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;set_duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pigsPolka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;c&quot;&gt;### LAST EFFECTS AND GIF GENERATION&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;n&quot;&gt;pigsPolka&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;subclip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;12.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;15.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vfx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blackwhite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;\ &lt;span class=&quot;c&quot;&gt;# black &amp;amp; white effect !&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;to_gif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pigs_polka.gif'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;n&quot;&gt;dispose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-
-
-  &lt;/div&gt;
-</description>
-<title>
-A few animated GIFs, and their Python code (xpost r/python)
-</title>
-</item>
-<item>
-<author>
-David Auerbach
-</author>
-<link>
-http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;body parsys&quot;&gt;
-
-
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-01-TitleScreen&quot; alt=&quot;140124_BIT_RO-01-TitleScreen&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-01-TitleScreen.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Odysseus had it easy next to this.&lt;br&gt;&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;My first computer was an Apple IIe with 128KB of RAM, no hard drive, and a 5&amp;#xBC; inch floppy drive. One of the top educational games back then was &lt;em&gt;Rocky&amp;#x2019;s Boots&lt;/em&gt;, an inventive game that taught the basics of formal logic to kids. I loved it when I was 6. Two years later, I got &lt;em&gt;Robot Odyssey&lt;/em&gt;, which promised to expand on &lt;em&gt;Rocky&amp;#x2019;s Boots&lt;/em&gt; by extending the formal logic to actual programming. The game devastated me. My brain could not comprehend how to solve its puzzles. I finally finished it&amp;#x2014;13 years later, and not without some assistance.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-            
-
-            
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Let me say: Any kid who completes this game &lt;em&gt;while still a kid &lt;/em&gt;(I know only &lt;em&gt;one&lt;/em&gt;, who also is one of the smartest programmers I&amp;#x2019;ve ever met) is guaranteed a career as a software engineer. Hell, any adult who can complete this game should go into engineering. &lt;em&gt;Robot Odyssey&lt;/em&gt; is the hardest damn &amp;#x201C;educational&amp;#x201D; game ever made. It is also a stunning technical achievement, and one of the most innovative games of the Apple IIe era.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Visionary, absurdly difficult games such as this gain cult followings. It is &lt;em&gt;the &lt;/em&gt;game I remember most from my childhood. It is the game I love (and despise) the most, because it was the hardest, the most complex, the most challenging. The world it presented was like being exposed to Plato&amp;#x2019;s forms, a secret, nonphysical realm of pure ideas and logic. The challenge of the game&amp;#x2014;and it was one serious challenge&amp;#x2014;was to understand that other world. Programmer Thomas Foote had just started college when he picked up the game: &amp;#x201C;I swore to myself,&amp;#x201D; he told me, &amp;#x201C;that as God is my witness, I would finish this game before I finished college. I managed to do it, but just barely.&amp;#x201D;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-02-ManualDrawing&quot; alt=&quot;Programming in your pajamas: the simulation. &quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-02-ManualDrawing.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Programming in your pajamas: the simulation.&lt;br&gt;&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;Illustration by Gil Morales, from the game manual&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                        
-                    
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;In&lt;em&gt; Robot Odyssey&lt;/em&gt;, you played a character who falls in a dream into the mysterious city of Robotropolis. There were five ascending levels to Robotropolis before you could return back home. Here&amp;#x2019;s a rough estimate of their difficulty:&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;p class=&quot;entry-content-asset&quot;&gt;
-
-&lt;ol&gt;
-&lt;li&gt;The Sewer: Moderate&lt;/li&gt;
-&lt;li&gt;The Subway: Challenging&lt;/li&gt;
-&lt;li&gt;The Town: Very Difficult&lt;/li&gt;
-&lt;li&gt;The Master Control Center: Impossible&lt;/li&gt;
-&lt;li&gt;The Skyways: Impossible&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;/p&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline left&quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-03-RobotropolisDrawing&quot; alt=&quot;Robotropolis&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-03-RobotropolisDrawing.png.CROP.promovar-medium2.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Robotropolis as rendered by Gil Morales.&lt;br&gt;&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;Illustration by Gil Morales, from the game manual&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;By my teenage years I&amp;#x2019;d completed the first three levels, but my siblings and I hit a brick wall with the fourth level, which is to earlier levels like algebra is to arithmetic. (As Thomas Foote said, &amp;#x201C;I was stuck on this level for most of my college years.&amp;#x201D;) The fifth level was nothing more than a fabled dream. The Internet didn&amp;#x2019;t exist in those days, and even finding someone else who had played the game was difficult if you didn&amp;#x2019;t live in Silicon Valley.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;The game became my &lt;em&gt;b&amp;#xEA;te noire, &lt;/em&gt;a lingering reminder of my inadequacy. To give you some idea, I couldn&amp;#x2019;t get past the fourth level &lt;em&gt;even after I&amp;#x2019;d been programming in BASIC and Pascal for years.&lt;/em&gt;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;The game had a profound effect on those who played it. My younger brother, who suffered with my sister and me as we struggled through the game, told me, &amp;#x201C;It&amp;#x2019;s where I started on the road to becoming a programmer.&amp;#x201D; Even if players got stuck (and &lt;em&gt;everyone&lt;/em&gt; got stuck), the game offered ideas and concepts that no other game did. Game designer and hardware hacker &lt;a href=&quot;http://quinndunki.com/blondihacks/&quot; class=&quot;entry-content-asset&quot;&gt;Quinn Dunki&lt;/a&gt; of One Girl, One Laptop wrote &lt;a href=&quot;http://quinndunki.com/OGOL/GATE.html&quot; class=&quot;entry-content-asset&quot;&gt;&lt;em&gt;Gate&lt;/em&gt;&lt;/a&gt;, a spiritual successor to &lt;em&gt;Robot Odyssey &lt;/em&gt;that employed many of the same concepts. The tech law professor James Grimmelmann told me it had been his &amp;#x201C;game for a rainy decade,&amp;#x201D; describing an immense sense of accomplishment on finishing one of the nastier puzzles&amp;#x2014;&amp;#x201C;a big part of why I loved programming.&amp;#x201D; Programmer/musician/hacker&lt;strong&gt; &lt;/strong&gt;&lt;a href=&quot;http://atypical.net/&quot; class=&quot;entry-content-asset&quot;&gt;Joan Touzet&lt;/a&gt; used it to &lt;a href=&quot;http://groups.yahoo.com/neo/groups/droidquest/conversations/messages/204&quot; class=&quot;entry-content-asset&quot;&gt;teach programming to middle schoolers&lt;/a&gt;&amp;#x2014;in 2004. Thomas Foote was so taken with the game that he spent years re-implementing the entire game in Java, with the support of a small but dedicated fan community. (One of them remembers completing the game and &lt;a href=&quot;http://groups.yahoo.com/neo/groups/droidquest/conversations/messages/81&quot; class=&quot;entry-content-asset&quot;&gt;getting a certificate from the Learning Company&lt;/a&gt; declaring him the 34&lt;sup&gt;th&lt;/sup&gt; person to finish.) Foote called his version &lt;em&gt;&lt;a href=&quot;http://www.droidquest.com/&quot; class=&quot;entry-content-asset&quot;&gt;DroidQuest&lt;/a&gt;&lt;/em&gt;, and it is the easiest way to play Robot Odyssey today.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_ROcertificate&quot; alt=&quot;140124_BIT_ROcertificate&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_ROcertificate.jpg.CROP.promo-mediumlarge.jpg&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;It's an accomplishment.&lt;br&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Software engineer &lt;a href=&quot;http://scanlime.org/&quot; class=&quot;entry-content-asset&quot;&gt;Micah Elizabeth Scott&lt;/a&gt;, who &lt;a href=&quot;http://scanlime.org/category/projects/robot-odyssey/&quot; class=&quot;entry-content-asset&quot;&gt;ported the game to the Nintendo DS&lt;/a&gt;, told me that &lt;em&gt;Robot Odyssey&lt;/em&gt; &amp;#x201C;played a large role in shaping who I'd later become,&amp;#x201D; and emphasized just how personal and distinctive a creation it was: &amp;#x201C;You see the style of an individual or a very small team, uncluttered by corporate structure or modern abstractions.&amp;#x201D;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;It&amp;#x2019;s a testament to the sheer free-spiritedness of the early days of consumer software that such a game could even get made. The Learning Company, who also made classics like &lt;em&gt;Rocky&amp;#x2019;s Boots&lt;/em&gt;, &lt;em&gt;Reader Rabbit&lt;/em&gt;, and &lt;em&gt;Gertrude&amp;#x2019;s Puzzles&lt;/em&gt;, was a small company founded in 1980 on an NSF grant by four educators who had taken an interest in software: &lt;a href=&quot;http://www.talkingfingers.com/developers/bio_leslie.html&quot; class=&quot;entry-content-asset&quot;&gt;Leslie Grimm&lt;/a&gt;, &lt;a href=&quot;http://www.designworlds.com/collab/collab-6th/frona-page.html&quot; class=&quot;entry-content-asset&quot;&gt;Frona Kahn&lt;/a&gt;, &lt;a href=&quot;http://www.trueventurestec.com/2012/09/17/a-talk-with-ann-mccormick-the-queen-of-childrens-educational-software/&quot; class=&quot;entry-content-asset&quot;&gt;Ann McCormick&lt;/a&gt;, and &lt;a href=&quot;http://legacy.sdsc.edu/CRAW/perl.html&quot; class=&quot;entry-content-asset&quot;&gt;Teri Perl&lt;/a&gt;, as well as &lt;a href=&quot;http://www.warrenrobinett.com/learningcompany/index.html&quot; class=&quot;entry-content-asset&quot;&gt;Warren Robinett&lt;/a&gt; (who had created &lt;a href=&quot;https://www.youtube.com/watch?v=MoiWi-I5YWc&quot; class=&quot;entry-content-asset&quot;&gt;the world&amp;#x2019;s first Easter egg&lt;/a&gt; when he &lt;a href=&quot;http://www.eeggs.com/items/453.html&quot; class=&quot;entry-content-asset&quot;&gt;hid his name in a secret room&lt;/a&gt; in Atari&amp;#x2019;s &lt;em&gt;Adventure&lt;/em&gt;). The company was atypical both in focusing on educational software and in being led by women. Grimm and Robinett designed 1982&amp;#x2019;s &lt;em&gt;&lt;a href=&quot;http://www.warrenrobinett.com/rockysboots/&quot; class=&quot;entry-content-asset&quot;&gt;Rocky&amp;#x2019;s Boots&lt;/a&gt;&lt;/em&gt;, which taught Boolean logic gates to kids, and which had captivated my 6-year-old self. Grimm also co-authored &lt;em&gt;Robot Odyssey&lt;/em&gt;, which began as the brainchild of Michael Wallace, a 22-year-old Stanford undergrad at the time.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline left&quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-04-PoorRobots&quot; alt=&quot;140124_BIT_RO-04-PoorRobots&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-04-PoorRobots.png.CROP.promovar-medium2.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;The game taunts you.&lt;br&gt;&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Wallace told me that writing the game was one of the best times of his life. Originally a customer service rep at the Learning Company, Wallace taught himself to code in Apple 6502 assembly by looking at Robinett&amp;#x2019;s code for &lt;em&gt;Rocky&amp;#x2019;s Boots&lt;/em&gt;. After Robinett left the company, Wallace expanded Robinett&amp;#x2019;s code to architect the underlying technology for &lt;em&gt;Robot Odyssey&lt;/em&gt;, including the dazzling ability to embed circuits within circuits. Doing this was no easy task; Wallace called it &amp;#x201C;an art form&amp;#x201D; and recounted working 100 hours a week. When Teri Perl described the project to legendary computer scientist &lt;a href=&quot;http://techland.time.com/2013/04/02/an-interview-with-computing-pioneer-alan-kay/&quot; class=&quot;entry-content-asset&quot;&gt;Alan Kay&lt;/a&gt;, he said, &amp;#x201C;You&amp;#x2019;re wasting your time. It can&amp;#x2019;t be done.&amp;#x201D; That is, the basic idea was simply too complex to run on an Apple home computer. When&lt;em&gt; Robot Odyssey&lt;/em&gt; shipped, the company gave Wallace a plaque that said, &amp;#x201C;It can&amp;#x2019;t be done. &amp;#x2014;Alan Kay.&amp;#x201D;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;After getting her Ph.D. in biology from Stanford, Leslie Grimm became fascinated by computers and their educational potential while volunteering in her daughter&amp;#x2019;s school. In addition to directing the entire project, Grimm was in charge of the game portion of &lt;em&gt;Robot Odyssey&lt;/em&gt;: the five levels of Robotropolis and three tutorials (expanded to five tutorials in Version 1.1, in the hopes of making the game a bit more tractable to players). Each of the five game levels was the personal creation of a single person. I&amp;#x2019;d like to single out Shaun Gordon, the 16-year-old high school whiz who designed the diabolical fourth level, the Master Control Center, which was the Waterloo for many a player (including myself).&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Wallace was kept so busy with the plumbing of the game that he himself never played it through to completion. I asked him if he might try someday, and he said, &amp;#x201C;It might take a year of my life.&amp;#x201D; He wasn&amp;#x2019;t sure that &lt;em&gt;anyone&lt;/em&gt; at the Learning Company had solved the entire game singlehandedly!&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;To solve the puzzles, you are given three (eventually four) robot pals to wire and program. From left to right, they are Sparky, Scanner, and Checkers. They can move, detect walls, pick up and drop things, and communicate to one another.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-06-Sparky&quot; alt=&quot;140124_BIT_RO-06-Sparky&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-06-Sparky.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Sparky, Scanner, and Checkers: they are yours to command (and scream at).&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;When I say &lt;em&gt;program&lt;/em&gt;, I mean something a bit more primitive than computer code, even the low-level assembly that processing chips natively run. I mean the actual logic gates (AND, OR, NOT) that make up the innards of chips. So &lt;em&gt;Robot Odyssey&lt;/em&gt; was programming, but it was also electrical engineering. Your tools for implementing &amp;#x201C;programs&amp;#x201D; were the most primitive available. You had &amp;#x201C;electricity&amp;#x201D; going through wires into gates. The gates implemented the primitive operations of formal Boolean logic.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-07-InsideARobot&quot; alt=&quot;140124_BIT_RO-07-InsideARobot&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-07-InsideARobot.png.CROP.original-original.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Simple, right?&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;&lt;a name=&quot;return&quot; class=&quot;entry-content-asset&quot;&gt;&lt;/a&gt;Boolean logic is fairly simple. It deals in two opposing values, often called TRUE and FALSE (if logic is being applied to assertions), but since we&amp;#x2019;re talking about electricity here, they&amp;#x2019;re better called ON and OFF. The robots in the game have thrusters that make them move. For example, if you feed electricity into a robot&amp;#x2019;s thruster through a wire that is ON, the thruster turns ON and the robot moves.&lt;strong&gt;&lt;sup&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#foot&quot; class=&quot;entry-content-asset&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/strong&gt; In addition, there are assorted &lt;em&gt;logic gates&lt;/em&gt; that change the nature of the electricity. A NOT gate had one wire going in and one wire coming out, and inverted the input wire. If the incoming wire was ON and had electricity going through it, the gate would &lt;em&gt;not&lt;/em&gt; output electricity. If the incoming wire was OFF, the gate would output electricity.&lt;strong&gt;&lt;sup&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#foot&quot; class=&quot;entry-content-asset&quot;&gt;2&lt;/a&gt;&lt;a name=&quot;return3&quot; class=&quot;entry-content-asset&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-08-WallHugger&quot; alt=&quot;140124_BIT_RO-08-WallHugger&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-08-WallHugger.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;A &amp;#x201C;wall hugger&amp;#x201D; robot. The actual logic is embedded &amp;#x201C;inside&amp;#x201D; the blue &quot;2&quot; chip.&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Using these gates and a few others, you had to wire up robots to perform tasks&amp;#x2014;reasonably simple ones at first,&lt;strong&gt;&lt;sup&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#foot&quot; class=&quot;entry-content-asset&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/strong&gt; but which became increasingly complicated as the game progressed.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-08-EricWelshCircuit&quot; alt=&quot;140124_BIT_RO-08-EricWelshCircuit&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-08-EricWelshCircuit.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Eric Welsh&amp;#x2019;s circuit that &amp;#x201C;plays&amp;#x201D; a 100110 pattern on the antenna.&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;When the task is to get one robot to communicate orders to move to another robot through an antenna that can only be ON or OFF, those logic gates start to seem awfully limited in their capabilities. The trick is, they &lt;em&gt;aren&amp;#x2019;t&lt;/em&gt; limited&amp;#x2014;in sufficient combination, those little logic gates can do anything. But it takes some real thought.&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Getting these simple gates to execute complex &lt;em&gt;programs&lt;/em&gt; melted my brain. My child&amp;#x2019;s mind was literally incapable of making the jump from those simple gates to the complex control structures required to solve the game&amp;#x2019;s puzzles. The game offered you the ability to &amp;#x201C;burn&amp;#x201D; circuits into chips in order to abstract control structures. Here&amp;#x2019;s a chip that uses a lot of OR gates in order to ... well, I won&amp;#x2019;t get into it (&lt;a href=&quot;http://www.formauri.es/personal/pgimeno/temp/RO/stereorecorder.php&quot; class=&quot;entry-content-asset&quot;&gt;see here for the grisly details&lt;/a&gt;).&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;figure class=&quot;parbase image slate_image section&quot;&gt;
-
-
-
-
-&lt;figure class=&quot;image inline &quot;&gt;
-
-&lt;img title=&quot;140124_BIT_RO-09_InsideAChip&quot; alt=&quot;140124_BIT_RO-09_InsideAChip&quot; src=&quot;http://www.slate.com/content/dam/slate/articles/technology/bitwise/2014/01/140124_BIT_RO-09_InsideAChip.png.CROP.promo-mediumlarge.png&quot;&gt;
-
-
-
-  &lt;figcaption class=&quot;caption&quot;&gt;Inside a chip: Fun for the whole family!&lt;/figcaption&gt;
-  &lt;p class=&quot;credit&quot;&gt;The Learning Company&lt;br&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-
-&lt;/figure&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;The point being that those simple logic gates could, in sufficient combination and organization, do tremendously complicated things. That, after all, is the very stuff of computer programming, using primitive operations in immensely complex architectures. For Foote, the fundamental appeal of the game is much the same as the fundamental appeal of mathematics and computer science: &amp;#x201C;The world is logical, and operates under simple rules. From such simplicity can come great complexity.&amp;#x201D;&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Though a planned sequel (the original box billed the game as &lt;em&gt;Robot Odyssey I&lt;/em&gt;) never materialized, the game won awards and a write-up in &lt;em&gt;Scientific American&lt;/em&gt;. The game got Wallace an audience with the top brass at Apple and a presentation at Xerox PARC, and he went on to design electronic toys including the Nintendo Power Glove and now has his own company, Pure Imagination. Grimm stayed with the Learning Company and authored many more games, including the successful &lt;em&gt;Reader Rabbit&lt;/em&gt; franchise, and more recently developed &lt;a href=&quot;http://www.abcdeaf.com/&quot; class=&quot;entry-content-asset&quot;&gt;educational software for deaf children&lt;/a&gt;. The sheer complexity of &lt;em&gt;Robot Odyssey&lt;/em&gt; made it the spiritual forebear to today&amp;#x2019;s sandbox games like &lt;em&gt;Minecraft&lt;/em&gt;. It probably turned hundreds of people into computer programmers, and in the hopes of making a few more, I issue the Bitwise &lt;em&gt;Robot Odyssey&lt;/em&gt; Challenge: The first reader to complete &lt;em&gt;Robot Odyssey&lt;/em&gt;&amp;#x2014;send a save game file to me as proof&amp;#x2014; gets a replica of the &lt;em&gt;Robot Odyssey&lt;/em&gt; completion certificate from the Learning Company. Only first-time players allowed&amp;#x2014;and no cheating by looking up the solutions!&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;&lt;a name=&quot;foot&quot; class=&quot;entry-content-asset&quot;&gt;&lt;/a&gt;----&lt;br&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;Notes:&lt;br&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;1. If you stop the electricity flowing through the wire, the thruster turns OFF and the robot stops moving. (&lt;em&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#return&quot; class=&quot;entry-content-asset&quot;&gt;Return&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;2.&amp;#xA0;An AND gate takes two inputs and outputs electricity if its two inputs are both on. An OR gate outputs electricity if either or both of its two inputs are on. An XOR gate (for exclusive-or) outputs electricity if either of its two inputs are on, but &lt;em&gt;not&lt;/em&gt;&amp;#xA0;both. (&lt;em&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#return&quot; class=&quot;entry-content-asset&quot;&gt;Return&lt;/a&gt;.&lt;/em&gt;)&lt;br&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-&lt;p&gt;3. Here&amp;#x2019;s a simple example. Let&amp;#x2019;s say you want a robot to move up when its antenna is receiving a signal (when the antenna is ON), and move down when the antenna is not receiving a signal (when the antenna is OFF). You wire up the antenna output to the UP thruster so that when the antenna is ON, the UP thruster turns on, and vice versa. You also wire up the antenna output to the DOWN thruster, but put it through a NOT gate first, which reverses the antenna output. So when the antenna is ON, the DOWN thruster is OFF, and vice versa. (&lt;em&gt;&lt;a href=&quot;http://www.slate.com/articles/technology/bitwise/2014/01/robot_odyssey_the_hardest_computer_game_of_all_time.html#return3&quot; class=&quot;entry-content-asset&quot;&gt;Return&lt;/a&gt;.&lt;/em&gt;)&lt;br&gt;
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-                    
-                     
-                    &lt;div class=&quot;entry-content-asset&quot;&gt;
-
-
-
-
-&lt;/div&gt;
-
-
-
-&lt;/div&gt;
-
-        
-        
-        
-        
-    &lt;/div&gt;
-</description>
-<title>
-The hardest computer game of all time
-</title>
-</item>
-<item>
-<link>
-http://www.abcoin.net/post/74401339267/why-dogecoin-is-important
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;regular&quot;&gt;
-        
-        &lt;p&gt;What&amp;#x2019;s most interesting about Dogecoin is that it created a new way for cryptocurrencies to compete: on branding, rather than on technical merit. The dozens of preexisting Bitcoin alternatives had all changed a number here, an algorithm there. Their creators proclaimed them to be more secure, user-friendly, or economically fair than Bitcoin. Instead, the main contribution of Dogecoin&amp;#x2019;s creators was to name the coin after &lt;a href=&quot;http://knowyourmeme.com/memes/doge&quot;&gt;a silly internet meme&lt;/a&gt; and plaster pictures of shiba inu all over the place.&lt;/p&gt;
-&lt;p&gt;Frankly, it&amp;#x2019;s brilliant. It&amp;#x2019;s not surprising that &lt;a href=&quot;https://en.wikipedia.org/wiki/Dogecoin#Overview_and_history&quot;&gt;there was a marketer involved in the coin&amp;#x2019;s creation&lt;/a&gt;, rather than a team of all software developers. And Dogecoin has shot up the ranks &amp;#x2014; at the time of writing, it has the 7th highest market cap out of the 80 cryptocurrencies listed at &lt;a href=&quot;http://coinmarketcap.com/&quot;&gt;coinmarketcap.com&lt;/a&gt;, many of which have been around for much longer. In daily exchange volume, it has recently reached as high as second place.&lt;/p&gt;
-&lt;p&gt;Among all the possible brands to build a coin on, the doge meme has several advantages. First among them is that the currency can pretend to be a joke. As one friend put it: &amp;#x201C;Dogecoin pretends to be a joke currency pretending to be serious, but it&amp;#x2019;s actually a serious currency pretending to be a joke.&amp;#x201D; This lets its fans support it enthusiastically without looking unintentionally foolish; they merely look intentionally foolish. Doge is also fun and accessible, and there&amp;#x2019;s no threat to the brand from, for example, being associated with an online drug marketplace. If anything, that would make it funnier.&lt;/p&gt;
-&lt;p&gt;What other kinds of brands could work? Two imitators, Catcoin and CoinyeWest, have already come and gone. They aren&amp;#x2019;t different enough from Dogecoin to gain traction. But they do point in two interesting directions. For the first one, cats are a more generic and broadly familiar brand than the doge meme. Perhaps more people could get behind it. In that line, you can imagine coins based on national pride (USACoin!), ideology, sports teams, etc. And what CoinyeWest points us toward is coins backed by private, commercial brands. Pizza Hut could release a pizza-backed currency &amp;#x2014; far tastier than the gold standard. A DisneyCoin would be in trouble when the Silk Road decided to start accepting it. It&amp;#x2019;s not immediately clear that companies would ever prefer a decentralized virtual currency to a centralized one, but it&amp;#x2019;s worth thinking about.&lt;/p&gt;
-&lt;p&gt;The long-term success of Dogecoin is beside the point. It doesn&amp;#x2019;t have anything close to Bitcoin&amp;#x2019;s developer backing. And basing a currency on an internet meme presents its own risks: for example, the joke might get old. Those are two of many reasons that Bitcoin will keep its lead for now. But it will be interesting to see where and how smarter branding gets incorporated into new efforts.&lt;/p&gt;
-      
-      
-      
-
-      
-      
-      
-
-      
-
-			
-
-      
-      
-      
-        
-         
-        
-	    
-	        
-
-            
-	    
-        
-      &lt;/div&gt; 
-    
-      
-    
-    
-    
-    
-      
-    
-    &lt;/div&gt;
-</description>
-<title>
-Why Dogecoin is Important
-</title>
-</item>
-<item>
 <link>
 http://www.pbrt.org/
 </link>
@@ -1082,6 +42,294 @@ http://www.pbrt.org/
 </description>
 <title>
 &quot;Physically Based Rendering&quot;, a book on computer-generated images, has won an Oscar for technical achievment, the first time it's ever been given to a book.
+</title>
+</item>
+<item>
+<link>
+http://needwant.com/p/im-moving-san-francisco-st-louis/
+</link>
+<description>
+&lt;div&gt;&lt;section class=&quot;post__body&quot;&gt;
+	  	&lt;p&gt;I love San Francisco. I moved here from the UK about 4 years ago to start my last company, &lt;a href=&quot;http://en.wikipedia.org/wiki/DailyBooth&quot;&gt;DailyBooth&lt;/a&gt;. It&amp;#x2019;s a wonderful city filled with interesting people doing amazing things. &amp;#xA0;It&amp;#x2019;s the city I grew up lusting over and when I moved here I wasn&amp;#x2019;t disappointed.&lt;/p&gt;
+&lt;p&gt;If you&amp;#x2019;re doing a startup and planning on raising money there&amp;#x2019;s probably no better place in the world to do it. However&amp;#x2026;.&lt;/p&gt;
+&lt;blockquote class=&quot;pullquote&quot;&gt;If you&amp;#x2019;re trying to bootstrap, being based in San Francisco is &lt;strong&gt;awful&lt;/strong&gt;.&amp;#xA0;&lt;/blockquote&gt;
+&lt;p&gt;It&amp;#x2019;s no secret that rent in San Francisco is starting to get a little crazy. After living here for a while you start to lose context. Let me give you some.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The average price of a 1 bedroom apartment in San Francisco is now $2,800 a month.&lt;/strong&gt; This is for a pretty standard, unexciting, ~700 SQFT space. That&amp;#x2019;s $33,600 per year. The average yearly income in 2012 was $44,321. I&amp;#x2019;ve been here for about 4 years. 4 *&amp;#xA0;$33,600 = $134,400.&lt;/p&gt;
+&lt;h2&gt;Enter St Louis.&lt;/h2&gt;
+&lt;p&gt;The average rental price for a 1 bedroom apartment in St Louis is $720. 3.8x cheaper than San Francisco. Moving to St Louis is going to almost&amp;#xA0;quadruple my company&amp;#x2019;s runway. You can&amp;#xA0;&lt;em&gt;&lt;a href=&quot;http://www.trulia.com/property/3138286329-1601-Washington-Ave-Saint-Louis-MO-63103#photo-2&quot;&gt;buy&lt;/a&gt;&amp;#xA0;&lt;/em&gt;a really nice 1 bedroom apartment in downtown St Louis for less than renting in San Francisco for 4 years.&lt;/p&gt;
+&lt;h2&gt;Cheap cities are startup friendly&lt;/h2&gt;
+&lt;p&gt;The leading cause of startup death is running out of money. Moving to a cheap city and doubling (or more!) your company&amp;#x2019;s runway will more than likely vastly increase your chances of eventual success.&lt;/p&gt;
+&lt;h2&gt;There&amp;#x2019;s a tech scene here!&lt;/h2&gt;
+&lt;p&gt;Sure, it&amp;#x2019;s not quite on the same level as San Francisco but it&amp;#x2019;s something.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There&amp;#x2019;s this thing called &lt;a href=&quot;http://archgrants.org&quot;&gt;Arch Grants&lt;/a&gt; which aims to attract entrepreneurs by giving them $50,000 in equity free funding. &lt;a href=&quot;http://twitter.com/marshal&quot;&gt;Marshall&lt;/a&gt;&amp;#x2018;s last startup won one of these before being acquired. Applications are currently open for the next 20 grants!&lt;/li&gt;
+&lt;li&gt;There are over 75 startups in our building alone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Something to think about&lt;/h2&gt;
+&lt;p&gt;We&amp;#x2019;re an internet company. We don&amp;#x2019;t need to be tied to a specific location. Hiring remote and having a distributed work force is far cheaper than hiring locally and making everyone come into an office.&lt;/p&gt;
+&lt;p&gt;If you&amp;#x2019;re based in San Francisco (or any other big, expensive city) and thinking of bootstrapping a company there &lt;em&gt;are&lt;/em&gt; other options. I invite you to seriously consider St Louis. You&amp;#x2019;re even welcome to come and work out of our ($275 per month) office for a few days and we&amp;#x2019;ll show you around.&lt;/p&gt;
+
+&lt;h2&gt;You&amp;#x2019;re not giving up living in a cool city&lt;/h2&gt;
+&lt;p&gt;St. Louis isn&amp;#x2019;t &lt;em&gt;just&lt;/em&gt; ridiculously affordable, there&amp;#x2019;s also a lot to keep you entertained.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-239 media-239&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/IMG_4120-e1390325346878.jpg&quot;&gt;
+&lt;figcaption&gt;Need/Want HQ is located in the building on the far right&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;St. Louis is neighborhood-y.&lt;/strong&gt; We&amp;#x2019;ll be living and working downtown (pictured), but St. Louis boasts 78 other neighborhoods, each with their own flair.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/FoxTheater-e1390325410137.jpg&quot;&gt;&lt;br&gt;
+&lt;figcaption&gt;The Fabulous Fox Theatre.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;b&gt;Big money is going into the city. All the time&lt;/b&gt;. In only the past few years, billions of dollars have gone into renewing some of the City&amp;#x2019;s most recognizable institutions. The &lt;a href=&quot;http://www.peabodyoperahouse.com/about-us/construction&quot; target=&quot;_blank&quot;&gt;Peabody Opera House&lt;/a&gt;, &lt;a href=&quot;http://central.slpl.org/index.html&quot; target=&quot;_blank&quot;&gt;Downtown Central Library&lt;/a&gt;, the &lt;a href=&quot;http://www.slam.org/&quot; target=&quot;_blank&quot;&gt;St. Louis Art Museum&lt;/a&gt;&amp;#xA0; &amp;#x2014;&amp;#xA0;up next, even the &lt;a href=&quot;http://www.cityarchriver.org/&quot; target=&quot;_blank&quot;&gt;Arch&lt;/a&gt;&amp;#xA0;itself &amp;#x2014;&amp;#xA0;have all gotten updates and restorations in the past couple of years alone.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-219 media-219&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-231 media-231&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-231 media-231&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Olio.jpg&quot;&gt;&lt;br&gt;
+&lt;figcaption&gt;Olio&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;b&gt;St. Louis repurposes things well&lt;/b&gt;. The exquisite restaurant and cocktail house&amp;#xA0;&lt;a href=&quot;http://oliostl.com/&quot; target=&quot;_blank&quot;&gt;Olio&lt;/a&gt;&amp;#xA0;came out of an old gas station. You can take in your new movie releases on a couch in the&amp;#xA0;&lt;a href=&quot;http://www.builtstlouis.net/moolah01.html%5D&quot; target=&quot;_blank&quot;&gt;Moolah Theater&lt;/a&gt;, an old Masonic Temple that also has a bowling alley in its basement . World-class climbing can be found at&amp;#xA0;&lt;a href=&quot;http://climbsoill.com&quot; target=&quot;_blank&quot;&gt;Climb So iLL&lt;/a&gt;, which used to be a hospital power plant building.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Moolah-SoiLL-Split.png&quot;&gt;
+&lt;figcaption&gt;Moolah Theater / Climb So ILL&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-233 media-233&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/UCBC.jpg&quot;&gt;
+&lt;figcaption&gt;Urban Chestnut &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-233 media-233&quot;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;St. Louis has a great culinary scene.&lt;/strong&gt; After a flourishing of microbreweries like Urban Chestnut, when the city&amp;#x2019;s original beer entrepreneurs got bought out, food trucks caught on, and then coffee roasters started a scene (including one of &lt;a href=&quot;http://twitter.com/jack&quot;&gt;@jack&amp;#x2019;s&lt;/a&gt; favorite spots, Sump Coffee).&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-232 media-232&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Sump.jpg&quot;&gt;&lt;br&gt;
+&lt;figcaption&gt;Sump Coffee&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-221 media-221&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/CAM-e1390324939393.jpg&quot;&gt;&lt;br&gt;
+&lt;figcaption&gt;The Contemporary Art Museum&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Most attractions are free.&lt;/strong&gt; From spring to fall, weekends are chock-full of free festivals. Plus, its top-ranked Zoo, Science Center, History Museum, and all of the art museums are free to the public. The attractions that aren&amp;#x2019;t free &amp;#x2014; like the world-class Missouri Botanical Garden, the seriously unbeatable City Museum, or even the surprisingly relevant World Chess Hall of Fame &amp;#x2014; are more than worth the cover charge. And you never have to wait in line.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-240 media-240&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/MoBot-e1390324625681.jpg&quot;&gt;
+&lt;figcaption&gt;Missouri Botanical Garden&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;align-none&quot; id=&quot;post-223 media-223&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/city-museum.jpg&quot;&gt;
+&lt;figcaption&gt;City Museum, 4 blocks from our office&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&amp;#xA0;Special thanks to &lt;a href=&quot;http://twitter.com/marshal&quot;&gt;Marshall&lt;/a&gt;&amp;#x2018;s girlfriend, &lt;a href=&quot;http://twitter.com/tarapham&quot;&gt;Tara Pham&lt;/a&gt; for the St. Louis tips.&lt;/p&gt;
+&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you found this post interesting you can follow me on twitter &lt;a href=&quot;http://twitter.com/jon&quot;&gt;@jon&lt;/a&gt; and Need/Want &lt;a href=&quot;http://twitter.com/needwantinc&quot;&gt;@NeedWantInc&lt;/a&gt;.&lt;/p&gt;
+	  &lt;/section&gt;
+	&lt;/div&gt;
+</description>
+<title>
+Why I'm Moving My Business From San Francisco To St. Louis
+</title>
+</item>
+<item>
+<author>
+Rachel Williams
+</author>
+<link>
+http://yaledailynews.com/weekend/2014/01/24/we-just-cant-have-you-here/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
+        
+  		&lt;p&gt;&amp;#x201C;I&amp;#x2019;m Rachel,&amp;#x201D; I say to the man who is here to evaluate me, extending my hand, trying to put on my best sane face. Problem is, no one ever told me what that looks like.&lt;/p&gt;
+&lt;p&gt;He eyes me for a moment, then takes my hand.&lt;/p&gt;
+&lt;p&gt;I run him through the story, trying to emphasize my efforts to be honest and to get help.&lt;/p&gt;
+&lt;p&gt;I say, &amp;#x201C;So as soon as I cut, I texted my FroCo for support.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;But you admit that you willfully harmed yourself?&amp;#x201D; he says, like he&amp;#x2019;s just won something.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Well &amp;#x2026; yes.&amp;#x201D; Because obviously I admit it. I&amp;#x2019;m not a liar. If I were a liar, I would never have gotten myself into this mess. Fuck me for not being a liar.&lt;/p&gt;
+&lt;p&gt;And so, when I say &amp;#x201C;yes&amp;#x201D; to the &amp;#x2018;I admit cutting myself&amp;#x2019; part, he nods his head and closes his eyes like someone has just given him a bonbon.&lt;/p&gt;
+&lt;p&gt;I tell him when I come back to Yale, I will get a therapist on campus and keep working with the one I have at home. I will stop cutting.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Well the question may not be what will you do at Yale, but if you are returning to Yale. It may well be safer for you to go home. We&amp;#x2019;re not so concerned about your studies as we are your safety,&amp;#x201D; he says.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;I&amp;#x2019;m sorry,&amp;#x201D; I say. &amp;#x201C;What makes you think I will be safer away from school, away from my support system?&amp;#x201D; School was my stimulation, my passion and my reason for getting up in the morning.&lt;/p&gt;
+&lt;p&gt;&amp;#x201C;Well the truth is,&amp;#x201D; he says, &amp;#x201C;we don&amp;#x2019;t necessarily think you&amp;#x2019;ll be safer at home. But we just can&amp;#x2019;t have you here.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;* * *&lt;/p&gt;
+&lt;p&gt;On the night of Jan. 27, 2013, I slashed open my right thigh six times with a Swiss Army knife. I then spent four hours thinking about how good it would feel to jump off the fifth floor of Vanderbilt Hall. On Jan. 28, I put on a pretty dress and went to class. Before lunch, my cuts had stained it brown.&lt;/p&gt;
+&lt;p&gt;That night I texted my Freshman Counselor to tell her what had happened, just as I had done all the other times I felt suicidal and had cut myself. When I went to her suite, I showed her the gashes.&lt;/p&gt;
+&lt;p&gt;We went to Yale Health Urgent Care, at around 11:00 p.m., where a doctor bandaged my leg. A psychiatrist appeared. I told her that I had experienced suicidal thoughts the night before, but that the cuts had not been a suicide attempt. I told them that I was no longer suicidal.&lt;/p&gt;
+&lt;p&gt;At midnight, I was strapped to a stretcher under the ashen ceiling of an ambulance, on my way to Yale-New Haven Hospital. There I was taken to the locked ward of the ER &amp;#x2014; guarded by officers with guns &amp;#x2014; stripped of all my belongings, including my pants (they had a drawstring), and shunted into a cubicle containing nothing but a bed. I was here for my own good, they told me.&lt;/p&gt;
+&lt;p&gt;For 24 hours I had nothing to do but listen to the rattling gasping sound coming from the person two beds down, and to a schizophrenic person declare, every hour or so, that he had soiled himself. I was asked to recite the presidents of the United States, in reverse order, as part of a psychiatric evaluation. For more than a day I was not permitted to make a phone call. For more than a day no one had any idea where I was &amp;#x2014; not even my parents.&lt;/p&gt;
+&lt;p&gt;When a bed opened up in the actual Yale-New Haven Psychiatric Hospital, I was transported, again in an ambulance, and introduced to the place I would spend the next week of my life. Upon arrival, I was taken into a small room with two female staff members, forced to take off my underwear, spread my legs, then hop up and down to make sure nothing was hidden &amp;#x201C;up there.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;My Freshman Counselor had brought me some extra clothes and a course packet for my travel writing class, so that I would have something to read. The course packet was confiscated. Why? Because I might cut myself with the plastic binding &amp;#x2014; you know &amp;#x2014; the kind you get from Tyco. I might commit suicide with that, they said. &amp;#x201C;You&amp;#x2019;re a cutter,&amp;#x201D; they told me.&lt;/p&gt;
+&lt;p&gt;For a week, I was not allowed to set foot outside. I was not allowed to stretch my hamstrings or calves or any other body part. I was not allowed to pace my confines. I was not allowed to drink caffeine. I was not permitted to take ibuprofen for my caffeine withdrawal headache. I did not get to take a shower until my third day. Phone usage was restricted and phone calls were closely monitored. I was threatened, by a nurse, with the possibility of having my wrists and ankles tied to my bed, and witnessed this threat be carried out on others. Whoever built the hospital had termed this ward, &amp;#x201C;Liberty Village.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;There was little &amp;#x201C;treatment&amp;#x201D; in the hospital. Mostly, we watched television, played Pictionary and Connect Four and sat. I was interviewed by various clinicians a few times a day; I saw my assigned psychiatrist only three times, for half an hour or so, over the course of seven days. This limited treatment was fairly standard for all patients, but it soon became clear that it would have little effect on my situation.&lt;/p&gt;
+&lt;p&gt;The milieu counselors, nurses and doctors in Yale-New Haven Psychiatric Hospital have absolutely no input when it comes to deciding who gets to stay at Yale and who is forced to leave. In talking to the nurses, doctors and fellow Yale students I encountered in the hospital, I understood that job to belong to Dr. Eric Millman and to chief of Yale Psychiatry, Dr. Lorraine Siggins &amp;#x2014; two people who work for the University, rather than the hospital.&lt;/p&gt;
+&lt;p&gt;I have shared with you my memorable exchange with a senior psychiatrist at Yale Mental Health who came to evaluate me. It was this exchange that led me to keep an extensive and thorough journal during my time in the hospital.&lt;/p&gt;
+&lt;p&gt;But Dr. Siggins is the one who makes a ruling: Does Johnny stay at Yale or does he go? And in my talks, a consensus emerged: Dr. Siggins does not always &amp;#x2014; and by some accounts, rarely &amp;#x2014; make contact with the student in question. (A Yale senior who was in the hospital with me was not granted a meeting with Dr. Siggins but was still forced to leave Yale.) Neither the staff members I spoke with nor a fellow Yalie who had prior experience in the hospital knew of any Yale student admitted to the hospital who had been allowed to stay at Yale.&lt;/p&gt;
+&lt;p&gt;My interview left me terrified of the possibility of leaving school. I called my parents, and they promptly put themselves on Dr. Siggins&amp;#x2019; radar, meeting with her twice and securing me a personal interview. All I remember was that my mind was totally blank when I spoke to her, because I was so focused on making her believe that I was &amp;#x201C;okay.&amp;#x201D; This, of course, is totally futile when you&amp;#x2019;re sitting on a cot in a mental hospital.&lt;/p&gt;
+&lt;p&gt;She called me three days later to tell me that I would have to go home. That meant that I was forced to formally withdraw from the college, with no guarantee of return. As soon as her decision came down, I was eligible for release into my parents&amp;#x2019; custody. Upon my release from the hospital (also not a function of my recovery &amp;#x2014; but as a result of my expulsion from the College I was even more depressed when I left than when I was admitted, my Yale ID was confiscated, as was my room key. I was given one evening to pack up my entire life.&lt;/p&gt;
+&lt;p&gt;My college dean told me I was not even allowed to spend the night in my room in Vanderbilt Hall. I fell asleep on the futon in my suite&amp;#x2019;s common room at four a.m., breaking the rules, but exhausted and unable to continue putting my things in boxes, dismantling the reality of my college life. I had a chance to say goodbye to a few friends &amp;#x2014; most of whom I would not hear from during my time away. 18 hours after I walked out of the hospital doors, I was on a plane, headed back to North Carolina in a storm of tears.&lt;/p&gt;
+&lt;p&gt;I did what they said was necessary to be a candidate for readmission: therapy, more therapy, two college courses, more therapy. And I healed. Mostly.&lt;/p&gt;
+&lt;p&gt;I filled out the paper application for readmission: the usual demographic crap, a three-page personal statement, a transcript of my summer classes, two letters of recommendation, a profile from a therapist and a check for $50. I flew to New Haven for my three interviews &amp;#x2014; with the dean of my residential college, Dean Pamela George (chair of readmission) and Dr. Siggins.&lt;/p&gt;
+&lt;p&gt;As a side note, I might mention that Dr. Siggins was 45 minutes late to my interview. Dean George called me an hour before the scheduled time to cancel, forcing me to interview the following day, two hours before my return flight took off. I answered every question with as much positivity as I could sell. I said: I do not cut, I do not think of killing myself. I am great. Two weeks later, I was readmitted.&lt;/p&gt;
+&lt;p&gt;Every morning of my year away from Yale, I woke to the sight of the &amp;#x201C;Yale&amp;#x201D; pennant on my bedroom wall &amp;#x2014; the one they send to accepted freshmen in the big, glorious &amp;#x201C;Welcome to Yale&amp;#x201D; packet. &amp;#x201C;You&amp;#x2019;re in!&amp;#x201D; it says. &amp;#x201C;You&amp;#x2019;re a treasured asset to our University!&amp;#x201D; it says. &amp;#x201C;Come to Bulldog Days and feel the love because we love you and we care about you and we don&amp;#x2019;t want you to go to any other school because you&amp;#x2019;re the shit!&amp;#x201D; it says.&lt;/p&gt;
+&lt;p&gt;Thinking back to that welcome packet, there is a conspicuous omission: *We love you and want you and will provide for you and protect you, as long as you don&amp;#x2019;t get sick.*&lt;/p&gt;
+&lt;p&gt;* * *&lt;/p&gt;
+&lt;p&gt;I return to a different Yale, though it is I who have changed. After a year spent focusing solely on my health and well-being, I find myself, though not perfectly balanced, resting closer to my ideal center. And, after a year of watching and analyzing every one of my inner ticks, I see external things that were invisible to me before.&lt;/p&gt;
+&lt;p&gt;I see that Yale is a fundamentally unhealthy place in one important way. The problem is, everyone is &amp;#x201C;okay.&amp;#x201D; I have known friends who have suffered the deaths of siblings, who have been victims of sexual assault or who have fought life-threatening illness, all while navigating their sexuality, while taking five-and-a-half credits, while chairing more organizations and running to more meetings than they can keep track of. I have known friends to do all of this and still profess, at every opportunity, to be &amp;#x201C;okay,&amp;#x201D; &amp;#x201C;fine,&amp;#x201D; &amp;#x201C;great.&amp;#x201D;&lt;/p&gt;
+&lt;p&gt;To say something else, to be &amp;#x2014; in our own minds and in the minds of others &amp;#x2014; something else, is for some reason not acceptable at Yale. None of us are completely okay. But the pressure to conform to being perfectly functional and happy is a burden that we should neither want nor bear.&lt;/p&gt;
+&lt;p&gt;Where does it come from? For most students at Yale, I think the pressure is subconscious, upheld through day-to-day conversation: My classes are amazing. My extracurriculars are dope. My internship this summer is baller. Life is awesome. Are you awesome? No one wants to deviate.&lt;/p&gt;
+&lt;p&gt;But I think the source is not, in fact, the students. Those of us who have admitted, at some point or another, that we are legitimately not okay, have learned that there are real and devastating consequences of telling the truth. Because Yale does not want people who are not okay. Yale does not want people who are struggling, who are fighting. Yale, out of concern for its own image, wants them to leave. And Yale makes them.&lt;/p&gt;
+&lt;p&gt;With this, I refuse to be okay.&lt;/p&gt;
+
+			&lt;/div&gt;
+&lt;/div&gt;
+</description>
+<title>
+“We Just Can’t Have You Here”
+</title>
+</item>
+<item>
+<link>
+http://bropages.org
+</link>
+<description>
+&lt;div&gt;&lt;p id=&quot;install&quot; class=&quot;well&quot;&gt;&lt;h2&gt;# install bro now&lt;br&gt;$ gem install bropages&lt;/h2&gt;&lt;/p&gt;
+
+&lt;div id=&quot;content&quot;&gt;
+	&lt;p&gt;
+	bro pages are a highly readable supplement to &lt;a href=&quot;https://en.wikipedia.org/wiki/Man_page&quot; target=&quot;blank&quot;&gt;man pages&lt;/a&gt;&lt;br&gt;
+	bro pages show concise, common-case examples for Unix commands
+	&lt;/p&gt;
+
+	&lt;h2&gt;example&lt;/h2&gt;
+	&lt;p&gt;
+	 If you type...
+	&lt;/p&gt;
+	&lt;pre&gt;$ bro curl&lt;/pre&gt;
+	&lt;p&gt;...then you get&lt;/p&gt;
+	&lt;pre&gt;
+&lt;span class=&quot;status&quot;&gt;3 entries for curl&lt;/span&gt;
+
+
+&lt;span class=&quot;important&quot;&gt;curl http://bropages.org&lt;/span&gt;
+
+        &lt;span class=&quot;thanks&quot;&gt;bro thanks&lt;/span&gt;      to upvote (2)
+        &lt;span class=&quot;no&quot;&gt;bro ...no&lt;/span&gt;       to downvote (0)
+
+...............................................
+
+
+&lt;span class=&quot;important&quot;&gt;curl -o myfile.html http://bropages.org&lt;/span&gt;
+
+        &lt;span class=&quot;thanks&quot;&gt;bro thanks 2&lt;/span&gt;      to upvote (2)
+        &lt;span class=&quot;no&quot;&gt;bro ...no 2&lt;/span&gt;       to downvote (0)
+
+...............................................
+
+
+&lt;span class=&quot;important&quot;&gt;curl --header &quot;X-BeerIsInteresting: 1&quot; www.bropages.org&lt;/span&gt;
+
+        &lt;span class=&quot;thanks&quot;&gt;bro thanks 3&lt;/span&gt;      to upvote (1)
+        &lt;span class=&quot;no&quot;&gt;bro ...no 3&lt;/span&gt;       to downvote (0)
+&lt;/pre&gt;
+
+	&lt;h2&gt;installing bro&lt;/h2&gt;
+	&lt;p&gt;
+		The bro &lt;abbr title=&quot;Command Line Interface&quot;&gt;CLI&lt;/abbr&gt; is a &lt;a href=&quot;http://rubygems.org&quot;&gt;Ruby Gem&lt;/a&gt; and can be installed as follows
+	&lt;/p&gt;
+	&lt;p class=&quot;well&quot;&gt;&lt;h2&gt;gem install bropages&lt;/h2&gt;&lt;/p&gt;
+	&lt;p&gt;
+		bro is meant to work out of the box for any machine running Ruby 1.8.3+
+	&lt;/p&gt;
+
+	&lt;h2&gt;community&lt;/h2&gt;
+	&lt;p&gt;
+	bro sources its entries from the community, &lt;a href=&quot;http://bropages.org&quot;&gt;bropages.org&lt;/a&gt; hosts all the entries&lt;br&gt;
+	Entries can be voted up or down, and the best entries are what people see first when they use the bro command line interface
+	&lt;br&gt;
+	For example, here are the top entries on bropages.org:
+	&lt;/p&gt;&lt;table class=&quot;table&quot;&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Command&lt;/th&gt;
+				&lt;th&gt;Entry&lt;/th&gt;
+				&lt;th&gt;Votes&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;command&quot;&gt;git log&lt;/td&gt;
+			&lt;td class=&quot;msgbody&quot;&gt;&lt;pre&gt;# The ultimate graph display for your git log
+git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all&lt;/pre&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;p class=&quot;vote&quot;&gt;&lt;span class=&quot;upvote&quot;&gt;4 &lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&amp;#xA0;&amp;#xA0;&lt;span class=&quot;downvote&quot;&gt;0 &lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;command&quot;&gt;curl&lt;/td&gt;
+			&lt;td class=&quot;msgbody&quot;&gt;&lt;pre&gt;# get the contents of a web page
+curl http://bropages.org&lt;/pre&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;p class=&quot;vote&quot;&gt;&lt;span class=&quot;upvote&quot;&gt;3 &lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&amp;#xA0;&amp;#xA0;&lt;span class=&quot;downvote&quot;&gt;0 &lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;command&quot;&gt;curl&lt;/td&gt;
+			&lt;td class=&quot;msgbody&quot;&gt;&lt;pre&gt;# download a file and write it to another file called myfile.html
+curl -o myfile.html http://bropages.org&lt;/pre&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;p class=&quot;vote&quot;&gt;&lt;span class=&quot;upvote&quot;&gt;2 &lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&amp;#xA0;&amp;#xA0;&lt;span class=&quot;downvote&quot;&gt;0 &lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;command&quot;&gt;find&lt;/td&gt;
+			&lt;td class=&quot;msgbody&quot;&gt;&lt;pre&gt;# Searches through my user's &quot;home&quot; directory recursively for the file &quot;hashClass.java&quot;, throwing out error output along the way.  
+# Passes the output to grep for case insensitive search.
+find ~/ 2&amp;gt;/dev/null | grep -i &quot;hashclass.java&quot;&lt;/pre&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;p class=&quot;vote&quot;&gt;&lt;span class=&quot;upvote&quot;&gt;2 &lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&amp;#xA0;&amp;#xA0;&lt;span class=&quot;downvote&quot;&gt;0 &lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;command&quot;&gt;bro&lt;/td&gt;
+			&lt;td class=&quot;msgbody&quot;&gt;&lt;pre&gt;# lookup an entry for the command 'bro' with bro
+bro bro&lt;/pre&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;p class=&quot;vote&quot;&gt;&lt;span class=&quot;upvote&quot;&gt;2 &lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&amp;#xA0;&amp;#xA0;&lt;span class=&quot;downvote&quot;&gt;0 &lt;i class=&quot;fa fa-thumbs-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+	&lt;br&gt;
+	&lt;br&gt;
+	&lt;a href=&quot;http://bropages.org/browse&quot;&gt;&lt;p class=&quot;btn btn-large btn-inverse&quot;&gt;Browse all&amp;#xA0;&amp;#xA0;&lt;i class=&quot;fa fa-share&quot;&gt;&lt;/i&gt;&lt;/p&gt;&lt;/a&gt;
+	
+&lt;/div&gt;
+
+
+
+&lt;/div&gt;
+</description>
+<title>
+&quot;bro&quot; pages. like &quot;man&quot; pages, but with examples only
+</title>
+</item>
+<item>
+<author>
+PAUL KALANITHI
+</author>
+<link>
+http://www.nytimes.com/2014/01/25/opinion/sunday/how-long-have-i-got-left.html?smid=tw-share&_r=0
+</link>
+<description>
+&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
+
+    
+
+    
+    
+
+                
+    &lt;p class=&quot;story-body-text story-content&quot;&gt;AS soon as the CT scan was done, I began reviewing the images. The diagnosis was immediate: Masses matting the lungs and deforming the spine. Cancer. In my neurosurgical training, I had reviewed hundreds of scans for fellow doctors to see if surgery offered any hope. I&amp;#x2019;d scribble in the chart &amp;#x201C;Widely metastatic disease &amp;#x2014; no role for surgery,&amp;#x201D; and move on. But this scan was different: It was my own.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I have sat with countless patients and families to discuss grim prognoses: It&amp;#x2019;s one of the most important jobs physicians have. It&amp;#x2019;s easier when the patient is 94, in the last stages of dementia and has a severe brain bleed. For young people like me &amp;#x2014; I am 36 &amp;#x2014; given a diagnosis of cancer, there aren&amp;#x2019;t many words. My standard pieces include &amp;#x201C;it&amp;#x2019;s a marathon, not a sprint, so get your daily rest&amp;#x201D; and &amp;#x201C;illness can drive a family apart or bring it together &amp;#x2014; be aware of each other&amp;#x2019;s needs and find extra support.&amp;#x201D; &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I learned a few basic rules. Be honest about the prognosis but always leave some room for hope. Be vague but accurate: &amp;#x201C;days to a few weeks,&amp;#x201D; &amp;#x201C;weeks to a few months,&amp;#x201D; &amp;#x201C;months to a few years,&amp;#x201D; &amp;#x201C;a few years to a decade or more.&amp;#x201D; We never cite detailed statistics, and usually advise against Googling survival numbers, assuming the average patient doesn&amp;#x2019;t possess a nuanced understanding of statistics. &lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-vertical&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
+            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot;&gt;
+            &lt;meta value=&quot;434&quot;&gt;
+            &lt;meta value=&quot;427&quot;&gt;
+    &lt;/div&gt;
+        &lt;figcaption class=&quot;caption&quot;&gt; &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;People react differently to hearing &amp;#x201C;Procedure X has a 70 percent chance of survival&amp;#x201D; and &amp;#x201C;Procedure Y has a 30 percent chance of death.&amp;#x201D; Phrased that way, people flock to Procedure X, even though the numbers are the same. When a close friend developed pancreatic cancer, I became the medical maven to a group of people who were sophisticated statisticians. I still dissuaded them from looking up the statistics, saying five-year survival curves are at least five years out of date. Somehow I felt that the numbers alone were too dry, or that a physician&amp;#x2019;s daily experience with illness was needed for context. Mostly, I felt that impulse: Keep a measure of hope. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;These survival curves, called Kaplan-Meier curves, are one way we measure progress in cancer treatment, plotting the number of patients surviving over time. For some diseases, the line looks like an airplane gently beginning its descent; for others, like a dive bomber. Physicians think a lot about these curves, their shape, and what they mean. In brain-cancer research, for example, while the numbers for average survival time haven&amp;#x2019;t changed much, there&amp;#x2019;s an increasingly long tail on the curve, indicating a few patients are living for years. The problem is that you can&amp;#x2019;t tell an individual patient where she is on the curve. It&amp;#x2019;s impossible, irresponsible even, to be more precise than you can be accurate.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One would think, then, that when my oncologist sat by my bedside to meet me, I would not immediately demand information on survival statistics. But now that I had traversed the line from doctor to patient, I had the same yearning for the numbers all patients ask for. I hoped she would see me as someone who both understood statistics and the medical reality of illness, that she would give me certainty, the straight dope. I could take it. She flatly refused: &amp;#x201C;No. Absolutely not.&amp;#x201D; She knew very well I could &amp;#x2014; and did &amp;#x2014; look up all the research on the topic. But lung cancer wasn&amp;#x2019;t my specialty, and she was a world expert. At each appointment, a wrestling match began, and she always avoided being pinned down to any sort of number. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Now, instead of wondering why some patients persist in asking statistics questions, I began to wonder why physicians obfuscate when they have so much knowledge and experience. Initially when I saw my CT scan, I figured I had only a few months to live. The scan looked bad. I looked bad. I&amp;#x2019;d lost 30 pounds, developed excruciating back pain and felt more fatigued every day. My tests revealed severely low protein levels and low blood counts consistent with the body overwhelmed, failing in its basic drive to sustain itself. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;For a few months, I&amp;#x2019;d suspected I had cancer. I had seen a lot of young patients with cancer. So I wasn&amp;#x2019;t taken aback. In fact, there was a certain relief. The next steps were clear: Prepare to die. Cry. Tell my wife that she should remarry, and refinance the mortgage. Write overdue letters to dear friends. Yes, there were lots of things I had meant to do in life, but sometimes this happens: Nothing could be more obvious when your day&amp;#x2019;s work includes treating head trauma and brain cancer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But on my first visit with my oncologist, she mentioned my going back to work someday. Wasn&amp;#x2019;t I a ghost? No. But then how long did I have? Silence.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Of course, she could not stop my intense reading. Poring over studies, I kept trying to find the one that would tell me when my number would be up. The large general studies said that between 70 and 80 percent of lung cancer patients would die within two years. They did not allow for much hope. But then again, most of those patients were older and heavy smokers. Where was the study of nonsmoking 36-year-old neurosurgeons? Maybe my youth and health mattered? Or maybe my disease was found so late, had spread so far, and I was already so far gone that I was worse off than those 65-year-old smokers.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Many friends and family members provided anecdotes along the lines of my-friend&amp;#x2019;s-friend&amp;#x2019;s-mom&amp;#x2019;s-friend or my-uncle&amp;#x2019;s-barber&amp;#x2019;s-son&amp;#x2019;s-tennis-partner has this same kind of lung cancer and has been living for 10 years. Initially I wondered if all the stories referred to the same person, connected through the proverbial six degrees. I disregarded them as wishful thinking, baseless delusion. Eventually, though, enough of those stories seeped in through the cracks of my studied realism. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;And then my health began to improve, thanks to a pill that targets a specific genetic mutation tied to my cancer. I began to walk without a cane and to say things like, &amp;#x201C;Well, it&amp;#x2019;s pretty unlikely that I&amp;#x2019;ll be lucky enough to live for a decade, but it&amp;#x2019;s possible.&amp;#x201D; A tiny drop of hope.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In a way, though, the certainty of death was easier than this uncertain life. Didn&amp;#x2019;t those in purgatory prefer to go to hell, and just be done with it? Was I supposed to be making funeral arrangements? Devoting myself to my wife, my parents, my brothers, my friends, my adorable niece? Writing the book I had always wanted to write? Or was I supposed to go back to negotiating my multiyear job offers? &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The path forward would seem obvious, if only I knew how many months or years I had left. Tell me three months, I&amp;#x2019;d just spend time with family. Tell me one year, I&amp;#x2019;d have a plan (write that book). Give me 10 years, I&amp;#x2019;d get back to treating diseases. The pedestrian truth that you live one day at a time didn&amp;#x2019;t help: What was I supposed to do with that day? My oncologist would say only: &amp;#x201C;I can&amp;#x2019;t tell you a time. You&amp;#x2019;ve got to find what matters most to you.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I began to realize that coming face to face with my own mortality, in a sense, had changed both nothing and everything. Before my cancer was diagnosed, I knew that someday I would die, but I didn&amp;#x2019;t know when. After the diagnosis, I knew that someday I would die, but I didn&amp;#x2019;t know when. But now I knew it acutely. The problem wasn&amp;#x2019;t really a scientific one. The fact of death is unsettling. Yet there is no other way to live. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The reason doctors don&amp;#x2019;t give patients specific prognoses is not merely because they cannot. Certainly, if a patient&amp;#x2019;s expectations are way out of the bounds of probability &amp;#x2014; someone expecting to live to 130, or someone thinking his benign skin spots are signs of impending death &amp;#x2014; doctors are entrusted to bring that person&amp;#x2019;s expectations into the realm of reasonable possibility. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the range of what is reasonably possible is just so wide. Based on today&amp;#x2019;s therapies, I might die within two years, or I might make it to 10. If you add in the uncertainty based on new therapies available in two or three years, that range may be completely different. Faced with mortality, scientific knowledge can provide only an ounce of certainty: Yes, you will die. But one wants a full pound of certainty, and that is not on offer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;What patients seek is not scientific knowledge doctors hide, but existential authenticity each must find on her own. Getting too deep into statistics is like trying to quench a thirst with salty water. The angst of facing mortality has no remedy in probability. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I remember the moment when my overwhelming uneasiness yielded. Seven words from Samuel Beckett, a writer I&amp;#x2019;ve not even read that well, learned long ago as an undergraduate, began to repeat in my head, and the seemingly impassable sea of uncertainty parted: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; I took a step forward, repeating the phrase over and over: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; And then, at some point, I was through. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I am now almost exactly eight months from my diagnosis. My strength has recovered substantially. In treatment, the cancer is retreating. I have gradually returned to work. I&amp;#x2019;m knocking the dust off scientific manuscripts. I&amp;#x2019;m writing more, seeing more, feeling more. Every morning at 5:30, as the alarm clock goes off, and my dead body awakes, my wife asleep next to me, I think again to myself: &amp;#x201C;I can&amp;#x2019;t go on.&amp;#x201D; And a minute later, I am in my scrubs, heading to the operating room, alive: &amp;#x201C;I&amp;#x2019;ll go on.&amp;#x201D; &lt;/p&gt;
+                &lt;footer class=&quot;story-footer story-content&quot;&gt;
+        
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;/div&gt;
+</description>
+<title>
+How Long Have I Got Left?
 </title>
 </item>
 </channel>
