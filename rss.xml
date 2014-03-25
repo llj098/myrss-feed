@@ -14,175 +14,563 @@ myread
 myread
 </description>
 <item>
+<author>
+PAUL KALANITHI
+</author>
 <link>
-http://www.pbrt.org/
+http://www.nytimes.com/2014/01/25/opinion/sunday/how-long-have-i-got-left.html?smid=tw-share&_r=0
 </link>
 <description>
-&lt;div&gt;&lt;td width=&quot;5&quot;&gt;&amp;#xA0;&lt;/td&gt;
-            &lt;td&gt;&lt;p class=&quot;style5&quot;&gt;From movies to video games, computer-rendered images are pervasive today. Physically Based 
-              Rendering introduces the concepts and theory of photorealistic rendering hand in hand with the 
-              source code for a sophisticated renderer. By coupling the discussion of rendering algorithms with 
-              their implementations, Matt Pharr and Greg Humphreys are able to reveal many of the details and 
-              subtleties of these algorithms. But this book goes further; it also describes the design strategies 
-              involved with building real systems&amp;#x2014;there is much more to writing a good renderer than stringing 
-              together a set of fast algorithms. For example, techniques for high-quality antialiasing must be 
-              considered from the start, as they have implications throughout the system. The rendering system 
-              described in this book is itself highly readable, written in a style called literate programming that 
-              mixes text describing the system with the code that implements it. Literate programming gives a 
-              gentle introduction to working with programs of this size. This lucid pairing of text and code offers 
-              the most complete and in-depth book available for understanding, designing, and building 
-              physically realistic rendering systems.
-              
-              &lt;/p&gt;
-              &lt;p class=&quot;style5&quot;&gt;For a preview, you can download both Chapter 7, &quot;Sampling and Reconstruction&quot;, from the first 
-              edition of the book as well as Chapter 4, &quot;Primitives and Intersection Acceleration&quot; from the 
-              forthcoming second edition. &lt;/p&gt;&lt;/td&gt;
-            &lt;td&gt;&amp;#xA0;&lt;/td&gt;
-            &lt;/div&gt;
+&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
+
+    
+
+    
+    
+
+                
+    &lt;p class=&quot;story-body-text story-content&quot;&gt;AS soon as the CT scan was done, I began reviewing the images. The diagnosis was immediate: Masses matting the lungs and deforming the spine. Cancer. In my neurosurgical training, I had reviewed hundreds of scans for fellow doctors to see if surgery offered any hope. I&amp;#x2019;d scribble in the chart &amp;#x201C;Widely metastatic disease &amp;#x2014; no role for surgery,&amp;#x201D; and move on. But this scan was different: It was my own.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I have sat with countless patients and families to discuss grim prognoses: It&amp;#x2019;s one of the most important jobs physicians have. It&amp;#x2019;s easier when the patient is 94, in the last stages of dementia and has a severe brain bleed. For young people like me &amp;#x2014; I am 36 &amp;#x2014; given a diagnosis of cancer, there aren&amp;#x2019;t many words. My standard pieces include &amp;#x201C;it&amp;#x2019;s a marathon, not a sprint, so get your daily rest&amp;#x201D; and &amp;#x201C;illness can drive a family apart or bring it together &amp;#x2014; be aware of each other&amp;#x2019;s needs and find extra support.&amp;#x201D; &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I learned a few basic rules. Be honest about the prognosis but always leave some room for hope. Be vague but accurate: &amp;#x201C;days to a few weeks,&amp;#x201D; &amp;#x201C;weeks to a few months,&amp;#x201D; &amp;#x201C;months to a few years,&amp;#x201D; &amp;#x201C;a few years to a decade or more.&amp;#x201D; We never cite detailed statistics, and usually advise against Googling survival numbers, assuming the average patient doesn&amp;#x2019;t possess a nuanced understanding of statistics. &lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-vertical&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
+            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot;&gt;
+            &lt;meta value=&quot;434&quot;&gt;
+            &lt;meta value=&quot;427&quot;&gt;
+    &lt;/div&gt;
+        &lt;figcaption class=&quot;caption&quot;&gt; &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;p class=&quot;story-body-text story-content&quot;&gt;People react differently to hearing &amp;#x201C;Procedure X has a 70 percent chance of survival&amp;#x201D; and &amp;#x201C;Procedure Y has a 30 percent chance of death.&amp;#x201D; Phrased that way, people flock to Procedure X, even though the numbers are the same. When a close friend developed pancreatic cancer, I became the medical maven to a group of people who were sophisticated statisticians. I still dissuaded them from looking up the statistics, saying five-year survival curves are at least five years out of date. Somehow I felt that the numbers alone were too dry, or that a physician&amp;#x2019;s daily experience with illness was needed for context. Mostly, I felt that impulse: Keep a measure of hope. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;These survival curves, called Kaplan-Meier curves, are one way we measure progress in cancer treatment, plotting the number of patients surviving over time. For some diseases, the line looks like an airplane gently beginning its descent; for others, like a dive bomber. Physicians think a lot about these curves, their shape, and what they mean. In brain-cancer research, for example, while the numbers for average survival time haven&amp;#x2019;t changed much, there&amp;#x2019;s an increasingly long tail on the curve, indicating a few patients are living for years. The problem is that you can&amp;#x2019;t tell an individual patient where she is on the curve. It&amp;#x2019;s impossible, irresponsible even, to be more precise than you can be accurate.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One would think, then, that when my oncologist sat by my bedside to meet me, I would not immediately demand information on survival statistics. But now that I had traversed the line from doctor to patient, I had the same yearning for the numbers all patients ask for. I hoped she would see me as someone who both understood statistics and the medical reality of illness, that she would give me certainty, the straight dope. I could take it. She flatly refused: &amp;#x201C;No. Absolutely not.&amp;#x201D; She knew very well I could &amp;#x2014; and did &amp;#x2014; look up all the research on the topic. But lung cancer wasn&amp;#x2019;t my specialty, and she was a world expert. At each appointment, a wrestling match began, and she always avoided being pinned down to any sort of number. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Now, instead of wondering why some patients persist in asking statistics questions, I began to wonder why physicians obfuscate when they have so much knowledge and experience. Initially when I saw my CT scan, I figured I had only a few months to live. The scan looked bad. I looked bad. I&amp;#x2019;d lost 30 pounds, developed excruciating back pain and felt more fatigued every day. My tests revealed severely low protein levels and low blood counts consistent with the body overwhelmed, failing in its basic drive to sustain itself. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;For a few months, I&amp;#x2019;d suspected I had cancer. I had seen a lot of young patients with cancer. So I wasn&amp;#x2019;t taken aback. In fact, there was a certain relief. The next steps were clear: Prepare to die. Cry. Tell my wife that she should remarry, and refinance the mortgage. Write overdue letters to dear friends. Yes, there were lots of things I had meant to do in life, but sometimes this happens: Nothing could be more obvious when your day&amp;#x2019;s work includes treating head trauma and brain cancer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But on my first visit with my oncologist, she mentioned my going back to work someday. Wasn&amp;#x2019;t I a ghost? No. But then how long did I have? Silence.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Of course, she could not stop my intense reading. Poring over studies, I kept trying to find the one that would tell me when my number would be up. The large general studies said that between 70 and 80 percent of lung cancer patients would die within two years. They did not allow for much hope. But then again, most of those patients were older and heavy smokers. Where was the study of nonsmoking 36-year-old neurosurgeons? Maybe my youth and health mattered? Or maybe my disease was found so late, had spread so far, and I was already so far gone that I was worse off than those 65-year-old smokers.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Many friends and family members provided anecdotes along the lines of my-friend&amp;#x2019;s-friend&amp;#x2019;s-mom&amp;#x2019;s-friend or my-uncle&amp;#x2019;s-barber&amp;#x2019;s-son&amp;#x2019;s-tennis-partner has this same kind of lung cancer and has been living for 10 years. Initially I wondered if all the stories referred to the same person, connected through the proverbial six degrees. I disregarded them as wishful thinking, baseless delusion. Eventually, though, enough of those stories seeped in through the cracks of my studied realism. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;And then my health began to improve, thanks to a pill that targets a specific genetic mutation tied to my cancer. I began to walk without a cane and to say things like, &amp;#x201C;Well, it&amp;#x2019;s pretty unlikely that I&amp;#x2019;ll be lucky enough to live for a decade, but it&amp;#x2019;s possible.&amp;#x201D; A tiny drop of hope.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In a way, though, the certainty of death was easier than this uncertain life. Didn&amp;#x2019;t those in purgatory prefer to go to hell, and just be done with it? Was I supposed to be making funeral arrangements? Devoting myself to my wife, my parents, my brothers, my friends, my adorable niece? Writing the book I had always wanted to write? Or was I supposed to go back to negotiating my multiyear job offers? &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The path forward would seem obvious, if only I knew how many months or years I had left. Tell me three months, I&amp;#x2019;d just spend time with family. Tell me one year, I&amp;#x2019;d have a plan (write that book). Give me 10 years, I&amp;#x2019;d get back to treating diseases. The pedestrian truth that you live one day at a time didn&amp;#x2019;t help: What was I supposed to do with that day? My oncologist would say only: &amp;#x201C;I can&amp;#x2019;t tell you a time. You&amp;#x2019;ve got to find what matters most to you.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I began to realize that coming face to face with my own mortality, in a sense, had changed both nothing and everything. Before my cancer was diagnosed, I knew that someday I would die, but I didn&amp;#x2019;t know when. After the diagnosis, I knew that someday I would die, but I didn&amp;#x2019;t know when. But now I knew it acutely. The problem wasn&amp;#x2019;t really a scientific one. The fact of death is unsettling. Yet there is no other way to live. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The reason doctors don&amp;#x2019;t give patients specific prognoses is not merely because they cannot. Certainly, if a patient&amp;#x2019;s expectations are way out of the bounds of probability &amp;#x2014; someone expecting to live to 130, or someone thinking his benign skin spots are signs of impending death &amp;#x2014; doctors are entrusted to bring that person&amp;#x2019;s expectations into the realm of reasonable possibility. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the range of what is reasonably possible is just so wide. Based on today&amp;#x2019;s therapies, I might die within two years, or I might make it to 10. If you add in the uncertainty based on new therapies available in two or three years, that range may be completely different. Faced with mortality, scientific knowledge can provide only an ounce of certainty: Yes, you will die. But one wants a full pound of certainty, and that is not on offer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;What patients seek is not scientific knowledge doctors hide, but existential authenticity each must find on her own. Getting too deep into statistics is like trying to quench a thirst with salty water. The angst of facing mortality has no remedy in probability. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I remember the moment when my overwhelming uneasiness yielded. Seven words from Samuel Beckett, a writer I&amp;#x2019;ve not even read that well, learned long ago as an undergraduate, began to repeat in my head, and the seemingly impassable sea of uncertainty parted: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; I took a step forward, repeating the phrase over and over: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; And then, at some point, I was through. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I am now almost exactly eight months from my diagnosis. My strength has recovered substantially. In treatment, the cancer is retreating. I have gradually returned to work. I&amp;#x2019;m knocking the dust off scientific manuscripts. I&amp;#x2019;m writing more, seeing more, feeling more. Every morning at 5:30, as the alarm clock goes off, and my dead body awakes, my wife asleep next to me, I think again to myself: &amp;#x201C;I can&amp;#x2019;t go on.&amp;#x201D; And a minute later, I am in my scrubs, heading to the operating room, alive: &amp;#x201C;I&amp;#x2019;ll go on.&amp;#x201D; &lt;/p&gt;
+                &lt;footer class=&quot;story-footer story-content&quot;&gt;
+        
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;/div&gt;
 </description>
 <title>
-&quot;Physically Based Rendering&quot;, a book on computer-generated images, has won an Oscar for technical achievment, the first time it's ever been given to a book.
+How Long Have I Got Left?
 </title>
 </item>
 <item>
 <link>
-http://needwant.com/p/im-moving-san-francisco-st-louis/
+http://ipvm.com/updates/2416
 </link>
 <description>
-&lt;div&gt;&lt;section class=&quot;post__body&quot;&gt;
-	  	&lt;p&gt;I love San Francisco. I moved here from the UK about 4 years ago to start my last company, &lt;a href=&quot;http://en.wikipedia.org/wiki/DailyBooth&quot;&gt;DailyBooth&lt;/a&gt;. It&amp;#x2019;s a wonderful city filled with interesting people doing amazing things. &amp;#xA0;It&amp;#x2019;s the city I grew up lusting over and when I moved here I wasn&amp;#x2019;t disappointed.&lt;/p&gt;
-&lt;p&gt;If you&amp;#x2019;re doing a startup and planning on raising money there&amp;#x2019;s probably no better place in the world to do it. However&amp;#x2026;.&lt;/p&gt;
-&lt;blockquote class=&quot;pullquote&quot;&gt;If you&amp;#x2019;re trying to bootstrap, being based in San Francisco is &lt;strong&gt;awful&lt;/strong&gt;.&amp;#xA0;&lt;/blockquote&gt;
-&lt;p&gt;It&amp;#x2019;s no secret that rent in San Francisco is starting to get a little crazy. After living here for a while you start to lose context. Let me give you some.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The average price of a 1 bedroom apartment in San Francisco is now $2,800 a month.&lt;/strong&gt; This is for a pretty standard, unexciting, ~700 SQFT space. That&amp;#x2019;s $33,600 per year. The average yearly income in 2012 was $44,321. I&amp;#x2019;ve been here for about 4 years. 4 *&amp;#xA0;$33,600 = $134,400.&lt;/p&gt;
-&lt;h2&gt;Enter St Louis.&lt;/h2&gt;
-&lt;p&gt;The average rental price for a 1 bedroom apartment in St Louis is $720. 3.8x cheaper than San Francisco. Moving to St Louis is going to almost&amp;#xA0;quadruple my company&amp;#x2019;s runway. You can&amp;#xA0;&lt;em&gt;&lt;a href=&quot;http://www.trulia.com/property/3138286329-1601-Washington-Ave-Saint-Louis-MO-63103#photo-2&quot;&gt;buy&lt;/a&gt;&amp;#xA0;&lt;/em&gt;a really nice 1 bedroom apartment in downtown St Louis for less than renting in San Francisco for 4 years.&lt;/p&gt;
-&lt;h2&gt;Cheap cities are startup friendly&lt;/h2&gt;
-&lt;p&gt;The leading cause of startup death is running out of money. Moving to a cheap city and doubling (or more!) your company&amp;#x2019;s runway will more than likely vastly increase your chances of eventual success.&lt;/p&gt;
-&lt;h2&gt;There&amp;#x2019;s a tech scene here!&lt;/h2&gt;
-&lt;p&gt;Sure, it&amp;#x2019;s not quite on the same level as San Francisco but it&amp;#x2019;s something.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;There&amp;#x2019;s this thing called &lt;a href=&quot;http://archgrants.org&quot;&gt;Arch Grants&lt;/a&gt; which aims to attract entrepreneurs by giving them $50,000 in equity free funding. &lt;a href=&quot;http://twitter.com/marshal&quot;&gt;Marshall&lt;/a&gt;&amp;#x2018;s last startup won one of these before being acquired. Applications are currently open for the next 20 grants!&lt;/li&gt;
-&lt;li&gt;There are over 75 startups in our building alone.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Something to think about&lt;/h2&gt;
-&lt;p&gt;We&amp;#x2019;re an internet company. We don&amp;#x2019;t need to be tied to a specific location. Hiring remote and having a distributed work force is far cheaper than hiring locally and making everyone come into an office.&lt;/p&gt;
-&lt;p&gt;If you&amp;#x2019;re based in San Francisco (or any other big, expensive city) and thinking of bootstrapping a company there &lt;em&gt;are&lt;/em&gt; other options. I invite you to seriously consider St Louis. You&amp;#x2019;re even welcome to come and work out of our ($275 per month) office for a few days and we&amp;#x2019;ll show you around.&lt;/p&gt;
+&lt;div&gt;&lt;div class=&quot;pad_20&quot;&gt;
+    
 
-&lt;h2&gt;You&amp;#x2019;re not giving up living in a cool city&lt;/h2&gt;
-&lt;p&gt;St. Louis isn&amp;#x2019;t &lt;em&gt;just&lt;/em&gt; ridiculously affordable, there&amp;#x2019;s also a lot to keep you entertained.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-239 media-239&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/IMG_4120-e1390325346878.jpg&quot;&gt;
-&lt;figcaption&gt;Need/Want HQ is located in the building on the far right&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;St. Louis is neighborhood-y.&lt;/strong&gt; We&amp;#x2019;ll be living and working downtown (pictured), but St. Louis boasts 78 other neighborhoods, each with their own flair.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-225 media-225&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/FoxTheater-e1390325410137.jpg&quot;&gt;&lt;br&gt;
-&lt;figcaption&gt;The Fabulous Fox Theatre.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;b&gt;Big money is going into the city. All the time&lt;/b&gt;. In only the past few years, billions of dollars have gone into renewing some of the City&amp;#x2019;s most recognizable institutions. The &lt;a href=&quot;http://www.peabodyoperahouse.com/about-us/construction&quot; target=&quot;_blank&quot;&gt;Peabody Opera House&lt;/a&gt;, &lt;a href=&quot;http://central.slpl.org/index.html&quot; target=&quot;_blank&quot;&gt;Downtown Central Library&lt;/a&gt;, the &lt;a href=&quot;http://www.slam.org/&quot; target=&quot;_blank&quot;&gt;St. Louis Art Museum&lt;/a&gt;&amp;#xA0; &amp;#x2014;&amp;#xA0;up next, even the &lt;a href=&quot;http://www.cityarchriver.org/&quot; target=&quot;_blank&quot;&gt;Arch&lt;/a&gt;&amp;#xA0;itself &amp;#x2014;&amp;#xA0;have all gotten updates and restorations in the past couple of years alone.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-219 media-219&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-231 media-231&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-231 media-231&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Olio.jpg&quot;&gt;&lt;br&gt;
-&lt;figcaption&gt;Olio&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;b&gt;St. Louis repurposes things well&lt;/b&gt;. The exquisite restaurant and cocktail house&amp;#xA0;&lt;a href=&quot;http://oliostl.com/&quot; target=&quot;_blank&quot;&gt;Olio&lt;/a&gt;&amp;#xA0;came out of an old gas station. You can take in your new movie releases on a couch in the&amp;#xA0;&lt;a href=&quot;http://www.builtstlouis.net/moolah01.html%5D&quot; target=&quot;_blank&quot;&gt;Moolah Theater&lt;/a&gt;, an old Masonic Temple that also has a bowling alley in its basement . World-class climbing can be found at&amp;#xA0;&lt;a href=&quot;http://climbsoill.com&quot; target=&quot;_blank&quot;&gt;Climb So iLL&lt;/a&gt;, which used to be a hospital power plant building.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Moolah-SoiLL-Split.png&quot;&gt;
-&lt;figcaption&gt;Moolah Theater / Climb So ILL&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-220 media-220&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-233 media-233&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/UCBC.jpg&quot;&gt;
-&lt;figcaption&gt;Urban Chestnut &lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-233 media-233&quot;&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;St. Louis has a great culinary scene.&lt;/strong&gt; After a flourishing of microbreweries like Urban Chestnut, when the city&amp;#x2019;s original beer entrepreneurs got bought out, food trucks caught on, and then coffee roasters started a scene (including one of &lt;a href=&quot;http://twitter.com/jack&quot;&gt;@jack&amp;#x2019;s&lt;/a&gt; favorite spots, Sump Coffee).&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-232 media-232&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/Sump.jpg&quot;&gt;&lt;br&gt;
-&lt;figcaption&gt;Sump Coffee&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-221 media-221&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/CAM-e1390324939393.jpg&quot;&gt;&lt;br&gt;
-&lt;figcaption&gt;The Contemporary Art Museum&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;Most attractions are free.&lt;/strong&gt; From spring to fall, weekends are chock-full of free festivals. Plus, its top-ranked Zoo, Science Center, History Museum, and all of the art museums are free to the public. The attractions that aren&amp;#x2019;t free &amp;#x2014; like the world-class Missouri Botanical Garden, the seriously unbeatable City Museum, or even the surprisingly relevant World Chess Hall of Fame &amp;#x2014; are more than worth the cover charge. And you never have to wait in line.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-240 media-240&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/MoBot-e1390324625681.jpg&quot;&gt;
-&lt;figcaption&gt;Missouri Botanical Garden&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&quot;align-none&quot; id=&quot;post-223 media-223&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://needwant.com/wp-content/uploads/2013/11/city-museum.jpg&quot;&gt;
-&lt;figcaption&gt;City Museum, 4 blocks from our office&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&amp;#xA0;Special thanks to &lt;a href=&quot;http://twitter.com/marshal&quot;&gt;Marshall&lt;/a&gt;&amp;#x2018;s girlfriend, &lt;a href=&quot;http://twitter.com/tarapham&quot;&gt;Tara Pham&lt;/a&gt; for the St. Louis tips.&lt;/p&gt;
-&lt;figure class=&quot;align-none&quot;&gt;&lt;/figure&gt;
+		Author: Carlton Purvis, Published on Jan 24, 2014
+    
 
-&lt;p&gt;If you found this post interesting you can follow me on twitter &lt;a href=&quot;http://twitter.com/jon&quot;&gt;@jon&lt;/a&gt; and Need/Want &lt;a href=&quot;http://twitter.com/needwantinc&quot;&gt;@NeedWantInc&lt;/a&gt;.&lt;/p&gt;
-	  &lt;/section&gt;
-	&lt;/div&gt;
+
+
+    
+
+    &lt;br&gt;
+
+
+
+      &lt;div class=&quot;review&quot;&gt;&lt;p&gt;Busted for selling crack, a New York smoke shop owner used his surveillance system to prove he was set up by a police informant. Donald Andrews, the owner of the shop, says his lawyer will file a wrongful arrest suit against the city, seeking $500,000 from the police department, county and the village.&lt;/p&gt;&lt;p&gt;Andrews opened up &lt;a href=&quot;https://www.facebook.com/DabbCitySmokeShop&quot; target=&quot;_blank&quot;&gt;Dabb City Smoke Shop&lt;/a&gt; in Scotia, New York last January. By April he was arrested for selling crack cocaine. In one of his few media interviews since the arrest, Andrews told us about the set up.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;The Arrest&lt;/strong&gt;A police informant, James Slater, visited the shop on March 25th and 29th and said on both occasions he bought crack from Andrews. He provided cell phone photos of crack rocks on the front counter of the shop.&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;gmw_&quot;&gt;Around April 11, &lt;a href=&quot;http://www.news10.com/story/21945223/scotia-business-owner-arrested-for-selling-drugs&quot; target=&quot;_blank&quot;&gt;police raided the shop and arrested Andrews&lt;/a&gt;. From the very beginning Andrews asserted his innocence.&lt;/span&gt;&lt;span class=&quot;gmw_&quot;&gt;&amp;#x201C;I kept telling them that I hadvideo&lt;/span&gt;, and I could show them that never happened and that I wasn't selling drugs. The cops said there was no need for that -- that they had me on video, and they had audio. They said, &amp;#x2018;We don&amp;#x2019;t need to watch your video,&amp;#x2019; but the confiscated my system anyway,&amp;#x201D; he said.&lt;/p&gt;&lt;p&gt;He was in jail for five days before he made bail. When he got out, he contacted a lawyer.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Grand Jury, Hearing Prosecutors Refuse to Return DVR&lt;/strong&gt;At his grand jury hearing, he says he testified that he had video proof that he wasn&amp;#x2019;t selling drugs out of the store and that police hadn&amp;#x2019;t allowed him to get the footage from his surveillance system to prove it.&lt;/p&gt;&lt;p&gt;&amp;#x201C;The grand jury wanted to see the video. The grand jury asked the DA where the videotapes were. The DA said the videos were irrelevant. My lawyer kept trying to get them to release the tapes, but they wouldn&amp;#x2019;t release the tapes. My lawyer had to beg for those tapes. It was a while before we got them,&amp;#x201D; he said.&lt;strong&gt;&lt;/strong&gt;Andrews was using a six-camera &lt;a href=&quot;http://nightowlsp.com/&quot; target=&quot;_blank&quot;&gt;Nightowl&lt;/a&gt; system that he purchased online for $300. He had installed the system himself. Eventually, the authorities released the video.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What the Footage Shows&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Once his lawyer was able to get the footage from his surveillance system, it told a dramatically different story than what the informant said. The tapes show the informant coming into the shop, setting a bag of crack on the counter, taking a photo of it, then picking it back up before leaving. See the video below:&lt;/p&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://www.youtube.com/embed/gna4-FRIJn4&quot; width=&quot;560&quot; height=&quot;315&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;The moment the informant plants the crack:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ipvm-uploads.s3.amazonaws.com/uploads/ef4d/b10f/Screen%20Shot%202014-01-24%20at%209.12.57%20AM.png&quot; border=&quot;0&quot; alt=&quot;&quot; width=&quot;493&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Other than the informant's testimony, police had no other evidence that Andrews was using the shop as a front to sell drugs. By July he was &lt;a href=&quot;http://www.news10.com/story/22913630/scotia-business-owner-cleared-of-drug-charges-by-surveillance-video-informant-missing&quot; target=&quot;_blank&quot;&gt;cleared of all charges&lt;/a&gt;, but not before his business took a hit.&lt;/p&gt;&lt;p&gt;&amp;#x201C;The impact on business was brutal,&amp;#x201D; he said. &amp;#x201C;The arrest was all over the six news channels, and people didn&amp;#x2019;t know what to think ... I had just moved into the neighborhood so people don&amp;#x2019;t really know me. People were saying then that they didn&amp;#x2019;t want me here.&amp;#x201D;&lt;/p&gt;&lt;p&gt;A Scotia resident that I spoke to about the case said people are suspicious police targeted him because he is &amp;#x201C;the only black business owner in that part of town.&amp;#x201D; Andrews says he thinks he was an easy target.&lt;/p&gt;
+&lt;p&gt;Andrews says police told him the informant was sent to his store as part of a series of investigations into stores in Scotia. The informant suggested to police he could help make a case against Andrews because they went to high school together. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Informant Arrested&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;After Andrews was released from jail, the informant skipped town, but was &lt;a href=&quot;http://www.timesunion.com/default/article/Perjury-drug-counts-for-police-informant-4744840.php&quot; target=&quot;_blank&quot;&gt;arrested a month later&lt;/a&gt; for perjury, drug and tampering with evidence charges.&lt;/p&gt;
+&lt;p&gt;This same informant was used in seven other convictions. Those cases are now under review.&lt;/p&gt;
+      &lt;br&gt;
+      &lt;/div&gt;
+
+
+
+        &lt;h2&gt;Comments (18)&lt;/h2&gt;
+&lt;div id=&quot;posts&quot; class=&quot;forem_posts&quot;&gt;
+
+  &lt;div id=&quot;premium_teaser&quot;&gt;
+    &lt;i&gt;Only IPVM PRO Members may comment. &lt;a href=&quot;http://ipvm.com/login&quot;&gt;Login&lt;/a&gt; or &lt;a href=&quot;http://ipvm.com/members&quot;&gt;Join&lt;/a&gt;.&lt;/i&gt;
+  &lt;/div&gt;
+      &lt;a name=&quot;post-26730&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26730&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;&quot;seeking $500,000......&quot; Not enough for this type of misbahavior.&lt;/p&gt;
+&lt;p&gt;Lou Marrero&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26734&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26734&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;So a $300 surveillance system saved him from having his life essentially destroyed. Powerful story.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26735&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26735&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;blockquote&gt;
+&lt;p&gt;&quot;Andrews says police told him the informant was sent to his store as part of a series of investigations into stores in Scotia.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Can you get anything via FOAI from the PD on documentation of this &lt;em&gt;series of investigations&lt;/em&gt;?&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26738&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26738&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;Maybe. To be honest, this case has FOIA written all over it. It would be interesting to get a better look at the documents behind this, not to mention the seven other convictions where they used this informant. This weekend I'll send some their way, just out of curiosity. But my gut tells me they are going to be reluctant to release any of it by using the &quot;ongoing investigation&quot; exemption.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26739&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26739&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;I'm curious why the DA is not taking more heat for this. I see via the various stories on this case out there that most of the blame has been shifted to the snitch. It is the D.A.'s job to seek justice. Sounds like maybe this D.A. was seeking something else entirely.&lt;/p&gt;
+&lt;p&gt;Also of note... the &lt;a href=&quot;http://www.fbi.gov/albany/press-releases/2012/twenty-seven-defendants-indicted-in-schenectady-based-racketeering-and-drug-conspiracies&quot; target=&quot;_blank&quot;&gt;FBI did a major sweep&lt;/a&gt; the previous year in the area, ringing up a bunch of young, gang-affiliated crack selling dudes with RICO jackets.&lt;/p&gt;
+&lt;p&gt;Maybe the Schenectady County DA didn't get himself enough headlines during the Fed case and wanted some TV face time for his own 'series of investigations'?&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26740&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26740&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;1. I like how we can reply direcly to ourselves (kinda schizophrenic maybe)&lt;/p&gt;
+&lt;p&gt;2. How come the oldest dude in the gang gets the worst a/k/a name?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Eric Bell, a/k/a &lt;strong&gt;Glasses&lt;/strong&gt;, age 41&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26776&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26776&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;&quot;I'm curious why the DA is not taking more heat for this.&quot;&lt;/p&gt;
+
+&lt;p&gt;Absolutely. It seems to me there are two possibilities here:&lt;/p&gt;
+&lt;p&gt;1.) The DA had blinders on. They were so single-mindedly focused on going after the conviction based on the evidence obtained by the informant that they completely ignored the DVR. They did not even bother to look at the DVR video for additional evidence, either corroborating or exculpatory.&lt;/p&gt;
+&lt;p&gt;2.) The DA did review the DVR video, saw the exonerating evidence, but chose to ignore/suppress that evidence and still prosecute the case.&lt;/p&gt;
+
+&lt;p&gt;The people of Scotia, New York have an interest in knowing which it is. Their DA is either 1.) incompetent or 2.) corrupt/criminal.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a name=&quot;post-26736&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26736&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;Nope, I would have started at $5 million. Bad enough they framed a business owner, but to add racism to it. It just goes to prove that video is still the best form of protection.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26742&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26742&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;&quot;They&quot; didn't frame the business owner. They had a bad CI that they obviously put too much faith in, he broke the law and ultimately made those officers look bad. It's unfortunate what happened, but the evidence did exonerate the store owner, and all other cases with that CI will be reviewed and should be. You guys who think there is some huge conspiracy looking to &quot;frame&quot; innocent people all the time dont realize there just arent enough of us to deal with the good guys and the bad guys too. That being said there is always an exception, and when those of us are found to be breaking the law, they should be dealt with.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26743&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26743&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;What is your take on why the DA didn't want to release the video during the grand jury hearing?&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26744&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26744&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;No offense Steve, but are you a law enforcement officer?  :)&lt;/p&gt;
+&lt;p&gt;Are you serious?  The evidence proving he didn't do shit existed &lt;strong&gt;at the time of his arrest&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It is the D.A.'s job to seek evidence that &lt;strong&gt;proves the truth&lt;/strong&gt; - not that 'proves' the guilt of &lt;em&gt;whomever the cops arrest&lt;span&gt;frame&lt;/span&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The CI &lt;strong&gt;is an agent of LE&lt;/strong&gt; - Isn't it LE's job to make sure what the CI says is true - using the existing evidence &lt;em&gt;easily and readily&lt;/em&gt; available with the perp &lt;em&gt;screaming about exactly where it is whenever he can&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;Cops can get overzealous, sure.... but it is the D.A.'s job to make sure &lt;strong&gt;justice&lt;/strong&gt; is served - not play games with peoples lives to get headlines and TV face time.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26746&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26746&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;I am a police officer. And I wasnt there during the warrant, but I have done a lot of similar narcotics related warrants where the person we were arresting was screaming about something that proves they are innocent. I have taken DVR's, just like I am sure they did, with the understanding that if there is something on there it can be examined later. From phones to computers, unless it is on the warrant to be searched it cant be examined on the scene without some type of exigency. Looking back if they had an idea the CI was lying, they probably wouldnt have done the warrant. A couple of things probably went wrong. First, the majority of cops aren't techs and they unfortunately have to rely on &quot;cell phone pictures&quot; as opposed to some type of real time audio and or video. Thats something that commanders and departments need to change, and give the police tools to do their jobs better.&lt;/p&gt;
+&lt;p&gt;Second, CI management is tough. You are relying on someone who probably was a criminal (and usually still is) to gain access to people you couldnt by yourself, to help with an investigation. Over time, however a lot of detectives fail to attempt to gather evidence on a target from all angles and not just the CI buy. Your undercover purchase should only be a part of an investigation, or if you have a CI go rougue, this is what can happen.&lt;/p&gt;
+&lt;p&gt;And lastly, for some reason in my line of work we are expected to be perfect and not make mistakes. Thats impossible, so what happens is instead of admitting mistakes were made and dealing with why they happened we have guys and gals try to cover things up or not cooperate to try to mitigate the problem. We may be the most accountable people in your local government, I mean is there a department at your work solely there to investigate if you do something wrong? That being said I realize with my job comes an incredible amount of responsibility that shoudnt be taken lightly. Taking someone's freedom away for any reason, is something that should be understood as extremely serious by everyone in law enforcement. Its a bad situation all the way around, and I am sure as soon as they saw the CI plant the crack they knew that he was probably making bad buys in other investigations. But if they cops, the DA, or anyone in the chain knew they had a bad CI they needed to release whatever exculpatory evidence they had.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;nested_messages&quot;&gt;&lt;a name=&quot;post-26748&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26748&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;Steve,&lt;/p&gt;
+&lt;p&gt;That is an &lt;strong&gt;excellent&lt;/strong&gt; reply!  Thanks!&lt;/p&gt;
+&lt;p&gt;I put the full blame here directly on the D.A. - for the reasons I've already ranted.&lt;/p&gt;
+&lt;p&gt;LE (on the street) is one of the most thankless, underpaid, lots of it unrewarding, see-crap-nobody-wants-to-ever-see - profession.&lt;/p&gt;
+&lt;p&gt;It takes a rare type of person who can do it well - especially over time. The crap level of society that you have to deal with day in and day out is soul-crushing. I can't watch an entire episode of &lt;a href=&quot;http://www.aetv.com/the-first-48&quot; target=&quot;_blank&quot;&gt;A&amp;amp;E's The First 48&lt;/a&gt; without getting depressed... :(&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a name=&quot;post-26745&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26745&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;This was a poor investigation before the CI even set foot into the shop. When running a CI, you have to eliminate any doubts about the case and one way to do so is when you meet with the CI just prior to sending them in, you search the CI just shy of a strip search. Then the CI is in view from the moment after the search until they enter the target location. Yes! This is a problem in some situations but it's the only way to honestly testify when requesting the search warrant you will be requesting after the narcotic was purchased. &lt;/p&gt;
+&lt;p&gt;I always doubted any CI as they always had a strong bias to make the buy but if done correctly the end result is taking out another crook a bit higher up the chain.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26757&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26757&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;Steve:&lt;/p&gt;
+&lt;p&gt;&quot;I have taken DVR's, just like I am sure they did, with the understanding that if there is something on there it can be examined later. From phones to computers, unless it is on the warrant to be searched it cant be examined on the scene without some type of EXIGENCY.&quot;&lt;/p&gt;
+&lt;p&gt;1.) The &quot;exigency&quot; was the business owner's presumption of innocence. The &quot;exigency&quot; is the implied, and all but certain assertion of the business owner that he had an alibi, on a video recordation no less. Did he make the assertion and then tell the police they were not permitted to view his alibi?  That just would make no sense at all.&lt;/p&gt;
+&lt;p&gt;2.) Law enforcement's mission/purpose to seek the truth and justice. They cannot hide behind a false cloak of a warrant as an excuse for inexcusable behavior. Any investigator worth his salt knows this and will tell you the same. Would these police officers and DA have done this if the circumstances were reversed. What if it was their business being served a warrant based upon a false affidavit, planted illegally held drugs from a less than credible witness and being refused the opportunity to prove their innocence via irrefutable video evidence. &lt;/p&gt;
+&lt;p&gt;Then to compound matters the DA pulls an arguable, if not well founded, obstruction of justice when he refuses the grand jury's request to &quot;see the video&quot;, calling it &quot;irrelevant&quot;.&lt;/p&gt;
+&lt;p&gt;The video evidence eventually exonerates the victim/defendant, but not until after the dogged efforts of the victim's attorney to retrieve that same video evidence held in the custody of the police. Think these actions through. This borders on collusion by the investigating officers and the DA toward obstruction of justice.&lt;/p&gt;
+&lt;p&gt;Instead of abusing the victim/small business owner, the more important question is why weren't they holding their CI responsible for his crimes?&lt;/p&gt;
+&lt;p&gt;Too many lost opportunities here to right a wrong. This gives every appearance of a huge travesty of justice that should not be borne by the citizen/taxpayers if there is any civil and punitive damages awarded, but by those responsible for their own actions and abuse of their power and authority.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26778&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26778&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;I'm a Police Officer too. I agree with Steve's assessment, but would add that digital evidence is something that most PDs aren't prepared to support. Beyond the training and equipment is the struggle with how to best deploy resources.&lt;/p&gt;
+&lt;p&gt;Even if they had the capabilities in house, do they pull an investigator off another case to look at the DVR or have that person work on other cases that don't appear on the surface to have been &quot;solved&quot;.&lt;/p&gt;
+&lt;p&gt;Beyond the hours required to review the DVR contents and make copies, is the time required to write the warrant, get a judge to sign it, and then return the findings to the court upon completion. Depending on your County, that may not be a trivial investment in mantime.&lt;/p&gt;
+&lt;p&gt;My guess is the cops thought they had sufficient evidence to prove their case beyond a reasonable doubt without devoting the resources to examine the DVR. So, the DVR got seized, placed in evidence, but it was never examined. &lt;/p&gt;
+&lt;p&gt;That's where discovery comes into play. The defense is absolutely entitled to the contents of that DVR, regardless of whether the prosecution considers it meaningful to the case or not. That's the part of this story that doesn't make sense to me. How could the prosecution put up roadblocks?&lt;/p&gt;
+&lt;p&gt;The defense would be on the hook for examining their copy of the evidence. And, they wouldn't be compelled to share their findings with the prosecution. Had this gone to trial, that would have been a pretty dramatic piece of testimony! My guess is it would be an instant dismissal from the bench.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26783&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26783&quot; class=&quot;post odd  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;I have personal experience in this area of law enforcement as a victim.&lt;/p&gt;
+&lt;p&gt;In our case, first, the CI lied to investigating officers about what we were doing(growing and selling marijuana). We found this out through discovery.&lt;/p&gt;
+&lt;p&gt;Second, the investigating officers knew the CI had a real past history via civil court cases against us, over my sons parental rights to his three sons. The CI also had an intimate relationship with at least one LEO. The CI was my sons ex-wife of 4 years.&lt;/p&gt;
+&lt;p&gt;Third, the head officer in charge lied to the judge in the affidavit to obtain the search warrant. He stated he observed our property and buildings from adjacent public land which is physically impossible to do. We could not use that information in a motion to suppress the warrant because the judge AT THE TIME OF THE AFFIDAVIT had every expectation to believe the officer was being truthful.&lt;/p&gt;
+&lt;p&gt;Long story short, law enforcement spent huge sums of money on us and got nothing. I never spent a day in jail and they dropped the civil forfeiture case against us for two homes, two shops and our small farm. That took a year and a half before it happened.&lt;/p&gt;
+&lt;p&gt;This subject is about the War on Drugs and related government abuse of power.&lt;/p&gt;
+&lt;p&gt;Some questions  about this case come to mind:&lt;/p&gt;
+&lt;p&gt;How would this have turned out if Donald did not have the means/etc to get a good lawyer? Discovery costs money.&lt;/p&gt;
+&lt;p&gt;I have heard local juristictions get a pay-off from the Federal government of $20,000 for any local felony drug conviction. Is this true? Perhaps the officers involved in this discussion can answer that question. Could this be an incentive to encourage the lack of local integrity shown in Donalds case?&lt;/p&gt;
+&lt;p&gt;For what it is worth, I found the troops(of the lower pay scale....their words) to be mostly honorable and dedicated folks, just as we have heard from the officers involved in this discussion. I spent 6 hours with them and was shaking many hands at the end of that 6 hour period. They were just doing their job, as instructed.&lt;/p&gt;
+&lt;p&gt;In our case, we estimate the &quot;government&quot; wasted well over $100,000. The CI continues merrily along facing zero consequences. We do plan a FOIA request when all the dust has settled and we get all computers, phones, cameras and personal records returned as we want to know the exact amount of taxpayer money that was spent on us. They have already released all liens and interests on our real property.&lt;/p&gt;
+&lt;p&gt;Multiply Donalds and our case by thousands and you get the real picture of the WOD.&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;a name=&quot;post-26789&quot;&gt;&lt;/a&gt;
+&lt;div id=&quot;post_26789&quot; class=&quot;post even  listener&quot;&gt;
+  
+  
+
+  &lt;div class=&quot;contents&quot;&gt;
+
+    &lt;p&gt;This is a great discussion. Thanks all for the excellent comments!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;gmw_&quot;&gt;I've made this post publicly available so you can share with all your friends and colleagues.&lt;br&gt;&lt;/span&gt;&lt;/p&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+&lt;br&gt;
+
+  &lt;div id=&quot;premium_teaser&quot;&gt;
+
+  &lt;span class=&quot;bigger2 blue&quot;&gt;
+    &lt;a href=&quot;http://ipvm.com/book&quot; class=&quot;blue&quot;&gt;Download the FREE 2014 IP Camera Book&lt;/a&gt;
+  &lt;/span&gt;
+
+ &lt;/div&gt;
+
+
+      &lt;br&gt;
+      &lt;span class=&quot;companies_monitored black&quot;&gt;
+        Other Updates on Case Studies
+      &lt;/span&gt;
+          &lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2415&quot; rel=&quot;nofollow&quot;&gt;UK Video Forensics Insights &lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 23, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;David Spreadborough has been a police officer in the UK for 23 years, a forensic video investigat...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2410&quot; rel=&quot;nofollow&quot;&gt;Beaten Nearly to Death, Weak Video Lets Attackers Go Free&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 22, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Watch this:
+
+If you were a juror could you make a decision on what happened here? Eyewitness te...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2408&quot; rel=&quot;nofollow&quot;&gt;Cruise Ship Surveillance Reviewed&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 21, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Falling overboard to die alone in a dark cold sea is terrifying. Video analytics might solve this...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2387&quot; rel=&quot;nofollow&quot;&gt;Store Employee Explains How They Stole&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 20, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;In 2004, Lauren started work at a large CVS in a Washington, D.C. suburb. She says she really nee...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2402&quot; rel=&quot;nofollow&quot;&gt;Silicon Valley Startup Targets Neighborhood Surveillance&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 16, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Silicon Valley is warming up to the surveillance market, seeing the potential of consumers to emb...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2401&quot; rel=&quot;nofollow&quot;&gt;ALPR / NPR Recognition Accuracy and Issues&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 15, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Sick of red light and speed cameras? A lot of people are. There are entire websites and web forum...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2395&quot; rel=&quot;nofollow&quot;&gt;Cable Company Home Security Issues &lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 14, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Mark already had cable from Comcast so when he started getting offers for their home security ser...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2383&quot; rel=&quot;nofollow&quot;&gt;Criminal Explains How Cameras Caught Him&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 13, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Henry&amp;#x2019;s story is the second in our series exploring surveillance from the other side of the...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2397&quot; rel=&quot;nofollow&quot;&gt;Guard Fired For Reporting Surveillance Sexual Harassment&lt;/a&gt;&lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 10, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;A guard is fired after reporting misconduct by another guard monitoring surveillance cameras. Now...&lt;/span&gt;
+
+      &lt;/p&gt;&lt;p&gt;
+      &lt;span class=&quot;companies_monitored black&quot;&gt;Most Recent Industry Updates&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2368&quot; rel=&quot;nofollow&quot;&gt;LAST Chance - IP Camera Course Winter 2014&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 25, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;This is the last chance to get into IPVM's IP camera course that starts next Tuesday, January 28t...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2415&quot; rel=&quot;nofollow&quot;&gt;UK Video Forensics Insights &lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 23, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;David Spreadborough has been a police officer in the UK for 23 years, a forensic video investigat...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2413&quot; rel=&quot;nofollow&quot;&gt;Ask the AHJ: Chicago&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 23, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;The AHJ has the final say in access control systems. That power, combined with the rules not alwa...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2412&quot; rel=&quot;nofollow&quot;&gt;Cloud VMS For $5 Per Camera Per Month&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 22, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;A startup launched by the founder of Baracuda, a networking company worth more than a billion dol...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2410&quot; rel=&quot;nofollow&quot;&gt;Beaten Nearly to Death, Weak Video Lets Attackers Go Free&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 22, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Watch this:
+
+If you were a juror could you make a decision on what happened here? Eyewitness te...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2408&quot; rel=&quot;nofollow&quot;&gt;Cruise Ship Surveillance Reviewed&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 21, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Falling overboard to die alone in a dark cold sea is terrifying. Video analytics might solve this...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2405&quot; rel=&quot;nofollow&quot;&gt;Delayed Egress Maglock Claims to Save Thousands&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 21, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;Deploying delayed egress right is tricky even when codes allow it, and making sure you meet all t...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2409&quot; rel=&quot;nofollow&quot;&gt;Exacq Breaks Avigilon Integration&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 20, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;IPVM testing has verified that Exacq has broken integration with Avigilon cameras. Up until mid y...&lt;/span&gt;
+          &lt;/p&gt;&lt;p&gt;
+          &lt;span class=&quot;result_title&quot;&gt;&lt;a href=&quot;http://ipvm.com/updates/2387&quot; rel=&quot;nofollow&quot;&gt;Store Employee Explains How They Stole&lt;/a&gt; &lt;/span&gt;
+          &lt;span class=&quot;supporting_info&quot;&gt;
+            on Jan 20, 2014
+          &lt;/span&gt;
+          &lt;br&gt;
+          &lt;span class=&quot;snippet&quot;&gt;In 2004, Lauren started work at a large CVS in a Washington, D.C. suburb. She says she really nee...&lt;/span&gt;
+
+  &lt;/p&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
 </description>
 <title>
-Why I'm Moving My Business From San Francisco To St. Louis
+Framed For Selling Crack, Surveillance Video Helps Him Sue Police
 </title>
 </item>
 <item>
 <author>
-Rachel Williams
+James
 </author>
 <link>
-http://yaledailynews.com/weekend/2014/01/24/we-just-cant-have-you-here/
+http://james.bertelson.me/blog/2014/01/level-3-are-now-hijacking-failed-dns-requests-for-ad-revenue-on-4-2-2-x/
 </link>
 <description>
 &lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-        
-  		&lt;p&gt;&amp;#x201C;I&amp;#x2019;m Rachel,&amp;#x201D; I say to the man who is here to evaluate me, extending my hand, trying to put on my best sane face. Problem is, no one ever told me what that looks like.&lt;/p&gt;
-&lt;p&gt;He eyes me for a moment, then takes my hand.&lt;/p&gt;
-&lt;p&gt;I run him through the story, trying to emphasize my efforts to be honest and to get help.&lt;/p&gt;
-&lt;p&gt;I say, &amp;#x201C;So as soon as I cut, I texted my FroCo for support.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;But you admit that you willfully harmed yourself?&amp;#x201D; he says, like he&amp;#x2019;s just won something.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Well &amp;#x2026; yes.&amp;#x201D; Because obviously I admit it. I&amp;#x2019;m not a liar. If I were a liar, I would never have gotten myself into this mess. Fuck me for not being a liar.&lt;/p&gt;
-&lt;p&gt;And so, when I say &amp;#x201C;yes&amp;#x201D; to the &amp;#x2018;I admit cutting myself&amp;#x2019; part, he nods his head and closes his eyes like someone has just given him a bonbon.&lt;/p&gt;
-&lt;p&gt;I tell him when I come back to Yale, I will get a therapist on campus and keep working with the one I have at home. I will stop cutting.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Well the question may not be what will you do at Yale, but if you are returning to Yale. It may well be safer for you to go home. We&amp;#x2019;re not so concerned about your studies as we are your safety,&amp;#x201D; he says.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;I&amp;#x2019;m sorry,&amp;#x201D; I say. &amp;#x201C;What makes you think I will be safer away from school, away from my support system?&amp;#x201D; School was my stimulation, my passion and my reason for getting up in the morning.&lt;/p&gt;
-&lt;p&gt;&amp;#x201C;Well the truth is,&amp;#x201D; he says, &amp;#x201C;we don&amp;#x2019;t necessarily think you&amp;#x2019;ll be safer at home. But we just can&amp;#x2019;t have you here.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;* * *&lt;/p&gt;
-&lt;p&gt;On the night of Jan. 27, 2013, I slashed open my right thigh six times with a Swiss Army knife. I then spent four hours thinking about how good it would feel to jump off the fifth floor of Vanderbilt Hall. On Jan. 28, I put on a pretty dress and went to class. Before lunch, my cuts had stained it brown.&lt;/p&gt;
-&lt;p&gt;That night I texted my Freshman Counselor to tell her what had happened, just as I had done all the other times I felt suicidal and had cut myself. When I went to her suite, I showed her the gashes.&lt;/p&gt;
-&lt;p&gt;We went to Yale Health Urgent Care, at around 11:00 p.m., where a doctor bandaged my leg. A psychiatrist appeared. I told her that I had experienced suicidal thoughts the night before, but that the cuts had not been a suicide attempt. I told them that I was no longer suicidal.&lt;/p&gt;
-&lt;p&gt;At midnight, I was strapped to a stretcher under the ashen ceiling of an ambulance, on my way to Yale-New Haven Hospital. There I was taken to the locked ward of the ER &amp;#x2014; guarded by officers with guns &amp;#x2014; stripped of all my belongings, including my pants (they had a drawstring), and shunted into a cubicle containing nothing but a bed. I was here for my own good, they told me.&lt;/p&gt;
-&lt;p&gt;For 24 hours I had nothing to do but listen to the rattling gasping sound coming from the person two beds down, and to a schizophrenic person declare, every hour or so, that he had soiled himself. I was asked to recite the presidents of the United States, in reverse order, as part of a psychiatric evaluation. For more than a day I was not permitted to make a phone call. For more than a day no one had any idea where I was &amp;#x2014; not even my parents.&lt;/p&gt;
-&lt;p&gt;When a bed opened up in the actual Yale-New Haven Psychiatric Hospital, I was transported, again in an ambulance, and introduced to the place I would spend the next week of my life. Upon arrival, I was taken into a small room with two female staff members, forced to take off my underwear, spread my legs, then hop up and down to make sure nothing was hidden &amp;#x201C;up there.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;My Freshman Counselor had brought me some extra clothes and a course packet for my travel writing class, so that I would have something to read. The course packet was confiscated. Why? Because I might cut myself with the plastic binding &amp;#x2014; you know &amp;#x2014; the kind you get from Tyco. I might commit suicide with that, they said. &amp;#x201C;You&amp;#x2019;re a cutter,&amp;#x201D; they told me.&lt;/p&gt;
-&lt;p&gt;For a week, I was not allowed to set foot outside. I was not allowed to stretch my hamstrings or calves or any other body part. I was not allowed to pace my confines. I was not allowed to drink caffeine. I was not permitted to take ibuprofen for my caffeine withdrawal headache. I did not get to take a shower until my third day. Phone usage was restricted and phone calls were closely monitored. I was threatened, by a nurse, with the possibility of having my wrists and ankles tied to my bed, and witnessed this threat be carried out on others. Whoever built the hospital had termed this ward, &amp;#x201C;Liberty Village.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;There was little &amp;#x201C;treatment&amp;#x201D; in the hospital. Mostly, we watched television, played Pictionary and Connect Four and sat. I was interviewed by various clinicians a few times a day; I saw my assigned psychiatrist only three times, for half an hour or so, over the course of seven days. This limited treatment was fairly standard for all patients, but it soon became clear that it would have little effect on my situation.&lt;/p&gt;
-&lt;p&gt;The milieu counselors, nurses and doctors in Yale-New Haven Psychiatric Hospital have absolutely no input when it comes to deciding who gets to stay at Yale and who is forced to leave. In talking to the nurses, doctors and fellow Yale students I encountered in the hospital, I understood that job to belong to Dr. Eric Millman and to chief of Yale Psychiatry, Dr. Lorraine Siggins &amp;#x2014; two people who work for the University, rather than the hospital.&lt;/p&gt;
-&lt;p&gt;I have shared with you my memorable exchange with a senior psychiatrist at Yale Mental Health who came to evaluate me. It was this exchange that led me to keep an extensive and thorough journal during my time in the hospital.&lt;/p&gt;
-&lt;p&gt;But Dr. Siggins is the one who makes a ruling: Does Johnny stay at Yale or does he go? And in my talks, a consensus emerged: Dr. Siggins does not always &amp;#x2014; and by some accounts, rarely &amp;#x2014; make contact with the student in question. (A Yale senior who was in the hospital with me was not granted a meeting with Dr. Siggins but was still forced to leave Yale.) Neither the staff members I spoke with nor a fellow Yalie who had prior experience in the hospital knew of any Yale student admitted to the hospital who had been allowed to stay at Yale.&lt;/p&gt;
-&lt;p&gt;My interview left me terrified of the possibility of leaving school. I called my parents, and they promptly put themselves on Dr. Siggins&amp;#x2019; radar, meeting with her twice and securing me a personal interview. All I remember was that my mind was totally blank when I spoke to her, because I was so focused on making her believe that I was &amp;#x201C;okay.&amp;#x201D; This, of course, is totally futile when you&amp;#x2019;re sitting on a cot in a mental hospital.&lt;/p&gt;
-&lt;p&gt;She called me three days later to tell me that I would have to go home. That meant that I was forced to formally withdraw from the college, with no guarantee of return. As soon as her decision came down, I was eligible for release into my parents&amp;#x2019; custody. Upon my release from the hospital (also not a function of my recovery &amp;#x2014; but as a result of my expulsion from the College I was even more depressed when I left than when I was admitted, my Yale ID was confiscated, as was my room key. I was given one evening to pack up my entire life.&lt;/p&gt;
-&lt;p&gt;My college dean told me I was not even allowed to spend the night in my room in Vanderbilt Hall. I fell asleep on the futon in my suite&amp;#x2019;s common room at four a.m., breaking the rules, but exhausted and unable to continue putting my things in boxes, dismantling the reality of my college life. I had a chance to say goodbye to a few friends &amp;#x2014; most of whom I would not hear from during my time away. 18 hours after I walked out of the hospital doors, I was on a plane, headed back to North Carolina in a storm of tears.&lt;/p&gt;
-&lt;p&gt;I did what they said was necessary to be a candidate for readmission: therapy, more therapy, two college courses, more therapy. And I healed. Mostly.&lt;/p&gt;
-&lt;p&gt;I filled out the paper application for readmission: the usual demographic crap, a three-page personal statement, a transcript of my summer classes, two letters of recommendation, a profile from a therapist and a check for $50. I flew to New Haven for my three interviews &amp;#x2014; with the dean of my residential college, Dean Pamela George (chair of readmission) and Dr. Siggins.&lt;/p&gt;
-&lt;p&gt;As a side note, I might mention that Dr. Siggins was 45 minutes late to my interview. Dean George called me an hour before the scheduled time to cancel, forcing me to interview the following day, two hours before my return flight took off. I answered every question with as much positivity as I could sell. I said: I do not cut, I do not think of killing myself. I am great. Two weeks later, I was readmitted.&lt;/p&gt;
-&lt;p&gt;Every morning of my year away from Yale, I woke to the sight of the &amp;#x201C;Yale&amp;#x201D; pennant on my bedroom wall &amp;#x2014; the one they send to accepted freshmen in the big, glorious &amp;#x201C;Welcome to Yale&amp;#x201D; packet. &amp;#x201C;You&amp;#x2019;re in!&amp;#x201D; it says. &amp;#x201C;You&amp;#x2019;re a treasured asset to our University!&amp;#x201D; it says. &amp;#x201C;Come to Bulldog Days and feel the love because we love you and we care about you and we don&amp;#x2019;t want you to go to any other school because you&amp;#x2019;re the shit!&amp;#x201D; it says.&lt;/p&gt;
-&lt;p&gt;Thinking back to that welcome packet, there is a conspicuous omission: *We love you and want you and will provide for you and protect you, as long as you don&amp;#x2019;t get sick.*&lt;/p&gt;
-&lt;p&gt;* * *&lt;/p&gt;
-&lt;p&gt;I return to a different Yale, though it is I who have changed. After a year spent focusing solely on my health and well-being, I find myself, though not perfectly balanced, resting closer to my ideal center. And, after a year of watching and analyzing every one of my inner ticks, I see external things that were invisible to me before.&lt;/p&gt;
-&lt;p&gt;I see that Yale is a fundamentally unhealthy place in one important way. The problem is, everyone is &amp;#x201C;okay.&amp;#x201D; I have known friends who have suffered the deaths of siblings, who have been victims of sexual assault or who have fought life-threatening illness, all while navigating their sexuality, while taking five-and-a-half credits, while chairing more organizations and running to more meetings than they can keep track of. I have known friends to do all of this and still profess, at every opportunity, to be &amp;#x201C;okay,&amp;#x201D; &amp;#x201C;fine,&amp;#x201D; &amp;#x201C;great.&amp;#x201D;&lt;/p&gt;
-&lt;p&gt;To say something else, to be &amp;#x2014; in our own minds and in the minds of others &amp;#x2014; something else, is for some reason not acceptable at Yale. None of us are completely okay. But the pressure to conform to being perfectly functional and happy is a burden that we should neither want nor bear.&lt;/p&gt;
-&lt;p&gt;Where does it come from? For most students at Yale, I think the pressure is subconscious, upheld through day-to-day conversation: My classes are amazing. My extracurriculars are dope. My internship this summer is baller. Life is awesome. Are you awesome? No one wants to deviate.&lt;/p&gt;
-&lt;p&gt;But I think the source is not, in fact, the students. Those of us who have admitted, at some point or another, that we are legitimately not okay, have learned that there are real and devastating consequences of telling the truth. Because Yale does not want people who are not okay. Yale does not want people who are struggling, who are fighting. Yale, out of concern for its own image, wants them to leave. And Yale makes them.&lt;/p&gt;
-&lt;p&gt;With this, I refuse to be okay.&lt;/p&gt;
+		&lt;p&gt;As I was getting ready to leave the office today, I started to google for a movie to go to with my wife tonight. I&amp;#x2019;d been testing sites in chrome and firefox all day, so without thinking I typed my search term into the firefox address bar. What I got back astounded me:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://james.bertelson.me/blog/wp-content/uploads/2014/01/l3hijack.png&quot;&gt;&lt;img src=&quot;http://james.bertelson.me/blog/wp-content/uploads/2014/01/l3hijack-1024x603.png&quot; alt=&quot;Level 3 Hijack page&quot; width=&quot;640&quot; class=&quot;aligncenter size-large wp-image-115&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yep. Instead of responding with NXDOMAIN as a good DNS resolver should, it redirected me to their ultra-spammy &amp;#x201C;search page.&amp;#x201D; I&amp;#x2019;m running debian, so the chances of there being a virus are pretty low, and some research confirmed my suspicions:&lt;/p&gt;
+&lt;pre&gt;jbert@vps:~$ dig cinetopia
 
+; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; cinetopia
+;; global options: +cmd
+;; Got answer:
+;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 14427
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;cinetopia.         IN  A
+
+;; ANSWER SECTION:
+cinetopia.      10  IN  A   198.105.254.11
+
+;; Query time: 2 msec
+;; SERVER: 4.2.2.3#53(4.2.2.3)
+;; WHEN: Fri Jan 24 22:11:03 2014
+;; MSG SIZE  rcvd: 43
+
+jbert@vps:~$ cat /etc/resolv.conf
+nameserver 4.2.2.3
+&lt;/pre&gt;
+&lt;p&gt;This has a few ramifications. First, I don&amp;#x2019;t blame them for wanting to monetize these servers. Everyone and their brother uses them for pings, DNS resolution, etc. &amp;#x2014; servers aren&amp;#x2019;t free and bandwidth isn&amp;#x2019;t free. So I get it. But, for one, I have no idea what else this page might or might not be doing. Is it setting third party tracking cookies? Tracking/bubbling my browser fingerprint? At the least it&amp;#x2019;s leaking, in clear text on the wire, things that I expected to be sent to an encypted &lt;a href=&quot;https://www.duckduckgo.com&quot;&gt;DDG&lt;/a&gt; search. If there was sensitive search terms or information in that query, it just dropped into Level3&amp;#x2032;s logfiles. Additionally, I have a few scripts that rely on a nonexistent domain getting an NXDOMAIN response. They&amp;#x2019;ll now break.&lt;/p&gt;
+&lt;p&gt;So, be warned. One can no longer rely on 4.2.2.x DNS for &lt;a href=&quot;http://www.ietf.org/rfc/rfc2136.txt&quot;&gt;RFC-compliant&lt;/a&gt; responses.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EDIT: &lt;/strong&gt;On further testing, this does not appear to be happening from other locations. It&amp;#x2019;s also &lt;em&gt;stopped&lt;/em&gt; happening from this VPS. It&amp;#x2019;s worth noting that this is not the first time I&amp;#x2019;ve noticed this, just the first time I&amp;#x2019;ve had the chance to grab some evidence and make a post about it.&lt;/p&gt;
 			&lt;/div&gt;
+
+	
 &lt;/div&gt;
 </description>
 <title>
-“We Just Can’t Have You Here”
+Level 3 are now hijacking failed DNS requests for ad revenue on 4.2.2.x
 </title>
 </item>
 <item>
 <link>
-http://bropages.org
+http://bropages.org/
 </link>
 <description>
 &lt;div&gt;&lt;p id=&quot;install&quot; class=&quot;well&quot;&gt;&lt;h2&gt;# install bro now&lt;br&gt;$ gem install bropages&lt;/h2&gt;&lt;/p&gt;
@@ -293,43 +681,18 @@ bro bro&lt;/pre&gt;&lt;/td&gt;
 &lt;/div&gt;
 </description>
 <title>
-&quot;bro&quot; pages. like &quot;man&quot; pages, but with examples only
+Bro pages: like man pages, but with examples only
 </title>
 </item>
 <item>
-<author>
-PAUL KALANITHI
-</author>
 <link>
-http://www.nytimes.com/2014/01/25/opinion/sunday/how-long-have-i-got-left.html?smid=tw-share&_r=0
+http://zulko.github.io/blog/2014/01/23/making-animated-gifs-from-video-files-with-python/#
 </link>
 <description>
-&lt;div&gt;&lt;article id=&quot;story&quot; class=&quot;story theme-main&quot;&gt;
 
-    
-
-    
-    
-
-                
-    &lt;p class=&quot;story-body-text story-content&quot;&gt;AS soon as the CT scan was done, I began reviewing the images. The diagnosis was immediate: Masses matting the lungs and deforming the spine. Cancer. In my neurosurgical training, I had reviewed hundreds of scans for fellow doctors to see if surgery offered any hope. I&amp;#x2019;d scribble in the chart &amp;#x201C;Widely metastatic disease &amp;#x2014; no role for surgery,&amp;#x201D; and move on. But this scan was different: It was my own.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I have sat with countless patients and families to discuss grim prognoses: It&amp;#x2019;s one of the most important jobs physicians have. It&amp;#x2019;s easier when the patient is 94, in the last stages of dementia and has a severe brain bleed. For young people like me &amp;#x2014; I am 36 &amp;#x2014; given a diagnosis of cancer, there aren&amp;#x2019;t many words. My standard pieces include &amp;#x201C;it&amp;#x2019;s a marathon, not a sprint, so get your daily rest&amp;#x201D; and &amp;#x201C;illness can drive a family apart or bring it together &amp;#x2014; be aware of each other&amp;#x2019;s needs and find extra support.&amp;#x201D; &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I learned a few basic rules. Be honest about the prognosis but always leave some room for hope. Be vague but accurate: &amp;#x201C;days to a few weeks,&amp;#x201D; &amp;#x201C;weeks to a few months,&amp;#x201D; &amp;#x201C;months to a few years,&amp;#x201D; &amp;#x201C;a few years to a decade or more.&amp;#x201D; We never cite detailed statistics, and usually advise against Googling survival numbers, assuming the average patient doesn&amp;#x2019;t possess a nuanced understanding of statistics. &lt;/p&gt;&lt;figure class=&quot;media photo embedded has-adjacency layout-large-vertical&quot;&gt;
-    &lt;div class=&quot;image&quot;&gt;
-            &lt;img src=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot; alt=&quot;&quot; class=&quot;media-viewer-candidate&quot;&gt;
-            &lt;meta value=&quot;http://static01.nyt.com/images/2014/01/25/opinion/25kalanithi/25kalanithi-blog427.jpg&quot;&gt;
-            &lt;meta value=&quot;434&quot;&gt;
-            &lt;meta value=&quot;427&quot;&gt;
-    &lt;/div&gt;
-        &lt;figcaption class=&quot;caption&quot;&gt; &lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;p class=&quot;story-body-text story-content&quot;&gt;People react differently to hearing &amp;#x201C;Procedure X has a 70 percent chance of survival&amp;#x201D; and &amp;#x201C;Procedure Y has a 30 percent chance of death.&amp;#x201D; Phrased that way, people flock to Procedure X, even though the numbers are the same. When a close friend developed pancreatic cancer, I became the medical maven to a group of people who were sophisticated statisticians. I still dissuaded them from looking up the statistics, saying five-year survival curves are at least five years out of date. Somehow I felt that the numbers alone were too dry, or that a physician&amp;#x2019;s daily experience with illness was needed for context. Mostly, I felt that impulse: Keep a measure of hope. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;These survival curves, called Kaplan-Meier curves, are one way we measure progress in cancer treatment, plotting the number of patients surviving over time. For some diseases, the line looks like an airplane gently beginning its descent; for others, like a dive bomber. Physicians think a lot about these curves, their shape, and what they mean. In brain-cancer research, for example, while the numbers for average survival time haven&amp;#x2019;t changed much, there&amp;#x2019;s an increasingly long tail on the curve, indicating a few patients are living for years. The problem is that you can&amp;#x2019;t tell an individual patient where she is on the curve. It&amp;#x2019;s impossible, irresponsible even, to be more precise than you can be accurate.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;One would think, then, that when my oncologist sat by my bedside to meet me, I would not immediately demand information on survival statistics. But now that I had traversed the line from doctor to patient, I had the same yearning for the numbers all patients ask for. I hoped she would see me as someone who both understood statistics and the medical reality of illness, that she would give me certainty, the straight dope. I could take it. She flatly refused: &amp;#x201C;No. Absolutely not.&amp;#x201D; She knew very well I could &amp;#x2014; and did &amp;#x2014; look up all the research on the topic. But lung cancer wasn&amp;#x2019;t my specialty, and she was a world expert. At each appointment, a wrestling match began, and she always avoided being pinned down to any sort of number. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Now, instead of wondering why some patients persist in asking statistics questions, I began to wonder why physicians obfuscate when they have so much knowledge and experience. Initially when I saw my CT scan, I figured I had only a few months to live. The scan looked bad. I looked bad. I&amp;#x2019;d lost 30 pounds, developed excruciating back pain and felt more fatigued every day. My tests revealed severely low protein levels and low blood counts consistent with the body overwhelmed, failing in its basic drive to sustain itself. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;For a few months, I&amp;#x2019;d suspected I had cancer. I had seen a lot of young patients with cancer. So I wasn&amp;#x2019;t taken aback. In fact, there was a certain relief. The next steps were clear: Prepare to die. Cry. Tell my wife that she should remarry, and refinance the mortgage. Write overdue letters to dear friends. Yes, there were lots of things I had meant to do in life, but sometimes this happens: Nothing could be more obvious when your day&amp;#x2019;s work includes treating head trauma and brain cancer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But on my first visit with my oncologist, she mentioned my going back to work someday. Wasn&amp;#x2019;t I a ghost? No. But then how long did I have? Silence.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Of course, she could not stop my intense reading. Poring over studies, I kept trying to find the one that would tell me when my number would be up. The large general studies said that between 70 and 80 percent of lung cancer patients would die within two years. They did not allow for much hope. But then again, most of those patients were older and heavy smokers. Where was the study of nonsmoking 36-year-old neurosurgeons? Maybe my youth and health mattered? Or maybe my disease was found so late, had spread so far, and I was already so far gone that I was worse off than those 65-year-old smokers.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;Many friends and family members provided anecdotes along the lines of my-friend&amp;#x2019;s-friend&amp;#x2019;s-mom&amp;#x2019;s-friend or my-uncle&amp;#x2019;s-barber&amp;#x2019;s-son&amp;#x2019;s-tennis-partner has this same kind of lung cancer and has been living for 10 years. Initially I wondered if all the stories referred to the same person, connected through the proverbial six degrees. I disregarded them as wishful thinking, baseless delusion. Eventually, though, enough of those stories seeped in through the cracks of my studied realism. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;And then my health began to improve, thanks to a pill that targets a specific genetic mutation tied to my cancer. I began to walk without a cane and to say things like, &amp;#x201C;Well, it&amp;#x2019;s pretty unlikely that I&amp;#x2019;ll be lucky enough to live for a decade, but it&amp;#x2019;s possible.&amp;#x201D; A tiny drop of hope.&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;In a way, though, the certainty of death was easier than this uncertain life. Didn&amp;#x2019;t those in purgatory prefer to go to hell, and just be done with it? Was I supposed to be making funeral arrangements? Devoting myself to my wife, my parents, my brothers, my friends, my adorable niece? Writing the book I had always wanted to write? Or was I supposed to go back to negotiating my multiyear job offers? &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The path forward would seem obvious, if only I knew how many months or years I had left. Tell me three months, I&amp;#x2019;d just spend time with family. Tell me one year, I&amp;#x2019;d have a plan (write that book). Give me 10 years, I&amp;#x2019;d get back to treating diseases. The pedestrian truth that you live one day at a time didn&amp;#x2019;t help: What was I supposed to do with that day? My oncologist would say only: &amp;#x201C;I can&amp;#x2019;t tell you a time. You&amp;#x2019;ve got to find what matters most to you.&amp;#x201D;&lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I began to realize that coming face to face with my own mortality, in a sense, had changed both nothing and everything. Before my cancer was diagnosed, I knew that someday I would die, but I didn&amp;#x2019;t know when. After the diagnosis, I knew that someday I would die, but I didn&amp;#x2019;t know when. But now I knew it acutely. The problem wasn&amp;#x2019;t really a scientific one. The fact of death is unsettling. Yet there is no other way to live. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;The reason doctors don&amp;#x2019;t give patients specific prognoses is not merely because they cannot. Certainly, if a patient&amp;#x2019;s expectations are way out of the bounds of probability &amp;#x2014; someone expecting to live to 130, or someone thinking his benign skin spots are signs of impending death &amp;#x2014; doctors are entrusted to bring that person&amp;#x2019;s expectations into the realm of reasonable possibility. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;But the range of what is reasonably possible is just so wide. Based on today&amp;#x2019;s therapies, I might die within two years, or I might make it to 10. If you add in the uncertainty based on new therapies available in two or three years, that range may be completely different. Faced with mortality, scientific knowledge can provide only an ounce of certainty: Yes, you will die. But one wants a full pound of certainty, and that is not on offer. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;What patients seek is not scientific knowledge doctors hide, but existential authenticity each must find on her own. Getting too deep into statistics is like trying to quench a thirst with salty water. The angst of facing mortality has no remedy in probability. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I remember the moment when my overwhelming uneasiness yielded. Seven words from Samuel Beckett, a writer I&amp;#x2019;ve not even read that well, learned long ago as an undergraduate, began to repeat in my head, and the seemingly impassable sea of uncertainty parted: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; I took a step forward, repeating the phrase over and over: &amp;#x201C;I can&amp;#x2019;t go on. I&amp;#x2019;ll go on.&amp;#x201D; And then, at some point, I was through. &lt;/p&gt;&lt;p class=&quot;story-body-text story-content&quot;&gt;I am now almost exactly eight months from my diagnosis. My strength has recovered substantially. In treatment, the cancer is retreating. I have gradually returned to work. I&amp;#x2019;m knocking the dust off scientific manuscripts. I&amp;#x2019;m writing more, seeing more, feeling more. Every morning at 5:30, as the alarm clock goes off, and my dead body awakes, my wife asleep next to me, I think again to myself: &amp;#x201C;I can&amp;#x2019;t go on.&amp;#x201D; And a minute later, I am in my scrubs, heading to the operating room, alive: &amp;#x201C;I&amp;#x2019;ll go on.&amp;#x201D; &lt;/p&gt;
-                &lt;footer class=&quot;story-footer story-content&quot;&gt;
-        
-    &lt;/footer&gt;
-&lt;/article&gt;
-&lt;/div&gt;
 </description>
 <title>
-How Long Have I Got Left?
+Making GIFs From Video Files With Python
 </title>
 </item>
 </channel>
