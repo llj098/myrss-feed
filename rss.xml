@@ -15,438 +15,6 @@ myread
 </description>
 <item>
 <link>
-https://github.com/afaqurk/linux-dash
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
-          
-
-
-
-&lt;div class=&quot;repository-meta js-details-container &quot;&gt;
-    &lt;div class=&quot;repository-description js-details-show&quot;&gt;
-      &lt;p&gt;A drop-in, low-overhead monitoring web dashboard for a linux machine.&lt;/p&gt;
-    &lt;/div&gt;
-
-
-
-&lt;/div&gt;
-
-&lt;div class=&quot;capped-box overall-summary &quot;&gt;
-
-  &lt;div class=&quot;stats-switcher-viewport js-stats-switcher-viewport&quot;&gt;
-
-    &lt;ul class=&quot;numbers-summary&quot;&gt;
-      &lt;li class=&quot;commits&quot;&gt;
-        &lt;a href=&quot;https://github.com/afaqurk/linux-dash/commits/master&quot;&gt;
-            &lt;span class=&quot;num&quot;&gt;
-              
-              4
-            &lt;/span&gt;
-            commits
-        &lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;https://github.com/afaqurk/linux-dash/branches&quot;&gt;
-          &lt;span class=&quot;num&quot;&gt;
-            
-            1
-          &lt;/span&gt;
-          branch
-        &lt;/a&gt;
-      &lt;/li&gt;
-
-      &lt;li&gt;
-        &lt;a href=&quot;https://github.com/afaqurk/linux-dash/releases&quot;&gt;
-          &lt;span class=&quot;num&quot;&gt;
-            
-            0
-          &lt;/span&gt;
-          releases
-        &lt;/a&gt;
-      &lt;/li&gt;
-
-      &lt;li&gt;
-
-  &lt;a href=&quot;https://github.com/afaqurk/linux-dash/graphs/contributors&quot;&gt;
-    &lt;span class=&quot;num&quot;&gt;
-      
-      1
-    &lt;/span&gt;
-    contributor
-  &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-
-      &lt;div class=&quot;repository-lang-stats&quot;&gt;
-        &lt;ol class=&quot;repository-lang-stats-numbers&quot;&gt;
-          &lt;li&gt;
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash/search?l=css&quot;&gt;
-                
-                &lt;span class=&quot;lang&quot;&gt;CSS&lt;/span&gt;
-                &lt;span class=&quot;percent&quot;&gt;80.2%&lt;/span&gt;
-              &lt;/a&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash/search?l=javascript&quot;&gt;
-                
-                &lt;span class=&quot;lang&quot;&gt;JavaScript&lt;/span&gt;
-                &lt;span class=&quot;percent&quot;&gt;13.6%&lt;/span&gt;
-              &lt;/a&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash/search?l=php&quot;&gt;
-                
-                &lt;span class=&quot;lang&quot;&gt;PHP&lt;/span&gt;
-                &lt;span class=&quot;percent&quot;&gt;6.3%&lt;/span&gt;
-              &lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/div&gt;
-
-  &lt;a href=&quot;https://github.com/afaqurk/linux-dash&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
-  &lt;span class=&quot;language-color&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;JavaScript&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;PHP&lt;/span&gt;
-  &lt;/a&gt;
-
-
-
-&lt;div class=&quot;file-navigation in-mid-page&quot;&gt;
-    &lt;a href=&quot;https://github.com/afaqurk/linux-dash/compare&quot; class=&quot;minibutton compact primary tooltipped downwards&quot; title=&quot;Compare &amp;amp; review&quot;&gt;
-      
-    &lt;/a&gt;
-
-  
-
-&lt;div class=&quot;select-menu js-menu-container js-select-menu&quot;&gt;
-  &lt;span class=&quot;minibutton select-menu-button js-menu-target&quot; tabindex=&quot;0&quot;&gt;
-    
-    &lt;i&gt;branch:&lt;/i&gt;
-    &lt;span class=&quot;js-select-button&quot;&gt;master&lt;/span&gt;
-  &lt;/span&gt;
-
-  &lt;div class=&quot;select-menu-modal-holder js-menu-content js-navigation-container&quot;&gt;
-
-    &lt;div class=&quot;select-menu-modal&quot;&gt;
-      &lt;p class=&quot;select-menu-header&quot;&gt;
-        &lt;span class=&quot;select-menu-title&quot;&gt;Switch branches/tags&lt;/span&gt;
-        
-      &lt;/p&gt; 
-
-      &lt;div class=&quot;select-menu-filters&quot;&gt;
-        
-        &lt;div class=&quot;select-menu-tabs&quot;&gt;
-          &lt;ul&gt;
-            &lt;li class=&quot;select-menu-tab&quot;&gt;
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash&quot; class=&quot;js-select-menu-tab&quot;&gt;Branches&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;select-menu-tab&quot;&gt;
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash&quot; class=&quot;js-select-menu-tab&quot;&gt;Tags&lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&quot;select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket&quot;&gt;
-
-        &lt;div&gt;
-
-
-            &lt;div class=&quot;select-menu-item js-navigation-item selected&quot;&gt;
-              
-              &lt;a href=&quot;https://github.com/afaqurk/linux-dash/tree/master&quot; rel=&quot;nofollow&quot; class=&quot;js-navigation-open select-menu-item-text js-select-button-text css-truncate-target&quot; title=&quot;master&quot;&gt;master&lt;/a&gt;
-            &lt;/div&gt; 
-        &lt;/div&gt;
-
-          &lt;p class=&quot;select-menu-no-results&quot;&gt;Nothing to show&lt;/p&gt;
-      &lt;/div&gt; 
-
-      &lt;div class=&quot;select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket&quot;&gt;
-        
-
-        &lt;p class=&quot;select-menu-no-results&quot;&gt;Nothing to show&lt;/p&gt;
-      &lt;/div&gt; 
-
-    &lt;/div&gt; 
-  &lt;/div&gt; 
-&lt;/div&gt; 
-
-
-  &lt;div class=&quot;breadcrumb&quot;&gt;&lt;span class=&quot;repo-root js-repo-root&quot;&gt;&lt;span&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash&quot;&gt;&lt;span&gt;linux-dash&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;separator&quot;&gt; / &lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-
-
-&lt;a href=&quot;https://github.com/afaqurk/linux-dash/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
-&lt;div class=&quot;bubble files-bubble&quot;&gt;
-
-
-  &lt;div class=&quot;commit commit-tease js-details-container&quot;&gt;
-    &lt;p class=&quot;commit-title &quot;&gt;
-        &lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/66b3dd129752ad5fc2146b7c06799872c76b07c7&quot; class=&quot;message&quot; title=&quot;Updated readme with link and screenshot&quot;&gt;Updated readme with link and screenshot&lt;/a&gt;
-        
-    &lt;/p&gt;
-    &lt;div class=&quot;commit-meta&quot;&gt;
-      &lt;span class=&quot;js-zeroclipboard zeroclipboard-link&quot; title=&quot;Copy SHA&quot;&gt;&lt;/span&gt;
-      &lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/66b3dd129752ad5fc2146b7c06799872c76b07c7&quot; class=&quot;sha-block&quot;&gt;latest commit &lt;span class=&quot;sha&quot;&gt;66b3dd1297&lt;/span&gt;&lt;/a&gt;
-
-      &lt;div class=&quot;authorship&quot;&gt;
-        &lt;img alt=&quot;afaqurk&quot; class=&quot;gravatar&quot; src=&quot;https://2.gravatar.com/avatar/91eafbf49f5f4267823fe755ed85fb43?d=https%3A%2F%2Fidenticons.github.com%2F7b195b8665a9544f676ec2f0ae989ff8.png&amp;amp;r=x&amp;amp;s=140&quot; width=&quot;20&quot;&gt;
-        &lt;span class=&quot;author-name&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk&quot; rel=&quot;author&quot;&gt;afaqurk&lt;/a&gt;&lt;/span&gt;
-        authored &lt;time class=&quot;js-relative-date updated&quot; datetime=&quot;2014-01-26T06:26:49-08:00&quot; title=&quot;2014-01-26 06:26:49&quot;&gt;January 26, 2014&lt;/time&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;table class=&quot;files&quot;&gt;
-
-    
-&lt;tbody class=&quot;&quot;&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/tree/master/css&quot; class=&quot;js-directory-link&quot; id=&quot;c7a628cba22e28eb17b5f5c6ae2a266a-061873e7aa3bd83efccb1f203910c98da99ee039&quot; title=&quot;css&quot;&gt;css&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/ba2aaaacb4edfe65fdd569eb94577a7475d8a5ec&quot; class=&quot;message&quot; title=&quot;Internet speed widget added; experimentation with layout&quot;&gt;Internet speed widget added; experimentation with layout&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2013-11-21T19:14:02-08:00&quot; title=&quot;2013-11-21 19:14:02&quot;&gt;November 21, 2013&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/tree/master/js&quot; class=&quot;js-directory-link&quot; id=&quot;32981a13284db7a021131df49e6cd203-16ad91e682a1bedc0d49fd4df97500e931fc0634&quot; title=&quot;js&quot;&gt;js&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/ba2aaaacb4edfe65fdd569eb94577a7475d8a5ec&quot; class=&quot;message&quot; title=&quot;Internet speed widget added; experimentation with layout&quot;&gt;Internet speed widget added; experimentation with layout&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2013-11-21T19:14:02-08:00&quot; title=&quot;2013-11-21 19:14:02&quot;&gt;November 21, 2013&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/tree/master/sh&quot; class=&quot;js-directory-link&quot; id=&quot;77cbc257e66302866cf6191754c0c8e3-aa03ccac149903023313bbf0ee9b49ad6a1fba7b&quot; title=&quot;sh&quot;&gt;sh&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/7567f902a7121a626e9d808ecaa1bf927b3746cf&quot; class=&quot;message&quot; title=&quot;First commit; set up GitHub repo; Day 2&quot;&gt;First commit; set up GitHub repo; Day 2&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2013-10-16T08:03:07-07:00&quot; title=&quot;2013-10-16 08:03:07&quot;&gt;October 16, 2013&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/blob/master/README.md&quot; class=&quot;js-directory-link&quot; id=&quot;04c6e90faac2675aa89e2176d2eec7d8-0c8f40fcf94ab457b73ae56b9c6afdb2e53896f5&quot; title=&quot;README.md&quot;&gt;README.md&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/66b3dd129752ad5fc2146b7c06799872c76b07c7&quot; class=&quot;message&quot; title=&quot;Updated readme with link and screenshot&quot;&gt;Updated readme with link and screenshot&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2014-01-26T06:26:49-08:00&quot; title=&quot;2014-01-26 06:26:49&quot;&gt;January 26, 2014&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td class=&quot;icon&quot;&gt;
-        
-        &lt;img alt=&quot;Octocat-spinner-32&quot; class=&quot;spinner&quot; src=&quot;https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif&quot; width=&quot;16&quot;&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;content&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/blob/master/index.html&quot; class=&quot;js-directory-link&quot; id=&quot;eacf331f0ffc35d4b482f1d15a887d3b-6d9561fb0c19fb7a19b943a65320b2e8b8219028&quot; title=&quot;index.html&quot;&gt;index.html&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;message&quot;&gt;
-        &lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;a href=&quot;https://github.com/afaqurk/linux-dash/commit/ba2aaaacb4edfe65fdd569eb94577a7475d8a5ec&quot; class=&quot;message&quot; title=&quot;Internet speed widget added; experimentation with layout&quot;&gt;Internet speed widget added; experimentation with layout&lt;/a&gt;&lt;/span&gt;
-      &lt;/td&gt;
-      &lt;td class=&quot;age&quot;&gt;&lt;span class=&quot;css-truncate css-truncate-target&quot;&gt;&lt;time class=&quot;js-relative-date&quot; datetime=&quot;2013-11-21T19:14:02-08:00&quot; title=&quot;2013-11-21 19:14:02&quot;&gt;November 21, 2013&lt;/time&gt;&lt;/span&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
-
-  &lt;/table&gt;
-&lt;/div&gt;
-
-  &lt;div id=&quot;readme&quot; class=&quot;clearfix announce instapaper_body md&quot;&gt;
-    &lt;span class=&quot;name&quot;&gt;
-      
-      README.md
-    &lt;/span&gt;
-
-    &lt;article class=&quot;markdown-body entry-content&quot;&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://afaq.dreamhosters.com/linux-dash/&quot;&gt;- View Demo -&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A drop-in, low-overhead monitoring web dashboard for a linux machine.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github-camo.global.ssl.fastly.net/5f1b53d1667f4b1c4d397e1d6ee53f267363223f/687474703a2f2f616661712e647265616d686f73746572732e636f6d2f6c696e75782d646173682f6c696e75782d646173682e504e47&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://github-camo.global.ssl.fastly.net/5f1b53d1667f4b1c4d397e1d6ee53f267363223f/687474703a2f2f616661712e647265616d686f73746572732e636f6d2f6c696e75782d646173682f6c696e75782d646173682e504e47&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Monitors your server with stats on your precious hardware. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Update individual stats on demand.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/article&gt;
-  &lt;/div&gt;
-
-
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-</description>
-<title>
-Show HN: Linux server monitoring web dashboard
-</title>
-</item>
-<item>
-<link>
-http://privacysos.org/node/1311
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;content&quot;&gt;&lt;p&gt;Last night Andrea Shepard, a core Tor developer living in Seattle, posted this message to Twitter:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;You'd think &lt;a href=&quot;https://twitter.com/search?q=%23NSA&amp;amp;src=hash&quot;&gt;#NSA&lt;/a&gt; shipment 'interdiction' would be more subtle... &lt;a href=&quot;http://t.co/KVCscLbdgG&quot;&gt;pic.twitter.com/KVCscLbdgG&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;	&amp;#x2014; Andrea (@puellavulnerata) &lt;a href=&quot;https://twitter.com/puellavulnerata/statuses/426597381727989760&quot;&gt;January 24, 2014&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;The image she linked to shows the shipment tracking details for a computer Shepard ordered from Amazon, the global internet superstore and cloud computing giant that in late 2013 &lt;a href=&quot;http://www.informationweek.com/cloud/infrastructure-as-a-service/amazon-again-beats-ibm-for-cia-cloud-contract/d/d-id/1112211&quot;&gt;secured&lt;/a&gt; a $600 million contract with the CIA. Here's the image; click to enlarge it.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://privacysos.org/sites/all/images/shepardNSATAO.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://privacysos.org/sites/all/images/shepardNSATAO.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;As you can see, the tracking details are highly unusual. Instead of shipping the computer directly from the Amazon storage facility in Santa Ana, California, to Shepard in Seattle, the package was first dispatched to Dulles, Virginia. From Dulles, it moved another four times around the military and intelligence belt in suburban Washington DC, finally landing in Alexandria at 11:03 am on January 23.&lt;/p&gt;
-&lt;p&gt;Contrary to Amazon's shipment tracking summary, Virginia is not the package's final destination. Shepard does not live in Alexandria and told Amazon to ship the computer to a Seattle, Washington address. You can see this for yourself in the top right hand corner of the image.&lt;/p&gt;
-&lt;p&gt;At the end of December 2013, journalists working for the German newspaper &lt;em&gt;Der Spiegel &lt;/em&gt;&lt;a href=&quot;http://www.spiegel.de/international/world/the-nsa-uses-powerful-toolbox-in-effort-to-spy-on-global-networks-a-940969.html&quot;&gt;published&lt;/a&gt; information about a top-secret arm of the NSA, called the Tailored Access Operations division. TAO does highly targeted surveillance, a world apart from the indiscriminate, mass surveillance that happens under other NSA and FBI programs. One of the more alarming things we learned in the TAO story is that the NSA &lt;a href=&quot;http://www.theverge.com/2013/12/29/5253226/nsa-cia-fbi-laptop-usb-plant-spy&quot;&gt;intercepts&lt;/a&gt; computers ordered online and installs malware on them, before sending them on to their final destination.&lt;/p&gt;
-&lt;p&gt;Could this be what happened to Shepard's computer, ordered on Amazon and delivered to Alexandria, instead of to Seattle? Could Amazon have made a mistake in notifying Shepard about this extra journey, which was likely meant to stay a secret? If this really is an example of the TAO laptop-interception program in action, does this mean that companies like Amazon are made aware of the government's intention to &quot;look after&quot; consumer products ordered by their customers? Or did Shepard receive this weird notice only after some sort of glitch in the NSA's surveillance matrix?&lt;/p&gt;
-&lt;p&gt;If this indeed is evidence of the NSA intercepting a laptop to install spyware on it, it's yet more proof that, even when the spying is highly targeted and precise, the NSA isn't necessarily using its powers to only go after terrorists or dangerous criminals. Shepard is neither a criminal nor a terrorist. She's a developer, an activist, and a free speech supporter.&lt;/p&gt;
-&lt;p&gt;Is that all it takes to become a victim of the NSA's targeted spying? Someone should ask Amazon and the NSA what happened here, so we can get to the bottom of this bizarre situation. If in fact the NSA is installing malware on the computers of activists and coders working to protect internet anonymity, the government has a lot of explaining to do. If this is the case, it shows that even highly-targeted surveillance can be wildly abused, if agencies are left to fester in the dark to do whatever they want.&lt;/p&gt;
-&lt;/div&gt;
-	
-          &lt;/div&gt;
-</description>
-<title>
-Did this Tor developer become a victim of NSA's laptop interception program?
-</title>
-</item>
-<item>
-<author>
-Duncan Geere
-</author>
-<link>
-http://www.wired.co.uk/news/archive/2014-01/25/bloatware
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;mainInner&quot;&gt;
-            &lt;div class=&quot;articleHeadingAndCopy&quot;&gt;
-                
-                &lt;div id=&quot;mainContent&quot;&gt;
-                    &lt;div class=&quot;mainCopyEmbedHolder&quot;&gt;
-                        &lt;div class=&quot;mainCopy&quot;&gt;
-                             
-                            
-                                       
-
-&lt;figure class=&quot;imageBlob landscape pullToSide&quot;&gt;
-    &lt;div class=&quot;stickyInner&quot;&gt;
-        &lt;a class=&quot;embiggener&quot; href=&quot;http://www.wired.co.uk/news/archive/2014-01/25/bloatware/viewgallery/332019&quot;&gt;            
-                &lt;img alt=&quot;&quot; class=&quot; ssrMultiImg&quot; src=&quot;http://cdni.wired.co.uk/620x413/o_r/phone_5.jpg&quot;&gt;
-            
-&lt;/a&gt;
-        &lt;figcaption class=&quot;image-caption&quot;&gt;&lt;span class=&quot;image-credits&quot;&gt;Johan Larsson / CC BY 2.0&lt;/span&gt;        &lt;/figcaption&gt;
-    &lt;/div&gt;
-&lt;/figure&gt;
-        
-	
-
-	
-
-&lt;p&gt;The South Korean ministry of Science, ICT and Future Planning &lt;a href=&quot;http://www.zdnet.com/south-korea-rules-pre-installed-phone-bloatware-must-be-deletable-7000025533/&quot;&gt;has banned&lt;/a&gt;&amp;#xA0;the common practice of mobile manufacturers and
-networks putting un-removable apps on smartphones.&lt;/p&gt;&lt;p&gt;Telcos will now be required to make all pre-installed apps
-deletable, except for those that enable wi-fi connectivity,
-near-field communication, customer service and an app store.&lt;/p&gt;&lt;p&gt;&quot;The move aims to rectify an abnormal practice that causes
-inconvenience to smartphone users and causes unfair competition
-among industry players,&quot; said the ministry in a Korean-language
-press release.&lt;/p&gt;&lt;p&gt;It added that users will also benefit from the regulations in
-terms of battery life and data storage.&lt;/p&gt;	
-
-	
-
-&lt;p&gt;We're unlikely to see similar legislation in the UK. Apple has
-famously never permitted carriers or networks to pre-install apps
-on the iPhone, and Android users can remove these apps by rooting
-and swapping out their handset software for a clean version, though
-the technical skills required make this a somewhat rare
-practice.&lt;/p&gt;
-
-                            
-
-                            
-
-                            
-                            
-                                
-                            
-                                
-                            
-
-
-                            
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        
-        
-
-        
-
-            
-            
-
-    &lt;p id=&quot;latestOnWired&quot;&gt;
-        &lt;h2&gt;Latest on wired.co.uk&lt;/h2&gt;
-        
-    &lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-<title>
-South Korea bans unremovable mobile bloatware
-</title>
-</item>
-<item>
-<author>
-Alexis Rossi
-</author>
-<link>
-http://blog.archive.org/2014/01/25/tshirt_cushions/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;entry-content&quot;&gt;
-						&lt;div id=&quot;attachment_8025&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://blog.archive.org/wp-content/uploads/2014/01/prettypews.jpg&quot;&gt;&lt;img class=&quot; wp-image-8025    &quot; alt=&quot;Pews, photo by Jason Scott&quot; src=&quot;http://blog.archive.org/wp-content/uploads/2014/01/prettypews-1024x682.jpg&quot; width=&quot;368&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;The great room. Photo by Jason Scott.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;The Internet Archive is headquartered in a building that used to be a Christian Science church. &amp;#xA0;The great room includes a gorgeous stained glass dome, a pipe organ, and graceful wooden pews. &amp;#xA0;We seat 400+ people in this space to show movies&amp;#xA0;and to host conferences on a regular basis.&lt;/p&gt;
-&lt;p&gt;The room is beautiful, but those pews are hard on the posterior if you plan to sit there for more than 15 minutes at a time.&lt;/p&gt;
-&lt;div id=&quot;attachment_8027&quot; class=&quot;wp-caption alignright&quot;&gt;&lt;a href=&quot;http://blog.archive.org/wp-content/uploads/2014/01/shirts.jpg&quot;&gt;&lt;img class=&quot;size-medium wp-image-8027&quot; alt=&quot;Turning tshirts into cushions.&quot; src=&quot;http://blog.archive.org/wp-content/uploads/2014/01/shirts-168x300.jpg&quot; width=&quot;168&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Turning tshirts into cushions.&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;So we came up with a plan &amp;#x2013; let&amp;#x2019;s make some cushions! &amp;#xA0;That sounds simple enough, but we are thrifty people.&lt;/p&gt;
-&lt;p&gt;We are taking old T-shirts and recycling them into cushion covers. &amp;#xA0;&lt;strong&gt;We are looking for T-shirts from non-profits or from tech companies in particular&lt;/strong&gt;, but we&amp;#x2019;ll take whatever you&amp;#x2019;ve got. &amp;#xA0;Any size, any color, just as long as there aren&amp;#x2019;t holes in the fabric or big stains that may discourage people from sitting on that cushion.&lt;/p&gt;
-&lt;p&gt;This is where you come in! &amp;#xA0;Which one of us doesn&amp;#x2019;t have a bunch of old corporate swag T-shirts sitting in the back of our closet taking up space? &amp;#xA0;If you&amp;#x2019;re willing to part with those useless shirts, we&amp;#x2019;re willing to put them to use.&lt;/p&gt;
-&lt;p&gt;Drop off your shirts in person, or send your shirts to:&lt;/p&gt;
-&lt;p&gt;Internet Archive&lt;br&gt;
-300 Funston Ave&lt;br&gt;
-San Francisco, CA 94118&lt;/p&gt;
-&lt;p&gt;Have questions? &amp;#xA0;Email &lt;a href=&quot;mailto:info@archive.org&quot; target=&quot;_blank&quot;&gt;info@archive.org&lt;/a&gt;.&lt;/p&gt;
-&lt;div id=&quot;attachment_8029&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://blog.archive.org/wp-content/uploads/2014/01/pews.jpg&quot;&gt;&lt;img class=&quot;size-large wp-image-8029&quot; alt=&quot;Your old shirts could make somebody's butt much more comfortable.&quot; src=&quot;http://blog.archive.org/wp-content/uploads/2014/01/pews-1024x576.jpg&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Your old T-shirts could make somebody&amp;#x2019;s butt very happy.&lt;/p&gt;&lt;/div&gt;
-											&lt;/div&gt;
-
-
-					&lt;/div&gt;
-</description>
-<title>
-We want your old T-shirts
-</title>
-</item>
-<item>
-<link>
 http://recode.net/2014/01/26/exclusive-google-to-buy-artificial-intelligence-startup-deepmind-for-400m/
 </link>
 <description>
@@ -470,6 +38,133 @@ http://recode.net/2014/01/26/exclusive-google-to-buy-artificial-intelligence-sta
 </description>
 <title>
 Google to Buy Artificial Intelligence Startup DeepMind for $400M
+</title>
+</item>
+<item>
+<link>
+https://github.com/whily/yalo
+</link>
+<description>
+&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
+          
+
+
+
+
+
+
+
+  &lt;a href=&quot;https://github.com/whily/yalo&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
+  &lt;span class=&quot;language-color&quot;&gt;Common Lisp&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;Shell&lt;/span&gt;
+  &lt;/a&gt;
+
+
+
+
+
+
+
+&lt;a href=&quot;https://github.com/whily/yalo/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
+
+
+  &lt;div id=&quot;readme&quot; class=&quot;clearfix announce instapaper_body md&quot;&gt;
+    &lt;span class=&quot;name&quot;&gt;
+      
+      README.md
+    &lt;/span&gt;
+
+    &lt;article class=&quot;markdown-body entry-content&quot;&gt;
+
+&lt;p&gt;Yalo is a Lisp OS running on bare metal x86-64 hardware. The system
+programming language is &lt;strong&gt;Ink&lt;/strong&gt;, a new Lisp dialect which combines the
+elegance of Scheme and powerfulness of Common Lisp. The project webpage
+is: &lt;a href=&quot;https://github.com/whily/yalo&quot;&gt;https://github.com/whily/yalo&lt;/a&gt;&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+</description>
+<title>
+Yalo – Lisp OS running on bare metal x86-64 hardware
+</title>
+</item>
+<item>
+<link>
+https://github.com/ianpreston/redditfs
+</link>
+<description>
+&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
+
+&lt;p&gt;Everything is better in an 80x25 green-and-black terminal -- even Reddit! &lt;code&gt;redditfs&lt;/code&gt; maps subreddits to a FUSE filesystem, so you can use your favorite shell (or GUI file browser, or SSH, or FTP) to browse Reddit.&lt;/p&gt;
+
+&lt;h2&gt;
+&lt;a name=&quot;example&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#example&quot;&gt;&lt;/a&gt;Example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ls -l /r/programming
+total 0
+dr-xr-xr-x@ 3 root  wheel  0 Jan 16 10:30 ANN:_pandas_0130_released
+dr-xr-xr-x@ 3 root  wheel  0 Jan 18 13:08 An_evaluation_of_simple_Python_performance_tweaks
+dr-xr-xr-x@ 3 root  wheel  0 Jan 17 08:36 Anyone_have_experience_installing_Folium_for_Py_33?
+dr-xr-xr-x@ 3 root  wheel  0 Jan 18 09:48 Are_there_any_python_made_games_on_Steam?
+dr-xr-xr-x@ 3 root  wheel  0 Jan 16 20:06 Beginner:_Getting_Beyond_Syntax
+dr-xr-xr-x@ 3 root  wheel  0 Jan 18 00:53 Best_Questions_to_ask_when_hiring_a_Python_dev?
+...
+$ ls -l /r/programming/An_evaluation_of_simple_Python_performance_tweaks
+total 16
+-r--r--r--@ 1 root  wheel  97 Jan 18 13:08 permalink
+-r--r--r--@ 1 root  wheel   0 Jan 18 13:08 selftext
+-r--r--r--@ 1 root  wheel  72 Jan 18 13:08 url
+$ cat /r/programming/Best_Questions_to_ask_when_hiring_a_Python_dev?/selftext
+I'm a long time C/C++/C# dev who is now diving into python head on, and using it
+ on a project here in Seattle.  Part of this is I need to grow my team and hire 
+...
+$ lynx $(cat /r/programming/An_evaluation_of_simple_Python_performance_tweaks/url)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;
+&lt;a name=&quot;howto&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#howto&quot;&gt;&lt;/a&gt;Howto&lt;/h2&gt;
+
+&lt;p&gt;You'll need python 2.7 and FUSE. On OSX, you can get FUSE support is via &lt;a href=&quot;http://osxfuse.github.io/&quot;&gt;OSXFUSE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/ianpreston/redditfs.git
+$ cd redditfs &amp;amp;&amp;amp; virtualenv env &amp;amp;&amp;amp; source env/bin/activate
+$ pip install -r reqs.txt
+$ mkdir /r
+$ python redditfs.py /r
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;
+&lt;a name=&quot;license&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#license&quot;&gt;&lt;/a&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Available under the MIT License.&lt;/p&gt;&lt;/article&gt;
+  &lt;/div&gt;
+</description>
+<title>
+I mapped Reddit to a filesystem so you can browse r/programming with ls, cd, and cat -- check it out.
+</title>
+</item>
+<item>
+<link>
+http://http2.github.io/http2-spec/#GTFO
+</link>
+<description>
+
+</description>
+<title>
+HTTP 2.0: GTFO (General Termination of Future Operations)
+</title>
+</item>
+<item>
+<link>
+http://www.animatedengines.com/
+</link>
+<description>
+&lt;div&gt;&lt;div class=&quot;navbar&quot;&gt;&lt;span class=&quot;active&quot;&gt;Home&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;main&quot;&gt;&lt;div class=&quot;mm_ad&quot;&gt;&lt;a href=&quot;http://507movements.com&quot; title=&quot;507movements.com&quot;&gt;&lt;img src=&quot;http://www.animatedengines.com/img/507movementsad.png&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;Click an engine to see how it works.&lt;/p&gt;&lt;ul class=&quot;menu&quot;&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/otto.html&quot;&gt;&lt;img alt=&quot;Four stroke&quot; src=&quot;http://www.animatedengines.com/img/thumb/otto.gif&quot;&gt;&lt;p&gt;Four stroke&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/diesel.html&quot;&gt;&lt;img alt=&quot;Diesel&quot; src=&quot;http://www.animatedengines.com/img/thumb/diesel.gif&quot;&gt;&lt;p&gt;Diesel&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/twostroke.html&quot;&gt;&lt;img alt=&quot;Two stroke&quot; src=&quot;http://www.animatedengines.com/img/thumb/twostroke.gif&quot;&gt;&lt;p&gt;Two stroke&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/wankel.html&quot;&gt;&lt;img alt=&quot;Wankel&quot; src=&quot;http://www.animatedengines.com/img/thumb/wankel.gif&quot;&gt;&lt;p&gt;Wankel&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/atkinson.html&quot;&gt;&lt;img alt=&quot;Atkinson&quot; src=&quot;http://www.animatedengines.com/img/thumb/atkinson.gif&quot;&gt;&lt;p&gt;Atkinson&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/gnome.html&quot;&gt;&lt;img alt=&quot;Gnome Rotary&quot; src=&quot;http://www.animatedengines.com/img/thumb/gnome.gif&quot;&gt;&lt;p&gt;Gnome Rotary&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/jets.html&quot;&gt;&lt;img alt=&quot;Jet Propulsion&quot; src=&quot;http://www.animatedengines.com/img/thumb/tfan.gif&quot;&gt;&lt;p&gt;Jet Propulsion&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/locomotive.html&quot;&gt;&lt;img alt=&quot;Steam Locomotive&quot; src=&quot;http://www.animatedengines.com/img/thumb/locomotive.gif&quot;&gt;&lt;p&gt;Steam Locomotive&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/oscillatingsteam.html&quot;&gt;&lt;img alt=&quot;Oscillating Steam&quot; src=&quot;http://www.animatedengines.com/img/thumb/oscillatingsteam.gif&quot;&gt;&lt;p&gt;Oscillating Steam&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/co2.html&quot;&gt;&lt;img alt=&quot;CO2 Motor&quot; src=&quot;http://www.animatedengines.com/img/thumb/co2.gif&quot;&gt;&lt;p&gt;CO2 Motor&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/coomber.html&quot;&gt;&lt;img alt=&quot;Coomber&quot; src=&quot;http://www.animatedengines.com/img/thumb/coomber.gif&quot;&gt;&lt;p&gt;Coomber&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/crankless.html&quot;&gt;&lt;img alt=&quot;Crank Substitute&quot; src=&quot;http://www.animatedengines.com/img/thumb/crankless.gif&quot;&gt;&lt;p&gt;Crank Substitute&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/revcyl.html&quot;&gt;&lt;img alt=&quot;Revolving Cylinder&quot; src=&quot;http://www.animatedengines.com/img/thumb/revcyl.gif&quot;&gt;&lt;p&gt;Revolving Cylinder&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/watt.html&quot;&gt;&lt;img alt=&quot;Watt Beam&quot; src=&quot;http://www.animatedengines.com/img/thumb/watt.gif&quot;&gt;&lt;p&gt;Watt Beam&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/grasshopper.html&quot;&gt;&lt;img alt=&quot;Grasshopper Beam&quot; src=&quot;http://www.animatedengines.com/img/thumb/grasshopper.gif&quot;&gt;&lt;p&gt;Grasshopper Beam&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/unkbeam.html&quot;&gt;&lt;img alt=&quot;Unknown Beam&quot; src=&quot;http://www.animatedengines.com/img/thumb/unkbeam.gif&quot;&gt;&lt;p&gt;Unknown Beam&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/newcomen.html&quot;&gt;&lt;img alt=&quot;Newcomen Atmospheric&quot; src=&quot;http://www.animatedengines.com/img/thumb/newcomen.gif&quot;&gt;&lt;p&gt;Newcomen Atmospheric&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/vstirling.html&quot;&gt;&lt;img alt=&quot;Two Cylinder Stirling&quot; src=&quot;http://www.animatedengines.com/img/thumb/vstirling.gif&quot;&gt;&lt;p&gt;Two Cylinder Stirling&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/stirling.html&quot;&gt;&lt;img alt=&quot;Single Cylinder Stirling&quot; src=&quot;http://www.animatedengines.com/img/thumb/stirling.gif&quot;&gt;&lt;p&gt;Single Cylinder Stirling&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/ross.html&quot;&gt;&lt;img alt=&quot;Ross Yoke Stirling&quot; src=&quot;http://www.animatedengines.com/img/thumb/ross.gif&quot;&gt;&lt;p&gt;Ross Yoke Stirling&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;div class=&quot;ctr&quot;&gt;&lt;a href=&quot;http://www.animatedengines.com/ltdstirling.html&quot;&gt;&lt;img alt=&quot;Low Differential Stirling&quot; src=&quot;http://www.animatedengines.com/img/thumb/ltdstirling.gif&quot;&gt;&lt;p&gt;Low Differential Stirling&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+<title>
+Animated Engines
 </title>
 </item>
 </channel>
