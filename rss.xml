@@ -15,149 +15,6 @@ myread
 </description>
 <item>
 <link>
-http://recode.net/2014/01/26/exclusive-google-to-buy-artificial-intelligence-startup-deepmind-for-400m/
-</link>
-<description>
-&lt;div&gt;&lt;div class=&quot;large-12 columns postarea&quot;&gt;
-			&lt;p&gt;Google is shelling out $400 million to buy a secretive artificial intelligence company called DeepMind.&lt;/p&gt;
-&lt;p&gt;Google confirmed the deal after &lt;strong&gt;Re/code&lt;/strong&gt; inquired about it, but declined to specify a price.&lt;/p&gt;
-&lt;p&gt;Based in London, &lt;a href=&quot;http://www.deepmind.com/&quot;&gt;DeepMind&lt;/a&gt; was founded by games prodigy and neuroscientist Demis Hassabis, along with Shane Legg and Mustafa Suleyman.&lt;/p&gt;
-&lt;p&gt;This is in large part an artificial intelligence talent acquisition, and Google CEO Larry Page led the deal himself, sources said. According to &lt;a href=&quot;http://en.wikipedia.org/wiki/Demis_Hassabis&quot;&gt;online bios&lt;/a&gt;, Hassabis in particular is quite a talent, a child prodigy in chess who was later called &amp;#x201C;probably the best games player in history&amp;#x201D; by the &lt;a href=&quot;http://www.boardability.com/profile.php?id=demis_hassabis&quot;&gt;Mind Sports Olympiad&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;DeepMind has only a landing page for a website where it describes its business as building learning algorithms for simulations, e-commerce and games. Profiles on LinkedIn indicate the company is about three years old.&lt;/p&gt;
-&lt;p&gt;Sources said Founders Fund is a major investor in DeepMind, along with Horizons Ventures.&amp;#xA0;Skype and Kazaa developer Jaan Tallin was an investor and advisor (not a founder, as we initially described him).&lt;/p&gt;
-&lt;p&gt;Other Google AI experts include &lt;a href=&quot;http://research.google.com/people/jeff/&quot;&gt;Jeff Dean&lt;/a&gt; and &lt;a href=&quot;http://www.linkedin.com/pub/anna-patterson/a/21b/159&quot;&gt;Anna Patterson&lt;/a&gt;. The company also recently hired &lt;a href=&quot;https://www.cs.toronto.edu/~hinton/&quot;&gt;Geoffrey Hinton&lt;/a&gt; part-time.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Though DeepMind may not be a household name in tech, sources in the artificial intelligence community describe the company as a formidable AI player and say it has been aggressively recruiting in the space. One source said DeepMind has a team of at least 50 people and has secured more than $50 million in funding. This person described DeepMind as &amp;#x201C;the last large independent company&amp;#xA0;with a strong focus on artificial intelligence,&amp;#x201D; and said it competed with companies like Google, Facebook and Baidu for talent.&lt;/p&gt;
-&lt;p&gt;Multiple sources said the company has been developing a variety of approaches to AI, and applying them to various potential products including a recommendation system for e-commerce.&lt;/p&gt;
-
-			
-						
-			
-	
-		&lt;/div&gt;
-	&lt;/div&gt;
-</description>
-<title>
-Google to Buy Artificial Intelligence Startup DeepMind for $400M
-</title>
-</item>
-<item>
-<link>
-https://github.com/whily/yalo
-</link>
-<description>
-&lt;div&gt;&lt;div id=&quot;js-repo-pjax-container&quot; class=&quot;repository-content context-loader-container&quot;&gt;
-          
-
-
-
-
-
-
-
-  &lt;a href=&quot;https://github.com/whily/yalo&quot; class=&quot;repository-lang-stats-graph js-toggle-lang-stats tooltipped downwards&quot; title=&quot;Show language statistics&quot;&gt;
-  &lt;span class=&quot;language-color&quot;&gt;Common Lisp&lt;/span&gt;&lt;span class=&quot;language-color&quot;&gt;Shell&lt;/span&gt;
-  &lt;/a&gt;
-
-
-
-
-
-
-
-&lt;a href=&quot;https://github.com/whily/yalo/find/master&quot; class=&quot;js-show-file-finder&quot;&gt;Show File Finder&lt;/a&gt;
-
-
-  &lt;div id=&quot;readme&quot; class=&quot;clearfix announce instapaper_body md&quot;&gt;
-    &lt;span class=&quot;name&quot;&gt;
-      
-      README.md
-    &lt;/span&gt;
-
-    &lt;article class=&quot;markdown-body entry-content&quot;&gt;
-
-&lt;p&gt;Yalo is a Lisp OS running on bare metal x86-64 hardware. The system
-programming language is &lt;strong&gt;Ink&lt;/strong&gt;, a new Lisp dialect which combines the
-elegance of Scheme and powerfulness of Common Lisp. The project webpage
-is: &lt;a href=&quot;https://github.com/whily/yalo&quot;&gt;https://github.com/whily/yalo&lt;/a&gt;&lt;/p&gt;&lt;/article&gt;
-  &lt;/div&gt;
-
-
-        &lt;/div&gt;
-
-      &lt;/div&gt;
-</description>
-<title>
-Yalo – Lisp OS running on bare metal x86-64 hardware
-</title>
-</item>
-<item>
-<link>
-https://github.com/ianpreston/redditfs
-</link>
-<description>
-&lt;div&gt;&lt;article class=&quot;markdown-body entry-content&quot;&gt;
-
-&lt;p&gt;Everything is better in an 80x25 green-and-black terminal -- even Reddit! &lt;code&gt;redditfs&lt;/code&gt; maps subreddits to a FUSE filesystem, so you can use your favorite shell (or GUI file browser, or SSH, or FTP) to browse Reddit.&lt;/p&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;example&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#example&quot;&gt;&lt;/a&gt;Example&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ls -l /r/programming
-total 0
-dr-xr-xr-x@ 3 root  wheel  0 Jan 16 10:30 ANN:_pandas_0130_released
-dr-xr-xr-x@ 3 root  wheel  0 Jan 18 13:08 An_evaluation_of_simple_Python_performance_tweaks
-dr-xr-xr-x@ 3 root  wheel  0 Jan 17 08:36 Anyone_have_experience_installing_Folium_for_Py_33?
-dr-xr-xr-x@ 3 root  wheel  0 Jan 18 09:48 Are_there_any_python_made_games_on_Steam?
-dr-xr-xr-x@ 3 root  wheel  0 Jan 16 20:06 Beginner:_Getting_Beyond_Syntax
-dr-xr-xr-x@ 3 root  wheel  0 Jan 18 00:53 Best_Questions_to_ask_when_hiring_a_Python_dev?
-...
-$ ls -l /r/programming/An_evaluation_of_simple_Python_performance_tweaks
-total 16
--r--r--r--@ 1 root  wheel  97 Jan 18 13:08 permalink
--r--r--r--@ 1 root  wheel   0 Jan 18 13:08 selftext
--r--r--r--@ 1 root  wheel  72 Jan 18 13:08 url
-$ cat /r/programming/Best_Questions_to_ask_when_hiring_a_Python_dev?/selftext
-I'm a long time C/C++/C# dev who is now diving into python head on, and using it
- on a project here in Seattle.  Part of this is I need to grow my team and hire 
-...
-$ lynx $(cat /r/programming/An_evaluation_of_simple_Python_performance_tweaks/url)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;howto&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#howto&quot;&gt;&lt;/a&gt;Howto&lt;/h2&gt;
-
-&lt;p&gt;You'll need python 2.7 and FUSE. On OSX, you can get FUSE support is via &lt;a href=&quot;http://osxfuse.github.io/&quot;&gt;OSXFUSE&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/ianpreston/redditfs.git
-$ cd redditfs &amp;amp;&amp;amp; virtualenv env &amp;amp;&amp;amp; source env/bin/activate
-$ pip install -r reqs.txt
-$ mkdir /r
-$ python redditfs.py /r
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;
-&lt;a name=&quot;license&quot; class=&quot;anchor&quot; href=&quot;https://github.com/ianpreston/redditfs#license&quot;&gt;&lt;/a&gt;License&lt;/h2&gt;
-
-&lt;p&gt;Available under the MIT License.&lt;/p&gt;&lt;/article&gt;
-  &lt;/div&gt;
-</description>
-<title>
-I mapped Reddit to a filesystem so you can browse r/programming with ls, cd, and cat -- check it out.
-</title>
-</item>
-<item>
-<link>
-http://http2.github.io/http2-spec/#GTFO
-</link>
-<description>
-
-</description>
-<title>
-HTTP 2.0: GTFO (General Termination of Future Operations)
-</title>
-</item>
-<item>
-<link>
 http://www.animatedengines.com/
 </link>
 <description>
@@ -165,6 +22,70 @@ http://www.animatedengines.com/
 </description>
 <title>
 Animated Engines
+</title>
+</item>
+<item>
+<link>
+http://games.yahoo.com/blogs/plugged-in/happy-40th-birthday-dungeons-dragons-214544046.html
+</link>
+<description>
+&lt;div&gt;&lt;ul&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/happy-40th-birthday-dungeons-dragons-214544046.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Dungeons and Dragons, the tabletop game that introduced fantasy role-playing to most of the world, turns the big four-oh this weekend -- and it's showing no signs of slowing down. While D&amp;amp;D is almost a recurring character on some prime &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/rare-nes-game-passes-10-000-mark-ebay-210049260.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/rare-nes-game-passes-10-000-mark-ebay-210049260.html&quot;&gt;Rare NES game passes $30,000 mark on eBay, keeps climbing&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Only 116 copies of the ultra-rare Nintendo World Championships cartridge for the original Nintendo Entertainment System are known to exist, one of which is existing right now on eBay. You wouldn&amp;#x2019;t really know it based on the cartridge&amp;#x2019;s rough look, &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content rmx-ad has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/bill-gates-obliterated-chess-champ-just-over-one-174129124.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/bill-gates-obliterated-chess-champ-just-over-one-174129124.html&quot;&gt;Bill Gates obliterated by chess champ in just over one minute&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Bill Gates is a smart guy. A really smart guy. But when it comes to chess, he's a regular Joe. The world's richest man (or thereabouts) met the world's best chess player Thursday night on Skavlan, a Norwegian-Swedish television talk &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content cavideo has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/5-awesome-ipad-games-might-missed-010352373.html&quot; tabindex=&quot;-1&quot;&gt;&lt;span class=&quot;icon-overlay&quot;&gt;&lt;span class=&quot;video-icon d-ib&quot;&gt;&lt;i class=&quot;icon-sprite&quot;&gt;&lt;/i&gt; &lt;span class=&quot;play-now fz-xxs&quot;&gt;Play&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/5-awesome-ipad-games-might-missed-010352373.html&quot;&gt;5 awesome iPad games you might have missed&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Still working your way through the Great Video Game Flood of Holiday 2013? The past few months saw the release of two new consoles and huge games like Assassin&amp;#x2019;s Creed IV, Call of Duty: Ghosts, Super Mario 3D World, The &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content cavideo has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/elder-scrolls-online-taps-impressive-geeky-voice-cast-182633377.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/elder-scrolls-online-taps-impressive-geeky-voice-cast-182633377.html&quot;&gt;The Elder Scrolls Online taps impressive, geeky voice cast&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Bethesda's not fooling around when it comes to voice casting for its upcoming online role-playing game. The developer has tapped a former member of Monty Python, a Golden Globe winner, Dumbledore and Wonder Woman to help bring The Elder Scrolls &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/harm-pink-toys-plenty-004048047.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/harm-pink-toys-plenty-004048047.html&quot;&gt;What&amp;#x2019;s the harm in pink toys? Plenty.&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Girls like pink. Boys like blue. It&amp;#x2019;s a cultural attitude so strong it might as well be burned into our DNA. Few things are more powerful than that -- and the idea&amp;#x2019;s never been stronger than it is today. But &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/candy-crush-saga-makers-want-trademark-word-candy-195724320.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/candy-crush-saga-makers-want-trademark-word-candy-195724320.html&quot;&gt;Candy Crush Saga makers want to trademark the word &amp;#x2018;candy&amp;#x2019;&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;King, the company behind the mobile smash Candy Crush Saga, isn't content with owning your free time. Now it wants a part of your everyday vocabulary, too. The U.S. Patent and Trademark Office has approved the company's application to trademark &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/two-things-nintendo-stop-bleeding-003848076.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/two-things-nintendo-stop-bleeding-003848076.html&quot;&gt;Two things Nintendo can do to stop the bleeding&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;The state of the Mushroom Kingdom is not strong. News of Nintendo&amp;#x2019;s latest financial woes spread like wildfire Friday, though it wasn&amp;#x2019;t exactly shocking. The company&amp;#x2019;s Wii U console has been a mess, to put it mildly, with weak sales &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/nintendo-slashes-fiscal-forecast-lousy-wii-u-sales-170745376.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/nintendo-slashes-fiscal-forecast-lousy-wii-u-sales-170745376.html&quot;&gt;Nintendo slashes fiscal forecast on lousy Wii U sales&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Stung by a rough holiday season and consumer apathy towards its latest console, Nintendo has slashed its financial forecast for the fiscal year ending March 2014 and cut its Wii U sales estimate by over two-thirds. Nintendo said early Friday &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/nightmare-busters-awesome-game-super-nintendo-185559531.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/nightmare-busters-awesome-game-super-nintendo-185559531.html&quot;&gt;Nightmare Busters Is an Awesome New Game for &amp;#x2026; Super Nintendo?&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;By Chris Kohler, Wired: Game|Life Bargain game publisher Majesco released a version of the classic game Frogger for the Super Nintendo Entertainment System in 1998. By then, every other publisher had moved on from the 16-bit game platform to shiny &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content rmx-ad has-image voh-parent cf&quot;&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/apple-google-yank-controversial-plastic-surgery-game-aimed-175713954.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/apple-google-yank-controversial-plastic-surgery-game-aimed-175713954.html&quot;&gt;Apple, Google yank controversial plastic surgery game aimed at kids&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Apple and Google have both pulled a controversial plastic surgery &amp;#x2018;game&amp;#x2019; aimed at children from their app stores after a hailstorm of criticism. Plastic Surgery for Barbie (on iOS) and Plastic Surgery (on Android) were both removed from the storefronts &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/mlb-resurrects-classic-video-game-r-b-baseball-180539249.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/mlb-resurrects-classic-video-game-r-b-baseball-180539249.html&quot;&gt;MLB resurrects video game classic R.B.I. Baseball&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;The gaming world thought it had said R.I.P. to R.B.I. Baseball in 1995, but the long-dormant sports franchise is coming off of the bench. Major League Baseball has revealed plans to bring back the series that debuted on the Nintendo &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/magic-gathering-movie-works-194213249.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/magic-gathering-movie-works-194213249.html&quot;&gt;Magic: The Gathering movie in the works&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;The name that launched a billion collectible card games is headed to a theater near you. According to The Hollywood Reporter, 20th Century Fox has acquired the big-screen rights to Magic: The Gathering with the intention of turning the long-running &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content cavideo has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/call-duty-ghosts-expansion-feature-halloween-boogieman-190710703.html&quot; tabindex=&quot;-1&quot;&gt;&lt;span class=&quot;icon-overlay&quot;&gt;&lt;span class=&quot;video-icon d-ib&quot;&gt;&lt;i class=&quot;icon-sprite&quot;&gt;&lt;/i&gt; &lt;span class=&quot;play-now fz-xxs&quot;&gt;Play&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/call-duty-ghosts-expansion-feature-halloween-boogieman-190710703.html&quot;&gt;Call of Duty: Ghosts expansion to feature &amp;#x2018;Halloween&amp;#x2019; boogie man&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Usually when the film and video game worlds collide, it&amp;#x2019;s a messy affair. The latest run-in, though, is just plain weird. Activision has unveiled Onslaught, the first downloadable expansion pack for Call of Duty: Ghosts. And in a twist straight &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/ea-brings-offline-mode-simcity-ten-months-190536171.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/ea-brings-offline-mode-simcity-ten-months-190536171.html&quot;&gt;EA brings offline mode to SimCity ten months late&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;Nearly a year after a disastrous launch plagued with server woes and bitter player complaints, the troubled SimCity is finally getting an offline mode. EA announced the change Monday, saying developer Maxis is &amp;#x201C;in the late stages&amp;#x201D; of developing the &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li class=&quot;content has-image voh-parent cf&quot;&gt;&lt;div class=&quot;wrapper cf&quot;&gt;&lt;a class=&quot;img ov-h thumb-left  &quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/sony-explains-why-playstation-vita-come-short-184506750.html&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;&lt;div class=&quot;body&quot;&gt;&lt;div class=&quot;body-wrap&quot;&gt;&lt;h3 class=&quot;fw-b fz-s lh-115&quot;&gt;&lt;a class=&quot;&quot; href=&quot;http://games.yahoo.com/blogs/plugged-in/sony-explains-why-playstation-vita-come-short-184506750.html&quot;&gt;Sony explains why PlayStation Vita has come up short&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;summary mt-xxs&quot;&gt;&quot;Games on tablets and phones have changed the marketplace, and people can't carry too many things around at one time,&quot; says executive Fergal Gara. By Eddie Makuch, GameSpot The rise in popularity of mobile games for tablets and smartphones has &amp;#x2026; Continue reading &amp;#x2192;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;attribution fz-xxs&quot;&gt;&lt;span class=&quot;source&quot;&gt;Plugged In&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;    &lt;/div&gt;
+</description>
+<title>
+Happy 40th birthday, Dungeons &amp; Dragons
+</title>
+</item>
+<item>
+<link>
+https://medium.com/building-things-on-the-internet/40e9b2b36148
+</link>
+<description>
+&lt;div class=&quot;post-field body&quot; score=&quot;30.0&quot;&gt;&lt;section name=&quot;81e7&quot; score=&quot;2.5&quot;&gt;&lt;div class=&quot;section-inner layout-single-column&quot;&gt;&lt;p name=&quot;66bf&quot;&gt;Python has a terrible rep when it comes to its parallel processing capabilities. Ignoring the standard arguments about its threads and the GIL (which are mostly valid), the real problem I see with parallelism in Python isn't a technical one, but a pedagogical one. The common tutorials surrounding Threading and Multiprocessing in Python, while generally excellent, are pretty “heavy.” They start in the intense stuff, and stop before they get to the really good, day-to-day useful parts.&lt;/p&gt;&lt;h3 name=&quot;35a3&quot;&gt;Traditional Example&lt;/h3&gt;&lt;p name=&quot;52ee&quot;&gt;A quick survey of the top DDG results for “Python threading tutorial” shows that just about every single one of them gives the same Class + Queue based example.&lt;/p&gt;&lt;p name=&quot;bd16&quot;&gt;&lt;em&gt;The de-facto, intro to threading/multiprocessing, producer/Consumer example code:&lt;/em&gt;&lt;/p&gt;&lt;figure name=&quot;9352&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*ZwRvSeMWp30HonAefgOKGg.png&quot;&gt;&lt;figcaption class=&quot;image-caption&quot;&gt;Image, because Medium still kind of sucks for posting large code sections. Text is available &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/chriskiehl/Blog/tree/master/40e9b2b36148&quot; rel=&quot;nofollow&quot;&gt;here&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;p name=&quot;a1d7&quot;&gt;Mmm.. Smell those Java roots.&lt;/p&gt;&lt;p name=&quot;2cff&quot;&gt;Now, I don’t want to give the impression that I think the Producer / Consumer way of handling threading/multiprocessing is wrong — because it’s definitely not. In fact it is perfect for many kinds of problems. However, what I &lt;em&gt;do&lt;/em&gt; think is that it’s not the most useful for day-to-day scripting.&lt;/p&gt;&lt;h3 name=&quot;196f&quot;&gt;The Problems (as I see them)&lt;/h3&gt;&lt;p name=&quot;f25b&quot;&gt;For one, you need a boiler-plate class in order to do anything useful. Secondly, you’ll need to maintain a Queue through which you can pipe objects, and to top if all off, you’ll need methods on both ends of the pipe in order to do the actual work (likely involving another queue if you want to communicate two ways or store results).&lt;/p&gt;&lt;p name=&quot;963a&quot;&gt;&lt;strong&gt;More workers, more problems.&lt;/strong&gt;&lt;/p&gt;&lt;p name=&quot;a31e&quot;&gt;From here, next thing you’d likely do is make a pool of those worker classes in order to start squeezing some speed out of your Python. Below is a variation of the example code given in the excellent &lt;a target=&quot;_blank&quot; href=&quot;http://www.ibm.com/developerworks/aix/library/au-threadingpython/&quot; rel=&quot;nofollow&quot;&gt;IBM tutorial&lt;/a&gt; on threading. It’s a very common scenario in which you spread the task of retrieving web pages across multiple threads.&lt;/p&gt;&lt;figure name=&quot;190e&quot;&gt;&lt;img width=&quot;699&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*UT2EaMTcAFTwKqnLOzuj8Q.png&quot;&gt;&lt;figcaption class=&quot;image-caption&quot;&gt;Seriously, Medium. Fix your code support. &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/chriskiehl/Blog/tree/master/40e9b2b36148&quot; rel=&quot;nofollow&quot;&gt;Code is Here.&lt;/a&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;p name=&quot;b1bf&quot;&gt;Works like a charm, but look at all that code! Now we've got setup methods, lists of threads to keep track of, and worst of all, if you’re anywhere as dead-lock prone as I am, a bunch of join statements to issue. And It only gets more complex from here!&lt;/p&gt;&lt;p name=&quot;7b73&quot;&gt;What’s been accomplished so far? A whole lotta nothin. Just about everything in the above code is pure plumbing. It’s boiler-plate-y, It’s error prone (Hell, I even forgot to call &lt;em&gt;task_done() &lt;/em&gt;on the queue object while writing this (I’m too lazy to take fix it and take another screenshot)), and it’s a lot of work for little payoff. Luckily, there’s a much better way.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section name=&quot;e689&quot; score=&quot;2.5&quot;&gt;&lt;div class=&quot;section-inner layout-single-column&quot;&gt;&lt;h2 name=&quot;0c37&quot;&gt;Introducing: Map&lt;/h2&gt;&lt;p name=&quot;7511&quot;&gt;Map is a cool little function, and the key to easily injecting parallelism into your Python code. For those unfamiliar, map is something lifted from functional languages like Lisp. It is a function which &lt;em&gt;maps &lt;/em&gt;another function over a sequence. e.g.&lt;/p&gt;&lt;pre name=&quot;9fb8&quot;&gt;urls = ['&lt;a target=&quot;_blank&quot; href=&quot;http://www.yahoo.com%27/&quot; rel=&quot;nofollow&quot;&gt;http://www.yahoo.com'&lt;/a&gt;, '&lt;a target=&quot;_blank&quot; href=&quot;http://www.reddit.com%27/&quot; rel=&quot;nofollow&quot;&gt;http://www.reddit.com'&lt;/a&gt;]&lt;br&gt;results = map(urllib2.urlopen, urls)&lt;/pre&gt;&lt;p name=&quot;b58a&quot;&gt;This applies the method &lt;em&gt;urlopen, &lt;/em&gt;on each item in the passed in sequence and stores all of the results in a list. It is more or less equivalent to&lt;/p&gt;&lt;pre name=&quot;c38c&quot;&gt;results = []&lt;br&gt;for url in urls: &lt;br&gt;    results.append(urllib2.urlopen(url))&lt;/pre&gt;&lt;p name=&quot;67ab&quot;&gt;Map handles the iteration over the sequence for us, applies the function, and stores all of the results in a handy list at the end.&lt;/p&gt;&lt;p name=&quot;305c&quot;&gt;Why does this matter? Because with the right libraries, map makes running things in parallel completely trivial!&lt;/p&gt;&lt;figure name=&quot;3b95&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*N3mYNo_FI_1Fa698A_Wf2Q.png&quot;&gt;&lt;/figure&gt;&lt;p name=&quot;37d6&quot;&gt;Parallel versions of the map function are provided by two libraries: &lt;em&gt;multiprocessing&lt;/em&gt;&lt;strong&gt;, &lt;/strong&gt;and also its little known, but equally fantastic step child: &lt;em&gt;multiprocessing.dummy&lt;/em&gt;.&lt;/p&gt;&lt;p name=&quot;8d65&quot;&gt;&lt;em&gt;Digression:&lt;/em&gt; What’s that? Never heard of the threading clone of multiprocessing library called dummy? I hadn't either until very recently. It has all of &lt;em&gt;ONE&lt;/em&gt;&lt;strong&gt; &lt;/strong&gt;sentence devoted to it in the multiprocessing documentation page. And that sentence pretty much boils down to “Oh yeah, and this thing exists.” It’s tragically undersold, I tell you!&lt;/p&gt;&lt;p name=&quot;8b5e&quot;&gt;Dummy is an exact clone of the multiprocessing module. The only difference is that, whereas multiprocessing works with processes, the dummy module uses threads (which come with all the usual Python limitations). So anything that applies to one, applies to the other. It makes it extremely easy to hop back and forth between the two. Which is especially great for exploratory programming when you’re not quite sure if some framework call is IO or CPU bound.&lt;/p&gt;&lt;h3 name=&quot;4a45&quot;&gt;Getting Started&lt;/h3&gt;&lt;p name=&quot;ea1b&quot;&gt;To access the parallel versions of the map functions the first thing you need to do is import the modules that contain them:&lt;/p&gt;&lt;pre name=&quot;dfc5&quot;&gt;from multiprocessing import Pool&lt;br&gt;from multiprocessing.dummy import Pool as ThreadPool &lt;/pre&gt;&lt;p name=&quot;856a&quot;&gt;and instantiate their Pool objects in the code:&lt;/p&gt;&lt;pre name=&quot;5b05&quot;&gt;pool = ThreadPool() &lt;/pre&gt;&lt;p name=&quot;5684&quot;&gt;This single statement handles everything we did in the seven line &lt;em&gt;build_worker_pool&lt;/em&gt; function from example2.py. Namely, It creates a bunch of available workers, starts them up so that they’re ready to do some work, and stores all of them in variable so that they’re easily accessed.&lt;/p&gt;&lt;p name=&quot;2a7e&quot;&gt;The pool objects take a few parameters, but for now, the only one worth noting is the first one: &lt;em&gt;processes. &lt;/em&gt;This sets the number of workers in the pool. If you leave it blank, it will default to the number of Cores in your machine.&lt;/p&gt;&lt;p name=&quot;6923&quot;&gt;In the general case, if you’re using the multiprocessing pool for CPU bound tasks, more cores equals more speed (I say that with &lt;em&gt;a lot&lt;/em&gt; of caveats). However, when threading and dealing with network bound stuff, things seem to vary wildly, so it’s a good idea to experiment with the exact size of the pool.&lt;/p&gt;&lt;pre name=&quot;662a&quot;&gt;pool = ThreadPool(4) # Sets the pool size to 4&lt;/pre&gt;&lt;p name=&quot;5d76&quot;&gt;If you run too many threads, you’ll waste more time switching between then than doing useful work, so it’s always good to play around a little bit until you find the sweet spot for the task at hand.&lt;/p&gt;&lt;p name=&quot;70ce&quot;&gt;So, now with the pool objects created, and simple parallelism at our fingertips, let’s rewrite the url opener from example2.py!&lt;/p&gt;&lt;figure name=&quot;f7fe&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*ow6Idq9Gf3ZahA6SDrM36w.png&quot;&gt;&lt;/figure&gt;&lt;p name=&quot;8eb7&quot;&gt;Look at that! The code that actually does work is all of 4 lines. 3 of which are simple bookkeeping ones. The &lt;em&gt;map&lt;/em&gt; call handles everything our previous 40 line example did with ease! For funzies, I timed both approaches as well as different pool sizes.&lt;/p&gt;&lt;figure name=&quot;a590&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*zcFxYbBKTxUdmVNS_rgrQg.png&quot;&gt;&lt;/figure&gt;&lt;h3 name=&quot;0d81&quot;&gt;Results:&lt;/h3&gt;&lt;figure name=&quot;8f2f&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*nPNN9J-DgNTyPe5MzJh5rA.png&quot;&gt;&lt;/figure&gt;&lt;p name=&quot;5f6c&quot;&gt;Pretty awesome! And also shows why it’s good to play around a bit with the pool size. Any pool size greater than 9 quickly lead to diminishing returns on my machine.&lt;/p&gt;&lt;h2 name=&quot;ef6d&quot;&gt;Real World Example 2:&lt;/h2&gt;&lt;p name=&quot;8ab5&quot;&gt;Thumbnailing thousands of images&lt;/p&gt;&lt;p name=&quot;f68c&quot;&gt;Let’s now do something CPU bound! A pretty common task for me at work is manipulating massive image folders. One of those transformations is creating thumbnails. It is ripe for being run in parallel.&lt;/p&gt;&lt;p name=&quot;c838&quot;&gt;&lt;strong&gt;The basic single process setup&lt;/strong&gt;&lt;/p&gt;&lt;figure name=&quot;a1fa&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*2lX7z_CeXtjPEb7O2bZLmg.png&quot;&gt;&lt;/figure&gt;&lt;p name=&quot;57f0&quot;&gt;A little hacked together for example, but in essence, a folder is passed into the program, from that it grabs all of the images in the folder, then finally creates the thumbnails and saves them to their own directory.&lt;/p&gt;&lt;p name=&quot;6997&quot;&gt;On my machine, this took 27.9 seconds to process ~6000 images.&lt;/p&gt;&lt;p name=&quot;bc38&quot;&gt;If we replace the &lt;em&gt;for&lt;/em&gt; loop with a parallel map call:&lt;/p&gt;&lt;figure name=&quot;d876&quot;&gt;&lt;img width=&quot;700&quot; src=&quot;https://d262ilb51hltx0.cloudfront.net/max/800/1*5tDK9MoLNVB9TS3M1d24dw.png&quot;&gt;&lt;/figure&gt;&lt;p name=&quot;be04&quot;&gt;&lt;strong&gt;5.6&lt;/strong&gt; &lt;strong&gt;seconds&lt;/strong&gt;!&lt;/p&gt;&lt;p name=&quot;2a9b&quot;&gt;That’s a pretty massive speedup for only changing a few lines of code. The production version of this is even faster by splitting cpu and io tasks into their own respective processes and threads — which is usually a recipe for deadlocked code. However, due to the explicit nature of map, and the lack of manual thread management, it feels remarkably easy to mix and match the two in a way that is clean, reliable, and easy to debug.&lt;/p&gt;&lt;p name=&quot;3116&quot;&gt;So there it is. Parallelism in (almost) one line.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+</description>
+<title>
+Parallelism in one line
+</title>
+</item>
+<item>
+<link>
+item?id=7126036
+</link>
+<description>
+
+</description>
+<title>
+Poll: Do you actually use the product you are working on?
+</title>
+</item>
+<item>
+<link>
+http://blogs.reuters.com/macroscope/2014/01/24/why-are-us-corporate-profits-so-high-because-wages-are-so-low/
+</link>
+<description>
+&lt;div&gt;
+  		      
+   &lt;div id=&quot;postcontent&quot;&gt;&lt;p&gt;U.S. businesses have never had it so good.&lt;/p&gt;
+&lt;p&gt;Corporate cash piles have never been bigger, either in dollar terms or as a share of the economy.&lt;/p&gt;
+&lt;p&gt;The labor market, meanwhile, is still millions of jobs short of where it was before the global financial crisis first erupted over six years ago.&lt;/p&gt;
+&lt;p&gt;Coincidence?&lt;/p&gt;
+&lt;p&gt;Not in the slightest, according to Jan Hatzius, chief U.S. economist at Goldman Sachs:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&amp;#x201C;The strength (in profits) is directly related to the weakness in hourly wages, which are still growing at just a 2% nominal pace. The weakness of wages and the resulting strength of profits are telling signs that the US labor market is still far from full employment.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Companies have not been unable to raise prices much because of the economic recovery has been fragile. But they&amp;#x2019;ve still managed to boost profits beyond anything ever seen before because they&amp;#x2019;ve got away with employing as few workers as possible at as low a rate as possible.&lt;/p&gt;
+&lt;p&gt;Compare and contrast these two charts:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blogs.reuters.com/macroscope/files/2014/01/corpprofit-1.jpg&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-12386&quot; title=&quot;corpprofit (1)&quot; src=&quot;http://blogs.reuters.com/macroscope/files/2014/01/corpprofit-1.jpg&quot; alt=&quot;&quot; width=&quot;600&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;http://blogs.reuters.com/macroscope/files/2014/01/hatzius1.jpg&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-12381&quot; title=&quot;hatzius&quot; src=&quot;http://blogs.reuters.com/macroscope/files/2014/01/hatzius1.jpg&quot; alt=&quot;&quot; width=&quot;627&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, corporate profits are their highest ever and wage growth is near its lowest in half a century. But don&amp;#x2019;t expect the transfer of that cash from businesses to workers to start any time soon, says Hatzius:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&amp;#x201C;The bottom line is that the favorable environment for corporate profits should persist for some time yet, and the case for an acceleration in the near term is strong. Hourly labor costs would need to grow more than 4% to eat into margins on a systematic basis. Such a strong acceleration still seems to be at least a couple of years off.&amp;#x201D;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+		    &lt;/div&gt;
+</description>
+<title>
+Why are US corporate profits so high? Because wages are so low
 </title>
 </item>
 </channel>
